@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>networkit.gephi</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="networkit.GEXFIO" href="GEXFIO.html" />
+    <link rel="prev" title="networkit.generators" href="generators.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="networkit.html">networkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algebraic.html">networkit.algebraic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="base.html">networkit.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="centrality.html">networkit.centrality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clique.html">networkit.clique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coarsening.html">networkit.coarsening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coloring.html">networkit.coloring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="community.html">networkit.community</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">networkit.components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="correlation.html">networkit.correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="distance.html">networkit.distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamic.html">networkit.dynamic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engineering.html">networkit.engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow.html">networkit.flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generators.html">networkit.generators</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">networkit.gephi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GEXFIO.html">networkit.GEXFIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="globals.html">networkit.globals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graph.html">networkit.graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphio.html">networkit.graphio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphtools.html">networkit.graphtools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GraphMLIO.html">networkit.GraphMLIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="helpers.html">networkit.helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="independentset.html">networkit.independentset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkprediction.html">networkit.linkprediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matching.html">networkit.matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nxadapter.html">networkit.nxadapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="partitioning.html">networkit.partitioning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot.html">networkit.plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">networkit.profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="randomization.html">networkit.randomization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sampling.html">networkit.sampling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scd.html">networkit.scd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html">networkit.simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sparsification.html">networkit.sparsification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stats.html">networkit.stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stopwatch.html">networkit.stopwatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structures.html">networkit.structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="traversal.html">networkit.traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viz.html">networkit.viz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viztasks.html">networkit.viztasks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows.html">networkit.workflows</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="networkit-gephi">
+<h1>networkit.gephi</h1>
+<section id="submodules">
+<h2>Submodules</h2>
+</section>
+<section id="module-networkit.gephi.csv">
+<span id="networkit-gephi-csv-module"></span><h2>networkit.gephi.csv module</h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.gephi.csv.exportNodeValues">
+<span class="sig-prename descclassname"><span class="pre">networkit.gephi.csv.</span></span><span class="sig-name descname"><span class="pre">exportNodeValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fpath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">column_name</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>This method exports node values (e.g. community information, betwenness centrality values)
+to a CSV file. The values can then be imported to Gephi.
+:param - values: python list or Partition object that contains the values to be exported.
+:param - fpath: the file including its path to be written to
+:param - column_name: name of the column as description for the data</p>
+</dd></dl>
+
+</section>
+<section id="module-networkit.gephi.pyclient">
+<span id="networkit-gephi-pyclient-module"></span><h2>networkit.gephi.pyclient module</h2>
+<p>Allow a Python script to communicate with Gephi using the Gephi Graph Streaming protocol and plugin.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.gephi.pyclient.GephiClient">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.gephi.pyclient.</span></span><span class="sig-name descname"><span class="pre">GephiClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'http://127.0.0.1:8080/workspace0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">autoflush</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.gephi.pyclient.JSONClient" title="networkit.gephi.pyclient.JSONClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.gephi.pyclient.JSONClient</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.gephi.pyclient.GephiFileHandler">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.gephi.pyclient.</span></span><span class="sig-name descname"><span class="pre">GephiFileHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">out</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.gephi.pyclient.JSONClient" title="networkit.gephi.pyclient.JSONClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.gephi.pyclient.JSONClient</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.gephi.pyclient.JSONClient">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.gephi.pyclient.</span></span><span class="sig-name descname"><span class="pre">JSONClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">autoflush</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable_timestamps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">process_event_hook</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.gephi.pyclient.JSONClient.add_edge">
+<span class="sig-name descname"><span class="pre">add_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">attributes</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.gephi.pyclient.JSONClient.add_node">
+<span class="sig-name descname"><span class="pre">add_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flush</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">attributes</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.gephi.pyclient.JSONClient.change_edge">
+<span class="sig-name descname"><span class="pre">change_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">attributes</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.gephi.pyclient.JSONClient.change_node">
+<span class="sig-name descname"><span class="pre">change_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flush</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">attributes</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.gephi.pyclient.JSONClient.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.gephi.pyclient.JSONClient.delete_edge">
+<span class="sig-name descname"><span class="pre">delete_edge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.gephi.pyclient.JSONClient.delete_node">
+<span class="sig-name descname"><span class="pre">delete_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.gephi.pyclient.JSONClient.flush">
+<span class="sig-name descname"><span class="pre">flush</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.gephi.pyclient.JSONClient.incrementUnflushedDumps">
+<span class="sig-name descname"><span class="pre">incrementUnflushedDumps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-networkit.gephi.streaming">
+<span id="networkit-gephi-streaming-module"></span><h2>networkit.gephi.streaming module</h2>
+<p>This module provides methods to export data from NetworKit directly to Gephi using the
+Gephi Streaming Plugin.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.gephi.streaming.GephiStreamingClient">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.gephi.streaming.</span></span><span class="sig-name descname"><span class="pre">GephiStreamingClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'http://localhost:8080/workspace0'</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A python singleton providing access to a running Master instance of the Gephi
+Streaming plugin</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.gephi.streaming.GephiStreamingClient.clearGraph">
+<span class="sig-name descname"><span class="pre">clearGraph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Cleans the first workspace in Gephi.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.gephi.streaming.GephiStreamingClient.exportAdditionalEdge">
+<span class="sig-name descname"><span class="pre">exportAdditionalEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Adds an edge (u,v) in an already exported graph. If the edge is already present, nothing happens.
+If the graph is directed, the edge goes from u to v</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.gephi.streaming.GephiStreamingClient.exportCoordinates">
+<span class="sig-name descname"><span class="pre">exportCoordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.gephi.streaming.GephiStreamingClient.exportEdgeValues">
+<span class="sig-name descname"><span class="pre">exportEdgeValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_name</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>This method exports an edge attribute to gephi using the Gephi Streaming Plugin.
+Use exportGraph(Graph) first to export graph itself.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.gephi.streaming.GephiStreamingClient.exportEventStream">
+<span class="sig-name descname"><span class="pre">exportEventStream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stream</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeStepDelay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.gephi.streaming.GephiStreamingClient.exportGraph">
+<span class="sig-name descname"><span class="pre">exportGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Exports the given graph to gephi. No attributes or weights are exported.
+Please note that only graphs with indexed edges can be exported, so
+edges will be indexed if neccessary.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.gephi.streaming.GephiStreamingClient.exportNodeValues">
+<span class="sig-name descname"><span class="pre">exportNodeValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_name</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>This method exports node values (e.g. community information, betwenness centrality values)
+to gephi using the Gephi Streaming Plugin. Use exportGraph(Graph) first to export
+the graph itself.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.gephi.streaming.GephiStreamingClient.removeExportedEdge">
+<span class="sig-name descname"><span class="pre">removeExportedEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Removes an edge from an already exported graph.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.3.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,1023 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>networkit</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="networkit.algebraic" href="algebraic.html" />
+    <link rel="prev" title="Python Documentation" href="modules.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">networkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algebraic.html">networkit.algebraic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="base.html">networkit.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="centrality.html">networkit.centrality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clique.html">networkit.clique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coarsening.html">networkit.coarsening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coloring.html">networkit.coloring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="community.html">networkit.community</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">networkit.components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="correlation.html">networkit.correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="distance.html">networkit.distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamic.html">networkit.dynamic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engineering.html">networkit.engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow.html">networkit.flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generators.html">networkit.generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gephi.html">networkit.gephi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GEXFIO.html">networkit.GEXFIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="globals.html">networkit.globals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graph.html">networkit.graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphio.html">networkit.graphio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphtools.html">networkit.graphtools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GraphMLIO.html">networkit.GraphMLIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="helpers.html">networkit.helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="independentset.html">networkit.independentset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkprediction.html">networkit.linkprediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matching.html">networkit.matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nxadapter.html">networkit.nxadapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="partitioning.html">networkit.partitioning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot.html">networkit.plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">networkit.profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="randomization.html">networkit.randomization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sampling.html">networkit.sampling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scd.html">networkit.scd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html">networkit.simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sparsification.html">networkit.sparsification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stats.html">networkit.stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stopwatch.html">networkit.stopwatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structures.html">networkit.structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="traversal.html">networkit.traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viz.html">networkit.viz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viztasks.html">networkit.viztasks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows.html">networkit.workflows</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="module-networkit">
+<span id="networkit"></span><h1>networkit</h1>
+<p>NetworKit – an interactive tool suite for high-performance network analysis.</p>
+<p>NetworKit is an open-source software package for high-performance
+analysis of large complex networks. Complex networks are equally
+attractive and challenging targets for data mining, and novel
+algorithmic solutions, including parallelization, are required to handle
+data sets containing billions of connections. Our goal for NetworKit is
+to package results of our algorithm engineering efforts and put them
+into the hands of domain experts. NetworKit is a hybrid combining the
+performance of kernels written in C++ with a convenient Python
+frontend. The package targets shared-memory platforms with OpenMP support.
+The current feature set includes various analytics kernels such as connected components, diameter, clustering
+coefficients, community detection, k-core decomposition, degree assortativity
+and multiple centrality indices, as well as a
+collection of graph generators. Scaling to massive networks is enabled by techniques such as parallel and sampling-based approximation algorithms.
+NetworKit is geared towards large networks and satisfies three important
+criteria: High performance, interactive workflows
+and integration into the Python ecosystem of tools for data analysis and
+scientific computation.</p>
+<p>Usage examples can be found on <a class="reference external" href="https://github.com/networkit/networkit/blob/Dev/notebooks/User-Guide.ipynb">https://github.com/networkit/networkit/blob/Dev/notebooks/User-Guide.ipynb</a></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.Cover">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.</span></span><span class="sig-name descname"><span class="pre">Cover</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Implements a cover of a set, i.e. an assignment of its elements to possibly overlapping subsets.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Cover.addToSubset">
+<span class="sig-name descname"><span class="pre">addToSubset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Add the (previously unassigned) element <cite>e</cite> to the set <cite>s</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Cover.allToSingletons">
+<span class="sig-name descname"><span class="pre">allToSingletons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Assigns every element to a singleton set. Set id is equal to element id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Cover.contains">
+<span class="sig-name descname"><span class="pre">contains</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Check if cover assigns a valid subset to the element <cite>e</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Cover.extend">
+<span class="sig-name descname"><span class="pre">extend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Cover.getMembers">
+<span class="sig-name descname"><span class="pre">getMembers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the members of a specific subset <cite>s</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Cover.getSubsetIds">
+<span class="sig-name descname"><span class="pre">getSubsetIds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the ids of nonempty subsets.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Cover.inSameSubset">
+<span class="sig-name descname"><span class="pre">inSameSubset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Check if two elements <cite>e1</cite> and <cite>e2</cite> belong to the same subset.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Cover.lowerBound">
+<span class="sig-name descname"><span class="pre">lowerBound</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get a lower bound for the subset ids that have been assigned.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Cover.mergeSubsets">
+<span class="sig-name descname"><span class="pre">mergeSubsets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Assigns the elements from both sets to a new set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Cover.moveToSubset">
+<span class="sig-name descname"><span class="pre">moveToSubset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Move the element <cite>e</cite> to subset <cite>s</cite>, i.e. remove it from all other subsets and place it in the subset.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Cover.numberOfElements">
+<span class="sig-name descname"><span class="pre">numberOfElements</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the current number of elements in this cover.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Cover.numberOfSubsets">
+<span class="sig-name descname"><span class="pre">numberOfSubsets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the current number of sets in this cover.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Cover.removeFromSubset">
+<span class="sig-name descname"><span class="pre">removeFromSubset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Remove the element <cite>e</cite> from the set <cite>s</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Cover.setUpperBound">
+<span class="sig-name descname"><span class="pre">setUpperBound</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Cover.subsetSizeMap">
+<span class="sig-name descname"><span class="pre">subsetSizeMap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get a map from subset id to size of the subset.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Cover.subsetSizes">
+<span class="sig-name descname"><span class="pre">subsetSizes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get a list of subset sizes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Cover.subsetsOf">
+<span class="sig-name descname"><span class="pre">subsetsOf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the ids of subsets in which the element <cite>e</cite> is contained.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Cover.toSingleton">
+<span class="sig-name descname"><span class="pre">toSingleton</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Creates a singleton set containing the element <cite>e</cite> and returns the index of the new set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Cover.upperBound">
+<span class="sig-name descname"><span class="pre">upperBound</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get an upper bound for the subset ids that have been assigned.
+(This is the maximum id + 1.)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.Format">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.</span></span><span class="sig-name descname"><span class="pre">Format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.graphio.__AutoNumber</span></code></p>
+<p>Simple enumeration class to list supported file types. Currently supported
+file types: SNAP, EdgeListSpaceZero, EdgeListSpaceOne, EdgeListTabZero, EdgeListTabOne,
+METIS, GraphML, GEXF, GML, EdgeListCommaOne, GraphViz, DOT, EdgeList, LFR, KONEC, GraphToolBinary,</p>
+<blockquote>
+<div><p>NetworkitBinary</p>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.Format.DOT">
+<span class="sig-name descname"><span class="pre">DOT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">12</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.Format.EdgeList">
+<span class="sig-name descname"><span class="pre">EdgeList</span></span><em class="property"> <span class="pre">=</span> <span class="pre">13</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.Format.EdgeListCommaOne">
+<span class="sig-name descname"><span class="pre">EdgeListCommaOne</span></span><em class="property"> <span class="pre">=</span> <span class="pre">10</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.Format.EdgeListSpaceOne">
+<span class="sig-name descname"><span class="pre">EdgeListSpaceOne</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.Format.EdgeListSpaceZero">
+<span class="sig-name descname"><span class="pre">EdgeListSpaceZero</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.Format.EdgeListTabOne">
+<span class="sig-name descname"><span class="pre">EdgeListTabOne</span></span><em class="property"> <span class="pre">=</span> <span class="pre">5</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.Format.EdgeListTabZero">
+<span class="sig-name descname"><span class="pre">EdgeListTabZero</span></span><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.Format.GEXF">
+<span class="sig-name descname"><span class="pre">GEXF</span></span><em class="property"> <span class="pre">=</span> <span class="pre">8</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.Format.GML">
+<span class="sig-name descname"><span class="pre">GML</span></span><em class="property"> <span class="pre">=</span> <span class="pre">9</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.Format.GraphML">
+<span class="sig-name descname"><span class="pre">GraphML</span></span><em class="property"> <span class="pre">=</span> <span class="pre">7</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.Format.GraphToolBinary">
+<span class="sig-name descname"><span class="pre">GraphToolBinary</span></span><em class="property"> <span class="pre">=</span> <span class="pre">16</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.Format.GraphViz">
+<span class="sig-name descname"><span class="pre">GraphViz</span></span><em class="property"> <span class="pre">=</span> <span class="pre">11</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.Format.KONECT">
+<span class="sig-name descname"><span class="pre">KONECT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">15</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.Format.LFR">
+<span class="sig-name descname"><span class="pre">LFR</span></span><em class="property"> <span class="pre">=</span> <span class="pre">14</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.Format.MAT">
+<span class="sig-name descname"><span class="pre">MAT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">17</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.Format.METIS">
+<span class="sig-name descname"><span class="pre">METIS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">6</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.Format.NetworkitBinary">
+<span class="sig-name descname"><span class="pre">NetworkitBinary</span></span><em class="property"> <span class="pre">=</span> <span class="pre">19</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.Format.SNAP">
+<span class="sig-name descname"><span class="pre">SNAP</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.Format.ThrillBinary">
+<span class="sig-name descname"><span class="pre">ThrillBinary</span></span><em class="property"> <span class="pre">=</span> <span class="pre">18</span></em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.Graph">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.</span></span><span class="sig-name descname"><span class="pre">Graph</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An undirected graph (with optional weights) and parallel iterator methods.</p>
+<blockquote>
+<div><p>Graph(n=0, weighted=False, directed=False)</p>
+<p>Create a graph of <cite>n</cite> nodes. The graph has assignable edge weights if <cite>weighted</cite> is set to True.
+If <cite>weighted</cite> is set to False each edge has edge weight 1.0 and any other weight assignment will
+be ignored.</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.addEdge">
+<span class="sig-name descname"><span class="pre">addEdge</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Insert an undirected edge between the nodes <cite>u</cite> and <cite>v</cite>. If the graph is weighted you can optionally
+set a weight for this edge. The default weight is 1.0.
+If one or both end-points do not exists and addMissing is set, they are silently added.
+Caution: It is not checked whether this edge already exists, thus it is possible to create multi-edges.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.addNode">
+<span class="sig-name descname"><span class="pre">addNode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Add a new node to the graph and return it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.addNodes">
+<span class="sig-name descname"><span class="pre">addNodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Add numberOfNewNodes many new nodes to the graph and return
+the id of the last node added.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.checkConsistency">
+<span class="sig-name descname"><span class="pre">checkConsistency</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Check for invalid graph states, such as multi-edges.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.compactEdges">
+<span class="sig-name descname"><span class="pre">compactEdges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Compact the edge storage, this should be called after executing many edge deletions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.degree">
+<span class="sig-name descname"><span class="pre">degree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the number of neighbors of <cite>v</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.degreeIn">
+<span class="sig-name descname"><span class="pre">degreeIn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.degreeOut">
+<span class="sig-name descname"><span class="pre">degreeOut</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.edgeId">
+<span class="sig-name descname"><span class="pre">edgeId</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.forEdges">
+<span class="sig-name descname"><span class="pre">forEdges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Experimental edge iterator interface</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.forEdgesOf">
+<span class="sig-name descname"><span class="pre">forEdgesOf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Experimental incident (outgoing) edge iterator interface</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.forInEdgesOf">
+<span class="sig-name descname"><span class="pre">forInEdgesOf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Experimental incident incoming edge iterator interface</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.forNodePairs">
+<span class="sig-name descname"><span class="pre">forNodePairs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Experimental node pair iterator interface</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.forNodes">
+<span class="sig-name descname"><span class="pre">forNodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Experimental node iterator interface</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.forNodesInRandomOrder">
+<span class="sig-name descname"><span class="pre">forNodesInRandomOrder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Experimental node iterator interface</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.hasEdge">
+<span class="sig-name descname"><span class="pre">hasEdge</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Checks if undirected edge {<cite>u</cite>,`v`} exists in the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.hasEdgeIds">
+<span class="sig-name descname"><span class="pre">hasEdgeIds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns true if edges have been indexed</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.hasNode">
+<span class="sig-name descname"><span class="pre">hasNode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Checks if the Graph has the node <cite>u</cite>, i.e. if <cite>u</cite> hasn’t been deleted and is in the range of valid ids.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.increaseWeight">
+<span class="sig-name descname"><span class="pre">increaseWeight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Increase the weight of an edge. If the edge does not exist, it will be inserted.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.indexEdges">
+<span class="sig-name descname"><span class="pre">indexEdges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Assign integer ids to edges.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.isDirected">
+<span class="sig-name descname"><span class="pre">isDirected</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.isIsolated">
+<span class="sig-name descname"><span class="pre">isIsolated</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>If the node <cite>u</cite> is isolated</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.isWeighted">
+<span class="sig-name descname"><span class="pre">isWeighted</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.iterEdges">
+<span class="sig-name descname"><span class="pre">iterEdges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Iterates over the edges of the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.iterEdgesWeights">
+<span class="sig-name descname"><span class="pre">iterEdgesWeights</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Iterates over the edges of the graph and their weights.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.iterInNeighbors">
+<span class="sig-name descname"><span class="pre">iterInNeighbors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Iterates over a range of the in-neighbors of a node.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.iterInNeighborsWeights">
+<span class="sig-name descname"><span class="pre">iterInNeighborsWeights</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Iterates over a range of the in-neighbors of a node including the edge weights.
+The iterator is not safe to use with unweighted graphs. To avoid unsafe behavior
+a runtime error will be thrown.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.iterNeighbors">
+<span class="sig-name descname"><span class="pre">iterNeighbors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Iterates over a range of the neighbors of a node.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.iterNeighborsWeights">
+<span class="sig-name descname"><span class="pre">iterNeighborsWeights</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Iterates over a range of the neighbors of a node including the edge weights.
+The iterator is not safe to use with unweighted graphs. To avoid unsafe behavior
+a runtime error will be thrown.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.iterNodes">
+<span class="sig-name descname"><span class="pre">iterNodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Iterates over the nodes of the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.numberOfEdges">
+<span class="sig-name descname"><span class="pre">numberOfEdges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the number of edges in the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.numberOfNodes">
+<span class="sig-name descname"><span class="pre">numberOfNodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the number of nodes in the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.numberOfSelfLoops">
+<span class="sig-name descname"><span class="pre">numberOfSelfLoops</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get number of self-loops, i.e. edges {v, v}.
+Returns:
+——–
+count</p>
+<blockquote>
+<div><p>number of self-loops.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.removeAllEdges">
+<span class="sig-name descname"><span class="pre">removeAllEdges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Removes all the edges in the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.removeEdge">
+<span class="sig-name descname"><span class="pre">removeEdge</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Removes the undirected edge {<cite>u</cite>,`v`}.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.removeMultiEdges">
+<span class="sig-name descname"><span class="pre">removeMultiEdges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Removes all multi-edges from the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.removeNode">
+<span class="sig-name descname"><span class="pre">removeNode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Remove a node <cite>v</cite> and all incident edges from the graph.</p>
+<p>Incoming as well as outgoing edges will be removed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.removeSelfLoops">
+<span class="sig-name descname"><span class="pre">removeSelfLoops</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Removes all self-loops from the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.restoreNode">
+<span class="sig-name descname"><span class="pre">restoreNode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Restores a previously deleted node <cite>u</cite> with its previous id in the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.setWeight">
+<span class="sig-name descname"><span class="pre">setWeight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Set the weight of an edge. If the edge does not exist, it will be inserted.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.sortEdges">
+<span class="sig-name descname"><span class="pre">sortEdges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Sorts the adjacency arrays by node id. While the running time is linear this
+temporarily duplicates the memory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.swapEdge">
+<span class="sig-name descname"><span class="pre">swapEdge</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Changes the edge (s1, t1) into (s1, t2) and the edge (s2, t2) into (s2, t1).</p>
+<p>If there are edge weights or edge ids, they are preserved. Note that no check is performed if the swap is actually possible, i.e. does not generate duplicate edges.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.totalEdgeWeight">
+<span class="sig-name descname"><span class="pre">totalEdgeWeight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the sum of all edge weights.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.upperEdgeIdBound">
+<span class="sig-name descname"><span class="pre">upperEdgeIdBound</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get an upper bound for the edge ids in the graph</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.upperNodeIdBound">
+<span class="sig-name descname"><span class="pre">upperNodeIdBound</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get an upper bound for the node ids in the graph</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.weight">
+<span class="sig-name descname"><span class="pre">weight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get edge weight of edge {<cite>u</cite> , <cite>v</cite>}. Returns 0 if edge does not exist.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.weightedDegree">
+<span class="sig-name descname"><span class="pre">weightedDegree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the weighted out-degree of u.</p>
+<p>For directed graphs this is the sum of weights of all outgoing edges of u.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Graph.weightedDegreeIn">
+<span class="sig-name descname"><span class="pre">weightedDegreeIn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the weighted in-degree of u.</p>
+<p>For directed graphs this is the sum of weights of all ingoing edges of u.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="networkit.MissingDependencyError">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.</span></span><span class="sig-name descname"><span class="pre">MissingDependencyError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">package</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">RuntimeError</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.Partition">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.</span></span><span class="sig-name descname"><span class="pre">Partition</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Implements a partition of a set, i.e. a subdivision of the
+set into disjoint subsets.</p>
+<p>Partition(z=0)</p>
+<p>Create a new partition data structure for <cite>z</cite> elements.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.addToSubset">
+<span class="sig-name descname"><span class="pre">addToSubset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Add a (previously unassigned) element <cite>e</cite> to the set <cite>s</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.allToSingletons">
+<span class="sig-name descname"><span class="pre">allToSingletons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Assigns every element to a singleton set. Set id is equal to element id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.compact">
+<span class="sig-name descname"><span class="pre">compact</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Change subset IDs to be consecutive, starting at 0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.contains">
+<span class="sig-name descname"><span class="pre">contains</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Check if partition assigns a valid subset to the element <cite>e</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.extend">
+<span class="sig-name descname"><span class="pre">extend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Extend the data structure and create a slot    for one more element.</p>
+<p>Initializes the entry to <cite>none</cite> and returns the index of the entry.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.getMembers">
+<span class="sig-name descname"><span class="pre">getMembers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the members of the subset <cite>s</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.getName">
+<span class="sig-name descname"><span class="pre">getName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the human-readable identifier.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.getSubsetIds">
+<span class="sig-name descname"><span class="pre">getSubsetIds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the ids of nonempty subsets.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.getVector">
+<span class="sig-name descname"><span class="pre">getVector</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the actual vector representing the partition data structure.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.inSameSubset">
+<span class="sig-name descname"><span class="pre">inSameSubset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Check if two elements <cite>e1</cite> and <cite>e2</cite> belong to the same subset.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.lowerBound">
+<span class="sig-name descname"><span class="pre">lowerBound</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get a lower bound for the subset ids that have been assigned.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.mergeSubsets">
+<span class="sig-name descname"><span class="pre">mergeSubsets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Assigns the elements from both sets to a new set and returns the id of it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.moveToSubset">
+<span class="sig-name descname"><span class="pre">moveToSubset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Move the (previously assigned) element <cite>e</cite> to the set <a href="#id1"><span class="problematic" id="id2">`</span></a>s.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.numberOfElements">
+<span class="sig-name descname"><span class="pre">numberOfElements</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.numberOfSubsets">
+<span class="sig-name descname"><span class="pre">numberOfSubsets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the current number of sets in this partition.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.setName">
+<span class="sig-name descname"><span class="pre">setName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Set a human-readable identifier <cite>name</cite> for the instance.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.setUpperBound">
+<span class="sig-name descname"><span class="pre">setUpperBound</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Sets an upper bound for the subset ids that <strong>can</strong> be assigned.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.subsetOf">
+<span class="sig-name descname"><span class="pre">subsetOf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the set (id) in which the element <cite>e</cite> is contained.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.subsetSizeMap">
+<span class="sig-name descname"><span class="pre">subsetSizeMap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get a map from subset id to size of the subset.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.subsetSizes">
+<span class="sig-name descname"><span class="pre">subsetSizes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get a list of subset sizes. Indices do not necessarily correspond to subset ids.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.toSingleton">
+<span class="sig-name descname"><span class="pre">toSingleton</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Creates a singleton set containing the element <cite>e</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.Partition.upperBound">
+<span class="sig-name descname"><span class="pre">upperBound</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Return an upper bound for the subset ids that have been assigned.
+(This is the maximum id + 1.)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.getCurrentNumberOfThreads">
+<span class="sig-prename descclassname"><span class="pre">networkit.</span></span><span class="sig-name descname"><span class="pre">getCurrentNumberOfThreads</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the number of currently running threads</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.getLogLevel">
+<span class="sig-prename descclassname"><span class="pre">networkit.</span></span><span class="sig-name descname"><span class="pre">getLogLevel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the current log level</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.getMaxNumberOfThreads">
+<span class="sig-prename descclassname"><span class="pre">networkit.</span></span><span class="sig-name descname"><span class="pre">getMaxNumberOfThreads</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the maximum number of available threads</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphtools">
+<span class="sig-prename descclassname"><span class="pre">networkit.</span></span><span class="sig-name descname"><span class="pre">graphtools</span></span></dt>
+<dd><p>alias of <a class="reference internal" href="graphtools.html#networkit.graphtools.GraphTools" title="networkit.graphtools.GraphTools"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.graphtools.GraphTools</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.overview">
+<span class="sig-prename descclassname"><span class="pre">networkit.</span></span><span class="sig-name descname"><span class="pre">overview</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>This function collects some basic information about the given graph and prints it to the terminal.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.readGraph">
+<span class="sig-prename descclassname"><span class="pre">networkit.</span></span><span class="sig-name descname"><span class="pre">readGraph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Read graph file in various formats and return a NetworKit::Graph
+:param - fileformat: An element of the Format enumeration. Currently supported file types:
+:param SNAP:
+:param EdgeListSpaceZero:
+:param EdgeListSpaceOne:
+:param EdgeListTabZero:
+:param EdgeListTabOne:
+:param METIS:
+:param :
+:param GraphML:
+:param GEXF:
+:param GML:
+:param EdgeListCommaOne:
+:param GraphViz:
+:param DOT:
+:param EdgeList:
+:param LFR:
+:param KONECT:
+:param GraphToolBinary:
+:param ThrillBinary:
+:param - <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs: in case of a custom edge list, pass the genereic Fromat.EdgeList accompanied by</p>
+<blockquote>
+<div><p>the defining paramaters as follows:
+“separator=CHAR, firstNode=NODE, commentPrefix=STRING, continuous=BOOL, directed=BOOL”
+commentPrefix=’#’, continuous=True and directed=False are optional because of their default values;
+firstNode is not needed when continuous=True.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.readGraphs">
+<span class="sig-prename descclassname"><span class="pre">networkit.</span></span><span class="sig-name descname"><span class="pre">readGraphs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><blockquote>
+<div><p>Read all graph files contained in a directory whose filename contains the pattern, return a dictionary of name to Graph object.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pattern</strong> (<em>-</em>) – unix-style string pattern</p></li>
+<li><p><strong>fileformat</strong> (<em>-</em>) – An element of the Format enumeration</p></li>
+<li><p><strong>some</strong> (<em>-</em>) – restrict number of graphs to be read</p></li>
+<li><p><strong>**kwargs</strong> (<em>-</em>) – <p>in case of a custom edge list, provide the defining paramaters as follows:
+“separator=CHAR, firstNode=NODE, commentPrefix=STRING, continuous=BOOL”
+commentPrefix and continuous are optional</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.setLogLevel">
+<span class="sig-prename descclassname"><span class="pre">networkit.</span></span><span class="sig-name descname"><span class="pre">setLogLevel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Set the current loglevel</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.setNumberOfThreads">
+<span class="sig-prename descclassname"><span class="pre">networkit.</span></span><span class="sig-name descname"><span class="pre">setNumberOfThreads</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Set the number of OpenMP threads</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.setPrintLocation">
+<span class="sig-prename descclassname"><span class="pre">networkit.</span></span><span class="sig-name descname"><span class="pre">setPrintLocation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Switch locations in log statements on or off</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.setSeed">
+<span class="sig-prename descclassname"><span class="pre">networkit.</span></span><span class="sig-name descname"><span class="pre">setSeed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Set the random seed that is used in NetworKit.</p>
+<p>Note that there is a separate random number generator per thread.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.setup">
+<span class="sig-prename descclassname"><span class="pre">networkit.</span></span><span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>This function is run once on module import to configure initial settings</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.writeGraph">
+<span class="sig-prename descclassname"><span class="pre">networkit.</span></span><span class="sig-name descname"><span class="pre">writeGraph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Write graph to various output formats.</p>
+</dd></dl>
+
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.3.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

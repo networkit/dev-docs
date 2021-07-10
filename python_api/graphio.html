@@ -1,0 +1,802 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>networkit.graphio</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="networkit.graphtools" href="graphtools.html" />
+    <link rel="prev" title="networkit.graph" href="graph.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="networkit.html">networkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algebraic.html">networkit.algebraic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="base.html">networkit.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="centrality.html">networkit.centrality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clique.html">networkit.clique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coarsening.html">networkit.coarsening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coloring.html">networkit.coloring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="community.html">networkit.community</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">networkit.components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="correlation.html">networkit.correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="distance.html">networkit.distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamic.html">networkit.dynamic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engineering.html">networkit.engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow.html">networkit.flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generators.html">networkit.generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gephi.html">networkit.gephi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GEXFIO.html">networkit.GEXFIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="globals.html">networkit.globals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graph.html">networkit.graph</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">networkit.graphio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphtools.html">networkit.graphtools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GraphMLIO.html">networkit.GraphMLIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="helpers.html">networkit.helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="independentset.html">networkit.independentset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkprediction.html">networkit.linkprediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matching.html">networkit.matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nxadapter.html">networkit.nxadapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="partitioning.html">networkit.partitioning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot.html">networkit.plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">networkit.profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="randomization.html">networkit.randomization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sampling.html">networkit.sampling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scd.html">networkit.scd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html">networkit.simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sparsification.html">networkit.sparsification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stats.html">networkit.stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stopwatch.html">networkit.stopwatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structures.html">networkit.structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="traversal.html">networkit.traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viz.html">networkit.viz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viztasks.html">networkit.viztasks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows.html">networkit.workflows</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="module-networkit.graphio">
+<span id="networkit-graphio"></span><h1>networkit.graphio</h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.BinaryEdgeListPartitionReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">BinaryEdgeListPartitionReader</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Reads a partition file that contains a binary list of pairs (node, partition(node)).
+It is assumed that all integers are unsigned.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graphio.BinaryEdgeListPartitionReader.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Read the partition from one or multiple files</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.BinaryEdgeListPartitionWriter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">BinaryEdgeListPartitionWriter</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Writes a partition file that contains a binary list of pairs (node, partition(node)).</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graphio.BinaryEdgeListPartitionWriter.write">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Write the partition to the given file.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.BinaryPartitionReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">BinaryPartitionReader</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Reads a partition from a binary file that contains an unsigned integer
+of the given width for each node.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graphio.BinaryPartitionReader.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.BinaryPartitionWriter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">BinaryPartitionWriter</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Writes a partition to a file to contains a binary list of partition ids.
+Partition ids are unsigned integers.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graphio.BinaryPartitionWriter.write">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Write the partition to the given file.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.CoverReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">CoverReader</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Reads a cover from a file
+File format: each line contains the space-separated node ids of a community</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graphio.CoverReader.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.CoverWriter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">CoverWriter</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Writes a partition to a file.
+File format: each line contains the space-separated node ids of a community</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graphio.CoverWriter.write">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.DotGraphWriter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">DotGraphWriter</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.graphio.GraphWriter" title="networkit.graphio.GraphWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.graphio.GraphWriter</span></code></a></p>
+<p>Writes graphs in the .dot/GraphViz format</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.EdgeListCoverReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">EdgeListCoverReader</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Reads a cover from an edge list type of file
+File format: each line starts with a node id and continues with a list of the communities the node belongs to</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graphio.EdgeListCoverReader.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.EdgeListPartitionReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">EdgeListPartitionReader</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Reads a partition from an edge list type of file</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graphio.EdgeListPartitionReader.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.EdgeListReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">EdgeListReader</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.graphio.GraphReader" title="networkit.graphio.GraphReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.graphio.GraphReader</span></code></a></p>
+<p>Reads a graph from various text-based edge list formats.</p>
+<p>EdgeListReader(self, separator, firstNode, commentPrefix=”#”, continuous=True, directed=False)</p>
+<p>A line has to contain two or three entries separated with the separator symbol (one ASCII character).
+If at least one line contains three entries, the generated graph will be weighted and
+each line with only two fields will be interpreted as weight 1.0.</p>
+<p>A file may contain the same edge multiple times; then, the weight of the first
+occurrence is used.</p>
+<p>Undirected graphs need to include an edge only in one direction, i.e. edge {u, v} may
+be represented by (u, v) or (v, u) or both (again, only the first occurrence is used).</p>
+<p>If the input file contains non-continuous node ids with large gaps or non-integer node labels,
+set the parameter continuous to False. Then, gaps are automatically removed and node ids are
+reassigned to [0, n) where n is the number of nodes in the graph. The mapping will be arbitrary
+and can be accessed using getNodeMap().</p>
+<p>To shift continuous integer node labels which are not zero-indexed, set firstNode to
+the smallest id used in the file. firstNode will be ignored in the non-continuous case.</p>
+<p>The file may also include line comments which start with the commentPrefix.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graphio.EdgeListReader.getNodeMap">
+<span class="sig-name descname"><span class="pre">getNodeMap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns mapping of non-continuous files.</p>
+<p>The mapping is returned as dict (string -&gt; node) projecting the original
+labels (as strings) to the reassigned integer node ids.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.EdgeListWriter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">EdgeListWriter</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.graphio.GraphWriter" title="networkit.graphio.GraphWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.graphio.GraphWriter</span></code></a></p>
+<p>Writes graphs in various edge list formats.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.Format">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">Format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.graphio.__AutoNumber</span></code></p>
+<p>Simple enumeration class to list supported file types. Currently supported
+file types: SNAP, EdgeListSpaceZero, EdgeListSpaceOne, EdgeListTabZero, EdgeListTabOne,
+METIS, GraphML, GEXF, GML, EdgeListCommaOne, GraphViz, DOT, EdgeList, LFR, KONEC, GraphToolBinary,</p>
+<blockquote>
+<div><p>NetworkitBinary</p>
+</div></blockquote>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.Format.DOT">
+<span class="sig-name descname"><span class="pre">DOT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">12</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.Format.EdgeList">
+<span class="sig-name descname"><span class="pre">EdgeList</span></span><em class="property"> <span class="pre">=</span> <span class="pre">13</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.Format.EdgeListCommaOne">
+<span class="sig-name descname"><span class="pre">EdgeListCommaOne</span></span><em class="property"> <span class="pre">=</span> <span class="pre">10</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.Format.EdgeListSpaceOne">
+<span class="sig-name descname"><span class="pre">EdgeListSpaceOne</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.Format.EdgeListSpaceZero">
+<span class="sig-name descname"><span class="pre">EdgeListSpaceZero</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.Format.EdgeListTabOne">
+<span class="sig-name descname"><span class="pre">EdgeListTabOne</span></span><em class="property"> <span class="pre">=</span> <span class="pre">5</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.Format.EdgeListTabZero">
+<span class="sig-name descname"><span class="pre">EdgeListTabZero</span></span><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.Format.GEXF">
+<span class="sig-name descname"><span class="pre">GEXF</span></span><em class="property"> <span class="pre">=</span> <span class="pre">8</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.Format.GML">
+<span class="sig-name descname"><span class="pre">GML</span></span><em class="property"> <span class="pre">=</span> <span class="pre">9</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.Format.GraphML">
+<span class="sig-name descname"><span class="pre">GraphML</span></span><em class="property"> <span class="pre">=</span> <span class="pre">7</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.Format.GraphToolBinary">
+<span class="sig-name descname"><span class="pre">GraphToolBinary</span></span><em class="property"> <span class="pre">=</span> <span class="pre">16</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.Format.GraphViz">
+<span class="sig-name descname"><span class="pre">GraphViz</span></span><em class="property"> <span class="pre">=</span> <span class="pre">11</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.Format.KONECT">
+<span class="sig-name descname"><span class="pre">KONECT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">15</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.Format.LFR">
+<span class="sig-name descname"><span class="pre">LFR</span></span><em class="property"> <span class="pre">=</span> <span class="pre">14</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.Format.MAT">
+<span class="sig-name descname"><span class="pre">MAT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">17</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.Format.METIS">
+<span class="sig-name descname"><span class="pre">METIS</span></span><em class="property"> <span class="pre">=</span> <span class="pre">6</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.Format.NetworkitBinary">
+<span class="sig-name descname"><span class="pre">NetworkitBinary</span></span><em class="property"> <span class="pre">=</span> <span class="pre">19</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.Format.SNAP">
+<span class="sig-name descname"><span class="pre">SNAP</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.Format.ThrillBinary">
+<span class="sig-name descname"><span class="pre">ThrillBinary</span></span><em class="property"> <span class="pre">=</span> <span class="pre">18</span></em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.GMLGraphReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">GMLGraphReader</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.graphio.GraphReader" title="networkit.graphio.GraphReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.graphio.GraphReader</span></code></a></p>
+<p>Reader for the GML graph format, which is documented here [1].</p>
+<p>[1]: <a class="reference external" href="http://www.fim.uni-passau.de/fileadmin/files/lehrstuhl/brandenburg/projekte/gml/gml-technical-report.pdf">http://www.fim.uni-passau.de/fileadmin/files/lehrstuhl/brandenburg/projekte/gml/gml-technical-report.pdf</a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.GMLGraphWriter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">GMLGraphWriter</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.graphio.GraphWriter" title="networkit.graphio.GraphWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.graphio.GraphWriter</span></code></a></p>
+<p>Writes a graph and its coordinates as a GML file.[1]
+[1] <a class="reference external" href="http://svn.bigcat.unimaas.nl/pvplugins/GML/trunk/docs/gml-technical-report.pdf">http://svn.bigcat.unimaas.nl/pvplugins/GML/trunk/docs/gml-technical-report.pdf</a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.GraphConverter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">GraphConverter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reader</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">writer</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graphio.GraphConverter.convert">
+<span class="sig-name descname"><span class="pre">convert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inPath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outPath</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.GraphReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">GraphReader</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Abstract base class for graph readers</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graphio.GraphReader.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.GraphToolBinaryReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">GraphToolBinaryReader</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.graphio.GraphReader" title="networkit.graphio.GraphReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.graphio.GraphReader</span></code></a></p>
+<p>Reads the binary file format defined by graph-tool[1].
+[1]: <a class="reference external" href="http://graph-tool.skewed.de/static/doc/gt_format.html">http://graph-tool.skewed.de/static/doc/gt_format.html</a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.GraphToolBinaryWriter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">GraphToolBinaryWriter</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.graphio.GraphWriter" title="networkit.graphio.GraphWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.graphio.GraphWriter</span></code></a></p>
+<p>Reads the binary file format defined by graph-tool[1].
+[1]: <a class="reference external" href="http://graph-tool.skewed.de/static/doc/gt_format.html">http://graph-tool.skewed.de/static/doc/gt_format.html</a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.GraphWriter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">GraphWriter</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Abstract base class for graph writers</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graphio.GraphWriter.write">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Write the graph to a file.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.KONECTGraphReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">KONECTGraphReader</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.graphio.GraphReader" title="networkit.graphio.GraphReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.graphio.GraphReader</span></code></a></p>
+<p>Reader for the KONECT graph format, which is described in detail on the KONECT website[1].</p>
+<p>[1]: <a class="reference external" href="http://konect.uni-koblenz.de/downloads/konect-handbook.pdf">http://konect.uni-koblenz.de/downloads/konect-handbook.pdf</a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.LineFileReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">LineFileReader</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Reads a file and puts each line in a list of strings</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graphio.LineFileReader.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.METISGraphReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">METISGraphReader</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.graphio.GraphReader" title="networkit.graphio.GraphReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.graphio.GraphReader</span></code></a></p>
+<p>Reads the METIS adjacency file format [1]. If the Fast reader fails,
+use readGraph(path, graphio.formats.metis) as an alternative.
+[1]: <a class="reference external" href="http://people.sc.fsu.edu/~jburkardt/data/metis_graph/metis_graph.html">http://people.sc.fsu.edu/~jburkardt/data/metis_graph/metis_graph.html</a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.METISGraphWriter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">METISGraphWriter</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.graphio.GraphWriter" title="networkit.graphio.GraphWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.graphio.GraphWriter</span></code></a></p>
+<p>Writes graphs in the METIS format</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.MatReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">MatReader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'G'</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graphio.MatReader.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.MatWriter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">MatWriter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'G'</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graphio.MatWriter.write">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'G'</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.MultipleEdgesHandling">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">MultipleEdgesHandling</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.MultipleEdgesHandling.DiscardEdges">
+<span class="sig-name descname"><span class="pre">DiscardEdges</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.MultipleEdgesHandling.KeepMinimumWeight">
+<span class="sig-name descname"><span class="pre">KeepMinimumWeight</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.graphio.MultipleEdgesHandling.SumWeightsUp">
+<span class="sig-name descname"><span class="pre">SumWeightsUp</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.NetworkitBinaryReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">NetworkitBinaryReader</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.graphio.GraphReader" title="networkit.graphio.GraphReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.graphio.GraphReader</span></code></a></p>
+<p>Reads a graph written in the custom Networkit format documented in cpp/io/NetworkitGraph.md</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.NetworkitBinaryWriter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">NetworkitBinaryWriter</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.graphio.GraphWriter" title="networkit.graphio.GraphWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.graphio.GraphWriter</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.PartitionReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">PartitionReader</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Reads a partition from a file.
+File format: line i contains subset id of element i.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graphio.PartitionReader.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.PartitionWriter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">PartitionWriter</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Writes a partition to a file.
+File format: line i contains subset id of element i.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graphio.PartitionWriter.write">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.SNAPEdgeListPartitionReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">SNAPEdgeListPartitionReader</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Reads a partition from a SNAP ‘community with ground truth’ file</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graphio.SNAPEdgeListPartitionReader.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.SNAPGraphReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">SNAPGraphReader</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.graphio.GraphReader" title="networkit.graphio.GraphReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.graphio.GraphReader</span></code></a></p>
+<p>Reads a graph from the SNAP graph data collection [1]
+[1]: <a class="reference external" href="http://snap.stanford.edu/data/index.html">http://snap.stanford.edu/data/index.html</a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.SNAPGraphWriter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">SNAPGraphWriter</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.graphio.GraphWriter" title="networkit.graphio.GraphWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.graphio.GraphWriter</span></code></a></p>
+<p>Writes graphs in a format suitable for the Georgia Tech SNAP software [1]
+[1]: <a class="reference external" href="http://snap-graph.sourceforge.net/">http://snap-graph.sourceforge.net/</a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.ThrillGraphBinaryReader">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">ThrillGraphBinaryReader</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.graphio.GraphReader" title="networkit.graphio.GraphReader"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.graphio.GraphReader</span></code></a></p>
+<p>Reads a graph format consisting of a serialized DIA of vector&lt;uint32_t&gt; from thrill.
+When the number of nodes is given, reading the graph is more efficient.
+Otherwise nodes are added to the graph as they are encountered.
+Edges must be present only in one direction.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graphio.ThrillGraphBinaryReader.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graphio.ThrillGraphBinaryWriter">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">ThrillGraphBinaryWriter</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.graphio.GraphWriter" title="networkit.graphio.GraphWriter"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.graphio.GraphWriter</span></code></a></p>
+<p>Writes a graph format consisting of a serialized DIA of vector&lt;uint32_t&gt; from Thrill.
+Edges are written only in one direction.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.graphio.convertGraph">
+<span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">convertGraph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.graphio.getConverter">
+<span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">getConverter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.graphio.getReader">
+<span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">getReader</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.graphio.getWriter">
+<span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">getWriter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.graphio.readGraph">
+<span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">readGraph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Read graph file in various formats and return a NetworKit::Graph
+:param - fileformat: An element of the Format enumeration. Currently supported file types:
+:param SNAP:
+:param EdgeListSpaceZero:
+:param EdgeListSpaceOne:
+:param EdgeListTabZero:
+:param EdgeListTabOne:
+:param METIS:
+:param :
+:param GraphML:
+:param GEXF:
+:param GML:
+:param EdgeListCommaOne:
+:param GraphViz:
+:param DOT:
+:param EdgeList:
+:param LFR:
+:param KONECT:
+:param GraphToolBinary:
+:param ThrillBinary:
+:param - <a href="#id1"><span class="problematic" id="id2">**</span></a>kwargs: in case of a custom edge list, pass the genereic Fromat.EdgeList accompanied by</p>
+<blockquote>
+<div><p>the defining paramaters as follows:
+“separator=CHAR, firstNode=NODE, commentPrefix=STRING, continuous=BOOL, directed=BOOL”
+commentPrefix=’#’, continuous=True and directed=False are optional because of their default values;
+firstNode is not needed when continuous=True.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.graphio.readGraphs">
+<span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">readGraphs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><blockquote>
+<div><p>Read all graph files contained in a directory whose filename contains the pattern, return a dictionary of name to Graph object.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pattern</strong> (<em>-</em>) – unix-style string pattern</p></li>
+<li><p><strong>fileformat</strong> (<em>-</em>) – An element of the Format enumeration</p></li>
+<li><p><strong>some</strong> (<em>-</em>) – restrict number of graphs to be read</p></li>
+<li><p><strong>**kwargs</strong> (<em>-</em>) – <p>in case of a custom edge list, provide the defining paramaters as follows:
+“separator=CHAR, firstNode=NODE, commentPrefix=STRING, continuous=BOOL”
+commentPrefix and continuous are optional</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.graphio.readMat">
+<span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">readMat</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Reads a Graph from a matlab object file containing an adjacency matrix and returns a NetworKit::Graph
+Parameters:
+- key: The key of the adjacency matrix in the matlab object file (default: A)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.graphio.readStream">
+<span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">readStream</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Read a graph event stream from a file.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.graphio.stdstring">
+<span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">stdstring</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>convert a Python string to a bytes object which is automatically coerced to std::string</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.graphio.writeGraph">
+<span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">writeGraph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Write graph to various output formats.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.graphio.writeMat">
+<span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">writeMat</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Writes a NetworKit::Graph to a Matlab object file.
+Parameters:
+———–
+- G: The graph
+- path: Path of the matlab file
+- key: Dictionary Key</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.graphio.writeStream">
+<span class="sig-prename descclassname"><span class="pre">networkit.graphio.</span></span><span class="sig-name descname"><span class="pre">writeStream</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Write a graph event stream to a file.</p>
+</dd></dl>
+
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.3.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

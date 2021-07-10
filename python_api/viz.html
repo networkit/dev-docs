@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>networkit.viz</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="networkit.viztasks" href="viztasks.html" />
+    <link rel="prev" title="networkit.traversal" href="traversal.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="networkit.html">networkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algebraic.html">networkit.algebraic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="base.html">networkit.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="centrality.html">networkit.centrality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clique.html">networkit.clique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coarsening.html">networkit.coarsening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coloring.html">networkit.coloring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="community.html">networkit.community</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">networkit.components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="correlation.html">networkit.correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="distance.html">networkit.distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamic.html">networkit.dynamic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engineering.html">networkit.engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow.html">networkit.flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generators.html">networkit.generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gephi.html">networkit.gephi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GEXFIO.html">networkit.GEXFIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="globals.html">networkit.globals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graph.html">networkit.graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphio.html">networkit.graphio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphtools.html">networkit.graphtools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GraphMLIO.html">networkit.GraphMLIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="helpers.html">networkit.helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="independentset.html">networkit.independentset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkprediction.html">networkit.linkprediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matching.html">networkit.matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nxadapter.html">networkit.nxadapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="partitioning.html">networkit.partitioning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot.html">networkit.plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">networkit.profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="randomization.html">networkit.randomization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sampling.html">networkit.sampling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scd.html">networkit.scd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html">networkit.simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sparsification.html">networkit.sparsification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stats.html">networkit.stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stopwatch.html">networkit.stopwatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structures.html">networkit.structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="traversal.html">networkit.traversal</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">networkit.viz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viztasks.html">networkit.viztasks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows.html">networkit.workflows</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="module-networkit.viz">
+<span id="networkit-viz"></span><h1>networkit.viz</h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.viz.GraphLayoutAlgorithm">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.viz.</span></span><span class="sig-name descname"><span class="pre">GraphLayoutAlgorithm</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Abstract base class for graph drawing algorithms</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.GraphLayoutAlgorithm.getCoordinates">
+<span class="sig-name descname"><span class="pre">getCoordinates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Computes approximation (in parallel) of the Spanning Edge Centrality.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.GraphLayoutAlgorithm.numEdgeCrossings">
+<span class="sig-name descname"><span class="pre">numEdgeCrossings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Computes approximation (in parallel) of the Spanning Edge Centrality.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.GraphLayoutAlgorithm.writeGraphToGML">
+<span class="sig-name descname"><span class="pre">writeGraphToGML</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Writes the graph and its layout to a .gml file at the specified path
+path: string</p>
+<blockquote>
+<div><p>Path where the graph file should be created</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.GraphLayoutAlgorithm.writeKinemage">
+<span class="sig-name descname"><span class="pre">writeKinemage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><dl class="simple">
+<dt>Writes the graph and its layout to a file at the specified path</dt><dd><p>path: string</p>
+</dd>
+</dl>
+<p>Path where the graph file should be created</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.viz.</span></span><span class="sig-name descname"><span class="pre">MaxentStress</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.viz.GraphLayoutAlgorithm" title="networkit.viz.GraphLayoutAlgorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.viz.GraphLayoutAlgorithm</span></code></a></p>
+<p>Implementation of MaxentStress by Gansner et al. using a Laplacian system solver.
+&#64;see Gansner, Emden R., Yifan Hu, and Steve North. “A maxent-stress model for graph layout.”
+Visualization and Computer Graphics, IEEE Transactions on 19, no. 6 (2013): 927-940.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to be handled. Should be connected, otherwise the run() and runAlgo() methods will fail.</p></li>
+<li><p><strong>dim</strong> (<em>count</em>) – Number of dimensions.</p></li>
+<li><p><strong>count</strong> (<em>k</em>) – </p></li>
+<li><p><strong>coordinates</strong> (<em>vector</em><em>[</em><em>pair</em><em>[</em><em>double</em><em>, </em><em>double</em><em>]</em><em>]</em>) – The coordinates we want to draw in.</p></li>
+<li><p><strong>tolerance</strong> (<em>double</em>) – The tolerance we want our solver to have.</p></li>
+<li><p><strong>linearSolverType</strong> (<em>_LinearSolverType</em>) – The type of linear solver we wish to use.</p></li>
+<li><p><strong>fastComputation</strong> (<em>bool</em>) – Decides whether or not slightly faster computation should be employed, leading to slightly worse results.</p></li>
+<li><p><strong>graphDistance</strong> (<em>_GraphDistance</em>) – Decides what type of graph distance should be utilised.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.ALGEBRAIC_DISTANCE">
+<span class="sig-name descname"><span class="pre">ALGEBRAIC_DISTANCE</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.CONJUGATE_GRADIENT_DIAGONAL_PRECONDITIONER">
+<span class="sig-name descname"><span class="pre">CONJUGATE_GRADIENT_DIAGONAL_PRECONDITIONER</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.CONJUGATE_GRADIENT_IDENTITY_PRECONDITIONER">
+<span class="sig-name descname"><span class="pre">CONJUGATE_GRADIENT_IDENTITY_PRECONDITIONER</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.EDGE_WEIGHT">
+<span class="sig-name descname"><span class="pre">EDGE_WEIGHT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.LAMG">
+<span class="sig-name descname"><span class="pre">LAMG</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.computeScalingFactor">
+<span class="sig-name descname"><span class="pre">computeScalingFactor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Computes a scalar s s.t. sum_{u,v in V} w_{uv} (s ||x_u - x_v|| - d_{uv}||)^2 is minimized</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.fullStressMeasure">
+<span class="sig-name descname"><span class="pre">fullStressMeasure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Computes the full stress measure of the computed layout with run()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.getApproxEntropyTerm">
+<span class="sig-name descname"><span class="pre">getApproxEntropyTerm</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.getRhs">
+<span class="sig-name descname"><span class="pre">getRhs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.getSolveTime">
+<span class="sig-name descname"><span class="pre">getSolveTime</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.ldme">
+<span class="sig-name descname"><span class="pre">ldme</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Computes the ldme</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.maxentMeasure">
+<span class="sig-name descname"><span class="pre">maxentMeasure</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Computes the maxent stress measure for the computed layout with run()</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.meanDistanceError">
+<span class="sig-name descname"><span class="pre">meanDistanceError</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Computes mean distance error</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Approximates a graph layout with the maxent-stress algorithm</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.scaleLayout">
+<span class="sig-name descname"><span class="pre">scaleLayout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Scale the layout computed by run() by a scalar s to minimize sum_{u,v in V} w_{uv} (s ||x_u - x_v|| - d_{uv}||)^2</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.setAlpha">
+<span class="sig-name descname"><span class="pre">setAlpha</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.setAlphaReduction">
+<span class="sig-name descname"><span class="pre">setAlphaReduction</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.setConvergenceThreshold">
+<span class="sig-name descname"><span class="pre">setConvergenceThreshold</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.setFinalAlpha">
+<span class="sig-name descname"><span class="pre">setFinalAlpha</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.MaxentStress.setQ">
+<span class="sig-name descname"><span class="pre">setQ</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.viz.PivotMDS">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.viz.</span></span><span class="sig-name descname"><span class="pre">PivotMDS</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.viz.GraphLayoutAlgorithm" title="networkit.viz.GraphLayoutAlgorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.viz.GraphLayoutAlgorithm</span></code></a></p>
+<p>Implementation of PivotMDS proposed by Brandes and Pich.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to be handled by the algorithm.</p></li>
+<li><p><strong>dim</strong> (<em>count</em>) – Number of dimensions.</p></li>
+<li><p><strong>numberOfPivots</strong> (<em>count</em>) – Number of pivots for the algorithm.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.viz.PivotMDS.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Constructs a PivotMDS object for the given &#64;a graph. The algorithm should embed the graph in &#64;a dim dimensions using &#64;a numberOfPivots pivots.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.viz.stdstring">
+<span class="sig-prename descclassname"><span class="pre">networkit.viz.</span></span><span class="sig-name descname"><span class="pre">stdstring</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>convert a Python string to a bytes object which is automatically coerced to std::string</p>
+</dd></dl>
+
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.3.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

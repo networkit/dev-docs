@@ -1,0 +1,1434 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>networkit.centrality</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="networkit.clique" href="clique.html" />
+    <link rel="prev" title="networkit.base" href="base.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="networkit.html">networkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algebraic.html">networkit.algebraic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="base.html">networkit.base</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">networkit.centrality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clique.html">networkit.clique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coarsening.html">networkit.coarsening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coloring.html">networkit.coloring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="community.html">networkit.community</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">networkit.components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="correlation.html">networkit.correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="distance.html">networkit.distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamic.html">networkit.dynamic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engineering.html">networkit.engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow.html">networkit.flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generators.html">networkit.generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gephi.html">networkit.gephi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GEXFIO.html">networkit.GEXFIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="globals.html">networkit.globals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graph.html">networkit.graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphio.html">networkit.graphio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphtools.html">networkit.graphtools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GraphMLIO.html">networkit.GraphMLIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="helpers.html">networkit.helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="independentset.html">networkit.independentset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkprediction.html">networkit.linkprediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matching.html">networkit.matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nxadapter.html">networkit.nxadapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="partitioning.html">networkit.partitioning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot.html">networkit.plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">networkit.profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="randomization.html">networkit.randomization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sampling.html">networkit.sampling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scd.html">networkit.scd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html">networkit.simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sparsification.html">networkit.sparsification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stats.html">networkit.stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stopwatch.html">networkit.stopwatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structures.html">networkit.structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="traversal.html">networkit.traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viz.html">networkit.viz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viztasks.html">networkit.viztasks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="workflows.html">networkit.workflows</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="module-networkit.centrality">
+<span id="networkit-centrality"></span><h1>networkit.centrality</h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.ApproxBetweenness">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">ApproxBetweenness</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.Centrality</span></code></a></p>
+<p>Approximation of betweenness centrality according to algorithm described in
+Matteo Riondato and Evgenios M. Kornaropoulos: Fast Approximation of Betweenness Centrality through Sampling</p>
+<p>ApproxBetweenness(G, epsilon=0.01, delta=0.1, universalConstant=1.0)</p>
+<p>The algorithm approximates the betweenness of all vertices so that the scores are
+within an additive error epsilon with probability at least (1- delta).
+The values are normalized by default. The run() method takes O(m) time per sample, where  m is
+the number of edges of the graph. The number of samples is proportional to universalConstant/epsilon^2.
+Although this algorithm has a theoretical guarantee, the algorithm implemented in Estimate Betweenness usually performs better in practice
+Therefore, we recommend to use EstimateBetweenness if no theoretical guarantee is needed.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.ApproxBetweenness.numberOfSamples">
+<span class="sig-name descname"><span class="pre">numberOfSamples</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.ApproxCloseness">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">ApproxCloseness</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.Centrality</span></code></a></p>
+<p>Approximation of closeness centrality according to algorithm described in
+Cohen et al., Computing Classic Closeness Centrality, at Scale.</p>
+<p>ApproxCloseness(G, nSamples, epsilon=0.1, normalized=False, type=OUTBOUND)</p>
+<p>The algorithm approximates the closeness of all nodes in both directed and undirected graphs using a hybrid estimator.
+First, it takes nSamples samples. For these sampled nodes, the closeness is computed exactly. The pivot of each of the
+remaining nodes is the closest sampled node to it. If a node lies very close to its pivot, a sampling approach is used.
+Otherwise, a pivoting approach is used. Notice that the input graph has to be connected.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.centrality.ApproxCloseness.INBOUND">
+<span class="sig-name descname"><span class="pre">INBOUND</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.centrality.ApproxCloseness.OUTBOUND">
+<span class="sig-name descname"><span class="pre">OUTBOUND</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.centrality.ApproxCloseness.SUM">
+<span class="sig-name descname"><span class="pre">SUM</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.ApproxCloseness.getSquareErrorEstimates">
+<span class="sig-name descname"><span class="pre">getSquareErrorEstimates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Return a vector containing the square error estimates for all nodes.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.ApproxElectricalCloseness">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">ApproxElectricalCloseness</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.Centrality</span></code></a></p>
+<p>Approximates the electrical closeness of all the vertices of the graph by approximating the
+diagonal of the laplacian’s pseudoinverse of &#64;a G. Every element of the diagonal is
+guaranteed to have a maximum absolute error of eps. Based on “Approximation of the
+Diagonal of a Laplacian’s Pseudoinverse for Complex Network Analysis”, Angriman et al., ESA
+2020. The algorithm does two steps: solves a linear system and samples uniform spanning trees
+(USTs). The parameter &#64;a kappa balances the tolerance of solver for the linear system and the
+number of USTs to be sampled. A high value of &#64;a kappa raises the tolerance (solver converges
+faster) but more USTs need to be sampled, vice versa for a low value of &#64;a kappa.</p>
+<dl class="simple">
+<dt>G<span class="classifier">networkit.Graph</span></dt><dd><p>The input graph.</p>
+</dd>
+<dt>eps<span class="classifier">double</span></dt><dd><p>Maximum absolute error of the elements in the diagonal.</p>
+</dd>
+<dt>kappa<span class="classifier">double</span></dt><dd><p>Balances the tolerance of the solver for the linear system and the
+number of USTs to be sampled.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.ApproxElectricalCloseness.computeExactDiagonal">
+<span class="sig-name descname"><span class="pre">computeExactDiagonal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Compute and return the nearly-exact values of the diagonal of the laplacian’s pseudoinverse.
+The values are computed by solving Lx = e_u - 1 / n for every vertex u of the graph with a
+LAMG solver.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.ApproxElectricalCloseness.getDiagonal">
+<span class="sig-name descname"><span class="pre">getDiagonal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Return an epsilon-approximation of the diagonal of the laplacian’s pseudoinverse.</p>
+<dl class="simple">
+<dt>vector[double]</dt><dd><p>Approximation of the diagonal of the laplacian’s pseudoinverse.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.ApproxGroupBetweenness">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">ApproxGroupBetweenness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groupSize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.base.Algorithm</span></code></a></p>
+<p>Constructs the ApproxGroupBetweenness class for a given undirected Graph
+<cite>G</cite>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.ApproxGroupBetweenness.groupMaxBetweenness">
+<span class="sig-name descname"><span class="pre">groupMaxBetweenness</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get a vector of nodes containing the set of nodes with apporoximated
+maximum group betweenness.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.ApproxGroupBetweenness.scoreOfGroup">
+<span class="sig-name descname"><span class="pre">scoreOfGroup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the score of the given group.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.ApproxSpanningEdge">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">ApproxSpanningEdge</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.base.Algorithm</span></code></a></p>
+<p>Computes an epsilon-approximation of the spanning edge centrality of every edge of the input
+graph with probability (1 - 1/n), based on “Efficient Algorithms for Spanning Tree
+Centrality”, Hayashi et al., IJCAI, 2016. This implementation also support multi-threading.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.ApproxSpanningEdge.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Return the spanning edge approximation for each edge of the graph.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.Betweenness">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">Betweenness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">computeEdgeCentrality</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.Centrality</span></code></a></p>
+<p>Constructs the Betweenness class for the given Graph <cite>G</cite>. If the betweenness scores should be normalized,
+then set <cite>normalized</cite> to True. The run() method takes O(nm) time, where n is the number
+of nodes and m is the number of edges of the graph.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.Betweenness.edgeScores">
+<span class="sig-name descname"><span class="pre">edgeScores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get a vector containing the betweenness score for each edge in the graph.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.BoundStrategy">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">BoundStrategy</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.centrality.BoundStrategy.AdaptiveGeometric">
+<span class="sig-name descname"><span class="pre">AdaptiveGeometric</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.centrality.BoundStrategy.Geometric">
+<span class="sig-name descname"><span class="pre">Geometric</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.centrality.BoundStrategy.No">
+<span class="sig-name descname"><span class="pre">No</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.centrality.BoundStrategy.Spectral">
+<span class="sig-name descname"><span class="pre">Spectral</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.Centrality">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">Centrality</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.base.Algorithm</span></code></a></p>
+<p>Abstract base class for centrality measures</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.Centrality.centralization">
+<span class="sig-name descname"><span class="pre">centralization</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Compute the centralization of a network with respect to some centrality measure.
+The centralization of any network is a measure of how central its most central
+node is in relation to how central all the other nodes are.
+Centralization measures then (a) calculate the sum in differences
+in centrality between the most central node in a network and all other nodes;
+and (b) divide this quantity by the theoretically largest such sum of
+differences in any network of the same size.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.Centrality.maximum">
+<span class="sig-name descname"><span class="pre">maximum</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.Centrality.ranking">
+<span class="sig-name descname"><span class="pre">ranking</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.Centrality.score">
+<span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.Centrality.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.Closeness">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">Closeness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">G</span></em>, <em class="sig-param"><span class="pre">normalized</span></em>, <em class="sig-param"><span class="pre">bool</span> <span class="pre">checkConnectdedness)</span> <span class="pre">Closeness(G</span></em>, <em class="sig-param"><span class="pre">normalized</span></em>, <em class="sig-param"><span class="pre">networkit.centrality.ClosenessVariant</span> <span class="pre">variant</span></em><span class="sig-paren">)</span></dt>
+<dt class="sig sig-object py">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">Closeness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">G</span></em>, <em class="sig-param"><span class="pre">normalized</span></em>, <em class="sig-param"><span class="pre">networkit.centrality.ClosenessVariant</span> <span class="pre">variant</span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.Centrality</span></code></a></p>
+<p>Constructs the Closeness class for the given Graph <cite>G</cite>. If the Closeness scores should not be normalized,
+set <cite>normalized</cite> to False. The run() method takes O(nm) time, where n is the number
+of nodes and m is the number of edges of the graph.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.ClosenessVariant">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">ClosenessVariant</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.centrality.ClosenessVariant.Generalized">
+<span class="sig-name descname"><span class="pre">Generalized</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.centrality.ClosenessVariant.Standard">
+<span class="sig-name descname"><span class="pre">Standard</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.CoreDecomposition">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">CoreDecomposition</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.Centrality</span></code></a></p>
+<p>Computes k-core decomposition of a graph.</p>
+<p>CoreDecomposition(G)</p>
+<p>Create CoreDecomposition class for graph <cite>G</cite>. The graph may not contain self-loops.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.CoreDecomposition.getCover">
+<span class="sig-name descname"><span class="pre">getCover</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the k-cores as cover.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.CoreDecomposition.getNodeOrder">
+<span class="sig-name descname"><span class="pre">getNodeOrder</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the node order.</p>
+<p>This is only possible when storeNodeOrder was set.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.CoreDecomposition.getPartition">
+<span class="sig-name descname"><span class="pre">getPartition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the k-shells as a partition object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.CoreDecomposition.maxCoreNumber">
+<span class="sig-name descname"><span class="pre">maxCoreNumber</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get maximum core number.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.DegreeCentrality">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">DegreeCentrality</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.Centrality</span></code></a></p>
+<p>Node centrality index which ranks nodes by their degree.
+Optional normalization by maximum degree.  run() runs in O(n) time if ignoreSelfLoops is false or the graph
+has no self-loops; otherwise it runs in O(m).</p>
+<p>DegreeCentrality(G, normalized=False, outDeg=True, ignoreSelfLoops=True)</p>
+<p>Constructs the DegreeCentrality class for the given Graph <cite>G</cite>. If the scores should be normalized,
+then set <cite>normalized</cite> to True.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.DynApproxBetweenness">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">DynApproxBetweenness</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.base.Algorithm</span></code></a></p>
+<p>The algorithm approximates the betweenness of all vertices so that the scores are
+within an additive error &#64;a epsilon with probability at least (1- &#64;a delta).
+The values are normalized by default.</p>
+<p>DynApproxBetweenness(G, epsilon=0.01, delta=0.1, storePredecessors=True, universalConstant=1.0)</p>
+<p>The algorithm approximates the betweenness of all vertices so that the scores are
+within an additive error epsilon with probability at least (1- delta).
+The values are normalized by default.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynApproxBetweenness.getNumberOfSamples">
+<span class="sig-name descname"><span class="pre">getNumberOfSamples</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get number of path samples used in last calculation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynApproxBetweenness.ranking">
+<span class="sig-name descname"><span class="pre">ranking</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get a vector of pairs sorted into descending order. Each pair contains a node and the corresponding score
+calculated by run().</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynApproxBetweenness.score">
+<span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the betweenness score of node <cite>v</cite> calculated by run().</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynApproxBetweenness.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get a vector containing the betweenness score for each node in the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynApproxBetweenness.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Updates the betweenness centralities after the edge insertions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynApproxBetweenness.updateBatch">
+<span class="sig-name descname"><span class="pre">updateBatch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Updates the betweenness centralities after the batch <cite>batch</cite> of edge insertions.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.DynBetweenness">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">DynBetweenness</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.base.Algorithm</span></code></a></p>
+<p>The algorithm computes the betweenness centrality of all nodes
+and updates them after an edge insertion.</p>
+<p>DynBetweenness(G)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynBetweenness.ranking">
+<span class="sig-name descname"><span class="pre">ranking</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get a vector of pairs sorted into descending order. Each pair contains a node and the corresponding score
+calculated by run().</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynBetweenness.score">
+<span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get the betweenness score of node <cite>v</cite> calculated by run().</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynBetweenness.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get a vector containing the betweenness score for each node in the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynBetweenness.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Updates the betweenness centralities after the edge insertions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynBetweenness.updateBatch">
+<span class="sig-name descname"><span class="pre">updateBatch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Updates the betweenness centralities after the batch <cite>batch</cite> of edge insertions.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.DynBetweennessOneNode">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">DynBetweennessOneNode</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Dynamic exact algorithm for updating the betweenness of a specific node</p>
+<p>DynBetweennessOneNode(G, x)</p>
+<p>The algorithm aupdates the betweenness of a node after an edge insertions
+(faster than updating it for all nodes), based on the algorithm
+proposed by Bergamini et al. “Improving the betweenness centrality of a node by adding links”</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynBetweennessOneNode.getDistance">
+<span class="sig-name descname"><span class="pre">getDistance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the distance between node u and node v.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynBetweennessOneNode.getSigma">
+<span class="sig-name descname"><span class="pre">getSigma</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the number of shortest paths between node u and node v.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynBetweennessOneNode.getSigmax">
+<span class="sig-name descname"><span class="pre">getSigmax</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the number of shortest paths between node u and node v that go through x.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynBetweennessOneNode.getbcx">
+<span class="sig-name descname"><span class="pre">getbcx</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the betweenness centrality score of node x</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynBetweennessOneNode.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynBetweennessOneNode.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Updates the betweenness centralities after the batch <cite>batch</cite> of edge insertions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynBetweennessOneNode.updateBatch">
+<span class="sig-name descname"><span class="pre">updateBatch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Updates the betweenness centrality of node x after the batch <cite>batch</cite> of edge insertions.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.DynKatzCentrality">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">DynKatzCentrality</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.Centrality</span></code></a></p>
+<p>Finds the top-k nodes with highest Katz centrality.</p>
+<p>DynKatzCentrality(G, k, groupOnly=False, tolerance=1e-9)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynKatzCentrality.areDistinguished">
+<span class="sig-name descname"><span class="pre">areDistinguished</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynKatzCentrality.bound">
+<span class="sig-name descname"><span class="pre">bound</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynKatzCentrality.top">
+<span class="sig-name descname"><span class="pre">top</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynKatzCentrality.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynKatzCentrality.updateBatch">
+<span class="sig-name descname"><span class="pre">updateBatch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.DynTopHarmonicCloseness">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">DynTopHarmonicCloseness</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.base.Algorithm</span></code></a></p>
+<p>Finds the top k nodes with highest harmonic closeness centrality faster
+than computing it for all nodes and updates them after a single or multiple
+edge update. The implementation is based on “Computing Top-k Closeness
+Centrality in Fully-dynamic Graphs”, Bisenius et al., ALENEX18.
+The implementation is based on the static algorithms by Borassi et al.
+(complex networks) and Bergamini et al. (large-diameter networks).</p>
+<p>DynTopHarmonicCloseness(G, k=1, useBFSbound=True)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynTopHarmonicCloseness.ranking">
+<span class="sig-name descname"><span class="pre">ranking</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns: the ranking of the k most central nodes in the graph.
+WARNING: closeness centrality of some nodes below the top-k could be equal
+to the k-th closeness, we call them trail. Set the parameter includeTrail
+to true to also include those nodes but consider that the resulting vector
+could be longer than k.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynTopHarmonicCloseness.topkNodesList">
+<span class="sig-name descname"><span class="pre">topkNodesList</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns: a list with the k nodes with highest harmonic closeness.
+WARNING: closeness centrality of some nodes below the top-k could be equal
+to the k-th closeness, we call them trail. Set the parameter includeTrail
+to true to also include those nodes but consider that the resulting vector
+could be longer than k.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynTopHarmonicCloseness.topkScoresList">
+<span class="sig-name descname"><span class="pre">topkScoresList</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns: a list with the scores of the k nodes with highest harmonic closeness.
+WARNING: closeness centrality of some nodes below the top-k could
+be equal to the k-th closeness, we call them trail. Set the parameter
+includeTrail to true to also include those centrality values but consider
+that the resulting vector could be longer than k.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynTopHarmonicCloseness.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.DynTopHarmonicCloseness.updateBatch">
+<span class="sig-name descname"><span class="pre">updateBatch</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.EdgeDirection">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">EdgeDirection</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.centrality.EdgeDirection.inEdges">
+<span class="sig-name descname"><span class="pre">inEdges</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.centrality.EdgeDirection.outEdges">
+<span class="sig-name descname"><span class="pre">outEdges</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.EigenvectorCentrality">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">EigenvectorCentrality</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.Centrality</span></code></a></p>
+<p>Computes the leading eigenvector of the graph’s adjacency matrix (normalized in 2-norm).
+Interpreted as eigenvector centrality score.</p>
+<p>EigenvectorCentrality(G, tol=1e-9)</p>
+<p>Constructs the EigenvectorCentrality class for the given Graph <cite>G</cite>. <cite>tol</cite> defines the tolerance for convergence.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.EstimateBetweenness">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">EstimateBetweenness</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.Centrality</span></code></a></p>
+<p>Estimation of betweenness centrality according to algorithm described in
+Sanders, Geisberger, Schultes: Better Approximation of Betweenness Centrality</p>
+<p>EstimateBetweenness(G, nSamples, normalized=False, parallel=False)</p>
+<p>The algorithm estimates the betweenness of all nodes, using weighting
+of the contributions to avoid biased estimation. The run() method takes O(m)
+time per sample, where  m is the number of edges of the graph. There is no proven
+theoretical guarantee on the quality of the approximation. However, the algorithm
+was shown to perform well in practice.
+If a guarantee is required, use ApproxBetweenness.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.GedWalk">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">GedWalk</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.base.Algorithm</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.GedWalk.getApproximateScore">
+<span class="sig-name descname"><span class="pre">getApproximateScore</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the GedWalk score of the computed group.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.GedWalk.groupMaxGedWalk">
+<span class="sig-name descname"><span class="pre">groupMaxGedWalk</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the computed group.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.GedWalk.scoreOfGroup">
+<span class="sig-name descname"><span class="pre">scoreOfGroup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the GedWalk score of the input group.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.GreedyStrategy">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">GreedyStrategy</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.centrality.GreedyStrategy.Lazy">
+<span class="sig-name descname"><span class="pre">Lazy</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.centrality.GreedyStrategy.Stochastic">
+<span class="sig-name descname"><span class="pre">Stochastic</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.GroupCloseness">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">GroupCloseness</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.base.Algorithm</span></code></a></p>
+<p>Finds the group of nodes with highest (group) closeness centrality. The algorithm is the one proposed in Bergamini et al., ALENEX 2018 and finds a solution that is a (1-1/e)-approximation of the optimum.
+The worst-case running time of this approach is quadratic, but usually much faster in practice.</p>
+<p>GroupCloseness(G, k=1, H=0)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.GroupCloseness.computeFarness">
+<span class="sig-name descname"><span class="pre">computeFarness</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Computes farness (i.e., inverse of the closeness) for a given group (stopping after H iterations if H &gt; 0).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.GroupCloseness.groupMaxCloseness">
+<span class="sig-name descname"><span class="pre">groupMaxCloseness</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the group with maximum closeness centrality.
+Returns:
+——–
+vector</p>
+<blockquote>
+<div><p>The group of k nodes with maximum closeness centrality.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.GroupCloseness.scoreOfGroup">
+<span class="sig-name descname"><span class="pre">scoreOfGroup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><blockquote>
+<div><p>Computes the group closeness score of the given group.</p>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.GroupClosenessGrowShrink">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">GroupClosenessGrowShrink</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.base.Algorithm</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.GroupClosenessGrowShrink.groupMaxCloseness">
+<span class="sig-name descname"><span class="pre">groupMaxCloseness</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the computed group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The computed group.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.GroupClosenessGrowShrink.numberOfIterations">
+<span class="sig-name descname"><span class="pre">numberOfIterations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Return the total number of iterations performed by the algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Total number of iterations performed by the algorithm.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.GroupClosenessLocalSearch">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">GroupClosenessLocalSearch</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.base.Algorithm</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.GroupClosenessLocalSearch.groupMaxCloseness">
+<span class="sig-name descname"><span class="pre">groupMaxCloseness</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the computed group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The computed group.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.GroupClosenessLocalSearch.numberOfIterations">
+<span class="sig-name descname"><span class="pre">numberOfIterations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Return the total number of iterations performed by the algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Total number of iterations performed by the algorithm.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.GroupClosenessLocalSwaps">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">GroupClosenessLocalSwaps</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.base.Algorithm</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.GroupClosenessLocalSwaps.groupMaxCloseness">
+<span class="sig-name descname"><span class="pre">groupMaxCloseness</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the computed group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The computed group.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.GroupClosenessLocalSwaps.numberOfSwaps">
+<span class="sig-name descname"><span class="pre">numberOfSwaps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Return the total number of vertex exchanges performed by the algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Total number of vertex exchanges performed by the algorithm.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.GroupDegree">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">GroupDegree</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.base.Algorithm</span></code></a></p>
+<p>Finds the group with the highest group degree centrality according to the
+definition proposed in ‘The centrality of groups and classes’ by Everett et
+al. (The Journal of mathematical sociology, 1999). This is a submodular but
+non monotone function so the algorithm can find a solution that is at least
+1/2 of the optimum. Worst-case running time is quadratic, but usually
+faster in real-world networks.
+The ‘countGroupNodes’ option also count the nodes inside the group in the
+score, this make the group degree monotone and submodular and the algorithm
+is guaranteed to return a (1 - 1/e)-approximation of the optimal solution.</p>
+<p>GroupDegree(G, k = 1, countGroupNodes = True)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.GroupDegree.getScore">
+<span class="sig-name descname"><span class="pre">getScore</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the score of the group with maximum degree centrality (i.e. the
+number of nodes outside the group that can be reached in one hop from at
+least one node in the group).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.GroupDegree.groupMaxDegree">
+<span class="sig-name descname"><span class="pre">groupMaxDegree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the group with maximum degree centrality.
+Returns:
+——–
+vector</p>
+<blockquote>
+<div><p>The group of k nodes with highest degree centrality.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.GroupDegree.scoreOfGroup">
+<span class="sig-name descname"><span class="pre">scoreOfGroup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the score of the given group.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.GroupHarmonicCloseness">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">GroupHarmonicCloseness</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.base.Algorithm</span></code></a></p>
+<p>Approximation algorithm for the group-harmonic maximization problem. The
+computed solutions have a guaranteed $lambda(1 - frac{1}{2e})$
+(directed graphs) and $lambda(1 - frac{1}/{e})/2$ (undirected graphs)
+approximation ratio, where $lambda$ is the ratio between the minimal and
+the maximal edge weight. The algorithm is the one proposed in Angriman et
+al., ALENEX 2021. The worst-case running time of this approach is
+quadratic, but usually much faster in practice.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.GroupHarmonicCloseness.groupMaxHarmonicCloseness">
+<span class="sig-name descname"><span class="pre">groupMaxHarmonicCloseness</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the computed group.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.GroupHarmonicCloseness.scoreOfGroup">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">scoreOfGroup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Computes the group-harmonic score of the input group.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.HarmonicCloseness">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">HarmonicCloseness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.Centrality</span></code></a></p>
+<blockquote>
+<div><p>Constructs the HarmonicCloseness class for the given Graph <cite>G</cite>.</p>
+</div></blockquote>
+<p>If the harmonic closeness scores should not be normalized, set
+<cite>normalized</cite> to False.
+The run() method takes O(nm) time, where n is the number</p>
+<blockquote>
+<div><p>of nodes and m is the number of edges of the graph.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.KPathCentrality">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">KPathCentrality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.Centrality</span></code></a></p>
+<p>Constructs the K-Path Centrality class for the given Graph <cite>G</cite>.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.KadabraBetweenness">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">KadabraBetweenness</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.base.Algorithm</span></code></a></p>
+<p>Approximation of the betweenness centrality and computation of the top-k
+nodes with highest betweenness centrality according to the algorithm
+described in Borassi M. and Natale M. (2016): KADABRA is an ADaptive
+Algorithm for Betweenness via Random Approximation.</p>
+<p>If k = 0 the algorithm approximates the betweenness centrality of all
+vertices of the graph so that the scores are within an additive error &#64;a
+err with probability at least (1 - &#64;a delta). Otherwise, the algorithm
+computes the exact ranking of the top-k nodes with highest betweenness
+centrality.
+The algorithm relies on an adaptive random sampling technique of shortest
+paths and the number of samples in the worst case is w = ((log(D - 2) +
+log(2/delta))/err^2 samples, where D is the diameter of the graph.
+Thus, the worst-case performance is O(w * (<a href="#id3"><span class="problematic" id="id4">|E|</span></a> + <a href="#id5"><span class="problematic" id="id6">|V|</span></a>)), but performs better
+in practice.</p>
+<p>NB: in order to work properly, the Kadabra algorithm requires a random seed
+to be previously set with ‘useThreadId’ set to True. To do this, call the
+setSeed(&lt;your_seed&gt;, True) fuction within the Random module.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.KadabraBetweenness.getNumberOfIterations">
+<span class="sig-name descname"><span class="pre">getNumberOfIterations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the total number of samples.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.KadabraBetweenness.getOmega">
+<span class="sig-name descname"><span class="pre">getOmega</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the upper bound of the required number of samples.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.KadabraBetweenness.ranking">
+<span class="sig-name descname"><span class="pre">ranking</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the ranking of the nodes according to their approximated
+betweenness centrality.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.KadabraBetweenness.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the approximated betweenness centrality score of all the nodes of
+the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.KadabraBetweenness.topkNodesList">
+<span class="sig-name descname"><span class="pre">topkNodesList</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns Nodes of the graph sorted by their approximated betweenness
+centrality.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.KadabraBetweenness.topkScoresList">
+<span class="sig-name descname"><span class="pre">topkScoresList</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the sorted list of approximated betweenness centrality scores.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.KatzCentrality">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">KatzCentrality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-8</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.Centrality</span></code></a></p>
+<p>Constructs a KatzCentrality object for the given Graph <cite>G</cite>.
+Each iteration of the algorithm requires O(m) time.
+The number of iterations depends on how long it takes to reach the convergence
+(and therefore on the desired tolerance <cite>tol</cite>).</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.centrality.KatzCentrality.edgeDirection">
+<span class="sig-name descname"><span class="pre">edgeDirection</span></span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.LaplacianCentrality">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">LaplacianCentrality</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.Centrality</span></code></a></p>
+<p>Computes the Laplacian centrality of the graph.</p>
+<p>LaplacianCentrality(G, normalized=False)</p>
+<p>The implementation is a simplification of the original algorithm proposed by Qi et al. in
+“Laplacian centrality: A new centrality measure for weighted networks”.</p>
+<p>See <a class="reference external" href="https://dl.acm.org/citation.cfm?id=2181343.2181780">https://dl.acm.org/citation.cfm?id=2181343.2181780</a> for details.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.LocalClusteringCoefficient">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">LocalClusteringCoefficient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">turbo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.Centrality</span></code></a></p>
+<p>Constructs the LocalClusteringCoefficient class for the given Graph <cite>G</cite>. If the local clustering coefficient values should be normalized,
+then set <cite>normalized</cite> to True. The graph may not contain self-loops.</p>
+<p>There are two algorithms available. The trivial (parallel) algorithm needs only a small amount of additional memory.
+The turbo mode adds a (sequential, but fast) pre-processing step using ideas from [0]. This reduces the running time
+significantly for most graphs. However, the turbo mode needs O(m) additional memory. In practice this should be a bit
+less than half of the memory that is needed for the graph itself. The turbo mode is particularly effective for graphs
+with nodes of very high degree and a very skewed degree distribution.</p>
+<p>[0] Triangle Listing Algorithms: Back from the Diversion
+Mark Ortmann and Ulrik Brandes
+2014 Proceedings of the Sixteenth Workshop on Algorithm Engineering and Experiments (ALENEX). 2014, 1-8</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.LocalPartitionCoverage">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">LocalPartitionCoverage</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.Centrality</span></code></a></p>
+<p>The local partition coverage is the amount of neighbors of a node u that are in the same partition as u.
+The running time of the run() method is O(m), where m is the number of edges in the graph.</p>
+<p>LocalPartitionCoverage(G, P)</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.Norm">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">Norm</span></span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.centrality.Norm.l1norm">
+<span class="sig-name descname"><span class="pre">l1norm</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.centrality.Norm.l2norm">
+<span class="sig-name descname"><span class="pre">l2norm</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.PageRank">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">PageRank</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.Centrality</span></code></a></p>
+<p>Compute PageRank as node centrality measure.</p>
+<p>PageRank(G, damp=0.85, tol=1e-9)</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.centrality.PageRank.maxIterations">
+<span class="sig-name descname"><span class="pre">maxIterations</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.centrality.PageRank.norm">
+<span class="sig-name descname"><span class="pre">norm</span></span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.PageRank.numberOfIterations">
+<span class="sig-name descname"><span class="pre">numberOfIterations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns the number of iterations performed by the algorithm.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.PermanenceCentrality">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">PermanenceCentrality</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.base.Algorithm</span></code></a></p>
+<p>Permanence centrality</p>
+<p>This centrality measure measure how well a vertex belongs to its community. The values are calculated on the fly, the partion may be changed in between the requests.
+For details see</p>
+<p>Tanmoy Chakraborty, Sriram Srinivasan, Niloy Ganguly, Animesh Mukherjee, and Sanjukta Bhowmick. 2014.
+On the permanence of vertices in network communities.
+In Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining (KDD ‘14).
+ACM, New York, NY, USA, 1396-1405. DOI: <a class="reference external" href="http://dx.doi.org/10.1145/2623330.2623707">http://dx.doi.org/10.1145/2623330.2623707</a></p>
+<p>FIXME: does not use the common centrality interface yet.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.PermanenceCentrality.getIntraClustering">
+<span class="sig-name descname"><span class="pre">getIntraClustering</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.PermanenceCentrality.getPermanence">
+<span class="sig-name descname"><span class="pre">getPermanence</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.SciPyEVZ">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">SciPyEVZ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.SpectralCentrality" title="networkit.centrality.SpectralCentrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.SpectralCentrality</span></code></a></p>
+<p>Compute Eigenvector centrality using algebraic meh</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.SciPyEVZ.normFactor">
+<span class="sig-name descname"><span class="pre">normFactor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Method that must be implemented to return a correct normalization factor</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.SciPyEVZ.prepareSpectrum">
+<span class="sig-name descname"><span class="pre">prepareSpectrum</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Method that must be implemented to set the following values:
+self.eigenvectors = list of eigenvectors desired for centrality measure
+self.eigenvalues = list of corresponding eigenvalues</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.SciPyPageRank">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">SciPyPageRank</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">damp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.SpectralCentrality" title="networkit.centrality.SpectralCentrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.SpectralCentrality</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.SciPyPageRank.normFactor">
+<span class="sig-name descname"><span class="pre">normFactor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Method that must be implemented to return a correct normalization factor</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.SciPyPageRank.prepareSpectrum">
+<span class="sig-name descname"><span class="pre">prepareSpectrum</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Method that must be implemented to set the following values:
+self.eigenvectors = list of eigenvectors desired for centrality measure
+self.eigenvalues = list of corresponding eigenvalues</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.Sfigality">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">Sfigality</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.centrality.Centrality</span></code></a></p>
+<blockquote>
+<div><p>Sfigality is a new type of node centrality measures that is high if neighboring nodes have a higher degree, e.g. in social networks, if your friends have more friends than you. Formally:</p>
+<blockquote>
+<div><p>$$sigma(u) =</p>
+</div></blockquote>
+</div></blockquote>
+<p>rac{| { v: {u,v} in E, deg(u) &lt; deg(v) } <a href="#id1"><span class="problematic" id="id2">|</span></a>}{ deg(u) }$$</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.SpanningEdgeCentrality">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">SpanningEdgeCentrality</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.base.Algorithm</span></code></a></p>
+<p>Computes the Spanning Edge centrality for the edges of the graph.</p>
+<p>SpanningEdgeCentrality(G, tol = 0.1)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.SpanningEdgeCentrality.runApproximation">
+<span class="sig-name descname"><span class="pre">runApproximation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Computes approximation of the Spanning Edge Centrality. This solves k linear systems, where k is log(n)/(tol^2). The empirical running time is O(km), where n is the number of nodes
+and m is the number of edges.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.SpanningEdgeCentrality.runParallelApproximation">
+<span class="sig-name descname"><span class="pre">runParallelApproximation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Computes approximation (in parallel) of the Spanning Edge Centrality. This solves k linear systems, where k is log(n)/(tol^2). The empirical running time is O(km), where n is the number of nodes
+and m is the number of edges.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.SpanningEdgeCentrality.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Get a vector containing the SEC score for each edge in the graph.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.SpectralCentrality">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">SpectralCentrality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalized</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Abstract class to compute the spectral centrality of a graph. This class needs to be supplied with methods
+to generate the correct matrices and do the correct normalization.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.SpectralCentrality.normFactor">
+<span class="sig-name descname"><span class="pre">normFactor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Method that must be implemented to return a correct normalization factor</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.SpectralCentrality.prepareSpectrum">
+<span class="sig-name descname"><span class="pre">prepareSpectrum</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Method that must be implemented to set the following values:
+self.eigenvectors = list of eigenvectors desired for centrality measure
+self.eigenvalues = list of corresponding eigenvalues</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.SpectralCentrality.ranking">
+<span class="sig-name descname"><span class="pre">ranking</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.SpectralCentrality.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.SpectralCentrality.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.TopCloseness">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">TopCloseness</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.base.Algorithm</span></code></a></p>
+<p>Finds the top k nodes with highest closeness centrality faster than computing it for all nodes, based on “Computing Top-k Closeness Centrality Faster in Unweighted Graphs”, Bergamini et al., ALENEX16.
+The algorithms is based on two independent heuristics, described in the referenced paper. We recommend to use first_heu = true and second_heu = false for complex networks and first_heu = true and second_heu = true for street networks or networks with large diameters.</p>
+<p>TopCloseness(G, k=1, first_heu=True, sec_heu=True)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.TopCloseness.topkNodesList">
+<span class="sig-name descname"><span class="pre">topkNodesList</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns: a list with the k nodes with highest closeness.
+WARNING: closeness centrality of some nodes below the top-k could be equal
+to the k-th closeness, we call them trail. Set the parameter includeTrail
+to true to also include those nodes but consider that the resulting vector
+could be longer than k.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.TopCloseness.topkScoresList">
+<span class="sig-name descname"><span class="pre">topkScoresList</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns: a list with the scores of the k nodes with highest closeness.
+WARNING: closeness centrality of some nodes below the top-k could be equal
+to the k-th closeness, we call them trail. Set the parameter includeTrail
+to true to also include those centrality values but consider that the
+resulting vector could be longer than k.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.centrality.TopHarmonicCloseness">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">TopHarmonicCloseness</span></span></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">networkit.base.Algorithm</span></code></a></p>
+<p>Finds the top k nodes with highest harmonic closeness centrality faster
+than computing it for all nodes. The implementation is based on “Computing
+Top-k Centrality Faster in Unweighted Graphs”, Bergamini et al., ALENEX16.
+The algorithm also works with weighted graphs but only if with the NBcut
+variation. We recommend to use useNBbound = False for complex (weighted)
+networks (or networks with small diameter) and useNBbound = True for
+unweighted street networks (or networks with large diameters). Notice that
+the worst case running time of the algorithm is O(nm), where n is the
+number of nodes and m is the number of edges. However, for most real-world
+networks the empirical running time is O(m).</p>
+<p>TopHarmonicCloseness(G, k=1, useNBbound=True)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph. If useNBbound is set to ‘True’, edge weights will be ignored.</p></li>
+<li><p><strong>k</strong> (<em>int</em>) – Number of nodes with highest closeness that have to be found. For example, if k = 10, the
+top 10 nodes with highest closeness will be computed. useNBbound: If True, the NBbound is
+re-computed at each iteration. If False, NBcut is used. The worst case running time of the
+algorithm is O(nm), where n is the number of nodes and m is the number of edges.
+However, for most networks the empirical running time is O(m).</p></li>
+<li><p><strong>useNBbound</strong> (<em>bool</em>) – If True, the NBbound variation will be used, otherwise NBcut.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.TopHarmonicCloseness.topkNodesList">
+<span class="sig-name descname"><span class="pre">topkNodesList</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns a list with the k nodes with highest harmonic closeness.
+WARNING: closeness centrality of some nodes below the top-k could be equal
+to the k-th closeness, we call them trail. Set the parameter includeTrail
+to true to also include those nodes but consider that the resulting vector
+could be longer than k.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>includeTrail</strong> (<em>bool</em>) – Whether or not to include trail nodes.</p></li>
+<li><p><strong>Returns</strong> – </p></li>
+<li><p><strong>--------</strong> – </p></li>
+<li><p><strong>vector</strong> – The k nodes with highest harmonic closeness.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.centrality.TopHarmonicCloseness.topkScoresList">
+<span class="sig-name descname"><span class="pre">topkScoresList</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Returns a list with the scores of the k nodes with highest harmonic
+closeness. WARNING: closeness centrality of some nodes below the top-k
+could be equal to the k-th closeness, we call them trail. Set the
+parameter includeTrail to true to also include those centrality values
+but consider that the resulting vector could be longer than k.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>includeTrail</strong> (<em>bool</em>) – Whether or not to include trail centrality value.</p></li>
+<li><p><strong>Returns</strong> – </p></li>
+<li><p><strong>--------</strong> – </p></li>
+<li><p><strong>vector</strong> – The k highest closeness harmonic scores.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.centrality.rankPerNode">
+<span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">rankPerNode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.centrality.ranking">
+<span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">ranking</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Return a ranking of nodes by the specified centrality type</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.centrality.relativeRankErrors">
+<span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">relativeRankErrors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Let $r_x(u)$ be the rank of node $u$ in ranking $x$.
+The relative rank error of node $u$ is defined as</p>
+<blockquote>
+<div><p>$$r_x(u) / r_y(u)$$</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.centrality.scores">
+<span class="sig-prename descclassname"><span class="pre">networkit.centrality.</span></span><span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Return the centrality scores of nodes using the specified centrality type</p>
+</dd></dl>
+
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.3.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>
