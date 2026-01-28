@@ -1,0 +1,720 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Namespace NetworKit</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Namespace NetworKit::ConnectedComponentsDetails" href="namespace_NetworKit__ConnectedComponentsDetails.html" />
+    <link rel="prev" title="Namespace MatrixTools" href="namespace_MatrixTools.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#directories">Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#pages">Pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="namespace-networkit">
+<span id="id1"></span><h1>Namespace NetworKit<a class="headerlink" href="#namespace-networkit" title="Link to this heading">¶</a></h1>
+<nav class="contents local" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#detailed-description" id="id2">Detailed Description</a></p></li>
+<li><p><a class="reference internal" href="#namespaces" id="id3">Namespaces</a></p></li>
+<li><p><a class="reference internal" href="#classes" id="id4">Classes</a></p></li>
+<li><p><a class="reference internal" href="#enums" id="id5">Enums</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id6">Functions</a></p></li>
+<li><p><a class="reference internal" href="#typedefs" id="id7">Typedefs</a></p></li>
+<li><p><a class="reference internal" href="#variables" id="id8">Variables</a></p></li>
+</ul>
+</nav>
+<section id="detailed-description">
+<h2>Detailed Description<a class="headerlink" href="#detailed-description" title="Link to this heading">¶</a></h2>
+<p><a class="reference internal" href="classNetworKit_1_1AStar.html#exhale-class-classnetworkit-1-1astar"><span class="std std-ref">Class AStar</span></a> path-finding algoritm</p>
+<p>BinaryEdgeListPartitionWriter.hpp</p>
+<p>Michael Hamann</p>
+<p>BinaryPartitionWriter.hpp</p>
+<p>Michael Hamann</p>
+</section>
+<section id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="namespace_NetworKit__ConnectedComponentsDetails.html#namespace-networkit-connectedcomponentsdetails"><span class="std std-ref">Namespace NetworKit::ConnectedComponentsDetails</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_NetworKit__CurveballDetails.html#namespace-networkit-curveballdetails"><span class="std std-ref">Namespace NetworKit::CurveballDetails</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_NetworKit__DynConnectedComponentsDetails.html#namespace-networkit-dynconnectedcomponentsdetails"><span class="std std-ref">Namespace NetworKit::DynConnectedComponentsDetails</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_NetworKit__GlobalState.html#namespace-networkit-globalstate"><span class="std std-ref">Namespace NetworKit::GlobalState</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_NetworKit__GraphClusteringTools.html#namespace-networkit-graphclusteringtools"><span class="std std-ref">Namespace NetworKit::GraphClusteringTools</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_NetworKit__GraphTools.html#namespace-networkit-graphtools"><span class="std std-ref">Namespace NetworKit::GraphTools</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_NetworKit__GroupClosenessGrowShrinkDetails.html#namespace-networkit-groupclosenessgrowshrinkdetails"><span class="std std-ref">Namespace NetworKit::GroupClosenessGrowShrinkDetails</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_NetworKit__LinkThresholder.html#namespace-networkit-linkthresholder"><span class="std std-ref">Namespace NetworKit::LinkThresholder</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_NetworKit__nkbg.html#namespace-networkit-nkbg"><span class="std std-ref">Namespace NetworKit::nkbg</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_NetworKit__PointImpl.html#namespace-networkit-pointimpl"><span class="std std-ref">Namespace NetworKit::PointImpl</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_NetworKit__RandomLinkSampler.html#namespace-networkit-randomlinksampler"><span class="std std-ref">Namespace NetworKit::RandomLinkSampler</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_NetworKit__Traversal.html#namespace-networkit-traversal"><span class="std std-ref">Namespace NetworKit::Traversal</span></a></p></li>
+</ul>
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="structNetworKit_1_1AStar_1_1Heuristic.html#exhale-struct-structnetworkit-1-1astar-1-1heuristic"><span class="std std-ref">Struct AStar::Heuristic</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1AttributizedEdge.html#exhale-struct-structnetworkit-1-1attributizededge"><span class="std std-ref">Template Struct AttributizedEdge</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1BidirectionalDijkstra_1_1CompareST.html#exhale-struct-structnetworkit-1-1bidirectionaldijkstra-1-1comparest"><span class="std std-ref">Struct BidirectionalDijkstra::CompareST</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1BoundingBox.html#exhale-struct-structnetworkit-1-1boundingbox"><span class="std std-ref">Template Struct BoundingBox</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1BSuitorMatcher_1_1MatchingNode.html#exhale-struct-structnetworkit-1-1bsuitormatcher-1-1matchingnode"><span class="std std-ref">Struct BSuitorMatcher::MatchingNode</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1BSuitorMatcher_1_1MatchingNodeInfo.html#exhale-struct-structnetworkit-1-1bsuitormatcher-1-1matchingnodeinfo"><span class="std std-ref">Struct BSuitorMatcher::MatchingNodeInfo</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1ChungLuGeneratorAlamEtAl_1_1VertexGroup.html#exhale-struct-structnetworkit-1-1chunglugeneratoralametal-1-1vertexgroup"><span class="std std-ref">Struct ChungLuGeneratorAlamEtAl::VertexGroup</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1Edge.html#exhale-struct-structnetworkit-1-1edge"><span class="std std-ref">Struct Edge</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1ForwardEdge.html#exhale-struct-structnetworkit-1-1forwardedge"><span class="std std-ref">Struct ForwardEdge</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1GedWalk_1_1EvaluationResult.html#exhale-struct-structnetworkit-1-1gedwalk-1-1evaluationresult"><span class="std std-ref">Struct GedWalk::EvaluationResult</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1GraphBuilder_1_1HalfEdge.html#exhale-struct-structnetworkit-1-1graphbuilder-1-1halfedge"><span class="std std-ref">Struct GraphBuilder::HalfEdge</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1greater.html#exhale-struct-structnetworkit-1-1greater"><span class="std std-ref">Struct greater</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1LAMGSolverStatus.html#exhale-struct-structnetworkit-1-1lamgsolverstatus"><span class="std std-ref">Struct LAMGSolverStatus</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1LeftRightPlanarityCheck_1_1ConflictPair.html#exhale-struct-structnetworkit-1-1leftrightplanaritycheck-1-1conflictpair"><span class="std std-ref">Struct LeftRightPlanarityCheck::ConflictPair</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1LeftRightPlanarityCheck_1_1Interval.html#exhale-struct-structnetworkit-1-1leftrightplanaritycheck-1-1interval"><span class="std std-ref">Struct LeftRightPlanarityCheck::Interval</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1LocalCommunity_1_1CommunityInfo.html#exhale-struct-structnetworkit-1-1localcommunity-1-1communityinfo"><span class="std std-ref">Struct LocalCommunity::CommunityInfo</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1LocalCommunity_1_1OptionalValue.html#exhale-struct-structnetworkit-1-1localcommunity-1-1optionalvalue"><span class="std std-ref">Template Struct LocalCommunity::OptionalValue</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1LocalCommunity_1_1OptionalValue_3_01ValueType_00_01true_01_4.html#exhale-struct-structnetworkit-1-1localcommunity-1-1optionalvalue-3-01valuetype-00-01true-01-4"><span class="std std-ref">Template Struct LocalCommunity::OptionalValue&lt; ValueType, true &gt;</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1LocalCommunity_1_1ShellInfo.html#exhale-struct-structnetworkit-1-1localcommunity-1-1shellinfo"><span class="std std-ref">Struct LocalCommunity::ShellInfo</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1LouvainMapEquation_1_1Move.html#exhale-struct-structnetworkit-1-1louvainmapequation-1-1move"><span class="std std-ref">Struct LouvainMapEquation::Move</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1MaxentStress_1_1ResultStats.html#exhale-struct-structnetworkit-1-1maxentstress-1-1resultstats"><span class="std std-ref">Struct MaxentStress::ResultStats</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1MocnikGenerator_1_1LayerState.html#exhale-struct-structnetworkit-1-1mocnikgenerator-1-1layerstate"><span class="std std-ref">Struct MocnikGenerator::LayerState</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1MTXParser_1_1Edge.html#exhale-struct-structnetworkit-1-1mtxparser-1-1edge"><span class="std std-ref">Struct MTXParser::Edge</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1MTXParser_1_1MatrixSize.html#exhale-struct-structnetworkit-1-1mtxparser-1-1matrixsize"><span class="std std-ref">Struct MTXParser::MatrixSize</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1MTXParser_1_1MTXHeader.html#exhale-struct-structnetworkit-1-1mtxparser-1-1mtxheader"><span class="std std-ref">Struct MTXParser::MTXHeader</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1OctreeNode.html#exhale-struct-structnetworkit-1-1octreenode"><span class="std std-ref">Template Struct OctreeNode</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1OverlappingNMIDistance_1_1SizesAndIntersections.html#exhale-struct-structnetworkit-1-1overlappingnmidistance-1-1sizesandintersections"><span class="std std-ref">Struct OverlappingNMIDistance::SizesAndIntersections</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1PredictionsSorter_1_1NodePairComp.html#exhale-struct-structnetworkit-1-1predictionssorter-1-1nodepaircomp"><span class="std std-ref">Struct PredictionsSorter::NodePairComp</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1PredictionsSorter_1_1ScoreComp.html#exhale-struct-structnetworkit-1-1predictionssorter-1-1scorecomp"><span class="std std-ref">Struct PredictionsSorter::ScoreComp</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1PrunedLandmarkLabeling_1_1Label.html#exhale-struct-structnetworkit-1-1prunedlandmarklabeling-1-1label"><span class="std std-ref">Struct PrunedLandmarkLabeling::Label</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1PubWebGenerator_1_1circle.html#exhale-struct-structnetworkit-1-1pubwebgenerator-1-1circle"><span class="std std-ref">Struct PubWebGenerator::circle</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1RandomMaximumSpanningForest_1_1weightedEdge.html#exhale-struct-structnetworkit-1-1randommaximumspanningforest-1-1weightededge"><span class="std std-ref">Struct RandomMaximumSpanningForest::weightedEdge</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1RankedEdge.html#exhale-struct-structnetworkit-1-1rankededge"><span class="std std-ref">Struct RankedEdge</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1Redundancy.html#exhale-struct-structnetworkit-1-1redundancy"><span class="std std-ref">Struct Redundancy</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1SolverStatus.html#exhale-struct-structnetworkit-1-1solverstatus"><span class="std std-ref">Struct SolverStatus</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1SuccessiveShortestPathMinCostFlow_1_1NodeWithCost.html#exhale-struct-structnetworkit-1-1successiveshortestpathmincostflow-1-1nodewithcost"><span class="std std-ref">Struct SuccessiveShortestPathMinCostFlow::NodeWithCost</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1Triplet.html#exhale-struct-structnetworkit-1-1triplet"><span class="std std-ref">Struct Triplet</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1UnionMaximumSpanningForest_1_1weightedEdge.html#exhale-struct-structnetworkit-1-1unionmaximumspanningforest-1-1weightededge"><span class="std std-ref">Struct UnionMaximumSpanningForest::weightedEdge</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1Unsafe.html#exhale-struct-structnetworkit-1-1unsafe"><span class="std std-ref">Struct Unsafe</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1WeightedEdge.html#exhale-struct-structnetworkit-1-1weightededge"><span class="std std-ref">Struct WeightedEdge</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1WeightedEdgeWithId.html#exhale-struct-structnetworkit-1-1weightededgewithid"><span class="std std-ref">Struct WeightedEdgeWithId</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1AdamicAdarDistance.html#exhale-class-classnetworkit-1-1adamicadardistance"><span class="std std-ref">Class AdamicAdarDistance</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1AdamicAdarIndex.html#exhale-class-classnetworkit-1-1adamicadarindex"><span class="std std-ref">Class AdamicAdarIndex</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1AdjustedRandIndex.html#exhale-class-classnetworkit-1-1adjustedrandindex"><span class="std std-ref">Class AdjustedRandIndex</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1AdjustedRandMeasure.html#exhale-class-classnetworkit-1-1adjustedrandmeasure"><span class="std std-ref">Class AdjustedRandMeasure</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1AffectedNodes.html#exhale-class-classnetworkit-1-1affectednodes"><span class="std std-ref">Class AffectedNodes</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1AlgebraicBellmanFord.html#exhale-class-classnetworkit-1-1algebraicbellmanford"><span class="std std-ref">Template Class AlgebraicBellmanFord</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1AlgebraicBFS.html#exhale-class-classnetworkit-1-1algebraicbfs"><span class="std std-ref">Template Class AlgebraicBFS</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1AlgebraicDistance.html#exhale-class-classnetworkit-1-1algebraicdistance"><span class="std std-ref">Class AlgebraicDistance</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1AlgebraicDistanceIndex.html#exhale-class-classnetworkit-1-1algebraicdistanceindex"><span class="std std-ref">Class AlgebraicDistanceIndex</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1AlgebraicMatchingCoarsening.html#exhale-class-classnetworkit-1-1algebraicmatchingcoarsening"><span class="std std-ref">Template Class AlgebraicMatchingCoarsening</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1AlgebraicPageRank.html#exhale-class-classnetworkit-1-1algebraicpagerank"><span class="std std-ref">Template Class AlgebraicPageRank</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1AlgebraicSpanningEdgeCentrality.html#exhale-class-classnetworkit-1-1algebraicspanningedgecentrality"><span class="std std-ref">Template Class AlgebraicSpanningEdgeCentrality</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1AlgebraicTriangleCounting.html#exhale-class-classnetworkit-1-1algebraictrianglecounting"><span class="std std-ref">Template Class AlgebraicTriangleCounting</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Algorithm.html#exhale-class-classnetworkit-1-1algorithm"><span class="std std-ref">Class Algorithm</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1AllSimplePaths.html#exhale-class-classnetworkit-1-1allsimplepaths"><span class="std std-ref">Class AllSimplePaths</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ApproxBetweenness.html#exhale-class-classnetworkit-1-1approxbetweenness"><span class="std std-ref">Class ApproxBetweenness</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ApproxCloseness.html#exhale-class-classnetworkit-1-1approxcloseness"><span class="std std-ref">Class ApproxCloseness</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ApproxElectricalCloseness.html#exhale-class-classnetworkit-1-1approxelectricalcloseness"><span class="std std-ref">Class ApproxElectricalCloseness</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ApproxGroupBetweenness.html#exhale-class-classnetworkit-1-1approxgroupbetweenness"><span class="std std-ref">Class ApproxGroupBetweenness</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ApproximatePageRank.html#exhale-class-classnetworkit-1-1approximatepagerank"><span class="std std-ref">Class ApproximatePageRank</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ApproxSpanningEdge.html#exhale-class-classnetworkit-1-1approxspanningedge"><span class="std std-ref">Class ApproxSpanningEdge</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1APSP.html#exhale-class-classnetworkit-1-1apsp"><span class="std std-ref">Class APSP</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Assortativity.html#exhale-class-classnetworkit-1-1assortativity"><span class="std std-ref">Class Assortativity</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1AStar.html#exhale-class-classnetworkit-1-1astar"><span class="std std-ref">Class AStar</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1AStarGeneral.html#exhale-class-classnetworkit-1-1astargeneral"><span class="std std-ref">Template Class AStarGeneral</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Attribute.html#exhale-class-classnetworkit-1-1attribute"><span class="std std-ref">Template Class Attribute</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Attribute_1_1IndexProxy.html#exhale-class-classnetworkit-1-1attribute-1-1indexproxy"><span class="std std-ref">Class Attribute::IndexProxy</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Attribute_1_1Iterator.html#exhale-class-classnetworkit-1-1attribute-1-1iterator"><span class="std std-ref">Class Attribute::Iterator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1AttributeMap.html#exhale-class-classnetworkit-1-1attributemap"><span class="std std-ref">Template Class AttributeMap</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1AttributeStorage.html#exhale-class-classnetworkit-1-1attributestorage"><span class="std std-ref">Template Class AttributeStorage</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1AttributeStorageBase.html#exhale-class-classnetworkit-1-1attributestoragebase"><span class="std std-ref">Template Class AttributeStorageBase</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1BarabasiAlbertGenerator.html#exhale-class-classnetworkit-1-1barabasialbertgenerator"><span class="std std-ref">Class BarabasiAlbertGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Betweenness.html#exhale-class-classnetworkit-1-1betweenness"><span class="std std-ref">Class Betweenness</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1BFS.html#exhale-class-classnetworkit-1-1bfs"><span class="std std-ref">Class BFS</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1BiconnectedComponents.html#exhale-class-classnetworkit-1-1biconnectedcomponents"><span class="std std-ref">Class BiconnectedComponents</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1BidirectionalBFS.html#exhale-class-classnetworkit-1-1bidirectionalbfs"><span class="std std-ref">Class BidirectionalBFS</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1BidirectionalDijkstra.html#exhale-class-classnetworkit-1-1bidirectionaldijkstra"><span class="std std-ref">Class BidirectionalDijkstra</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1BinaryEdgeListPartitionReader.html#exhale-class-classnetworkit-1-1binaryedgelistpartitionreader"><span class="std std-ref">Class BinaryEdgeListPartitionReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1BinaryEdgeListPartitionWriter.html#exhale-class-classnetworkit-1-1binaryedgelistpartitionwriter"><span class="std std-ref">Class BinaryEdgeListPartitionWriter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1BinaryPartitionReader.html#exhale-class-classnetworkit-1-1binarypartitionreader"><span class="std std-ref">Class BinaryPartitionReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1BinaryPartitionWriter.html#exhale-class-classnetworkit-1-1binarypartitionwriter"><span class="std std-ref">Class BinaryPartitionWriter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1BMatcher.html#exhale-class-classnetworkit-1-1bmatcher"><span class="std std-ref">Class BMatcher</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1BMatching.html#exhale-class-classnetworkit-1-1bmatching"><span class="std std-ref">Class BMatching</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1BSuitorMatcher.html#exhale-class-classnetworkit-1-1bsuitormatcher"><span class="std std-ref">Class BSuitorMatcher</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Centrality.html#exhale-class-classnetworkit-1-1centrality"><span class="std std-ref">Class Centrality</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ChanceCorrectedTriangleScore.html#exhale-class-classnetworkit-1-1chancecorrectedtrianglescore"><span class="std std-ref">Class ChanceCorrectedTriangleScore</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ChibaNishizekiQuadrangleEdgeScore.html#exhale-class-classnetworkit-1-1chibanishizekiquadrangleedgescore"><span class="std std-ref">Class ChibaNishizekiQuadrangleEdgeScore</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ChibaNishizekiTriangleEdgeScore.html#exhale-class-classnetworkit-1-1chibanishizekitriangleedgescore"><span class="std std-ref">Class ChibaNishizekiTriangleEdgeScore</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ChungLuGenerator.html#exhale-class-classnetworkit-1-1chunglugenerator"><span class="std std-ref">Class ChungLuGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ChungLuGeneratorAlamEtAl.html#exhale-class-classnetworkit-1-1chunglugeneratoralametal"><span class="std std-ref">Class ChungLuGeneratorAlamEtAl</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1CliqueDetect.html#exhale-class-classnetworkit-1-1cliquedetect"><span class="std std-ref">Class CliqueDetect</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Closeness.html#exhale-class-classnetworkit-1-1closeness"><span class="std std-ref">Class Closeness</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ClusteredRandomGraphGenerator.html#exhale-class-classnetworkit-1-1clusteredrandomgraphgenerator"><span class="std std-ref">Class ClusteredRandomGraphGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ClusteringCoefficient.html#exhale-class-classnetworkit-1-1clusteringcoefficient"><span class="std std-ref">Class ClusteringCoefficient</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ClusteringGenerator.html#exhale-class-classnetworkit-1-1clusteringgenerator"><span class="std std-ref">Class ClusteringGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ClusteringProjector.html#exhale-class-classnetworkit-1-1clusteringprojector"><span class="std std-ref">Class ClusteringProjector</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1CombinedSCD.html#exhale-class-classnetworkit-1-1combinedscd"><span class="std std-ref">Class CombinedSCD</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1CommonNeighborsIndex.html#exhale-class-classnetworkit-1-1commonneighborsindex"><span class="std std-ref">Class CommonNeighborsIndex</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1CommunityDetectionAlgorithm.html#exhale-class-classnetworkit-1-1communitydetectionalgorithm"><span class="std std-ref">Class CommunityDetectionAlgorithm</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1CommuteTimeDistance.html#exhale-class-classnetworkit-1-1commutetimedistance"><span class="std std-ref">Class CommuteTimeDistance</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1CompareDist.html#exhale-class-classnetworkit-1-1comparedist"><span class="std std-ref">Class CompareDist</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ComplexPathAlgorithm.html#exhale-class-classnetworkit-1-1complexpathalgorithm"><span class="std std-ref">Class ComplexPathAlgorithm</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ComponentDecomposition.html#exhale-class-classnetworkit-1-1componentdecomposition"><span class="std std-ref">Class ComponentDecomposition</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Conductance.html#exhale-class-classnetworkit-1-1conductance"><span class="std std-ref">Class Conductance</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ConfigurationModel.html#exhale-class-classnetworkit-1-1configurationmodel"><span class="std std-ref">Class ConfigurationModel</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ConjugateGradient.html#exhale-class-classnetworkit-1-1conjugategradient"><span class="std std-ref">Template Class ConjugateGradient</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ConnectedComponents.html#exhale-class-classnetworkit-1-1connectedcomponents"><span class="std std-ref">Class ConnectedComponents</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1CoreDecomposition.html#exhale-class-classnetworkit-1-1coredecomposition"><span class="std std-ref">Class CoreDecomposition</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Cover.html#exhale-class-classnetworkit-1-1cover"><span class="std std-ref">Class Cover</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Coverage.html#exhale-class-classnetworkit-1-1coverage"><span class="std std-ref">Class Coverage</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1CoverF1Similarity.html#exhale-class-classnetworkit-1-1coverf1similarity"><span class="std std-ref">Class CoverF1Similarity</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1CoverHubDominance.html#exhale-class-classnetworkit-1-1coverhubdominance"><span class="std std-ref">Class CoverHubDominance</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1CoverReader.html#exhale-class-classnetworkit-1-1coverreader"><span class="std std-ref">Class CoverReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1CoverWriter.html#exhale-class-classnetworkit-1-1coverwriter"><span class="std std-ref">Class CoverWriter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1CSRGeneralMatrix.html#exhale-class-classnetworkit-1-1csrgeneralmatrix"><span class="std std-ref">Template Class CSRGeneralMatrix</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1CSRGeneralMatrix_1_1IndexProxy.html#exhale-class-classnetworkit-1-1csrgeneralmatrix-1-1indexproxy"><span class="std std-ref">Class CSRGeneralMatrix::IndexProxy</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Curveball.html#exhale-class-classnetworkit-1-1curveball"><span class="std std-ref">Class Curveball</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1CurveballGlobalTradeGenerator.html#exhale-class-classnetworkit-1-1curveballglobaltradegenerator"><span class="std std-ref">Class CurveballGlobalTradeGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1CurveballUniformTradeGenerator.html#exhale-class-classnetworkit-1-1curveballuniformtradegenerator"><span class="std std-ref">Class CurveballUniformTradeGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1CutClustering.html#exhale-class-classnetworkit-1-1cutclustering"><span class="std std-ref">Class CutClustering</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DegreeCentrality.html#exhale-class-classnetworkit-1-1degreecentrality"><span class="std std-ref">Class DegreeCentrality</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DegreePreservingShuffle.html#exhale-class-classnetworkit-1-1degreepreservingshuffle"><span class="std std-ref">Class DegreePreservingShuffle</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DenseMatrix.html#exhale-class-classnetworkit-1-1densematrix"><span class="std std-ref">Class DenseMatrix</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DGSReader.html#exhale-class-classnetworkit-1-1dgsreader"><span class="std std-ref">Class DGSReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DGSStreamParser.html#exhale-class-classnetworkit-1-1dgsstreamparser"><span class="std std-ref">Class DGSStreamParser</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DGSWriter.html#exhale-class-classnetworkit-1-1dgswriter"><span class="std std-ref">Class DGSWriter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DiagonalPreconditioner.html#exhale-class-classnetworkit-1-1diagonalpreconditioner"><span class="std std-ref">Class DiagonalPreconditioner</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Diameter.html#exhale-class-classnetworkit-1-1diameter"><span class="std std-ref">Class Diameter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DibapGraphReader.html#exhale-class-classnetworkit-1-1dibapgraphreader"><span class="std std-ref">Class DibapGraphReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Dijkstra.html#exhale-class-classnetworkit-1-1dijkstra"><span class="std std-ref">Class Dijkstra</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Dinic.html#exhale-class-classnetworkit-1-1dinic"><span class="std std-ref">Class Dinic</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DissimilarityMeasure.html#exhale-class-classnetworkit-1-1dissimilaritymeasure"><span class="std std-ref">Class DissimilarityMeasure</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DorogovtsevMendesGenerator.html#exhale-class-classnetworkit-1-1dorogovtsevmendesgenerator"><span class="std std-ref">Class DorogovtsevMendesGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DotGraphWriter.html#exhale-class-classnetworkit-1-1dotgraphwriter"><span class="std std-ref">Class DotGraphWriter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DotPartitionWriter.html#exhale-class-classnetworkit-1-1dotpartitionwriter"><span class="std std-ref">Class DotPartitionWriter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynAlgorithm.html#exhale-class-classnetworkit-1-1dynalgorithm"><span class="std std-ref">Class DynAlgorithm</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynamicBarabasiAlbertGenerator.html#exhale-class-classnetworkit-1-1dynamicbarabasialbertgenerator"><span class="std std-ref">Class DynamicBarabasiAlbertGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynamicBSuitorMatcher.html#exhale-class-classnetworkit-1-1dynamicbsuitormatcher"><span class="std std-ref">Class DynamicBSuitorMatcher</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynamicDGSParser.html#exhale-class-classnetworkit-1-1dynamicdgsparser"><span class="std std-ref">Class DynamicDGSParser</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynamicDorogovtsevMendesGenerator.html#exhale-class-classnetworkit-1-1dynamicdorogovtsevmendesgenerator"><span class="std std-ref">Class DynamicDorogovtsevMendesGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynamicForestFireGenerator.html#exhale-class-classnetworkit-1-1dynamicforestfiregenerator"><span class="std std-ref">Class DynamicForestFireGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynamicGraphGenerator.html#exhale-class-classnetworkit-1-1dynamicgraphgenerator"><span class="std std-ref">Class DynamicGraphGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynamicGraphReader.html#exhale-class-classnetworkit-1-1dynamicgraphreader"><span class="std std-ref">Class DynamicGraphReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynamicGraphSource.html#exhale-class-classnetworkit-1-1dynamicgraphsource"><span class="std std-ref">Class DynamicGraphSource</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynamicHyperbolicGenerator.html#exhale-class-classnetworkit-1-1dynamichyperbolicgenerator"><span class="std std-ref">Class DynamicHyperbolicGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynamicMatrix.html#exhale-class-classnetworkit-1-1dynamicmatrix"><span class="std std-ref">Class DynamicMatrix</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynamicMatrix_1_1IndexProxy.html#exhale-class-classnetworkit-1-1dynamicmatrix-1-1indexproxy"><span class="std std-ref">Class DynamicMatrix::IndexProxy</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynamicNMIDistance.html#exhale-class-classnetworkit-1-1dynamicnmidistance"><span class="std std-ref">Class DynamicNMIDistance</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynamicPathGenerator.html#exhale-class-classnetworkit-1-1dynamicpathgenerator"><span class="std std-ref">Class DynamicPathGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynamicPubWebGenerator.html#exhale-class-classnetworkit-1-1dynamicpubwebgenerator"><span class="std std-ref">Class DynamicPubWebGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynApproxBetweenness.html#exhale-class-classnetworkit-1-1dynapproxbetweenness"><span class="std std-ref">Class DynApproxBetweenness</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynAPSP.html#exhale-class-classnetworkit-1-1dynapsp"><span class="std std-ref">Class DynAPSP</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynBetweenness.html#exhale-class-classnetworkit-1-1dynbetweenness"><span class="std std-ref">Class DynBetweenness</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynBetweennessOneNode.html#exhale-class-classnetworkit-1-1dynbetweennessonenode"><span class="std std-ref">Class DynBetweennessOneNode</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynBFS.html#exhale-class-classnetworkit-1-1dynbfs"><span class="std std-ref">Class DynBFS</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynConnectedComponents.html#exhale-class-classnetworkit-1-1dynconnectedcomponents"><span class="std std-ref">Class DynConnectedComponents</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynDijkstra.html#exhale-class-classnetworkit-1-1dyndijkstra"><span class="std std-ref">Class DynDijkstra</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynKatzCentrality.html#exhale-class-classnetworkit-1-1dynkatzcentrality"><span class="std std-ref">Class DynKatzCentrality</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynPrunedLandmarkLabeling.html#exhale-class-classnetworkit-1-1dynprunedlandmarklabeling"><span class="std std-ref">Class DynPrunedLandmarkLabeling</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynSSSP.html#exhale-class-classnetworkit-1-1dynsssp"><span class="std std-ref">Class DynSSSP</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynTopHarmonicCloseness.html#exhale-class-classnetworkit-1-1dyntopharmoniccloseness"><span class="std std-ref">Class DynTopHarmonicCloseness</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1DynWeaklyConnectedComponents.html#exhale-class-classnetworkit-1-1dynweaklyconnectedcomponents"><span class="std std-ref">Class DynWeaklyConnectedComponents</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Eccentricity.html#exhale-class-classnetworkit-1-1eccentricity"><span class="std std-ref">Class Eccentricity</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EdgeCut.html#exhale-class-classnetworkit-1-1edgecut"><span class="std std-ref">Class EdgeCut</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EdgeIteratorBase.html#exhale-class-classnetworkit-1-1edgeiteratorbase"><span class="std std-ref">Template Class EdgeIteratorBase</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EdgeListCoverReader.html#exhale-class-classnetworkit-1-1edgelistcoverreader"><span class="std std-ref">Class EdgeListCoverReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EdgeListPartitionReader.html#exhale-class-classnetworkit-1-1edgelistpartitionreader"><span class="std std-ref">Class EdgeListPartitionReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EdgeListReader.html#exhale-class-classnetworkit-1-1edgelistreader"><span class="std std-ref">Class EdgeListReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EdgeListWriter.html#exhale-class-classnetworkit-1-1edgelistwriter"><span class="std std-ref">Class EdgeListWriter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EdgeScore.html#exhale-class-classnetworkit-1-1edgescore"><span class="std std-ref">Template Class EdgeScore</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EdgeScoreAsWeight.html#exhale-class-classnetworkit-1-1edgescoreasweight"><span class="std std-ref">Class EdgeScoreAsWeight</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EdgeScoreBlender.html#exhale-class-classnetworkit-1-1edgescoreblender"><span class="std std-ref">Class EdgeScoreBlender</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EdgeScoreLinearizer.html#exhale-class-classnetworkit-1-1edgescorelinearizer"><span class="std std-ref">Class EdgeScoreLinearizer</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EdgeScoreNormalizer.html#exhale-class-classnetworkit-1-1edgescorenormalizer"><span class="std std-ref">Template Class EdgeScoreNormalizer</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EdgeScoring.html#exhale-class-classnetworkit-1-1edgescoring"><span class="std std-ref">Template Class EdgeScoring</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EdgeSwitching.html#exhale-class-classnetworkit-1-1edgeswitching"><span class="std std-ref">Class EdgeSwitching</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EdgeSwitchingInPlace.html#exhale-class-classnetworkit-1-1edgeswitchinginplace"><span class="std std-ref">Class EdgeSwitchingInPlace</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EdgeSwitchingMarkovChainGenerator.html#exhale-class-classnetworkit-1-1edgeswitchingmarkovchaingenerator"><span class="std std-ref">Class EdgeSwitchingMarkovChainGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EdgeTypeIterator.html#exhale-class-classnetworkit-1-1edgetypeiterator"><span class="std std-ref">Template Class EdgeTypeIterator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EdgeTypeRange.html#exhale-class-classnetworkit-1-1edgetyperange"><span class="std std-ref">Template Class EdgeTypeRange</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EdmondsKarp.html#exhale-class-classnetworkit-1-1edmondskarp"><span class="std std-ref">Class EdmondsKarp</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EffectiveDiameter.html#exhale-class-classnetworkit-1-1effectivediameter"><span class="std std-ref">Class EffectiveDiameter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EffectiveDiameterApproximation.html#exhale-class-classnetworkit-1-1effectivediameterapproximation"><span class="std std-ref">Class EffectiveDiameterApproximation</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EigenvectorCentrality.html#exhale-class-classnetworkit-1-1eigenvectorcentrality"><span class="std std-ref">Class EigenvectorCentrality</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EliminationStage.html#exhale-class-classnetworkit-1-1eliminationstage"><span class="std std-ref">Template Class EliminationStage</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EpidemicSimulationSEIR.html#exhale-class-classnetworkit-1-1epidemicsimulationseir"><span class="std std-ref">Class EpidemicSimulationSEIR</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ErdosRenyiEnumerator.html#exhale-class-classnetworkit-1-1erdosrenyienumerator"><span class="std std-ref">Template Class ErdosRenyiEnumerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ErdosRenyiGenerator.html#exhale-class-classnetworkit-1-1erdosrenyigenerator"><span class="std std-ref">Class ErdosRenyiGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EstimateBetweenness.html#exhale-class-classnetworkit-1-1estimatebetweenness"><span class="std std-ref">Class EstimateBetweenness</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1EvaluationMetric.html#exhale-class-classnetworkit-1-1evaluationmetric"><span class="std std-ref">Class EvaluationMetric</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1FloydWarshall.html#exhale-class-classnetworkit-1-1floydwarshall"><span class="std std-ref">Class FloydWarshall</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ForestCentrality.html#exhale-class-classnetworkit-1-1forestcentrality"><span class="std std-ref">Class ForestCentrality</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ForestFireScore.html#exhale-class-classnetworkit-1-1forestfirescore"><span class="std std-ref">Class ForestFireScore</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GaussSeidelRelaxation.html#exhale-class-classnetworkit-1-1gaussseidelrelaxation"><span class="std std-ref">Template Class GaussSeidelRelaxation</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GCE.html#exhale-class-classnetworkit-1-1gce"><span class="std std-ref">Class GCE</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GedWalk.html#exhale-class-classnetworkit-1-1gedwalk"><span class="std std-ref">Class GedWalk</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GeometricMeanScore.html#exhale-class-classnetworkit-1-1geometricmeanscore"><span class="std std-ref">Class GeometricMeanScore</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GlobalClusteringCoefficient.html#exhale-class-classnetworkit-1-1globalclusteringcoefficient"><span class="std std-ref">Class GlobalClusteringCoefficient</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GlobalCurveball.html#exhale-class-classnetworkit-1-1globalcurveball"><span class="std std-ref">Class GlobalCurveball</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GlobalThresholdFilter.html#exhale-class-classnetworkit-1-1globalthresholdfilter"><span class="std std-ref">Class GlobalThresholdFilter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GMLGraphReader.html#exhale-class-classnetworkit-1-1gmlgraphreader"><span class="std std-ref">Class GMLGraphReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GMLGraphWriter.html#exhale-class-classnetworkit-1-1gmlgraphwriter"><span class="std std-ref">Class GMLGraphWriter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Graph.html#exhale-class-classnetworkit-1-1graph"><span class="std std-ref">Class Graph</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Graph_1_1NeighborRange.html#exhale-class-classnetworkit-1-1graph-1-1neighborrange"><span class="std std-ref">Template Class Graph::NeighborRange</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Graph_1_1NeighborWeightRange.html#exhale-class-classnetworkit-1-1graph-1-1neighborweightrange"><span class="std std-ref">Template Class Graph::NeighborWeightRange</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GraphBuilder.html#exhale-class-classnetworkit-1-1graphbuilder"><span class="std std-ref">Class GraphBuilder</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GraphBuilderBenchmark.html#exhale-class-classnetworkit-1-1graphbuilderbenchmark"><span class="std std-ref">Class GraphBuilderBenchmark</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GraphCoarsening.html#exhale-class-classnetworkit-1-1graphcoarsening"><span class="std std-ref">Class GraphCoarsening</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GraphDifference.html#exhale-class-classnetworkit-1-1graphdifference"><span class="std std-ref">Class GraphDifference</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GraphDistance.html#exhale-class-classnetworkit-1-1graphdistance"><span class="std std-ref">Class GraphDistance</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GraphEvent.html#exhale-class-classnetworkit-1-1graphevent"><span class="std std-ref">Class GraphEvent</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GraphEventHandler.html#exhale-class-classnetworkit-1-1grapheventhandler"><span class="std std-ref">Class GraphEventHandler</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GraphEventProxy.html#exhale-class-classnetworkit-1-1grapheventproxy"><span class="std std-ref">Class GraphEventProxy</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GraphIO.html#exhale-class-classnetworkit-1-1graphio"><span class="std std-ref">Class GraphIO</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GraphLayoutAlgorithm.html#exhale-class-classnetworkit-1-1graphlayoutalgorithm"><span class="std std-ref">Template Class GraphLayoutAlgorithm</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GraphReader.html#exhale-class-classnetworkit-1-1graphreader"><span class="std std-ref">Class GraphReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GraphStructuralRandMeasure.html#exhale-class-classnetworkit-1-1graphstructuralrandmeasure"><span class="std std-ref">Class GraphStructuralRandMeasure</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GraphToolBinaryReader.html#exhale-class-classnetworkit-1-1graphtoolbinaryreader"><span class="std std-ref">Class GraphToolBinaryReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GraphToolBinaryWriter.html#exhale-class-classnetworkit-1-1graphtoolbinarywriter"><span class="std std-ref">Class GraphToolBinaryWriter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GraphUpdater.html#exhale-class-classnetworkit-1-1graphupdater"><span class="std std-ref">Class GraphUpdater</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GraphWriter.html#exhale-class-classnetworkit-1-1graphwriter"><span class="std std-ref">Class GraphWriter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GroupCloseness.html#exhale-class-classnetworkit-1-1groupcloseness"><span class="std std-ref">Class GroupCloseness</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GroupClosenessGrowShrink.html#exhale-class-classnetworkit-1-1groupclosenessgrowshrink"><span class="std std-ref">Class GroupClosenessGrowShrink</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GroupClosenessLocalSearch.html#exhale-class-classnetworkit-1-1groupclosenesslocalsearch"><span class="std std-ref">Class GroupClosenessLocalSearch</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GroupClosenessLocalSearch_1_1GroupClosenessLocalSearchInterface.html#exhale-class-classnetworkit-1-1groupclosenesslocalsearch-1-1groupclosenesslocalsearchinterface"><span class="std std-ref">Class GroupClosenessLocalSearch::GroupClosenessLocalSearchInterface</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GroupClosenessLocalSwaps.html#exhale-class-classnetworkit-1-1groupclosenesslocalswaps"><span class="std std-ref">Class GroupClosenessLocalSwaps</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GroupDegree.html#exhale-class-classnetworkit-1-1groupdegree"><span class="std std-ref">Class GroupDegree</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GroupHarmonicCloseness.html#exhale-class-classnetworkit-1-1groupharmoniccloseness"><span class="std std-ref">Class GroupHarmonicCloseness</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GroupHarmonicCloseness_1_1GroupHarmonicClosenessInterface.html#exhale-class-classnetworkit-1-1groupharmoniccloseness-1-1groupharmonicclosenessinterface"><span class="std std-ref">Class GroupHarmonicCloseness::GroupHarmonicClosenessInterface</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1GTestBenchmark.html#exhale-class-classnetworkit-1-1gtestbenchmark"><span class="std std-ref">Class GTestBenchmark</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1HarmonicCloseness.html#exhale-class-classnetworkit-1-1harmoniccloseness"><span class="std std-ref">Class HarmonicCloseness</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1HashingOverlapper.html#exhale-class-classnetworkit-1-1hashingoverlapper"><span class="std std-ref">Class HashingOverlapper</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1HavelHakimiGenerator.html#exhale-class-classnetworkit-1-1havelhakimigenerator"><span class="std std-ref">Class HavelHakimiGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1HopPlotApproximation.html#exhale-class-classnetworkit-1-1hopplotapproximation"><span class="std std-ref">Class HopPlotApproximation</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1HubDominance.html#exhale-class-classnetworkit-1-1hubdominance"><span class="std std-ref">Class HubDominance</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1HyperbolicGenerator.html#exhale-class-classnetworkit-1-1hyperbolicgenerator"><span class="std std-ref">Class HyperbolicGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1HyperbolicSpace.html#exhale-class-classnetworkit-1-1hyperbolicspace"><span class="std std-ref">Class HyperbolicSpace</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1IdentityPreconditioner.html#exhale-class-classnetworkit-1-1identitypreconditioner"><span class="std std-ref">Class IdentityPreconditioner</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1IncompleteDijkstra.html#exhale-class-classnetworkit-1-1incompletedijkstra"><span class="std std-ref">Class IncompleteDijkstra</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1IncompleteSSSP.html#exhale-class-classnetworkit-1-1incompletesssp"><span class="std std-ref">Class IncompleteSSSP</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1IndependentSetFinder.html#exhale-class-classnetworkit-1-1independentsetfinder"><span class="std std-ref">Class IndependentSetFinder</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1IntrapartitionDensity.html#exhale-class-classnetworkit-1-1intrapartitiondensity"><span class="std std-ref">Class IntrapartitionDensity</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1IsolatedInterpartitionConductance.html#exhale-class-classnetworkit-1-1isolatedinterpartitionconductance"><span class="std std-ref">Class IsolatedInterpartitionConductance</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1IsolatedInterpartitionExpansion.html#exhale-class-classnetworkit-1-1isolatedinterpartitionexpansion"><span class="std std-ref">Class IsolatedInterpartitionExpansion</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1JaccardDistance.html#exhale-class-classnetworkit-1-1jaccarddistance"><span class="std std-ref">Class JaccardDistance</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1JaccardIndex.html#exhale-class-classnetworkit-1-1jaccardindex"><span class="std std-ref">Class JaccardIndex</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1JaccardMeasure.html#exhale-class-classnetworkit-1-1jaccardmeasure"><span class="std std-ref">Class JaccardMeasure</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1KadabraBetweenness.html#exhale-class-classnetworkit-1-1kadabrabetweenness"><span class="std std-ref">Class KadabraBetweenness</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1KatzCentrality.html#exhale-class-classnetworkit-1-1katzcentrality"><span class="std std-ref">Class KatzCentrality</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1KatzIndex.html#exhale-class-classnetworkit-1-1katzindex"><span class="std std-ref">Class KatzIndex</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1KONECTGraphReader.html#exhale-class-classnetworkit-1-1konectgraphreader"><span class="std std-ref">Class KONECTGraphReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1KPathCentrality.html#exhale-class-classnetworkit-1-1kpathcentrality"><span class="std std-ref">Class KPathCentrality</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1KruskalMSF.html#exhale-class-classnetworkit-1-1kruskalmsf"><span class="std std-ref">Class KruskalMSF</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Lamg.html#exhale-class-classnetworkit-1-1lamg"><span class="std std-ref">Template Class Lamg</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LaplacianCentrality.html#exhale-class-classnetworkit-1-1laplaciancentrality"><span class="std std-ref">Class LaplacianCentrality</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LayoutAlgorithm.html#exhale-class-classnetworkit-1-1layoutalgorithm"><span class="std std-ref">Class LayoutAlgorithm</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LeftRightPlanarityCheck.html#exhale-class-classnetworkit-1-1leftrightplanaritycheck"><span class="std std-ref">Class LeftRightPlanarityCheck</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Level.html#exhale-class-classnetworkit-1-1level"><span class="std std-ref">Template Class Level</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LevelAggregation.html#exhale-class-classnetworkit-1-1levelaggregation"><span class="std std-ref">Template Class LevelAggregation</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LevelElimination.html#exhale-class-classnetworkit-1-1levelelimination"><span class="std std-ref">Template Class LevelElimination</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LevelFinest.html#exhale-class-classnetworkit-1-1levelfinest"><span class="std std-ref">Template Class LevelFinest</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LevelHierarchy.html#exhale-class-classnetworkit-1-1levelhierarchy"><span class="std std-ref">Template Class LevelHierarchy</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LFM.html#exhale-class-classnetworkit-1-1lfm"><span class="std std-ref">Class LFM</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LFMLocal.html#exhale-class-classnetworkit-1-1lfmlocal"><span class="std std-ref">Class LFMLocal</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LFRGenerator.html#exhale-class-classnetworkit-1-1lfrgenerator"><span class="std std-ref">Class LFRGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LinearSolver.html#exhale-class-classnetworkit-1-1linearsolver"><span class="std std-ref">Template Class LinearSolver</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LineFileReader.html#exhale-class-classnetworkit-1-1linefilereader"><span class="std std-ref">Class LineFileReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LinkPredictor.html#exhale-class-classnetworkit-1-1linkpredictor"><span class="std std-ref">Class LinkPredictor</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LocalClusteringCoefficient.html#exhale-class-classnetworkit-1-1localclusteringcoefficient"><span class="std std-ref">Class LocalClusteringCoefficient</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LocalCommunity.html#exhale-class-classnetworkit-1-1localcommunity"><span class="std std-ref">Template Class LocalCommunity</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LocalCommunityEvaluation.html#exhale-class-classnetworkit-1-1localcommunityevaluation"><span class="std std-ref">Class LocalCommunityEvaluation</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LocalCoverEvaluation.html#exhale-class-classnetworkit-1-1localcoverevaluation"><span class="std std-ref">Class LocalCoverEvaluation</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LocalDegreeScore.html#exhale-class-classnetworkit-1-1localdegreescore"><span class="std std-ref">Class LocalDegreeScore</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LocalFilterScore.html#exhale-class-classnetworkit-1-1localfilterscore"><span class="std std-ref">Template Class LocalFilterScore</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LocalMaxMatcher.html#exhale-class-classnetworkit-1-1localmaxmatcher"><span class="std std-ref">Class LocalMaxMatcher</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LocalPartitionCoverage.html#exhale-class-classnetworkit-1-1localpartitioncoverage"><span class="std std-ref">Class LocalPartitionCoverage</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LocalPartitionEvaluation.html#exhale-class-classnetworkit-1-1localpartitionevaluation"><span class="std std-ref">Class LocalPartitionEvaluation</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LocalSimilarityScore.html#exhale-class-classnetworkit-1-1localsimilarityscore"><span class="std std-ref">Class LocalSimilarityScore</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LocalSimilaritySparsifier.html#exhale-class-classnetworkit-1-1localsimilaritysparsifier"><span class="std std-ref">Class LocalSimilaritySparsifier</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LocalSquareClusteringCoefficient.html#exhale-class-classnetworkit-1-1localsquareclusteringcoefficient"><span class="std std-ref">Class LocalSquareClusteringCoefficient</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LocalT.html#exhale-class-classnetworkit-1-1localt"><span class="std std-ref">Class LocalT</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LocalTightnessExpansion.html#exhale-class-classnetworkit-1-1localtightnessexpansion"><span class="std std-ref">Class LocalTightnessExpansion</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LouvainMapEquation.html#exhale-class-classnetworkit-1-1louvainmapequation"><span class="std std-ref">Class LouvainMapEquation</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1LPDegreeOrdered.html#exhale-class-classnetworkit-1-1lpdegreeordered"><span class="std std-ref">Class LPDegreeOrdered</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Luby.html#exhale-class-classnetworkit-1-1luby"><span class="std std-ref">Class Luby</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Matcher.html#exhale-class-classnetworkit-1-1matcher"><span class="std std-ref">Class Matcher</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Matching.html#exhale-class-classnetworkit-1-1matching"><span class="std std-ref">Class Matching</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1MatchingCoarsening.html#exhale-class-classnetworkit-1-1matchingcoarsening"><span class="std std-ref">Class MatchingCoarsening</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1MatrixMarketReader.html#exhale-class-classnetworkit-1-1matrixmarketreader"><span class="std std-ref">Class MatrixMarketReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1MatrixReader.html#exhale-class-classnetworkit-1-1matrixreader"><span class="std std-ref">Class MatrixReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1MaxentStress.html#exhale-class-classnetworkit-1-1maxentstress"><span class="std std-ref">Class MaxentStress</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1MaximalCliques.html#exhale-class-classnetworkit-1-1maximalcliques"><span class="std std-ref">Class MaximalCliques</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1MemoryMappedFile.html#exhale-class-classnetworkit-1-1memorymappedfile"><span class="std std-ref">Class MemoryMappedFile</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1METISGraphReader.html#exhale-class-classnetworkit-1-1metisgraphreader"><span class="std std-ref">Class METISGraphReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1METISGraphWriter.html#exhale-class-classnetworkit-1-1metisgraphwriter"><span class="std std-ref">Class METISGraphWriter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1METISParser.html#exhale-class-classnetworkit-1-1metisparser"><span class="std std-ref">Class METISParser</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1MissingLinksFinder.html#exhale-class-classnetworkit-1-1missinglinksfinder"><span class="std std-ref">Class MissingLinksFinder</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1MocnikGenerator.html#exhale-class-classnetworkit-1-1mocnikgenerator"><span class="std std-ref">Class MocnikGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1MocnikGeneratorBasic.html#exhale-class-classnetworkit-1-1mocnikgeneratorbasic"><span class="std std-ref">Class MocnikGeneratorBasic</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Modularity.html#exhale-class-classnetworkit-1-1modularity"><span class="std std-ref">Class Modularity</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ModularityScoring.html#exhale-class-classnetworkit-1-1modularityscoring"><span class="std std-ref">Template Class ModularityScoring</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1MTXGraphReader.html#exhale-class-classnetworkit-1-1mtxgraphreader"><span class="std std-ref">Class MTXGraphReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1MTXParser.html#exhale-class-classnetworkit-1-1mtxparser"><span class="std std-ref">Class MTXParser</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1MultiLevelSetup.html#exhale-class-classnetworkit-1-1multilevelsetup"><span class="std std-ref">Template Class MultiLevelSetup</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1MultiscaleScore.html#exhale-class-classnetworkit-1-1multiscalescore"><span class="std std-ref">Class MultiscaleScore</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1MultiscaleSparsifier.html#exhale-class-classnetworkit-1-1multiscalesparsifier"><span class="std std-ref">Class MultiscaleSparsifier</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1MultiTargetBFS.html#exhale-class-classnetworkit-1-1multitargetbfs"><span class="std std-ref">Class MultiTargetBFS</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1MultiTargetDijkstra.html#exhale-class-classnetworkit-1-1multitargetdijkstra"><span class="std std-ref">Class MultiTargetDijkstra</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1NeighborhoodDistanceIndex.html#exhale-class-classnetworkit-1-1neighborhooddistanceindex"><span class="std std-ref">Class NeighborhoodDistanceIndex</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1NeighborhoodFunction.html#exhale-class-classnetworkit-1-1neighborhoodfunction"><span class="std std-ref">Class NeighborhoodFunction</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1NeighborhoodFunctionApproximation.html#exhale-class-classnetworkit-1-1neighborhoodfunctionapproximation"><span class="std std-ref">Class NeighborhoodFunctionApproximation</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1NeighborhoodFunctionHeuristic.html#exhale-class-classnetworkit-1-1neighborhoodfunctionheuristic"><span class="std std-ref">Class NeighborhoodFunctionHeuristic</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1NeighborhoodUtility.html#exhale-class-classnetworkit-1-1neighborhoodutility"><span class="std std-ref">Class NeighborhoodUtility</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1NeighborIteratorBase.html#exhale-class-classnetworkit-1-1neighboriteratorbase"><span class="std std-ref">Template Class NeighborIteratorBase</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1NeighborsMeasureIndex.html#exhale-class-classnetworkit-1-1neighborsmeasureindex"><span class="std std-ref">Class NeighborsMeasureIndex</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1NeighborWeightIteratorBase.html#exhale-class-classnetworkit-1-1neighborweightiteratorbase"><span class="std std-ref">Template Class NeighborWeightIteratorBase</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1NetworkitBinaryReader.html#exhale-class-classnetworkit-1-1networkitbinaryreader"><span class="std std-ref">Class NetworkitBinaryReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1NetworkitBinaryWriter.html#exhale-class-classnetworkit-1-1networkitbinarywriter"><span class="std std-ref">Class NetworkitBinaryWriter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1NMIDistance.html#exhale-class-classnetworkit-1-1nmidistance"><span class="std std-ref">Class NMIDistance</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Node2Vec.html#exhale-class-classnetworkit-1-1node2vec"><span class="std std-ref">Class Node2Vec</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1NodeDistance.html#exhale-class-classnetworkit-1-1nodedistance"><span class="std std-ref">Class NodeDistance</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1NodeIteratorBase.html#exhale-class-classnetworkit-1-1nodeiteratorbase"><span class="std std-ref">Template Class NodeIteratorBase</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1NodeRangeBase.html#exhale-class-classnetworkit-1-1noderangebase"><span class="std std-ref">Template Class NodeRangeBase</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1NodeStructuralRandMeasure.html#exhale-class-classnetworkit-1-1nodestructuralrandmeasure"><span class="std std-ref">Class NodeStructuralRandMeasure</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Octree.html#exhale-class-classnetworkit-1-1octree"><span class="std std-ref">Template Class Octree</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Overlapper.html#exhale-class-classnetworkit-1-1overlapper"><span class="std std-ref">Class Overlapper</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1OverlappingCommunityDetectionAlgorithm.html#exhale-class-classnetworkit-1-1overlappingcommunitydetectionalgorithm"><span class="std std-ref">Class OverlappingCommunityDetectionAlgorithm</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1OverlappingNMIDistance.html#exhale-class-classnetworkit-1-1overlappingnmidistance"><span class="std std-ref">Class OverlappingNMIDistance</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PageRank.html#exhale-class-classnetworkit-1-1pagerank"><span class="std std-ref">Class PageRank</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PageRankNibble.html#exhale-class-classnetworkit-1-1pageranknibble"><span class="std std-ref">Class PageRankNibble</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ParallelAgglomerativeClusterer.html#exhale-class-classnetworkit-1-1parallelagglomerativeclusterer"><span class="std std-ref">Class ParallelAgglomerativeClusterer</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ParallelConnectedComponents.html#exhale-class-classnetworkit-1-1parallelconnectedcomponents"><span class="std std-ref">Class ParallelConnectedComponents</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ParallelLeiden.html#exhale-class-classnetworkit-1-1parallelleiden"><span class="std std-ref">Class ParallelLeiden</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ParallelPartitionCoarsening.html#exhale-class-classnetworkit-1-1parallelpartitioncoarsening"><span class="std std-ref">Class ParallelPartitionCoarsening</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Partition.html#exhale-class-classnetworkit-1-1partition"><span class="std std-ref">Class Partition</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PartitionFragmentation.html#exhale-class-classnetworkit-1-1partitionfragmentation"><span class="std std-ref">Class PartitionFragmentation</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PartitionHubDominance.html#exhale-class-classnetworkit-1-1partitionhubdominance"><span class="std std-ref">Class PartitionHubDominance</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PartitionIntersection.html#exhale-class-classnetworkit-1-1partitionintersection"><span class="std std-ref">Class PartitionIntersection</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PartitionReader.html#exhale-class-classnetworkit-1-1partitionreader"><span class="std std-ref">Class PartitionReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PartitionWriter.html#exhale-class-classnetworkit-1-1partitionwriter"><span class="std std-ref">Class PartitionWriter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PathGrowingMatcher.html#exhale-class-classnetworkit-1-1pathgrowingmatcher"><span class="std std-ref">Class PathGrowingMatcher</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PerEdge.html#exhale-class-classnetworkit-1-1peredge"><span class="std std-ref">Class PerEdge</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PermanenceCentrality.html#exhale-class-classnetworkit-1-1permanencecentrality"><span class="std std-ref">Class PermanenceCentrality</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PerNode.html#exhale-class-classnetworkit-1-1pernode"><span class="std std-ref">Class PerNode</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PivotMDS.html#exhale-class-classnetworkit-1-1pivotmds"><span class="std std-ref">Class PivotMDS</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PLM.html#exhale-class-classnetworkit-1-1plm"><span class="std std-ref">Class PLM</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PLP.html#exhale-class-classnetworkit-1-1plp"><span class="std std-ref">Class PLP</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Point.html#exhale-class-classnetworkit-1-1point"><span class="std std-ref">Template Class Point</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Point2DWithIndex.html#exhale-class-classnetworkit-1-1point2dwithindex"><span class="std std-ref">Template Class Point2DWithIndex</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PostscriptWriter.html#exhale-class-classnetworkit-1-1postscriptwriter"><span class="std std-ref">Class PostscriptWriter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PowerlawDegreeSequence.html#exhale-class-classnetworkit-1-1powerlawdegreesequence"><span class="std std-ref">Class PowerlawDegreeSequence</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PrecisionRecallMetric.html#exhale-class-classnetworkit-1-1precisionrecallmetric"><span class="std std-ref">Class PrecisionRecallMetric</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PredictionsSorter.html#exhale-class-classnetworkit-1-1predictionssorter"><span class="std std-ref">Class PredictionsSorter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PreferentialAttachmentIndex.html#exhale-class-classnetworkit-1-1preferentialattachmentindex"><span class="std std-ref">Class PreferentialAttachmentIndex</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PrefixJaccardScore.html#exhale-class-classnetworkit-1-1prefixjaccardscore"><span class="std std-ref">Template Class PrefixJaccardScore</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PrimMSF.html#exhale-class-classnetworkit-1-1primmsf"><span class="std std-ref">Class PrimMSF</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PrunedLandmarkLabeling.html#exhale-class-classnetworkit-1-1prunedlandmarklabeling"><span class="std std-ref">Class PrunedLandmarkLabeling</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1PubWebGenerator.html#exhale-class-classnetworkit-1-1pubwebgenerator"><span class="std std-ref">Class PubWebGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1QuadNode.html#exhale-class-classnetworkit-1-1quadnode"><span class="std std-ref">Template Class QuadNode</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1QuadNodeCartesianEuclid.html#exhale-class-classnetworkit-1-1quadnodecartesianeuclid"><span class="std std-ref">Template Class QuadNodeCartesianEuclid</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1QuadNodePolarEuclid.html#exhale-class-classnetworkit-1-1quadnodepolareuclid"><span class="std std-ref">Template Class QuadNodePolarEuclid</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Quadtree.html#exhale-class-classnetworkit-1-1quadtree"><span class="std std-ref">Template Class Quadtree</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1QuadtreeCartesianEuclid.html#exhale-class-classnetworkit-1-1quadtreecartesianeuclid"><span class="std std-ref">Template Class QuadtreeCartesianEuclid</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1QuadtreePolarEuclid.html#exhale-class-classnetworkit-1-1quadtreepolareuclid"><span class="std std-ref">Template Class QuadtreePolarEuclid</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1QualityMeasure.html#exhale-class-classnetworkit-1-1qualitymeasure"><span class="std std-ref">Class QualityMeasure</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1RandomBFS.html#exhale-class-classnetworkit-1-1randombfs"><span class="std std-ref">Class RandomBFS</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1RandomEdgeScore.html#exhale-class-classnetworkit-1-1randomedgescore"><span class="std std-ref">Class RandomEdgeScore</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1RandomMaximumSpanningForest.html#exhale-class-classnetworkit-1-1randommaximumspanningforest"><span class="std std-ref">Class RandomMaximumSpanningForest</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1RandomNodeEdgeScore.html#exhale-class-classnetworkit-1-1randomnodeedgescore"><span class="std std-ref">Class RandomNodeEdgeScore</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1RandomSpanningForest.html#exhale-class-classnetworkit-1-1randomspanningforest"><span class="std std-ref">Class RandomSpanningForest</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1RandomSparsifier.html#exhale-class-classnetworkit-1-1randomsparsifier"><span class="std std-ref">Class RandomSparsifier</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1RasterReader.html#exhale-class-classnetworkit-1-1rasterreader"><span class="std std-ref">Class RasterReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1RBGraphReader.html#exhale-class-classnetworkit-1-1rbgraphreader"><span class="std std-ref">Class RBGraphReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1RBMatrixReader.html#exhale-class-classnetworkit-1-1rbmatrixreader"><span class="std std-ref">Class RBMatrixReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ReachableNodes.html#exhale-class-classnetworkit-1-1reachablenodes"><span class="std std-ref">Class ReachableNodes</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1RegularRingLatticeGenerator.html#exhale-class-classnetworkit-1-1regularringlatticegenerator"><span class="std std-ref">Class RegularRingLatticeGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ResourceAllocationIndex.html#exhale-class-classnetworkit-1-1resourceallocationindex"><span class="std std-ref">Class ResourceAllocationIndex</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ReverseBFS.html#exhale-class-classnetworkit-1-1reversebfs"><span class="std std-ref">Class ReverseBFS</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1RmatGenerator.html#exhale-class-classnetworkit-1-1rmatgenerator"><span class="std std-ref">Class RmatGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ROCMetric.html#exhale-class-classnetworkit-1-1rocmetric"><span class="std std-ref">Class ROCMetric</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SameCommunityIndex.html#exhale-class-classnetworkit-1-1samecommunityindex"><span class="std std-ref">Class SameCommunityIndex</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SampledGraphStructuralRandMeasure.html#exhale-class-classnetworkit-1-1sampledgraphstructuralrandmeasure"><span class="std std-ref">Class SampledGraphStructuralRandMeasure</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SampledNodeStructuralRandMeasure.html#exhale-class-classnetworkit-1-1samplednodestructuralrandmeasure"><span class="std std-ref">Class SampledNodeStructuralRandMeasure</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SCANStructuralSimilarityScore.html#exhale-class-classnetworkit-1-1scanstructuralsimilarityscore"><span class="std std-ref">Class SCANStructuralSimilarityScore</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SCDGroundTruthComparison.html#exhale-class-classnetworkit-1-1scdgroundtruthcomparison"><span class="std std-ref">Class SCDGroundTruthComparison</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SelectiveCommunityDetector.html#exhale-class-classnetworkit-1-1selectivecommunitydetector"><span class="std std-ref">Class SelectiveCommunityDetector</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SetConductance.html#exhale-class-classnetworkit-1-1setconductance"><span class="std std-ref">Class SetConductance</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Sfigality.html#exhale-class-classnetworkit-1-1sfigality"><span class="std std-ref">Class Sfigality</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SimmelianMultiscaleSparsifier.html#exhale-class-classnetworkit-1-1simmelianmultiscalesparsifier"><span class="std std-ref">Class SimmelianMultiscaleSparsifier</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SimmelianOverlapScore.html#exhale-class-classnetworkit-1-1simmelianoverlapscore"><span class="std std-ref">Class SimmelianOverlapScore</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SimmelianScore.html#exhale-class-classnetworkit-1-1simmelianscore"><span class="std std-ref">Class SimmelianScore</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SimmelianSparsifierNonParametric.html#exhale-class-classnetworkit-1-1simmeliansparsifiernonparametric"><span class="std std-ref">Class SimmelianSparsifierNonParametric</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SimmelianSparsifierParametric.html#exhale-class-classnetworkit-1-1simmeliansparsifierparametric"><span class="std std-ref">Class SimmelianSparsifierParametric</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Smoother.html#exhale-class-classnetworkit-1-1smoother"><span class="std std-ref">Template Class Smoother</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SNAPEdgeListPartitionReader.html#exhale-class-classnetworkit-1-1snapedgelistpartitionreader"><span class="std std-ref">Class SNAPEdgeListPartitionReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SNAPGraphReader.html#exhale-class-classnetworkit-1-1snapgraphreader"><span class="std std-ref">Class SNAPGraphReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SNAPGraphWriter.html#exhale-class-classnetworkit-1-1snapgraphwriter"><span class="std std-ref">Class SNAPGraphWriter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SolverLamg.html#exhale-class-classnetworkit-1-1solverlamg"><span class="std std-ref">Template Class SolverLamg</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SpanningEdgeCentrality.html#exhale-class-classnetworkit-1-1spanningedgecentrality"><span class="std std-ref">Class SpanningEdgeCentrality</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SpanningForest.html#exhale-class-classnetworkit-1-1spanningforest"><span class="std std-ref">Class SpanningForest</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SparseAccumulator.html#exhale-class-classnetworkit-1-1sparseaccumulator"><span class="std std-ref">Class SparseAccumulator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SparseVector.html#exhale-class-classnetworkit-1-1sparsevector"><span class="std std-ref">Template Class SparseVector</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Sparsifier.html#exhale-class-classnetworkit-1-1sparsifier"><span class="std std-ref">Class Sparsifier</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SpSampler.html#exhale-class-classnetworkit-1-1spsampler"><span class="std std-ref">Class SpSampler</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SPSP.html#exhale-class-classnetworkit-1-1spsp"><span class="std std-ref">Class SPSP</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SSSP.html#exhale-class-classnetworkit-1-1sssp"><span class="std std-ref">Class SSSP</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1StablePartitionNodes.html#exhale-class-classnetworkit-1-1stablepartitionnodes"><span class="std std-ref">Class StablePartitionNodes</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1StateFrame.html#exhale-class-classnetworkit-1-1stateframe"><span class="std std-ref">Class StateFrame</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1StaticDegreeSequenceGenerator.html#exhale-class-classnetworkit-1-1staticdegreesequencegenerator"><span class="std std-ref">Class StaticDegreeSequenceGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1StaticGraphGenerator.html#exhale-class-classnetworkit-1-1staticgraphgenerator"><span class="std std-ref">Class StaticGraphGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Status.html#exhale-class-classnetworkit-1-1status"><span class="std std-ref">Class Status</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1StochasticBlockmodel.html#exhale-class-classnetworkit-1-1stochasticblockmodel"><span class="std std-ref">Class StochasticBlockmodel</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1StronglyConnectedComponents.html#exhale-class-classnetworkit-1-1stronglyconnectedcomponents"><span class="std std-ref">Class StronglyConnectedComponents</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1STSP.html#exhale-class-classnetworkit-1-1stsp"><span class="std std-ref">Class STSP</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SuccessiveShortestPathMinCostFlow.html#exhale-class-classnetworkit-1-1successiveshortestpathmincostflow"><span class="std std-ref">Class SuccessiveShortestPathMinCostFlow</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SuitorMatcher.html#exhale-class-classnetworkit-1-1suitormatcher"><span class="std std-ref">Class SuitorMatcher</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1TCE.html#exhale-class-classnetworkit-1-1tce"><span class="std std-ref">Class TCE</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ThrillGraphBinaryReader.html#exhale-class-classnetworkit-1-1thrillgraphbinaryreader"><span class="std std-ref">Class ThrillGraphBinaryReader</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1ThrillGraphBinaryWriter.html#exhale-class-classnetworkit-1-1thrillgraphbinarywriter"><span class="std std-ref">Class ThrillGraphBinaryWriter</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1TopCloseness.html#exhale-class-classnetworkit-1-1topcloseness"><span class="std std-ref">Class TopCloseness</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1TopHarmonicCloseness.html#exhale-class-classnetworkit-1-1topharmoniccloseness"><span class="std std-ref">Class TopHarmonicCloseness</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1TopologicalSort.html#exhale-class-classnetworkit-1-1topologicalsort"><span class="std std-ref">Class TopologicalSort</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1TotalNeighborsIndex.html#exhale-class-classnetworkit-1-1totalneighborsindex"><span class="std std-ref">Class TotalNeighborsIndex</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1TriangleEdgeScore.html#exhale-class-classnetworkit-1-1triangleedgescore"><span class="std std-ref">Class TriangleEdgeScore</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1TwoPhaseL.html#exhale-class-classnetworkit-1-1twophasel"><span class="std std-ref">Class TwoPhaseL</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1UDegreeIndex.html#exhale-class-classnetworkit-1-1udegreeindex"><span class="std std-ref">Class UDegreeIndex</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1UnionFind.html#exhale-class-classnetworkit-1-1unionfind"><span class="std std-ref">Class UnionFind</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1UnionMaximumSpanningForest.html#exhale-class-classnetworkit-1-1unionmaximumspanningforest"><span class="std std-ref">Class UnionMaximumSpanningForest</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1VDegreeIndex.html#exhale-class-classnetworkit-1-1vdegreeindex"><span class="std std-ref">Class VDegreeIndex</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Vector.html#exhale-class-classnetworkit-1-1vector"><span class="std std-ref">Class Vector</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Volume.html#exhale-class-classnetworkit-1-1volume"><span class="std std-ref">Class Volume</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1WattsStrogatzGenerator.html#exhale-class-classnetworkit-1-1wattsstrogatzgenerator"><span class="std std-ref">Class WattsStrogatzGenerator</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1WeaklyConnectedComponents.html#exhale-class-classnetworkit-1-1weaklyconnectedcomponents"><span class="std std-ref">Class WeaklyConnectedComponents</span></a></p></li>
+</ul>
+</section>
+<section id="enums">
+<h2>Enums<a class="headerlink" href="#enums" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="enum_namespaceNetworKit_1a1ce8184e29030cfc4ba2a81452d84cbc.html#exhale-enum-namespacenetworkit-1a1ce8184e29030cfc4ba2a81452d84cbc"><span class="std std-ref">Enum ClosenessVariant</span></a></p></li>
+<li><p><a class="reference internal" href="enum_namespaceNetworKit_1a01812c5da430be8f6eeb5b11be784366.html#exhale-enum-namespacenetworkit-1a01812c5da430be8f6eeb5b11be784366"><span class="std std-ref">Enum DiameterAlgo</span></a></p></li>
+<li><p><a class="reference internal" href="enum_namespaceNetworKit_1a737c6170634e73a4c420abd8b8af053c.html#exhale-enum-namespacenetworkit-1a737c6170634e73a4c420abd8b8af053c"><span class="std std-ref">Enum EdgeDirection</span></a></p></li>
+<li><p><a class="reference internal" href="enum_namespaceNetworKit_1aff0779554e86570b97bb5b85d22fedec.html#exhale-enum-namespacenetworkit-1aff0779554e86570b97bb5b85d22fedec"><span class="std std-ref">Enum LevelType</span></a></p></li>
+<li><p><a class="reference internal" href="enum_namespaceNetworKit_1a704d2a724bb83f8fe52bd8a4a6debcc6.html#exhale-enum-namespacenetworkit-1a704d2a724bb83f8fe52bd8a4a6debcc6"><span class="std std-ref">Enum NetworkitBinaryEdgeIDs</span></a></p></li>
+<li><p><a class="reference internal" href="enum_namespaceNetworKit_1a39fe49dbcfd6f01d9cce93d94da41ca7.html#exhale-enum-namespacenetworkit-1a39fe49dbcfd6f01d9cce93d94da41ca7"><span class="std std-ref">Enum NetworkitBinaryWeights</span></a></p></li>
+</ul>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="function_namespaceNetworKit_1a5244fe1189d1d5364af2e8ab584fb033.html#exhale-function-namespacenetworkit-1a5244fe1189d1d5364af2e8ab584fb033"><span class="std std-ref">Template Function NetworKit::erase</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceNetworKit_1a2e729ece0181b5a3192267fcbb5d6a82.html#exhale-function-namespacenetworkit-1a2e729ece0181b5a3192267fcbb5d6a82"><span class="std std-ref">Function NetworKit::operator*</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceNetworKit_1a190b487bfe65de574cbcc7a8717c7bfc.html#exhale-function-namespacenetworkit-1a190b487bfe65de574cbcc7a8717c7bfc"><span class="std std-ref">Function NetworKit::operator&lt;</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceNetworKit_1ab53ceb724d6f156dc9d21358382c079b.html#exhale-function-namespacenetworkit-1ab53ceb724d6f156dc9d21358382c079b"><span class="std std-ref">Template Function NetworKit::operator&lt;&lt;(std::ostream&amp;, const CSRGeneralMatrix&lt;T&gt;&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceNetworKit_1ae450cb1cc1ba2c556ffc19a260eb2748.html#exhale-function-namespacenetworkit-1ae450cb1cc1ba2c556ffc19a260eb2748"><span class="std std-ref">Function NetworKit::operator&lt;&lt;(std::ostream&amp;, const DenseMatrix&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceNetworKit_1a53263cb0c2d74667eb80df2135a995df.html#exhale-function-namespacenetworkit-1a53263cb0c2d74667eb80df2135a995df"><span class="std std-ref">Function NetworKit::operator&lt;&lt;(std::ostream&amp;, const DynamicMatrix&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceNetworKit_1a5f45e3cb63e4aa487f0e9c7b0b7dc0c7.html#exhale-function-namespacenetworkit-1a5f45e3cb63e4aa487f0e9c7b0b7dc0c7"><span class="std std-ref">Function NetworKit::operator&lt;&lt;(std::ostream&amp;, const Vector&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceNetworKit_1a902995e1186b46f4734633cf0366d820.html#exhale-function-namespacenetworkit-1a902995e1186b46f4734633cf0366d820"><span class="std std-ref">Function NetworKit::operator==</span></a></p></li>
+</ul>
+</section>
+<section id="typedefs">
+<h2>Typedefs<a class="headerlink" href="#typedefs" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="typedef_namespaceNetworKit_1a05aeded0f254d2a7ef77085f69bbc3c4.html#exhale-typedef-namespacenetworkit-1a05aeded0f254d2a7ef77085f69bbc3c4"><span class="std std-ref">Typedef NetworKit::ASB</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespaceNetworKit_1a8c00695ff29a3d2374875d514c73904f.html#exhale-typedef-namespacenetworkit-1a8c00695ff29a3d2374875d514c73904f"><span class="std std-ref">Typedef NetworKit::bigfloat</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespaceNetworKit_1ac9500d00cca7feb7e00b71060b67f902.html#exhale-typedef-namespacenetworkit-1ac9500d00cca7feb7e00b71060b67f902"><span class="std std-ref">Typedef NetworKit::coordinate</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespaceNetworKit_1a6e2b71255fef555b3be106448c05c19b.html#exhale-typedef-namespacenetworkit-1a6e2b71255fef555b3be106448c05c19b"><span class="std std-ref">Typedef NetworKit::CoordinateVector</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#exhale-typedef-namespacenetworkit-1a449ea33fc1a43a759bbbb3dedbd62e1a"><span class="std std-ref">Typedef NetworKit::count</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespaceNetworKit_1a0c15d90428e9216f3979a939f4aa8107.html#exhale-typedef-namespacenetworkit-1a0c15d90428e9216f3979a939f4aa8107"><span class="std std-ref">Typedef NetworKit::CSRMatrix</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespaceNetworKit_1afc39c64aa91613e637d66123507a92b5.html#exhale-typedef-namespacenetworkit-1afc39c64aa91613e637d66123507a92b5"><span class="std std-ref">Typedef NetworKit::edgeid</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#exhale-typedef-namespacenetworkit-1aa228345b8a49a2ea1e954a59ee6ede66"><span class="std std-ref">Typedef NetworKit::edgeweight</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespaceNetworKit_1a82034f5cc8b8c62b71cc8bc97dfd0f54.html#exhale-typedef-namespacenetworkit-1a82034f5cc8b8c62b71cc8bc97dfd0f54"><span class="std std-ref">Typedef NetworKit::ErdosRenyiEnumeratorDefault</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespaceNetworKit_1a41e30d07038ef847798f304a60ea2902.html#exhale-typedef-namespacenetworkit-1a41e30d07038ef847798f304a60ea2902"><span class="std std-ref">Typedef NetworKit::index</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespaceNetworKit_1ab8ab26cdb3accc15c00b6d9c9bab4586.html#exhale-typedef-namespacenetworkit-1ab8ab26cdb3accc15c00b6d9c9bab4586"><span class="std std-ref">Typedef NetworKit::label</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespaceNetworKit_1a11235572ed17fe56d7fd66cd88aace7a.html#exhale-typedef-namespacenetworkit-1a11235572ed17fe56d7fd66cd88aace7a"><span class="std std-ref">Typedef NetworKit::Matrix</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#exhale-typedef-namespacenetworkit-1a2e1aa535e7aaeec9130eb3fc0ab32697"><span class="std std-ref">Typedef NetworKit::node</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespaceNetworKit_1abbd2dab3f2fbab14a5d95ea4f1a5de9d.html#exhale-typedef-namespacenetworkit-1abbd2dab3f2fbab14a5d95ea4f1a5de9d"><span class="std std-ref">Typedef NetworKit::omp_index</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespaceNetworKit_1ad16bb5a9014359785f85876056e2bdd4.html#exhale-typedef-namespacenetworkit-1ad16bb5a9014359785f85876056e2bdd4"><span class="std std-ref">Typedef NetworKit::Point2D</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespaceNetworKit_1adad098ff11ab6e9297b31865d6ed31e3.html#exhale-typedef-namespacenetworkit-1adad098ff11ab6e9297b31865d6ed31e3"><span class="std std-ref">Typedef NetworKit::PrioQ</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_namespaceNetworKit_1a0ce4fe8f9079a9b40bb354fecc30ea57.html#exhale-typedef-namespacenetworkit-1a0ce4fe8f9079a9b40bb354fecc30ea57"><span class="std std-ref">Typedef NetworKit::RankedNeighbors</span></a></p></li>
+</ul>
+</section>
+<section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a21ee542cfc7bd4f5992206268894f3f3.html#exhale-variable-namespacenetworkit-1a21ee542cfc7bd4f5992206268894f3f3"><span class="std std-ref">Variable NetworKit::defaultEdgeWeight</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1ac8499053d348a82ed9feb2dec09033d0.html#exhale-variable-namespacenetworkit-1ac8499053d348a82ed9feb2dec09033d0"><span class="std std-ref">Variable NetworKit::FLOAT_EPSILON</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a1ff3bdeb2a7891f3fe3410ba9d1323ec.html#exhale-variable-namespacenetworkit-1a1ff3bdeb2a7891f3fe3410ba9d1323ec"><span class="std std-ref">Variable NetworKit::MAX_COMBINED_ITERATES</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1aba2b0766936a22351ff096bf43f56666.html#exhale-variable-namespacenetworkit-1aba2b0766936a22351ff096bf43f56666"><span class="std std-ref">Variable NetworKit::MAX_DIRECT_SOLVE_SIZE</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a23fa17adac44f79e1e27e89d97f61dea.html#exhale-variable-namespacenetworkit-1a23fa17adac44f79e1e27e89d97f61dea"><span class="std std-ref">Variable NetworKit::NO</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1ad9fc2d4fa1ac1cf444e5cd7d6da0c9e7.html#exhale-variable-namespacenetworkit-1ad9fc2d4fa1ac1cf444e5cd7d6da0c9e7"><span class="std std-ref">Variable NetworKit::none</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1ae0407f6360ec219006b8fc0a113f1829.html#exhale-variable-namespacenetworkit-1ae0407f6360ec219006b8fc0a113f1829"><span class="std std-ref">Variable NetworKit::nullWeight</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a74679cb472b4d82042a929dfb4479a69.html#exhale-variable-namespacenetworkit-1a74679cb472b4d82042a929dfb4479a69"><span class="std std-ref">Variable NetworKit::PI</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a5063161a8727b1f2f5c75e6ec277073a.html#exhale-variable-namespacenetworkit-1a5063161a8727b1f2f5c75e6ec277073a"><span class="std std-ref">Variable NetworKit::SETUP_AGGREGATION_DEGREE_THRESHOLD</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1ad9c85d4de6bbcc3ac9a91a123a2b957c.html#exhale-variable-namespacenetworkit-1ad9c85d4de6bbcc3ac9a91a123a2b957c"><span class="std std-ref">Variable NetworKit::SETUP_AGGREGATION_WEAK_EDGE_THRESHOLD</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a5c6ee4e1ae157255022973347d69a4b5.html#exhale-variable-namespacenetworkit-1a5c6ee4e1ae157255022973347d69a4b5"><span class="std std-ref">Variable NetworKit::SETUP_COARSENING_WORK_GUARD</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a0b7b60f318ba5a7df708663bf225e85b.html#exhale-variable-namespacenetworkit-1a0b7b60f318ba5a7df708663bf225e85b"><span class="std std-ref">Variable NetworKit::SETUP_CYCLE_INDEX</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a14d4fff88f0849e92869648edc554f11.html#exhale-variable-namespacenetworkit-1a14d4fff88f0849e92869648edc554f11"><span class="std std-ref">Variable NetworKit::SETUP_ELIMINATION_MAX_DEGREE</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a67384273a31e83b10e4756494812d56a.html#exhale-variable-namespacenetworkit-1a67384273a31e83b10e4756494812d56a"><span class="std std-ref">Variable NetworKit::SETUP_ELIMINATION_MAX_STAGES</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1ae7139ce64c1b77f0a24195c75ef48221.html#exhale-variable-namespacenetworkit-1ae7139ce64c1b77f0a24195c75ef48221"><span class="std std-ref">Variable NetworKit::SETUP_ELIMINATION_MIN_ELIM_FRACTION</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a78c425d387dd8afcc5c5c35871abcc08.html#exhale-variable-namespacenetworkit-1a78c425d387dd8afcc5c5c35871abcc08"><span class="std std-ref">Variable NetworKit::SETUP_MAX_AGG_LEVELS</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a9abd256cad83a7d542a96ef811c18977.html#exhale-variable-namespacenetworkit-1a9abd256cad83a7d542a96ef811c18977"><span class="std std-ref">Variable NetworKit::SETUP_MAX_AGGREGATION_STAGES</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a5abc13d613d058e52bea849ddc8b8692.html#exhale-variable-namespacenetworkit-1a5abc13d613d058e52bea849ddc8b8692"><span class="std std-ref">Variable NetworKit::SETUP_MAX_COARSE_RELAX_ACF</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a048d172b8feb3b1c212f31c12e0a8fd6.html#exhale-variable-namespacenetworkit-1a048d172b8feb3b1c212f31c12e0a8fd6"><span class="std std-ref">Variable NetworKit::SETUP_MAX_LEVELS</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1ad163883d076426d55ae9e85a612e638f.html#exhale-variable-namespacenetworkit-1ad163883d076426d55ae9e85a612e638f"><span class="std std-ref">Variable NetworKit::SETUP_MIN_AGGREGATION_STAGES</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1aacb217396a646dd582a340f40177a30d.html#exhale-variable-namespacenetworkit-1aacb217396a646dd582a340f40177a30d"><span class="std std-ref">Variable NetworKit::SETUP_NU_DEFAULT</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a356b0131527a4105da2a83453d0c9c2b.html#exhale-variable-namespacenetworkit-1a356b0131527a4105da2a83453d0c9c2b"><span class="std std-ref">Variable NetworKit::SETUP_RELAX_ACF_MIN_SWEEPS</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a7036d6788a4e8e61585a7541d825b300.html#exhale-variable-namespacenetworkit-1a7036d6788a4e8e61585a7541d825b300"><span class="std std-ref">Variable NetworKit::SETUP_RELAX_COARSEST_SWEEPS</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1af52d832b9e6d66e292d2ec78499facf1.html#exhale-variable-namespacenetworkit-1af52d832b9e6d66e292d2ec78499facf1"><span class="std std-ref">Variable NetworKit::SETUP_TV_SWEEPS</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a454d509d121e61a3764184d560d72783.html#exhale-variable-namespacenetworkit-1a454d509d121e61a3764184d560d72783"><span class="std std-ref">Variable NetworKit::TV_INC</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1ae9ca5f6b3df33758d5b2857cab57d5dd.html#exhale-variable-namespacenetworkit-1ae9ca5f6b3df33758d5b2857cab57d5dd"><span class="std std-ref">Variable NetworKit::TV_MAX</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1af473a6be1323485701f34bb24d6af42f.html#exhale-variable-namespacenetworkit-1af473a6be1323485701f34bb24d6af42f"><span class="std std-ref">Variable NetworKit::TV_NUM</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a1d749bcb9f881670e2529dd749f04a3c.html#exhale-variable-namespacenetworkit-1a1d749bcb9f881670e2529dd749f04a3c"><span class="std std-ref">Variable NetworKit::UNKNOWN</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a02c8e75d9412cb9b35e92887b1bc21fc.html#exhale-variable-namespacenetworkit-1a02c8e75d9412cb9b35e92887b1bc21fc"><span class="std std-ref">Variable NetworKit::unsafe</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1aa836d7c24e625d4c6c7d7fdc92c38230.html#exhale-variable-namespacenetworkit-1aa836d7c24e625d4c6c7d7fdc92c38230"><span class="std std-ref">Variable NetworKit::YES</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

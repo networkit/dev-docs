@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Class PageRank</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class PageRankNibble" href="classNetworKit_1_1PageRankNibble.html" />
+    <link rel="prev" title="Class OverlappingNMIDistance" href="classNetworKit_1_1OverlappingNMIDistance.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#directories">Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#pages">Pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="class-pagerank">
+<span id="exhale-class-classnetworkit-1-1pagerank"></span><h1>Class PageRank<a class="headerlink" href="#class-pagerank" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_networkit_centrality_PageRank.hpp.html#file-include-networkit-centrality-pagerank-hpp"><span class="std std-ref">File PageRank.hpp</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Link to this heading">¶</a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::Centrality</span></code> (<a class="reference internal" href="classNetworKit_1_1Centrality.html#exhale-class-classnetworkit-1-1centrality"><span class="std std-ref">Class Centrality</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit8PageRankE">
+<span class="target" id="classNetworKit_1_1PageRank"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PageRank</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1Centrality.html#_CPPv4N9NetworKit10CentralityE" title="NetworKit::Centrality"><span class="n"><span class="pre">Centrality</span></span></a><a class="headerlink" href="#_CPPv4N9NetworKit8PageRankE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Compute <a class="reference internal" href="#classNetworKit_1_1PageRank"><span class="std std-ref">PageRank</span></a> as node centrality measure. In the default mode this computation is in line with the original paper “The PageRank citation ranking: Bringing order to the web.” by L. Brin et al (1999). In later publications (“PageRank revisited.” by M. Brinkmeyer et al. (2005) amongst others) sink-node handling was added for directed graphs in order to comply with the theoretical assumptions by the underlying Markov chain model. This can be activated by setting the matching parameter to true. By default this is disabled, since it is an addition to the original definition.</p>
+<p><p>Page-Rank values can also be normalized by post-processed according to “Comparing Apples and</p>
+<p>Oranges: Normalized PageRank for Evolving Graphs” by Berberich et al. (2007). This decouples the</p>
+<a class="reference internal" href="#classNetworKit_1_1PageRank"><span class="std std-ref">PageRank</span></a> values from the size of the input graph. To enable this, set the matching parameter to true. Note that sink-node handling is automatically activated if normalization is used.</p>
+<p>NOTE: There is an inconsistency in the definition in Newman’s book (Ch. 7) regarding directed graphs; we follow the verbal description, which requires to sum over the incoming edges (as opposed to outgoing ones). </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit8PageRank4NormE">
+<span class="target" id="classNetworKit_1_1PageRank_1a2ed1faa1b6c86ab0d7afe351331f08bc"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Norm</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit8PageRank4NormE" title="Link to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit8PageRank4Norm7L1_NORME">
+<span class="target" id="classNetworKit_1_1PageRank_1a2ed1faa1b6c86ab0d7afe351331f08bca4e4e465fb782bcb2afd2ce2e2d1d6177"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">L1_NORM</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit8PageRank4Norm7L1_NORME" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit8PageRank4Norm7L2_NORME">
+<span class="target" id="classNetworKit_1_1PageRank_1a2ed1faa1b6c86ab0d7afe351331f08bca4db5bc163042f6a37d44afca86deaabc"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">L2_NORM</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit8PageRank4Norm7L2_NORME" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit8PageRank4Norm6L1NormE">
+<span class="target" id="classNetworKit_1_1PageRank_1a2ed1faa1b6c86ab0d7afe351331f08bca64740e05357f9917c12a0590dda2f9af"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">L1Norm</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit8PageRank4Norm6L1NormE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit8PageRank4Norm6L2NormE">
+<span class="target" id="classNetworKit_1_1PageRank_1a2ed1faa1b6c86ab0d7afe351331f08bcaf2f84460e7d19902e2cd554a4cbceace"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">L2Norm</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit8PageRank4Norm6L2NormE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit8PageRank12SinkHandlingE">
+<span class="target" id="classNetworKit_1_1PageRank_1a64b129648af909ab9d66bafd46f6b012"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SinkHandling</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit8PageRank12SinkHandlingE" title="Link to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit8PageRank12SinkHandling16NO_SINK_HANDLINGE">
+<span class="target" id="classNetworKit_1_1PageRank_1a64b129648af909ab9d66bafd46f6b012a3629ba616b360d5b4bbbe585732e9cd2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NO_SINK_HANDLING</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit8PageRank12SinkHandling16NO_SINK_HANDLINGE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit8PageRank12SinkHandling16DISTRIBUTE_SINKSE">
+<span class="target" id="classNetworKit_1_1PageRank_1a64b129648af909ab9d66bafd46f6b012a79c220e8346ce80e06a0c9b8f07b7fb6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DISTRIBUTE_SINKS</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit8PageRank12SinkHandling16DISTRIBUTE_SINKSE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit8PageRank8PageRankERK5Graphddb12SinkHandling">
+<span class="target" id="classNetworKit_1_1PageRank_1a41552d536e58ac8c91e899d6af61241d"></span><span class="sig-name descname"><span class="n"><span class="pre">PageRank</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">damp</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.85</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tol</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1e-8</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">normalized</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <a class="reference internal" href="#_CPPv4N9NetworKit8PageRank12SinkHandlingE" title="NetworKit::PageRank::SinkHandling"><span class="n"><span class="pre">SinkHandling</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">distributeSinks</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit8PageRank12SinkHandlingE" title="NetworKit::PageRank::SinkHandling"><span class="n"><span class="pre">SinkHandling</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N9NetworKit8PageRank12SinkHandling16NO_SINK_HANDLINGE" title="NetworKit::PageRank::SinkHandling::NO_SINK_HANDLING"><span class="n"><span class="pre">NO_SINK_HANDLING</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit8PageRank8PageRankERK5Graphddb12SinkHandling" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Constructs the <a class="reference internal" href="#classNetworKit_1_1PageRank"><span class="std std-ref">PageRank</span></a> class for the <a class="reference internal" href="classNetworKit_1_1Graph.html#classNetworKit_1_1Graph"><span class="std std-ref">Graph</span></a> <em>G</em></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> – <strong>[in]</strong> <a class="reference internal" href="classNetworKit_1_1Graph.html#classNetworKit_1_1Graph"><span class="std std-ref">Graph</span></a> to be processed. </p></li>
+<li><p><strong>damp</strong> – <strong>[in]</strong> Damping factor of the <a class="reference internal" href="#classNetworKit_1_1PageRank"><span class="std std-ref">PageRank</span></a> algorithm. </p></li>
+<li><p><strong>tol</strong> – <strong>[in]</strong> Error tolerance for <a class="reference internal" href="#classNetworKit_1_1PageRank"><span class="std std-ref">PageRank</span></a> iteration. </p></li>
+<li><p><strong>distributeSinks</strong> – <strong>[in]</strong> Set to distribute <a class="reference internal" href="#classNetworKit_1_1PageRank"><span class="std std-ref">PageRank</span></a> values for sink nodes. (default = false) </p></li>
+<li><p><strong>normalized</strong> – <strong>[in]</strong> Set to normalize Page-Rank values in order to decouple it from the network size. (default = false) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit8PageRank3runEv">
+<span class="target" id="classNetworKit_1_1PageRank_1a842e0e233a3a0bbee1f62de2f2515a06"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9NetworKit8PageRank3runEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Computes page rank on the graph passed in constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit8PageRank7maximumEv">
+<span class="target" id="classNetworKit_1_1PageRank_1aaeb8de6a705e3eb80087adc9f8c30e7d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">maximum</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9NetworKit8PageRank7maximumEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Returns the maximum <a class="reference internal" href="#classNetworKit_1_1PageRank"><span class="std std-ref">PageRank</span></a> score </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit8PageRank18numberOfIterationsEv">
+<span class="target" id="classNetworKit_1_1PageRank_1a3f45d0a3ffec32b6abc878d0a4017e7b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">numberOfIterations</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit8PageRank18numberOfIterationsEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Return the number of iterations performed by the algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Number of iterations performed by the algorithm. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit8PageRank13maxIterationsE">
+<span class="target" id="classNetworKit_1_1PageRank_1a6cfcdc17bb7486d2640d4b281d822273"></span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">maxIterations</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">numeric_limits</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">max</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N9NetworKit8PageRank13maxIterationsE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit8PageRank4normE">
+<span class="target" id="classNetworKit_1_1PageRank_1a16bb59ac5314b3b9d9e91029b8926e6f"></span><a class="reference internal" href="#_CPPv4N9NetworKit8PageRank4NormE" title="NetworKit::PageRank::Norm"><span class="n"><span class="pre">Norm</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">norm</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit8PageRank4NormE" title="NetworKit::PageRank::Norm"><span class="n"><span class="pre">Norm</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N9NetworKit8PageRank4Norm7L2_NORME" title="NetworKit::PageRank::Norm::L2_NORM"><span class="n"><span class="pre">L2_NORM</span></span></a><a class="headerlink" href="#_CPPv4N9NetworKit8PageRank4normE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>
