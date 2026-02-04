@@ -1,0 +1,615 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>networkit.scd</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="networkit.simulation" href="simulation.html" />
+    <link rel="prev" title="networkit.reachability" href="reachability.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="networkit.html">networkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algebraic.html">networkit.algebraic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="base.html">networkit.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="centrality.html">networkit.centrality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clique.html">networkit.clique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coarsening.html">networkit.coarsening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coloring.html">networkit.coloring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="community.html">networkit.community</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">networkit.components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="correlation.html">networkit.correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="distance.html">networkit.distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamic.html">networkit.dynamic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamics.html">networkit.dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynbase.html">networkit.dynbase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="embedding.html">networkit.embedding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engineering.html">networkit.engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow.html">networkit.flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generators.html">networkit.generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gephi.html">networkit.gephi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="globals.html">networkit.globals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graph.html">networkit.graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphio.html">networkit.graphio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphtools.html">networkit.graphtools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="helpers.html">networkit.helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="independentset.html">networkit.independentset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkprediction.html">networkit.linkprediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matching.html">networkit.matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nxadapter.html">networkit.nxadapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot.html">networkit.plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">networkit.profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="randomization.html">networkit.randomization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reachability.html">networkit.reachability</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">networkit.scd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html">networkit.simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sparsification.html">networkit.sparsification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stats.html">networkit.stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structures.html">networkit.structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="traversal.html">networkit.traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viz.html">networkit.viz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vizbridges.html">networkit.vizbridges</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="module-networkit.scd">
+<span id="networkit-scd"></span><h1>networkit.scd<a class="headerlink" href="#module-networkit.scd" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.scd.ApproximatePageRank">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.scd.</span></span><span class="sig-name descname"><span class="pre">ApproximatePageRank</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.ApproximatePageRank" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Computes an approximate PageRank vector from a given seed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – Graph in which an APR is computed.</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – Loop probability of random walk.</p></li>
+<li><p><strong>epsilon</strong> (<em>float</em>) – Error tolerance.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.scd.ApproximatePageRank.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seeds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.ApproximatePageRank.run" title="Link to this definition">¶</a></dt>
+<dd><p>Approximate PageRank vector from seeds with parameters
+specified in the constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>seeds</strong> (<em>int</em><em> or </em><em>list</em><em>(</em><em>int</em><em>)</em>) – The seed node or list of seed nodes.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of pairs of nodes and scores with positive PageRank.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(tuple(int, float))</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.scd.CliqueDetect">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.scd.</span></span><span class="sig-name descname"><span class="pre">CliqueDetect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.CliqueDetect" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.scd.SelectiveCommunityDetector" title="networkit.scd.SelectiveCommunityDetector"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectiveCommunityDetector</span></code></a></p>
+<p>The CliqueDetect algorithm. It finds the largest clique in the
+seed node’s neighborhood.</p>
+<p>The algorithm can handle weighted graphs. There, the clique
+with the highest sum of internal edge weights is
+returned. This sum includes edge weights to the seed node(s)
+to ensure that cliques that are well-connected to the seed
+node(s) are preferred.</p>
+<p>For multiple seed nodes, the resulting community is a clique
+iff the seeds form a clique. Otherwise, only the added nodes
+form a clique that is fully connected to the seed nodes.</p>
+<p>See also: Hamann, M.; Röhrs, E.; Wagner, D.
+Local Community Detection Based on Small Cliques.
+Algorithms 2017, 10, 90. <a class="reference external" href="https://doi.org/10.3390/a10030090">https://doi.org/10.3390/a10030090</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.scd.CombinedSCD">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.scd.</span></span><span class="sig-name descname"><span class="pre">CombinedSCD</span></span><a class="headerlink" href="#networkit.scd.CombinedSCD" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.scd.SelectiveCommunityDetector" title="networkit.scd.SelectiveCommunityDetector"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectiveCommunityDetector</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.scd.GCE">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.scd.</span></span><span class="sig-name descname"><span class="pre">GCE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.GCE" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.scd.SelectiveCommunityDetector" title="networkit.scd.SelectiveCommunityDetector"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectiveCommunityDetector</span></code></a></p>
+<p>Produces a cut around a given seed node using the GCE algorithm.
+It greedily adds nodes from the shell to improve community quality.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph, must be unweighted.</p></li>
+<li><p><strong>Q</strong> (<em>str</em>) – The quality function. Supported values: “M” or “L”.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.scd.LFMLocal">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.scd.</span></span><span class="sig-name descname"><span class="pre">LFMLocal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.LFMLocal" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.scd.SelectiveCommunityDetector" title="networkit.scd.SelectiveCommunityDetector"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectiveCommunityDetector</span></code></a></p>
+<p>Local version of the LFM algorithm as introduced in:</p>
+<p>Lancichinetti, A., Fortunato, S., &amp; Kertész, J. (2009).
+Detecting the overlapping and hierarchical community structure in complex networks.
+New Journal of Physics, 11(3), 033015.
+<a class="reference external" href="https://doi.org/10.1088/1367-2630/11/3/033015">https://doi.org/10.1088/1367-2630/11/3/033015</a></p>
+<p>Their algorithm detects overlapping communities by repeatedly
+executing this algorithm for a random seed node that has not yet
+been assigned to any community.</p>
+<p>The algorithm has a resolution parameter alpha. A natural choice
+for alpha is 1, the paper states that values below 0.5 usually
+give a community containing the whole graph while values larger
+than 2 recover the smallest communities.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.scd.LocalT">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.scd.</span></span><span class="sig-name descname"><span class="pre">LocalT</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.LocalT" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.scd.SelectiveCommunityDetector" title="networkit.scd.SelectiveCommunityDetector"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectiveCommunityDetector</span></code></a></p>
+<p>The local community expansion algorithm optimizing the T measure.</p>
+<p>This implements the algorithm published in:</p>
+<p>Fagnan, J., Zaiane, O., &amp; Barbosa, D. (2014).
+Using triads to identify local community structure in social networks.
+In 2014 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM) (pp. 108–112).
+<a class="reference external" href="https://doi.org/10.1109/ASONAM.2014.6921568">https://doi.org/10.1109/ASONAM.2014.6921568</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – Graph in which the community shell be found.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.scd.LocalTightnessExpansion">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.scd.</span></span><span class="sig-name descname"><span class="pre">LocalTightnessExpansion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.LocalTightnessExpansion" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.scd.SelectiveCommunityDetector" title="networkit.scd.SelectiveCommunityDetector"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectiveCommunityDetector</span></code></a></p>
+<p>The Local Tightness Expansion (LTE) algorithm.</p>
+<p>The algorithm can handle weighted graphs.</p>
+<p>This is the local community expansion algorithm described in</p>
+<p>Huang, J., Sun, H., Liu, Y., Song, Q., &amp; Weninger, T. (2011).
+Towards Online Multiresolution Community Detection in Large-Scale Networks.
+PLOS ONE, 6(8), e23829.
+<a class="reference external" href="https://doi.org/10.1371/journal.pone.0023829">https://doi.org/10.1371/journal.pone.0023829</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – Graph in which the community shell be found.</p></li>
+<li><p><strong>alpha</strong> (<em>float</em><em>, </em><em>optional</em>) – Tightness coefficient - smaller values lead to larger communities. Default: 1.0</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.scd.PageRankNibble">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.scd.</span></span><span class="sig-name descname"><span class="pre">PageRankNibble</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.PageRankNibble" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.scd.SelectiveCommunityDetector" title="networkit.scd.SelectiveCommunityDetector"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectiveCommunityDetector</span></code></a></p>
+<p>Produces a cut around a given seed node using the PageRank-Nibble algorithm.
+see Andersen, Chung, Lang: Local Graph Partitioning using PageRank Vectors</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph, must be unweighted.</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – Loop probability of random walk; smaller values tend to produce larger communities.</p></li>
+<li><p><strong>epsilon</strong> (<em>float</em>) – Tolerance threshold for approximation of PageRank vectors.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.scd.RandomBFS">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.scd.</span></span><span class="sig-name descname"><span class="pre">RandomBFS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.RandomBFS" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.scd.SelectiveCommunityDetector" title="networkit.scd.SelectiveCommunityDetector"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectiveCommunityDetector</span></code></a></p>
+<p>The random BFS community detection baseline:
+finds a community around a seed node with a given size using a prefix of a
+BFS order that is selected at random among all possible prefixes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – Graph in which the community shall be found.</p></li>
+<li><p><strong>C</strong> (<em>networkit.Cover</em>) – Ground truth communities to get size information from.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.scd.SCDGroundTruthComparison">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.scd.</span></span><span class="sig-name descname"><span class="pre">SCDGroundTruthComparison</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groundTruth</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">found</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignoreSeeds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.SCDGroundTruthComparison" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
+<p>This class evaluates a set found communities against a ground truth cover. Each found community
+is compared against the communities of the seed node in the ground truth cover.</p>
+<p>For each score, the ground truth community is chosen as comparison that maximizes the score.
+If seeds are not ignored (a parameter of the constructor), then only ground truth communities
+that contain the given seed are used to compare against.</p>
+<p>The calculated scores are:</p>
+<p>Precision: the size of the intersection of found and ground truth community divided by the
+size of the found community, i.e., how much of the found community was an actual match.</p>
+<p>Recall: the size of the intersection of found and ground truth community divided by the
+size of the ground truth community, i.e., how much of the ground truth community was found.</p>
+<p>F1 score: the harmonic mean of precision and recall.</p>
+<p>Jaccard index: the size of the intersection of found and ground truth community divided by the
+size of the union of found and ground truth community.</p>
+<p>For each score, the range of values is between 0 and 1, where 0 is the worst and 1 the best score.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to compare on</p></li>
+<li><p><strong>groundTruth</strong> (<em>networkit.Cover</em>) – The ground truth cover</p></li>
+<li><p><strong>found</strong> (dict(bool <cite>:</cite> int)) – The found communities, where the keys are the seed nodes and the values are the found nodes.</p></li>
+<li><p><strong>ignoreSeeds</strong> (<em>bool</em>) – If the seed values shall be ignored, i.e. if any ground truth community is a match</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.scd.SCDGroundTruthComparison.getAverageF1">
+<span class="sig-name descname"><span class="pre">getAverageF1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.SCDGroundTruthComparison.getAverageF1" title="Link to this definition">¶</a></dt>
+<dd><p>Get the (unweighted) average of the F1 score of every found community.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dict(int `</strong> – A dict between community and the (unweighted) average of the F1 score.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>` float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.scd.SCDGroundTruthComparison.getAverageJaccard">
+<span class="sig-name descname"><span class="pre">getAverageJaccard</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.SCDGroundTruthComparison.getAverageJaccard" title="Link to this definition">¶</a></dt>
+<dd><p>Get the (unweighted) average of the jaccard indices of every found community.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dict(int `</strong> – A dict between community and the (unweighted) average of the jaccard indices.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>` float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.scd.SCDGroundTruthComparison.getAveragePrecision">
+<span class="sig-name descname"><span class="pre">getAveragePrecision</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.SCDGroundTruthComparison.getAveragePrecision" title="Link to this definition">¶</a></dt>
+<dd><p>Get the (unweighted) average of the precision of every found community.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dict(int `</strong> – A dict between community and the (unweighted) average of the precision.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>` float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.scd.SCDGroundTruthComparison.getAverageRecall">
+<span class="sig-name descname"><span class="pre">getAverageRecall</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.SCDGroundTruthComparison.getAverageRecall" title="Link to this definition">¶</a></dt>
+<dd><p>Get the (unweighted) average of the recall of every found community.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dict(int `</strong> – A dict between community and the (unweighted) average of the recall.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>` float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.scd.SCDGroundTruthComparison.getIndividualF1">
+<span class="sig-name descname"><span class="pre">getIndividualF1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.SCDGroundTruthComparison.getIndividualF1" title="Link to this definition">¶</a></dt>
+<dd><p>Get the F1 score of every found community.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dict(int `</strong> – A dict between seed node and the F1 score of the seed’s community.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>` float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.scd.SCDGroundTruthComparison.getIndividualJaccard">
+<span class="sig-name descname"><span class="pre">getIndividualJaccard</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.SCDGroundTruthComparison.getIndividualJaccard" title="Link to this definition">¶</a></dt>
+<dd><p>Get the Jaccard index of every found community.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dict(int `</strong> – A dict between seed node and the jaccard index of the seed’s community.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>` float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.scd.SCDGroundTruthComparison.getIndividualPrecision">
+<span class="sig-name descname"><span class="pre">getIndividualPrecision</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.SCDGroundTruthComparison.getIndividualPrecision" title="Link to this definition">¶</a></dt>
+<dd><p>Get the precision of every found community.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dict(int `</strong> – A dict between seed node and the precision of the seed’s community.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>` float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.scd.SCDGroundTruthComparison.getIndividualRecall">
+<span class="sig-name descname"><span class="pre">getIndividualRecall</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.SCDGroundTruthComparison.getIndividualRecall" title="Link to this definition">¶</a></dt>
+<dd><p>Get the recall of every found community.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dict(int `</strong> – A dict between seed node and the recall of the seed’s community.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>` float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.scd.SelectiveCommunityDetector">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.scd.</span></span><span class="sig-name descname"><span class="pre">SelectiveCommunityDetector</span></span><a class="headerlink" href="#networkit.scd.SelectiveCommunityDetector" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Abstract base class for a selective community detector.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.scd.SelectiveCommunityDetector.expandOneCommunity">
+<span class="sig-name descname"><span class="pre">expandOneCommunity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seeds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.SelectiveCommunityDetector.expandOneCommunity" title="Link to this definition">¶</a></dt>
+<dd><p>Detect a community for the given seed node(s).</p>
+<p>It expands either a single seed or a whole set of seed nodes into a single community.
+This is useful if you know multiple nodes that should be part of the
+community. This method may throw an exception if the particular algorithm
+does not support multiple seeds but you specified more than one seed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>seed</strong> (<em>int</em><em> or </em><em>list</em><em>(</em><em>int</em><em>)</em>) – The seed(s) to find the community for.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The found community as a list of nodes.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.scd.SelectiveCommunityDetector.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seeds</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.SelectiveCommunityDetector.run" title="Link to this definition">¶</a></dt>
+<dd><p>run(seeds):</p>
+<p>Detect one community for each of the given seed nodes.</p>
+<p>The default implementation calls expandOneCommunity() for each of the seeds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>seeds</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – The list of seeds for which communities shall be detected.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>dict(int `</strong> – A dict mapping from seed node to community (as a set of nodes).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>` int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.scd.SetConductance">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.scd.</span></span><span class="sig-name descname"><span class="pre">SetConductance</span></span><a class="headerlink" href="#networkit.scd.SetConductance" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
+<p>This class calculates the conductance of a set of nodes, i.e., the weight of all edges
+between the set and the rest of the graph divided by the minimum
+of the volume (the sum of the weighted degrees) of the community and the rest
+of the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to calculate the conductance on.</p></li>
+<li><p><strong>community</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – The list of nodes to calculate the conductance of.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.scd.SetConductance.getConductance">
+<span class="sig-name descname"><span class="pre">getConductance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.SetConductance.getConductance" title="Link to this definition">¶</a></dt>
+<dd><p>Get the calculated conductance score.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The conductance.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.scd.TCE">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.scd.</span></span><span class="sig-name descname"><span class="pre">TCE</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">refine</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useJaccard</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.TCE" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.scd.SelectiveCommunityDetector" title="networkit.scd.SelectiveCommunityDetector"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectiveCommunityDetector</span></code></a></p>
+<p>The Triangle-based community expansion algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – graph in which the community shell be found</p></li>
+<li><p><strong>refine</strong> (<em>bool</em><em>, </em><em>optional</em>) – If nodes shall be removed again if this improves the quality. Default: True</p></li>
+<li><p><strong>useJaccard</strong> (<em>bool</em><em>, </em><em>optional</em>) – If the jaccard index shall be used for weights. Default: False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.scd.TwoPhaseL">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.scd.</span></span><span class="sig-name descname"><span class="pre">TwoPhaseL</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.scd.TwoPhaseL" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.scd.SelectiveCommunityDetector" title="networkit.scd.SelectiveCommunityDetector"><code class="xref py py-class docutils literal notranslate"><span class="pre">SelectiveCommunityDetector</span></code></a></p>
+<p>The two-phase local community detection algorithm optimizing the L-measure.</p>
+<p>This is an implementation of the algorithm proposed in:</p>
+<p>Chen, J., Zaïane, O., &amp; Goebel, R. (2009).
+Local Community Identification in Social Networks.
+In 2009 International Conference on Advances in Social Network Analysis and Mining (pp. 237–242).
+<a class="reference external" href="https://doi.org/10.1109/ASONAM.2009.14">https://doi.org/10.1109/ASONAM.2009.14</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

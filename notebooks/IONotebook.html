@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>NetworKit graph I/O tutorial</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Link Prediction with NetworKit" href="LinkPrediction.html" />
+    <link rel="prev" title="Group Centrality Tutorial" href="GroupCentrality.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../notebooks.html#tutorial-notebooks">Tutorial Notebooks</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="User-Guide.html">NetworKit User Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="User-Guide.html#Profiling">Profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Centrality.html">Centrality Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Community.html">Community Detection with NetworKit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Distance.html">NetworKit Distance Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Dynamics.html">Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Generators.html">NetworKit Graph Generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GraphNotebook.html">NetworKit Graph Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GroupCentrality.html">Group Centrality Tutorial</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">NetworKit graph I/O tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LinkPrediction.html">Link Prediction with NetworKit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LinkPrediction.html#Link-prediction-algorithms">Link prediction algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LinkPrediction.html#Link-sampling-and-link-prediction">Link sampling and link prediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Plot.html">Plot Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Randomization.html">NetworKit Randomization Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Reachability.html">NetworKit Reachability Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Sparsification.html">NetworKit Sparsification Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Visualization.html">NetworKit Visualization Tutorial</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="NetworKit-graph-I/O-tutorial">
+<h1>NetworKit graph I/O tutorial<a class="headerlink" href="#NetworKit-graph-I/O-tutorial" title="Link to this heading">¶</a></h1>
+<p>This notebook will guide you through reading and writing graphs to files using NetworKit, i.e. the following will be covered,</p>
+<ul class="simple">
+<li><p>Reading and writing graphs graph from a file</p>
+<ul>
+<li><p>Using the different file formats supported by NetworKit</p></li>
+</ul>
+</li>
+<li><p>Converting a graph to a specific format</p></li>
+</ul>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">networkit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nk</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script type="text/javascript">
+<!--
+
+{
+        var element = document.getElementById('NetworKit_script');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('script');
+        element.type = 'text/javascript';
+        element.innerHTML = 'function NetworKit_pageEmbed(id) { var i, j; var elements; elements = document.getElementById(id).getElementsByClassName("Plot"); for (i=0; i<elements.length; i++) { elements[i].id = id + "_Plot_" + i; var data = elements[i].getAttribute("data-image").split("|"); elements[i].removeAttribute("data-image"); var content = "<div class=\\"Image\\" id=\\"" + elements[i].id + "_Image\\" />"; elements[i].innerHTML = content; elements[i].setAttribute("data-image-index", 0); elements[i].setAttribute("data-image-length", data.length); for (j=0; j<data.length; j++) { elements[i].setAttribute("data-image-" + j, data[j]); } NetworKit_plotUpdate(elements[i]); elements[i].onclick = function (e) { NetworKit_overlayShow((e.target) ? e.target : e.srcElement); } } elements = document.getElementById(id).getElementsByClassName("HeatCell"); for (i=0; i<elements.length; i++) { var data = parseFloat(elements[i].getAttribute("data-heat")); var color = "#00FF00"; if (data <= 1 && data > 0) { color = "hsla(0, 100%, 75%, " + (data) + ")"; } else if (data <= 0 && data >= -1) { color = "hsla(240, 100%, 75%, " + (-data) + ")"; } elements[i].style.backgroundColor = color; } elements = document.getElementById(id).getElementsByClassName("Details"); for (i=0; i<elements.length; i++) { elements[i].setAttribute("data-title", "-"); NetworKit_toggleDetails(elements[i]); elements[i].onclick = function (e) { NetworKit_toggleDetails((e.target) ? e.target : e.srcElement); } } elements = document.getElementById(id).getElementsByClassName("MathValue"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "nan") { elements[i].parentNode.innerHTML = "" } } elements = document.getElementById(id).getElementsByClassName("SubCategory"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "") { elements[i].parentNode.removeChild(elements[i]) } } elements = document.getElementById(id).getElementsByClassName("Category"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "") { elements[i].parentNode.removeChild(elements[i]) } } var isFirefox = false; try { isFirefox = typeof InstallTrigger !== "undefined"; } catch (e) {} if (!isFirefox) { alert("Currently the function\'s output is only fully supported by Firefox."); } } function NetworKit_plotUpdate(source) { var index = source.getAttribute("data-image-index"); var data = source.getAttribute("data-image-" + index); var image = document.getElementById(source.id + "_Image"); image.style.backgroundImage = "url(" + data + ")"; } function NetworKit_showElement(id, show) { var element = document.getElementById(id); element.style.display = (show) ? "block" : "none"; } function NetworKit_overlayShow(source) { NetworKit_overlayUpdate(source); NetworKit_showElement("NetworKit_Overlay", true); } function NetworKit_overlayUpdate(source) { document.getElementById("NetworKit_Overlay_Title").innerHTML = source.title; var index = source.getAttribute("data-image-index"); var data = source.getAttribute("data-image-" + index); var image = document.getElementById("NetworKit_Overlay_Image"); image.setAttribute("data-id", source.id); image.style.backgroundImage = "url(" + data + ")"; var link = document.getElementById("NetworKit_Overlay_Toolbar_Bottom_Save"); link.href = data; link.download = source.title + ".svg"; } function NetworKit_overlayImageShift(delta) { var image = document.getElementById("NetworKit_Overlay_Image"); var source = document.getElementById(image.getAttribute("data-id")); var index = parseInt(source.getAttribute("data-image-index")); var length = parseInt(source.getAttribute("data-image-length")); var index = (index+delta) % length; if (index < 0) { index = length + index; } source.setAttribute("data-image-index", index); NetworKit_overlayUpdate(source); } function NetworKit_toggleDetails(source) { var childs = source.children; var show = false; if (source.getAttribute("data-title") == "-") { source.setAttribute("data-title", "+"); show = false; } else { source.setAttribute("data-title", "-"); show = true; } for (i=0; i<childs.length; i++) { if (show) { childs[i].style.display = "block"; } else { childs[i].style.display = "none"; } } }';
+        element.setAttribute('id', 'NetworKit_script');
+        document.head.appendChild(element);
+}
+
+
+{
+        var element = document.getElementById('NetworKit_style');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('style');
+        element.type = 'text/css';
+        element.innerHTML = '.NetworKit_Page { font-family: Arial, Helvetica, sans-serif; font-size: 14px; } .NetworKit_Page .Value:before { font-family: Arial, Helvetica, sans-serif; font-size: 1.05em; content: attr(data-title) ":"; margin-left: -2.5em; padding-right: 0.5em; } .NetworKit_Page .Details .Value:before { display: block; } .NetworKit_Page .Value { font-family: monospace; white-space: pre; padding-left: 2.5em; white-space: -moz-pre-wrap !important; white-space: -pre-wrap; white-space: -o-pre-wrap; white-space: pre-wrap; word-wrap: break-word; tab-size: 4; -moz-tab-size: 4; } .NetworKit_Page .Category { clear: both; padding-left: 1em; margin-bottom: 1.5em; } .NetworKit_Page .Category:before { content: attr(data-title); font-size: 1.75em; display: block; margin-left: -0.8em; margin-bottom: 0.5em; } .NetworKit_Page .SubCategory { margin-bottom: 1.5em; padding-left: 1em; } .NetworKit_Page .SubCategory:before { font-size: 1.6em; display: block; margin-left: -0.8em; margin-bottom: 0.5em; } .NetworKit_Page .SubCategory[data-title]:before { content: attr(data-title); } .NetworKit_Page .Block { display: block; } .NetworKit_Page .Block:after { content: "."; visibility: hidden; display: block; height: 0; clear: both; } .NetworKit_Page .Block .Thumbnail_Overview, .NetworKit_Page .Block .Thumbnail_ScatterPlot { width: 260px; float: left; } .NetworKit_Page .Block .Thumbnail_Overview img, .NetworKit_Page .Block .Thumbnail_ScatterPlot img { width: 260px; } .NetworKit_Page .Block .Thumbnail_Overview:before, .NetworKit_Page .Block .Thumbnail_ScatterPlot:before { display: block; text-align: center; font-weight: bold; } .NetworKit_Page .Block .Thumbnail_Overview:before { content: attr(data-title); } .NetworKit_Page .HeatCell { font-family: "Courier New", Courier, monospace; cursor: pointer; } .NetworKit_Page .HeatCell, .NetworKit_Page .HeatCellName { display: inline; padding: 0.1em; margin-right: 2px; background-color: #FFFFFF } .NetworKit_Page .HeatCellName { margin-left: 0.25em; } .NetworKit_Page .HeatCell:before { content: attr(data-heat); display: inline-block; color: #000000; width: 4em; text-align: center; } .NetworKit_Page .Measure { clear: both; } .NetworKit_Page .Measure .Details { cursor: pointer; } .NetworKit_Page .Measure .Details:before { content: "[" attr(data-title) "]"; display: block; } .NetworKit_Page .Measure .Details .Value { border-left: 1px dotted black; margin-left: 0.4em; padding-left: 3.5em; pointer-events: none; } .NetworKit_Page .Measure .Details .Spacer:before { content: "."; opacity: 0.0; pointer-events: none; } .NetworKit_Page .Measure .Plot { width: 440px; height: 440px; cursor: pointer; float: left; margin-left: -0.9em; margin-right: 20px; } .NetworKit_Page .Measure .Plot .Image { background-repeat: no-repeat; background-position: center center; background-size: contain; height: 100%; pointer-events: none; } .NetworKit_Page .Measure .Stat { width: 500px; float: left; } .NetworKit_Page .Measure .Stat .Group { padding-left: 1.25em; margin-bottom: 0.75em; } .NetworKit_Page .Measure .Stat .Group .Title { font-size: 1.1em; display: block; margin-bottom: 0.3em; margin-left: -0.75em; border-right-style: dotted; border-right-width: 1px; border-bottom-style: dotted; border-bottom-width: 1px; background-color: #D0D0D0; padding-left: 0.2em; } .NetworKit_Page .Measure .Stat .Group .List { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; } .NetworKit_Page .Measure .Stat .Group .List .Entry { position: relative; line-height: 1.75em; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:before { position: absolute; left: 0; top: -40px; background-color: #808080; color: #ffffff; height: 30px; line-height: 30px; border-radius: 5px; padding: 0 15px; content: attr(data-tooltip); white-space: nowrap; display: none; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:after { position: absolute; left: 15px; top: -10px; border-top: 7px solid #808080; border-left: 7px solid transparent; border-right: 7px solid transparent; content: ""; display: none; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:hover:after, .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:hover:before { display: block; } .NetworKit_Page .Measure .Stat .Group .List .Entry .MathValue { font-family: "Courier New", Courier, monospace; } .NetworKit_Page .Measure:after { content: "."; visibility: hidden; display: block; height: 0; clear: both; } .NetworKit_Page .PartitionPie { clear: both; } .NetworKit_Page .PartitionPie img { width: 600px; } #NetworKit_Overlay { left: 0px; top: 0px; display: none; position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 1000; } #NetworKit_Overlay_Title { position: absolute; color: white; transform: rotate(-90deg); width: 32em; height: 32em; padding-right: 0.5em; padding-top: 0.5em; text-align: right; font-size: 40px; } #NetworKit_Overlay .button { background: white; cursor: pointer; } #NetworKit_Overlay .button:before { size: 13px; display: inline-block; text-align: center; margin-top: 0.5em; margin-bottom: 0.5em; width: 1.5em; height: 1.5em; } #NetworKit_Overlay .icon-close:before { content: "X"; } #NetworKit_Overlay .icon-previous:before { content: "P"; } #NetworKit_Overlay .icon-next:before { content: "N"; } #NetworKit_Overlay .icon-save:before { content: "S"; } #NetworKit_Overlay_Toolbar_Top, #NetworKit_Overlay_Toolbar_Bottom { position: absolute; width: 40px; right: 13px; text-align: right; z-index: 1100; } #NetworKit_Overlay_Toolbar_Top { top: 0.5em; } #NetworKit_Overlay_Toolbar_Bottom { Bottom: 0.5em; } #NetworKit_Overlay_ImageContainer { position: absolute; top: 5%; left: 5%; height: 90%; width: 90%; background-repeat: no-repeat; background-position: center center; background-size: contain; } #NetworKit_Overlay_Image { height: 100%; width: 100%; background-repeat: no-repeat; background-position: center center; background-size: contain; }';
+        element.setAttribute('id', 'NetworKit_style');
+        document.head.appendChild(element);
+}
+
+
+{
+        var element = document.getElementById('NetworKit_Overlay');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('div');
+        element.innerHTML = '<div id="NetworKit_Overlay_Toolbar_Top"><div class="button icon-close" id="NetworKit_Overlay_Close" /></div><div id="NetworKit_Overlay_Title" /> <div id="NetworKit_Overlay_ImageContainer"> <div id="NetworKit_Overlay_Image" /> </div> <div id="NetworKit_Overlay_Toolbar_Bottom"> <div class="button icon-previous" onclick="NetworKit_overlayImageShift(-1)" /> <div class="button icon-next" onclick="NetworKit_overlayImageShift(1)" /> <a id="NetworKit_Overlay_Toolbar_Bottom_Save"><div class="button icon-save" /></a> </div>';
+        element.setAttribute('id', 'NetworKit_Overlay');
+        document.body.appendChild(element);
+        document.getElementById('NetworKit_Overlay_Close').onclick = function (e) {
+                document.getElementById('NetworKit_Overlay').style.display = 'none';
+        }
+}
+
+-->
+</script></div>
+</div>
+<section id="Reading-a-graph-from-a-file">
+<h2>Reading a graph from a file<a class="headerlink" href="#Reading-a-graph-from-a-file" title="Link to this heading">¶</a></h2>
+<p>NetworKit supports several graph formats which can be found via <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graphio.html?highlight=format#networkit.graphio.Format">graphio.Format</a>. Although most graphs support both reading and writing, a few do not support both alike. If you will be reading large graphs often, it is recommended to convert your graph to the <code class="docutils literal notranslate"><span class="pre">NetworkitBinaryGraph</span></code> format as this is currently the fastest reader available in NetworKit. For information on how to convert
+graphs between formats in NetworKit, see the section on converting graphs</p>
+<section id="SNAP-file-format">
+<h3>SNAP file format<a class="headerlink" href="#SNAP-file-format" title="Link to this heading">¶</a></h3>
+<p>The (optional) first line of a file denotes the problem line p &lt;0 or 1-indexed&gt;.</p>
+<p>The problem line is followed by a list of exactly m edges. The format is <code class="docutils literal notranslate"><span class="pre">&lt;u</span> <span class="pre">v</span> <span class="pre">w&gt;</span></code> for a weighted graph, and <code class="docutils literal notranslate"><span class="pre">&lt;u</span> <span class="pre">v&gt;</span></code> for an unweighted graph.</p>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graphio.html?highlight=snap#networkit.graphio.SNAPGraphReader">SNAPGraphReader(directed = False, remapNodes = True, nodeCount = 0)</a> constructor expects 3 optional values, i.e., <code class="docutils literal notranslate"><span class="pre">directed</span></code> which is true if the graph is directed, <code class="docutils literal notranslate"><span class="pre">remapNodes</span></code> indicates whether nodes should be remapped to other node ids in order to create consecutive node ids and the number of nodes in the graph as <code class="docutils literal notranslate"><span class="pre">nodeCount</span></code> which is used to preallocate memory for the
+number of nodes.</p>
+<p>Reading a file in SNAP using the default constructor values can done like this:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/wiki-Vote.txt&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">SNAP</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>You can now access the graph object via <code class="docutils literal notranslate"><span class="pre">G</span></code>. Alternatively, you can explicitly use the <code class="docutils literal notranslate"><span class="pre">SNAPGraphReader</span></code> class as follows:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">SNAPGraphReader</span><span class="p">()</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;../input/wiki-Vote.txt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Passing other values to the <code class="docutils literal notranslate"><span class="pre">SNAPGraphReader</span></code> can be done by creating a <code class="docutils literal notranslate"><span class="pre">SNAPGraphReader</span></code> object and then calling the <code class="docutils literal notranslate"><span class="pre">read</span></code> method on it like is done below.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">snapReader</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">SNAPGraphReader</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">7115</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">snapReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;../input/wiki-Vote.txt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>If we want to write <code class="docutils literal notranslate"><span class="pre">G</span></code> to a file, we can use <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/networkit.html?highlight=writegraph#networkit.writeGraph">writeGraph()</a>, and pass <code class="docutils literal notranslate"><span class="pre">G</span></code>, the <code class="docutils literal notranslate"><span class="pre">path</span></code> to the file the graph should be written to and the format to the method.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/wikiSNAP&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">SNAP</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="EdgeList-file-format">
+<h3>EdgeList file format<a class="headerlink" href="#EdgeList-file-format" title="Link to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/networkit.html?highlight=edgelist#networkit.Format.EdgeList">EdgeList</a> file format is a simple format that stores each node’s adjacency array in a seperate line. The <code class="docutils literal notranslate"><span class="pre">EdgeList</span></code> file format has several variations, all differing in the character used to seperate nodes in an edge list or the ID of the first node. The constructor <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graphio.html?highlight=edgelist#networkit.graphio.EdgeListReader">EdgeListReader(separator, firstNode, commentPrefix = “#”, continuous = True, directed =
+False)</a> expects 5 parameters that dictate the exact format of the edge lists. NetworKit provides five standard <code class="docutils literal notranslate"><span class="pre">EdgeListReader</span></code>s:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">EdgeListSpaceZero</span></code> with <code class="docutils literal notranslate"><span class="pre">seperator</span></code> being a whitespace and <code class="docutils literal notranslate"><span class="pre">firstNode</span></code>’s ID is 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">EdgeListSpaceOne</span></code> with <code class="docutils literal notranslate"><span class="pre">seperator</span></code> being a whitespace and <code class="docutils literal notranslate"><span class="pre">firstNode</span></code>’s ID is 1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">EdgeListTabZero</span></code> with <code class="docutils literal notranslate"><span class="pre">seperator</span></code> being a tab and <code class="docutils literal notranslate"><span class="pre">firstNode</span></code>’s ID is 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">EdgeListTab0ne</span></code> with <code class="docutils literal notranslate"><span class="pre">seperator</span></code> being a tab and <code class="docutils literal notranslate"><span class="pre">firstNode</span></code>’s ID is 1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">EdgeListCommaOne</span></code> with <code class="docutils literal notranslate"><span class="pre">seperator</span></code>being a comma and <code class="docutils literal notranslate"><span class="pre">firstNode</span></code>’s ID is 1.</p></li>
+</ol>
+<p>Reading can be done in the same way as in the previous example. You can specify a different format for the <code class="docutils literal notranslate"><span class="pre">EdgeListReader</span></code> by calling its constructor, and passing the values to it. Assuming we want to use a ‘$’ as a seperator, the first node is 0, and comments are prefixed by a semi-colon, we can do the following:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specify seperator, firstNode and commentPrefix for the EdgeListReader</span>
+<span class="n">edgeListReader</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">EdgeListReader</span><span class="p">(</span><span class="s1">&#39;$&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Reading a file with one of the exisiting <code class="docutils literal notranslate"><span class="pre">EdgeListReader</span></code>s, e.g. <code class="docutils literal notranslate"><span class="pre">EdgeListTabOne</span></code> can be done by calling the <code class="docutils literal notranslate"><span class="pre">readGraph</span></code> method and specifying the format as <code class="docutils literal notranslate"><span class="pre">EdgeListTabOne</span></code></p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/example.edgelist&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">EdgeListTabOne</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>We can write <code class="docutils literal notranslate"><span class="pre">G</span></code> to a file by calling the <code class="docutils literal notranslate"><span class="pre">writeGraph()</span></code> method, and passing <code class="docutils literal notranslate"><span class="pre">G</span></code>, the <code class="docutils literal notranslate"><span class="pre">path</span></code> to the file the graph should be written to, and the format to <code class="docutils literal notranslate"><span class="pre">writeGraph()</span></code>.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="s1">&#39;./output/example.edgelist.TabOne&#39;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">EdgeListTabOne</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="METIS-file-format">
+<h3>METIS file format<a class="headerlink" href="#METIS-file-format" title="Link to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/networkit.html?highlight=metis#networkit.Format.METIS">METIS</a> format stores a graph of N nodes is stored in a file of N+1 lines. The first line lists the number of nodes and the number of edges seperated by a whitespace. If the first line contains more than two values, the extra values indicate the weights. Each line then contains a node’s adjacency list. Comment lines begin with a “%” sign. A file in <code class="docutils literal notranslate"><span class="pre">METIS</span></code> format can be read using the
+<code class="docutils literal notranslate"><span class="pre">readGraph</span></code> method or by explicitly using the <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graphio.html?highlight=metis#networkit.graphio.METISGraphReader">METISGraphReader</a> class:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/celegans_metabolic.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<span class="c1"># Alternative:</span>
+<span class="n">metisReader</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">METISGraphReader</span><span class="p">()</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">metisReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;../input/celegans_metabolic.graph&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Writing a file in <code class="docutils literal notranslate"><span class="pre">METIS</span></code> format is the same as for the other formats we have seen so far:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/celegans_metabolicMETIS&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="GraphML-format">
+<h3>GraphML format<a class="headerlink" href="#GraphML-format" title="Link to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graphio.html?highlight=gml#networkit.graphio.Format.GML">GML</a> format is an XML-based file format for graphs. For me details, please refer to the <a class="reference external" href="http://www.fim.uni-passau.de/fileadmin/files/lehrstuhl/brandenburg/projekte/gml/gml-technical-report.pdf">GML format specification.</a> Reading a file in <code class="docutils literal notranslate"><span class="pre">GML</span></code> is done in the same way as is reading other formats.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/jazz2_directed.gml&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GML</span><span class="p">)</span>
+<span class="c1"># Alternative:</span>
+<span class="n">gmlReader</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">GMLGraphReader</span><span class="p">()</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">gmlReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;../input/jazz2_directed.gml&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Writing a file in <code class="docutils literal notranslate"><span class="pre">GML</span></code> format is the same as for the other formats we have seen so far:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/jazz2_directedGML&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GML</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="GraphViz/-DOT-file-format">
+<h3>GraphViz/ DOT file format<a class="headerlink" href="#GraphViz/-DOT-file-format" title="Link to this heading">¶</a></h3>
+<p>NetworKit currently only supports writing of the <code class="docutils literal notranslate"><span class="pre">DOT</span></code> file format. More information on the <code class="docutils literal notranslate"><span class="pre">DOT</span></code> file format can be found <a class="reference external" href="https://www.graphviz.org/doc/info/lang.html">here</a>. We can read a graph in any format, and then write it in <code class="docutils literal notranslate"><span class="pre">DOT</span></code> as follows:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="c1"># Read graph in GML</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/jazz2_directed.gml&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GML</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
+<span class="c1"># Write G in GraphViz/DOT</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/jazz2_directedGraphViz&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GraphViz</span><span class="p">)</span>
+<span class="c1"># Write G in DOT</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/jazz2_directedDOT&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="LFR">
+<h3>LFR<a class="headerlink" href="#LFR" title="Link to this heading">¶</a></h3>
+<p>Graphs in <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graphio.html?highlight=lfr#networkit.graphio.Format.LFR">LFR</a> are identical to those in the <code class="docutils literal notranslate"><span class="pre">EdgeListTabOne</span></code> format. Therefore, in order to read a graph in <code class="docutils literal notranslate"><span class="pre">LFR</span></code>, the <code class="docutils literal notranslate"><span class="pre">EdgeListTabOne</span></code> reader is used. Refer to the section about the <code class="docutils literal notranslate"><span class="pre">EdgeListTabOne</span></code> reader here. Alternatively, you can also read the graph by specifying <code class="docutils literal notranslate"><span class="pre">LFR</span></code> as the format. In this case, NetworKit calls the <code class="docutils literal notranslate"><span class="pre">EdgeListTabOne</span></code>reader internally.
+The same goes for writing a graph to a file in the <code class="docutils literal notranslate"><span class="pre">LFR</span></code> file format.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/network_overlapping.dat&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">LFR</span><span class="p">)</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/network_overlapping.dat&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">LFR</span><span class="p">)</span>
+<br/></pre></div>
+</div>
+</div>
+</section>
+<section id="KONECT-file-format">
+<h3>KONECT file format<a class="headerlink" href="#KONECT-file-format" title="Link to this heading">¶</a></h3>
+<p>The reader <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graphio.html?highlight=konect#networkit.graphio.KONECTGraphReader">KONECTGraphReader(remapNodes = False, handlingmethod = DISCARD_EDGES)</a> expects two parameters; Node ids are remapped to consecutive ids if<code class="docutils literal notranslate"><span class="pre">remapNodes</span></code>is set to true. If your graph contains multiple edges between nodes, <code class="docutils literal notranslate"><span class="pre">handlingmethod</span></code> specifies how NetworKit should handle the multiple edges. <code class="docutils literal notranslate"><span class="pre">handlingmethod</span></code> can take any of the following three values:</p>
+<ul class="simple">
+<li><p>DISCARD_EDGES = 0, //Reads and selects the first edge which occurs and discards all following</p></li>
+<li><p>SUM_WEIGHTS_UP = 1, //If an edge occurs again, the weight of it is added to the existing edge</p></li>
+<li><p>KEEP_MINIUM_WEIGHT = 2 //The edge with the lowest weight is kept</p></li>
+</ul>
+<p>In order to read a graph with multiple edges in while summing the weights of the multiple edges, you can pass the parameters to the <code class="docutils literal notranslate"><span class="pre">KONECTGraphReader</span></code> as follows:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">konectReader</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">KONECTGraphReader</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">konectReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.konect&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>NetworKit currently only supports reading of the <code class="docutils literal notranslate"><span class="pre">KONECT</span></code> file format. If you want to write your graph to a file, you can write the graph in another format of your choice.</p>
+</section>
+<section id="GraphToolBinary-file-format">
+<h3>GraphToolBinary file format<a class="headerlink" href="#GraphToolBinary-file-format" title="Link to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graphio.html?highlight=graphtool#networkit.graphio.GraphToolBinaryReader">GraphToolBinaryReader</a> reads graphs written in the binary format described <a class="reference external" href="https://graph-tool.skewed.de/static/doc/gt_format.html">here</a>. The graph’s properties are stored in the file, and therefore, no constructor arguments are passed to the <code class="docutils literal notranslate"><span class="pre">reader</span></code>. Reading a graph from a file in <code class="docutils literal notranslate"><span class="pre">GraphToolBinaryReader</span></code>can be done like this:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/power.gt&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GraphToolBinary</span><span class="p">)</span>
+<span class="c1"># Alternative:</span>
+<span class="n">graphToolReader</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">GraphToolBinaryReader</span><span class="p">()</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">graphToolReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;../input/power.gt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>When writing the graph to the file, the writer <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graphio.html?highlight=graphtool#networkit.graphio.GraphToolBinaryWriter">GraphToolBinaryWriter(littleEndianness = True)</a> expects a Boolean value indicating the endianness of the machine. Set <code class="docutils literal notranslate"><span class="pre">littleEndianness</span></code> to true if you are running a little endian machine. The example below shows how you can pass the endianness to the <code class="docutils literal notranslate"><span class="pre">GraphToolBinaryWriter</span></code>.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/power.gt&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GraphToolBinary</span><span class="p">,</span> <span class="n">littleEndianness</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<br/></pre></div>
+</div>
+</div>
+</section>
+<section id="ThrillBinary-file-format">
+<h3>ThrillBinary file format<a class="headerlink" href="#ThrillBinary-file-format" title="Link to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graphio.html?highlight=thrill#networkit.graphio.ThrillGraphBinaryReader">ThrillBinaryReader(n)</a> reads a graph format consisting of a serialized DIA of vector from the <a class="reference external" href="http://project-thrill.org/">Thrill format</a>. The constructor optionally takes a 64-but unsigned integer <code class="docutils literal notranslate"><span class="pre">n</span></code> which is the number of nodes in the graph. Reading is more efficient if the <code class="docutils literal notranslate"><span class="pre">ThrillBinaryReader</span></code> knows the number of nodes.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/celegans_metabolic.thrill&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">ThrillBinary</span><span class="p">)</span>
+<span class="c1"># Alternative:</span>
+<span class="n">thrillBinaryReader</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">ThrillGraphBinaryReader</span><span class="p">()</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">thrillBinaryReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;../input/celegans_metabolic.thrill&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Using the <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graphio.html?highlight=thrill#networkit.graphio.ThrillGraphBinaryWriter">ThrillBinaryWriter</a>, writing is similar to the other writers:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/foodweb-baydry.thrill&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">ThrillBinary</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="NetworkitBinaryGraph-file-format">
+<h3>NetworkitBinaryGraph file format<a class="headerlink" href="#NetworkitBinaryGraph-file-format" title="Link to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graphio.html?highlight=binary#networkit.graphio.NetworkitBinaryReader">NetworkitBinaryGraph</a> is a custom binary NetworKit file format for reading and writing graphs. It is not only much faster than existing formats, it is also compressed. The graph properties are stored directly in the file.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.nkbg003&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">NetworkitBinary</span><span class="p">)</span>
+<span class="c1">#Alternative:</span>
+<span class="n">networkitBinaryReader</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">NetworkitBinaryReader</span><span class="p">()</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">networkitBinaryReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.nkbg003&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graphio.html?highlight=binary#networkit.graphio.NetworkitBinaryWriter">NetworkitBinaryWriter(chunks = 32, weightsType = NetworkitBinaryWeights::AUTO_DETECT)</a> constructor takes two optional parameters. The <code class="docutils literal notranslate"><span class="pre">NetworkitBinaryWriter</span></code> groups nodes in to <code class="docutils literal notranslate"><span class="pre">chunks</span></code> which reduces the space needed to save a graph. Futhermore, it takes the type of weights as an optional parameter. If none is passed, the <code class="docutils literal notranslate"><span class="pre">NetworkitBinaryWriter</span></code> detects the type of
+weights automatically. <code class="docutils literal notranslate"><span class="pre">weightsType</span></code> can be any of the following options: - none = 0, // The graph is not weighted - unsignedFormat = 1, //The weights are unsigned integers - signedFormat = 2, //The weights are signed integers - doubleFormat = 3, //The weights are doubles - floatFormat = 4, //The weights are floats - autoDetect You can pass the number of chunks and type of weights to the writer as follows(assuming signed weights):</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/foodweb-baydry.nkbg003&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">NetworkitBinary</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">NetworkitBinaryWeights</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="Convert-graphs-to-other-formats">
+<h3>Convert graphs to other formats<a class="headerlink" href="#Convert-graphs-to-other-formats" title="Link to this heading">¶</a></h3>
+<p>Not all graph formats support reading and writing alike, and therefore, one may want to convert a graph to a different format. For example, if you want to convert <code class="docutils literal notranslate"><span class="pre">'../input/wiki-Vote.txt'</span></code> in the SNAP format to GML and save it in the <code class="docutils literal notranslate"><span class="pre">./output</span></code> directory, you can either use the <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graphio.html?highlight=convert#networkit.graphio.convertGraph">convertGraph(fromFormat, toFormat, fromPath, toPath=None)</a> function from <code class="docutils literal notranslate"><span class="pre">graphio</span></code>:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">convertGraph</span><span class="p">(</span><span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">SNAP</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GML</span><span class="p">,</span> <span class="s2">&quot;../input/wiki-Vote.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;output/example.gml&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+converted ../input/wiki-Vote.txt to output/example.gml
+</pre></div></div>
+</div>
+<p>or you can pass the new format to the <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graphio.html?highlight=writegraph#networkit.graphio.writeGraph">writeGraph</a> method:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/example.gml&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GML</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+WARNING:root:overriding given file
+</pre></div></div>
+</div>
+</section>
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,888 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>networkit.linkprediction</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="networkit.matching" href="matching.html" />
+    <link rel="prev" title="networkit.independentset" href="independentset.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="networkit.html">networkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algebraic.html">networkit.algebraic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="base.html">networkit.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="centrality.html">networkit.centrality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clique.html">networkit.clique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coarsening.html">networkit.coarsening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coloring.html">networkit.coloring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="community.html">networkit.community</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">networkit.components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="correlation.html">networkit.correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="distance.html">networkit.distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamic.html">networkit.dynamic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamics.html">networkit.dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynbase.html">networkit.dynbase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="embedding.html">networkit.embedding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engineering.html">networkit.engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow.html">networkit.flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generators.html">networkit.generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gephi.html">networkit.gephi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="globals.html">networkit.globals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graph.html">networkit.graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphio.html">networkit.graphio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphtools.html">networkit.graphtools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="helpers.html">networkit.helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="independentset.html">networkit.independentset</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">networkit.linkprediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matching.html">networkit.matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nxadapter.html">networkit.nxadapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot.html">networkit.plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">networkit.profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="randomization.html">networkit.randomization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reachability.html">networkit.reachability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scd.html">networkit.scd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html">networkit.simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sparsification.html">networkit.sparsification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stats.html">networkit.stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structures.html">networkit.structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="traversal.html">networkit.traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viz.html">networkit.viz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vizbridges.html">networkit.vizbridges</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="module-networkit.linkprediction">
+<span id="networkit-linkprediction"></span><h1>networkit.linkprediction<a class="headerlink" href="#module-networkit.linkprediction" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.AdamicAdarIndex">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">AdamicAdarIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.AdamicAdarIndex" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.linkprediction.LinkPredictor" title="networkit.linkprediction.LinkPredictor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinkPredictor</span></code></a></p>
+<p>Implementation of the Adamic/Adar Index.</p>
+<p>The index sums up the reciprocals of the logarithm of the degree of all
+common neighbors of u and v.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.AdjustedRandIndex">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">AdjustedRandIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.AdjustedRandIndex" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.linkprediction.LinkPredictor" title="networkit.linkprediction.LinkPredictor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinkPredictor</span></code></a></p>
+<p>AdjustedRandIndex proposed by Hoffman et al. with natural threshold of 0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.AlgebraicDistanceIndex">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">AlgebraicDistanceIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberSystems</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberIterations</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.AlgebraicDistanceIndex" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.linkprediction.LinkPredictor" title="networkit.linkprediction.LinkPredictor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinkPredictor</span></code></a></p>
+<p>Algebraic distance assigns a distance value to pairs of nodes according to their structural closeness in the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to work on. Can be set to None and default is None.</p></li>
+<li><p><strong>numberSystems</strong> (<em>int</em>) – Number of vectors/systems used for algebraic iteration.</p></li>
+<li><p><strong>numberIterations</strong> (<em>int</em>) – Number of iterations in each system.</p></li>
+<li><p><strong>omega</strong> (<em>float</em><em>, </em><em>optional</em>) – Overrelaxation parameter. Default: 0.5</p></li>
+<li><p><strong>norm</strong> (<em>int</em><em>, </em><em>optional</em>) – The norm factor of the extended algebraic distance. Maximum norm is realized by setting the norm to 0. Default: 2</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.linkprediction.AlgebraicDistanceIndex.preprocess">
+<span class="sig-name descname"><span class="pre">preprocess</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.AlgebraicDistanceIndex.preprocess" title="Link to this definition">¶</a></dt>
+<dd><p>Executes necessary initializations.</p>
+<p>Starting with random initialization, compute for all numberSystems
+“diffusion” systems the situation after numberIterations iterations
+of overrelaxation with overrelaxation parameter omega.</p>
+<p class="rubric">Notes</p>
+<p>Needs to be called before algdist delivers meaningful results!</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.CommonNeighborsIndex">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">CommonNeighborsIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.CommonNeighborsIndex" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.linkprediction.LinkPredictor" title="networkit.linkprediction.LinkPredictor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinkPredictor</span></code></a></p>
+<p>The CommonNeighborsIndex calculates the number of common neighbors of a node-pair in a given graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.EvaluationMetric">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">EvaluationMetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">testGraph</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.EvaluationMetric" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Abstract base class for evaluation curves.</p>
+<p>The evualation curves are generated based on the predictions calculated
+by the link predictor and a testGraph to compare against.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>testGraph</strong> (<em>networkit.Graph</em>) – Graph containing the links to use for evaluation. Can be set to None and default is None.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.linkprediction.EvaluationMetric.getAreaUnderCurve">
+<span class="sig-name descname"><span class="pre">getAreaUnderCurve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curve</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">([],</span> <span class="pre">[])</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.EvaluationMetric.getAreaUnderCurve" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the area under the most recently calculated or optionally the given curve by using the trapezoidal rule.</p>
+<p>Note that if there is no curve specified or the lists of the given curves are empty than
+the area under the most recently calculated curve will be returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>curve</strong> (<em>tuple</em><em>(</em><em>list</em><em>(</em><em>float</em><em>)</em><em>, </em><em>list</em><em>(</em><em>float</em><em>)</em><em>)</em><em>, </em><em>optional</em>) – Curve whose AUC to determine. Default: Empty lists.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The area under the given curve.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.linkprediction.EvaluationMetric.getCurve">
+<span class="sig-name descname"><span class="pre">getCurve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numThresholds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.EvaluationMetric.getCurve" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a pair of X- and Y-lists describing the evaluation curve generated from the given predictions.</p>
+<p>The latest y-value will be used as a tie-breaker in case there are multiple y-values for one x-value.
+Note that the given number of thresholds is an upper bound for the number of points returned.
+This is due to the fact that multiple y-values can map to one x-value in which case the tie-breaking
+behaviour described above will intervene.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>predictions</strong> (<em>list</em><em>(</em><em>tuple</em><em>(</em><em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em><em>, </em><em>float</em><em>)</em><em>)</em>) – Predictions to evaluate.</p></li>
+<li><p><strong>numThresholds</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of thresholds to use the metric on. Default: 1000</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A pair of lists where the first list contains all x-values and the second one contains the corresponding y-value.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple(list(float), list(float))</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.linkprediction.EvaluationMetric.setTestGraph">
+<span class="sig-name descname"><span class="pre">setTestGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newTestGraph</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.EvaluationMetric.setTestGraph" title="Link to this definition">¶</a></dt>
+<dd><p>Sets a new graph to use as ground truth for evaluation.</p>
+<p>Note that this won’t reset the most recently calculated curve and as a consequence
+getAreaUnderCurve() will still behave as expected by returning the AUC of the most recent curve.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>newTestGraph</strong> (<em>networkit.Graph</em>) – New graph to use as ground truth.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.JaccardIndex">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">JaccardIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.JaccardIndex" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.linkprediction.LinkPredictor" title="networkit.linkprediction.LinkPredictor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinkPredictor</span></code></a></p>
+<p>Implementation of the Jaccard index which normalizes the Common Neighbors Index.</p>
+<p>This is done through dividing the number of common neighbors by the number of nodes
+in the neighboorhood-union.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.KatzIndex">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">KatzIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxPathLength</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dampingValue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.005</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.KatzIndex" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.linkprediction.LinkPredictor" title="networkit.linkprediction.LinkPredictor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinkPredictor</span></code></a></p>
+<p>Implementation of the Katz index.</p>
+<p>Katz index assigns a pair of nodes a similarity score
+that is based on the sum of the weighted number of paths of length l
+where l is smaller than a given limit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to operate on. Default: None</p></li>
+<li><p><strong>maxPathLength</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximal length of the paths to consider. Default: 5</p></li>
+<li><p><strong>dampingValue</strong> (<em>float</em><em>, </em><em>optional</em>) – Used to exponentially damp every addend of the sum. Should be in (0, 1]. Default: 0.005</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.LinkPredictor">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">LinkPredictor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.LinkPredictor" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Abstract base class for link predictors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.linkprediction.LinkPredictor.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.LinkPredictor.run" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a score indicating the likelihood of a future link between the given nodes.</p>
+<p>Prior to calling this method a graph should be provided through the constructor or
+by calling setGraph. Note that only undirected graphs are accepted.
+There is also no lower or upper bound for scores and the actual range of values depends
+on the specific link predictor implementation. In case u == v a 0 is returned.
+If suitable this method might make use of parallelization to enhance performance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>int</em>) – First node in graph.</p></li>
+<li><p><strong>v</strong> (<em>int</em>) – Second node in graph.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A prediction-score indicating the likelihood of a future link between the given nodes.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.linkprediction.LinkPredictor.runAll">
+<span class="sig-name descname"><span class="pre">runAll</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.LinkPredictor.runAll" title="Link to this definition">¶</a></dt>
+<dd><p>Runs the link predictor on all currently unconnected node-pairs.</p>
+<p>Possible self-loops are also excluded. The method makes use of parallelisation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of pairs containing all currently unconnected node-pairs as the first elements
+and the corresponding scores as the second elements. The list is sorted ascendingly by node-pair.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(tuple(int, int))</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.linkprediction.LinkPredictor.runOn">
+<span class="sig-name descname"><span class="pre">runOn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodePairs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.LinkPredictor.runOn" title="Link to this definition">¶</a></dt>
+<dd><p>Executes the run-method on al given node-pairs and returns a list of predictions.</p>
+<p>The result is a list of pairs where the first element is the node-pair and it’s second
+element the corresponding score generated by the run-method. The method makes use of
+parallelisation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>nodePairs</strong> (<em>list</em><em>(</em><em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em><em>)</em>) – Node-pairs to run the predictor on.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of pairs containing the given node-pair as the first element and it’s corresponding score
+as the second element. The list is sorted ascendingly by node-pair.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(tuple(int, float))</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.linkprediction.LinkPredictor.setGraph">
+<span class="sig-name descname"><span class="pre">setGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newGraph</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.LinkPredictor.setGraph" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the graph to work on.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>newGraph</strong> (<em>networkit.Graph</em>) – The graph to work on.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.LinkThresholder">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">LinkThresholder</span></span><a class="headerlink" href="#networkit.linkprediction.LinkThresholder" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Filters given predictions based on some criterion and returns a list of node-pairs that fulfill the given criterion.</p>
+<p>This can be used to determine which node-pairs should actually be interpreted
+as future links and which shouldn’t.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.linkprediction.LinkThresholder.byCount">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">byCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numLinks</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.LinkThresholder.byCount" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the first numLinks highest scored node-pairs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>predictions</strong> (<em>list</em><em>(</em><em>tuple</em><em>(</em><em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em><em>, </em><em>float</em><em>)</em><em>)</em>) – Predictions to filter.</p></li>
+<li><p><strong>numLinks</strong> (<em>int</em>) – Number of top-scored node-pairs to return.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The first numLinks highest scored node-pairs.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(tuple(int, int))</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.linkprediction.LinkThresholder.byPercentage">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">byPercentage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">percentageLinks</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.LinkThresholder.byPercentage" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the first percentageLinks percent of the highest scores node-pairs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>predictions</strong> (<em>list</em><em>(</em><em>tuple</em><em>(</em><em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em><em>, </em><em>float</em><em>)</em><em>)</em>) – Predictions to filter.</p></li>
+<li><p><strong>percentageLinks</strong> (<em>float</em>) – Percentage of highest scored node-pairs to return.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The first percentageLinks percent of the highest scores node-pairs.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(tuple(int, int))</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.linkprediction.LinkThresholder.byScore">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">byScore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minScore</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.LinkThresholder.byScore" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the node-pairs whose scores are at least equal to the given minScore.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>predictions</strong> (<em>list</em><em>(</em><em>tuple</em><em>(</em><em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em><em>, </em><em>float</em><em>)</em><em>)</em>) – Predictions to filter.</p></li>
+<li><p><strong>minScore</strong> (<em>float</em>) – Minimal score that the returned node-pairs should have.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of node-pairs whose scores are at least equal to the given minScore.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(tuple(int, int))</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.MissingLinksFinder">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">MissingLinksFinder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.MissingLinksFinder" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Allows the user to find missing links in the given graph.</p>
+<p>The absent links to find are narrowed down by providing a distance
+that the nodes of the missing links should have.
+For example in case of distance 2 only node-pairs that would close
+a triangle in the given graph get returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to find missing links in.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.linkprediction.MissingLinksFinder.findAtDistance">
+<span class="sig-name descname"><span class="pre">findAtDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.MissingLinksFinder.findAtDistance" title="Link to this definition">¶</a></dt>
+<dd><p>Returns all missing links in the graph that have distance k.</p>
+<p>Note that a distance of k actually means that there are k different links
+on the path of the two nodes that are connected through that path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>k</strong> (<em>int</em>) – Distance of the absent links.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>An ascendingly sorted list of node-pairs where there is a missing link of distance k between the two nodes.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(tuple(int, int))</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.linkprediction.MissingLinksFinder.findFromNode">
+<span class="sig-name descname"><span class="pre">findFromNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.MissingLinksFinder.findFromNode" title="Link to this definition">¶</a></dt>
+<dd><p>Returns all missing links in the graph that have distance k and are connected to u.</p>
+<p>Note that a distance of k actually means that there are k different links
+on the path of the two nodes that are connected through that path.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>int</em>) – Node to find missing links from.</p></li>
+<li><p><strong>k</strong> (<em>int</em>) – Distance of the absent links.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list of node-pairs where there is a missing link of distance k
+between the given node u and another node in the graph.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(tuple(int, int))</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.NeighborhoodDistanceIndex">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">NeighborhoodDistanceIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.NeighborhoodDistanceIndex" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.linkprediction.LinkPredictor" title="networkit.linkprediction.LinkPredictor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinkPredictor</span></code></a></p>
+<p>Assigns a distance value to pairs of nodes according to the overlap of their neighborhoods.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.NeighborhoodUtility">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">NeighborhoodUtility</span></span><a class="headerlink" href="#networkit.linkprediction.NeighborhoodUtility" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Provides basic operations on neighborhoods in a given graph.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.linkprediction.NeighborhoodUtility.getCommonNeighbors">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">getCommonNeighbors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.NeighborhoodUtility.getCommonNeighbors" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a list containing the node-ids of all common neighbors of u and v.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – Graph to obtain common neighbors from.</p></li>
+<li><p><strong>u</strong> (<em>int</em>) – First node.</p></li>
+<li><p><strong>v</strong> (<em>int</em>) – Second node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list containing the node-ids of all common neighbors of u and v.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.linkprediction.NeighborhoodUtility.getNeighborsUnion">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">getNeighborsUnion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.NeighborhoodUtility.getNeighborsUnion" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the union of the neighboorhoods of u and v.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – Graph to obtain neighbors-union from.</p></li>
+<li><p><strong>u</strong> (<em>int</em>) – The first node.</p></li>
+<li><p><strong>v</strong> (<em>int</em>) – The second node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list containing all the nodes in the neighboorhood-union of u and v.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.NeighborsMeasureIndex">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">NeighborsMeasureIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.NeighborsMeasureIndex" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.linkprediction.LinkPredictor" title="networkit.linkprediction.LinkPredictor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinkPredictor</span></code></a></p>
+<p>Implementation of the Neighbors Measure Index.</p>
+<p>This index is also known as Friends Measure and simply returns
+the number of connections between neighbors of the given nodes u and v.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.PrecisionRecallMetric">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">PrecisionRecallMetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">testGraph</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.PrecisionRecallMetric" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.linkprediction.EvaluationMetric" title="networkit.linkprediction.EvaluationMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvaluationMetric</span></code></a></p>
+<p>Provides points that define the Precision-Recall curve for a given set of predictions.</p>
+<p>Based on the generated points the area under the curve can be calculated with the trapzoidal rule.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.PredictionsSorter">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">PredictionsSorter</span></span><a class="headerlink" href="#networkit.linkprediction.PredictionsSorter" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Allows the sorting of predictions by score or node-pair.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.linkprediction.PredictionsSorter.sortByNodePair">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">sortByNodePair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.PredictionsSorter.sortByNodePair" title="Link to this definition">¶</a></dt>
+<dd><p>Sorts the predictions ascendingly by node-pair.</p>
+<p>This means for example (0, 0) &lt; (0, 1) and (1, 1) &lt; (1, 0).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>predictions</strong> (<em>list</em><em>(</em><em>tuple</em><em>(</em><em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em><em>, </em><em>float</em><em>)</em><em>)</em>) – The predictions to sort.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.linkprediction.PredictionsSorter.sortByScore">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">sortByScore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predictions</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.PredictionsSorter.sortByScore" title="Link to this definition">¶</a></dt>
+<dd><p>Sorts the given predictions descendingly by score.</p>
+<p>In case there is a tie the node-pairs are used as a tie-breaker by sorting them
+ascendingly on the first node and on a tie ascendingly by the second node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>predictions</strong> (<em>list</em><em>(</em><em>tuple</em><em>(</em><em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em><em>, </em><em>float</em><em>)</em><em>)</em>) – The predictions to sort.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.PreferentialAttachmentIndex">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">PreferentialAttachmentIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.PreferentialAttachmentIndex" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.linkprediction.LinkPredictor" title="networkit.linkprediction.LinkPredictor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinkPredictor</span></code></a></p>
+<p>Implementation of the Preferential Attachment Index.</p>
+<p>The run-method simply calculates the product of the number of nodes in the neighborhoods
+regarding the given nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.ROCMetric">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">ROCMetric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">testGraph</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.ROCMetric" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.linkprediction.EvaluationMetric" title="networkit.linkprediction.EvaluationMetric"><code class="xref py py-class docutils literal notranslate"><span class="pre">EvaluationMetric</span></code></a></p>
+<p>Provides points that define the Receiver Operating Characteristic curve for a given set of predictions.</p>
+<p>Based on the generated points the area under the curve can be calculated with the trapzoidal rule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>testGraph</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – Graph containing the links to use for evaluation. Default: None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.RandomLinkSampler">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">RandomLinkSampler</span></span><a class="headerlink" href="#networkit.linkprediction.RandomLinkSampler" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Provides methods to randomly sample a number of edges from a given graph.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.linkprediction.RandomLinkSampler.byCount">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">byCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numLinks</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.RandomLinkSampler.byCount" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a graph that contains numLinks links from the given graph G.</p>
+<p>The links are randomly selected from G until the given count is reached.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to construct the training graph from.</p></li>
+<li><p><strong>numLinks</strong> (<em>int</em>) – Number of links the returned graph should consist of.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A graph that contains the given number of links from G.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.linkprediction.RandomLinkSampler.byPercentage">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">byPercentage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">percentage</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.RandomLinkSampler.byPercentage" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a graph that contains percentage percent of links form the given graph G.</p>
+<p>The links are randomly selected from G until the given percentage is reached.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to construct the training graph from.</p></li>
+<li><p><strong>percentage</strong> (<em>float</em>) – Percentage of links regarding the number of links in the given graph that should
+be in the returned graph.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A graph that contains the given percentage of links from G.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.ResourceAllocationIndex">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">ResourceAllocationIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.ResourceAllocationIndex" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.linkprediction.LinkPredictor" title="networkit.linkprediction.LinkPredictor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinkPredictor</span></code></a></p>
+<p>Implementation of the ResourceAllocationIndex.</p>
+<p>The index is similar to Adamic/Adar and sums up the reciprocals of
+the degree of all common neighbors of u and v.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.SameCommunityIndex">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">SameCommunityIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.SameCommunityIndex" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.linkprediction.LinkPredictor" title="networkit.linkprediction.LinkPredictor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinkPredictor</span></code></a></p>
+<p>Index to determine whether two nodes are in the same community.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.TotalNeighborsIndex">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">TotalNeighborsIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.TotalNeighborsIndex" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.linkprediction.LinkPredictor" title="networkit.linkprediction.LinkPredictor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinkPredictor</span></code></a></p>
+<p>Implementation of the Total Neighbors Index.</p>
+<p>This index is also known as Total Friends Index and returns
+the number of nodes in the neighborhood-union of u and v.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.UDegreeIndex">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">UDegreeIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.UDegreeIndex" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.linkprediction.LinkPredictor" title="networkit.linkprediction.LinkPredictor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinkPredictor</span></code></a></p>
+<p>Index that simply returns the degree of the first given node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.linkprediction.VDegreeIndex">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">VDegreeIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.VDegreeIndex" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.linkprediction.LinkPredictor" title="networkit.linkprediction.LinkPredictor"><code class="xref py py-class docutils literal notranslate"><span class="pre">LinkPredictor</span></code></a></p>
+<p>Index that simply returns the degree of the second given node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.linkprediction.getFeatures">
+<span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">getFeatures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodePairs</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">linkPredictors</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.getFeatures" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a numpy-array containing the generated scores from the predictors for the given node-pairs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodePairs</strong> (<em>list</em><em>(</em><em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em><em>)</em>) – Node-pairs to get the samples for.</p></li>
+<li><p><strong>*linkPredictors</strong> (<em>tuple</em><em>(</em><em>)</em>) – List of link predictors to use for sample-generation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A numpy-array of shape (#nodePairs, #linkPredictors) containing the generated scores from the predictors for the given node-pairs.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.linkprediction.getLabels">
+<span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">getLabels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodePairs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.getLabels" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a numpy-array containing the labels of the given node-pairs.</p>
+<p>The labels are defined as follows: 1 = link, 0 = absent link.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodePairs</strong> (<em>list</em><em>(</em><em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em><em>)</em>) – Node-pairs to get the labels for.</p></li>
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – Graph which provides ground truth for the labels.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A numpy-array containing the labels of the given node-pairs.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.linkprediction.trainClassifier">
+<span class="sig-prename descclassname"><span class="pre">networkit.linkprediction.</span></span><span class="sig-name descname"><span class="pre">trainClassifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trainingSet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trainingGraph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">classifier</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">linkPredictors</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.linkprediction.trainClassifier" title="Link to this definition">¶</a></dt>
+<dd><p>Trains the given classifier with the feature-vectors generated by the given linkPredictors.</p>
+<p class="rubric">Notes</p>
+<p>Needs Scikit-learn Python package to work. For details concerning installation see here: <a class="reference external" href="https://scikit-learn.org/stable/install.html">https://scikit-learn.org/stable/install.html</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>trainingSet</strong> (<em>list</em><em>(</em><em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em><em>)</em>) – Vector of node-pairs to generate features for.</p></li>
+<li><p><strong>trainingGraph</strong> (<em>networkit.Graph</em>) – Training graph containing all edges from the training set.</p></li>
+<li><p><strong>classifier</strong> (<em>sklearn classifier</em>) – Scikit-learn classifier to train. See here: <a class="reference external" href="https://scikit-learn.org/stable/auto_examples/classification/plot_classifier_comparison.html">https://scikit-learn.org/stable/auto_examples/classification/plot_classifier_comparison.html</a></p></li>
+<li><p><strong>*linkPredictors</strong> (<em>tuple</em><em>(</em><em>)</em>) – Predictors used for the generation of feature-vectors.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>
