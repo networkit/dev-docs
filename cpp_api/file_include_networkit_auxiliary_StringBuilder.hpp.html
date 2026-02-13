@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>File StringBuilder.hpp</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="file-stringbuilder-hpp">
+<span id="file-include-networkit-auxiliary-stringbuilder-hpp"></span><h1>File StringBuilder.hpp<a class="headerlink" href="#file-stringbuilder-hpp" title="Link to this heading">¶</a></h1>
+<p>↰ <a class="reference internal" href="dir_include_networkit_auxiliary.html#dir-include-networkit-auxiliary"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">include/networkit/auxiliary</span></code>)</p>
+<nav class="contents local" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-include-networkit-auxiliary-stringbuilder-hpp" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">include/networkit/auxiliary/StringBuilder.hpp</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id2">Includes</a></p></li>
+<li><p><a class="reference internal" href="#included-by" id="id3">Included By</a></p></li>
+<li><p><a class="reference internal" href="#namespaces" id="id4">Namespaces</a></p></li>
+<li><p><a class="reference internal" href="#classes" id="id5">Classes</a></p></li>
+<li><p><a class="reference internal" href="#enums" id="id6">Enums</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id7">Functions</a></p></li>
+<li><p><a class="reference internal" href="#typedefs" id="id8">Typedefs</a></p></li>
+</ul>
+</nav>
+<section id="definition-include-networkit-auxiliary-stringbuilder-hpp">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">include/networkit/auxiliary/StringBuilder.hpp</span></code>)<a class="headerlink" href="#definition-include-networkit-auxiliary-stringbuilder-hpp" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file_include_networkit_auxiliary_StringBuilder.hpp.html">Program Listing for File StringBuilder.hpp</a></li>
+</ul>
+</div>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<a class="reference internal" href="file_include_networkit_algebraic_algorithms_AlgebraicBellmanFord.hpp.html#file-include-networkit-algebraic-algorithms-algebraicbellmanford-hpp"><span class="std std-ref">File AlgebraicBellmanFord.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cassert</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">iterator</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkit/auxiliary/TemplateUtils.hpp</span></code> (<a class="reference internal" href="file_include_networkit_auxiliary_TemplateUtils.hpp.html#file-include-networkit-auxiliary-templateutils-hpp"><span class="std std-ref">File TemplateUtils.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sstream</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stdexcept</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">string_view</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tuple</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type_traits</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">utility</span></code></p></li>
+</ul>
+</section>
+<section id="included-by">
+<h2>Included By<a class="headerlink" href="#included-by" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="file_include_networkit_auxiliary_Log.hpp.html#file-include-networkit-auxiliary-log-hpp"><span class="std std-ref">File Log.hpp</span></a></p></li>
+</ul>
+</section>
+<section id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="namespace_Aux.html#namespace-aux"><span class="std std-ref">Namespace Aux</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_Aux__Impl.html#namespace-aux-impl"><span class="std std-ref">Namespace Aux::Impl</span></a></p></li>
+</ul>
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="structAux_1_1Impl_1_1IsIteratableHelper.html#exhale-struct-structaux-1-1impl-1-1isiteratablehelper"><span class="std std-ref">Struct IsIteratableHelper</span></a></p></li>
+<li><p><a class="reference internal" href="structAux_1_1Impl_1_1IsPairHelper.html#exhale-struct-structaux-1-1impl-1-1ispairhelper"><span class="std std-ref">Template Struct IsPairHelper</span></a></p></li>
+<li><p><a class="reference internal" href="structAux_1_1Impl_1_1IsPairHelper_3_01std_1_1pair_3_01T1_00_01T2_01_4_01_4.html#exhale-struct-structaux-1-1impl-1-1ispairhelper-3-01std-1-1pair-3-01t1-00-01t2-01-4-01-4"><span class="std std-ref">Template Struct IsPairHelper&lt; std::pair&lt; T1, T2 &gt; &gt;</span></a></p></li>
+<li><p><a class="reference internal" href="structAux_1_1Impl_1_1IsStreamableHelper.html#exhale-struct-structaux-1-1impl-1-1isstreamablehelper"><span class="std std-ref">Struct IsStreamableHelper</span></a></p></li>
+<li><p><a class="reference internal" href="structAux_1_1Impl_1_1IsTupleHelper.html#exhale-struct-structaux-1-1impl-1-1istuplehelper"><span class="std std-ref">Template Struct IsTupleHelper</span></a></p></li>
+<li><p><a class="reference internal" href="structAux_1_1Impl_1_1IsTupleHelper_3_01std_1_1tuple_3_01T_8_8_8_01_4_01_4.html#exhale-struct-structaux-1-1impl-1-1istuplehelper-3-01std-1-1tuple-3-01t-8-8-8-01-4-01-4"><span class="std std-ref">Template Struct IsTupleHelper&lt; std::tuple&lt; T… &gt; &gt;</span></a></p></li>
+<li><p><a class="reference internal" href="structAux_1_1Impl_1_1PrintableCategoryTag.html#exhale-struct-structaux-1-1impl-1-1printablecategorytag"><span class="std std-ref">Template Struct PrintableCategoryTag</span></a></p></li>
+<li><p><a class="reference internal" href="structAux_1_1Impl_1_1printTupleHelper.html#exhale-struct-structaux-1-1impl-1-1printtuplehelper"><span class="std std-ref">Template Struct printTupleHelper</span></a></p></li>
+<li><p><a class="reference internal" href="structAux_1_1Impl_1_1printTupleHelper_3_01Tuple_00_01I_00_01I_01_4.html#exhale-struct-structaux-1-1impl-1-1printtuplehelper-3-01tuple-00-01i-00-01i-01-4"><span class="std std-ref">Template Struct printTupleHelper&lt; Tuple, I, I &gt;</span></a></p></li>
+</ul>
+</section>
+<section id="enums">
+<h2>Enums<a class="headerlink" href="#enums" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="enum_StringBuilder_8hpp_1a433440c78efa40bc9ac7a2366e065f23.html#exhale-enum-stringbuilder-8hpp-1a433440c78efa40bc9ac7a2366e065f23"><span class="std std-ref">Enum PrintableCategory</span></a></p></li>
+</ul>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1a1e32ce7cc9297e73b2c82ae6f067e236.html#exhale-function-stringbuilder-8hpp-1a1e32ce7cc9297e73b2c82ae6f067e236"><span class="std std-ref">Template Function Aux::Impl::getPrintableCategory</span></a></p></li>
+<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1a2b575e7cd7e856b81f063cad3aa7d478.html#exhale-function-stringbuilder-8hpp-1a2b575e7cd7e856b81f063cad3aa7d478"><span class="std std-ref">Template Function Aux::Impl::isIteratable</span></a></p></li>
+<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1aed977bb072818cfe7d9cc165149f1971.html#exhale-function-stringbuilder-8hpp-1aed977bb072818cfe7d9cc165149f1971"><span class="std std-ref">Template Function Aux::Impl::isPair</span></a></p></li>
+<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1afe1f74d1b10135f25f4036c55d1812d1.html#exhale-function-stringbuilder-8hpp-1afe1f74d1b10135f25f4036c55d1812d1"><span class="std std-ref">Template Function Aux::Impl::isStreamable</span></a></p></li>
+<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1acf82c2aa6c370b5031318cb346d9e660.html#exhale-function-stringbuilder-8hpp-1acf82c2aa6c370b5031318cb346d9e660"><span class="std std-ref">Template Function Aux::Impl::isTuple</span></a></p></li>
+<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1a21e22b69a1e6bf375781bb471f84b068.html#exhale-function-stringbuilder-8hpp-1a21e22b69a1e6bf375781bb471f84b068"><span class="std std-ref">Function Aux::Impl::printFormatPartToStream</span></a></p></li>
+<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1ab1bebd47702d113baa87995daf12b5ba.html#exhale-function-stringbuilder-8hpp-1ab1bebd47702d113baa87995daf12b5ba"><span class="std std-ref">Template Function Aux::Impl::printToStream(std::ostream&amp;, const T&amp;, const Args&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1ae3a6518c821d136083e738a6b62b69dd.html#exhale-function-stringbuilder-8hpp-1ae3a6518c821d136083e738a6b62b69dd"><span class="std std-ref">Function Aux::Impl::printToStream(std::ostream&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1a708a6e11326c49c617c52e53d97a0be8.html#exhale-function-stringbuilder-8hpp-1a708a6e11326c49c617c52e53d97a0be8"><span class="std std-ref">Template Function Aux::Impl::printToStream(std::ostream&amp;, const T&amp;, const Args&amp;…)</span></a></p></li>
+<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1a67d2bdaf262a2bd988b70e69efc90460.html#exhale-function-stringbuilder-8hpp-1a67d2bdaf262a2bd988b70e69efc90460"><span class="std std-ref">Function Aux::Impl::printToStreamF(std::ostream&amp;, std::string_view::const_iterator, std::string_view::const_iterator)</span></a></p></li>
+<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1ac2f5947a3b5dab4966a532d6d3c1c2e9.html#exhale-function-stringbuilder-8hpp-1ac2f5947a3b5dab4966a532d6d3c1c2e9"><span class="std std-ref">Template Function Aux::Impl::printToStreamF(std::ostream&amp;, std::string_view::const_iterator, std::string_view::const_iterator, const T&amp;, const Args&amp;…)</span></a></p></li>
+<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1a10e29f813c14fc9435fc47ce205af1f4.html#exhale-function-stringbuilder-8hpp-1a10e29f813c14fc9435fc47ce205af1f4"><span class="std std-ref">Template Function Aux::Impl::printToStreamTagged</span></a></p></li>
+<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1ae486a36636ad82da03af290aec840f95.html#exhale-function-stringbuilder-8hpp-1ae486a36636ad82da03af290aec840f95"><span class="std std-ref">Template Function Aux::printToStream</span></a></p></li>
+<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1a678a74fd19cc94c36bc652db05a58262.html#exhale-function-stringbuilder-8hpp-1a678a74fd19cc94c36bc652db05a58262"><span class="std std-ref">Template Function Aux::printToStreamF</span></a></p></li>
+<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1ac45604485a827e434c15fa72202e0d8d.html#exhale-function-stringbuilder-8hpp-1ac45604485a827e434c15fa72202e0d8d"><span class="std std-ref">Template Function Aux::toString</span></a></p></li>
+<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1a679fbaa3fe364760135c2cb24cc25a74.html#exhale-function-stringbuilder-8hpp-1a679fbaa3fe364760135c2cb24cc25a74"><span class="std std-ref">Template Function Aux::toStringF</span></a></p></li>
+</ul>
+</section>
+<section id="typedefs">
+<h2>Typedefs<a class="headerlink" href="#typedefs" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="typedef_StringBuilder_8hpp_1a7b91e2a7941d4f9dc8ee63a7fe314f59.html#exhale-typedef-stringbuilder-8hpp-1a7b91e2a7941d4f9dc8ee63a7fe314f59"><span class="std std-ref">Typedef Aux::Impl::IteratableTag</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_StringBuilder_8hpp_1abf17f0523518f87ea02921f1374ee18c.html#exhale-typedef-stringbuilder-8hpp-1abf17f0523518f87ea02921f1374ee18c"><span class="std std-ref">Typedef Aux::Impl::PairTag</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_StringBuilder_8hpp_1a14df1171f8a64cc01de0a5b965e53986.html#exhale-typedef-stringbuilder-8hpp-1a14df1171f8a64cc01de0a5b965e53986"><span class="std std-ref">Typedef Aux::Impl::StreamableTag</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_StringBuilder_8hpp_1a59fcf29fda9b47c25804db55c3205c00.html#exhale-typedef-stringbuilder-8hpp-1a59fcf29fda9b47c25804db55c3205c00"><span class="std std-ref">Typedef Aux::Impl::TupleTag</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_StringBuilder_8hpp_1a8cfaef94591c61c24bf25d5e67cbed21.html#exhale-typedef-stringbuilder-8hpp-1a8cfaef94591c61c24bf25d5e67cbed21"><span class="std std-ref">Typedef Aux::Impl::UnprintableTag</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

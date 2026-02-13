@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Template Class AlignedAllocator</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class ArithmeticSemiring" href="classArithmeticSemiring.html" />
+    <link rel="prev" title="Template Struct hash&lt; NetworKit::Edge &gt;" href="structstd_1_1hash_3_01NetworKit_1_1Edge_01_4.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#directories">Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#pages">Pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="template-class-alignedallocator">
+<span id="exhale-class-classalignedallocator"></span><h1>Template Class AlignedAllocator<a class="headerlink" href="#template-class-alignedallocator" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_networkit_auxiliary_AlignedAllocator.hpp.html#file-include-networkit-auxiliary-alignedallocator-hpp"><span class="std std-ref">File AlignedAllocator.hpp</span></a></p></li>
+</ul>
+<section id="nested-relationships">
+<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Link to this heading">¶</a></h2>
+<section id="nested-types">
+<h3>Nested Types<a class="headerlink" href="#nested-types" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="structAlignedAllocator_1_1rebind.html#exhale-struct-structalignedallocator-1-1rebind"><span class="std std-ref">Template Struct AlignedAllocator::rebind</span></a></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0_6size_tE16AlignedAllocator">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Alignment</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classAlignedAllocator"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AlignedAllocator</span></span></span><a class="headerlink" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Allocator for aligned data.</p>
+<p>Modified from the Mallocator from Stephan T. Lavavej. <a class="reference external" href="http://blogs.msdn.com/b/vcblog/archive/2008/08/28/the-mallocator.aspx">http://blogs.msdn.com/b/vcblog/archive/2008/08/28/the-mallocator.aspx</a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N16AlignedAllocator7pointerE">
+<span class="target" id="classAlignedAllocator_1ae28ecc215f39518af2e4b957cda8a05c"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">pointer</span></span></span><a class="headerlink" href="#_CPPv4N16AlignedAllocator7pointerE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N16AlignedAllocator13const_pointerE">
+<span class="target" id="classAlignedAllocator_1a5c6d474b81a420354120ef7265d9beb6"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">const_pointer</span></span></span><a class="headerlink" href="#_CPPv4N16AlignedAllocator13const_pointerE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N16AlignedAllocator9referenceE">
+<span class="target" id="classAlignedAllocator_1ad21444a25f4325cd8bc247549f524ffb"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">reference</span></span></span><a class="headerlink" href="#_CPPv4N16AlignedAllocator9referenceE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N16AlignedAllocator15const_referenceE">
+<span class="target" id="classAlignedAllocator_1a58dcb237e4a962e53e264b54b155e241"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">const_reference</span></span></span><a class="headerlink" href="#_CPPv4N16AlignedAllocator15const_referenceE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N16AlignedAllocator10value_typeE">
+<span class="target" id="classAlignedAllocator_1a0c87faf5cb5d7bc27602b0cd027772df"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">value_type</span></span></span><a class="headerlink" href="#_CPPv4N16AlignedAllocator10value_typeE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N16AlignedAllocator9size_typeE">
+<span class="target" id="classAlignedAllocator_1ae8dd6094879005c8f7ffd0d9b487da29"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">size_type</span></span></span><a class="headerlink" href="#_CPPv4N16AlignedAllocator9size_typeE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N16AlignedAllocator15difference_typeE">
+<span class="target" id="classAlignedAllocator_1ae4b15aa031997a17d7ab83e94d92de78"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">ptrdiff_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">difference_type</span></span></span><a class="headerlink" href="#_CPPv4N16AlignedAllocator15difference_typeE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK16AlignedAllocator7addressER1T">
+<span class="target" id="classAlignedAllocator_1a0ada4ec135cb659f9bbc4f4ffa5d147a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">address</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">r</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16AlignedAllocator7addressER1T" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK16AlignedAllocator7addressERK1T">
+<span class="target" id="classAlignedAllocator_1a3aa2c897e816e8adc990da018fe2ada4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">address</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16AlignedAllocator7addressERK1T" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK16AlignedAllocator8max_sizeEv">
+<span class="target" id="classAlignedAllocator_1aa38f8e2ad9197a6788600c5bb4eb3433"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">max_size</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16AlignedAllocator8max_sizeEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK16AlignedAllocatorneERK16AlignedAllocator">
+<span class="target" id="classAlignedAllocator_1adab88652e78f8da24ff7c089515de5bb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">!=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator"><span class="n"><span class="pre">AlignedAllocator</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16AlignedAllocatorneERK16AlignedAllocator" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK16AlignedAllocator9constructEPC1TRK1T">
+<span class="target" id="classAlignedAllocator_1a78fff9dde17657a000dbfc3f1b5fd29c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">construct</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">t</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16AlignedAllocator9constructEPC1TRK1T" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK16AlignedAllocator7destroyEPC1T">
+<span class="target" id="classAlignedAllocator_1af5ca5ec58820f5e100ec2b15d38a8ea5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">destroy</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16AlignedAllocator7destroyEPC1T" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK16AlignedAllocatoreqERK16AlignedAllocator">
+<span class="target" id="classAlignedAllocator_1a03efeecd5c0c9d2a551d3f290f1c31d8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator"><span class="n"><span class="pre">AlignedAllocator</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16AlignedAllocatoreqERK16AlignedAllocator" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AlignedAllocator16AlignedAllocatorEv">
+<span class="target" id="classAlignedAllocator_1aeb88ce4dc911a12ec66bd8de42f317d2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AlignedAllocator</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AlignedAllocator16AlignedAllocatorEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AlignedAllocator16AlignedAllocatorERK16AlignedAllocator">
+<span class="target" id="classAlignedAllocator_1a3644d8a021b3097ae538d48aa9badd07"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AlignedAllocator</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N16AlignedAllocator16AlignedAllocatorERK16AlignedAllocator" title="AlignedAllocator::AlignedAllocator"><span class="n"><span class="pre">AlignedAllocator</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AlignedAllocator16AlignedAllocatorERK16AlignedAllocator" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN16AlignedAllocator16AlignedAllocatorERK16AlignedAllocatorI1U9AlignmentE">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">U</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classAlignedAllocator_1a770b3dc033dc789df6f4a2b6fc815721"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">AlignedAllocator</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN16AlignedAllocator16AlignedAllocatorERK16AlignedAllocatorI1U9AlignmentE" title="AlignedAllocator::AlignedAllocator"><span class="n"><span class="pre">AlignedAllocator</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN16AlignedAllocator16AlignedAllocatorERK16AlignedAllocatorI1U9AlignmentE" title="AlignedAllocator::AlignedAllocator::U"><span class="n"><span class="pre">U</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator::Alignment"><span class="n"><span class="pre">Alignment</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN16AlignedAllocator16AlignedAllocatorERK16AlignedAllocatorI1U9AlignmentE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N16AlignedAllocatorD0Ev">
+<span class="target" id="classAlignedAllocator_1a6914681d471ac590b3585fe3fdd89002"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~AlignedAllocator</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N16AlignedAllocatorD0Ev" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK16AlignedAllocator8allocateE6size_t">
+<span class="target" id="classAlignedAllocator_1af91845e8121474202628419b7c545acb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">allocate</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16AlignedAllocator8allocateE6size_t" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK16AlignedAllocator10deallocateEPC1T6size_t">
+<span class="target" id="classAlignedAllocator_1a8083ac9243d93cfc1db6e50cdf368654"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deallocate</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK16AlignedAllocator10deallocateEPC1T6size_t" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENK16AlignedAllocator8allocateEP1T6size_tPK1U">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">U</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classAlignedAllocator_1aa53f9327ab303b003d4cec3e35b97b14"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">allocate</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0ENK16AlignedAllocator8allocateEP1T6size_tPK1U" title="AlignedAllocator::allocate::U"><span class="n"><span class="pre">U</span></span></a><span class="p"><span class="pre">*</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4I0ENK16AlignedAllocator8allocateEP1T6size_tPK1U" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN16AlignedAllocator6rebindE">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">U</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="structAlignedAllocator_1_1rebind"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rebind</span></span></span><a class="headerlink" href="#_CPPv4I0EN16AlignedAllocator6rebindE" title="Link to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N16AlignedAllocator6rebind5otherE">
+<span class="target" id="structAlignedAllocator_1_1rebind_1a77e248af6f3c30ee9f981905eaff6ce2"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator"><span class="n"><span class="pre">AlignedAllocator</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN16AlignedAllocator6rebindE" title="AlignedAllocator::rebind::U"><span class="n"><span class="pre">U</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_6size_tE16AlignedAllocator" title="AlignedAllocator::Alignment"><span class="n"><span class="pre">Alignment</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">other</span></span></span><a class="headerlink" href="#_CPPv4N16AlignedAllocator6rebind5otherE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

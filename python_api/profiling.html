@@ -1,0 +1,622 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>networkit.profiling</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="networkit.randomization" href="randomization.html" />
+    <link rel="prev" title="networkit.plot" href="plot.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="networkit.html">networkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algebraic.html">networkit.algebraic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="base.html">networkit.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="centrality.html">networkit.centrality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clique.html">networkit.clique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coarsening.html">networkit.coarsening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coloring.html">networkit.coloring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="community.html">networkit.community</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">networkit.components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="correlation.html">networkit.correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="distance.html">networkit.distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamic.html">networkit.dynamic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamics.html">networkit.dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynbase.html">networkit.dynbase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="embedding.html">networkit.embedding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engineering.html">networkit.engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow.html">networkit.flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generators.html">networkit.generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gephi.html">networkit.gephi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="globals.html">networkit.globals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graph.html">networkit.graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphio.html">networkit.graphio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphtools.html">networkit.graphtools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="helpers.html">networkit.helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="independentset.html">networkit.independentset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkprediction.html">networkit.linkprediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matching.html">networkit.matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nxadapter.html">networkit.nxadapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot.html">networkit.plot</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">networkit.profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="randomization.html">networkit.randomization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reachability.html">networkit.reachability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scd.html">networkit.scd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html">networkit.simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sparsification.html">networkit.sparsification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stats.html">networkit.stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structures.html">networkit.structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="traversal.html">networkit.traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viz.html">networkit.viz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vizbridges.html">networkit.vizbridges</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="module-networkit.profiling.profiling">
+<span id="networkit-profiling"></span><h1>networkit.profiling<a class="headerlink" href="#module-networkit.profiling.profiling" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Config">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.profiling.profiling.</span></span><span class="sig-name descname"><span class="pre">Config</span></span><a class="headerlink" href="#networkit.profiling.profiling.Config" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Object to control profiling.Profile behaviour.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Config.createConfig">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">createConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.Config.createConfig" title="Link to this definition">¶</a></dt>
+<dd><p>Create a config object by selection a named preset of predefined options.</p>
+<p>Supported values for preset:</p>
+<ul class="simple">
+<li><p>complete</p></li>
+<li><p>minimal</p></li>
+<li><p>default</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>preset</strong> (<em>str</em><em>, </em><em>optional</em>) – Preset to be used for generating the config values. Default: “default”</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Config.getMeasure">
+<span class="sig-name descname"><span class="pre">getMeasure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.Config.getMeasure" title="Link to this definition">¶</a></dt>
+<dd><p>Return state of given measure option</p>
+<p>Supported values for id:</p>
+<ul class="simple">
+<li><p>Centrality.Degree</p></li>
+<li><p>Centrality.CoreDecomposition</p></li>
+<li><p>Centrality.ClusteringCoefficient</p></li>
+<li><p>Centrality.PageRank</p></li>
+<li><p>Centrality.KPath</p></li>
+<li><p>Centrality.Katz</p></li>
+<li><p>Centrality.Betweenness</p></li>
+<li><p>Centrality.Closeness</p></li>
+<li><p>Partition.Communities</p></li>
+<li><p>Partition.ConnectedComponents</p></li>
+<li><p>Partition.CoreDecomposition</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>State of measure id.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Config.getMeasureCorrelation">
+<span class="sig-name descname"><span class="pre">getMeasureCorrelation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.Config.getMeasureCorrelation" title="Link to this definition">¶</a></dt>
+<dd><p>Return state of given correlation (measure) option</p>
+<p>Supported values for id:</p>
+<ul class="simple">
+<li><p>Pearson</p></li>
+<li><p>Spearman</p></li>
+<li><p>Fechner</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>State of measure correlation id.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Config.getProperty">
+<span class="sig-name descname"><span class="pre">getProperty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.Config.getProperty" title="Link to this definition">¶</a></dt>
+<dd><p>return state of given property option</p>
+<p>Supported values for id:</p>
+<ul class="simple">
+<li><p>Diameter</p></li>
+<li><p>EffectiveDiameter</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>State of property id.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Config.setMeasure">
+<span class="sig-name descname"><span class="pre">setMeasure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.Config.setMeasure" title="Link to this definition">¶</a></dt>
+<dd><p>Enable/disable given measure option.</p>
+<p>Supported values for id:</p>
+<ul class="simple">
+<li><p>Centrality.Degree</p></li>
+<li><p>Centrality.CoreDecomposition</p></li>
+<li><p>Centrality.ClusteringCoefficient</p></li>
+<li><p>Centrality.PageRank</p></li>
+<li><p>Centrality.KPath</p></li>
+<li><p>Centrality.Katz</p></li>
+<li><p>Centrality.Betweenness</p></li>
+<li><p>Centrality.Closeness</p></li>
+<li><p>Partition.Communities</p></li>
+<li><p>Partition.ConnectedComponents</p></li>
+<li><p>Partition.CoreDecomposition</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>str</em>) – Measure value to set.</p></li>
+<li><p><strong>enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – Indicates whether measure id should be enabled or not. Default: True</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Config.setMeasureCorrelation">
+<span class="sig-name descname"><span class="pre">setMeasureCorrelation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.Config.setMeasureCorrelation" title="Link to this definition">¶</a></dt>
+<dd><p>Enable/disable given measure correlation option.</p>
+<p>Supported values for id:</p>
+<ul class="simple">
+<li><p>Pearson</p></li>
+<li><p>Spearman</p></li>
+<li><p>Fechner</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>str</em>) – Measure correlation value to set.</p></li>
+<li><p><strong>enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – Indicates whether measure correlation id should be enabled or not. Default: True</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Config.setProperty">
+<span class="sig-name descname"><span class="pre">setProperty</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enabled</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.Config.setProperty" title="Link to this definition">¶</a></dt>
+<dd><p>Enable/disable given property option.</p>
+<p>Supported values for id:</p>
+<ul class="simple">
+<li><p>Diameter</p></li>
+<li><p>EffectiveDiameter</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>str</em>) – Property value to set.</p></li>
+<li><p><strong>enabled</strong> (<em>bool</em><em>, </em><em>optional</em>) – Indicates whether property id should be enabled or not. Default: True</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Profile">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.profiling.profiling.</span></span><span class="sig-name descname"><span class="pre">Profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">object()</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.Profile" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Automated network profiling class. Don’t call the constructor directly.
+Use networkit.profile.profile.Profile.create to instantiate a profile.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Profile.create">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.Profile.create" title="Link to this definition">¶</a></dt>
+<dd><p>Creates a profile object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – Graph to profile.</p></li>
+<li><p><strong>preset</strong> (<em>str</em>) – Name of preset configuration: “complete”, “minimal”, “default”</p></li>
+<li><p><strong>Config</strong> (<em>networkit.profile.profile.Config</em>) – Config object to control some aspects of the generation behaviour. Default: None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Resulting profiling object.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>networkit.profile.profile.Profile</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Profile.getCategory">
+<span class="sig-name descname"><span class="pre">getCategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measure</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.Profile.getCategory" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the category of an given measure.</p>
+<p>Supported values for measure:</p>
+<ul class="simple">
+<li><p>Centrality.Degree</p></li>
+<li><p>Centrality.CoreDecomposition</p></li>
+<li><p>Centrality.ClusteringCoefficient</p></li>
+<li><p>Centrality.PageRank</p></li>
+<li><p>Centrality.KPath</p></li>
+<li><p>Centrality.Katz</p></li>
+<li><p>Centrality.Betweenness</p></li>
+<li><p>Centrality.Closeness</p></li>
+<li><p>Partition.Communities</p></li>
+<li><p>Partition.ConnectedComponents</p></li>
+<li><p>Partition.CoreDecomposition</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>measure</strong> (<em>str</em>) – Measure name.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Category of measure.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Profile.getElapsedTime">
+<span class="sig-name descname"><span class="pre">getElapsedTime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measure</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.Profile.getElapsedTime" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the elapsed computation times of an given measure.</p>
+<p>Supported values for measure:</p>
+<ul class="simple">
+<li><p>Centrality.Degree</p></li>
+<li><p>Centrality.CoreDecomposition</p></li>
+<li><p>Centrality.ClusteringCoefficient</p></li>
+<li><p>Centrality.PageRank</p></li>
+<li><p>Centrality.KPath</p></li>
+<li><p>Centrality.Katz</p></li>
+<li><p>Centrality.Betweenness</p></li>
+<li><p>Centrality.Closeness</p></li>
+<li><p>Partition.Communities</p></li>
+<li><p>Partition.ConnectedComponents</p></li>
+<li><p>Partition.CoreDecomposition</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>measure</strong> (<em>str</em>) – Measure name.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Elapsed time for computing measure.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Profile.getParallel">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">getParallel</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.Profile.getParallel" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the number of parallel threads/processes to use</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Number of threads to use for algorithms used during profiling.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Profile.getStat">
+<span class="sig-name descname"><span class="pre">getStat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measure</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.Profile.getStat" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an directory of all computed measure values.</p>
+<p>Supported values for measure:</p>
+<ul class="simple">
+<li><p>Centrality.Degree</p></li>
+<li><p>Centrality.CoreDecomposition</p></li>
+<li><p>Centrality.ClusteringCoefficient</p></li>
+<li><p>Centrality.PageRank</p></li>
+<li><p>Centrality.KPath</p></li>
+<li><p>Centrality.Katz</p></li>
+<li><p>Centrality.Betweenness</p></li>
+<li><p>Centrality.Closeness</p></li>
+<li><p>Partition.Communities</p></li>
+<li><p>Partition.ConnectedComponents</p></li>
+<li><p>Partition.CoreDecomposition</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>measure</strong> (<em>str</em>) – Measure name.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary with computed measure values.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Profile.getVerbose">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">getVerbose</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.Profile.getVerbose" title="Link to this definition">¶</a></dt>
+<dd><p>Returns verbose settings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple with three entries -&gt; (verbose, verboseLevel, filename).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple(bool, int, str)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Profile.output">
+<span class="sig-name descname"><span class="pre">output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outputType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'graph'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'light'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">colors['green']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.Profile.output" title="Link to this definition">¶</a></dt>
+<dd><p>Outputs a computed profile to disk.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>outputType</strong> (<em>str</em>) – Profile output format (“HTML”, “LaTeX”).</p></li>
+<li><p><strong>directory</strong> (<em>str</em>) – Directory to write.</p></li>
+<li><p><strong>filename</strong> (<em>str</em><em>, </em><em>optional</em>) – Enable/disable additional logfile support to given file. Default: “”</p></li>
+<li><p><strong>style</strong> (<em>str</em><em>, </em><em>optional</em>) – Style of generated output. Default: “light”</p></li>
+<li><p><strong>color</strong> (<em>tuple</em><em>(</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>)</em><em>, </em><em>optional</em>) – Mainly used color of given style. Given in RGB values between 0.0 and 1.0. Default: “green” -&gt; (0.003, 0.474, 0.435)</p></li>
+<li><p><strong>parallel</strong> (<em>bool</em><em>, </em><em>optional</em>) – Run some additional parts of the generation in parallel (experimental). Default: False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Profile.setParallel">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">setParallel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parallel</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.Profile.setParallel" title="Link to this definition">¶</a></dt>
+<dd><p>Set the number of parallel threads/processes to use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>parallel</strong> (<em>int</em>) – Number of threads to use for algorithms used during profiling.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Profile.setVerbose">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">setVerbose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.Profile.setVerbose" title="Link to this definition">¶</a></dt>
+<dd><p>Set verbose behaviour of all public methods.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verbose</strong> (<em>bool</em><em>, </em><em>optional</em>)</p></li>
+<li><p><strong>Default</strong> (<em>Enable/disable display verbose.</em>)</p></li>
+<li><p><strong>level</strong> (<em>int</em><em>, </em><em>optional</em>) – Set level of verbose (0, 1). Default: False</p></li>
+<li><p><strong>filename</strong> (<em>str</em><em>, </em><em>optional</em>) – Enable/disable additional logfile support to given file. Default: “”</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Profile.show">
+<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'light'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">colors['green']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.Profile.show" title="Link to this definition">¶</a></dt>
+<dd><p>Display computed profile.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>style</strong> (<em>str</em><em>, </em><em>optional</em>) – Style of generated output. Default: “light”</p></li>
+<li><p><strong>color</strong> (<em>tuple</em><em>(</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>)</em><em>, </em><em>optional</em>) – Mainly used color of given style. Given in RGB values between 0.0 and 1.0. Default: “green” -&gt; (0.003, 0.474, 0.435)</p></li>
+<li><p><strong>parallel</strong> (<em>bool</em><em>, </em><em>optional</em>) – Run some additional parts of the generation in parallel (experimental). Default: False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.Profile.verbosePrint">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">verbosePrint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'\n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.Profile.verbosePrint" title="Link to this definition">¶</a></dt>
+<dd><p>Print for verbose output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<em>str</em><em>, </em><em>optional</em>) – Text to add to the verbose print. Default: “”</p></li>
+<li><p><strong>end</strong> (<em>str</em><em>, </em><em>optional</em>) – Marker for line break. Default: “n”</p></li>
+<li><p><strong>level</strong> (<em>int</em><em>, </em><em>optional</em>) – Level for verbose printing. Default: 0</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.getfilepath">
+<span class="sig-prename descclassname"><span class="pre">networkit.profiling.profiling.</span></span><span class="sig-name descname"><span class="pre">getfilepath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.getfilepath" title="Link to this definition">¶</a></dt>
+<dd><p>Helper function the get complete filepath based on filename. Only used by profiler - no need to be called independently.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – Name of file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.readfile">
+<span class="sig-prename descclassname"><span class="pre">networkit.profiling.profiling.</span></span><span class="sig-name descname"><span class="pre">readfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">removeWS</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.readfile" title="Link to this definition">¶</a></dt>
+<dd><p>Helper function for file-loading. Only used by profiler - no need to be called independently.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – Name of file.</p></li>
+<li><p><strong>removeWS</strong> (<em>bool</em><em>, </em><em>optional</em>) – Indicates whether whitespace should be removed. Default: False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.profiling.profiling.walk">
+<span class="sig-prename descclassname"><span class="pre">networkit.profiling.profiling.</span></span><span class="sig-name descname"><span class="pre">walk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputDir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputDir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graphFormat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filePattern</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'`*`'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputType</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'HTML'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'light'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">colors['green']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recursive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parallel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.profiling.profiling.walk" title="Link to this definition">¶</a></dt>
+<dd><p>Tests all files of a directory for the given conditions and generates a profile when matching.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inputDir</strong> (<em>str</em>) – The directory to search.</p></li>
+<li><p><strong>outputDir</strong> (<em>str</em>) – Directory to write the generated profiles.</p></li>
+<li><p><strong>graphFormat</strong> (<a class="reference internal" href="graphio.html#networkit.graphio.Format" title="networkit.graphio.Format"><em>networkit.graphio.Format</em></a>) – Format of input graphs.</p></li>
+<li><p><strong>filePattern</strong> (<em>str</em><em>, </em><em>optional</em>) – Specify accepted file names, e.g.: <cite>*.METIS.graph</cite>. Default: <cite>*</cite></p></li>
+<li><p><strong>preset</strong> (<em>str</em><em>, </em><em>optional</em>) – Config preset (“minimal”, “default”, “full”). Default: “default”</p></li>
+<li><p><strong>Config</strong> (<em>networkit.profile.profile.Config</em>) – Config object to control some aspects of the generation behaviour. Default: None</p></li>
+<li><p><strong>outputType</strong> (<em>str</em><em>, </em><em>optional</em>) – Profile output format (“HTML”, “LaTeX”). Default: “HTML”</p></li>
+<li><p><strong>style</strong> (<em>str</em><em>, </em><em>optional</em>) – Style of generated output. Default: “light”</p></li>
+<li><p><strong>color</strong> (<em>tuple</em><em>(</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>)</em><em>, </em><em>optional</em>) – Mainly used color of given style. Given in RGB values between 0.0 and 1.0. Default: “green” -&gt; (0.003, 0.474, 0.435)</p></li>
+<li><p><strong>recursive</strong> (<em>bool</em><em>, </em><em>optional</em>) – Also search in subfolders for matching files. Default: False</p></li>
+<li><p><strong>parallel</strong> (<em>bool</em><em>, </em><em>optional</em>) – Run some additional parts of the generation in parallel (experimental). Default: False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

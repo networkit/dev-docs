@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>File StringTools.hpp</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="file-stringtools-hpp">
+<span id="file-include-networkit-auxiliary-stringtools-hpp"></span><h1>File StringTools.hpp<a class="headerlink" href="#file-stringtools-hpp" title="Link to this heading">¶</a></h1>
+<p>↰ <a class="reference internal" href="dir_include_networkit_auxiliary.html#dir-include-networkit-auxiliary"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">include/networkit/auxiliary</span></code>)</p>
+<nav class="contents local" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-include-networkit-auxiliary-stringtools-hpp" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">include/networkit/auxiliary/StringTools.hpp</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id2">Includes</a></p></li>
+<li><p><a class="reference internal" href="#included-by" id="id3">Included By</a></p></li>
+<li><p><a class="reference internal" href="#namespaces" id="id4">Namespaces</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id5">Functions</a></p></li>
+</ul>
+</nav>
+<section id="definition-include-networkit-auxiliary-stringtools-hpp">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">include/networkit/auxiliary/StringTools.hpp</span></code>)<a class="headerlink" href="#definition-include-networkit-auxiliary-stringtools-hpp" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file_include_networkit_auxiliary_StringTools.hpp.html">Program Listing for File StringTools.hpp</a></li>
+</ul>
+</div>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<a class="reference internal" href="file_include_networkit_algebraic_algorithms_AlgebraicBellmanFord.hpp.html#file-include-networkit-algebraic-algorithms-algebraicbellmanford-hpp"><span class="std std-ref">File AlgebraicBellmanFord.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">string_view</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vector</span></code> (<a class="reference internal" href="file_include_networkit_centrality_EigenvectorCentrality.hpp.html#file-include-networkit-centrality-eigenvectorcentrality-hpp"><span class="std std-ref">File EigenvectorCentrality.hpp</span></a>)</p></li>
+</ul>
+</section>
+<section id="included-by">
+<h2>Included By<a class="headerlink" href="#included-by" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="file_include_networkit_io_EdgeListPartitionReader.hpp.html#file-include-networkit-io-edgelistpartitionreader-hpp"><span class="std std-ref">File EdgeListPartitionReader.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_io_GraphReader.hpp.html#file-include-networkit-io-graphreader-hpp"><span class="std std-ref">File GraphReader.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_viz_MaxentStress.hpp.html#file-include-networkit-viz-maxentstress-hpp"><span class="std std-ref">File MaxentStress.hpp</span></a></p></li>
+</ul>
+</section>
+<section id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="namespace_Aux.html#namespace-aux"><span class="std std-ref">Namespace Aux</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_Aux__StringTools.html#namespace-aux-stringtools"><span class="std std-ref">Namespace Aux::StringTools</span></a></p></li>
+</ul>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="function_namespaceAux_1_1StringTools_1ac51f30daade7ed4f27400036da3e6259.html#exhale-function-namespaceaux-1-1stringtools-1ac51f30daade7ed4f27400036da3e6259"><span class="std std-ref">Function Aux::StringTools::ends_with</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceAux_1_1StringTools_1ab4792858d6f6bdbe05268002f25b22cf.html#exhale-function-namespaceaux-1-1stringtools-1ab4792858d6f6bdbe05268002f25b22cf"><span class="std std-ref">Function Aux::StringTools::split(std::string_view, char)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceAux_1_1StringTools_1a529ae41b2de64abb805009fde8196415.html#exhale-function-namespaceaux-1-1stringtools-1a529ae41b2de64abb805009fde8196415"><span class="std std-ref">Template Function Aux::StringTools::split(Iterator, Iterator, Character)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceAux_1_1StringTools_1a4eb2421eb8c9619d9f7a58583c7241e0.html#exhale-function-namespaceaux-1-1stringtools-1a4eb2421eb8c9619d9f7a58583c7241e0"><span class="std std-ref">Function Aux::StringTools::starts_with</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>
