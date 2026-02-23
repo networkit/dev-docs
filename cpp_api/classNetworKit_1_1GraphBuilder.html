@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Class GraphBuilder</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class GraphBuilderBenchmark" href="classNetworKit_1_1GraphBuilderBenchmark.html" />
+    <link rel="prev" title="Template Class Graph::NeighborWeightRange" href="classNetworKit_1_1Graph_1_1NeighborWeightRange.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#directories">Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#pages">Pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="class-graphbuilder">
+<span id="exhale-class-classnetworkit-1-1graphbuilder"></span><h1>Class GraphBuilder<a class="headerlink" href="#class-graphbuilder" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_networkit_graph_GraphBuilder.hpp.html#file-include-networkit-graph-graphbuilder-hpp"><span class="std std-ref">File GraphBuilder.hpp</span></a></p></li>
+</ul>
+<section id="nested-relationships">
+<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Link to this heading">¶</a></h2>
+<section id="nested-types">
+<h3>Nested Types<a class="headerlink" href="#nested-types" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="structNetworKit_1_1GraphBuilder_1_1HalfEdge.html#exhale-struct-structnetworkit-1-1graphbuilder-1-1halfedge"><span class="std std-ref">Struct GraphBuilder::HalfEdge</span></a></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12GraphBuilderE">
+<span class="target" id="classNetworKit_1_1GraphBuilder"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GraphBuilder</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit12GraphBuilderE" title="Link to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12GraphBuilder12GraphBuilderE5countbbb">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1ab4d07293f40726ba53f054392fa0ad99"></span><span class="sig-name descname"><span class="n"><span class="pre">GraphBuilder</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">weighted</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">directed</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">autoCompleteEdges</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12GraphBuilder12GraphBuilderE5countbbb" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Creates a new <a class="reference internal" href="#classNetworKit_1_1GraphBuilder"><span class="std std-ref">GraphBuilder</span></a>. <a class="reference internal" href="#classNetworKit_1_1GraphBuilder"><span class="std std-ref">GraphBuilder</span></a> supports the basic methods needed to create a new graph (addNode, addEdge, setWeight, increaseWeight). It is designed to be much faster for graph creation, but the speed comes with a restriction: For undirected graphs <a class="reference internal" href="#classNetworKit_1_1GraphBuilder"><span class="std std-ref">GraphBuilder</span></a> will handle u-&gt;v and v-&gt;u as two different edges. Keep that in mind when using setWeight and increaseWeight. <a class="reference internal" href="#classNetworKit_1_1GraphBuilder"><span class="std std-ref">GraphBuilder</span></a> allows parallelization in a special way. It’s internal data structure saves edges only at the source node. As long as edges from node u are only added/changed by thread t1, every other thread can modifier edges not starting in u. addNode is not threadsafe. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> – Number of nodes. </p></li>
+<li><p><strong>weighted</strong> – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the graph has edge weights. </p></li>
+<li><p><strong>directed</strong> – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the graph will be directed. </p></li>
+<li><p><strong>autoCompleteEdges</strong> – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the edges will automatically be added to the adjacency lists of both nodes (decreases the time to build). </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12GraphBuilder5resetE5count">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1af34a424f5373d8aa028f3b533d874a53"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12GraphBuilder5resetE5count" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit12GraphBuilder10isWeightedEv">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1ad362fbaed4e31020d2634b85c4db037e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isWeighted</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit12GraphBuilder10isWeightedEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if this graph supports edge weights other than 1.0. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if this graph supports edge weights other than 1.0. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit12GraphBuilder10isDirectedEv">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1a15047edf41a5af5b962f9d2925b4ce16"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isDirected</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit12GraphBuilder10isDirectedEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Return <code class="docutils literal notranslate"><span class="pre">true</span></code> if this graph supports directed edges. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>true if this graph supports directed edges. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit12GraphBuilder7isEmptyEv">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1a5e4d564a8dff2e8e17c40245945ec8dd"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isEmpty</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit12GraphBuilder7isEmptyEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Return <code class="docutils literal notranslate"><span class="pre">true</span></code> if graph contains no nodes. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">true</span></code> if graph contains no nodes. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit12GraphBuilder13numberOfNodesEv">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1ab3bee82b7ec88a05e5ca9c56ba6d3fb2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">numberOfNodes</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit12GraphBuilder13numberOfNodesEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Return the number of nodes in the graph. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The number of nodes. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit12GraphBuilder16upperNodeIdBoundEv">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1a08779c1702f2ae65754a30be245627be"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1a41e30d07038ef847798f304a60ea2902.html#_CPPv4N9NetworKit5indexE" title="NetworKit::index"><span class="n"><span class="pre">index</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">upperNodeIdBound</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit12GraphBuilder16upperNodeIdBoundEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Get an upper bound for the node ids in the graph. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An upper bound for the node ids. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12GraphBuilder7addNodeEv">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1ad0a4a7f131dc685a0aa4609858f08607"></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addNode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12GraphBuilder7addNodeEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Add a new node to the graph and return it. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The new node. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12GraphBuilder11addHalfEdgeE4node4node10edgeweight">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1ad72f8f79545d7f1b92e02f39667ab104"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addHalfEdge</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">ew</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="variable_namespaceNetworKit_1a21ee542cfc7bd4f5992206268894f3f3.html#_CPPv4N9NetworKit17defaultEdgeWeightE" title="NetworKit::defaultEdgeWeight"><span class="n"><span class="pre">defaultEdgeWeight</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12GraphBuilder11addHalfEdgeE4node4node10edgeweight" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Insert an edge between the nodes <em>u</em> and <em>v</em>. If the graph is weighted you can optionally set a weight for this edge. The default weight is 1.0. If setUseWholeEdges(true) has been called prior, this sets both half edges, which improves the performance of the graph builder. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> – Endpoint of edge. </p></li>
+<li><p><strong>v</strong> – Endpoint of edge. </p></li>
+<li><p><strong>weight</strong> – Optional edge weight. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12GraphBuilder14addHalfOutEdgeE4node4node10edgeweight">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1aa21fb6ac143209c8cddc4d8d08c56e47"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addHalfOutEdge</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">ew</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="variable_namespaceNetworKit_1a21ee542cfc7bd4f5992206268894f3f3.html#_CPPv4N9NetworKit17defaultEdgeWeightE" title="NetworKit::defaultEdgeWeight"><span class="n"><span class="pre">defaultEdgeWeight</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12GraphBuilder14addHalfOutEdgeE4node4node10edgeweight" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12GraphBuilder13addHalfInEdgeE4node4node10edgeweight">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1a33af13639afe2fc31847bd7f9b579ade"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addHalfInEdge</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">ew</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="variable_namespaceNetworKit_1a21ee542cfc7bd4f5992206268894f3f3.html#_CPPv4N9NetworKit17defaultEdgeWeightE" title="NetworKit::defaultEdgeWeight"><span class="n"><span class="pre">defaultEdgeWeight</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12GraphBuilder13addHalfInEdgeE4node4node10edgeweight" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12GraphBuilder16swapNeighborhoodE4nodeRNSt6vectorI4nodeEERNSt6vectorI10edgeweightEEb">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1aa79b09e4f6874dae4cc854e0a57ba593"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">swapNeighborhood</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">neighbours</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">weights</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">selfloop</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12GraphBuilder16swapNeighborhoodE4nodeRNSt6vectorI4nodeEERNSt6vectorI10edgeweightEEb" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12GraphBuilder9setWeightE4node4node10edgeweight">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1ace1f7f9fbda34688188d6504f6f91071"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setWeight</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">ew</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12GraphBuilder9setWeightE4node4node10edgeweight" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Set the weight of an edge. If the edge does not exist, it will be inserted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> – <strong>[in]</strong> endpoint of edge </p></li>
+<li><p><strong>v</strong> – <strong>[in]</strong> endpoint of edge </p></li>
+<li><p><strong>weight</strong> – <strong>[in]</strong> edge weight </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12GraphBuilder12setOutWeightE4node4node10edgeweight">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1a39cba13d5a0be085dcf2619276dad3a5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setOutWeight</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">ew</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12GraphBuilder12setOutWeightE4node4node10edgeweight" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12GraphBuilder11setInWeightE4node4node10edgeweight">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1af325f1cd63b293be576db9caeffe76e2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setInWeight</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">ew</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12GraphBuilder11setInWeightE4node4node10edgeweight" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12GraphBuilder14increaseWeightE4node4node10edgeweight">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1a645bcff58ac0031e5c1872881c36300a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">increaseWeight</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">ew</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12GraphBuilder14increaseWeightE4node4node10edgeweight" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Increase the weight of an edge. If the edge does not exist, it will be inserted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> – <strong>[in]</strong> endpoint of edge </p></li>
+<li><p><strong>v</strong> – <strong>[in]</strong> endpoint of edge </p></li>
+<li><p><strong>ew</strong> – <strong>[in]</strong> edge weight </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12GraphBuilder17increaseOutWeightE4node4node10edgeweight">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1a8b597fe686b37d8549ec2a602223bdcb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">increaseOutWeight</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">ew</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12GraphBuilder17increaseOutWeightE4node4node10edgeweight" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12GraphBuilder16increaseInWeightE4node4node10edgeweight">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1ae8e767e5b4b77e58c8653b75abcde4be"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">increaseInWeight</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">ew</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12GraphBuilder16increaseInWeightE4node4node10edgeweight" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12GraphBuilder13completeGraphEv">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1a4da041ca573c077d01c6b0c248d59d64"></span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">completeGraph</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12GraphBuilder13completeGraphEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Generates a <a class="reference internal" href="classNetworKit_1_1Graph.html#classNetworKit_1_1Graph"><span class="std std-ref">Graph</span></a> instance. The graph builder will be resetted at the end. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12GraphBuilder14TLX_DEPRECATEDEF13completeGraphbE">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1afc40a0a13b99320a3c53ca7da630aca9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TLX_DEPRECATED</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9NetworKit12GraphBuilder13completeGraphEv" title="NetworKit::GraphBuilder::completeGraph"><span class="n"><span class="pre">completeGraph</span></span></a><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">[[</span></span><span class="pre">maybe_unused</span><span class="p"><span class="pre">]]</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">parallel</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12GraphBuilder14TLX_DEPRECATEDEF13completeGraphbE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>DEPRECATED: use <a class="reference internal" href="#classNetworKit_1_1GraphBuilder_1a4da041ca573c077d01c6b0c248d59d64"><span class="std std-ref">completeGraph()</span></a> instead which uses the parallel mode by default (if possible). </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENK9NetworKit12GraphBuilder8forNodesEv1L">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">L</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classNetworKit_1_1GraphBuilder_1a31bcbc834aa95436144a3d5056670632"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">forNodes</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0ENK9NetworKit12GraphBuilder8forNodesEv1L" title="NetworKit::GraphBuilder::forNodes::L"><span class="n"><span class="pre">L</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">handle</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4I0ENK9NetworKit12GraphBuilder8forNodesEv1L" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Iterate over all nodes of the graph and call <em>handle</em> (lambda closure).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>handle</strong> – Takes parameter <code class="docutils literal notranslate"><span class="pre">(node)</span></code>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENK9NetworKit12GraphBuilder16parallelForNodesEv1L">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">L</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classNetworKit_1_1GraphBuilder_1a0f38cdaad5528ae5cdb5ff4d39cd5b4b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parallelForNodes</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0ENK9NetworKit12GraphBuilder16parallelForNodesEv1L" title="NetworKit::GraphBuilder::parallelForNodes::L"><span class="n"><span class="pre">L</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">handle</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4I0ENK9NetworKit12GraphBuilder16parallelForNodesEv1L" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Iterate randomly over all nodes of the graph and call <em>handle</em> (lambda closure).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>handle</strong> – Takes parameter <code class="docutils literal notranslate"><span class="pre">(node)</span></code>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENK9NetworKit12GraphBuilder12forNodePairsEv1L">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">L</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classNetworKit_1_1GraphBuilder_1a809b2da990b2afbde6c5b73dc59b7ec7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">forNodePairs</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0ENK9NetworKit12GraphBuilder12forNodePairsEv1L" title="NetworKit::GraphBuilder::forNodePairs::L"><span class="n"><span class="pre">L</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">handle</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4I0ENK9NetworKit12GraphBuilder12forNodePairsEv1L" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Iterate over all undirected pairs of nodes and call <em>handle</em> (lambda closure).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>handle</strong> – Takes parameters <code class="docutils literal notranslate"><span class="pre">(node,</span> <span class="pre">node)</span></code>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0ENK9NetworKit12GraphBuilder20parallelForNodePairsEv1L">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">L</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classNetworKit_1_1GraphBuilder_1a5e7509540a5a1b114231eee6a528fb57"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parallelForNodePairs</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0ENK9NetworKit12GraphBuilder20parallelForNodePairsEv1L" title="NetworKit::GraphBuilder::parallelForNodePairs::L"><span class="n"><span class="pre">L</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">handle</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4I0ENK9NetworKit12GraphBuilder20parallelForNodePairsEv1L" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Iterate over all undirected pairs of nodes in parallel and call <em>handle</em> (lambda closure).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>handle</strong> – Takes parameters <code class="docutils literal notranslate"><span class="pre">(node,</span> <span class="pre">node)</span></code>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12GraphBuilder20setAutoCompleteEdgesEb">
+<span class="target" id="classNetworKit_1_1GraphBuilder_1aa0f2a0550a6745f1ac16d60e51cef1f9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAutoCompleteEdges</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">completeEdges</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12GraphBuilder20setAutoCompleteEdgesEb" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

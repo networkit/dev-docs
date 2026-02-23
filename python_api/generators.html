@@ -1,0 +1,1392 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>networkit.generators</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="networkit.gephi" href="gephi.html" />
+    <link rel="prev" title="networkit.flow" href="flow.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="networkit.html">networkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algebraic.html">networkit.algebraic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="base.html">networkit.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="centrality.html">networkit.centrality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clique.html">networkit.clique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coarsening.html">networkit.coarsening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coloring.html">networkit.coloring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="community.html">networkit.community</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">networkit.components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="correlation.html">networkit.correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="distance.html">networkit.distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamic.html">networkit.dynamic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamics.html">networkit.dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynbase.html">networkit.dynbase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="embedding.html">networkit.embedding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engineering.html">networkit.engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow.html">networkit.flow</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">networkit.generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gephi.html">networkit.gephi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="globals.html">networkit.globals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graph.html">networkit.graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphio.html">networkit.graphio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphtools.html">networkit.graphtools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="helpers.html">networkit.helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="independentset.html">networkit.independentset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkprediction.html">networkit.linkprediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matching.html">networkit.matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nxadapter.html">networkit.nxadapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot.html">networkit.plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">networkit.profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="randomization.html">networkit.randomization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reachability.html">networkit.reachability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scd.html">networkit.scd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html">networkit.simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sparsification.html">networkit.sparsification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stats.html">networkit.stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structures.html">networkit.structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="traversal.html">networkit.traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viz.html">networkit.viz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vizbridges.html">networkit.vizbridges</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="module-networkit.generators">
+<span id="networkit-generators"></span><h1>networkit.generators<a class="headerlink" href="#module-networkit.generators" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.BTERReplicator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">BTERReplicator</span></span><a class="headerlink" href="#networkit.generators.BTERReplicator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Wrapper class that calls the BTER graph generator implementation in
+FEASTPACK from <a class="reference external" href="http://www.sandia.gov/~tgkolda/feastpack/">http://www.sandia.gov/~tgkolda/feastpack/</a> using GNU
+Octave.</p>
+<p>Note that BTER needs the rng method which is unavailable in Octave, but
+the call in bter.m can be easily replaced.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.BTERReplicator.fit">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.BTERReplicator.fit" title="Link to this definition">¶</a></dt>
+<dd><p>Fit model to input graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>scale</strong> (<em>int</em><em>, </em><em>optional</em>) – Scale the maximum number of nodes by a factor. Default: 1</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A new scaled graph.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.BTERReplicator.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.BTERReplicator.generate" title="Link to this definition">¶</a></dt>
+<dd><p>Generate graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.BTERReplicator.setPaths">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">setPaths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feastpackPath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.BTERReplicator.setPaths" title="Link to this definition">¶</a></dt>
+<dd><p>Helper function for fit. Sets an output folder for writing the result to.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>feastpackPath</strong> (<em>str</em>) – String containing a path.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.ChungLuGenerator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">ChungLuGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">degreeSequence</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.ChungLuGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.generators.StaticGraphGenerator" title="networkit.generators.StaticGraphGenerator"><code class="xref py py-class docutils literal notranslate"><span class="pre">StaticGraphGenerator</span></code></a></p>
+<p>Given an arbitrary degree sequence, the Chung-Lu generative model
+will produce a random graph with the same expected degree sequence.</p>
+<p>see Chung, Lu: The average distances in random graphs with given expected degrees
+and Chung, Lu: Connected Components in Random Graphs with Given Expected Degree Sequences.
+Aiello, Chung, Lu: A Random Graph Model for Massive Graphs describes a different generative model
+which is basically asymptotically equivalent but produces multi-graphs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>degreeSequence</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – Input degree sequence used to generate the graph.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.ChungLuGenerator.fit">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.ChungLuGenerator.fit" title="Link to this definition">¶</a></dt>
+<dd><p>Fit model to input graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>scale</strong> (<em>int</em><em>, </em><em>optional</em>) – Scale the maximum number of nodes by a factor. Default: 1</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A new scaled graph.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.ClusteredRandomGraphGenerator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">ClusteredRandomGraphGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">count</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pout</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.ClusteredRandomGraphGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.generators.StaticGraphGenerator" title="networkit.generators.StaticGraphGenerator"><code class="xref py py-class docutils literal notranslate"><span class="pre">StaticGraphGenerator</span></code></a></p>
+<p>The ClusteredRandomGraphGenerator class is used to create a clustered random graph.</p>
+<p>The number of nodes and the number of edges are adjustable as well as the probabilities
+for intra-cluster and inter-cluster edges.</p>
+<p>In parallel the generated graph is not deterministic. To ensure determinism, use a single thread.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> (<em>int</em>) – Number of nodes.</p></li>
+<li><p><strong>k</strong> (<em>int</em>) – Number of clusters.</p></li>
+<li><p><strong>pin</strong> (<em>float</em>) – Intra-cluster edge probability.</p></li>
+<li><p><strong>pout</strong> (<em>float</em>) – Inter-cluster edge probability.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.ClusteredRandomGraphGenerator.getCommunities">
+<span class="sig-name descname"><span class="pre">getCommunities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.ClusteredRandomGraphGenerator.getCommunities" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the generated ground truth clustering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The generated ground truth clustering.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>networkit.Partition</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.generators.ConfigurationModelGenerator">
+<span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">ConfigurationModelGenerator</span></span><a class="headerlink" href="#networkit.generators.ConfigurationModelGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#networkit.generators.EdgeSwitchingMarkovChainGenerator" title="networkit.generators.EdgeSwitchingMarkovChainGenerator"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeSwitchingMarkovChainGenerator</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.DorogovtsevMendesGenerator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">DorogovtsevMendesGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nNodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.DorogovtsevMendesGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.generators.StaticGraphGenerator" title="networkit.generators.StaticGraphGenerator"><code class="xref py py-class docutils literal notranslate"><span class="pre">StaticGraphGenerator</span></code></a></p>
+<p>Generates a graph according to the Dorogovtsev-Mendes model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>nNodes</strong> (<em>int</em>) – Number of nodes in the target graph.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.DorogovtsevMendesGenerator.fit">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.DorogovtsevMendesGenerator.fit" title="Link to this definition">¶</a></dt>
+<dd><p>Fit model to input graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>scale</strong> (<em>int</em><em>, </em><em>optional</em>) – Scale the maximum number of nodes by a factor. Default: 1</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A new scaled graph.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.DynamicDorogovtsevMendesGenerator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">DynamicDorogovtsevMendesGenerator</span></span><a class="headerlink" href="#networkit.generators.DynamicDorogovtsevMendesGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Generates a graph according to the Dorogovtsev-Mendes model.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.DynamicDorogovtsevMendesGenerator.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nSteps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.DynamicDorogovtsevMendesGenerator.generate" title="Link to this definition">¶</a></dt>
+<dd><p>Generate event stream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>nSteps</strong> (<em>int</em>) – Number of time steps in the event stream.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of graph events.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(<a class="reference internal" href="dynamics.html#networkit.dynamics.GraphEvent" title="networkit.dynamics.GraphEvent">networkit.dynamics.GraphEvent</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.DynamicForestFireGenerator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">DynamicForestFireGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.DynamicForestFireGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Generates a graph according to the forest fire model. The forest fire generative model produces dynamic
+graphs with the properties heavy tailed, degree distribution communities, densification, power law, shrinking diameter.</p>
+<p>See Leskovec, Kleinberg, Faloutsos: Graphs over Tim: Densification Laws,
+Shringking Diameters and Possible Explanations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>p</strong> (<em>float</em>) – Forward burning probability.</p></li>
+<li><p><strong>directed</strong> (<em>bool</em>) – Decides whether the resulting graph should be directed.</p></li>
+<li><p><strong>r</strong> (<em>float</em><em>, </em><em>optional</em>) – Backward burning probability. Default 1.0</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.DynamicForestFireGenerator.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nSteps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.DynamicForestFireGenerator.generate" title="Link to this definition">¶</a></dt>
+<dd><p>Generate event stream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>nSteps</strong> (<em>int</em>) – Number of time steps in the event stream.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of graph events.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(<a class="reference internal" href="dynamics.html#networkit.dynamics.GraphEvent" title="networkit.dynamics.GraphEvent">networkit.dynamics.GraphEvent</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.DynamicHyperbolicGenerator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">DynamicHyperbolicGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numNodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avgDegree</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moveEachStep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moveDistance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.DynamicHyperbolicGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Dynamic graph generator according to the hyperbolic unit disk model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>numNodes</strong> (<em>int</em>) – Number of nodes.</p></li>
+<li><p><strong>avgDegree</strong> (<em>float</em>) – Average degree of the resulting graph. Default: 6.0</p></li>
+<li><p><strong>gamma</strong> (<em>float</em>) – Power-law exponent of the resulting graph. Default: 3.0</p></li>
+<li><p><strong>T</strong> (<em>float</em>) – Temperature, selecting a graph family on the continuum between hyperbolic unit disk graphs and Erdos-Renyi graphs. Default: 0.0</p></li>
+<li><p><strong>moveEachStep</strong> (<em>float</em>) – Fraction of nodes to be moved in each time step. The nodes are chosen randomly each step. Default: 1.0</p></li>
+<li><p><strong>moveDistance</strong> (<em>float</em>) – Base value for the node movements. Default: 0.1</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.DynamicHyperbolicGenerator.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nSteps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.DynamicHyperbolicGenerator.generate" title="Link to this definition">¶</a></dt>
+<dd><p>Generate event stream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>nSteps</strong> (<em>int</em>) – Number of time steps in the event stream.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of graph events.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(<a class="reference internal" href="dynamics.html#networkit.dynamics.GraphEvent" title="networkit.dynamics.GraphEvent">networkit.dynamics.GraphEvent</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.DynamicHyperbolicGenerator.getCoordinates">
+<span class="sig-name descname"><span class="pre">getCoordinates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.DynamicHyperbolicGenerator.getCoordinates" title="Link to this definition">¶</a></dt>
+<dd><p>Get coordinates in the Poincare disk.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2D coordinates for every node in the graph.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(tuple(float,float))</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.DynamicHyperbolicGenerator.getGraph">
+<span class="sig-name descname"><span class="pre">getGraph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.DynamicHyperbolicGenerator.getGraph" title="Link to this definition">¶</a></dt>
+<dd><p>Return current graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current graph.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.DynamicPathGenerator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">DynamicPathGenerator</span></span><a class="headerlink" href="#networkit.generators.DynamicPathGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Example dynamic graph generator: Generates a dynamically growing path.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.DynamicPathGenerator.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nSteps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.DynamicPathGenerator.generate" title="Link to this definition">¶</a></dt>
+<dd><p>Generate event stream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>nSteps</strong> (<em>int</em>) – Number of time steps in the event stream.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of graph events.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(<a class="reference internal" href="dynamics.html#networkit.dynamics.GraphEvent" title="networkit.dynamics.GraphEvent">networkit.dynamics.GraphEvent</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.DynamicPubWebGenerator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">DynamicPubWebGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numNodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberOfDenseAreas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neighborhoodRadius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxNumberOfNeighbors</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.DynamicPubWebGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Dynamic variant of networkit.generators.PubWebGenerator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>numNodes</strong> (<em>int</em>) – Up to a few thousand (possibly more if visualization is not desired and quadratic
+time complexity has been resolved)</p></li>
+<li><p><strong>numberOfDenseAreas</strong> (<em>int</em>) – Depending on number of nodes, e.g. [8, 50]</p></li>
+<li><p><strong>neighborhoodRadius</strong> (<em>float</em>) – The higher, the better the connectivity [0.1, 0.35]</p></li>
+<li><p><strong>maxNumberOfNeighbors</strong> (<em>int</em>) – Maximum degree, a higher value corresponds to better connectivity [4, 40]</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.DynamicPubWebGenerator.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nSteps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.DynamicPubWebGenerator.generate" title="Link to this definition">¶</a></dt>
+<dd><p>Generate event stream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>nSteps</strong> (<em>int</em>) – Number of time steps in the event stream.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of graph events.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(<a class="reference internal" href="dynamics.html#networkit.dynamics.GraphEvent" title="networkit.dynamics.GraphEvent">networkit.dynamics.GraphEvent</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.DynamicPubWebGenerator.getCoordinates">
+<span class="sig-name descname"><span class="pre">getCoordinates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.DynamicPubWebGenerator.getCoordinates" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a list of coordinates from the current state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2D coordinates of all nodes in the graph.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(tuple(float,float))</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.DynamicPubWebGenerator.getGraph">
+<span class="sig-name descname"><span class="pre">getGraph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.DynamicPubWebGenerator.getGraph" title="Link to this definition">¶</a></dt>
+<dd><p>Returns current graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The resulting graph.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.DynamicPubWebGenerator.getNewCoordinates">
+<span class="sig-name descname"><span class="pre">getNewCoordinates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.DynamicPubWebGenerator.getNewCoordinates" title="Link to this definition">¶</a></dt>
+<dd><p>Get list of nodes and coordinates of points added during last generate call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of node ids and corresponding coordinates.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(int, tuple(float,float))</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.EdgeSwitchingMarkovChainGenerator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">EdgeSwitchingMarkovChainGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">degreeSequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignoreIfNotRealizable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numSwitchesPerEdge</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.EdgeSwitchingMarkovChainGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.generators.StaticGraphGenerator" title="networkit.generators.StaticGraphGenerator"><code class="xref py py-class docutils literal notranslate"><span class="pre">StaticGraphGenerator</span></code></a></p>
+<p>Graph generator for generating a random simple graph with exactly the given degree sequence based on the Edge-Switching Markov-Chain method.</p>
+<p>This implementation is based on the paper
+“Random generation of large connected simple graphs with prescribed degree distribution” by Fabien Viger and Matthieu Latapy,
+available at <a class="reference external" href="http://www-rp.lip6.fr/~latapy/FV/generation.html">http://www-rp.lip6.fr/~latapy/FV/generation.html</a>, however without preserving connectivity (this could later be added as
+optional feature).</p>
+<p>The Havel-Hakami generator is used for the initial graph generation, then the Markov-Chain Monte-Carlo algorithm as described and
+implemented by Fabien Viger and Matthieu Latapy but without the steps for ensuring connectivity is executed. This should lead to a
+graph that is drawn uniformly at random from all graphs with the given degree sequence.</p>
+<p>Note that at most 10 times the number of edges edge swaps are performed (same number as in the abovementioned implementation) and
+in order to limit the running time, at most 200 times as many attempts to perform an edge swap are made (as certain degree distributions
+do not allow edge swaps at all).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>degreeSequence</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – The degree sequence that shall be generated.</p></li>
+<li><p><strong>ignoreIfNotRealizable</strong> (<em>bool</em><em>, </em><em>optional</em>) – If true, generate the graph even if the degree sequence is not realizable.
+Some nodes may get lower degrees than requested in the sequence. Default: False</p></li>
+<li><p><strong>numSwitchesPerEdge</strong> (<em>int</em><em>, </em><em>optional</em>) – Average number of edge switches per edge produced. Default: 10</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.EdgeSwitchingMarkovChainGenerator.fit">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.EdgeSwitchingMarkovChainGenerator.fit" title="Link to this definition">¶</a></dt>
+<dd><p>Fit model to input graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>scale</strong> (<em>int</em><em>, </em><em>optional</em>) – Scale the maximum number of nodes by a factor. Default: 1</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A new scaled graph.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.EdgeSwitchingMarkovChainGenerator.getRealizable">
+<span class="sig-name descname"><span class="pre">getRealizable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.EdgeSwitchingMarkovChainGenerator.getRealizable" title="Link to this definition">¶</a></dt>
+<dd><p>Get realizable state without testing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Indicator for realizable degree sequence.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.EdgeSwitchingMarkovChainGenerator.isRealizable">
+<span class="sig-name descname"><span class="pre">isRealizable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.EdgeSwitchingMarkovChainGenerator.isRealizable" title="Link to this definition">¶</a></dt>
+<dd><p>Test if degree sequence is realizable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Indicator for realizable degree sequence.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.ErdosRenyiGenerator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">ErdosRenyiGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">count</span> <span class="pre">nNodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">double</span> <span class="pre">prob</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selfLoops</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.ErdosRenyiGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.generators.StaticGraphGenerator" title="networkit.generators.StaticGraphGenerator"><code class="xref py py-class docutils literal notranslate"><span class="pre">StaticGraphGenerator</span></code></a></p>
+<p>Creates random graphs in the G(n,p) model.
+The generation follows Vladimir Batagelj and Ulrik Brandes: “Efficient
+generation of large random networks”, Phys Rev E 71, 036113 (2005).</p>
+<p>Creates G(nNodes, prob) graphs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nNodes</strong> (<em>int</em>) – Number of nodes n in the graph.</p></li>
+<li><p><strong>prob</strong> (<em>float</em>) – Probability of existence for each edge p.</p></li>
+<li><p><strong>directed</strong> (<em>bool</em><em>, </em><em>optional</em>) – Generates a directed graph. Default: False.</p></li>
+<li><p><strong>selfLoops</strong> (<em>bool</em><em>, </em><em>optional</em>) – Allows self-loops to be generated (only for directed graphs). Default: False.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.ErdosRenyiGenerator.fit">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.ErdosRenyiGenerator.fit" title="Link to this definition">¶</a></dt>
+<dd><p>Fit model to input graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>scale</strong> (<em>int</em><em>, </em><em>optional</em>) – Scale the maximum number of nodes by a factor. Default: 1</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A new scaled graph.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.HavelHakimiGenerator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">HavelHakimiGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignoreIfRealizable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.HavelHakimiGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.generators.StaticGraphGenerator" title="networkit.generators.StaticGraphGenerator"><code class="xref py py-class docutils literal notranslate"><span class="pre">StaticGraphGenerator</span></code></a></p>
+<p>Havel-Hakimi algorithm for generating a graph according to a given degree sequence.</p>
+<p>The sequence, if it is realizable, is reconstructed exactly. The resulting graph usually
+has a high clustering coefficient. Construction runs in linear time O(m).</p>
+<p>If the sequence is not realizable, depending on the parameter ignoreIfRealizable, either
+an exception is thrown during generation or the graph is generated with a modified degree
+sequence, i.e. not all nodes might have as many neighbors as requested.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sequence</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – Degree sequence to realize. Must be non-increasing.</p></li>
+<li><p><strong>ignoreIfRealizable</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, generate the graph even if the degree sequence is not realizable. Some nodes may get lower degrees than requested in the sequence. Default: True</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.HavelHakimiGenerator.getRealizable">
+<span class="sig-name descname"><span class="pre">getRealizable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.HavelHakimiGenerator.getRealizable" title="Link to this definition">¶</a></dt>
+<dd><p>Get realizable state without testing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Indicator for realizable degree sequence.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.HavelHakimiGenerator.isRealizable">
+<span class="sig-name descname"><span class="pre">isRealizable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.HavelHakimiGenerator.isRealizable" title="Link to this definition">¶</a></dt>
+<dd><p>Test if degree sequence is realizable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Indicator for realizable degree sequence.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.HyperbolicGenerator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">HyperbolicGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.HyperbolicGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.generators.StaticGraphGenerator" title="networkit.generators.StaticGraphGenerator"><code class="xref py py-class docutils literal notranslate"><span class="pre">StaticGraphGenerator</span></code></a></p>
+<p>The Hyperbolic Generator distributes points in hyperbolic space and adds edges between points
+with a probability depending on their distance. The resulting graphs have a power-law degree
+distribution, small diameter and high clustering coefficient.
+For a temperature of 0, the model resembles a unit-disk model in hyperbolic space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> (<em>int</em>) – Number of nodes.</p></li>
+<li><p><strong>k</strong> (<em>float</em><em>, </em><em>optional</em>) – Average degree. Default: 6.0</p></li>
+<li><p><strong>gamma</strong> (<em>float</em><em>, </em><em>optional</em>) – Exponent of power-law degree distribution. Default: 3.0</p></li>
+<li><p><strong>T</strong> (<em>float</em><em>, </em><em>optional</em>) – Temperature of statistical model. Default: 0.0</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.HyperbolicGenerator.fit">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.HyperbolicGenerator.fit" title="Link to this definition">¶</a></dt>
+<dd><p>Fit model to input graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>scale</strong> (<em>int</em><em>, </em><em>optional</em>) – Scale the maximum number of nodes by a factor. Default: 1</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A new scaled graph.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.HyperbolicGenerator.generate_advanced">
+<span class="sig-name descname"><span class="pre">generate_advanced</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radii</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">T</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.HyperbolicGenerator.generate_advanced" title="Link to this definition">¶</a></dt>
+<dd><p>Generate a graph with overriding parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angles</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – List with angles of node positions.</p></li>
+<li><p><strong>radii</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – List with radii of node positions.</p></li>
+<li><p><strong>R</strong> (<em>float</em>) – Radius of poincare disk to place nodes in.</p></li>
+<li><p><strong>T</strong> (<em>float</em><em>, </em><em>optional</em>) – Edges are added for nodes closer to each other than threshold T. Default: 0.0</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.HyperbolicGenerator.getElapsedMilliseconds">
+<span class="sig-name descname"><span class="pre">getElapsedMilliseconds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.HyperbolicGenerator.getElapsedMilliseconds" title="Link to this definition">¶</a></dt>
+<dd><p>Get running time of generator for each.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Running time of the generator for each thread.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.HyperbolicGenerator.setBalance">
+<span class="sig-name descname"><span class="pre">setBalance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">balance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.HyperbolicGenerator.setBalance" title="Link to this definition">¶</a></dt>
+<dd><p>Set the balance of the quadtree. Value should be between 0.0 and 1.0.
+Without modification this is set to 0.5.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>balance</strong> (<em>float</em>) – Balance factor between 0.0 and 1.0.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.HyperbolicGenerator.setLeafCapacity">
+<span class="sig-name descname"><span class="pre">setLeafCapacity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">capacity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.HyperbolicGenerator.setLeafCapacity" title="Link to this definition">¶</a></dt>
+<dd><p>Set the capacity of a quadtree leaf.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>capacity</strong> (<em>int</em>) – Tuning parameter.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.HyperbolicGenerator.setTheoreticalSplit">
+<span class="sig-name descname"><span class="pre">setTheoreticalSplit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theoreticalSplit</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.HyperbolicGenerator.setTheoreticalSplit" title="Link to this definition">¶</a></dt>
+<dd><p>When using a theoretically optimal split, the quadtree will be flatter,
+but running time usually longer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>theoreticalSplit</strong> (<em>bool</em>) – Whether to use the theoretically optimal split. Default: False.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.LFRGenerator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">LFRGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.LFRGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
+<p>The LFR clustered graph generator as introduced by Andrea Lancichinetti, Santo Fortunato, and Filippo Radicchi.</p>
+<p>The community assignment follows the algorithm described in
+“Benchmark graphs for testing community detection algorithms”. The edge generation is however taken from their follow-up publication
+“Benchmarks for testing community detection algorithms on directed and weighted graphs with overlapping communities”. Parts of the
+implementation follow the choices made in their implementation which is available at <a class="reference external" href="https://sites.google.com/site/andrealancichinetti/software">https://sites.google.com/site/andrealancichinetti/software</a>
+but other parts differ, for example some more checks for the realizability of the community and degree size distributions are done
+instead of heavily modifying the distributions.</p>
+<p>The edge-switching markov-chain algorithm implementation in NetworKit is used which is different from the implementation in the original LFR benchmark.</p>
+<p>You need to set a degree sequence, a community size sequence and a mu using the additionally provided set- or generate-methods.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>n</strong> (<em>int</em>) – The number of nodes.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.LFRGenerator.fit">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vanilla</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">communityDetectionAlgorithm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">PLM</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plfit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.LFRGenerator.fit" title="Link to this definition">¶</a></dt>
+<dd><p>Fit model to input graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>scale</strong> (<em>int</em><em>, </em><em>optional</em>) – Scale the maximum number of nodes by a factor. Default: 1</p></li>
+<li><p><strong>vanilla</strong> (<em>bool</em><em>, </em><em>optional</em>) – If set to True, fit power law to degree distribution. Otherwise fit to community sequence.</p></li>
+<li><p><strong>communityDetectionAlgorithm</strong> (<em>nk.community.CommunityDetector</em><em>, </em><em>optional</em>) – Community detection algorithm used for fitting. Default: nk.community.PLM</p></li>
+<li><p><strong>plfit</strong> (<em>bool</em><em>, </em><em>optional</em>) – If set to True, power law fitting is enabled. Default: False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A new scaled graph.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.LFRGenerator.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">useReferenceImplementation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.LFRGenerator.generate" title="Link to this definition">¶</a></dt>
+<dd><p>Generates and returns the graph. Wrapper for the StaticGraphGenerator interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>useReferenceImplementation</strong> (<em>bool</em>) – Sets whether the reference implmentation should be used for generating. Default: False</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The generated graph.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.LFRGenerator.generatePowerlawCommunitySizeSequence">
+<span class="sig-name descname"><span class="pre">generatePowerlawCommunitySizeSequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minCommunitySize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxCommunitySize</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">communitySizeExp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.LFRGenerator.generatePowerlawCommunitySizeSequence" title="Link to this definition">¶</a></dt>
+<dd><p>Generate a powerlaw community size sequence with the given minimum and maximum size and the given exponent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>minCommunitySize</strong> (<em>int</em>) – The minimum community size.</p></li>
+<li><p><strong>maxCommunitySize</strong> (<em>int</em>) – The maximum community size.</p></li>
+<li><p><strong>communitySizeExp</strong> (<em>float</em>) – The (negative) community size exponent of the power law degree distribution of the community sizes.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.LFRGenerator.generatePowerlawDegreeSequence">
+<span class="sig-name descname"><span class="pre">generatePowerlawDegreeSequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">avgDegree</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxDegree</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodeDegreeExp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.LFRGenerator.generatePowerlawDegreeSequence" title="Link to this definition">¶</a></dt>
+<dd><p>Generate and set a power law degree sequence using the given average and maximum degree with the given exponent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>avgDegree</strong> (<em>int</em>) – The average degree of the created graph.</p></li>
+<li><p><strong>maxDegree</strong> (<em>int</em>) – The maximum degree of the created graph.</p></li>
+<li><p><strong>nodeDegreeExp</strong> (<em>float</em>) – The (negative) exponent of the power law degree distribution of the node degrees.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.LFRGenerator.getGraph">
+<span class="sig-name descname"><span class="pre">getGraph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.LFRGenerator.getGraph" title="Link to this definition">¶</a></dt>
+<dd><p>Return the generated Graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The generated graph.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.LFRGenerator.getPartition">
+<span class="sig-name descname"><span class="pre">getPartition</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.LFRGenerator.getPartition" title="Link to this definition">¶</a></dt>
+<dd><p>Return the generated Partiton.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The generated partition.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>networkit.Partition</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.LFRGenerator.setCommunitySizeSequence">
+<span class="sig-name descname"><span class="pre">setCommunitySizeSequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">communitySizeSequence</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.LFRGenerator.setCommunitySizeSequence" title="Link to this definition">¶</a></dt>
+<dd><p>Set the given community size sequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>communitySizeSequence</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – The community sizes that shall be used.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.LFRGenerator.setDegreeSequence">
+<span class="sig-name descname"><span class="pre">setDegreeSequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">degreeSequence</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.LFRGenerator.setDegreeSequence" title="Link to this definition">¶</a></dt>
+<dd><p>Set the given degree sequence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>degreeSequence</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – The degree sequence that shall be used by the generator.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.LFRGenerator.setMu">
+<span class="sig-name descname"><span class="pre">setMu</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.LFRGenerator.setMu" title="Link to this definition">¶</a></dt>
+<dd><p>Set the mixing parameter, this is the fraction of neighbors of each node that do not belong to the node’s own community.</p>
+<p>This can either be one value for all nodes or an iterable of values for each node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mu</strong> (<em>float</em><em> or </em><em>list</em><em>(</em><em>float</em><em>)</em>) – The mixing coefficient(s), i.e. the factor of the degree that shall be inter-cluster degree</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.LFRGenerator.setMuWithBinomialDistribution">
+<span class="sig-name descname"><span class="pre">setMuWithBinomialDistribution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.LFRGenerator.setMuWithBinomialDistribution" title="Link to this definition">¶</a></dt>
+<dd><p>Set the internal degree of each node using a binomial distribution such that the expected mixing parameter is the given &#64;a mu.</p>
+<p>The mixing parameter is for each node the fraction of neighbors that do not belong to the node’s own community.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>mu</strong> (<em>float</em>) – The expected mu that shall be used.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.LFRGenerator.setPartition">
+<span class="sig-name descname"><span class="pre">setPartition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zeta</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.LFRGenerator.setPartition" title="Link to this definition">¶</a></dt>
+<dd><p>Set the partition, this replaces the community size sequence and the random assignment of the nodes to communities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>zeta</strong> (<em>networkit.Partition</em>) – The partition to use.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.LFRGenerator.setPathToReferenceImplementationDir">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">setPathToReferenceImplementationDir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.LFRGenerator.setPathToReferenceImplementationDir" title="Link to this definition">¶</a></dt>
+<dd><p>Helper function for fit. Sets an output folder for writing the result to.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – String containing a path.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.MocnikGenerator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">MocnikGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weighted</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.MocnikGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.generators.StaticGraphGenerator" title="networkit.generators.StaticGraphGenerator"><code class="xref py py-class docutils literal notranslate"><span class="pre">StaticGraphGenerator</span></code></a></p>
+<p>Creates random spatial graphs according to the Mocnik model (improved algorithm).</p>
+<p>Please cite the following publications, in which you will find a
+description of the model:</p>
+<p>Franz-Benjamin Mocnik: “The Polynomial Volume Law of Complex Networks in
+the Context of Local and Global Optimization”, Scientific Reports 8(11274)
+2018. doi: 10.1038/s41598-018-29131-0</p>
+<p>Franz-Benjamin Mocnik, Andrew Frank: “Modelling Spatial Structures”,
+Proceedings of the 12th Conference on Spatial Information Theory (COSIT),
+2015, pages 44-64. doi: 10.1007/978-3-319-23374-1_3</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dim</strong> (<em>int</em>) – Dimension of the space.</p></li>
+<li><p><strong>n</strong> (<em>int</em>) – Number of nodes in the graph; or a list containing the numbers
+of nodes in each layer in case of a hierarchical model.</p></li>
+<li><p><strong>k</strong> (<em>float</em>) – Density parameter, determining the ratio of edges to nodes; in
+case of a hierarchical model, also a list of density parameters can be
+provided.</p></li>
+<li><p><strong>weighted</strong> (<em>bool</em><em>, </em><em>optional</em>) – Determines whether weights should be added to the edges;
+in case of a hierarchical model, also a list of relative weights can be
+provided. Default: False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.MocnikGeneratorBasic">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">MocnikGeneratorBasic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dim</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.MocnikGeneratorBasic" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.generators.StaticGraphGenerator" title="networkit.generators.StaticGraphGenerator"><code class="xref py py-class docutils literal notranslate"><span class="pre">StaticGraphGenerator</span></code></a></p>
+<p>Creates random spatial graphs according to the Mocnik model (non-improved algorithm).</p>
+<p>Please cite the following publications, in which you will find a
+description of the model:</p>
+<p>Franz-Benjamin Mocnik: “The Polynomial Volume Law of Complex Networks in
+the Context of Local and Global Optimization”, Scientific Reports 8(11274)
+2018. doi: 10.1038/s41598-018-29131-0</p>
+<p>Franz-Benjamin Mocnik, Andrew Frank: “Modelling Spatial Structures”,
+Proceedings of the 12th Conference on Spatial Information Theory (COSIT),
+2015, pages 44-64. doi: 10.1007/978-3-319-23374-1_3</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dim</strong> (<em>int</em>) – Dimension of the space.</p></li>
+<li><p><strong>n</strong> (<em>int</em>) – Number of nodes in the graph.</p></li>
+<li><p><strong>k</strong> (<em>float</em>) – Density parameter, determining the ratio of edges to nodes.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.PowerlawDegreeSequence">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">PowerlawDegreeSequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minDeg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxDeg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.PowerlawDegreeSequence" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Other calling possibilities:</p>
+<ul class="simple">
+<li><p>PowerlawDegreeSequence(G)</p></li>
+<li><p>PowerlawDegreeSequence(degreeSequence)</p></li>
+</ul>
+<p>Generates a powerlaw degree sequence with the given minimum and maximum degree, the powerlaw exponent gamma</p>
+<p>If a list of degrees or a graph is given instead of a minimum degree, the class uses the minimum and maximum
+value of the sequence and fits the exponent such that the expected average degree is the actual average degree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>minDeg</strong> (<em>int</em>) – The minium degree.</p></li>
+<li><p><strong>maxDeg</strong> (<em>int</em><em>, </em><em>optional</em>) – The maximum degree.</p></li>
+<li><p><strong>gamma</strong> (<em>float</em><em>, </em><em>optional</em>) – The powerlaw exponent. Default: -2.0</p></li>
+<li><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>alternative</em>) – The input graph.</p></li>
+<li><p><strong>degreeSequence</strong> (<em>list</em><em>(</em><em>int</em><em>)</em><em>, </em><em>alternative</em>) – List of degrees to fit.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.PowerlawDegreeSequence.getDegree">
+<span class="sig-name descname"><span class="pre">getDegree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.PowerlawDegreeSequence.getDegree" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a degree drawn at random with a power law distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The generated random degree.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.PowerlawDegreeSequence.getDegreeSequence">
+<span class="sig-name descname"><span class="pre">getDegreeSequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numNodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.PowerlawDegreeSequence.getDegreeSequence" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a degree sequence with even degree sum.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>numNodes</strong> (<em>int</em>) – The number of nodes/degrees that shall be returned.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The generated degree sequence.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.PowerlawDegreeSequence.getExpectedAverageDegree">
+<span class="sig-name descname"><span class="pre">getExpectedAverageDegree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.PowerlawDegreeSequence.getExpectedAverageDegree" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the expected average degree. Note: run needs to be called first.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The expected average degree.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.PowerlawDegreeSequence.getGamma">
+<span class="sig-name descname"><span class="pre">getGamma</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.PowerlawDegreeSequence.getGamma" title="Link to this definition">¶</a></dt>
+<dd><p>Get the exponent gamma.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The exponent gamma.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.PowerlawDegreeSequence.getMaximumDegree">
+<span class="sig-name descname"><span class="pre">getMaximumDegree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.PowerlawDegreeSequence.getMaximumDegree" title="Link to this definition">¶</a></dt>
+<dd><p>Get the maximum degree</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The maximum degree</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.PowerlawDegreeSequence.getMinimumDegree">
+<span class="sig-name descname"><span class="pre">getMinimumDegree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.PowerlawDegreeSequence.getMinimumDegree" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the minimum degree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The minimum degree.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.PowerlawDegreeSequence.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.PowerlawDegreeSequence.run" title="Link to this definition">¶</a></dt>
+<dd><p>Executes the generation of the probability distribution.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.PowerlawDegreeSequence.setGamma">
+<span class="sig-name descname"><span class="pre">setGamma</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.PowerlawDegreeSequence.setGamma" title="Link to this definition">¶</a></dt>
+<dd><p>Set the exponent gamma.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>gamma</strong> (<em>float</em>) – The exponent to set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.PowerlawDegreeSequence.setGammaFromAverageDegree">
+<span class="sig-name descname"><span class="pre">setGammaFromAverageDegree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">avgDeg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minGamma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxGamma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-6</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.PowerlawDegreeSequence.setGammaFromAverageDegree" title="Link to this definition">¶</a></dt>
+<dd><p>Tries to set the powerlaw exponent gamma such that the specified average degree is expected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>avgDeg</strong> (<em>float</em>) – The average degree that shall be approximated.</p></li>
+<li><p><strong>minGamma</strong> (<em>float</em><em>, </em><em>optional</em>) – The minimum gamma to use. Default: -1.0</p></li>
+<li><p><strong>maxGamma</strong> (<em>float</em><em>, </em><em>optional</em>) – The maximum gamma to use. Default: -6.0</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.PowerlawDegreeSequence.setMinimumFromAverageDegree">
+<span class="sig-name descname"><span class="pre">setMinimumFromAverageDegree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">avgDeg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.PowerlawDegreeSequence.setMinimumFromAverageDegree" title="Link to this definition">¶</a></dt>
+<dd><p>Tries to set the minimum degree such that the specified average degree is expected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>avgDeg</strong> (<em>float</em>) – The average degree that shall be approximated.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.PubWebGenerator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">PubWebGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numNodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberOfDenseAreas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neighborhoodRadius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxNumberOfNeighbors</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.PubWebGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.generators.StaticGraphGenerator" title="networkit.generators.StaticGraphGenerator"><code class="xref py py-class docutils literal notranslate"><span class="pre">StaticGraphGenerator</span></code></a></p>
+<p>Generates a static graph that resembles an assumed geometric distribution of nodes in
+a P2P network.</p>
+<p>The basic structure is to distribute points randomly in the unit torus
+and to connect vertices close to each other (at most &#64;a neighRad distance and none of
+them already has &#64;a maxNeigh neighbors). The distribution is chosen to get some areas with
+high density and others with low density. There are &#64;a numDenseAreas dense areas, which can
+overlap. Each area is circular, has a certain position and radius and number of points.
+These values are strored in &#64;a denseAreaXYR and &#64;a numPerArea, respectively.</p>
+<p>Used and described in more detail in J. Gehweiler, H. Meyerhenke: A Distributed
+Diffusive Heuristic for Clustering a Virtual P2P Supercomputer. In Proc. 7th High-Performance
+Grid Computing Workshop (HPGC’10), in conjunction with 24th IEEE Internatl. Parallel and
+Distributed Processing Symposium (IPDPS’10), IEEE, 2010.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>numNodes</strong> (<em>int</em>) – Up to a few thousand (possibly more if visualization is not desired and quadratic
+time complexity has been resolved)</p></li>
+<li><p><strong>numberOfDenseAreas</strong> (<em>int</em>) – Depending on number of nodes, e.g. [8, 50]</p></li>
+<li><p><strong>neighborhoodRadius</strong> (<em>float</em>) – The higher, the better the connectivity [0.1, 0.35]</p></li>
+<li><p><strong>maxNumberOfNeighbors</strong> (<em>int</em>) – Maximum degree, a higher value corresponds to better connectivity [4, 40]</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.PubWebGenerator.getCoordinates">
+<span class="sig-name descname"><span class="pre">getCoordinates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.PubWebGenerator.getCoordinates" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a list of coordinates</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2D coordinates of all nodes in the graph.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(tuple(float,float))</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.RegularRingLatticeGenerator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">RegularRingLatticeGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nNodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nNeighbors</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.RegularRingLatticeGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.generators.StaticGraphGenerator" title="networkit.generators.StaticGraphGenerator"><code class="xref py py-class docutils literal notranslate"><span class="pre">StaticGraphGenerator</span></code></a></p>
+<p>Constructs a regular ring lattice.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nNodes</strong> (<em>int</em>) – Number of nodes in the target graph.</p></li>
+<li><p><strong>nNeighbors</strong> (<em>int</em>) – Number of neighbors on each side of a node.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.RmatGenerator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">RmatGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edgeFactor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weighted</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reduceNodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.RmatGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.generators.StaticGraphGenerator" title="networkit.generators.StaticGraphGenerator"><code class="xref py py-class docutils literal notranslate"><span class="pre">StaticGraphGenerator</span></code></a></p>
+<p>Generates static R-MAT graphs. R-MAT (recursive matrix) graphs are
+random graphs with n=2^scale nodes and m=nedgeFactor edges.
+More details at <a class="reference external" href="http://www.graph500.org">http://www.graph500.org</a> or in the original paper:
+Deepayan Chakrabarti, Yiping Zhan, Christos Faloutsos:
+R-MAT: A Recursive Model for Graph Mining. SDM 2004: 442-446.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scale</strong> (<em>int</em>) – Number of nodes = 2^scale</p></li>
+<li><p><strong>edgeFactor</strong> (<em>int</em>) – Number of edges = number of nodes * edgeFactor</p></li>
+<li><p><strong>a</strong> (<em>float</em>) – Probability for quadrant upper left</p></li>
+<li><p><strong>b</strong> (<em>float</em>) – Probability for quadrant upper right</p></li>
+<li><p><strong>c</strong> (<em>float</em>) – Probability for quadrant lower left</p></li>
+<li><p><strong>d</strong> (<em>float</em>) – Probability for quadrant lower right</p></li>
+<li><p><strong>weighted</strong> (<em>bool</em><em>, </em><em>optional</em>) – Indicates whether the resulting graph should be weighted. Default: False</p></li>
+<li><p><strong>reduceNodes</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of nodes, which should be deleted from the generated graph. Default: 0</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.RmatGenerator.fit">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initiator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kronfit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.RmatGenerator.fit" title="Link to this definition">¶</a></dt>
+<dd><p>Fit model to input graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>scale</strong> (<em>int</em><em>, </em><em>optional</em>) – Scale the maximum number of nodes by a factor. Default: 1</p></li>
+<li><p><strong>initiator</strong> (<em>tuple</em><em>(</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>)</em><em>, </em><em>optional</em>) – Initiate quadrants with custom values. Default: None</p></li>
+<li><p><strong>kronfit</strong> (<em>bool</em><em>, </em><em>optional</em>) – Indicates whether a slower but more accurate fitting functions is used. Default: True</p></li>
+<li><p><strong>iterations</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of iterations. Default: 50</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A new scaled graph.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.RmatGenerator.setPaths">
+<span class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">setPaths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kronfitPath</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.RmatGenerator.setPaths" title="Link to this definition">¶</a></dt>
+<dd><p>Helper function for fit. Sets an output folder for writing the result to.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>kronfitPath</strong> (<em>str</em>) – String containing a path.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.StaticGraphGenerator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">StaticGraphGenerator</span></span><a class="headerlink" href="#networkit.generators.StaticGraphGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Abstract base class for static graph generators</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.generators.StaticGraphGenerator.generate">
+<span class="sig-name descname"><span class="pre">generate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.StaticGraphGenerator.generate" title="Link to this definition">¶</a></dt>
+<dd><p>Generates the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The generated graph.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.generators.WattsStrogatzGenerator">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.generators.</span></span><span class="sig-name descname"><span class="pre">WattsStrogatzGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nNodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nNeighbors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.generators.WattsStrogatzGenerator" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.generators.StaticGraphGenerator" title="networkit.generators.StaticGraphGenerator"><code class="xref py py-class docutils literal notranslate"><span class="pre">StaticGraphGenerator</span></code></a></p>
+<p>Generates a graph according to the Watts-Strogatz model.</p>
+<p>First, a regular ring lattice is generated. Then edges are rewired
+with a given probability.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nNodes</strong> (<em>int</em>) – Number of nodes in the target graph.</p></li>
+<li><p><strong>nNeighbors</strong> (<em>int</em>) – Number of neighbors on each side of a node.</p></li>
+<li><p><strong>p</strong> (<em>float</em>) – Rewiring probability.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

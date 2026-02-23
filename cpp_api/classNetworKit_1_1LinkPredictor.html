@@ -1,0 +1,299 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Class LinkPredictor</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class LocalClusteringCoefficient" href="classNetworKit_1_1LocalClusteringCoefficient.html" />
+    <link rel="prev" title="Class LineFileReader" href="classNetworKit_1_1LineFileReader.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#directories">Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#pages">Pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="class-linkpredictor">
+<span id="exhale-class-classnetworkit-1-1linkpredictor"></span><h1>Class LinkPredictor<a class="headerlink" href="#class-linkpredictor" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_networkit_linkprediction_LinkPredictor.hpp.html#file-include-networkit-linkprediction-linkpredictor-hpp"><span class="std std-ref">File LinkPredictor.hpp</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Link to this heading">¶</a></h2>
+<section id="derived-types">
+<h3>Derived Types<a class="headerlink" href="#derived-types" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::AdamicAdarIndex</span></code> (<a class="reference internal" href="classNetworKit_1_1AdamicAdarIndex.html#exhale-class-classnetworkit-1-1adamicadarindex"><span class="std std-ref">Class AdamicAdarIndex</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::AdjustedRandIndex</span></code> (<a class="reference internal" href="classNetworKit_1_1AdjustedRandIndex.html#exhale-class-classnetworkit-1-1adjustedrandindex"><span class="std std-ref">Class AdjustedRandIndex</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::AlgebraicDistanceIndex</span></code> (<a class="reference internal" href="classNetworKit_1_1AlgebraicDistanceIndex.html#exhale-class-classnetworkit-1-1algebraicdistanceindex"><span class="std std-ref">Class AlgebraicDistanceIndex</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::CommonNeighborsIndex</span></code> (<a class="reference internal" href="classNetworKit_1_1CommonNeighborsIndex.html#exhale-class-classnetworkit-1-1commonneighborsindex"><span class="std std-ref">Class CommonNeighborsIndex</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::JaccardIndex</span></code> (<a class="reference internal" href="classNetworKit_1_1JaccardIndex.html#exhale-class-classnetworkit-1-1jaccardindex"><span class="std std-ref">Class JaccardIndex</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::KatzIndex</span></code> (<a class="reference internal" href="classNetworKit_1_1KatzIndex.html#exhale-class-classnetworkit-1-1katzindex"><span class="std std-ref">Class KatzIndex</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::NeighborhoodDistanceIndex</span></code> (<a class="reference internal" href="classNetworKit_1_1NeighborhoodDistanceIndex.html#exhale-class-classnetworkit-1-1neighborhooddistanceindex"><span class="std std-ref">Class NeighborhoodDistanceIndex</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::NeighborsMeasureIndex</span></code> (<a class="reference internal" href="classNetworKit_1_1NeighborsMeasureIndex.html#exhale-class-classnetworkit-1-1neighborsmeasureindex"><span class="std std-ref">Class NeighborsMeasureIndex</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::PreferentialAttachmentIndex</span></code> (<a class="reference internal" href="classNetworKit_1_1PreferentialAttachmentIndex.html#exhale-class-classnetworkit-1-1preferentialattachmentindex"><span class="std std-ref">Class PreferentialAttachmentIndex</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::ResourceAllocationIndex</span></code> (<a class="reference internal" href="classNetworKit_1_1ResourceAllocationIndex.html#exhale-class-classnetworkit-1-1resourceallocationindex"><span class="std std-ref">Class ResourceAllocationIndex</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::SameCommunityIndex</span></code> (<a class="reference internal" href="classNetworKit_1_1SameCommunityIndex.html#exhale-class-classnetworkit-1-1samecommunityindex"><span class="std std-ref">Class SameCommunityIndex</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::TotalNeighborsIndex</span></code> (<a class="reference internal" href="classNetworKit_1_1TotalNeighborsIndex.html#exhale-class-classnetworkit-1-1totalneighborsindex"><span class="std std-ref">Class TotalNeighborsIndex</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::UDegreeIndex</span></code> (<a class="reference internal" href="classNetworKit_1_1UDegreeIndex.html#exhale-class-classnetworkit-1-1udegreeindex"><span class="std std-ref">Class UDegreeIndex</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::VDegreeIndex</span></code> (<a class="reference internal" href="classNetworKit_1_1VDegreeIndex.html#exhale-class-classnetworkit-1-1vdegreeindex"><span class="std std-ref">Class VDegreeIndex</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13LinkPredictorE">
+<span class="target" id="classNetworKit_1_1LinkPredictor"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LinkPredictor</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit13LinkPredictorE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Abstract base class for link predictors. </p>
+<p>Subclassed by <a class="reference internal" href="classNetworKit_1_1AdamicAdarIndex.html#classNetworKit_1_1AdamicAdarIndex"><span class="std std-ref">NetworKit::AdamicAdarIndex</span></a>, <a class="reference internal" href="classNetworKit_1_1AdjustedRandIndex.html#classNetworKit_1_1AdjustedRandIndex"><span class="std std-ref">NetworKit::AdjustedRandIndex</span></a>, <a class="reference internal" href="classNetworKit_1_1AlgebraicDistanceIndex.html#classNetworKit_1_1AlgebraicDistanceIndex"><span class="std std-ref">NetworKit::AlgebraicDistanceIndex</span></a>, <a class="reference internal" href="classNetworKit_1_1CommonNeighborsIndex.html#classNetworKit_1_1CommonNeighborsIndex"><span class="std std-ref">NetworKit::CommonNeighborsIndex</span></a>, <a class="reference internal" href="classNetworKit_1_1JaccardIndex.html#classNetworKit_1_1JaccardIndex"><span class="std std-ref">NetworKit::JaccardIndex</span></a>, <a class="reference internal" href="classNetworKit_1_1KatzIndex.html#classNetworKit_1_1KatzIndex"><span class="std std-ref">NetworKit::KatzIndex</span></a>, <a class="reference internal" href="classNetworKit_1_1NeighborhoodDistanceIndex.html#classNetworKit_1_1NeighborhoodDistanceIndex"><span class="std std-ref">NetworKit::NeighborhoodDistanceIndex</span></a>, <a class="reference internal" href="classNetworKit_1_1NeighborsMeasureIndex.html#classNetworKit_1_1NeighborsMeasureIndex"><span class="std std-ref">NetworKit::NeighborsMeasureIndex</span></a>, <a class="reference internal" href="classNetworKit_1_1PreferentialAttachmentIndex.html#classNetworKit_1_1PreferentialAttachmentIndex"><span class="std std-ref">NetworKit::PreferentialAttachmentIndex</span></a>, <a class="reference internal" href="classNetworKit_1_1ResourceAllocationIndex.html#classNetworKit_1_1ResourceAllocationIndex"><span class="std std-ref">NetworKit::ResourceAllocationIndex</span></a>, <a class="reference internal" href="classNetworKit_1_1SameCommunityIndex.html#classNetworKit_1_1SameCommunityIndex"><span class="std std-ref">NetworKit::SameCommunityIndex</span></a>, <a class="reference internal" href="classNetworKit_1_1TotalNeighborsIndex.html#classNetworKit_1_1TotalNeighborsIndex"><span class="std std-ref">NetworKit::TotalNeighborsIndex</span></a>, <a class="reference internal" href="classNetworKit_1_1UDegreeIndex.html#classNetworKit_1_1UDegreeIndex"><span class="std std-ref">NetworKit::UDegreeIndex</span></a>, <a class="reference internal" href="classNetworKit_1_1VDegreeIndex.html#classNetworKit_1_1VDegreeIndex"><span class="std std-ref">NetworKit::VDegreeIndex</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13LinkPredictor10predictionE">
+<span class="target" id="classNetworKit_1_1LinkPredictor_1a82b561824d83f5602437f6669a3b1472"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">prediction</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N9NetworKit13LinkPredictor10predictionE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Type of predictions. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13LinkPredictor13LinkPredictorEv">
+<span class="target" id="classNetworKit_1_1LinkPredictor_1afe20eb654f941e1252bf298547d51d51"></span><span class="sig-name descname"><span class="n"><span class="pre">LinkPredictor</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit13LinkPredictor13LinkPredictorEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13LinkPredictor13LinkPredictorERK5Graph">
+<span class="target" id="classNetworKit_1_1LinkPredictor_1a362d5abdea4f03a8447c6dfcf7026138"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LinkPredictor</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit13LinkPredictor13LinkPredictorERK5Graph" title="Link to this definition">¶</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> – The graph to work on </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13LinkPredictorD0Ev">
+<span class="target" id="classNetworKit_1_1LinkPredictor_1a77624ff262557f17f5776146714c7c53"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~LinkPredictor</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N9NetworKit13LinkPredictorD0Ev" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Default destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13LinkPredictor8setGraphERK5Graph">
+<span class="target" id="classNetworKit_1_1LinkPredictor_1a6aa5e86e8189b85469b5a5d8fd74e3f9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setGraph</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newGraph</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit13LinkPredictor8setGraphERK5Graph" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Sets the graph to work on. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>newGraph</strong> – The graph to work on </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13LinkPredictor3runE4node4node">
+<span class="target" id="classNetworKit_1_1LinkPredictor_1a8cae678e1873a53273d14ab5b3d182ec"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit13LinkPredictor3runE4node4node" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Returns a score indicating the likelihood of a future link between the given nodes. Prior to calling this method a graph should be provided through the constructor or by calling setGraph. Note that only undirected graphs are accepted. There is also no lower or upper bound for scores and the actual range of values depends on the specific link predictor implementation. In case <em>u</em> == <em>v</em> a 0 is returned. If suitable this method might make use of parallelization to enhance performance. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> – First node in graph </p></li>
+<li><p><strong>v</strong> – Second node in graph </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a prediction-score indicating the likelihood of a future link between the given nodes </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13LinkPredictor5runOnENSt6vectorINSt4pairI4node4nodeEEEE">
+<span class="target" id="classNetworKit_1_1LinkPredictor_1a9016dac5bac7911edcb7fee6155513c2"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N9NetworKit13LinkPredictor10predictionE" title="NetworKit::LinkPredictor::prediction"><span class="n"><span class="pre">prediction</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">runOn</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nodePairs</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit13LinkPredictor5runOnENSt6vectorINSt4pairI4node4nodeEEEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Executes the run-method on al given <em>nodePairs</em> and returns a vector of predictions. The result is a vector of pairs where the first element is the node-pair and it’s second element the corresponding score generated by the run-method. The method makes use of parallelization. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>nodePairs</strong> – Node-pairs to run the predictor on </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a vector of pairs containing the given node-pair as the first element and it’s corresponding score as the second element. The vector is sorted ascendingly by node-pair </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13LinkPredictor6runAllEv">
+<span class="target" id="classNetworKit_1_1LinkPredictor_1ad7f0900ab8765bedd5984f9fede47d23"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N9NetworKit13LinkPredictor10predictionE" title="NetworKit::LinkPredictor::prediction"><span class="n"><span class="pre">prediction</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">runAll</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit13LinkPredictor6runAllEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Runs the link predictor on all currently unconnected node-pairs. Possible self-loops are also excluded. The method makes use of parallelization. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a vector of pairs containing all currently unconnected node-pairs as the first elements and the corresponding scores as the second elements. The vector is sorted ascendingly by node-pair </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13LinkPredictor1GE">
+<span class="target" id="classNetworKit_1_1LinkPredictor_1a5615ae56c5bfc07d14e22c026d3856ea"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">G</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit13LinkPredictor1GE" title="Link to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="classNetworKit_1_1Graph.html#classNetworKit_1_1Graph"><span class="std std-ref">Graph</span></a> to operate on. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13LinkPredictor10validCacheE">
+<span class="target" id="classNetworKit_1_1LinkPredictor_1ad180b1985cfcf21b8fa643bc441f5ef8"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">validCache</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit13LinkPredictor10validCacheE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Indicates whether a possibly used cache is valid. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

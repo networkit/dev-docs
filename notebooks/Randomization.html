@@ -1,0 +1,598 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>NetworKit Randomization Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NetworKit Reachability Tutorial" href="Reachability.html" />
+    <link rel="prev" title="Plot Tutorial" href="Plot.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../notebooks.html#tutorial-notebooks">Tutorial Notebooks</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="User-Guide.html">NetworKit User Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="User-Guide.html#Profiling">Profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Centrality.html">Centrality Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Community.html">Community Detection with NetworKit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Distance.html">NetworKit Distance Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Dynamics.html">Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Generators.html">NetworKit Graph Generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GraphNotebook.html">NetworKit Graph Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GroupCentrality.html">Group Centrality Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="IONotebook.html">NetworKit graph I/O tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LinkPrediction.html">Link Prediction with NetworKit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LinkPrediction.html#Link-prediction-algorithms">Link prediction algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LinkPrediction.html#Link-sampling-and-link-prediction">Link sampling and link prediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Plot.html">Plot Tutorial</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">NetworKit Randomization Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Reachability.html">NetworKit Reachability Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Sparsification.html">NetworKit Sparsification Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Visualization.html">NetworKit Visualization Tutorial</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="NetworKit-Randomization-Tutorial">
+<h1>NetworKit Randomization Tutorial<a class="headerlink" href="#NetworKit-Randomization-Tutorial" title="Link to this heading">¶</a></h1>
+<p>The randomization module implements algorithms to perturb existing graphs. This is commonly used to obtain a null-model for hypothesis testing in network analysis (see below for an example). Intuitively one tests whether an observation in original also appears in <em>similar</em> graphs. By doing so one can quantify the statistical significance of the observation. The ensemble of <em>similar</em> networks is commonly chosen as the set of (simple) graphs that have the same degree sequence.</p>
+<p>Edge Switching is a commonly used Markov Chain approach for this purpose. In every step it selects two edges uniformly at random and exchanges one endpoint of each. While no practical rigorous bounds on the mixing time are known, in literature typically 10 to 100 times the number of edges is used.</p>
+<p>The Curveball algorithms creates a random sample with the same degree sequence, by repeatedly selecting two random nodes and randomly exchanging their neighbourhoods (this is referred to as a trade). This corresponds to a random walk on the space of all graphs in the ensemble. The more trades are carried out, the less correlated input and output are. While there a no practical lower bounds, one typically choose 10 to 100 times the number n of nodes.</p>
+<p>GlobalCurveball is a related algorithm that is typically faster than Curveball. Also it’s implementation is more versatile (e.g., it support directed and undirected graphs). In each step it carries out n/2 trades involving all nodes. A typical choice of the number of GlobalTrades is 10 to 100. <strong>We recommend the usage of GlobalCurveball over Curveball for performance reasons</strong>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">networkit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nk</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script type="text/javascript">
+<!--
+
+{
+        var element = document.getElementById('NetworKit_script');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('script');
+        element.type = 'text/javascript';
+        element.innerHTML = 'function NetworKit_pageEmbed(id) { var i, j; var elements; elements = document.getElementById(id).getElementsByClassName("Plot"); for (i=0; i<elements.length; i++) { elements[i].id = id + "_Plot_" + i; var data = elements[i].getAttribute("data-image").split("|"); elements[i].removeAttribute("data-image"); var content = "<div class=\\"Image\\" id=\\"" + elements[i].id + "_Image\\" />"; elements[i].innerHTML = content; elements[i].setAttribute("data-image-index", 0); elements[i].setAttribute("data-image-length", data.length); for (j=0; j<data.length; j++) { elements[i].setAttribute("data-image-" + j, data[j]); } NetworKit_plotUpdate(elements[i]); elements[i].onclick = function (e) { NetworKit_overlayShow((e.target) ? e.target : e.srcElement); } } elements = document.getElementById(id).getElementsByClassName("HeatCell"); for (i=0; i<elements.length; i++) { var data = parseFloat(elements[i].getAttribute("data-heat")); var color = "#00FF00"; if (data <= 1 && data > 0) { color = "hsla(0, 100%, 75%, " + (data) + ")"; } else if (data <= 0 && data >= -1) { color = "hsla(240, 100%, 75%, " + (-data) + ")"; } elements[i].style.backgroundColor = color; } elements = document.getElementById(id).getElementsByClassName("Details"); for (i=0; i<elements.length; i++) { elements[i].setAttribute("data-title", "-"); NetworKit_toggleDetails(elements[i]); elements[i].onclick = function (e) { NetworKit_toggleDetails((e.target) ? e.target : e.srcElement); } } elements = document.getElementById(id).getElementsByClassName("MathValue"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "nan") { elements[i].parentNode.innerHTML = "" } } elements = document.getElementById(id).getElementsByClassName("SubCategory"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "") { elements[i].parentNode.removeChild(elements[i]) } } elements = document.getElementById(id).getElementsByClassName("Category"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "") { elements[i].parentNode.removeChild(elements[i]) } } var isFirefox = false; try { isFirefox = typeof InstallTrigger !== "undefined"; } catch (e) {} if (!isFirefox) { alert("Currently the function\'s output is only fully supported by Firefox."); } } function NetworKit_plotUpdate(source) { var index = source.getAttribute("data-image-index"); var data = source.getAttribute("data-image-" + index); var image = document.getElementById(source.id + "_Image"); image.style.backgroundImage = "url(" + data + ")"; } function NetworKit_showElement(id, show) { var element = document.getElementById(id); element.style.display = (show) ? "block" : "none"; } function NetworKit_overlayShow(source) { NetworKit_overlayUpdate(source); NetworKit_showElement("NetworKit_Overlay", true); } function NetworKit_overlayUpdate(source) { document.getElementById("NetworKit_Overlay_Title").innerHTML = source.title; var index = source.getAttribute("data-image-index"); var data = source.getAttribute("data-image-" + index); var image = document.getElementById("NetworKit_Overlay_Image"); image.setAttribute("data-id", source.id); image.style.backgroundImage = "url(" + data + ")"; var link = document.getElementById("NetworKit_Overlay_Toolbar_Bottom_Save"); link.href = data; link.download = source.title + ".svg"; } function NetworKit_overlayImageShift(delta) { var image = document.getElementById("NetworKit_Overlay_Image"); var source = document.getElementById(image.getAttribute("data-id")); var index = parseInt(source.getAttribute("data-image-index")); var length = parseInt(source.getAttribute("data-image-length")); var index = (index+delta) % length; if (index < 0) { index = length + index; } source.setAttribute("data-image-index", index); NetworKit_overlayUpdate(source); } function NetworKit_toggleDetails(source) { var childs = source.children; var show = false; if (source.getAttribute("data-title") == "-") { source.setAttribute("data-title", "+"); show = false; } else { source.setAttribute("data-title", "-"); show = true; } for (i=0; i<childs.length; i++) { if (show) { childs[i].style.display = "block"; } else { childs[i].style.display = "none"; } } }';
+        element.setAttribute('id', 'NetworKit_script');
+        document.head.appendChild(element);
+}
+
+
+{
+        var element = document.getElementById('NetworKit_style');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('style');
+        element.type = 'text/css';
+        element.innerHTML = '.NetworKit_Page { font-family: Arial, Helvetica, sans-serif; font-size: 14px; } .NetworKit_Page .Value:before { font-family: Arial, Helvetica, sans-serif; font-size: 1.05em; content: attr(data-title) ":"; margin-left: -2.5em; padding-right: 0.5em; } .NetworKit_Page .Details .Value:before { display: block; } .NetworKit_Page .Value { font-family: monospace; white-space: pre; padding-left: 2.5em; white-space: -moz-pre-wrap !important; white-space: -pre-wrap; white-space: -o-pre-wrap; white-space: pre-wrap; word-wrap: break-word; tab-size: 4; -moz-tab-size: 4; } .NetworKit_Page .Category { clear: both; padding-left: 1em; margin-bottom: 1.5em; } .NetworKit_Page .Category:before { content: attr(data-title); font-size: 1.75em; display: block; margin-left: -0.8em; margin-bottom: 0.5em; } .NetworKit_Page .SubCategory { margin-bottom: 1.5em; padding-left: 1em; } .NetworKit_Page .SubCategory:before { font-size: 1.6em; display: block; margin-left: -0.8em; margin-bottom: 0.5em; } .NetworKit_Page .SubCategory[data-title]:before { content: attr(data-title); } .NetworKit_Page .Block { display: block; } .NetworKit_Page .Block:after { content: "."; visibility: hidden; display: block; height: 0; clear: both; } .NetworKit_Page .Block .Thumbnail_Overview, .NetworKit_Page .Block .Thumbnail_ScatterPlot { width: 260px; float: left; } .NetworKit_Page .Block .Thumbnail_Overview img, .NetworKit_Page .Block .Thumbnail_ScatterPlot img { width: 260px; } .NetworKit_Page .Block .Thumbnail_Overview:before, .NetworKit_Page .Block .Thumbnail_ScatterPlot:before { display: block; text-align: center; font-weight: bold; } .NetworKit_Page .Block .Thumbnail_Overview:before { content: attr(data-title); } .NetworKit_Page .HeatCell { font-family: "Courier New", Courier, monospace; cursor: pointer; } .NetworKit_Page .HeatCell, .NetworKit_Page .HeatCellName { display: inline; padding: 0.1em; margin-right: 2px; background-color: #FFFFFF } .NetworKit_Page .HeatCellName { margin-left: 0.25em; } .NetworKit_Page .HeatCell:before { content: attr(data-heat); display: inline-block; color: #000000; width: 4em; text-align: center; } .NetworKit_Page .Measure { clear: both; } .NetworKit_Page .Measure .Details { cursor: pointer; } .NetworKit_Page .Measure .Details:before { content: "[" attr(data-title) "]"; display: block; } .NetworKit_Page .Measure .Details .Value { border-left: 1px dotted black; margin-left: 0.4em; padding-left: 3.5em; pointer-events: none; } .NetworKit_Page .Measure .Details .Spacer:before { content: "."; opacity: 0.0; pointer-events: none; } .NetworKit_Page .Measure .Plot { width: 440px; height: 440px; cursor: pointer; float: left; margin-left: -0.9em; margin-right: 20px; } .NetworKit_Page .Measure .Plot .Image { background-repeat: no-repeat; background-position: center center; background-size: contain; height: 100%; pointer-events: none; } .NetworKit_Page .Measure .Stat { width: 500px; float: left; } .NetworKit_Page .Measure .Stat .Group { padding-left: 1.25em; margin-bottom: 0.75em; } .NetworKit_Page .Measure .Stat .Group .Title { font-size: 1.1em; display: block; margin-bottom: 0.3em; margin-left: -0.75em; border-right-style: dotted; border-right-width: 1px; border-bottom-style: dotted; border-bottom-width: 1px; background-color: #D0D0D0; padding-left: 0.2em; } .NetworKit_Page .Measure .Stat .Group .List { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; } .NetworKit_Page .Measure .Stat .Group .List .Entry { position: relative; line-height: 1.75em; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:before { position: absolute; left: 0; top: -40px; background-color: #808080; color: #ffffff; height: 30px; line-height: 30px; border-radius: 5px; padding: 0 15px; content: attr(data-tooltip); white-space: nowrap; display: none; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:after { position: absolute; left: 15px; top: -10px; border-top: 7px solid #808080; border-left: 7px solid transparent; border-right: 7px solid transparent; content: ""; display: none; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:hover:after, .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:hover:before { display: block; } .NetworKit_Page .Measure .Stat .Group .List .Entry .MathValue { font-family: "Courier New", Courier, monospace; } .NetworKit_Page .Measure:after { content: "."; visibility: hidden; display: block; height: 0; clear: both; } .NetworKit_Page .PartitionPie { clear: both; } .NetworKit_Page .PartitionPie img { width: 600px; } #NetworKit_Overlay { left: 0px; top: 0px; display: none; position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 1000; } #NetworKit_Overlay_Title { position: absolute; color: white; transform: rotate(-90deg); width: 32em; height: 32em; padding-right: 0.5em; padding-top: 0.5em; text-align: right; font-size: 40px; } #NetworKit_Overlay .button { background: white; cursor: pointer; } #NetworKit_Overlay .button:before { size: 13px; display: inline-block; text-align: center; margin-top: 0.5em; margin-bottom: 0.5em; width: 1.5em; height: 1.5em; } #NetworKit_Overlay .icon-close:before { content: "X"; } #NetworKit_Overlay .icon-previous:before { content: "P"; } #NetworKit_Overlay .icon-next:before { content: "N"; } #NetworKit_Overlay .icon-save:before { content: "S"; } #NetworKit_Overlay_Toolbar_Top, #NetworKit_Overlay_Toolbar_Bottom { position: absolute; width: 40px; right: 13px; text-align: right; z-index: 1100; } #NetworKit_Overlay_Toolbar_Top { top: 0.5em; } #NetworKit_Overlay_Toolbar_Bottom { Bottom: 0.5em; } #NetworKit_Overlay_ImageContainer { position: absolute; top: 5%; left: 5%; height: 90%; width: 90%; background-repeat: no-repeat; background-position: center center; background-size: contain; } #NetworKit_Overlay_Image { height: 100%; width: 100%; background-repeat: no-repeat; background-position: center center; background-size: contain; }';
+        element.setAttribute('id', 'NetworKit_style');
+        document.head.appendChild(element);
+}
+
+
+{
+        var element = document.getElementById('NetworKit_Overlay');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('div');
+        element.innerHTML = '<div id="NetworKit_Overlay_Toolbar_Top"><div class="button icon-close" id="NetworKit_Overlay_Close" /></div><div id="NetworKit_Overlay_Title" /> <div id="NetworKit_Overlay_ImageContainer"> <div id="NetworKit_Overlay_Image" /> </div> <div id="NetworKit_Overlay_Toolbar_Bottom"> <div class="button icon-previous" onclick="NetworKit_overlayImageShift(-1)" /> <div class="button icon-next" onclick="NetworKit_overlayImageShift(1)" /> <a id="NetworKit_Overlay_Toolbar_Bottom_Save"><div class="button icon-save" /></a> </div>';
+        element.setAttribute('id', 'NetworKit_Overlay');
+        document.body.appendChild(element);
+        document.getElementById('NetworKit_Overlay_Close').onclick = function (e) {
+                document.getElementById('NetworKit_Overlay').style.display = 'none';
+        }
+}
+
+-->
+</script></div>
+</div>
+<section id="Global-Curveball">
+<h2>Global Curveball<a class="headerlink" href="#Global-Curveball" title="Link to this heading">¶</a></h2>
+<p>The Global Curveball class is an implementation of EM-GCB proposed in <code class="docutils literal notranslate"><span class="pre">Parallel</span> <span class="pre">and</span> <span class="pre">I/O-efficient</span> <span class="pre">Randomisation</span> <span class="pre">of</span> <span class="pre">Massive</span> <span class="pre">Networks</span> <span class="pre">using</span> <span class="pre">Global</span> <span class="pre">Curveball</span> <span class="pre">Trades&quot;,</span> <span class="pre">Carstens</span> <span class="pre">et</span> <span class="pre">al.,</span> <span class="pre">ESA</span> <span class="pre">2018</span></code>. The algorithm perturbs an input graph, by iteratively randomizing the neighbourhoods of node pairs. For a large number of global trades this process is shown to produce a uniform sample from the set of all graphs with the same degree sequence as the input graph.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">GlobalCurveball(G,</span> <span class="pre">number_of_global_rounds=20,</span> <span class="pre">allowSelfLoops=False,</span> <span class="pre">degreePreservingShufflePreprocessing=True)</span></code> constructor expecs a graph, followed by the parameter <code class="docutils literal notranslate"><span class="pre">number_of_global_rounds</span></code> which dictactes the number of global rounds to carry out. To accelerate the perturbation process we recommend to set degreePreservingShufflePreprocessing to true. This jump-starts the randomization process and yields faster convergence of the algorithm (see “Smaller Universes for Uniform Sampling
+of 0,1-matrices with fixed row and column sums” * by Annabell Berger, Corrie Jacobien Carstens [<a class="reference external" href="https://arxiv.org/abs/1803.02624">https://arxiv.org/abs/1803.02624</a>]). For directed simple graphs the algorithm will not yield a uniform sample unless the preprocessing is enabled.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/karate.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">numberOfNodes</span><span class="p">(),</span> <span class="n">G</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+34 78
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">globalCurve</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">randomization</span><span class="o">.</span><span class="n">GlobalCurveball</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run algorithm</span>
+<span class="n">globalCurve</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.randomization.GlobalCurveball at 0x7fd2b0146130&gt;
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get randomized graph</span>
+<span class="n">randomGlobalG</span> <span class="o">=</span> <span class="n">globalCurve</span><span class="o">.</span><span class="n">getGraph</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verify</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">randomGlobalG</span><span class="o">.</span><span class="n">numberOfNodes</span><span class="p">(),</span> <span class="n">randomGlobalG</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">())</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">randomGlobalG</span><span class="o">.</span><span class="n">numberOfNodes</span><span class="p">()</span> <span class="o">==</span> <span class="n">G</span><span class="o">.</span><span class="n">numberOfNodes</span><span class="p">())</span>
+<span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">randomGlobalG</span><span class="o">.</span><span class="n">upperNodeIdBound</span><span class="p">()):</span>
+    <span class="k">assert</span><span class="p">(</span><span class="n">randomGlobalG</span><span class="o">.</span><span class="n">degree</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">==</span> <span class="n">G</span><span class="o">.</span><span class="n">degree</span><span class="p">(</span><span class="n">u</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+34 78
+</pre></div></div>
+</div>
+<section id="Application-example">
+<h3>Application example<a class="headerlink" href="#Application-example" title="Link to this heading">¶</a></h3>
+<p>Our hypothesis is that Hyperbolic Graphs (RHGs) have a high clustering. To test the hypothesis we first obtain an RHG and compute its local clustering coefficient. Then, we compute five random graphs with the same degree sequence and observe that their mean LCC score is much lower. This gives empirical support towards our hypothesis.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">llcScore</span><span class="p">(</span><span class="n">G</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Compute average local clustering coefficient&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">LocalClusteringCoefficient</span><span class="p">(</span><span class="n">G</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">()</span><span class="o">.</span><span class="n">scores</span><span class="p">())</span> <span class="o">/</span> <span class="n">G</span><span class="o">.</span><span class="n">numberOfNodes</span><span class="p">()</span>
+
+<span class="c1"># Hyperbolic graphs are known to have an above average clustering</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">generators</span><span class="o">.</span><span class="n">HyperbolicGenerator</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">generate</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Avg. clustering of input:         </span><span class="si">%.3f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">llcScore</span><span class="p">(</span><span class="n">G</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="c1"># Take 5 random graphs with the same degree sequence</span>
+    <span class="n">sampledGraph</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">randomization</span><span class="o">.</span><span class="n">GlobalCurveball</span><span class="p">(</span><span class="n">G</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">()</span><span class="o">.</span><span class="n">getGraph</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Avg. clustering of random sample: </span><span class="si">%.3f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">llcScore</span><span class="p">(</span><span class="n">sampledGraph</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Avg. clustering of input:         0.795
+Avg. clustering of random sample: 0.077
+Avg. clustering of random sample: 0.069
+Avg. clustering of random sample: 0.070
+Avg. clustering of random sample: 0.077
+Avg. clustering of random sample: 0.072
+</pre></div></div>
+</div>
+</section>
+</section>
+<section id="Curveball">
+<h2>Curveball<a class="headerlink" href="#Curveball" title="Link to this heading">¶</a></h2>
+<p>The Curveball class in an implementation of IM-CB proposed in <code class="docutils literal notranslate"><span class="pre">Parallel</span> <span class="pre">and</span> <span class="pre">I/O-efficient</span> <span class="pre">Randomisation</span> <span class="pre">of</span> <span class="pre">Massive</span> <span class="pre">Networks</span> <span class="pre">using</span> <span class="pre">Global</span> <span class="pre">Curveball</span> <span class="pre">Trades&quot;,</span> <span class="pre">Carstens</span> <span class="pre">et</span> <span class="pre">al.,</span> <span class="pre">ESA</span> <span class="pre">2018</span></code>. The algorithm perturbs an undirected and unweighted input graph, by iteratively randomizing the neighbourhoods of node pairs.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">Curveball(G)</span></code> constructor expects an undirected, unweighted graph. This class does not support the <code class="docutils literal notranslate"><span class="pre">run()</span></code> method; it instead provides the <code class="docutils literal notranslate"><span class="pre">run(trades)</span></code> method. The parameter <code class="docutils literal notranslate"><span class="pre">trades</span></code> is a vector of pairs of nodes. The <code class="docutils literal notranslate"><span class="pre">run</span></code> method can be called multiple times.</p>
+<p>Following is an example:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/celegans_metabolic.thrill&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">ThrillBinary</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">numberOfNodes</span><span class="p">(),</span> <span class="n">G</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+453 2025
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">curve</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">randomization</span><span class="o">.</span><span class="n">Curveball</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">CurveballUniformTradeGenerator(num_trades,</span> <span class="pre">num_nodes)</span></code> class can be used to generate trades. <code class="docutils literal notranslate"><span class="pre">num_trades</span></code> is the number of trades to generate while <code class="docutils literal notranslate"><span class="pre">num_nodes</span></code> is the number of node indices to draw from. It generates a trade sequence consisting of <code class="docutils literal notranslate"><span class="pre">num_trades</span></code> many single trades. Each trade contains two different node indices drawn uniformly at random from the interval [0, num_nodes).</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate trade sequence</span>
+<span class="n">utg</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">randomization</span><span class="o">.</span><span class="n">CurveballUniformTradeGenerator</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">numberOfNodes</span><span class="p">(),</span> <span class="n">G</span><span class="o">.</span><span class="n">numberOfNodes</span><span class="p">())</span>
+<span class="n">trades</span> <span class="o">=</span> <span class="n">utg</span><span class="o">.</span><span class="n">generate</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run algorithm</span>
+<span class="n">curve</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">trades</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.randomization.Curveball at 0x7fd26b6c7b30&gt;
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get randomized graph</span>
+<span class="n">randomCurveG</span> <span class="o">=</span> <span class="n">curve</span><span class="o">.</span><span class="n">getGraph</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verify</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">randomCurveG</span><span class="o">.</span><span class="n">numberOfNodes</span><span class="p">(),</span> <span class="n">randomCurveG</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">())</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">randomCurveG</span><span class="o">.</span><span class="n">numberOfNodes</span><span class="p">()</span> <span class="o">==</span> <span class="n">G</span><span class="o">.</span><span class="n">numberOfNodes</span><span class="p">())</span>
+<span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">randomCurveG</span><span class="o">.</span><span class="n">upperNodeIdBound</span><span class="p">()):</span>
+    <span class="k">assert</span><span class="p">(</span><span class="n">randomCurveG</span><span class="o">.</span><span class="n">degree</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">==</span> <span class="n">G</span><span class="o">.</span><span class="n">degree</span><span class="p">(</span><span class="n">u</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+453 2025
+</pre></div></div>
+</div>
+</section>
+<section id="DegreePreservingShuffle">
+<h2>DegreePreservingShuffle<a class="headerlink" href="#DegreePreservingShuffle" title="Link to this heading">¶</a></h2>
+<p>DegreePreservingShuffle is available as a standalone module. It will relabel nodes while keeping their degrees but wont change the topology of the graph. The constructor <code class="docutils literal notranslate"><span class="pre">DegreePreservingShuffle(G)</span></code> expects a directed or undirected graph.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">generators</span><span class="o">.</span><span class="n">ErdosRenyiGenerator</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span><span class="o">.</span><span class="n">generate</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialze algorithm</span>
+<span class="n">dps</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">randomization</span><span class="o">.</span><span class="n">DegreePreservingShuffle</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run algorithm</span>
+<span class="n">dps</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.randomization.DegreePreservingShuffle at 0x7fd26b5837b0&gt;
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">randomG</span> <span class="o">=</span> <span class="n">dps</span><span class="o">.</span><span class="n">getGraph</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verify</span>
+<span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">upperNodeIdBound</span><span class="p">()):</span>
+    <span class="k">assert</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">degree</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">==</span> <span class="n">randomG</span><span class="o">.</span><span class="n">degree</span><span class="p">(</span><span class="n">u</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="Edge-Switching-Markov-Chain">
+<h2>Edge Switching Markov Chain<a class="headerlink" href="#Edge-Switching-Markov-Chain" title="Link to this heading">¶</a></h2>
+<p>Edge Switching Markov Chain [“The markov chain simulation method for generating connected power law random graphs”, Mihail and Zegura] perturbs simple directed or undirected graphs while preserving the node degrees. In each step, two edges are selected uniformly at random, and two endpoints exchanged. Swaps that introduce multi-edges or self-loops are rejected <em>without</em> replacement – this is necessary to allow uniform sampling [see “Switching edges to randomize networks: what goes wrong and how
+to fix it”, Carstens and Horadam].</p>
+<p>In general, simple edge switching does not yield a uniform distribution on simple <strong>directed</strong> graphs because the orientation of a directed triangles cannot be changed. Using DegreePreservingShuffle as a preprocessing step overcomes this limitation. For convenience this is done by default for any graph to heuristically accelerate mixing.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">generators</span><span class="o">.</span><span class="n">ErdosRenyiGenerator</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span><span class="o">.</span><span class="n">generate</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialze algorithm</span>
+<span class="n">es</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">randomization</span><span class="o">.</span><span class="n">EdgeSwitching</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run algorithm</span>
+<span class="n">es</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">randomG</span> <span class="o">=</span> <span class="n">es</span><span class="o">.</span><span class="n">getGraph</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Verify</span>
+<span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">upperNodeIdBound</span><span class="p">()):</span>
+    <span class="k">assert</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">degree</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">==</span> <span class="n">randomG</span><span class="o">.</span><span class="n">degree</span><span class="p">(</span><span class="n">u</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<section id="Inplace-Edge-Switching">
+<h3>Inplace Edge Switching<a class="headerlink" href="#Inplace-Edge-Switching" title="Link to this heading">¶</a></h3>
+<p>We offer an in-place variant of <code class="docutils literal notranslate"><span class="pre">nk.randomization.EdgeSwitching</span></code> which is more efficient if the original graph is not needed anymore. The wrapper also takes ownership of the graph, so it’s safe to let the original graph name go out of scope.</p>
+<p>In the following we pick up the previous Local Clustering Coefficient example. This time, however, we are not interested in the average value, but rather in the progress the made as we carry out an increasing number of Markov Chain steps.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">generators</span><span class="o">.</span><span class="n">HyperbolicGenerator</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">generate</span><span class="p">()</span>
+<span class="n">alg</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">randomization</span><span class="o">.</span><span class="n">EdgeSwitchingInPlace</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="c1"># do a few switches</span>
+        <span class="n">alg</span><span class="o">.</span><span class="n">run</span><span class="p">()</span> <span class="c1"># this will update G directly</span>
+
+    <span class="n">score</span> <span class="o">=</span>  <span class="nb">sum</span><span class="p">(</span><span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">LocalClusteringCoefficient</span><span class="p">(</span><span class="n">G</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">()</span><span class="o">.</span><span class="n">scores</span><span class="p">())</span> <span class="o">/</span> <span class="n">G</span><span class="o">.</span><span class="n">numberOfNodes</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After </span><span class="si">% 5d</span><span class="s2"> switches the llc score is </span><span class="si">%.3f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">500</span> <span class="o">*</span> <span class="n">i</span><span class="p">,</span> <span class="n">score</span><span class="p">))</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+After     0 switches the llc score is 0.770
+After   500 switches the llc score is 0.456
+After  1000 switches the llc score is 0.278
+After  1500 switches the llc score is 0.176
+After  2000 switches the llc score is 0.115
+After  2500 switches the llc score is 0.084
+After  3000 switches the llc score is 0.061
+After  3500 switches the llc score is 0.047
+After  4000 switches the llc score is 0.042
+After  4500 switches the llc score is 0.039
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

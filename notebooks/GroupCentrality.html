@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Group Centrality Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NetworKit graph I/O tutorial" href="IONotebook.html" />
+    <link rel="prev" title="NetworKit Graph Tutorial" href="GraphNotebook.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../notebooks.html#tutorial-notebooks">Tutorial Notebooks</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="User-Guide.html">NetworKit User Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="User-Guide.html#Profiling">Profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Centrality.html">Centrality Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Community.html">Community Detection with NetworKit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Distance.html">NetworKit Distance Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Dynamics.html">Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Generators.html">NetworKit Graph Generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GraphNotebook.html">NetworKit Graph Tutorial</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Group Centrality Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="IONotebook.html">NetworKit graph I/O tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LinkPrediction.html">Link Prediction with NetworKit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LinkPrediction.html#Link-prediction-algorithms">Link prediction algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LinkPrediction.html#Link-sampling-and-link-prediction">Link sampling and link prediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Plot.html">Plot Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Randomization.html">NetworKit Randomization Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Reachability.html">NetworKit Reachability Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Sparsification.html">NetworKit Sparsification Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Visualization.html">NetworKit Visualization Tutorial</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="Group-Centrality-Tutorial">
+<h1>Group Centrality Tutorial<a class="headerlink" href="#Group-Centrality-Tutorial" title="Link to this heading">¶</a></h1>
+<p>This notebook covers the group centrality algorithms implemented in NetworKit. Group centrality measures the relative importance of a group of nodes within a graph.</p>
+<p>The documentation of NetworKit group centrality algorithms is available in the <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html">centrality</a> module.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">networkit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nk</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script type="text/javascript">
+<!--
+
+{
+        var element = document.getElementById('NetworKit_script');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('script');
+        element.type = 'text/javascript';
+        element.innerHTML = 'function NetworKit_pageEmbed(id) { var i, j; var elements; elements = document.getElementById(id).getElementsByClassName("Plot"); for (i=0; i<elements.length; i++) { elements[i].id = id + "_Plot_" + i; var data = elements[i].getAttribute("data-image").split("|"); elements[i].removeAttribute("data-image"); var content = "<div class=\\"Image\\" id=\\"" + elements[i].id + "_Image\\" />"; elements[i].innerHTML = content; elements[i].setAttribute("data-image-index", 0); elements[i].setAttribute("data-image-length", data.length); for (j=0; j<data.length; j++) { elements[i].setAttribute("data-image-" + j, data[j]); } NetworKit_plotUpdate(elements[i]); elements[i].onclick = function (e) { NetworKit_overlayShow((e.target) ? e.target : e.srcElement); } } elements = document.getElementById(id).getElementsByClassName("HeatCell"); for (i=0; i<elements.length; i++) { var data = parseFloat(elements[i].getAttribute("data-heat")); var color = "#00FF00"; if (data <= 1 && data > 0) { color = "hsla(0, 100%, 75%, " + (data) + ")"; } else if (data <= 0 && data >= -1) { color = "hsla(240, 100%, 75%, " + (-data) + ")"; } elements[i].style.backgroundColor = color; } elements = document.getElementById(id).getElementsByClassName("Details"); for (i=0; i<elements.length; i++) { elements[i].setAttribute("data-title", "-"); NetworKit_toggleDetails(elements[i]); elements[i].onclick = function (e) { NetworKit_toggleDetails((e.target) ? e.target : e.srcElement); } } elements = document.getElementById(id).getElementsByClassName("MathValue"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "nan") { elements[i].parentNode.innerHTML = "" } } elements = document.getElementById(id).getElementsByClassName("SubCategory"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "") { elements[i].parentNode.removeChild(elements[i]) } } elements = document.getElementById(id).getElementsByClassName("Category"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "") { elements[i].parentNode.removeChild(elements[i]) } } var isFirefox = false; try { isFirefox = typeof InstallTrigger !== "undefined"; } catch (e) {} if (!isFirefox) { alert("Currently the function\'s output is only fully supported by Firefox."); } } function NetworKit_plotUpdate(source) { var index = source.getAttribute("data-image-index"); var data = source.getAttribute("data-image-" + index); var image = document.getElementById(source.id + "_Image"); image.style.backgroundImage = "url(" + data + ")"; } function NetworKit_showElement(id, show) { var element = document.getElementById(id); element.style.display = (show) ? "block" : "none"; } function NetworKit_overlayShow(source) { NetworKit_overlayUpdate(source); NetworKit_showElement("NetworKit_Overlay", true); } function NetworKit_overlayUpdate(source) { document.getElementById("NetworKit_Overlay_Title").innerHTML = source.title; var index = source.getAttribute("data-image-index"); var data = source.getAttribute("data-image-" + index); var image = document.getElementById("NetworKit_Overlay_Image"); image.setAttribute("data-id", source.id); image.style.backgroundImage = "url(" + data + ")"; var link = document.getElementById("NetworKit_Overlay_Toolbar_Bottom_Save"); link.href = data; link.download = source.title + ".svg"; } function NetworKit_overlayImageShift(delta) { var image = document.getElementById("NetworKit_Overlay_Image"); var source = document.getElementById(image.getAttribute("data-id")); var index = parseInt(source.getAttribute("data-image-index")); var length = parseInt(source.getAttribute("data-image-length")); var index = (index+delta) % length; if (index < 0) { index = length + index; } source.setAttribute("data-image-index", index); NetworKit_overlayUpdate(source); } function NetworKit_toggleDetails(source) { var childs = source.children; var show = false; if (source.getAttribute("data-title") == "-") { source.setAttribute("data-title", "+"); show = false; } else { source.setAttribute("data-title", "-"); show = true; } for (i=0; i<childs.length; i++) { if (show) { childs[i].style.display = "block"; } else { childs[i].style.display = "none"; } } }';
+        element.setAttribute('id', 'NetworKit_script');
+        document.head.appendChild(element);
+}
+
+
+{
+        var element = document.getElementById('NetworKit_style');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('style');
+        element.type = 'text/css';
+        element.innerHTML = '.NetworKit_Page { font-family: Arial, Helvetica, sans-serif; font-size: 14px; } .NetworKit_Page .Value:before { font-family: Arial, Helvetica, sans-serif; font-size: 1.05em; content: attr(data-title) ":"; margin-left: -2.5em; padding-right: 0.5em; } .NetworKit_Page .Details .Value:before { display: block; } .NetworKit_Page .Value { font-family: monospace; white-space: pre; padding-left: 2.5em; white-space: -moz-pre-wrap !important; white-space: -pre-wrap; white-space: -o-pre-wrap; white-space: pre-wrap; word-wrap: break-word; tab-size: 4; -moz-tab-size: 4; } .NetworKit_Page .Category { clear: both; padding-left: 1em; margin-bottom: 1.5em; } .NetworKit_Page .Category:before { content: attr(data-title); font-size: 1.75em; display: block; margin-left: -0.8em; margin-bottom: 0.5em; } .NetworKit_Page .SubCategory { margin-bottom: 1.5em; padding-left: 1em; } .NetworKit_Page .SubCategory:before { font-size: 1.6em; display: block; margin-left: -0.8em; margin-bottom: 0.5em; } .NetworKit_Page .SubCategory[data-title]:before { content: attr(data-title); } .NetworKit_Page .Block { display: block; } .NetworKit_Page .Block:after { content: "."; visibility: hidden; display: block; height: 0; clear: both; } .NetworKit_Page .Block .Thumbnail_Overview, .NetworKit_Page .Block .Thumbnail_ScatterPlot { width: 260px; float: left; } .NetworKit_Page .Block .Thumbnail_Overview img, .NetworKit_Page .Block .Thumbnail_ScatterPlot img { width: 260px; } .NetworKit_Page .Block .Thumbnail_Overview:before, .NetworKit_Page .Block .Thumbnail_ScatterPlot:before { display: block; text-align: center; font-weight: bold; } .NetworKit_Page .Block .Thumbnail_Overview:before { content: attr(data-title); } .NetworKit_Page .HeatCell { font-family: "Courier New", Courier, monospace; cursor: pointer; } .NetworKit_Page .HeatCell, .NetworKit_Page .HeatCellName { display: inline; padding: 0.1em; margin-right: 2px; background-color: #FFFFFF } .NetworKit_Page .HeatCellName { margin-left: 0.25em; } .NetworKit_Page .HeatCell:before { content: attr(data-heat); display: inline-block; color: #000000; width: 4em; text-align: center; } .NetworKit_Page .Measure { clear: both; } .NetworKit_Page .Measure .Details { cursor: pointer; } .NetworKit_Page .Measure .Details:before { content: "[" attr(data-title) "]"; display: block; } .NetworKit_Page .Measure .Details .Value { border-left: 1px dotted black; margin-left: 0.4em; padding-left: 3.5em; pointer-events: none; } .NetworKit_Page .Measure .Details .Spacer:before { content: "."; opacity: 0.0; pointer-events: none; } .NetworKit_Page .Measure .Plot { width: 440px; height: 440px; cursor: pointer; float: left; margin-left: -0.9em; margin-right: 20px; } .NetworKit_Page .Measure .Plot .Image { background-repeat: no-repeat; background-position: center center; background-size: contain; height: 100%; pointer-events: none; } .NetworKit_Page .Measure .Stat { width: 500px; float: left; } .NetworKit_Page .Measure .Stat .Group { padding-left: 1.25em; margin-bottom: 0.75em; } .NetworKit_Page .Measure .Stat .Group .Title { font-size: 1.1em; display: block; margin-bottom: 0.3em; margin-left: -0.75em; border-right-style: dotted; border-right-width: 1px; border-bottom-style: dotted; border-bottom-width: 1px; background-color: #D0D0D0; padding-left: 0.2em; } .NetworKit_Page .Measure .Stat .Group .List { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; } .NetworKit_Page .Measure .Stat .Group .List .Entry { position: relative; line-height: 1.75em; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:before { position: absolute; left: 0; top: -40px; background-color: #808080; color: #ffffff; height: 30px; line-height: 30px; border-radius: 5px; padding: 0 15px; content: attr(data-tooltip); white-space: nowrap; display: none; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:after { position: absolute; left: 15px; top: -10px; border-top: 7px solid #808080; border-left: 7px solid transparent; border-right: 7px solid transparent; content: ""; display: none; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:hover:after, .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:hover:before { display: block; } .NetworKit_Page .Measure .Stat .Group .List .Entry .MathValue { font-family: "Courier New", Courier, monospace; } .NetworKit_Page .Measure:after { content: "."; visibility: hidden; display: block; height: 0; clear: both; } .NetworKit_Page .PartitionPie { clear: both; } .NetworKit_Page .PartitionPie img { width: 600px; } #NetworKit_Overlay { left: 0px; top: 0px; display: none; position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 1000; } #NetworKit_Overlay_Title { position: absolute; color: white; transform: rotate(-90deg); width: 32em; height: 32em; padding-right: 0.5em; padding-top: 0.5em; text-align: right; font-size: 40px; } #NetworKit_Overlay .button { background: white; cursor: pointer; } #NetworKit_Overlay .button:before { size: 13px; display: inline-block; text-align: center; margin-top: 0.5em; margin-bottom: 0.5em; width: 1.5em; height: 1.5em; } #NetworKit_Overlay .icon-close:before { content: "X"; } #NetworKit_Overlay .icon-previous:before { content: "P"; } #NetworKit_Overlay .icon-next:before { content: "N"; } #NetworKit_Overlay .icon-save:before { content: "S"; } #NetworKit_Overlay_Toolbar_Top, #NetworKit_Overlay_Toolbar_Bottom { position: absolute; width: 40px; right: 13px; text-align: right; z-index: 1100; } #NetworKit_Overlay_Toolbar_Top { top: 0.5em; } #NetworKit_Overlay_Toolbar_Bottom { Bottom: 0.5em; } #NetworKit_Overlay_ImageContainer { position: absolute; top: 5%; left: 5%; height: 90%; width: 90%; background-repeat: no-repeat; background-position: center center; background-size: contain; } #NetworKit_Overlay_Image { height: 100%; width: 100%; background-repeat: no-repeat; background-position: center center; background-size: contain; }';
+        element.setAttribute('id', 'NetworKit_style');
+        document.head.appendChild(element);
+}
+
+
+{
+        var element = document.getElementById('NetworKit_Overlay');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('div');
+        element.innerHTML = '<div id="NetworKit_Overlay_Toolbar_Top"><div class="button icon-close" id="NetworKit_Overlay_Close" /></div><div id="NetworKit_Overlay_Title" /> <div id="NetworKit_Overlay_ImageContainer"> <div id="NetworKit_Overlay_Image" /> </div> <div id="NetworKit_Overlay_Toolbar_Bottom"> <div class="button icon-previous" onclick="NetworKit_overlayImageShift(-1)" /> <div class="button icon-next" onclick="NetworKit_overlayImageShift(1)" /> <a id="NetworKit_Overlay_Toolbar_Bottom_Save"><div class="button icon-save" /></a> </div>';
+        element.setAttribute('id', 'NetworKit_Overlay');
+        document.body.appendChild(element);
+        document.getElementById('NetworKit_Overlay_Close').onclick = function (e) {
+                document.getElementById('NetworKit_Overlay').style.display = 'none';
+        }
+}
+
+-->
+</script></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/karate.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<section id="Group-Betweenness">
+<h2>Group Betweenness<a class="headerlink" href="#Group-Betweenness" title="Link to this heading">¶</a></h2>
+<p>Group betweenness measures the importance of a group <span class="math notranslate nohighlight">\(S\)</span> as the fraction of shortest paths connecting pairs of non-group members that pass through <span class="math notranslate nohighlight">\(S\)</span>.</p>
+<p>The constructor <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=approxgr#networkit.centrality.ApproxGroupBetweenness">ApproxGroupBetweenness(G, groupSize, epsilon)</a> expects as inputs an undirected graph, the desired group size <code class="docutils literal notranslate"><span class="pre">groupSize</span></code>, and the accuracy of the approximation <code class="docutils literal notranslate"><span class="pre">epsilon</span></code>.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initalize algorithm</span>
+<span class="n">btwn</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">ApproxGroupBetweenness</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run</span>
+<span class="n">btwn</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.centrality.ApproxGroupBetweenness at 0x7f7c0859b580&gt;
+</pre></div></div>
+</div>
+<p>After running the algorithm, we can extract some information about the group betweenness centrality, e.g. the group with the highest approximate betweenness centrality score.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Group with highest approximate betweenness centrality</span>
+<span class="n">btwn</span><span class="o">.</span><span class="n">groupMaxBetweenness</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[0, 33, 32, 2, 1, 31, 23, 27, 6, 13]
+</pre></div></div>
+</div>
+<p>One may also have a group of nodes and be interested in the group’s betweeness centrality score. The function <a href="#id1"><span class="problematic" id="id2">`scoreOfGroup(group, normalized=False) &lt;&gt;`__</span></a> returns the betweenness centrality score of the list of nodes in <code class="docutils literal notranslate"><span class="pre">group</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an arbitrary group of nodes</span>
+<span class="n">group</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+
+<span class="c1"># Get betweenness centrality score of group</span>
+<span class="n">btwn</span><span class="o">.</span><span class="n">scoreOfGroup</span><span class="p">(</span><span class="n">group</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+59
+</pre></div></div>
+</div>
+</section>
+<section id="Group-Closeness">
+<h2>Group Closeness<a class="headerlink" href="#Group-Closeness" title="Link to this heading">¶</a></h2>
+<p>GroupCloseness measures the importance of a group <span class="math notranslate nohighlight">\(S\)</span> as the inverse of the sum of the distances from all the nodes outside <span class="math notranslate nohighlight">\(S\)</span> to their nearest node in <span class="math notranslate nohighlight">\(S\)</span>.</p>
+<p>In NetworKit, GroupCloseness implements an heuristic greedy algorithm to compute a group of nodes with high group closeness centrality. The algorithm was introduced in “<a class="reference external" href="https://arxiv.org/abs/1710.01144">Scaling up Group Closeness Maximization</a>” Bergamini et al., ALENEX 2018.</p>
+<p>The constructor <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=group#networkit.centrality.GroupCloseness">GroupCloseness(G, k=1, H=0)</a> expects an unweighted graph and the desired group size <code class="docutils literal notranslate"><span class="pre">k</span></code>. If <code class="docutils literal notranslate"><span class="pre">H</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>, all BFSs will explore the graph up to distance <code class="docutils literal notranslate"><span class="pre">H</span></code>. This can speed up the algorithm, at the cost of a lower solution quality.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initalize algorithm</span>
+<span class="n">close</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">GroupCloseness</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run</span>
+<span class="n">close</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.centrality.GroupCloseness at 0x7f7bc3808370&gt;
+</pre></div></div>
+</div>
+<p><a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=groupma#networkit.centrality.GroupCloseness.groupMaxCloseness">groupMaxCloseness()</a> returns the group of <code class="docutils literal notranslate"><span class="pre">k</span></code> nodes computed by the algorithm.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Computed group of nodes</span>
+<span class="n">close</span><span class="o">.</span><span class="n">groupMaxCloseness</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[0, 33, 31, 16, 6, 30, 29, 28, 27, 26]
+</pre></div></div>
+</div>
+<p><a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=scoreof#networkit.centrality.GroupCloseness.scoreOfGroup">scoreOfGroup(group)</a> takes a group of nodes as input, and returns the group’s closeness centrality score. The score is returned as a value between 0 and 1: a score of 1 indicates maximum group closeness centrality.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an arbitrary group of nodes</span>
+<span class="n">group</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+
+<span class="c1"># Get closeness centrality score of group</span>
+<span class="n">close</span><span class="o">.</span><span class="n">scoreOfGroup</span><span class="p">(</span><span class="n">group</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0.5357142857142857
+</pre></div></div>
+</div>
+</section>
+<section id="Local-Search-for-Group-Closeness">
+<h2>Local Search for Group Closeness<a class="headerlink" href="#Local-Search-for-Group-Closeness" title="Link to this heading">¶</a></h2>
+<p>A faster local search algorithm for group closeness is the Grow-Shrink algorithm introduced in <a class="reference external" href="https://ieeexplore.ieee.org/document/9006206">Local Search for Group Closeness Maximization on Big Graphs</a>, Angriman et al., IEEE BigData 2019.</p>
+<p>The algorithm starts from an arbitrary group of vertices and performs local improvements until a local optimum is reached. You need to pass as input a graph and an initial set of nodes. Further, you can specify whether or not to use the extended version of the algorithm (use the <code class="docutils literal notranslate"><span class="pre">extended</span></code> parameter) and how many insertions/removals to perform at each iteration (<code class="docutils literal notranslate"><span class="pre">insertion</span></code> parameter). See the paper for further details about those parameters.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">closenessOfGroup</span><span class="p">(</span><span class="n">group</span><span class="p">):</span>
+    <span class="n">distances</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">nk</span><span class="o">.</span><span class="n">traversal</span><span class="o">.</span><span class="n">Traversal</span><span class="o">.</span><span class="n">BFSfrom</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">group</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">u</span><span class="p">,</span> <span class="n">dist</span><span class="p">:</span> <span class="n">distances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dist</span><span class="p">))</span>
+    <span class="k">return</span> <span class="mf">1.</span> <span class="o">/</span> <span class="nb">sum</span><span class="p">(</span><span class="n">distances</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a random group of vertices</span>
+<span class="n">k</span><span class="p">,</span> <span class="n">group</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="nb">set</span><span class="p">()</span>
+<span class="k">while</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">group</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">):</span>
+    <span class="n">group</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">nk</span><span class="o">.</span><span class="n">graphtools</span><span class="o">.</span><span class="n">randomNode</span><span class="p">(</span><span class="n">G</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Initial group&quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">group</span><span class="p">),</span> <span class="s2">&quot;has score </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">closenessOfGroup</span><span class="p">(</span><span class="n">group</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Initial group [5, 6, 9, 14, 15] has score 0.019
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gs</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">GroupClosenessGrowShrink</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">group</span> <span class="o">=</span> <span class="n">gs</span><span class="o">.</span><span class="n">groupMaxCloseness</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Final group&quot;</span><span class="p">,</span> <span class="n">group</span><span class="p">,</span> <span class="s2">&quot;has score </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">closenessOfGroup</span><span class="p">(</span><span class="n">group</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Final group [32, 0, 2, 14, 5] has score 0.031
+</pre></div></div>
+</div>
+<p>The LS-Restrict algorithm for group closeness only allows swaps between vertices in the group and their neighbors outside. Because it considers less candidates for a swap it is faster than Grow-Shrink, but might yield results with lower quality.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a random group of vertices</span>
+<span class="n">k</span><span class="p">,</span> <span class="n">group</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="nb">set</span><span class="p">()</span>
+<span class="k">while</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">group</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">):</span>
+    <span class="n">group</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">nk</span><span class="o">.</span><span class="n">graphtools</span><span class="o">.</span><span class="n">randomNode</span><span class="p">(</span><span class="n">G</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Initial group&quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">group</span><span class="p">),</span> <span class="s2">&quot;has score </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">closenessOfGroup</span><span class="p">(</span><span class="n">group</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Initial group [3, 9, 11, 26, 27] has score 0.020
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gs</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">GroupClosenessLocalSwaps</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">group</span> <span class="o">=</span> <span class="n">gs</span><span class="o">.</span><span class="n">groupMaxCloseness</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Final group&quot;</span><span class="p">,</span> <span class="n">group</span><span class="p">,</span> <span class="s2">&quot;has score </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">closenessOfGroup</span><span class="p">(</span><span class="n">group</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Final group [0, 27, 26, 11, 9] has score 0.026
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a random group of vertices</span>
+<span class="n">k</span><span class="p">,</span> <span class="n">group</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="nb">set</span><span class="p">()</span>
+<span class="k">while</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">group</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">):</span>
+    <span class="n">group</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">nk</span><span class="o">.</span><span class="n">graphtools</span><span class="o">.</span><span class="n">randomNode</span><span class="p">(</span><span class="n">G</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Initial group&quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">group</span><span class="p">),</span> <span class="s2">&quot;has score </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">close</span><span class="o">.</span><span class="n">scoreOfGroup</span><span class="p">(</span><span class="n">group</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Initial group [2, 8, 15, 23, 31] has score 0.644
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gs</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">GroupClosenessLocalSearch</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">group</span> <span class="o">=</span> <span class="n">gs</span><span class="o">.</span><span class="n">groupMaxCloseness</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Final group&quot;</span><span class="p">,</span> <span class="n">group</span><span class="p">,</span> <span class="s2">&quot;has score </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">close</span><span class="o">.</span><span class="n">scoreOfGroup</span><span class="p">(</span><span class="n">group</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Final group [0, 33, 31, 6, 23] has score 1.000
+</pre></div></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">GroupClosenessLocalSearch</span></code> evaluates all possible single-swaps between vertices in the group and the vertices outside. Its time complexity is <span class="math notranslate nohighlight">\(O(k \cdot (n - k))\)</span>, compared to the aforementioned algorithms for group closeness it is slower, but it yields groups with higher group closeness score.</p>
+</section>
+<section id="Group-Harmonic-Closeness">
+<h2>Group Harmonic Closeness<a class="headerlink" href="#Group-Harmonic-Closeness" title="Link to this heading">¶</a></h2>
+<p>Group Harmonic Closeness interprets the importance of a group <span class="math notranslate nohighlight">\(S\)</span> as the harmonic sum of the distances from the nodes outside <span class="math notranslate nohighlight">\(S\)</span> to their nearest node in <span class="math notranslate nohighlight">\(S\)</span>.</p>
+<p>In NetworKit, GroupHarmonicCloseness implements an heuristic approximation algorithm for group harmonic closeness centrality. The algorithm was introduced in “<a class="reference external" href="https://epubs.siam.org/doi/10.1137/1.9781611976472.12">Group-Harmonic and Group-Closeness Maximization – Approximation and Engineering</a>” Angriman et al., ALENEX 2021.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a random group of vertices</span>
+<span class="n">k</span><span class="p">,</span> <span class="n">group</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="nb">set</span><span class="p">()</span>
+<span class="k">while</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">group</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">):</span>
+    <span class="n">group</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">nk</span><span class="o">.</span><span class="n">graphtools</span><span class="o">.</span><span class="n">randomNode</span><span class="p">(</span><span class="n">G</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Initial group&quot;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">group</span><span class="p">),</span> <span class="s2">&quot;has score </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">close</span><span class="o">.</span><span class="n">scoreOfGroup</span><span class="p">(</span><span class="n">group</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Initial group [32, 12, 13, 19, 22] has score 0.644
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hClose</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">GroupHarmonicCloseness</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">hClose</span><span class="o">.</span><span class="n">groupMaxHarmonicCloseness</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[33, 0, 24, 16, 5, 29, 28, 27, 26, 25]
+</pre></div></div>
+</div>
+</section>
+<section id="Group-Degree">
+<h2>Group Degree<a class="headerlink" href="#Group-Degree" title="Link to this heading">¶</a></h2>
+<p>Group Degree measures the importance of a group of nodes <span class="math notranslate nohighlight">\(S\)</span> as the number of non group members that can be reached from <span class="math notranslate nohighlight">\(S\)</span> in one hop. The algorithm implemented in NetworKit is a greedy algorithm that find an approximation of the group with the highest group degree centrality.</p>
+<p>The constructor <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=groupdegree#networkit.centrality.GroupDegree">GroupDegree(G, k = 1, countGroupNodes = True)</a> expects a graph, the desired group size <code class="docutils literal notranslate"><span class="pre">k</span></code>, and a boolean <code class="docutils literal notranslate"><span class="pre">countGroupNodes</span></code> stating if nodes inside the group should be counted in the centrality score. By default, the nodes are included in the centrality score. Note that, in order to have a fixed <span class="math notranslate nohighlight">\((1 - 1/e)\)</span> approximation guarantee,
+<code class="docutils literal notranslate"><span class="pre">countGroupNodes</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initalize algorithm</span>
+<span class="n">degree</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">GroupDegree</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run</span>
+<span class="n">degree</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.centrality.GroupDegree at 0x7f7bc3809240&gt;
+</pre></div></div>
+</div>
+<p><a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=groupma#networkit.centrality.GroupDegree.groupMaxDegree">groupMaxDegree()</a> returns the group of <code class="docutils literal notranslate"><span class="pre">k</span></code> nodes computed by the algorithm.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Group with high degree centrality</span>
+<span class="n">degree</span><span class="o">.</span><span class="n">groupMaxDegree</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[33, 0, 31, 6, 16, 5, 27, 25, 24, 23]
+</pre></div></div>
+</div>
+<p><a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=scoreof#networkit.centrality.GroupDegree.scoreOfGroup">scoreOfGroup(group)</a> takes a group of nodes as input parameter, and returns the group’s degree centrality score.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an arbitrary group of nodes</span>
+<span class="n">group</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+
+<span class="c1"># Get degree centrality score of group</span>
+<span class="n">degree</span><span class="o">.</span><span class="n">scoreOfGroup</span><span class="p">(</span><span class="n">group</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+11
+</pre></div></div>
+</div>
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

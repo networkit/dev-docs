@@ -1,0 +1,1122 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>networkit.sparsification</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="networkit.stats" href="stats.html" />
+    <link rel="prev" title="networkit.simulation" href="simulation.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="networkit.html">networkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algebraic.html">networkit.algebraic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="base.html">networkit.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="centrality.html">networkit.centrality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clique.html">networkit.clique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coarsening.html">networkit.coarsening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coloring.html">networkit.coloring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="community.html">networkit.community</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">networkit.components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="correlation.html">networkit.correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="distance.html">networkit.distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamic.html">networkit.dynamic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamics.html">networkit.dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynbase.html">networkit.dynbase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="embedding.html">networkit.embedding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engineering.html">networkit.engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow.html">networkit.flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generators.html">networkit.generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gephi.html">networkit.gephi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="globals.html">networkit.globals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graph.html">networkit.graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphio.html">networkit.graphio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphtools.html">networkit.graphtools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="helpers.html">networkit.helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="independentset.html">networkit.independentset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkprediction.html">networkit.linkprediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matching.html">networkit.matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nxadapter.html">networkit.nxadapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot.html">networkit.plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">networkit.profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="randomization.html">networkit.randomization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reachability.html">networkit.reachability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scd.html">networkit.scd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html">networkit.simulation</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">networkit.sparsification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stats.html">networkit.stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structures.html">networkit.structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="traversal.html">networkit.traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viz.html">networkit.viz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vizbridges.html">networkit.vizbridges</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="module-networkit.sparsification">
+<span id="networkit-sparsification"></span><h1>networkit.sparsification<a class="headerlink" href="#module-networkit.sparsification" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.AlgebraicDistanceSparsifier">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">AlgebraicDistanceSparsifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numberSystems</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberIterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.AlgebraicDistanceSparsifier" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sparsifier</span></code></a></p>
+<p>Allows for global filtering with respect to (inverted) algebraic distances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>numberSystems</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of vectors/systems used for algebraic iteration. Default: 10</p></li>
+<li><p><strong>numberIterations</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of iterations in each system. Default: 30</p></li>
+<li><p><strong>omega</strong> (<em>float</em><em>, </em><em>optional</em>) – Attenuation factor in [0,1] influencing convergence speed. Default: 0.5</p></li>
+<li><p><strong>norm</strong> (<em>int</em><em>, </em><em>optional</em>) – The norm factor of the extended algebraic distance. Default: 0</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.AlgebraicDistanceSparsifier.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.AlgebraicDistanceSparsifier.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the inverted algebraic distance score of the input graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.BinarySearchParameterization">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">BinarySearchParameterization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sizeIncreasesWithParameter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lowerParameterBound</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upperParameterBound</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxSteps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.BinarySearchParameterization" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Parameterizes a sparsification algorithm using binary search.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sizeIncreasesWithParameter</strong> (<em>bool</em>) – Set to True if the size of the sparsified graph increases with increasing parameter value.</p></li>
+<li><p><strong>lowerParameterBound</strong> (<em>float</em>) – Lower bound of the parameter domain (inclusive).</p></li>
+<li><p><strong>upperParameterBound</strong> (<em>float</em>) – Upper bound of the parameter domain (inclusive).</p></li>
+<li><p><strong>maxSteps</strong> (<em>int</em>) – The maximum number of steps to perform during binary search.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.BinarySearchParameterization.parameterize">
+<span class="sig-name descname"><span class="pre">parameterize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">algorithm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edgeRatio</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.BinarySearchParameterization.parameterize" title="Link to this definition">¶</a></dt>
+<dd><p>Parameterize the given sparsifier for the given input graph with the
+given target edge ratio. (To be implemented by derived class.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algorithm</strong> (<a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><em>networkit.sparsification.Sparsifier</em></a>) – The sparsification algorithm.</p></li>
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – An input edge attribute.</p></li>
+<li><p><strong>edgeRatio</strong> (<em>float</em>) – The target edge ratio.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.ChanceCorrectedTriangleScore">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">ChanceCorrectedTriangleScore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangles</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.ChanceCorrectedTriangleScore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.EdgeScore" title="networkit.sparsification.EdgeScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeScore</span></code></a></p>
+<p>Divide the number of triangles per edge by the expected number of triangles given a random edge distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>triangles</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – Triangle count.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.ChibaNishizekiQuadrangleEdgeScore">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">ChibaNishizekiQuadrangleEdgeScore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.ChibaNishizekiQuadrangleEdgeScore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.EdgeScore" title="networkit.sparsification.EdgeScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeScore</span></code></a></p>
+<p>Calculates for each edge the number of quadrangles (circles of length 4) it is embedded in.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to count quadrangles on.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.ChibaNishizekiTriangleEdgeScore">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">ChibaNishizekiTriangleEdgeScore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.ChibaNishizekiTriangleEdgeScore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.EdgeScore" title="networkit.sparsification.EdgeScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeScore</span></code></a></p>
+<p>Calculates for each edge the number of triangles it is embedded in.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to count triangles on.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.CompleteSearchParameterization">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">CompleteSearchParameterization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lowerParameterBound</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upperParameterBound</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.CompleteSearchParameterization" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Parameterizes a sparsification algorithm using complete search
+(applicable only to algorithms which take as input a parameter from a small
+set of possible values).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lowerParameterBound</strong> (<em>int</em>) – Lower bound of the parameter domain (inclusive).</p></li>
+<li><p><strong>upperParameterBound</strong> (<em>int</em>) – Upper bound of the parameter domain (inclusive).</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.CompleteSearchParameterization.parameterize">
+<span class="sig-name descname"><span class="pre">parameterize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">algorithm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edgeRatio</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.CompleteSearchParameterization.parameterize" title="Link to this definition">¶</a></dt>
+<dd><p>Parameterize the given sparsifier for the given input graph with the
+given target edge ratio. (To be implemented by derived class.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algorithm</strong> (<a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><em>networkit.sparsification.Sparsifier</em></a>) – The sparsification algorithm.</p></li>
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – An input edge attribute.</p></li>
+<li><p><strong>edgeRatio</strong> (<em>float</em>) – The target edge ratio.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.ConstantScore">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">ConstantScore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">constValue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.ConstantScore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Assigns as an attribute the same value to each edge (for sanity checks).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>constValue</strong> (<em>float</em><em>, </em><em>optional</em>) – Value to assign to each edge. Default: 1.0</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.ConstantScore.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.ConstantScore.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an edge attribute that holds for each edge the constant value given
+in the constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.DegreeMultiscaleSparsifier">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">DegreeMultiscaleSparsifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">degsToAttrValue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.DegreeMultiscaleSparsifier" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sparsifier</span></code></a></p>
+<p>Multiscale Sparsifier that uses node degrees (mapped to edges) as input edge weight.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>degsToAttrValue</strong> (<em>function</em>) – Function that maps two node degrees to an edge score.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.DegreeMultiscaleSparsifier.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.DegreeMultiscaleSparsifier.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an edge attribute that holds for each edge the maximum parameter value
+such that the edge is contained in the sparsified graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.EdgeScore">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">EdgeScore</span></span><a class="headerlink" href="#networkit.sparsification.EdgeScore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
+<p>Abstract base class for an edge score.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.EdgeScore.score">
+<span class="sig-name descname"><span class="pre">score</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.EdgeScore.score" title="Link to this definition">¶</a></dt>
+<dd><p>Get a vector containing the score for a certain edge connecting node u and v.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>int</em>) – The first node.</p></li>
+<li><p><strong>v</strong> (<em>int</em><em>, </em><em>optional</em>) – The second node. Default: None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List with scores. Scores are either int-values (unweighted) or float-values (weighted).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(int) or list(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.EdgeScore.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.EdgeScore.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Get a vector containing the score for each edge in the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List with scores. Scores are either int-values (unweighted) or float-values (weighted).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(int) or list(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.EdgeScoreAsWeight">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">EdgeScoreAsWeight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">score</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">square</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">factor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.EdgeScoreAsWeight" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Assigns an edge score as edge weight of a graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to assign edge weights to.</p></li>
+<li><p><strong>score</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – The input edge score.</p></li>
+<li><p><strong>squared</strong> (<em>bool</em>) – Edge weights will be squared if set to True.</p></li>
+<li><p><strong>offset</strong> (<em>float</em>) – This offset will be added to each edge weight.</p></li>
+<li><p><strong>factor</strong> (<em>float</em>) – Each edge weight will be multiplied by this factor.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.EdgeScoreAsWeight.getWeightedGraph">
+<span class="sig-name descname"><span class="pre">getWeightedGraph</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.EdgeScoreAsWeight.getWeightedGraph" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The weighted result graph.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.EdgeScoreBlender">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">EdgeScoreBlender</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selection</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.EdgeScoreBlender" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.EdgeScore" title="networkit.sparsification.EdgeScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeScore</span></code></a></p>
+<p>Blends two attribute vectors, the value is chosen depending on the supplied bool vector</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph for which the attribute shall be blended</p></li>
+<li><p><strong>attribute0</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – The first attribute (chosen for selection[eid] == False)</p></li>
+<li><p><strong>attribute1</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – The second attribute (chosen for selection[eid] == True)</p></li>
+<li><p><strong>selection</strong> (<em>list</em><em>(</em><em>bool</em><em>)</em>) – The selection vector.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.EdgeScoreLinearizer">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">EdgeScoreLinearizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.EdgeScoreLinearizer" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.EdgeScore" title="networkit.sparsification.EdgeScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeScore</span></code></a></p>
+<p>Linearizes a score such that values are evenly distributed between 0 and 1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>a</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – Edge score that shall be linearized.</p></li>
+<li><p><strong>inverse</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set to True in order to inverse the resulting score. Default: False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.EdgeScoreNormalizer">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">EdgeScoreNormalizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">score</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uppper</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.EdgeScoreNormalizer" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.EdgeScore" title="networkit.sparsification.EdgeScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeScore</span></code></a></p>
+<p>Normalize an edge score such that it is in a certain range.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph the edge score is defined on.</p></li>
+<li><p><strong>score</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – The edge score to normalize.</p></li>
+<li><p><strong>inverse</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set to True in order to inverse the resulting score. Default: False</p></li>
+<li><p><strong>lower</strong> (<em>float</em><em>, </em><em>optional</em>) – Lower bound of the target range. Default: 0.0</p></li>
+<li><p><strong>upper</strong> (<em>float</em><em>, </em><em>optional</em>) – Upper bound of the target range. Default: 1.0</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.ForestFireScore">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">ForestFireScore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tebr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.ForestFireScore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.EdgeScore" title="networkit.sparsification.EdgeScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeScore</span></code></a></p>
+<p>A variant of the Forest Fire sparsification approach that is based on random walks.
+This attributizer calculates for each edge the minimum parameter value
+such that the edge is still contained in the sparsified graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to apply the Forest Fire algorithm to.</p></li>
+<li><p><strong>pf</strong> (<em>float</em>) – The probability for neighbor nodes to get burned aswell.</p></li>
+<li><p><strong>tebr</strong> (<em>float</em>) – The Forest Fire will burn until tebr * numberOfEdges edges have been burnt.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.ForestFireSparsifier">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">ForestFireSparsifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">burnProbability</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetBurntRatio</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.ForestFireSparsifier" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sparsifier</span></code></a></p>
+<p>A variant of the Forest Fire sparsification approach proposed by Leskovec et al.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>burnProbability</strong> (<em>float</em>) – The probability that the neighbor of a burnt node gets burnt as well.</p></li>
+<li><p><strong>edgeRatio</strong> (<em>float</em>) – The fires will stop when a edgeRatio * edgeCount edges have been burnt.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.ForestFireSparsifier.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.ForestFireSparsifier.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an edge attribute that holds for each edge the maximum parameter value
+such that the edge is contained in the sparsified graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.GeometricMeanScore">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">GeometricMeanScore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.GeometricMeanScore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.EdgeScore" title="networkit.sparsification.EdgeScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeScore</span></code></a></p>
+<p>Normalizes the given edge attribute by the geometric average of the sum of the attributes of the incident edges of the incident nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>a</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – Edge attribute that shall be normalized.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.GlobalThresholdFilter">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">GlobalThresholdFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">above</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.GlobalThresholdFilter" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Calculates a sparsified graph by filtering globally using a constant threshold value
+and a given edge attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to sparsify.</p></li>
+<li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – The edge attribute to consider for filtering.</p></li>
+<li><p><strong>e</strong> (<em>float</em>) – Threshold value.</p></li>
+<li><p><strong>above</strong> (<em>bool</em>) – If set to True (False), all edges with an attribute value equal to or above (below)
+will be kept in the sparsified graph.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.GlobalThresholdFilter.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.GlobalThresholdFilter.calculate" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.JaccardSimilaritySparsifier">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">JaccardSimilaritySparsifier</span></span><a class="headerlink" href="#networkit.sparsification.JaccardSimilaritySparsifier" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sparsifier</span></code></a></p>
+<p>An implementation of the Jaccard Similarity sparsification approach introduced by Satuluri et al.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.JaccardSimilaritySparsifier.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.JaccardSimilaritySparsifier.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the jaccard coefficient of the neighborhoods of the two incident nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.LocalDegreeScore">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">LocalDegreeScore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.LocalDegreeScore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.EdgeScore" title="networkit.sparsification.EdgeScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeScore</span></code></a></p>
+<p>The LocalDegree sparsification approach is based on the idea of hub nodes.
+This attributizer calculates for each edge the maximum parameter value
+such that the edge is still contained in the sparsified graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to apply the Local Degree  algorithm to.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.LocalDegreeSparsifier">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">LocalDegreeSparsifier</span></span><a class="headerlink" href="#networkit.sparsification.LocalDegreeSparsifier" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sparsifier</span></code></a></p>
+<p>An implementation of the Local Degree sparsification algorithm.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.LocalDegreeSparsifier.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.LocalDegreeSparsifier.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an edge score that holds for each edge the minimum parameter value
+such that the edge is contained in the sparsified graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.LocalFilterScore">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">LocalFilterScore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logarithmic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.LocalFilterScore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.EdgeScore" title="networkit.sparsification.EdgeScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeScore</span></code></a></p>
+<p>Local filtering edge scoring. Edges with high score are more important.</p>
+<p>Edges are ranked locally, the top d^e (logarithmic, default) or 1+e*(d-1) edges (non-logarithmic) are kept.
+For equal attribute values, neighbors of low degree are preferred.
+If bothRequired is set (default: false), both neighbors need to indicate that they want to keep the edge.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph</p></li>
+<li><p><strong>a</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – The input attribute according to which the edges shall be fitlered locally.</p></li>
+<li><p><strong>logarithmic</strong> (<em>bool</em><em>, </em><em>optional</em>) – If the score shall be logarithmic in the rank (then d^e edges are kept), linear otherwise. Default: True</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.LocalSimilarityScore">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">LocalSimilarityScore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangles</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.LocalSimilarityScore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.EdgeScore" title="networkit.sparsification.EdgeScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeScore</span></code></a></p>
+<p>An implementation of the Local Simlarity sparsification approach.
+This attributizer calculates for each edge the maximum parameter value
+such that the edge is still contained in the sparsified graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to apply the Local Similarity algorithm to.</p></li>
+<li><p><strong>triangles</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – Previously calculated edge triangle counts.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.LocalSimilaritySparsifier">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">LocalSimilaritySparsifier</span></span><a class="headerlink" href="#networkit.sparsification.LocalSimilaritySparsifier" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sparsifier</span></code></a></p>
+<p>An implementation of the Local Similarity sparsification approach introduced by Satuluri et al.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.LocalSimilaritySparsifier.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.LocalSimilaritySparsifier.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an edge attribute that holds for each edge the minimum parameter value
+such that the edge is contained in the sparsified graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.LocalSparsifier">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">LocalSparsifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sparsifier</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.LocalSparsifier" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sparsifier</span></code></a></p>
+<p>Sparsification algorithm using an input sparsifier and passing the result of
+this algorithm to networkit.sparsification.LocalFilterScore for choosing
+edges, which should be present in the sparsified graph.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.LocalSparsifier.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.LocalSparsifier.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an edge attribute that holds for each edge 1 - the minimum parameter value
+such that the edge is contained in the sparsified graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.ModularityPartitionScore">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">ModularityPartitionScore</span></span><a class="headerlink" href="#networkit.sparsification.ModularityPartitionScore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Sparsification algorithm using networkit.community.PLM algorithm to detect
+communities and select only edges, where both ends are member of the same
+community.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.ModularityPartitionScore.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.ModularityPartitionScore.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an edge attribute that holds for each edge the minimum parameter value
+such that the edge is contained in the sparsified graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.MultiscaleScore">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">MultiscaleScore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.MultiscaleScore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.EdgeScore" title="networkit.sparsification.EdgeScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeScore</span></code></a></p>
+<p>An implementation of the Multiscale Backbone. Calculates for each edge the minimum
+parameter value such that the edge is still contained in the sparsified graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to apply the Multiscale algorithm to.</p></li>
+<li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – The edge attribute the Multiscale algorithm is to be applied to.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.MultiscaleSparsifier">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">MultiscaleSparsifier</span></span><a class="headerlink" href="#networkit.sparsification.MultiscaleSparsifier" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sparsifier</span></code></a></p>
+<p>An implementation of the Multiscale backbone approach introduced by Serrano et al.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.MultiscaleSparsifier.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.MultiscaleSparsifier.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an edge attribute that holds for each edge the minimum parameter value
+such that the edge is contained in the sparsified graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.PrefixJaccardScore">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">PrefixJaccardScore</span></span><a class="headerlink" href="#networkit.sparsification.PrefixJaccardScore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.EdgeScore" title="networkit.sparsification.EdgeScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeScore</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.QuadrilateralSimmelianSparsifier">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">QuadrilateralSimmelianSparsifier</span></span><a class="headerlink" href="#networkit.sparsification.QuadrilateralSimmelianSparsifier" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sparsifier</span></code></a></p>
+<p>An implementation of the Simmelian Sparsifiers based on quadrangles.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.QuadrilateralSimmelianSparsifier.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.QuadrilateralSimmelianSparsifier.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an edge scoring attribute that can be used for global filtering.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.RandomEdgeScore">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">RandomEdgeScore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.RandomEdgeScore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.EdgeScore" title="networkit.sparsification.EdgeScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeScore</span></code></a></p>
+<p>Generates a random edge attribute. Each edge is assigned a random value in [0,1].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to calculate the Random Edge attribute for.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.RandomEdgeSparsifier">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">RandomEdgeSparsifier</span></span><a class="headerlink" href="#networkit.sparsification.RandomEdgeSparsifier" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sparsifier</span></code></a></p>
+<p>Random Edge sampling. Edges to keep in the sparsified graph are selected uniformly at random.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.RandomEdgeSparsifier.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.RandomEdgeSparsifier.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an edge attribute that holds for each edge the minimum parameter value
+such that the edge is contained in the sparsified graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.RandomNodeEdgeScore">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">RandomNodeEdgeScore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.RandomNodeEdgeScore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.EdgeScore" title="networkit.sparsification.EdgeScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeScore</span></code></a></p>
+<p>Random Edge sampling. This attributizer returns edge attributes where
+each value is selected uniformly at random from [0,1].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to calculate the Random Edge attribute for.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.RandomNodeEdgeSparsifier">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">RandomNodeEdgeSparsifier</span></span><a class="headerlink" href="#networkit.sparsification.RandomNodeEdgeSparsifier" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sparsifier</span></code></a></p>
+<p>Random Edge sampling. Edges and nodes to keep in the sparsified graph are selected uniformly at random.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>above</strong> (<em>bool</em><em>, </em><em>optional</em>) – If set to True (False), all nodes and edges with an attribute value equal to or above (below)
+will be kept in the sparsified graph. Default: True</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.RandomNodeEdgeSparsifier.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.RandomNodeEdgeSparsifier.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an edge attribute that holds for each edge the minimum parameter value
+such that the edge is contained in the sparsified graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.SCANSparsifier">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">SCANSparsifier</span></span><a class="headerlink" href="#networkit.sparsification.SCANSparsifier" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sparsifier</span></code></a></p>
+<p>A sparsifiier dervived from ‘SCAN: a structural clustering algorithm for networks’</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.SCANSparsifier.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.SCANSparsifier.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an edge attribute that holds for each edge the minimum parameter value
+such that the edge is contained in the sparsified graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.SCANStructuralSimilarityScore">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">SCANStructuralSimilarityScore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangles</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.SCANStructuralSimilarityScore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.EdgeScore" title="networkit.sparsification.EdgeScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeScore</span></code></a></p>
+<p>An implementation of the SCANStructuralSimilarityScore algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to apply the Local Similarity algorithm to.</p></li>
+<li><p><strong>triangles</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – Previously calculated edge triangle counts.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.SimmelianMultiscaleSparsifier">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">SimmelianMultiscaleSparsifier</span></span><a class="headerlink" href="#networkit.sparsification.SimmelianMultiscaleSparsifier" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sparsifier</span></code></a></p>
+<p>Multiscale Sparsifier that uses triangle counts as input edge weight.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.SimmelianMultiscaleSparsifier.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.SimmelianMultiscaleSparsifier.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an edge attribute that holds for each edge the maximum parameter value
+such that the edge is contained in the sparsified graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.SimmelianOverlapScore">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">SimmelianOverlapScore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxRank</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.SimmelianOverlapScore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.EdgeScore" title="networkit.sparsification.EdgeScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeScore</span></code></a></p>
+<p>An implementation of the parametric variant of Simmelian Backbones. Calculates
+for each edge the minimum parameter value such that the edge is still contained in
+the sparsified graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to apply the Simmelian Backbone algorithm to.</p></li>
+<li><p><strong>triangles</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – Previously calculated edge triangle counts on G.</p></li>
+<li><p><strong>maxRank</strong> (<em>int</em>) – Maximum rank that is considered for overlap calculation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.SimmelianSparsifierNonParametric">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">SimmelianSparsifierNonParametric</span></span><a class="headerlink" href="#networkit.sparsification.SimmelianSparsifierNonParametric" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sparsifier</span></code></a></p>
+<p>An implementation of the Non-parametric variant of the Simmelian Sparsifiers
+introduced by Nick et al.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.SimmelianSparsifierNonParametric.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.SimmelianSparsifierNonParametric.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an edge attribute that holds for each edge the minimum jaccard filter value
+such that the edge is contained in the sparsified graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.SimmelianSparsifierParametric">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">SimmelianSparsifierParametric</span></span><a class="headerlink" href="#networkit.sparsification.SimmelianSparsifierParametric" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sparsifier</span></code></a></p>
+<p>An implementation of the Parametric variant of the Simmelian Sparsifiers
+introduced by Nick et al.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.SimmelianSparsifierParametric.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.SimmelianSparsifierParametric.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an edge attribute that holds for each edge the minimum parameter value
+such that the edge is contained in the sparsified graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.SimpleParameterization">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">SimpleParameterization</span></span><a class="headerlink" href="#networkit.sparsification.SimpleParameterization" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A parameterization algorithm representds an algorithm that, given a graph
+and a sparsifier, calculates a parameter value such that a desired edge ratio is met.
+The SimpleParameterization strategy simply returns the input edgeRatio as parameterization
+result.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.SimpleParameterization.parameterize">
+<span class="sig-name descname"><span class="pre">parameterize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">algorithm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edgeRatio</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.SimpleParameterization.parameterize" title="Link to this definition">¶</a></dt>
+<dd><p>Parameterize the given sparsifier for the given input graph with the
+given target edge ratio. (To be implemented by derived class.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>algorithm</strong> (<a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><em>networkit.sparsification.Sparsifier</em></a>) – The sparsification algorithm.</p></li>
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – An input edge attribute.</p></li>
+<li><p><strong>edgeRatio</strong> (<em>float</em>) – The target edge ratio.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.Sparsifier">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">Sparsifier</span></span><a class="headerlink" href="#networkit.sparsification.Sparsifier" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Abstract base class representing a graph sparsification algorithm that
+uses only one parameter to determine the degree of filtering.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.Sparsifier.getParameter">
+<span class="sig-name descname"><span class="pre">getParameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edgeRatio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.Sparsifier.getParameter" title="Link to this definition">¶</a></dt>
+<dd><p>This is a convenience function that applies an appropriate parameterization
+algorithm (if available) to obtain a parameter value that yields a sparsified
+graph of the desired size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>edgeRatio</strong> (<em>float</em>) – The target edge ratio.</p></li>
+<li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) – A previously calculated edge attribute. If none is provided, we will try to calculate it. Default: None</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.Sparsifier.getSparsifiedGraph">
+<span class="sig-name descname"><span class="pre">getSparsifiedGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sG</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.Sparsifier.getSparsifiedGraph" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a sparsified version of the given input graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>parameter</strong> (<em>float</em>) – A parameter value that determines the degree of sparsification</p></li>
+<li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) – A previously calculated edge attribute. If none is provided, we will try to calculate it. Default: None</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.Sparsifier.getSparsifiedGraphOfSize">
+<span class="sig-name descname"><span class="pre">getSparsifiedGraphOfSize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edgeRatio</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.Sparsifier.getSparsifiedGraphOfSize" title="Link to this definition">¶</a></dt>
+<dd><p>This is a convenience function that applies an appropriate parameterization
+algorithm (if available) to obtain a parameter value that yields a sparsified
+graph of the desired size and then calls getSparsifiedGraph(…) with that parameter value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>edgeRatio</strong> (<em>float</em>) – The target edge ratio.</p></li>
+<li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) – A previously calculated edge attribute. If none is provided, we will try to calculate it. Default: None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The sparsified graph.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.Sparsifier.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.Sparsifier.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Returns an edge attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Edge scores.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.TriangleEdgeScore">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">TriangleEdgeScore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.TriangleEdgeScore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.EdgeScore" title="networkit.sparsification.EdgeScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeScore</span></code></a></p>
+<p>Triangle counting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to count triangles on.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.TriangleSparsifier">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">TriangleSparsifier</span></span><a class="headerlink" href="#networkit.sparsification.TriangleSparsifier" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sparsifier</span></code></a></p>
+<p>Allows for global filtering with respect to triangle counts.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.sparsification.TriangleSparsifier.scores">
+<span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.TriangleSparsifier.scores" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the triangle counts of the input graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.sparsification.getRankAttribute">
+<span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">getRankAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reverse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.getRankAttribute" title="Link to this definition">¶</a></dt>
+<dd><p>Takes as input an attribute (node or edge) and returns an attribute where
+each node is assigned its rank among all others according to the attribute values.
+The node/edge with lowest input value is assigned 0, the one with second-lowest
+value 1, and so on.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – The input node/edge attribute</p></li>
+<li><p><strong>reverse</strong> (<em>bool</em><em>, </em><em>optional</em>) – Reverses the ranking, if set to True. Default: False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

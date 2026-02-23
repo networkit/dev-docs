@@ -1,0 +1,1141 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>NetworKit Distance Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Dynamics" href="Dynamics.html" />
+    <link rel="prev" title="Components" href="Components.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../notebooks.html#tutorial-notebooks">Tutorial Notebooks</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="User-Guide.html">NetworKit User Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="User-Guide.html#Profiling">Profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Centrality.html">Centrality Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Community.html">Community Detection with NetworKit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Components.html">Components</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">NetworKit Distance Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Dynamics.html">Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Generators.html">NetworKit Graph Generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GraphNotebook.html">NetworKit Graph Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GroupCentrality.html">Group Centrality Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="IONotebook.html">NetworKit graph I/O tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LinkPrediction.html">Link Prediction with NetworKit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LinkPrediction.html#Link-prediction-algorithms">Link prediction algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LinkPrediction.html#Link-sampling-and-link-prediction">Link sampling and link prediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Plot.html">Plot Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Randomization.html">NetworKit Randomization Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Reachability.html">NetworKit Reachability Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Sparsification.html">NetworKit Sparsification Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Visualization.html">NetworKit Visualization Tutorial</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="NetworKit-Distance-Tutorial">
+<h1>NetworKit Distance Tutorial<a class="headerlink" href="#NetworKit-Distance-Tutorial" title="Link to this heading">¶</a></h1>
+<p>NetworKit provides several graph traversal and pathfinding algorithms within the <code class="docutils literal notranslate"><span class="pre">distance</span></code> module. This notebook covers most of these algorithms, and shows how to use them.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">networkit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nk</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script type="text/javascript">
+<!--
+
+{
+        var element = document.getElementById('NetworKit_script');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('script');
+        element.type = 'text/javascript';
+        element.innerHTML = 'function NetworKit_pageEmbed(id) { var i, j; var elements; elements = document.getElementById(id).getElementsByClassName("Plot"); for (i=0; i<elements.length; i++) { elements[i].id = id + "_Plot_" + i; var data = elements[i].getAttribute("data-image").split("|"); elements[i].removeAttribute("data-image"); var content = "<div class=\\"Image\\" id=\\"" + elements[i].id + "_Image\\" />"; elements[i].innerHTML = content; elements[i].setAttribute("data-image-index", 0); elements[i].setAttribute("data-image-length", data.length); for (j=0; j<data.length; j++) { elements[i].setAttribute("data-image-" + j, data[j]); } NetworKit_plotUpdate(elements[i]); elements[i].onclick = function (e) { NetworKit_overlayShow((e.target) ? e.target : e.srcElement); } } elements = document.getElementById(id).getElementsByClassName("HeatCell"); for (i=0; i<elements.length; i++) { var data = parseFloat(elements[i].getAttribute("data-heat")); var color = "#00FF00"; if (data <= 1 && data > 0) { color = "hsla(0, 100%, 75%, " + (data) + ")"; } else if (data <= 0 && data >= -1) { color = "hsla(240, 100%, 75%, " + (-data) + ")"; } elements[i].style.backgroundColor = color; } elements = document.getElementById(id).getElementsByClassName("Details"); for (i=0; i<elements.length; i++) { elements[i].setAttribute("data-title", "-"); NetworKit_toggleDetails(elements[i]); elements[i].onclick = function (e) { NetworKit_toggleDetails((e.target) ? e.target : e.srcElement); } } elements = document.getElementById(id).getElementsByClassName("MathValue"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "nan") { elements[i].parentNode.innerHTML = "" } } elements = document.getElementById(id).getElementsByClassName("SubCategory"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "") { elements[i].parentNode.removeChild(elements[i]) } } elements = document.getElementById(id).getElementsByClassName("Category"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "") { elements[i].parentNode.removeChild(elements[i]) } } var isFirefox = false; try { isFirefox = typeof InstallTrigger !== "undefined"; } catch (e) {} if (!isFirefox) { alert("Currently the function\'s output is only fully supported by Firefox."); } } function NetworKit_plotUpdate(source) { var index = source.getAttribute("data-image-index"); var data = source.getAttribute("data-image-" + index); var image = document.getElementById(source.id + "_Image"); image.style.backgroundImage = "url(" + data + ")"; } function NetworKit_showElement(id, show) { var element = document.getElementById(id); element.style.display = (show) ? "block" : "none"; } function NetworKit_overlayShow(source) { NetworKit_overlayUpdate(source); NetworKit_showElement("NetworKit_Overlay", true); } function NetworKit_overlayUpdate(source) { document.getElementById("NetworKit_Overlay_Title").innerHTML = source.title; var index = source.getAttribute("data-image-index"); var data = source.getAttribute("data-image-" + index); var image = document.getElementById("NetworKit_Overlay_Image"); image.setAttribute("data-id", source.id); image.style.backgroundImage = "url(" + data + ")"; var link = document.getElementById("NetworKit_Overlay_Toolbar_Bottom_Save"); link.href = data; link.download = source.title + ".svg"; } function NetworKit_overlayImageShift(delta) { var image = document.getElementById("NetworKit_Overlay_Image"); var source = document.getElementById(image.getAttribute("data-id")); var index = parseInt(source.getAttribute("data-image-index")); var length = parseInt(source.getAttribute("data-image-length")); var index = (index+delta) % length; if (index < 0) { index = length + index; } source.setAttribute("data-image-index", index); NetworKit_overlayUpdate(source); } function NetworKit_toggleDetails(source) { var childs = source.children; var show = false; if (source.getAttribute("data-title") == "-") { source.setAttribute("data-title", "+"); show = false; } else { source.setAttribute("data-title", "-"); show = true; } for (i=0; i<childs.length; i++) { if (show) { childs[i].style.display = "block"; } else { childs[i].style.display = "none"; } } }';
+        element.setAttribute('id', 'NetworKit_script');
+        document.head.appendChild(element);
+}
+
+
+{
+        var element = document.getElementById('NetworKit_style');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('style');
+        element.type = 'text/css';
+        element.innerHTML = '.NetworKit_Page { font-family: Arial, Helvetica, sans-serif; font-size: 14px; } .NetworKit_Page .Value:before { font-family: Arial, Helvetica, sans-serif; font-size: 1.05em; content: attr(data-title) ":"; margin-left: -2.5em; padding-right: 0.5em; } .NetworKit_Page .Details .Value:before { display: block; } .NetworKit_Page .Value { font-family: monospace; white-space: pre; padding-left: 2.5em; white-space: -moz-pre-wrap !important; white-space: -pre-wrap; white-space: -o-pre-wrap; white-space: pre-wrap; word-wrap: break-word; tab-size: 4; -moz-tab-size: 4; } .NetworKit_Page .Category { clear: both; padding-left: 1em; margin-bottom: 1.5em; } .NetworKit_Page .Category:before { content: attr(data-title); font-size: 1.75em; display: block; margin-left: -0.8em; margin-bottom: 0.5em; } .NetworKit_Page .SubCategory { margin-bottom: 1.5em; padding-left: 1em; } .NetworKit_Page .SubCategory:before { font-size: 1.6em; display: block; margin-left: -0.8em; margin-bottom: 0.5em; } .NetworKit_Page .SubCategory[data-title]:before { content: attr(data-title); } .NetworKit_Page .Block { display: block; } .NetworKit_Page .Block:after { content: "."; visibility: hidden; display: block; height: 0; clear: both; } .NetworKit_Page .Block .Thumbnail_Overview, .NetworKit_Page .Block .Thumbnail_ScatterPlot { width: 260px; float: left; } .NetworKit_Page .Block .Thumbnail_Overview img, .NetworKit_Page .Block .Thumbnail_ScatterPlot img { width: 260px; } .NetworKit_Page .Block .Thumbnail_Overview:before, .NetworKit_Page .Block .Thumbnail_ScatterPlot:before { display: block; text-align: center; font-weight: bold; } .NetworKit_Page .Block .Thumbnail_Overview:before { content: attr(data-title); } .NetworKit_Page .HeatCell { font-family: "Courier New", Courier, monospace; cursor: pointer; } .NetworKit_Page .HeatCell, .NetworKit_Page .HeatCellName { display: inline; padding: 0.1em; margin-right: 2px; background-color: #FFFFFF } .NetworKit_Page .HeatCellName { margin-left: 0.25em; } .NetworKit_Page .HeatCell:before { content: attr(data-heat); display: inline-block; color: #000000; width: 4em; text-align: center; } .NetworKit_Page .Measure { clear: both; } .NetworKit_Page .Measure .Details { cursor: pointer; } .NetworKit_Page .Measure .Details:before { content: "[" attr(data-title) "]"; display: block; } .NetworKit_Page .Measure .Details .Value { border-left: 1px dotted black; margin-left: 0.4em; padding-left: 3.5em; pointer-events: none; } .NetworKit_Page .Measure .Details .Spacer:before { content: "."; opacity: 0.0; pointer-events: none; } .NetworKit_Page .Measure .Plot { width: 440px; height: 440px; cursor: pointer; float: left; margin-left: -0.9em; margin-right: 20px; } .NetworKit_Page .Measure .Plot .Image { background-repeat: no-repeat; background-position: center center; background-size: contain; height: 100%; pointer-events: none; } .NetworKit_Page .Measure .Stat { width: 500px; float: left; } .NetworKit_Page .Measure .Stat .Group { padding-left: 1.25em; margin-bottom: 0.75em; } .NetworKit_Page .Measure .Stat .Group .Title { font-size: 1.1em; display: block; margin-bottom: 0.3em; margin-left: -0.75em; border-right-style: dotted; border-right-width: 1px; border-bottom-style: dotted; border-bottom-width: 1px; background-color: #D0D0D0; padding-left: 0.2em; } .NetworKit_Page .Measure .Stat .Group .List { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; } .NetworKit_Page .Measure .Stat .Group .List .Entry { position: relative; line-height: 1.75em; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:before { position: absolute; left: 0; top: -40px; background-color: #808080; color: #ffffff; height: 30px; line-height: 30px; border-radius: 5px; padding: 0 15px; content: attr(data-tooltip); white-space: nowrap; display: none; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:after { position: absolute; left: 15px; top: -10px; border-top: 7px solid #808080; border-left: 7px solid transparent; border-right: 7px solid transparent; content: ""; display: none; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:hover:after, .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:hover:before { display: block; } .NetworKit_Page .Measure .Stat .Group .List .Entry .MathValue { font-family: "Courier New", Courier, monospace; } .NetworKit_Page .Measure:after { content: "."; visibility: hidden; display: block; height: 0; clear: both; } .NetworKit_Page .PartitionPie { clear: both; } .NetworKit_Page .PartitionPie img { width: 600px; } #NetworKit_Overlay { left: 0px; top: 0px; display: none; position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 1000; } #NetworKit_Overlay_Title { position: absolute; color: white; transform: rotate(-90deg); width: 32em; height: 32em; padding-right: 0.5em; padding-top: 0.5em; text-align: right; font-size: 40px; } #NetworKit_Overlay .button { background: white; cursor: pointer; } #NetworKit_Overlay .button:before { size: 13px; display: inline-block; text-align: center; margin-top: 0.5em; margin-bottom: 0.5em; width: 1.5em; height: 1.5em; } #NetworKit_Overlay .icon-close:before { content: "X"; } #NetworKit_Overlay .icon-previous:before { content: "P"; } #NetworKit_Overlay .icon-next:before { content: "N"; } #NetworKit_Overlay .icon-save:before { content: "S"; } #NetworKit_Overlay_Toolbar_Top, #NetworKit_Overlay_Toolbar_Bottom { position: absolute; width: 40px; right: 13px; text-align: right; z-index: 1100; } #NetworKit_Overlay_Toolbar_Top { top: 0.5em; } #NetworKit_Overlay_Toolbar_Bottom { Bottom: 0.5em; } #NetworKit_Overlay_ImageContainer { position: absolute; top: 5%; left: 5%; height: 90%; width: 90%; background-repeat: no-repeat; background-position: center center; background-size: contain; } #NetworKit_Overlay_Image { height: 100%; width: 100%; background-repeat: no-repeat; background-position: center center; background-size: contain; }';
+        element.setAttribute('id', 'NetworKit_style');
+        document.head.appendChild(element);
+}
+
+
+{
+        var element = document.getElementById('NetworKit_Overlay');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('div');
+        element.innerHTML = '<div id="NetworKit_Overlay_Toolbar_Top"><div class="button icon-close" id="NetworKit_Overlay_Close" /></div><div id="NetworKit_Overlay_Title" /> <div id="NetworKit_Overlay_ImageContainer"> <div id="NetworKit_Overlay_Image" /> </div> <div id="NetworKit_Overlay_Toolbar_Bottom"> <div class="button icon-previous" onclick="NetworKit_overlayImageShift(-1)" /> <div class="button icon-next" onclick="NetworKit_overlayImageShift(1)" /> <a id="NetworKit_Overlay_Toolbar_Bottom_Save"><div class="button icon-save" /></a> </div>';
+        element.setAttribute('id', 'NetworKit_Overlay');
+        document.body.appendChild(element);
+        document.getElementById('NetworKit_Overlay_Close').onclick = function (e) {
+                document.getElementById('NetworKit_Overlay').style.display = 'none';
+        }
+}
+
+-->
+</script></div>
+</div>
+<p>For this tutorial we will use the same graph, and the same source and target node. We will indext the edges of the graph because some algorithms require the edges to be indexed.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read a graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.konect&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">)</span>
+<span class="n">GDir</span> <span class="o">=</span> <span class="n">G</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphtools</span><span class="o">.</span><span class="n">toUndirected</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<span class="n">source</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">target</span> <span class="o">=</span> <span class="mi">27</span>
+<span class="n">G</span><span class="o">.</span><span class="n">indexEdges</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<section id="Algebraic-Distance">
+<h2>Algebraic Distance<a class="headerlink" href="#Algebraic-Distance" title="Link to this heading">¶</a></h2>
+<p>Algebraic distance assigns a distance value to pairs of nodes according to their structural closeness in the graph. Algebraic distances will become small within dense subgraphs.</p>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/distance.html?highlight=alg#networkit.distance.AlgebraicDistance">AlgebraicDistance(G, numberSystems=10, numberIterations=30, omega=0.5, norm=0, withEdgeScores=False)</a> constructor expects a graph followed by the number of systems to use for algebraic iteration and the number of iterations in each system. <code class="docutils literal notranslate"><span class="pre">omega</span></code> is the overrelaxation parameter while <code class="docutils literal notranslate"><span class="pre">norm</span></code> is the norm factor of the extended algebraic distance. Set <code class="docutils literal notranslate"><span class="pre">withEdgeScores</span></code> to
+true if the array of scores for edges {u,v} that equal ad(u,v) should be calculated.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">ad</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">AlgebraicDistance</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run</span>
+<span class="n">ad</span><span class="o">.</span><span class="n">preprocess</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.distance.AlgebraicDistance at 0x7f6448d99030&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The algebraic distance between the source and target node</span>
+<span class="n">ad</span><span class="o">.</span><span class="n">distance</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+4.7999713831314175
+</pre></div></div>
+</div>
+</section>
+<section id="All-Pairs-Shortest-Paths-(APSP)">
+<h2>All-Pairs Shortest-Paths (APSP)<a class="headerlink" href="#All-Pairs-Shortest-Paths-(APSP)" title="Link to this heading">¶</a></h2>
+<p>The APSP algorithm computes all pairwise shortest-path distances in a given graph. It is implemented running Dijkstra’s algorithm from each node, or BFS if the graph is unweighted.</p>
+<p>The constructor <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/distance.html?highlight=apsp#networkit.distance.APSP">APSP(G)</a> expects a graph.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">apsp</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">APSP</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run</span>
+<span class="n">apsp</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.distance.APSP at 0x7f64496870a0&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The distance from source to target node</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">apsp</span><span class="o">.</span><span class="n">getDistance</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0.0006647776978699999
+</pre></div></div>
+</div>
+</section>
+<section id="Pruned-Landmark-Labeling">
+<h2>Pruned Landmark Labeling<a class="headerlink" href="#Pruned-Landmark-Labeling" title="Link to this heading">¶</a></h2>
+<p>Pruned Landmark Labeling is an alternative to APSP. It computes distance labels by performing a <em>pruned</em> BFS from each node in the graph. Distance labels are then used to quickly compute shortest-path distances between node pairs. This algorithm only works for unweighted graphs.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm - in case of weighted graphs, edge weights are ignored</span>
+<span class="n">pll</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">PrunedLandmarkLabeling</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run - this step computes the distance labels</span>
+<span class="n">pll</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.distance.PrunedLandmarkLabeling at 0x7f6448b50910&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Retrieve the shortest-path distance</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pll</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+2
+</pre></div></div>
+</div>
+</section>
+<section id="Dynamic-Pruned-Landmark-Labeling">
+<h2>Dynamic Pruned Landmark Labeling<a class="headerlink" href="#Dynamic-Pruned-Landmark-Labeling" title="Link to this heading">¶</a></h2>
+<p>Dynamic Pruned Landmark Labeling quickly updates distance labels after edge insertions.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">dyn_pll</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">DynPrunedLandmarkLabeling</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run - this step computes the distance labels</span>
+<span class="n">dyn_pll</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.distance.DynPrunedLandmarkLabeling at 0x7f644987b310&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick two nodes</span>
+<span class="n">source</span><span class="p">,</span> <span class="n">target</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">102</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Distance between </span><span class="si">{</span><span class="n">source</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">target</span><span class="si">}</span><span class="s2"> before edge insertion: </span><span class="si">{</span><span class="n">pll</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Distance between 1 and 102 before edge insertion: 3
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Shorten distance between the two nodes</span>
+<span class="n">G</span><span class="o">.</span><span class="n">addEdge</span><span class="p">(</span><span class="mi">57</span><span class="p">,</span> <span class="mi">102</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+True
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update distance labels</span>
+<span class="n">dyn_pll</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">nk</span><span class="o">.</span><span class="n">dynamics</span><span class="o">.</span><span class="n">GraphEvent</span><span class="p">(</span>
+    <span class="n">nk</span><span class="o">.</span><span class="n">dynamics</span><span class="o">.</span><span class="n">GraphEventType</span><span class="o">.</span><span class="n">EDGE_ADDITION</span><span class="p">,</span>
+    <span class="mi">57</span><span class="p">,</span>  <span class="c1"># Source</span>
+    <span class="mi">102</span><span class="p">,</span> <span class="c1"># Target</span>
+    <span class="mi">1</span>   <span class="c1"># Weight</span>
+<span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.distance.DynPrunedLandmarkLabeling at 0x7f644987b310&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># New distance between the two nodes</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Distance between </span><span class="si">{</span><span class="n">source</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">target</span><span class="si">}</span><span class="s2"> after edge insertion: </span><span class="si">{</span><span class="n">dyn_pll</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Distance between 1 and 102 after edge insertion: 2
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove the edge we added before</span>
+<span class="n">G</span><span class="o">.</span><span class="n">removeEdge</span><span class="p">(</span><span class="mi">57</span><span class="p">,</span> <span class="mi">102</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.graph.Graph at 0x7f6448afebf0&gt;
+</pre></div></div>
+</div>
+</section>
+<section id="Some-Pairs-Shortest-Paths-(SPSP)">
+<h2>Some-Pairs Shortest-Paths (SPSP)<a class="headerlink" href="#Some-Pairs-Shortest-Paths-(SPSP)" title="Link to this heading">¶</a></h2>
+<p>SPSP is an alternative to APSP, it computes the shortest-path distances from a set of user-specified source nodes to all the other nodes of the graph.</p>
+<p>The constructor <code class="docutils literal notranslate"><span class="pre">SPSP(G,</span> <span class="pre">sources</span></code> takes as input a graph and a list of source nodes.</p>
+</section>
+<section id="id1">
+<h2>Some-Pairs Shortest-Paths (SPSP)<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<p>SPSP is an alternative to APSP, it computes the shortest-path distances from a set of user-specified source nodes to all the other nodes of the graph.</p>
+<p>The constructor <code class="docutils literal notranslate"><span class="pre">SPSP(G,</span> <span class="pre">sources</span></code> takes as input a graph and a list of source nodes.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">sources</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="n">spsp</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">SPSP</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">sources</span><span class="p">)</span>
+
+<span class="c1"># Run</span>
+<span class="n">spsp</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+<span class="c1"># Print the distances from the selected sources to the target</span>
+<span class="k">for</span> <span class="n">source</span> <span class="ow">in</span> <span class="n">sources</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Distance from </span><span class="si">{:d}</span><span class="s2"> to </span><span class="si">{:d}</span><span class="s2">: </span><span class="si">{:.3e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">spsp</span><span class="o">.</span><span class="n">getDistance</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Distance from 0 to 102: 6.643e-04
+Distance from 1 to 102: 1.223e-05
+Distance from 2 to 102: 1.124e-04
+</pre></div></div>
+</div>
+</section>
+<section id="A*">
+<h2>A*<a class="headerlink" href="#A*" title="Link to this heading">¶</a></h2>
+<p>A* is an informed search algorithm , as it uses information about path cost and also uses heuristics to find the shortest path.</p>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/distance.html?highlight=astar#networkit.distance.AStar">AStar(G, heu, source, target, storePred=True)</a> constructor expects a graph, the source and target nodes as mandatory parameters. The algorithm will also store the predecessors and reconstruct a shortest path from the source and the target if <code class="docutils literal notranslate"><span class="pre">storePred</span></code> is true. <code class="docutils literal notranslate"><span class="pre">heu</span></code> is a list of lower bounds of the distance of each node to the target.</p>
+<p>As we do not have any prior knowledge about the graph we choose all zeros as a heuristic because zero is always a lower bound of the distance between two nodes. In this case, the A* algorithm is equivalent to Dijkstra.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">heuristic</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">upperNodeIdBound</span><span class="p">())]</span>
+<span class="n">astar</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">AStar</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">heuristic</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run</span>
+<span class="n">astar</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.distance.AStar at 0x7f64497cb640&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The distance from source to target node</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">astar</span><span class="o">.</span><span class="n">getDistance</span><span class="p">())</span>
+<span class="c1"># The path from source to target node</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">astar</span><span class="o">.</span><span class="n">getPath</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0.00011239908770000002
+[46, 105]
+</pre></div></div>
+</div>
+</section>
+<section id="Breadth-First-Search-(BFS)">
+<h2>Breadth-First Search (BFS)<a class="headerlink" href="#Breadth-First-Search-(BFS)" title="Link to this heading">¶</a></h2>
+<p>BFS is an algorithm for traversing a graph which starts from the source node <code class="docutils literal notranslate"><span class="pre">u</span></code>, and explores all of the u’s neighbors nodes at the present depth before moving on to the nodes at the next depth level. BFS finds the shortest paths from a source to all the reachable nodes of an unweighted graph.</p>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/distance.html?highlight=bfs#networkit.distance.BFS">BFS(G, source, storePaths=True, storeNodesSortedByDistance=False, target=none)</a> constructor expects a graph and a source node as mandatory parameters. If the paths should be stored, set <code class="docutils literal notranslate"><span class="pre">storedPaths</span></code> to true. If <code class="docutils literal notranslate"><span class="pre">storeNodesSortedByDistance</span></code> is set, a vector of nodes ordered in increasing distance from the source is stored. <code class="docutils literal notranslate"><span class="pre">target</span></code> is the target node.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">bfs</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">BFS</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run</span>
+<span class="n">bfs</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.distance.BFS at 0x7f649051f010&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The distance from source to target node</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bfs</span><span class="o">.</span><span class="n">distance</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
+<span class="c1"># The number of shortest paths between the source node</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bfs</span><span class="o">.</span><span class="n">numberOfPaths</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
+<span class="c1"># Returns a shortest path from source to target</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bfs</span><span class="o">.</span><span class="n">getPath</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+2.0
+4.0
+[2, 79, 102]
+</pre></div></div>
+</div>
+</section>
+<section id="Bidirectional-BFS">
+<h2>Bidirectional BFS<a class="headerlink" href="#Bidirectional-BFS" title="Link to this heading">¶</a></h2>
+<p>The Bidirectional BFS algorithm explores the graph from both the source and target nodes until the two explorations meet. This version of BFS is more efficient than BFS when the target node is known.</p>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/distance.html?highlight=bidirec#networkit.distance.BidirectionalBFS">BidirectionalBFS(G, source, target, storePred=True)</a> constructor expects a graph, the source and target nodes as mandatory parameters. The algorithm will also store the predecessors and reconstruct a shortest path from the source and the target if <code class="docutils literal notranslate"><span class="pre">storePred</span></code> is true.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">biBFS</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">BidirectionalBFS</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run</span>
+<span class="n">biBFS</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.distance.BidirectionalBFS at 0x7f6448b604f0&gt;
+</pre></div></div>
+</div>
+<p>Unlike BFS, the <code class="docutils literal notranslate"><span class="pre">getPath</span></code> method does not include the source at the beginning, and the target at the end of the the returned list.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The distance from source to target node</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">biBFS</span><span class="o">.</span><span class="n">getPath</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">biBFS</span><span class="o">.</span><span class="n">getPath</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[79]
+1
+</pre></div></div>
+</div>
+</section>
+<section id="Dijkstra">
+<h2>Dijkstra<a class="headerlink" href="#Dijkstra" title="Link to this heading">¶</a></h2>
+<p>Dijkstra’s algorithm finds the shortest path from a source node a target node. This algorithm creates a tree of shortest paths from the source to all other nodes in the graph. Dijkstra’s algorithm finds the shortest paths from a source to all the reachable nodes of a weighted graph.</p>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/distance.html?highlight=dij#networkit.distance.Dijkstra">Dijkstra(G, source, storePaths=True, storeNodesSortedByDistance=False, target=none)</a> constructor expects a graph and a source node as mandatory parameters. If the paths should be stored, set <code class="docutils literal notranslate"><span class="pre">storedPaths</span></code> to true. If <code class="docutils literal notranslate"><span class="pre">storeNodesSortedByDistance</span></code> is set, a vector of nodes ordered in increasing distance from the source is stored. <code class="docutils literal notranslate"><span class="pre">target</span></code> is the target node.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">dijkstra</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">Dijkstra</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run</span>
+<span class="n">dijkstra</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.distance.Dijkstra at 0x7f6448b524a0&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The distance from source to target node</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dijkstra</span><span class="o">.</span><span class="n">distance</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
+<span class="c1"># The number of shortest paths between the source node</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dijkstra</span><span class="o">.</span><span class="n">numberOfPaths</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
+<span class="c1"># Returns a shortest path from source to target</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dijkstra</span><span class="o">.</span><span class="n">getPath</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0.00011239908770000002
+1.0
+[2, 46, 105, 102]
+</pre></div></div>
+</div>
+</section>
+<section id="Bidirectional-Dijkstra">
+<h2>Bidirectional Dijkstra<a class="headerlink" href="#Bidirectional-Dijkstra" title="Link to this heading">¶</a></h2>
+<p>The Bidirectional Dijkstra algorithm explores the graph from both the source and target nodes until the two explorations meet. This version of Dijkstra is more efficient than the convential Dijkstra when the target node is known.</p>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/distance.html?highlight=bidirec#networkit.distance.BidirectionalDijkstra">BidirectionalDijkstra(G, source, target, storePred=True)</a> constructor expects a graph, the source and target nodes as mandatory parameters. The algorithm will also store the predecessors and reconstruct a shortest path from the source and the target if <code class="docutils literal notranslate"><span class="pre">storePred</span></code> is true.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">biDij</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">BidirectionalDijkstra</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run</span>
+<span class="n">biDij</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.distance.BidirectionalDijkstra at 0x7f6448b61580&gt;
+</pre></div></div>
+</div>
+<p>Unlike Dijkstra, the <code class="docutils literal notranslate"><span class="pre">getPath</span></code> method does not include the source at the beginning, and the target at the end of the the returned list.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The distance from source to target node</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">biDij</span><span class="o">.</span><span class="n">getDistance</span><span class="p">())</span>
+<span class="c1"># The path from source to target node</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">biDij</span><span class="o">.</span><span class="n">getPath</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0.00011239908770000002
+[46, 105]
+</pre></div></div>
+</div>
+</section>
+<section id="Commute-Time-Distance">
+<h2>Commute Time Distance<a class="headerlink" href="#Commute-Time-Distance" title="Link to this heading">¶</a></h2>
+<p>This class computes the Euclidean Commute Time Distance between each pair of nodes for an undirected unweighted graph.</p>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/distance.html?highlight=commute#networkit.distance.CommuteTimeDistance">CommuteTimeDistance(G, tol=0.1)</a> constructor expects a graph as a mandatory parameter. The optional parameter <code class="docutils literal notranslate"><span class="pre">tol</span></code> is the tolerance parameter used for approximation.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">ctd</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">CommuteTimeDistance</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run</span>
+<span class="n">ctd</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.distance.CommuteTimeDistance at 0x7f6448b52c50&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The distance from source to target node</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ctd</span><span class="o">.</span><span class="n">distance</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+465.3162793062133
+</pre></div></div>
+</div>
+<p>If one wants to compute the commute time distance between two nodes, then they should use <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/distance.html?highlight=runsingle#networkit.distance.CommuteTimeDistance.runSinglePair">runSinglePair(u, v)</a> method.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ctd</span><span class="o">.</span><span class="n">runSinglePair</span><span class="p">(</span><span class="n">source</span><span class="p">,</span><span class="n">target</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+465.3162793062133
+</pre></div></div>
+</div>
+</section>
+<section id="Diameter">
+<h2>Diameter<a class="headerlink" href="#Diameter" title="Link to this heading">¶</a></h2>
+<p>This algorithm gives an estimation of the diameter of a given graph. The algorithm is based on the ExactSumSweep algorithm presented in Michele Borassi, Pierluigi Crescenzi, Michel Habib, Walter A. Kosters, Andrea Marino, Frank W. Takes: <a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S0304397515001644">http://www.sciencedirect.com/science/article/pii/S0304397515001644</a>.</p>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/distance.html?highlight=diameter#networkit.distance.Diameter">Diameter(G, algo=DiameterAlgo.AUTOMATIC, error=1.0, nSamples=0)</a> constructor expects a graph as mandatory parameter. <code class="docutils literal notranslate"><span class="pre">algo</span></code> specifies the choice of diameter algorithm while <code class="docutils literal notranslate"><span class="pre">error</span></code> is the maximum allowed relative error. Set to 0 for the exact diameter. <code class="docutils literal notranslate"><span class="pre">nSamples</span></code>is the number of samples to be used. <code class="docutils literal notranslate"><span class="pre">algo</span></code> can be chosen between from 0. automatic 1. exact 2.
+estimatedRange 3. estimatedSamples 4. estimatedPedantic</p>
+<p>Note that the input graph must be connected, otherwise the resulting diameter will be infinite. As the graph we are using is not connected, we shall extract the largest connected component from it and then compute the diameter of the resulting graph.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract largest connect component</span>
+<span class="n">newGraph</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">components</span><span class="o">.</span><span class="n">ConnectedComponents</span><span class="o">.</span><span class="n">extractLargestConnectedComponent</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">newGraph</span><span class="o">.</span><span class="n">numberOfNodes</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+128
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm to compute the exact diameter of the input graph</span>
+<span class="n">diam</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">Diameter</span><span class="p">(</span><span class="n">newGraph</span><span class="p">,</span><span class="n">algo</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run</span>
+<span class="n">diam</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.distance.Diameter at 0x7f6448b50280&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get diameter of graph</span>
+<span class="n">diam</span><span class="o">.</span><span class="n">getDiameter</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(72, 0)
+</pre></div></div>
+</div>
+<p>The return value of <code class="docutils literal notranslate"><span class="pre">getDiameter</span></code> is a pair of integers, i.e., the lower bound and upper bound of the diameter. In the case, that we computed the exact diameter, the diameter is the first value of the pair.</p>
+</section>
+<section id="Eccentricity">
+<h2>Eccentricity<a class="headerlink" href="#Eccentricity" title="Link to this heading">¶</a></h2>
+<p>The eccentricity of a node <code class="docutils literal notranslate"><span class="pre">u</span></code> is defined as the distance to the farthest node from node u. In other words, it is the longest shortest-path starting from node <code class="docutils literal notranslate"><span class="pre">u</span></code>.</p>
+<p>The eccentricity of a graph can be computed by calling the <a href="#id2"><span class="problematic" id="id3">`getValue(G, v) &lt;&gt;`__</span></a> method, and passing a graph and a node. The method returns the node farthest from v, and the length of the shortest path between <code class="docutils literal notranslate"><span class="pre">v</span></code> and the farthest node.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">Eccentricity</span><span class="o">.</span><span class="n">getValue</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">source</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(123, 3)
+</pre></div></div>
+</div>
+</section>
+<section id="Effective-Diameter">
+<h2>Effective Diameter<a class="headerlink" href="#Effective-Diameter" title="Link to this heading">¶</a></h2>
+<p>The effective diameter is defined as the number of edges on average to reach a given ratio of all other nodes.</p>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/distance.html?highlight=effective#networkit.distance.EffectiveDiameter">EffectiveDiameter(G, ratio=0.9)</a> constructor expects an undirected graph and the ratio of nodes that should be connected. The ratio must be between in the interval (0,1].</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">ed</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">EffectiveDiameter</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run</span>
+<span class="n">ed</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.distance.EffectiveDiameter at 0x7f6448b51540&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get effective diameter</span>
+<span class="n">ed</span><span class="o">.</span><span class="n">getEffectiveDiameter</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+2.0546875
+</pre></div></div>
+</div>
+</section>
+<section id="Effective-Diameter-Approximation">
+<h2>Effective Diameter Approximation<a class="headerlink" href="#Effective-Diameter-Approximation" title="Link to this heading">¶</a></h2>
+<p>This class approximates the effective diameter according to the algorithm presented in the “A Fast and Scalable Tool for Data Mining in Massive Graphs” by <a class="reference external" href="http://www.cs.cmu.edu/~christos/PUBLICATIONS/kdd02-anf.pdf">Palmer, Gibbons and Faloutsos</a>.</p>
+<p>The <a href="#id2"><span class="problematic" id="id4">`EffectiveDiameter(G, ratio=0.9, k=64, r=7) &lt;&gt;`__</span></a> constructor expects an undirected graph, the ratio of nodes that should be connected, the number of parallel approximations <code class="docutils literal notranslate"><span class="pre">k</span></code> to get a more robust results, and the number of bits <code class="docutils literal notranslate"><span class="pre">r</span></code> that should be added to the bitmask. The more bits are added to the bitmask, the higher the accuracy. The ratio must be between in the interval (0,1].</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">eda</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">EffectiveDiameterApproximation</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run</span>
+<span class="n">eda</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.distance.EffectiveDiameterApproximation at 0x7f6448b53af0&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get effective diameter</span>
+<span class="n">eda</span><span class="o">.</span><span class="n">getEffectiveDiameter</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+2.046875
+</pre></div></div>
+</div>
+</section>
+<section id="Reverse-BFS">
+<h2>Reverse BFS<a class="headerlink" href="#Reverse-BFS" title="Link to this heading">¶</a></h2>
+<p>This class does a reverse breadth-first search (following the incoming edges of a node) on a directed graph from a given source node.</p>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/distance.html?highlight=bfs#networkit.distance.BFS">ReverseBFS(G, source, storePaths=True, storeNodesSortedByDistance=False, target=none)</a> constructor expects a graph and a source node as mandatory parameters. If the paths should be stored, set <code class="docutils literal notranslate"><span class="pre">storedPaths</span></code> to true. If <code class="docutils literal notranslate"><span class="pre">storeNodesSortedByDistance</span></code> is set, a vector of nodes ordered in increasing distance from the source is stored. <code class="docutils literal notranslate"><span class="pre">target</span></code> is the target node.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">rbfs</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">ReverseBFS</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run</span>
+<span class="n">rbfs</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.distance.ReverseBFS at 0x7f6448b53e50&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The distance from source to target node</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rbfs</span><span class="o">.</span><span class="n">distance</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
+<span class="c1"># The number of shortest paths between source and target</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rbfs</span><span class="o">.</span><span class="n">numberOfPaths</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+2.0
+4.0
+</pre></div></div>
+</div>
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

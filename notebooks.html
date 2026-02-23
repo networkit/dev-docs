@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Jupyter Notebook</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="_static/style.css" type="text/css" />
+    <script src="_static/documentation_options.js?v=89fba709"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="_static/particles.min.js"></script>
+    <script src="_static/custom.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="NetworKit User Guide" href="notebooks/User-Guide.html" />
+    <link rel="prev" title="Deprecated List" href="cpp_api/page_deprecated.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Jupyter Notebook</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tutorial-notebooks">Tutorial Notebooks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/User-Guide.html">NetworKit User Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/User-Guide.html#Profiling">Profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Centrality.html">Centrality Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Community.html">Community Detection with NetworKit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Distance.html">NetworKit Distance Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Dynamics.html">Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Generators.html">NetworKit Graph Generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/GraphNotebook.html">NetworKit Graph Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/GroupCentrality.html">Group Centrality Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/IONotebook.html">NetworKit graph I/O tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/LinkPrediction.html">Link Prediction with NetworKit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/LinkPrediction.html#Link-prediction-algorithms">Link prediction algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/LinkPrediction.html#Link-sampling-and-link-prediction">Link sampling and link prediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Plot.html">Plot Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Randomization.html">NetworKit Randomization Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Reachability.html">NetworKit Reachability Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Sparsification.html">NetworKit Sparsification Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Visualization.html">NetworKit Visualization Tutorial</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="jupyter-notebook">
+<h1>Jupyter Notebook<a class="headerlink" href="#jupyter-notebook" title="Link to this heading">¶</a></h1>
+<p>NetworKit is designed to provide a high level of interactivity to give the user the possibility to create own workflows and a network analysis tool which is easy to use.
+This is accomplished by providing a Python interface to use NetworKit in an interactive Python shell. Complete workflows can be created with Jupyter Notebook - a web-based interactive computing environment.</p>
+<section id="tutorial-notebooks">
+<h2>Tutorial Notebooks<a class="headerlink" href="#tutorial-notebooks" title="Link to this heading">¶</a></h2>
+<p>We provide several example notebooks to get started with NetworKit and Jupyter Notebook. Please note that the following links are static renderings of the notebooks illustrating NetworKit’s features and their outcome.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/User-Guide.html">NetworKit User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/User-Guide.html#About-NetworKit">About NetworKit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/User-Guide.html#Introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/User-Guide.html#Preparation">Preparation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/User-Guide.html#Reading-and-Writing-Graphs">Reading and Writing Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/User-Guide.html#The-Graph-Object">The Graph Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/User-Guide.html#Connected-Components">Connected Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/User-Guide.html#Degree-Distribution">Degree Distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/User-Guide.html#Community-Detection">Community Detection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/User-Guide.html#The-Partition-Data-Structure">The Partition Data Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/User-Guide.html#Choice-of-Algorithm">Choice of Algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/User-Guide.html#Visualizing-the-Result">Visualizing the Result</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/User-Guide.html#Search-and-Shortest-Paths">Search and Shortest Paths</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/User-Guide.html#Centrality">Centrality</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/User-Guide.html#Betweenness-Centrality">Betweenness Centrality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/User-Guide.html#Approximation-of-Betweenness">Approximation of Betweenness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/User-Guide.html#Eigenvector-Centrality-and-PageRank">Eigenvector Centrality and PageRank</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/User-Guide.html#Core-Decomposition">Core Decomposition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/User-Guide.html#Subgraph">Subgraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/User-Guide.html#NetworkX-Compatibility">NetworkX Compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/User-Guide.html#Generating-Graphs">Generating Graphs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/User-Guide.html#Transitivity-/-Clustering-Coefficients">Transitivity / Clustering Coefficients</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/User-Guide.html#Settings">Settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/User-Guide.html#Logging">Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/User-Guide.html#Parallelism">Parallelism</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/User-Guide.html#Profiling">Profiling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/User-Guide.html#Support">Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/Centrality.html">Centrality Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Centrality.html#Betweeness-Centrality">Betweeness Centrality</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Centrality.html#Betweenness">Betweenness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Centrality.html#ApproxBetweenness">ApproxBetweenness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Centrality.html#EstimateBetweenness">EstimateBetweenness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Centrality.html#KadabraBetweenness">KadabraBetweenness</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Centrality.html#Closeness-Centrality">Closeness Centrality</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Centrality.html#Closeness">Closeness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Centrality.html#ApproxCloseness">ApproxCloseness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Centrality.html#HarmonicCloseness">HarmonicCloseness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Centrality.html#TopHarmonicCloseness">TopHarmonicCloseness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Centrality.html#TopCloseness">TopCloseness</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Centrality.html#Degree-Centrality">Degree Centrality</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Centrality.html#id1">Degree Centrality</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Centrality.html#Eigenvector-Centrality-and-PageRank">Eigenvector Centrality and PageRank</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Centrality.html#id2">Eigenvector Centrality and PageRank</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Centrality.html#Katz-Centrality">Katz Centrality</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Centrality.html#Others">Others</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Centrality.html#Spanning-Edge-Centrality">Spanning Edge Centrality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Centrality.html#Approximate-Spanning-Edge-Centrality">Approximate Spanning Edge Centrality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Centrality.html#Local-ClusteringCoefficient">Local ClusteringCoefficient</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/Community.html">Community Detection with NetworKit</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Community.html#PLM">PLM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Community.html#PLP">PLP</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/Components.html">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Components.html#Connected-Components">Connected Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Components.html#Biconnected-Components">Biconnected Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Components.html#Weakly-Connected-Components">Weakly Connected Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Components.html#Strongly-Connected-Components">Strongly Connected Components</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/Distance.html">NetworKit Distance Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Distance.html#Algebraic-Distance">Algebraic Distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Distance.html#All-Pairs-Shortest-Paths-(APSP)">All-Pairs Shortest-Paths (APSP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Distance.html#Pruned-Landmark-Labeling">Pruned Landmark Labeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Distance.html#Dynamic-Pruned-Landmark-Labeling">Dynamic Pruned Landmark Labeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Distance.html#Some-Pairs-Shortest-Paths-(SPSP)">Some-Pairs Shortest-Paths (SPSP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Distance.html#id1">Some-Pairs Shortest-Paths (SPSP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Distance.html#A*">A*</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Distance.html#Breadth-First-Search-(BFS)">Breadth-First Search (BFS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Distance.html#Bidirectional-BFS">Bidirectional BFS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Distance.html#Dijkstra">Dijkstra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Distance.html#Bidirectional-Dijkstra">Bidirectional Dijkstra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Distance.html#Commute-Time-Distance">Commute Time Distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Distance.html#Diameter">Diameter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Distance.html#Eccentricity">Eccentricity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Distance.html#Effective-Diameter">Effective Diameter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Distance.html#Effective-Diameter-Approximation">Effective Diameter Approximation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Distance.html#Reverse-BFS">Reverse BFS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/Dynamics.html">Dynamics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Dynamics.html#The-Graph-and-Graph-Events">The Graph and Graph Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Dynamics.html#DynDijkstra">DynDijkstra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Dynamics.html#DynAPSP">DynAPSP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Dynamics.html#DynBetweenness">DynBetweenness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Dynamics.html#DynTopHarmonicCloseness">DynTopHarmonicCloseness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Dynamics.html#DynConnectedComponents">DynConnectedComponents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Dynamics.html#Other-Dynamic-Algorithms-and-Data-Structures">Other Dynamic Algorithms and Data Structures</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/Generators.html">NetworKit Graph Generators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Generators.html#Erdős-Rényi-Generator">Erdős-Rényi Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Generators.html#Rmat-Generator">Rmat Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Generators.html#Barabási---Albert-Generator">Barabási - Albert Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Generators.html#Hyperbolic-Generator">Hyperbolic Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Generators.html#LFR-Generator">LFR Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Generators.html#Clustered-Random-Graph-Generator">Clustered Random Graph Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Generators.html#Dorogovtsev-Mendes-Generator">Dorogovtsev-Mendes Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Generators.html#Chung-Lu-Generator">Chung-Lu Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Generators.html#Havel-Hakimi-Generator">Havel-Hakimi Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Generators.html#Mocnik-Generator">Mocnik Generator</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/GraphNotebook.html">NetworKit Graph Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/GraphNotebook.html#Graph-from-Pandas,-Scipy-and-Numpy-data">Graph from Pandas, Scipy and Numpy data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/GraphNotebook.html#Node-Attributes">Node Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/GraphNotebook.html#Edge-Attributes">Edge Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/GraphNotebook.html#GraphTools">GraphTools</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/GroupCentrality.html">Group Centrality Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/GroupCentrality.html#Group-Betweenness">Group Betweenness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/GroupCentrality.html#Group-Closeness">Group Closeness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/GroupCentrality.html#Local-Search-for-Group-Closeness">Local Search for Group Closeness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/GroupCentrality.html#Group-Harmonic-Closeness">Group Harmonic Closeness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/GroupCentrality.html#Group-Degree">Group Degree</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/IONotebook.html">NetworKit graph I/O tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/IONotebook.html#Reading-a-graph-from-a-file">Reading a graph from a file</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/IONotebook.html#SNAP-file-format">SNAP file format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/IONotebook.html#EdgeList-file-format">EdgeList file format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/IONotebook.html#METIS-file-format">METIS file format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/IONotebook.html#GraphML-format">GraphML format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/IONotebook.html#GraphViz/-DOT-file-format">GraphViz/ DOT file format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/IONotebook.html#LFR">LFR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/IONotebook.html#KONECT-file-format">KONECT file format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/IONotebook.html#GraphToolBinary-file-format">GraphToolBinary file format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/IONotebook.html#ThrillBinary-file-format">ThrillBinary file format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/IONotebook.html#NetworkitBinaryGraph-file-format">NetworkitBinaryGraph file format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/IONotebook.html#Convert-graphs-to-other-formats">Convert graphs to other formats</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/LinkPrediction.html">Link Prediction with NetworKit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/LinkPrediction.html#Link-prediction-algorithms">Link prediction algorithms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/LinkPrediction.html#Adamic/Adar-Index">Adamic/Adar Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/LinkPrediction.html#Algebraic-Distance-Index">Algebraic Distance Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/LinkPrediction.html#Common-Neighbors-Index">Common Neighbors Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/LinkPrediction.html#Neighbors-Measure-Index">Neighbors Measure Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/LinkPrediction.html#Preferential-Attachment-Index">Preferential Attachment Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/LinkPrediction.html#Resource-Allocation-Index">Resource Allocation Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/LinkPrediction.html#Same-Community-Index">Same Community Index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/LinkPrediction.html#Total-Neighbors-Index">Total Neighbors Index</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/LinkPrediction.html#Link-sampling-and-link-prediction">Link sampling and link prediction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/Plot.html">Plot Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Plot.html#DegreeDistribution">DegreeDistribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Plot.html#ConnectedComponentsSizes">ConnectedComponentsSizes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Plot.html#NodeAttributes">NodeAttributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Plot.html#ClusteringPerDegree">ClusteringPerDegree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Plot.html#CoreDecomposition">CoreDecomposition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Plot.html#HopPlot">HopPlot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/Randomization.html">NetworKit Randomization Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Randomization.html#Global-Curveball">Global Curveball</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Randomization.html#Application-example">Application example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Randomization.html#Curveball">Curveball</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Randomization.html#DegreePreservingShuffle">DegreePreservingShuffle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Randomization.html#Edge-Switching-Markov-Chain">Edge Switching Markov Chain</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Randomization.html#Inplace-Edge-Switching">Inplace Edge Switching</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/Reachability.html">NetworKit Reachability Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Reachability.html#All-Simple-Paths">All Simple Paths</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Reachability.html#Reachable-Nodes">Reachable Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/Sparsification.html">NetworKit Sparsification Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Sparsification.html#Forest-Fire">Forest Fire</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Sparsification.html#Edge-Scores">Edge Scores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Sparsification.html#Sparsification">Sparsification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Sparsification.html#Global-Threshold-Filter">Global Threshold Filter</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Sparsification.html#id1">Sparsification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Sparsification.html#Local-Degree">Local Degree</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Sparsification.html#id2">Edge Scores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Sparsification.html#id3">Sparsification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Sparsification.html#Local-Similarity">Local Similarity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Sparsification.html#id4">Edge Scores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Sparsification.html#id5">Sparsification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Sparsification.html#Random-Edge-Score">Random Edge Score</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Sparsification.html#id6">Edge Scores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Sparsification.html#id7">Sparsification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Sparsification.html#Random-Node-Edge-Score">Random Node Edge Score</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Sparsification.html#id8">Edge Scores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Sparsification.html#id9">Sparsification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Sparsification.html#SCAN-Structural-Similarity-Score">SCAN Structural Similarity Score</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Sparsification.html#id10">Edge Scores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Sparsification.html#id11">Sparsification</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Sparsification.html#Simmelian-Overlap-Score">Simmelian Overlap Score</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Sparsification.html#id12">Edge Scores</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/Sparsification.html#id13">Sparsification</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/Visualization.html">NetworKit Visualization Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Visualization.html#Visualize-in-2D-using-Cytoscape">Visualize in 2D using Cytoscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Visualization.html#Visualize-in-3D-using-Plotly">Visualize in 3D using Plotly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Visualization.html#Visualize-Edge-Attributes">Visualize Edge Attributes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

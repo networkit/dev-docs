@@ -1,0 +1,1543 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>networkit.distance</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="networkit.dynamic" href="dynamic.html" />
+    <link rel="prev" title="networkit.correlation" href="correlation.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="networkit.html">networkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algebraic.html">networkit.algebraic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="base.html">networkit.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="centrality.html">networkit.centrality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clique.html">networkit.clique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coarsening.html">networkit.coarsening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coloring.html">networkit.coloring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="community.html">networkit.community</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">networkit.components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="correlation.html">networkit.correlation</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">networkit.distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamic.html">networkit.dynamic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamics.html">networkit.dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynbase.html">networkit.dynbase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="embedding.html">networkit.embedding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engineering.html">networkit.engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow.html">networkit.flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generators.html">networkit.generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gephi.html">networkit.gephi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="globals.html">networkit.globals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graph.html">networkit.graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphio.html">networkit.graphio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphtools.html">networkit.graphtools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="helpers.html">networkit.helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="independentset.html">networkit.independentset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkprediction.html">networkit.linkprediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matching.html">networkit.matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nxadapter.html">networkit.nxadapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot.html">networkit.plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">networkit.profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="randomization.html">networkit.randomization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reachability.html">networkit.reachability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scd.html">networkit.scd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html">networkit.simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sparsification.html">networkit.sparsification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stats.html">networkit.stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structures.html">networkit.structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="traversal.html">networkit.traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viz.html">networkit.viz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vizbridges.html">networkit.vizbridges</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="module-networkit.distance">
+<span id="networkit-distance"></span><h1>networkit.distance<a class="headerlink" href="#module-networkit.distance" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.APSP">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">APSP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.APSP" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
+<p>All-Pairs Shortest-Paths algorithm (implemented running Dijkstra’s algorithm from each node, or BFS if G is unweighted).
+Computes all pairwise shortest-path distances in G.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.APSP.getDistance">
+<span class="sig-name descname"><span class="pre">getDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.APSP.getDistance" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the length of the shortest path from source u to target v.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>node</em>) – Index of source node u.</p></li>
+<li><p><strong>v</strong> (<em>node</em>) – Index of target node v.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The distance from u to v. Returned value is of type int, if the graph is unweighted - otherwise the return
+type is float.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int or float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.APSP.getDistances">
+<span class="sig-name descname"><span class="pre">getDistances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.APSP.getDistances" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a vector of vectors of distances between each node pair.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>asarray</strong> (<em>optional</em>) – Return the result as a numpy array. Default: Falsy.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The shortest-path distances from each node to any other node in the graph.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(list(float)) or np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.AStar">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">AStar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">heu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storePred</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.AStar" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.distance.STSP" title="networkit.distance.STSP"><code class="xref py py-class docutils literal notranslate"><span class="pre">STSP</span></code></a></p>
+<p>A* path-finding algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>heu</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – List of lower bounds of the distance of each node to the target.</p></li>
+<li><p><strong>source</strong> (<em>int</em>) – The source node.</p></li>
+<li><p><strong>target</strong> (<em>int</em>) – The target node.</p></li>
+<li><p><strong>storePred</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, the algorithm will also store the predecessors
+and reconstruct a shortest path from source and target. Default: True</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.AdamicAdarDistance">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">AdamicAdarDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.AdamicAdarDistance" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Calculate the adamic adar similarity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.AdamicAdarDistance.distance">
+<span class="sig-name descname"><span class="pre">distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.AdamicAdarDistance.distance" title="Link to this definition">¶</a></dt>
+<dd><p>Calculate the distance from node u to node v.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>int</em>) – Source node</p></li>
+<li><p><strong>v</strong> (<em>int</em>) – Target node</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Distance from node u to node v.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.AdamicAdarDistance.getAttribute">
+<span class="sig-name descname"><span class="pre">getAttribute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.AdamicAdarDistance.getAttribute" title="Link to this definition">¶</a></dt>
+<dd><p>Get the Adamic Adar similiraty score for every edge.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Adamic Adar similiraty score for every edge.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.AdamicAdarDistance.preprocess">
+<span class="sig-name descname"><span class="pre">preprocess</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.AdamicAdarDistance.preprocess" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.AlgebraicDistance">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">AlgebraicDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberSystems</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numberIterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">omega</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">withEdgeScores</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.AlgebraicDistance" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Algebraic distance assigns a distance value to pairs of nodes
+according to their structural closeness in the graph.
+Algebraic distances will become small within dense subgraphs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to calculate Jaccard distances for.</p></li>
+<li><p><strong>numberSystems</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of vectors/systems used for algebraic iteration. Default: 10</p></li>
+<li><p><strong>numberIterations</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of iterations in each system. Default: 30</p></li>
+<li><p><strong>omega</strong> (<em>float</em><em>, </em><em>optional</em>) – Attenuation factor in [0,1] influencing convergence speed. Default: 0.5</p></li>
+<li><p><strong>norm</strong> (<em>int</em><em>, </em><em>optional</em>) – The norm factor of the extended algebraic distance. Default: 0</p></li>
+<li><p><strong>withEdgeScores</strong> (<em>bool</em><em>, </em><em>optional</em>) – Calculate array of scores for edges {u,v} that equal ad(u,v). Default: False</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.AlgebraicDistance.distance">
+<span class="sig-name descname"><span class="pre">distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.AlgebraicDistance.distance" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.AlgebraicDistance.getEdgeScores">
+<span class="sig-name descname"><span class="pre">getEdgeScores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.AlgebraicDistance.getEdgeScores" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.AlgebraicDistance.preprocess">
+<span class="sig-name descname"><span class="pre">preprocess</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.AlgebraicDistance.preprocess" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.AllSimplePaths">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">AllSimplePaths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.AllSimplePaths" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Algorithm to compute all existing simple paths from a source node to a target node. The maximum length of the paths can be fixed through ‘cutoff’.
+CAUTION: This algorithm could take a lot of time on large networks (many edges), especially if the cutoff value is high or not specified.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.AllSimplePaths.forAllSimplePaths">
+<span class="sig-name descname"><span class="pre">forAllSimplePaths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.AllSimplePaths.forAllSimplePaths" title="Link to this definition">¶</a></dt>
+<dd><p>More efficient path iterator. Iterates over all the simple paths.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>callback</strong> (<em>object</em>) – Any callable object that takes the parameter path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.AllSimplePaths.getAllSimplePaths">
+<span class="sig-name descname"><span class="pre">getAllSimplePaths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.AllSimplePaths.getAllSimplePaths" title="Link to this definition">¶</a></dt>
+<dd><p>Returns all the simple paths from source to target.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list containing list of node indexes which represent all simple paths.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(list(int))</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.AllSimplePaths.numberOfSimplePaths">
+<span class="sig-name descname"><span class="pre">numberOfSimplePaths</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.AllSimplePaths.numberOfSimplePaths" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the number of simple paths.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The number of simple paths.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.AllSimplePaths.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.AllSimplePaths.run" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.BFS">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">BFS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storePaths</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storeNodesSortedByDistance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.BFS" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.distance.SSSP" title="networkit.distance.SSSP"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSSP</span></code></a></p>
+<p>Simple breadth-first search on a Graph from a given source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>source</strong> (<em>int</em>) – The source node of the breadth-first search.</p></li>
+<li><p><strong>storePaths</strong> (<em>bool</em><em>, </em><em>optional</em>) – Controls whether to store paths and number of paths. Default: True</p></li>
+<li><p><strong>storeNodesSortedByDistance</strong> (<em>bool</em><em>, </em><em>optional</em>) – Controls whether to store nodes sorted by distance. Default: False</p></li>
+<li><p><strong>target</strong> (<em>int</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Terminate search when the target has been reached. In default-mode, this target is set to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.BidirectionalBFS">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">BidirectionalBFS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storePre</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.BidirectionalBFS" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.distance.STSP" title="networkit.distance.STSP"><code class="xref py py-class docutils literal notranslate"><span class="pre">STSP</span></code></a></p>
+<p>Implements a bidirectional breadth-first search on a graph from two given source and target nodes.
+Explores the graph from both the source and target nodes until the two explorations meet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>source</strong> (<em>int</em>) – The source node.</p></li>
+<li><p><strong>target</strong> (<em>int</em>) – The target node.</p></li>
+<li><p><strong>storePred</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, the algorithm will also store the predecessors
+and reconstruct a shortest path from source and target. Default: True</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.BidirectionalDijkstra">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">BidirectionalDijkstra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storePred</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.BidirectionalDijkstra" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.distance.STSP" title="networkit.distance.STSP"><code class="xref py py-class docutils literal notranslate"><span class="pre">STSP</span></code></a></p>
+<p>Bidirectional implementation of the Dijkstra algorithm from
+two given source and target nodes.
+Explores the graph from both the source and target nodes until
+the two explorations meet.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.CommuteTimeDistance">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">CommuteTimeDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.CommuteTimeDistance" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
+<p>Computes the Euclidean Commute Time Distance (ECTD) between each pair of nodes for an undirected unweighted graph.</p>
+<p>CommuteTimeDistance(G)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>tol</strong> (<em>float</em><em>, </em><em>optional</em>) – Tolerance for computation (higher tolerance leads to faster running times). Default: 0.1</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.CommuteTimeDistance.distance">
+<span class="sig-name descname"><span class="pre">distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.CommuteTimeDistance.distance" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the ECTD between node u and node v.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>int</em>) – Index of node u.</p></li>
+<li><p><strong>v</strong> (<em>int</em>) – Index of node v.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>ECTD between node u and v.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.CommuteTimeDistance.runApproximation">
+<span class="sig-name descname"><span class="pre">runApproximation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.CommuteTimeDistance.runApproximation" title="Link to this definition">¶</a></dt>
+<dd><p>Computes approximation of the ECTD.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.CommuteTimeDistance.runParallelApproximation">
+<span class="sig-name descname"><span class="pre">runParallelApproximation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.CommuteTimeDistance.runParallelApproximation" title="Link to this definition">¶</a></dt>
+<dd><p>Computes approximation (in parallel) of the ECTD.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.CommuteTimeDistance.runSinglePair">
+<span class="sig-name descname"><span class="pre">runSinglePair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.CommuteTimeDistance.runSinglePair" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the ECTD between node u and node v, without preprocessing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>int</em>) – Index of node u.</p></li>
+<li><p><strong>v</strong> (<em>int</em>) – Index of node v.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>ECTD (without preprocessing) between node u and v.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.CommuteTimeDistance.runSingleSource">
+<span class="sig-name descname"><span class="pre">runSingleSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.CommuteTimeDistance.runSingleSource" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the sum of the ECTDs from u, without preprocessing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>u</strong> (<em>int</em>) – Index of node u.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Sum of the ECTDs from u, without preprocessing.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.Diameter">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">Diameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">algo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">networkit.DiameterAlgo.AUTOMATIC</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1.</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nSamples</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.Diameter" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
+<p>Calculate the Diameter of the graph based different possible algorithms.</p>
+<p>Parameter <code class="code docutils literal notranslate"><span class="pre">algo</span></code> can be one of the following:</p>
+<ul class="simple">
+<li><p>networkit.distance.DiameterAlgo.AUTOMATIC</p></li>
+<li><p>networkit.distance.DiameterAlgo.EXACT</p></li>
+<li><p>networkit.distance.DiameterAlgo.ESTIMATED_RANGE</p></li>
+<li><p>networkit.distance.DiameterAlgo.ESTIMATED_SAMPLES</p></li>
+<li><p>networkit.distance.DiameterAlgo.ESTIMATED_PEDANTIC</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>algo</strong> (<a class="reference internal" href="#networkit.distance.DiameterAlgo" title="networkit.distance.DiameterAlgo"><em>networkit.distance.DiameterAlgo</em></a><em>, </em><em>optional</em>) – Algorithm which should be used for diameter computation. Default: networkit.distance.DiameterAlgo.AUTOMATIC</p></li>
+<li><p><strong>error</strong> (<em>float</em><em>, </em><em>optional</em>) – Possible error used for diameter algorithm EstimatedRange. Default: -1</p></li>
+<li><p><strong>nSamples</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of samples (influencing the quality of the output) used for diameter algorithm EstimatedSamples. Default: 0</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.Diameter.getDiameter">
+<span class="sig-name descname"><span class="pre">getDiameter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.Diameter.getDiameter" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Diameter of the graph.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.DiameterAlgo">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">DiameterAlgo</span></span><a class="headerlink" href="#networkit.distance.DiameterAlgo" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.distance.DiameterAlgo.AUTOMATIC">
+<span class="sig-name descname"><span class="pre">AUTOMATIC</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></span><a class="headerlink" href="#networkit.distance.DiameterAlgo.AUTOMATIC" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.distance.DiameterAlgo.Automatic">
+<span class="sig-name descname"><span class="pre">Automatic</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></span><a class="headerlink" href="#networkit.distance.DiameterAlgo.Automatic" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.distance.DiameterAlgo.ESTIMATED_PEDANTIC">
+<span class="sig-name descname"><span class="pre">ESTIMATED_PEDANTIC</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></span><a class="headerlink" href="#networkit.distance.DiameterAlgo.ESTIMATED_PEDANTIC" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.distance.DiameterAlgo.ESTIMATED_RANGE">
+<span class="sig-name descname"><span class="pre">ESTIMATED_RANGE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></span><a class="headerlink" href="#networkit.distance.DiameterAlgo.ESTIMATED_RANGE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.distance.DiameterAlgo.ESTIMATED_SAMPLES">
+<span class="sig-name descname"><span class="pre">ESTIMATED_SAMPLES</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></span><a class="headerlink" href="#networkit.distance.DiameterAlgo.ESTIMATED_SAMPLES" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.distance.DiameterAlgo.EXACT">
+<span class="sig-name descname"><span class="pre">EXACT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></span><a class="headerlink" href="#networkit.distance.DiameterAlgo.EXACT" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.distance.DiameterAlgo.EstimatedPedantic">
+<span class="sig-name descname"><span class="pre">EstimatedPedantic</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></span><a class="headerlink" href="#networkit.distance.DiameterAlgo.EstimatedPedantic" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.distance.DiameterAlgo.EstimatedRange">
+<span class="sig-name descname"><span class="pre">EstimatedRange</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></span><a class="headerlink" href="#networkit.distance.DiameterAlgo.EstimatedRange" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.distance.DiameterAlgo.EstimatedSamples">
+<span class="sig-name descname"><span class="pre">EstimatedSamples</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></span><a class="headerlink" href="#networkit.distance.DiameterAlgo.EstimatedSamples" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.distance.DiameterAlgo.Exact">
+<span class="sig-name descname"><span class="pre">Exact</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></span><a class="headerlink" href="#networkit.distance.DiameterAlgo.Exact" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.Dijkstra">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">Dijkstra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storePaths</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storeNodesSortedByDistance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.Dijkstra" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.distance.SSSP" title="networkit.distance.SSSP"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSSP</span></code></a></p>
+<p>Dijkstra’s SSSP algorithm. Returns list of weighted distances from node source, i.e. the length of the shortest path from source to
+any other node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>source</strong> (<em>int</em>) – The source node of the Dijkstra search.</p></li>
+<li><p><strong>storePaths</strong> (<em>bool</em><em>, </em><em>optional</em>) – Controls whether to store paths and number of paths. Default: True</p></li>
+<li><p><strong>storeNodesSortedByDistance</strong> (<em>bool</em><em>, </em><em>optional</em>) – Controls whether to store nodes sorted by distance. Default: False</p></li>
+<li><p><strong>target</strong> (<em>int</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Terminate search when the target has been reached. In default-mode, this target is set to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.DynAPSP">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">DynAPSP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.DynAPSP" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.distance.APSP" title="networkit.distance.APSP"><code class="xref py py-class docutils literal notranslate"><span class="pre">APSP</span></code></a>, <a class="reference internal" href="dynbase.html#networkit.dynbase.DynAlgorithm" title="networkit.dynbase.DynAlgorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">DynAlgorithm</span></code></a></p>
+<p>All-Pairs Shortest-Paths algorithm for dynamic graphs.
+Computes all pairwise shortest-path distances in G.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.DynBFS">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">DynBFS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.DynBFS" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.distance.DynSSSP" title="networkit.distance.DynSSSP"><code class="xref py py-class docutils literal notranslate"><span class="pre">DynSSSP</span></code></a></p>
+<p>Dynamic version of BFS.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>source</strong> (<em>int</em>) – The source node of the breadth-first search.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.DynDijkstra">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">DynDijkstra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.DynDijkstra" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.distance.DynSSSP" title="networkit.distance.DynSSSP"><code class="xref py py-class docutils literal notranslate"><span class="pre">DynSSSP</span></code></a></p>
+<p>Dynamic version of Dijkstra. Create DynDijkstra for G and a source node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>source</strong> (<em>int</em>) – The source node of the Dijkstra search.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.DynPrunedLandmarkLabeling">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">DynPrunedLandmarkLabeling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.DynPrunedLandmarkLabeling" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a>, <a class="reference internal" href="dynbase.html#networkit.dynbase.DynAlgorithm" title="networkit.dynbase.DynAlgorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">DynAlgorithm</span></code></a></p>
+<p>Dynamic Pruned Landmark Labeling algorithm based on the paper “Fully
+Dynamic 2-Hop Cover Labeling “ from D’Angelo et al., ACM JEA 2019. The
+algorithm computes distance labels by performing pruned breadth-first
+searches from each vertex. Distance labels can be updated efficiently
+after edge insertions.
+Note: this algorithm only works for unweighted graphs and only supports
+edge insertions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.DynPrunedLandmarkLabeling.query">
+<span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.DynPrunedLandmarkLabeling.query" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the shortest-path distance between the two nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>node</em>) – Source node.</p></li>
+<li><p><strong>v</strong> (<em>node</em>) – Target node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The shortest-path distances from the source node to the target node.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.DynSSSP">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">DynSSSP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storePredecessors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.DynSSSP" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.distance.SSSP" title="networkit.distance.SSSP"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSSP</span></code></a>, <a class="reference internal" href="dynbase.html#networkit.dynbase.DynAlgorithm" title="networkit.dynbase.DynAlgorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">DynAlgorithm</span></code></a></p>
+<p>Base class for single source shortest path algorithms in dynamic graphs.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.DynSSSP.modified">
+<span class="sig-name descname"><span class="pre">modified</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.DynSSSP.modified" title="Link to this definition">¶</a></dt>
+<dd><p>Returns True or False depending on whether the node previoulsy specified with
+setTargetNode(t) has been modified by the update or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Indicator for whether the target node was modified or not.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.DynSSSP.setTargetNode">
+<span class="sig-name descname"><span class="pre">setTargetNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.DynSSSP.setTargetNode" title="Link to this definition">¶</a></dt>
+<dd><p>Set a target node to be observed during the update. If a node t is set as
+target before the update, the function modified() will return True or False
+depending on whether node t has been modified by the update.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>t</strong> (<em>int</em>) – Target node to be observed during update.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.Eccentricity">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">Eccentricity</span></span><a class="headerlink" href="#networkit.distance.Eccentricity" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The eccentricity of a node u is defined as the distance to the farthest node from node u. In other words, it is the longest shortest-path starting from node u.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.Eccentricity.getValue">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">getValue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.Eccentricity.getValue" title="Link to this definition">¶</a></dt>
+<dd><p>Get eccentricity value of node v from graph G.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>First index is the farthest node v from u, and the second index is the length of the shortest path from u to v.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple(int, float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.EffectiveDiameter">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">EffectiveDiameter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.EffectiveDiameter" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
+<p>Calculates the effective diameter of a graph.
+The effective diameter is defined as the number of edges on average to reach a given ratio of all other nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of nodes that shall be within stepwidth; default = 0.9</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.EffectiveDiameter.getEffectiveDiameter">
+<span class="sig-name descname"><span class="pre">getEffectiveDiameter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.EffectiveDiameter.getEffectiveDiameter" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The effective diameter</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.EffectiveDiameterApproximation">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">EffectiveDiameterApproximation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ratio</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">64</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">7</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.EffectiveDiameterApproximation" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
+<p>Calculates the effective diameter of a graph.
+The effective diameter is defined as the number of edges on average to reach a given ratio of all other nodes.</p>
+<p>Implementation after the ANF algorithm presented in the paper “A Fast and Scalable Tool for Data Mining in Massive Graphs”[1]</p>
+<p>[1] by Palmer, Gibbons and Faloutsos which can be found here: <a class="reference external" href="http://www.cs.cmu.edu/~christos/PUBLICATIONS/kdd02-anf.pdf">http://www.cs.cmu.edu/~christos/PUBLICATIONS/kdd02-anf.pdf</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of nodes that shall be within stepwidth, default = 0.9</p></li>
+<li><p><strong>k</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of parallel approximations, bigger k -&gt; longer runtime, more precise result; default = 64</p></li>
+<li><p><strong>r</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of additional bits, important in tiny graphs; default = 7</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.EffectiveDiameterApproximation.getEffectiveDiameter">
+<span class="sig-name descname"><span class="pre">getEffectiveDiameter</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.EffectiveDiameterApproximation.getEffectiveDiameter" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The approximated effective diameter</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.FloydWarshall">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">FloydWarshall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.FloydWarshall" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
+<p>Computes all-pairs shortest paths using the Floyd–Warshall algorithm.
+This algorithm finds the shortest paths between all node pairs in a weighted graph
+(directed or undirected). It correctly handles negative edge weights and can detect
+nodes that lie on negative cycles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>)</p></li>
+<li><p><strong>undirected.</strong> (<em>Weighted input graph. May be directed or</em>)</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The algorithm runs in O(n^3) time and is mainly suitable for small to
+medium-sized graphs.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.FloydWarshall.getDistance">
+<span class="sig-name descname"><span class="pre">getDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.FloydWarshall.getDistance" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the shortest distance between two nodes.</p>
+<p>If no path exists, this returns a very large sentinel value
+(typically std::numeric_limits&lt;edgeweight&gt;::max()).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<em>int</em>) – Source node.</p></li>
+<li><p><strong>target</strong> (<em>int</em>) – Target node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Distance from source to target.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.FloydWarshall.getNodesOnShortestPath">
+<span class="sig-name descname"><span class="pre">getNodesOnShortestPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.FloydWarshall.getNodesOnShortestPath" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the nodes on one shortest path from source to target.</p>
+<p>If multiple shortest paths exist with the same total distance,
+the path with the fewest nodes is returned. If no path exists,
+an empty list is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<em>int</em>) – Source node.</p></li>
+<li><p><strong>target</strong> (<em>int</em>) – Target node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Sequence of nodes forming the path from source to target.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.FloydWarshall.isNodeInNegativeCycle">
+<span class="sig-name descname"><span class="pre">isNodeInNegativeCycle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.FloydWarshall.isNodeInNegativeCycle" title="Link to this definition">¶</a></dt>
+<dd><p>Check whether a node is part of a negative cycle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>u</strong> (<em>int</em>) – Node to check.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if u lies on a negative cycle, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.FloydWarshall.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.FloydWarshall.run" title="Link to this definition">¶</a></dt>
+<dd><p>Execute the Floyd–Warshall algorithm and compute all-pairs shortest paths.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.HopPlotApproximation">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">HopPlotApproximation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxDistance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">64</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">7</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.HopPlotApproximation" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
+<p>Computes an approxmation of the hop-plot of a given graph.
+The hop-plot is the set of pairs (d, g(g)) for each natural number d
+and where g(d) is the fraction of connected node pairs whose shortest connecting path has length at most d.</p>
+<p>Implementation after the ANF algorithm presented in the paper “A Fast and Scalable Tool for Data Mining in Massive Graphs”[1]</p>
+<p>[1] by Palmer, Gibbons and Faloutsos which can be found here: <a class="reference external" href="http://www.cs.cmu.edu/~christos/PUBLICATIONS/kdd02-anf.pdf">http://www.cs.cmu.edu/~christos/PUBLICATIONS/kdd02-anf.pdf</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>maxDistance</strong> (<em>float</em><em>, </em><em>optional</em>) – Maximum distance between considered nodes set to 0 or negative to get the hop-plot
+for the entire graph so that each node can reach each other node.</p></li>
+<li><p><strong>k</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of parallel approximations, bigger k -&gt; longer runtime, more precise result; default = 64</p></li>
+<li><p><strong>r</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of additional bits, important in tiny graphs; default = 7</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.HopPlotApproximation.getHopPlot">
+<span class="sig-name descname"><span class="pre">getHopPlot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.HopPlotApproximation.getHopPlot" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the approximated hop-plot of the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Number of connected nodes for each distance</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict(int <code class="docutils literal notranslate"><span class="pre">:</span></code> float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.JaccardDistance">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">JaccardDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangles</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.JaccardDistance" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The Jaccard distance measure assigns to each edge the jaccard coefficient
+of the neighborhoods of the two adjacent nodes.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.JaccardDistance.getAttribute">
+<span class="sig-name descname"><span class="pre">getAttribute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.JaccardDistance.getAttribute" title="Link to this definition">¶</a></dt>
+<dd><p>Get the Jaccard distance for every edge.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Jaccard distance for every edge.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.MultiTargetBFS">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">MultiTargetBFS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.MultiTargetBFS" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.distance.STSP" title="networkit.distance.STSP"><code class="xref py py-class docutils literal notranslate"><span class="pre">STSP</span></code></a></p>
+<p>Simple breadth-first search on a Graph from a given source to multiple targets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>source</strong> (<em>int</em>) – The source node of the breadth-first search.</p></li>
+<li><p><strong>targets</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – List of target nodes.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.MultiTargetDijkstra">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">MultiTargetDijkstra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.MultiTargetDijkstra" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.distance.STSP" title="networkit.distance.STSP"><code class="xref py py-class docutils literal notranslate"><span class="pre">STSP</span></code></a></p>
+<p>Dijkstra’s SSSP algorithm from a single source node to multiple target nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>source</strong> (<em>int</em>) – The source node of the Dijkstra search.</p></li>
+<li><p><strong>targets</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – List of target nodes.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.NeighborhoodFunction">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">NeighborhoodFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.NeighborhoodFunction" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
+<p>Computes the neighborhood function exactly.
+The neighborhood function N of a graph G for a given distance t is defined
+as the number of node pairs (u,v) that can be reached within distance t.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.NeighborhoodFunction.getNeighborhoodFunction">
+<span class="sig-name descname"><span class="pre">getNeighborhoodFunction</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.NeighborhoodFunction.getNeighborhoodFunction" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the neighborhood function of the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The i-th element denotes the number of node pairs that have a distance at most (i+1).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.NeighborhoodFunctionApproximation">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">NeighborhoodFunctionApproximation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">64</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">7</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.NeighborhoodFunctionApproximation" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
+<p>Computes an approximation of the neighborhood function.
+The neighborhood function N of a graph G for a given distance t is defined
+as the number of node pairs (u,v) that can be reached within distance t.</p>
+<p>Implementation after the ANF algorithm presented in the paper “A Fast and Scalable Tool for Data Mining in Massive Graphs”[1]</p>
+<p>[1] by Palmer, Gibbons and Faloutsos which can be found here: <a class="reference external" href="http://www.cs.cmu.edu/~christos/PUBLICATIONS/kdd02-anf.pdf">http://www.cs.cmu.edu/~christos/PUBLICATIONS/kdd02-anf.pdf</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>k</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of approximations, bigger k -&gt; longer runtime, more precise result; default = 64</p></li>
+<li><p><strong>r</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of additional bits, important in tiny graphs; default = 7</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.NeighborhoodFunctionApproximation.getNeighborhoodFunction">
+<span class="sig-name descname"><span class="pre">getNeighborhoodFunction</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.NeighborhoodFunctionApproximation.getNeighborhoodFunction" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the neighborhood function of the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The i-th element denotes the number of node pairs that have a distance at most (i+1).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.NeighborhoodFunctionHeuristic">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">NeighborhoodFunctionHeuristic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nSamples</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strategy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">SelectionStrategy.SPLIT</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.NeighborhoodFunctionHeuristic" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
+<p>Computes a heuristic of the neighborhood function.
+The algorithm runs nSamples breadth-first searches and scales the results up to the actual amount of nodes.</p>
+<p>Parameter <code class="code docutils literal notranslate"><span class="pre">strategy</span></code> can be one of the following:</p>
+<ul class="simple">
+<li><p>networkit.distance.SelectionStrategy.RANDOM</p></li>
+<li><p>networkit.distance.SelectionStrategy.SPLIT</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>nSamples</strong> (<em>int</em><em>, </em><em>optional</em>) – The amount of samples, set to zero for heuristic of max(sqrt(m), 0.15*n). Default: 0</p></li>
+<li><p><strong>strategy</strong> (<a class="reference internal" href="#networkit.distance.SelectionStrategy" title="networkit.distance.SelectionStrategy"><em>networkit.distance.SelectionStrategy</em></a><em>, </em><em>optional</em>) – The strategy to select the samples, accepts RANDOM (0) or SPLIT (1). Default: networkit.distance.SelectionStrategy.SPLIT</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.NeighborhoodFunctionHeuristic.getNeighborhoodFunction">
+<span class="sig-name descname"><span class="pre">getNeighborhoodFunction</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.NeighborhoodFunctionHeuristic.getNeighborhoodFunction" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the neighborhood function of the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The i-th element denotes the number of node pairs that have a distance at most (i+1).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.PrunedLandmarkLabeling">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">PrunedLandmarkLabeling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.PrunedLandmarkLabeling" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
+<p>Pruned Landmark Labeling algorithm based on the paper “Fast exact shortest-path distance
+queries on large networks by pruned landmark labeling” from Akiba et al., ACM SIGMOD 2013.
+The algorithm computes distance labels by performing pruned breadth-first searches from each
+vertex. Labels are used to quickly retrieve shortest-path distances between node pairs.
+Note: this algorithm only works for unweighted graphs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.PrunedLandmarkLabeling.query">
+<span class="sig-name descname"><span class="pre">query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.PrunedLandmarkLabeling.query" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the shortest-path distance between the two nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>node</em>) – Source node.</p></li>
+<li><p><strong>v</strong> (<em>node</em>) – Target node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The shortest-path distances from the source node to the target node.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.ReverseBFS">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">ReverseBFS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storePaths</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storeNodesSortedByDistance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.ReverseBFS" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.distance.SSSP" title="networkit.distance.SSSP"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSSP</span></code></a></p>
+<p>Simple reverse breadth-first search on a Graph from a given source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>source</strong> (<em>int</em>) – The source node of the breadth-first search.</p></li>
+<li><p><strong>storePaths</strong> (<em>bool</em><em>, </em><em>optional</em>) – Controls whether to store paths and number of paths. Default: True</p></li>
+<li><p><strong>storeNodesSortedByDistance</strong> (<em>bool</em><em>, </em><em>optional</em>) – Controls whether to store nodes sorted by distance. Default: False</p></li>
+<li><p><strong>target</strong> (<em>int</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – Terminate search when the target has been reached. In default-mode, this target is set to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.SPSP">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">SPSP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sources</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.SPSP" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
+<p>Some-Pairs Shortest-Paths algorithm (implemented running Dijkstra’s algorithm from each source
+node, or BFS if G is unweighted).
+Computes pairwise shortest-path distances from the source nodes to all the nodes in G.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>sources</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – Set of source nodes.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.SPSP.getDistance">
+<span class="sig-name descname"><span class="pre">getDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.SPSP.getDistance" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the length of the shortest path from source u to target v.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>node</em>) – Index of source node.</p></li>
+<li><p><strong>v</strong> (<em>node</em>) – Index of target node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The distance from u to v.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.SPSP.setSources">
+<span class="sig-name descname"><span class="pre">setSources</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sources</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.SPSP.setSources" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the source nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sources</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – List of the new source nodes.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.SPSP.setTargets">
+<span class="sig-name descname"><span class="pre">setTargets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">targets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.SPSP.setTargets" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the target nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>targets</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – List of the new target nodes.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.SSSP">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">SSSP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storePaths</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storeNodesSortedByDistance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.SSSP" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
+<p>Base class for single source shortest path algorithms.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.SSSP.distance">
+<span class="sig-name descname"><span class="pre">distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.SSSP.distance" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the distance from the source node to t.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>t</strong> (<em>int</em>) – Target node.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Distance from the source node to t.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.SSSP.getDistances">
+<span class="sig-name descname"><span class="pre">getDistances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.SSSP.getDistances" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a list of weighted distances from the source node, i.e. the
+length of the shortest path from the source node to any other node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>asarray</strong> (<em>optional</em>) – Return the result as a numpy array. Default: None</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The weighted distances from the source node to any other node in the graph.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list or np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.SSSP.getNodesSortedByDistance">
+<span class="sig-name descname"><span class="pre">getNodesSortedByDistance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.SSSP.getNodesSortedByDistance" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a list of nodes ordered in increasing distance from the source.</p>
+<p>For this functionality to be available, storeNodesSortedByDistance has to be set to true in the constructor.
+There are no guarantees regarding the ordering of two nodes with the same distance to the source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Nodes ordered in increasing distance from the source.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.SSSP.getPath">
+<span class="sig-name descname"><span class="pre">getPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forward</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.SSSP.getPath" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a shortest path from source to t and an empty path if source and t
+are not connected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> (<em>int</em>) – Target node.</p></li>
+<li><p><strong>forward</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True (default) the path is directed from source to t, otherwise the path
+is reversed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A shortest path from source to t or an empty path.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.SSSP.getPaths">
+<span class="sig-name descname"><span class="pre">getPaths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forward</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.SSSP.getPaths" title="Link to this definition">¶</a></dt>
+<dd><p>Returns all shortest paths from source to t and an empty set if source
+and t are not connected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> (<em>int</em>) – Target node.</p></li>
+<li><p><strong>forward</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True (default) the path is directed from source to
+t, otherwise the path is reversed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>All shortest paths from source node to target node t.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.SSSP.getPredecessors">
+<span class="sig-name descname"><span class="pre">getPredecessors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.SSSP.getPredecessors" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the predecessor nodes of t on all shortest paths from source
+to t.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>t</strong> (<em>int</em>) – Target node.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The predecessors of t on all shortest paths from source to t.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.SSSP.numberOfPaths">
+<span class="sig-name descname"><span class="pre">numberOfPaths</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.SSSP.numberOfPaths" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the number of paths from the source node to t.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>t</strong> (<em>int</em>) – Target node.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The number of paths from the source node to t.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.SSSP.setSource">
+<span class="sig-name descname"><span class="pre">setSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.SSSP.setSource" title="Link to this definition">¶</a></dt>
+<dd><p>Sets a new source node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>s</strong> (<em>int</em>) – New source node.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.SSSP.setTarget">
+<span class="sig-name descname"><span class="pre">setTarget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.SSSP.setTarget" title="Link to this definition">¶</a></dt>
+<dd><p>Sets a new target node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>t</strong> (<em>int</em>) – New target node.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.STSP">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">STSP</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storePred</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.STSP" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
+<p>Abstract base class for source-target shortest path algorithms.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.STSP.getDistance">
+<span class="sig-name descname"><span class="pre">getDistance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.STSP.getDistance" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the distance from the source node to the target node</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The distance from source to the target node.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.STSP.getDistances">
+<span class="sig-name descname"><span class="pre">getDistances</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.STSP.getDistances" title="Link to this definition">¶</a></dt>
+<dd><p>In case of multiple target nodes: returns the distance from the source node to the target
+nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Distances from the source to the target nodes.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.STSP.getPath">
+<span class="sig-name descname"><span class="pre">getPath</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.STSP.getPath" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a shortest path from the source node to the target node (without
+including them). Note: the shortest path can be constructed only if the
+algorithm is executed with &#64;a storePred set to true.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A shortest path from the source node to the target node.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.STSP.getPredecessors">
+<span class="sig-name descname"><span class="pre">getPredecessors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.STSP.getPredecessors" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the predecessor nodes from the target node to the source node,
+Note: predecessors are stored only if the algorithm is executed with
+storePred set to true.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The list of predecessors from a target to a source.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.STSP.setSource">
+<span class="sig-name descname"><span class="pre">setSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newSource</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.STSP.setSource" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the source node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>newSource</strong> (<em>int</em>) – The new source node.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.STSP.setTarget">
+<span class="sig-name descname"><span class="pre">setTarget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newTarget</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.STSP.setTarget" title="Link to this definition">¶</a></dt>
+<dd><p>Sets the target node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>newTarget</strong> (<em>int</em>) – The new target node.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.STSP.setTargets">
+<span class="sig-name descname"><span class="pre">setTargets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newTargets</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.STSP.setTargets" title="Link to this definition">¶</a></dt>
+<dd><p>Sets multiple target nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>newTargets</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – The new target nodes.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.SelectionStrategy">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">SelectionStrategy</span></span><a class="headerlink" href="#networkit.distance.SelectionStrategy" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.distance.SelectionStrategy.RANDOM">
+<span class="sig-name descname"><span class="pre">RANDOM</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></span><a class="headerlink" href="#networkit.distance.SelectionStrategy.RANDOM" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="networkit.distance.SelectionStrategy.SPLIT">
+<span class="sig-name descname"><span class="pre">SPLIT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></span><a class="headerlink" href="#networkit.distance.SelectionStrategy.SPLIT" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.distance.Volume">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">Volume</span></span><a class="headerlink" href="#networkit.distance.Volume" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The volume of a graph and its meaning is explained in the following publication:</p>
+<p>Franz-Benjamin Mocnik: “The Polynomial Volume Law of Complex Networks in
+the Context of Local and Global Optimization”, Scientific Reports 8(11274)
+2018. doi: 10.1038/s41598-018-29131-0</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.Volume.volume">
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">volume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">samples</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.Volume.volume" title="Link to this definition">¶</a></dt>
+<dd><p>Number of nodes within a given radius. If the radius is a list containing many radii,
+a list containing the number for every radius is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – the graph</p></li>
+<li><p><strong>r</strong> (<em>float</em>) – the radius (or radii)</p></li>
+<li><p><strong>samples</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of samples. Default: 500</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>float</em> – Number of nodes within a given radius.</p></li>
+<li><p><em>list(float)</em> – Number of nodes within every given radii.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

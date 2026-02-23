@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Directory distance</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Directory dynamics" href="dir_include_networkit_dynamics.html" />
+    <link rel="prev" title="Directory correlation" href="dir_include_networkit_correlation.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#directories">Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#pages">Pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="directory-distance">
+<span id="dir-include-networkit-distance"></span><h1>Directory distance<a class="headerlink" href="#directory-distance" title="Link to this heading">¶</a></h1>
+<p>↰ <a class="reference internal" href="dir_include_networkit.html#dir-include-networkit"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">include/networkit</span></code>)</p>
+<p><em>Directory path:</em> <code class="docutils literal notranslate"><span class="pre">include/networkit/distance</span></code></p>
+<section id="files">
+<h2>Files<a class="headerlink" href="#files" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="file_include_networkit_distance_AdamicAdarDistance.hpp.html#file-include-networkit-distance-adamicadardistance-hpp"><span class="std std-ref">File AdamicAdarDistance.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_AffectedNodes.hpp.html#file-include-networkit-distance-affectednodes-hpp"><span class="std std-ref">File AffectedNodes.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_AlgebraicDistance.hpp.html#file-include-networkit-distance-algebraicdistance-hpp"><span class="std std-ref">File AlgebraicDistance.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_APSP.hpp.html#file-include-networkit-distance-apsp-hpp"><span class="std std-ref">File APSP.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_AStar.hpp.html#file-include-networkit-distance-astar-hpp"><span class="std std-ref">File AStar.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_AStarGeneral.hpp.html#file-include-networkit-distance-astargeneral-hpp"><span class="std std-ref">File AStarGeneral.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_BFS.hpp.html#file-include-networkit-distance-bfs-hpp"><span class="std std-ref">File BFS.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_BidirectionalBFS.hpp.html#file-include-networkit-distance-bidirectionalbfs-hpp"><span class="std std-ref">File BidirectionalBFS.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_BidirectionalDijkstra.hpp.html#file-include-networkit-distance-bidirectionaldijkstra-hpp"><span class="std std-ref">File BidirectionalDijkstra.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_CommuteTimeDistance.hpp.html#file-include-networkit-distance-commutetimedistance-hpp"><span class="std std-ref">File CommuteTimeDistance.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_Diameter.hpp.html#file-include-networkit-distance-diameter-hpp"><span class="std std-ref">File Diameter.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_Dijkstra.hpp.html#file-include-networkit-distance-dijkstra-hpp"><span class="std std-ref">File Dijkstra.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_DynAPSP.hpp.html#file-include-networkit-distance-dynapsp-hpp"><span class="std std-ref">File DynAPSP.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_DynBFS.hpp.html#file-include-networkit-distance-dynbfs-hpp"><span class="std std-ref">File DynBFS.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_DynDijkstra.hpp.html#file-include-networkit-distance-dyndijkstra-hpp"><span class="std std-ref">File DynDijkstra.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_DynPrunedLandmarkLabeling.hpp.html#file-include-networkit-distance-dynprunedlandmarklabeling-hpp"><span class="std std-ref">File DynPrunedLandmarkLabeling.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_DynSSSP.hpp.html#file-include-networkit-distance-dynsssp-hpp"><span class="std std-ref">File DynSSSP.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_Eccentricity.hpp.html#file-include-networkit-distance-eccentricity-hpp"><span class="std std-ref">File Eccentricity.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_EffectiveDiameter.hpp.html#file-include-networkit-distance-effectivediameter-hpp"><span class="std std-ref">File EffectiveDiameter.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_EffectiveDiameterApproximation.hpp.html#file-include-networkit-distance-effectivediameterapproximation-hpp"><span class="std std-ref">File EffectiveDiameterApproximation.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_FloydWarshall.hpp.html#file-include-networkit-distance-floydwarshall-hpp"><span class="std std-ref">File FloydWarshall.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_GraphDistance.hpp.html#file-include-networkit-distance-graphdistance-hpp"><span class="std std-ref">File GraphDistance.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_HopPlotApproximation.hpp.html#file-include-networkit-distance-hopplotapproximation-hpp"><span class="std std-ref">File HopPlotApproximation.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_IncompleteDijkstra.hpp.html#file-include-networkit-distance-incompletedijkstra-hpp"><span class="std std-ref">File IncompleteDijkstra.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_IncompleteSSSP.hpp.html#file-include-networkit-distance-incompletesssp-hpp"><span class="std std-ref">File IncompleteSSSP.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_JaccardDistance.hpp.html#file-include-networkit-distance-jaccarddistance-hpp"><span class="std std-ref">File JaccardDistance.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_MultiTargetBFS.hpp.html#file-include-networkit-distance-multitargetbfs-hpp"><span class="std std-ref">File MultiTargetBFS.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_MultiTargetDijkstra.hpp.html#file-include-networkit-distance-multitargetdijkstra-hpp"><span class="std std-ref">File MultiTargetDijkstra.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_NeighborhoodFunction.hpp.html#file-include-networkit-distance-neighborhoodfunction-hpp"><span class="std std-ref">File NeighborhoodFunction.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_NeighborhoodFunctionApproximation.hpp.html#file-include-networkit-distance-neighborhoodfunctionapproximation-hpp"><span class="std std-ref">File NeighborhoodFunctionApproximation.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_NeighborhoodFunctionHeuristic.hpp.html#file-include-networkit-distance-neighborhoodfunctionheuristic-hpp"><span class="std std-ref">File NeighborhoodFunctionHeuristic.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_NodeDistance.hpp.html#file-include-networkit-distance-nodedistance-hpp"><span class="std std-ref">File NodeDistance.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_PrunedLandmarkLabeling.hpp.html#file-include-networkit-distance-prunedlandmarklabeling-hpp"><span class="std std-ref">File PrunedLandmarkLabeling.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_ReverseBFS.hpp.html#file-include-networkit-distance-reversebfs-hpp"><span class="std std-ref">File ReverseBFS.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_SPSP.hpp.html#file-include-networkit-distance-spsp-hpp"><span class="std std-ref">File SPSP.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_SSSP.hpp.html#file-include-networkit-distance-sssp-hpp"><span class="std std-ref">File SSSP.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_STSP.hpp.html#file-include-networkit-distance-stsp-hpp"><span class="std std-ref">File STSP.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_Volume.hpp.html#file-include-networkit-distance-volume-hpp"><span class="std std-ref">File Volume.hpp</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

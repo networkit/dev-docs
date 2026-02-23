@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Template Class SparseVector</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class Sparsifier" href="classNetworKit_1_1Sparsifier.html" />
+    <link rel="prev" title="Class SparseAccumulator" href="classNetworKit_1_1SparseAccumulator.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#directories">Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#pages">Pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="template-class-sparsevector">
+<span id="exhale-class-classnetworkit-1-1sparsevector"></span><h1>Template Class SparseVector<a class="headerlink" href="#template-class-sparsevector" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_networkit_auxiliary_SparseVector.hpp.html#file-include-networkit-auxiliary-sparsevector-hpp"><span class="std std-ref">File SparseVector.hpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN9NetworKit12SparseVectorE">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classNetworKit_1_1SparseVector"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SparseVector</span></span></span><a class="headerlink" href="#_CPPv4I0EN9NetworKit12SparseVectorE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>A vector that imitates a map with unsigned integer keys. This class has faster access than a map, but needs space linear in the maximum key value. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12SparseVector12SparseVectorEv">
+<span class="target" id="classNetworKit_1_1SparseVector_1af084c28719b4996ef4feb2e13b8f530e"></span><span class="sig-name descname"><span class="n"><span class="pre">SparseVector</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12SparseVector12SparseVectorEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12SparseVector12SparseVectorE5index">
+<span class="target" id="classNetworKit_1_1SparseVector_1a36f7899a24a2fa8e397fc8366a6f6fe8"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SparseVector</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a41e30d07038ef847798f304a60ea2902.html#_CPPv4N9NetworKit5indexE" title="NetworKit::index"><span class="n"><span class="pre">index</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12SparseVector12SparseVectorE5index" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Construct an empty vector. Empty values are created using the default constructor. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>size</strong> – upper bound for the maximum usable index </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12SparseVector12SparseVectorE5index1T">
+<span class="target" id="classNetworKit_1_1SparseVector_1a6160c97e30debd17dbe61dd79ccfc320"></span><span class="sig-name descname"><span class="n"><span class="pre">SparseVector</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a41e30d07038ef847798f304a60ea2902.html#_CPPv4N9NetworKit5indexE" title="NetworKit::index"><span class="n"><span class="pre">index</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span>, <a class="reference internal" href="#_CPPv4I0EN9NetworKit12SparseVectorE" title="NetworKit::SparseVector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">emptyValue</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12SparseVector12SparseVectorE5index1T" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Construct an empty vector. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>size</strong> – upper bound for the maximum usable index </p></li>
+<li><p><strong>emptyValue</strong> – value used for empty entries </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12SparseVector13setUpperBoundE5index">
+<span class="target" id="classNetworKit_1_1SparseVector_1a1b677ac87fccd95ac38daad34c3711d9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setUpperBound</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a41e30d07038ef847798f304a60ea2902.html#_CPPv4N9NetworKit5indexE" title="NetworKit::index"><span class="n"><span class="pre">index</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12SparseVector13setUpperBoundE5index" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Resize the vector so that indexes up to size-1 can be used. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit12SparseVector10upperBoundEv">
+<span class="target" id="classNetworKit_1_1SparseVector_1ad293611397ee003d6acf0a1c8a76dfed"></span><a class="reference internal" href="typedef_namespaceNetworKit_1a41e30d07038ef847798f304a60ea2902.html#_CPPv4N9NetworKit5indexE" title="NetworKit::index"><span class="n"><span class="pre">index</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">upperBound</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit12SparseVector10upperBoundEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p><ul class="simple">
+<li><p></p></li>
+</ul>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the upper bound of the indexes that can be used </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit12SparseVector4sizeEv">
+<span class="target" id="classNetworKit_1_1SparseVector_1abd2b1ce252aabf78f47b5c75b6043565"></span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">size</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit12SparseVector4sizeEv" title="Link to this definition">¶</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the number of inserted elements. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12SparseVector6insertE5index1T">
+<span class="target" id="classNetworKit_1_1SparseVector_1af08efbacb3ab1d42c1eed8d5aa624efb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">insert</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a41e30d07038ef847798f304a60ea2902.html#_CPPv4N9NetworKit5indexE" title="NetworKit::index"><span class="n"><span class="pre">index</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span>, <a class="reference internal" href="#_CPPv4I0EN9NetworKit12SparseVectorE" title="NetworKit::SparseVector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12SparseVector6insertE5index1T" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Insert a value at a given position. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>i</strong> – index where the value is inserted </p></li>
+<li><p><strong>value</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12SparseVectorixE5index">
+<span class="target" id="classNetworKit_1_1SparseVector_1a456099b28597b04fa0c6e50b72395f83"></span><a class="reference internal" href="#_CPPv4I0EN9NetworKit12SparseVectorE" title="NetworKit::SparseVector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">[]</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a41e30d07038ef847798f304a60ea2902.html#_CPPv4N9NetworKit5indexE" title="NetworKit::index"><span class="n"><span class="pre">index</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12SparseVectorixE5index" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Access operator. Before accessing an element, insert it by using the <a class="reference internal" href="#classNetworKit_1_1SparseVector_1af08efbacb3ab1d42c1eed8d5aa624efb"><span class="std std-ref">insert()</span></a> method. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit12SparseVectorixE5index">
+<span class="target" id="classNetworKit_1_1SparseVector_1adfcd06fd0030aad01c1b36e9670490be"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN9NetworKit12SparseVectorE" title="NetworKit::SparseVector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">[]</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a41e30d07038ef847798f304a60ea2902.html#_CPPv4N9NetworKit5indexE" title="NetworKit::index"><span class="n"><span class="pre">index</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit12SparseVectorixE5index" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Const access operator. Before accessing an element, insert it by using the <a class="reference internal" href="#classNetworKit_1_1SparseVector_1af08efbacb3ab1d42c1eed8d5aa624efb"><span class="std std-ref">insert()</span></a> method. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12SparseVector11indexIsUsedE5index">
+<span class="target" id="classNetworKit_1_1SparseVector_1ab340af77cdcd57715091b90c672ae09e"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">indexIsUsed</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a41e30d07038ef847798f304a60ea2902.html#_CPPv4N9NetworKit5indexE" title="NetworKit::index"><span class="n"><span class="pre">index</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">idx</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12SparseVector11indexIsUsedE5index" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Returns true iff an element was previously inserted at the given index. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>idx</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12SparseVector11insertOrSetE5index1T">
+<span class="target" id="classNetworKit_1_1SparseVector_1a7832ceadd03d3788fe85a8debb78379a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">insertOrSet</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a41e30d07038ef847798f304a60ea2902.html#_CPPv4N9NetworKit5indexE" title="NetworKit::index"><span class="n"><span class="pre">index</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">i</span></span>, <a class="reference internal" href="#_CPPv4I0EN9NetworKit12SparseVectorE" title="NetworKit::SparseVector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12SparseVector11insertOrSetE5index1T" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Inserts value at position i, or replaces the value if previously inserted </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>i</strong> – </p></li>
+<li><p><strong>value</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12SparseVector19removeUnusedIndexesEv">
+<span class="target" id="classNetworKit_1_1SparseVector_1ace7e71cee2478d081fb516d6dc2e77d4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">removeUnusedIndexes</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12SparseVector19removeUnusedIndexesEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Remove all indexes for which the value is set to the emptyValue. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12SparseVector5resetEv">
+<span class="target" id="classNetworKit_1_1SparseVector_1a1aa40834a2e0223a22537d5257dfc543"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12SparseVector5resetEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Reset all values to the default value, so it is “empty”. The upper bound is not changed. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12SparseVector5clearEv">
+<span class="target" id="classNetworKit_1_1SparseVector_1a16f95c887d4a5dcccf9d5256d584aee5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clear</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12SparseVector5clearEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Clear the vector, setting the upper bound of usable indexes to 0. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12SparseVector6resizeE6size_t1T">
+<span class="target" id="classNetworKit_1_1SparseVector_1ad8705e4b622325d37024ceabe9aba2f2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">resize</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span>, <a class="reference internal" href="#_CPPv4I0EN9NetworKit12SparseVectorE" title="NetworKit::SparseVector::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">emptyValue</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12SparseVector6resizeE6size_t1T" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Reallocate the datastructure if size exceeds current upper bound This is different from <a class="reference internal" href="#classNetworKit_1_1SparseVector_1a1b677ac87fccd95ac38daad34c3711d9"><span class="std std-ref">setUpperBound()</span></a> since we want to make sure both usedIndexes and data are allocated on the socket of the calling thread </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>size</strong> – </p></li>
+<li><p><strong>emptyValue</strong> – new emptyValue </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN9NetworKit12SparseVector11forElementsEvRR14ElementHandler">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ElementHandler</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classNetworKit_1_1SparseVector_1a46c4246ab2e6460d7c972f7e32149a79"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">forElements</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN9NetworKit12SparseVector11forElementsEvRR14ElementHandler" title="NetworKit::SparseVector::forElements::ElementHandler"><span class="n"><span class="pre">ElementHandler</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">lambda</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN9NetworKit12SparseVector11forElementsEvRR14ElementHandler" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Applies the given lambda to each inserted index and associated value </p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ElementHandler</strong> – </p>
+</dd>
+<dt class="field-even">Parameters<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>lambda</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>File Graph.hpp</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="file-graph-hpp">
+<span id="file-include-networkit-graph-graph-hpp"></span><h1>File Graph.hpp<a class="headerlink" href="#file-graph-hpp" title="Link to this heading">¶</a></h1>
+<p>↰ <a class="reference internal" href="dir_include_networkit_graph.html#dir-include-networkit-graph"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">include/networkit/graph</span></code>)</p>
+<nav class="contents local" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-include-networkit-graph-graph-hpp" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">include/networkit/graph/Graph.hpp</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id2">Includes</a></p></li>
+<li><p><a class="reference internal" href="#included-by" id="id3">Included By</a></p></li>
+<li><p><a class="reference internal" href="#namespaces" id="id4">Namespaces</a></p></li>
+<li><p><a class="reference internal" href="#classes" id="id5">Classes</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id6">Functions</a></p></li>
+<li><p><a class="reference internal" href="#variables" id="id7">Variables</a></p></li>
+</ul>
+</nav>
+<section id="definition-include-networkit-graph-graph-hpp">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">include/networkit/graph/Graph.hpp</span></code>)<a class="headerlink" href="#definition-include-networkit-graph-graph-hpp" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file_include_networkit_graph_Graph.hpp.html">Program Listing for File Graph.hpp</a></li>
+</ul>
+</div>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<a class="reference internal" href="file_include_networkit_algebraic_algorithms_AlgebraicBellmanFord.hpp.html#file-include-networkit-algebraic-algorithms-algebraicbellmanford-hpp"><span class="std std-ref">File AlgebraicBellmanFord.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fstream</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">functional</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkit/Globals.hpp</span></code> (<a class="reference internal" href="file_include_networkit_Globals.hpp.html#file-include-networkit-globals-hpp"><span class="std std-ref">File Globals.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkit/auxiliary/ArrayTools.hpp</span></code> (<a class="reference internal" href="file_include_networkit_auxiliary_ArrayTools.hpp.html#file-include-networkit-auxiliary-arraytools-hpp"><span class="std std-ref">File ArrayTools.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkit/auxiliary/FunctionTraits.hpp</span></code> (<a class="reference internal" href="file_include_networkit_auxiliary_FunctionTraits.hpp.html#file-include-networkit-auxiliary-functiontraits-hpp"><span class="std std-ref">File FunctionTraits.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkit/auxiliary/Log.hpp</span></code> (<a class="reference internal" href="file_include_networkit_auxiliary_Log.hpp.html#file-include-networkit-auxiliary-log-hpp"><span class="std std-ref">File Log.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkit/auxiliary/Random.hpp</span></code> (<a class="reference internal" href="file_include_networkit_auxiliary_Random.hpp.html#file-include-networkit-auxiliary-random-hpp"><span class="std std-ref">File Random.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkit/graph/Attributes.hpp</span></code> (<a class="reference internal" href="file_include_networkit_graph_Attributes.hpp.html#file-include-networkit-graph-attributes-hpp"><span class="std std-ref">File Attributes.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkit/graph/EdgeIterators.hpp</span></code> (<a class="reference internal" href="file_include_networkit_graph_EdgeIterators.hpp.html#file-include-networkit-graph-edgeiterators-hpp"><span class="std std-ref">File EdgeIterators.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkit/graph/NeighborIterators.hpp</span></code> (<a class="reference internal" href="file_include_networkit_graph_NeighborIterators.hpp.html#file-include-networkit-graph-neighboriterators-hpp"><span class="std std-ref">File NeighborIterators.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkit/graph/NodeIterators.hpp</span></code> (<a class="reference internal" href="file_include_networkit_graph_NodeIterators.hpp.html#file-include-networkit-graph-nodeiterators-hpp"><span class="std std-ref">File NodeIterators.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">numeric</span></code> (<a class="reference internal" href="file_include_networkit_numerics_ConjugateGradient.hpp.html#file-include-networkit-numerics-conjugategradient-hpp"><span class="std std-ref">File ConjugateGradient.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">omp.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">queue</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ranges</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sstream</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stack</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stdexcept</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tlx/define/deprecated.hpp</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">typeindex</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unordered_map</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unordered_set</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">utility</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vector</span></code> (<a class="reference internal" href="file_include_networkit_centrality_EigenvectorCentrality.hpp.html#file-include-networkit-centrality-eigenvectorcentrality-hpp"><span class="std std-ref">File EigenvectorCentrality.hpp</span></a>)</p></li>
+</ul>
+</section>
+<section id="included-by">
+<h2>Included By<a class="headerlink" href="#included-by" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="file_include_networkit_algebraic_algorithms_AlgebraicBellmanFord.hpp.html#file-include-networkit-algebraic-algorithms-algebraicbellmanford-hpp"><span class="std std-ref">File AlgebraicBellmanFord.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_algebraic_algorithms_AlgebraicBFS.hpp.html#file-include-networkit-algebraic-algorithms-algebraicbfs-hpp"><span class="std std-ref">File AlgebraicBFS.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_algebraic_algorithms_AlgebraicPageRank.hpp.html#file-include-networkit-algebraic-algorithms-algebraicpagerank-hpp"><span class="std std-ref">File AlgebraicPageRank.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_algebraic_CSRGeneralMatrix.hpp.html#file-include-networkit-algebraic-csrgeneralmatrix-hpp"><span class="std std-ref">File CSRGeneralMatrix.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_algebraic_DenseMatrix.hpp.html#file-include-networkit-algebraic-densematrix-hpp"><span class="std std-ref">File DenseMatrix.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_algebraic_DynamicMatrix.hpp.html#file-include-networkit-algebraic-dynamicmatrix-hpp"><span class="std std-ref">File DynamicMatrix.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_algebraic_MatrixTools.hpp.html#file-include-networkit-algebraic-matrixtools-hpp"><span class="std std-ref">File MatrixTools.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_centrality_ApproxElectricalCloseness.hpp.html#file-include-networkit-centrality-approxelectricalcloseness-hpp"><span class="std std-ref">File ApproxElectricalCloseness.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_centrality_ApproxGroupBetweenness.hpp.html#file-include-networkit-centrality-approxgroupbetweenness-hpp"><span class="std std-ref">File ApproxGroupBetweenness.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_centrality_ApproxSpanningEdge.hpp.html#file-include-networkit-centrality-approxspanningedge-hpp"><span class="std std-ref">File ApproxSpanningEdge.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_centrality_Centrality.hpp.html#file-include-networkit-centrality-centrality-hpp"><span class="std std-ref">File Centrality.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_centrality_ComplexPaths.hpp.html#file-include-networkit-centrality-complexpaths-hpp"><span class="std std-ref">File ComplexPaths.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_centrality_CoreDecomposition.hpp.html#file-include-networkit-centrality-coredecomposition-hpp"><span class="std std-ref">File CoreDecomposition.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_centrality_DynTopHarmonicCloseness.hpp.html#file-include-networkit-centrality-dyntopharmoniccloseness-hpp"><span class="std std-ref">File DynTopHarmonicCloseness.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_centrality_ForestCentrality.hpp.html#file-include-networkit-centrality-forestcentrality-hpp"><span class="std std-ref">File ForestCentrality.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_centrality_GedWalk.hpp.html#file-include-networkit-centrality-gedwalk-hpp"><span class="std std-ref">File GedWalk.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_centrality_GroupCloseness.hpp.html#file-include-networkit-centrality-groupcloseness-hpp"><span class="std std-ref">File GroupCloseness.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_centrality_GroupClosenessGrowShrink.hpp.html#file-include-networkit-centrality-groupclosenessgrowshrink-hpp"><span class="std std-ref">File GroupClosenessGrowShrink.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_centrality_GroupClosenessLocalSearch.hpp.html#file-include-networkit-centrality-groupclosenesslocalsearch-hpp"><span class="std std-ref">File GroupClosenessLocalSearch.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_centrality_GroupClosenessLocalSwaps.hpp.html#file-include-networkit-centrality-groupclosenesslocalswaps-hpp"><span class="std std-ref">File GroupClosenessLocalSwaps.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_centrality_GroupDegree.hpp.html#file-include-networkit-centrality-groupdegree-hpp"><span class="std std-ref">File GroupDegree.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_centrality_GroupHarmonicCloseness.hpp.html#file-include-networkit-centrality-groupharmoniccloseness-hpp"><span class="std std-ref">File GroupHarmonicCloseness.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_centrality_KadabraBetweenness.hpp.html#file-include-networkit-centrality-kadabrabetweenness-hpp"><span class="std std-ref">File KadabraBetweenness.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_centrality_TopCloseness.hpp.html#file-include-networkit-centrality-topcloseness-hpp"><span class="std std-ref">File TopCloseness.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_centrality_TopHarmonicCloseness.hpp.html#file-include-networkit-centrality-topharmoniccloseness-hpp"><span class="std std-ref">File TopHarmonicCloseness.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_clique_MaximalCliques.hpp.html#file-include-networkit-clique-maximalcliques-hpp"><span class="std std-ref">File MaximalCliques.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_coarsening_ClusteringProjector.hpp.html#file-include-networkit-coarsening-clusteringprojector-hpp"><span class="std std-ref">File ClusteringProjector.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_coarsening_GraphCoarsening.hpp.html#file-include-networkit-coarsening-graphcoarsening-hpp"><span class="std std-ref">File GraphCoarsening.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_community_ClusteringGenerator.hpp.html#file-include-networkit-community-clusteringgenerator-hpp"><span class="std std-ref">File ClusteringGenerator.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_community_CommunityDetectionAlgorithm.hpp.html#file-include-networkit-community-communitydetectionalgorithm-hpp"><span class="std std-ref">File CommunityDetectionAlgorithm.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_community_DissimilarityMeasure.hpp.html#file-include-networkit-community-dissimilaritymeasure-hpp"><span class="std std-ref">File DissimilarityMeasure.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_community_GraphClusteringTools.hpp.html#file-include-networkit-community-graphclusteringtools-hpp"><span class="std std-ref">File GraphClusteringTools.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_community_LocalCoverEvaluation.hpp.html#file-include-networkit-community-localcoverevaluation-hpp"><span class="std std-ref">File LocalCoverEvaluation.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_community_LocalPartitionEvaluation.hpp.html#file-include-networkit-community-localpartitionevaluation-hpp"><span class="std std-ref">File LocalPartitionEvaluation.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_community_OverlappingCommunityDetectionAlgorithm.hpp.html#file-include-networkit-community-overlappingcommunitydetectionalgorithm-hpp"><span class="std std-ref">File OverlappingCommunityDetectionAlgorithm.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_community_ParallelLeiden.hpp.html#file-include-networkit-community-parallelleiden-hpp"><span class="std std-ref">File ParallelLeiden.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_community_QualityMeasure.hpp.html#file-include-networkit-community-qualitymeasure-hpp"><span class="std std-ref">File QualityMeasure.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_components_BiconnectedComponents.hpp.html#file-include-networkit-components-biconnectedcomponents-hpp"><span class="std std-ref">File BiconnectedComponents.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_components_ComponentDecomposition.hpp.html#file-include-networkit-components-componentdecomposition-hpp"><span class="std std-ref">File ComponentDecomposition.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_components_DynConnectedComponents.hpp.html#file-include-networkit-components-dynconnectedcomponents-hpp"><span class="std std-ref">File DynConnectedComponents.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_components_DynWeaklyConnectedComponents.hpp.html#file-include-networkit-components-dynweaklyconnectedcomponents-hpp"><span class="std std-ref">File DynWeaklyConnectedComponents.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_components_ParallelConnectedComponents.hpp.html#file-include-networkit-components-parallelconnectedcomponents-hpp"><span class="std std-ref">File ParallelConnectedComponents.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_components_RandomSpanningForest.hpp.html#file-include-networkit-components-randomspanningforest-hpp"><span class="std std-ref">File RandomSpanningForest.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_correlation_Assortativity.hpp.html#file-include-networkit-correlation-assortativity-hpp"><span class="std std-ref">File Assortativity.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_AdamicAdarDistance.hpp.html#file-include-networkit-distance-adamicadardistance-hpp"><span class="std std-ref">File AdamicAdarDistance.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_AffectedNodes.hpp.html#file-include-networkit-distance-affectednodes-hpp"><span class="std std-ref">File AffectedNodes.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_APSP.hpp.html#file-include-networkit-distance-apsp-hpp"><span class="std std-ref">File APSP.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_CommuteTimeDistance.hpp.html#file-include-networkit-distance-commutetimedistance-hpp"><span class="std std-ref">File CommuteTimeDistance.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_Diameter.hpp.html#file-include-networkit-distance-diameter-hpp"><span class="std std-ref">File Diameter.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_DynPrunedLandmarkLabeling.hpp.html#file-include-networkit-distance-dynprunedlandmarklabeling-hpp"><span class="std std-ref">File DynPrunedLandmarkLabeling.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_DynSSSP.hpp.html#file-include-networkit-distance-dynsssp-hpp"><span class="std std-ref">File DynSSSP.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_Eccentricity.hpp.html#file-include-networkit-distance-eccentricity-hpp"><span class="std std-ref">File Eccentricity.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_EffectiveDiameter.hpp.html#file-include-networkit-distance-effectivediameter-hpp"><span class="std std-ref">File EffectiveDiameter.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_EffectiveDiameterApproximation.hpp.html#file-include-networkit-distance-effectivediameterapproximation-hpp"><span class="std std-ref">File EffectiveDiameterApproximation.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_FloydWarshall.hpp.html#file-include-networkit-distance-floydwarshall-hpp"><span class="std std-ref">File FloydWarshall.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_GraphDistance.hpp.html#file-include-networkit-distance-graphdistance-hpp"><span class="std std-ref">File GraphDistance.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_HopPlotApproximation.hpp.html#file-include-networkit-distance-hopplotapproximation-hpp"><span class="std std-ref">File HopPlotApproximation.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_IncompleteDijkstra.hpp.html#file-include-networkit-distance-incompletedijkstra-hpp"><span class="std std-ref">File IncompleteDijkstra.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_IncompleteSSSP.hpp.html#file-include-networkit-distance-incompletesssp-hpp"><span class="std std-ref">File IncompleteSSSP.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_JaccardDistance.hpp.html#file-include-networkit-distance-jaccarddistance-hpp"><span class="std std-ref">File JaccardDistance.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_NeighborhoodFunction.hpp.html#file-include-networkit-distance-neighborhoodfunction-hpp"><span class="std std-ref">File NeighborhoodFunction.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_NeighborhoodFunctionApproximation.hpp.html#file-include-networkit-distance-neighborhoodfunctionapproximation-hpp"><span class="std std-ref">File NeighborhoodFunctionApproximation.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_NeighborhoodFunctionHeuristic.hpp.html#file-include-networkit-distance-neighborhoodfunctionheuristic-hpp"><span class="std std-ref">File NeighborhoodFunctionHeuristic.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_NodeDistance.hpp.html#file-include-networkit-distance-nodedistance-hpp"><span class="std std-ref">File NodeDistance.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_PrunedLandmarkLabeling.hpp.html#file-include-networkit-distance-prunedlandmarklabeling-hpp"><span class="std std-ref">File PrunedLandmarkLabeling.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_ReverseBFS.hpp.html#file-include-networkit-distance-reversebfs-hpp"><span class="std std-ref">File ReverseBFS.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_SPSP.hpp.html#file-include-networkit-distance-spsp-hpp"><span class="std std-ref">File SPSP.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_SSSP.hpp.html#file-include-networkit-distance-sssp-hpp"><span class="std std-ref">File SSSP.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_STSP.hpp.html#file-include-networkit-distance-stsp-hpp"><span class="std std-ref">File STSP.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_Volume.hpp.html#file-include-networkit-distance-volume-hpp"><span class="std std-ref">File Volume.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_dynamics_GraphDifference.hpp.html#file-include-networkit-dynamics-graphdifference-hpp"><span class="std std-ref">File GraphDifference.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_dynamics_GraphEvent.hpp.html#file-include-networkit-dynamics-graphevent-hpp"><span class="std std-ref">File GraphEvent.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_dynamics_GraphEventHandler.hpp.html#file-include-networkit-dynamics-grapheventhandler-hpp"><span class="std std-ref">File GraphEventHandler.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_dynamics_GraphEventProxy.hpp.html#file-include-networkit-dynamics-grapheventproxy-hpp"><span class="std std-ref">File GraphEventProxy.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_dynamics_GraphUpdater.hpp.html#file-include-networkit-dynamics-graphupdater-hpp"><span class="std std-ref">File GraphUpdater.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_edgescores_ChibaNishizekiTriangleEdgeScore.hpp.html#file-include-networkit-edgescores-chibanishizekitriangleedgescore-hpp"><span class="std std-ref">File ChibaNishizekiTriangleEdgeScore.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_edgescores_EdgeScore.hpp.html#file-include-networkit-edgescores-edgescore-hpp"><span class="std std-ref">File EdgeScore.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_edgescores_EdgeScoreAsWeight.hpp.html#file-include-networkit-edgescores-edgescoreasweight-hpp"><span class="std std-ref">File EdgeScoreAsWeight.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_edgescores_EdgeScoreBlender.hpp.html#file-include-networkit-edgescores-edgescoreblender-hpp"><span class="std std-ref">File EdgeScoreBlender.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_edgescores_EdgeScoreNormalizer.hpp.html#file-include-networkit-edgescores-edgescorenormalizer-hpp"><span class="std std-ref">File EdgeScoreNormalizer.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_embedding_Node2Vec.hpp.html#file-include-networkit-embedding-node2vec-hpp"><span class="std std-ref">File Node2Vec.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_flow_Dinic.hpp.html#file-include-networkit-flow-dinic-hpp"><span class="std std-ref">File Dinic.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_flow_EdmondsKarp.hpp.html#file-include-networkit-flow-edmondskarp-hpp"><span class="std std-ref">File EdmondsKarp.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_flow_SuccessiveShortestPath.hpp.html#file-include-networkit-flow-successiveshortestpath-hpp"><span class="std std-ref">File SuccessiveShortestPath.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_generators_DynamicGraphGenerator.hpp.html#file-include-networkit-generators-dynamicgraphgenerator-hpp"><span class="std std-ref">File DynamicGraphGenerator.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_generators_HavelHakimiGenerator.hpp.html#file-include-networkit-generators-havelhakimigenerator-hpp"><span class="std std-ref">File HavelHakimiGenerator.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_generators_LFRGenerator.hpp.html#file-include-networkit-generators-lfrgenerator-hpp"><span class="std std-ref">File LFRGenerator.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_generators_PowerlawDegreeSequence.hpp.html#file-include-networkit-generators-powerlawdegreesequence-hpp"><span class="std std-ref">File PowerlawDegreeSequence.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_generators_PubWebGenerator.hpp.html#file-include-networkit-generators-pubwebgenerator-hpp"><span class="std std-ref">File PubWebGenerator.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_generators_RmatGenerator.hpp.html#file-include-networkit-generators-rmatgenerator-hpp"><span class="std std-ref">File RmatGenerator.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_generators_StaticGraphGenerator.hpp.html#file-include-networkit-generators-staticgraphgenerator-hpp"><span class="std std-ref">File StaticGraphGenerator.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_global_ClusteringCoefficient.hpp.html#file-include-networkit-global-clusteringcoefficient-hpp"><span class="std std-ref">File ClusteringCoefficient.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_global_GlobalClusteringCoefficient.hpp.html#file-include-networkit-global-globalclusteringcoefficient-hpp"><span class="std std-ref">File GlobalClusteringCoefficient.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_graph_BFS.hpp.html#file-include-networkit-graph-bfs-hpp"><span class="std std-ref">File BFS.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_graph_DFS.hpp.html#file-include-networkit-graph-dfs-hpp"><span class="std std-ref">File DFS.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_graph_Dijkstra.hpp.html#file-include-networkit-graph-dijkstra-hpp"><span class="std std-ref">File Dijkstra.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_graph_GraphBuilder.hpp.html#file-include-networkit-graph-graphbuilder-hpp"><span class="std std-ref">File GraphBuilder.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_graph_GraphTools.hpp.html#file-include-networkit-graph-graphtools-hpp"><span class="std std-ref">File GraphTools.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_graph_KruskalMSF.hpp.html#file-include-networkit-graph-kruskalmsf-hpp"><span class="std std-ref">File KruskalMSF.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_graph_PrimMSF.hpp.html#file-include-networkit-graph-primmsf-hpp"><span class="std std-ref">File PrimMSF.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_graph_RandomMaximumSpanningForest.hpp.html#file-include-networkit-graph-randommaximumspanningforest-hpp"><span class="std std-ref">File RandomMaximumSpanningForest.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_graph_SpanningForest.hpp.html#file-include-networkit-graph-spanningforest-hpp"><span class="std std-ref">File SpanningForest.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_graph_TopologicalSort.hpp.html#file-include-networkit-graph-topologicalsort-hpp"><span class="std std-ref">File TopologicalSort.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_graph_UnionMaximumSpanningForest.hpp.html#file-include-networkit-graph-unionmaximumspanningforest-hpp"><span class="std std-ref">File UnionMaximumSpanningForest.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_independentset_IndependentSetFinder.hpp.html#file-include-networkit-independentset-independentsetfinder-hpp"><span class="std std-ref">File IndependentSetFinder.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_io_CoverReader.hpp.html#file-include-networkit-io-coverreader-hpp"><span class="std std-ref">File CoverReader.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_io_CoverWriter.hpp.html#file-include-networkit-io-coverwriter-hpp"><span class="std std-ref">File CoverWriter.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_io_DibapGraphReader.hpp.html#file-include-networkit-io-dibapgraphreader-hpp"><span class="std std-ref">File DibapGraphReader.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_io_DotGraphWriter.hpp.html#file-include-networkit-io-dotgraphwriter-hpp"><span class="std std-ref">File DotGraphWriter.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_io_DotPartitionWriter.hpp.html#file-include-networkit-io-dotpartitionwriter-hpp"><span class="std std-ref">File DotPartitionWriter.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_io_EdgeListPartitionReader.hpp.html#file-include-networkit-io-edgelistpartitionreader-hpp"><span class="std std-ref">File EdgeListPartitionReader.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_io_GraphIO.hpp.html#file-include-networkit-io-graphio-hpp"><span class="std std-ref">File GraphIO.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_io_GraphReader.hpp.html#file-include-networkit-io-graphreader-hpp"><span class="std std-ref">File GraphReader.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_io_GraphWriter.hpp.html#file-include-networkit-io-graphwriter-hpp"><span class="std std-ref">File GraphWriter.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_io_KONECTGraphReader.hpp.html#file-include-networkit-io-konectgraphreader-hpp"><span class="std std-ref">File KONECTGraphReader.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_io_MTXParser.hpp.html#file-include-networkit-io-mtxparser-hpp"><span class="std std-ref">File MTXParser.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_io_NetworkitBinaryReader.hpp.html#file-include-networkit-io-networkitbinaryreader-hpp"><span class="std std-ref">File NetworkitBinaryReader.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_io_NetworkitBinaryWriter.hpp.html#file-include-networkit-io-networkitbinarywriter-hpp"><span class="std std-ref">File NetworkitBinaryWriter.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_io_PartitionReader.hpp.html#file-include-networkit-io-partitionreader-hpp"><span class="std std-ref">File PartitionReader.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_io_SNAPEdgeListPartitionReader.hpp.html#file-include-networkit-io-snapedgelistpartitionreader-hpp"><span class="std std-ref">File SNAPEdgeListPartitionReader.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_io_SNAPGraphReader.hpp.html#file-include-networkit-io-snapgraphreader-hpp"><span class="std std-ref">File SNAPGraphReader.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_layout_LayoutAlgorithm.hpp.html#file-include-networkit-layout-layoutalgorithm-hpp"><span class="std std-ref">File LayoutAlgorithm.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_linkprediction_AlgebraicDistanceIndex.hpp.html#file-include-networkit-linkprediction-algebraicdistanceindex-hpp"><span class="std std-ref">File AlgebraicDistanceIndex.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_linkprediction_EvaluationMetric.hpp.html#file-include-networkit-linkprediction-evaluationmetric-hpp"><span class="std std-ref">File EvaluationMetric.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_linkprediction_LinkPredictor.hpp.html#file-include-networkit-linkprediction-linkpredictor-hpp"><span class="std std-ref">File LinkPredictor.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_linkprediction_MissingLinksFinder.hpp.html#file-include-networkit-linkprediction-missinglinksfinder-hpp"><span class="std std-ref">File MissingLinksFinder.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_linkprediction_NeighborhoodUtility.hpp.html#file-include-networkit-linkprediction-neighborhoodutility-hpp"><span class="std std-ref">File NeighborhoodUtility.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_linkprediction_PrecisionRecallMetric.hpp.html#file-include-networkit-linkprediction-precisionrecallmetric-hpp"><span class="std std-ref">File PrecisionRecallMetric.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_linkprediction_RandomLinkSampler.hpp.html#file-include-networkit-linkprediction-randomlinksampler-hpp"><span class="std std-ref">File RandomLinkSampler.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_linkprediction_ROCMetric.hpp.html#file-include-networkit-linkprediction-rocmetric-hpp"><span class="std std-ref">File ROCMetric.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_matching_BMatching.hpp.html#file-include-networkit-matching-bmatching-hpp"><span class="std std-ref">File BMatching.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_matching_BSuitorMatcher.hpp.html#file-include-networkit-matching-bsuitormatcher-hpp"><span class="std std-ref">File BSuitorMatcher.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_matching_LocalMaxMatcher.hpp.html#file-include-networkit-matching-localmaxmatcher-hpp"><span class="std std-ref">File LocalMaxMatcher.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_matching_Matching.hpp.html#file-include-networkit-matching-matching-hpp"><span class="std std-ref">File Matching.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_matching_SuitorMatcher.hpp.html#file-include-networkit-matching-suitormatcher-hpp"><span class="std std-ref">File SuitorMatcher.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_numerics_LinearSolver.hpp.html#file-include-networkit-numerics-linearsolver-hpp"><span class="std std-ref">File LinearSolver.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_overlap_Overlapper.hpp.html#file-include-networkit-overlap-overlapper-hpp"><span class="std std-ref">File Overlapper.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_planarity_LeftRightPlanarityCheck.hpp.html#file-include-networkit-planarity-leftrightplanaritycheck-hpp"><span class="std std-ref">File LeftRightPlanarityCheck.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_randomization_Curveball.hpp.html#file-include-networkit-randomization-curveball-hpp"><span class="std std-ref">File Curveball.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_randomization_DegreePreservingShuffle.hpp.html#file-include-networkit-randomization-degreepreservingshuffle-hpp"><span class="std std-ref">File DegreePreservingShuffle.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_randomization_EdgeSwitching.hpp.html#file-include-networkit-randomization-edgeswitching-hpp"><span class="std std-ref">File EdgeSwitching.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_randomization_GlobalCurveball.hpp.html#file-include-networkit-randomization-globalcurveball-hpp"><span class="std std-ref">File GlobalCurveball.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_reachability_AllSimplePaths.hpp.html#file-include-networkit-reachability-allsimplepaths-hpp"><span class="std std-ref">File AllSimplePaths.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_reachability_ReachableNodes.hpp.html#file-include-networkit-reachability-reachablenodes-hpp"><span class="std std-ref">File ReachableNodes.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_scd_ApproximatePageRank.hpp.html#file-include-networkit-scd-approximatepagerank-hpp"><span class="std std-ref">File ApproximatePageRank.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_scd_PageRankNibble.hpp.html#file-include-networkit-scd-pageranknibble-hpp"><span class="std std-ref">File PageRankNibble.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_scd_SCDGroundTruthComparison.hpp.html#file-include-networkit-scd-scdgroundtruthcomparison-hpp"><span class="std std-ref">File SCDGroundTruthComparison.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_scd_SelectiveCommunityDetector.hpp.html#file-include-networkit-scd-selectivecommunitydetector-hpp"><span class="std std-ref">File SelectiveCommunityDetector.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_scd_SetConductance.hpp.html#file-include-networkit-scd-setconductance-hpp"><span class="std std-ref">File SetConductance.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_scoring_EdgeScoring.hpp.html#file-include-networkit-scoring-edgescoring-hpp"><span class="std std-ref">File EdgeScoring.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_simulation_EpidemicSimulationSEIR.hpp.html#file-include-networkit-simulation-epidemicsimulationseir-hpp"><span class="std std-ref">File EpidemicSimulationSEIR.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_sparsification_GlobalThresholdFilter.hpp.html#file-include-networkit-sparsification-globalthresholdfilter-hpp"><span class="std std-ref">File GlobalThresholdFilter.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_sparsification_Sparsifiers.hpp.html#file-include-networkit-sparsification-sparsifiers-hpp"><span class="std std-ref">File Sparsifiers.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_structures_LocalCommunity.hpp.html#file-include-networkit-structures-localcommunity-hpp"><span class="std std-ref">File LocalCommunity.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_viz_GraphLayoutAlgorithm.hpp.html#file-include-networkit-viz-graphlayoutalgorithm-hpp"><span class="std std-ref">File GraphLayoutAlgorithm.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_viz_PivotMDS.hpp.html#file-include-networkit-viz-pivotmds-hpp"><span class="std std-ref">File PivotMDS.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_viz_PostscriptWriter.hpp.html#file-include-networkit-viz-postscriptwriter-hpp"><span class="std std-ref">File PostscriptWriter.hpp</span></a></p></li>
+</ul>
+</section>
+<section id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="namespace_NetworKit.html#namespace-networkit"><span class="std std-ref">Namespace NetworKit</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_NetworKit__CurveballDetails.html#namespace-networkit-curveballdetails"><span class="std std-ref">Namespace NetworKit::CurveballDetails</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_std.html#namespace-std"><span class="std std-ref">Namespace std</span></a></p></li>
+</ul>
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="structNetworKit_1_1Edge.html#exhale-struct-structnetworkit-1-1edge"><span class="std std-ref">Struct Edge</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1Unsafe.html#exhale-struct-structnetworkit-1-1unsafe"><span class="std std-ref">Struct Unsafe</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1WeightedEdge.html#exhale-struct-structnetworkit-1-1weightededge"><span class="std std-ref">Struct WeightedEdge</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1WeightedEdgeWithId.html#exhale-struct-structnetworkit-1-1weightededgewithid"><span class="std std-ref">Struct WeightedEdgeWithId</span></a></p></li>
+<li><p><a class="reference internal" href="structstd_1_1hash_3_01NetworKit_1_1Edge_01_4.html#exhale-struct-structstd-1-1hash-3-01networkit-1-1edge-01-4"><span class="std std-ref">Template Struct hash&lt; NetworKit::Edge &gt;</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Graph.html#exhale-class-classnetworkit-1-1graph"><span class="std std-ref">Class Graph</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Graph_1_1NeighborRange.html#exhale-class-classnetworkit-1-1graph-1-1neighborrange"><span class="std std-ref">Template Class Graph::NeighborRange</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1Graph_1_1NeighborWeightRange.html#exhale-class-classnetworkit-1-1graph-1-1neighborweightrange"><span class="std std-ref">Template Class Graph::NeighborWeightRange</span></a></p></li>
+</ul>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="function_namespaceNetworKit_1a5244fe1189d1d5364af2e8ab584fb033.html#exhale-function-namespacenetworkit-1a5244fe1189d1d5364af2e8ab584fb033"><span class="std std-ref">Template Function NetworKit::erase</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceNetworKit_1a190b487bfe65de574cbcc7a8717c7bfc.html#exhale-function-namespacenetworkit-1a190b487bfe65de574cbcc7a8717c7bfc"><span class="std std-ref">Function NetworKit::operator&lt;</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceNetworKit_1a902995e1186b46f4734633cf0366d820.html#exhale-function-namespacenetworkit-1a902995e1186b46f4734633cf0366d820"><span class="std std-ref">Function NetworKit::operator==</span></a></p></li>
+</ul>
+</section>
+<section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a02c8e75d9412cb9b35e92887b1bc21fc.html#exhale-variable-namespacenetworkit-1a02c8e75d9412cb9b35e92887b1bc21fc"><span class="std std-ref">Variable NetworKit::unsafe</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

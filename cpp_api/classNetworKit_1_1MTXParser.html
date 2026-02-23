@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Class MTXParser</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Template Class MultiLevelSetup" href="classNetworKit_1_1MultiLevelSetup.html" />
+    <link rel="prev" title="Class MTXGraphReader" href="classNetworKit_1_1MTXGraphReader.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#directories">Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#pages">Pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="class-mtxparser">
+<span id="exhale-class-classnetworkit-1-1mtxparser"></span><h1>Class MTXParser<a class="headerlink" href="#class-mtxparser" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_networkit_io_MTXParser.hpp.html#file-include-networkit-io-mtxparser-hpp"><span class="std std-ref">File MTXParser.hpp</span></a></p></li>
+</ul>
+<section id="nested-relationships">
+<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Link to this heading">¶</a></h2>
+<section id="nested-types">
+<h3>Nested Types<a class="headerlink" href="#nested-types" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="structNetworKit_1_1MTXParser_1_1Edge.html#exhale-struct-structnetworkit-1-1mtxparser-1-1edge"><span class="std std-ref">Struct MTXParser::Edge</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1MTXParser_1_1MTXHeader.html#exhale-struct-structnetworkit-1-1mtxparser-1-1mtxheader"><span class="std std-ref">Struct MTXParser::MTXHeader</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1MTXParser_1_1MatrixSize.html#exhale-struct-structnetworkit-1-1mtxparser-1-1matrixsize"><span class="std std-ref">Struct MTXParser::MatrixSize</span></a></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParserE">
+<span class="target" id="classNetworKit_1_1MTXParser"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MTXParser</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParserE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Parser for the MTX file format. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser6ObjectE">
+<span class="target" id="classNetworKit_1_1MTXParser_1af3b53b926f7aa3f7ce74908b910904a1"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Object</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser6ObjectE" title="Link to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser6Object6MatrixE">
+<span class="target" id="classNetworKit_1_1MTXParser_1af3b53b926f7aa3f7ce74908b910904a1af53df0293e169f562bc1d9a20e1d2589"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Matrix</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser6Object6MatrixE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser6Object6VectorE">
+<span class="target" id="classNetworKit_1_1MTXParser_1af3b53b926f7aa3f7ce74908b910904a1a57dea6f5039281b7fee517fc43bf3110"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Vector</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser6Object6VectorE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser6FormatE">
+<span class="target" id="classNetworKit_1_1MTXParser_1ac6a69153a11dd1a0a245ba928b0bc86f"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Format</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser6FormatE" title="Link to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser6Format10CoordinateE">
+<span class="target" id="classNetworKit_1_1MTXParser_1ac6a69153a11dd1a0a245ba928b0bc86fac7c60dd55c0cd4692587f5e9dc114ae9"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Coordinate</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser6Format10CoordinateE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser6Format5ArrayE">
+<span class="target" id="classNetworKit_1_1MTXParser_1ac6a69153a11dd1a0a245ba928b0bc86fa4410ec34d9e6c1a68100ca0ce033fb17"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Array</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser6Format5ArrayE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser5FieldE">
+<span class="target" id="classNetworKit_1_1MTXParser_1ab5695e4642b67fab924d42badcabeb61"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Field</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser5FieldE" title="Link to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser5Field4RealE">
+<span class="target" id="classNetworKit_1_1MTXParser_1ab5695e4642b67fab924d42badcabeb61a7f80fcc452c2f1ed2bb51b39d0864df1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Real</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser5Field4RealE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser5Field6DoubleE">
+<span class="target" id="classNetworKit_1_1MTXParser_1ab5695e4642b67fab924d42badcabeb61ad909d38d705ce75386dd86e611a82f5b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Double</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser5Field6DoubleE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser5Field7ComplexE">
+<span class="target" id="classNetworKit_1_1MTXParser_1ab5695e4642b67fab924d42badcabeb61a10b4eb76294b70d7fd6df997ff06edb1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Complex</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser5Field7ComplexE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser5Field7IntegerE">
+<span class="target" id="classNetworKit_1_1MTXParser_1ab5695e4642b67fab924d42badcabeb61aa0faef0851b4294c06f2b94bb1cb2044"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Integer</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser5Field7IntegerE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser5Field7PatternE">
+<span class="target" id="classNetworKit_1_1MTXParser_1ab5695e4642b67fab924d42badcabeb61a57391192dfa1f247ad015a0fe2eca48e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Pattern</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser5Field7PatternE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser8SymmetryE">
+<span class="target" id="classNetworKit_1_1MTXParser_1a1d9e28197c1e11333a3c8276d57a6dee"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Symmetry</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser8SymmetryE" title="Link to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser8Symmetry7GeneralE">
+<span class="target" id="classNetworKit_1_1MTXParser_1a1d9e28197c1e11333a3c8276d57a6deea0db377921f4ce762c62526131097968f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">General</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser8Symmetry7GeneralE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser8Symmetry9SymmetricE">
+<span class="target" id="classNetworKit_1_1MTXParser_1a1d9e28197c1e11333a3c8276d57a6deeaf334649ef5e5d0ffe200751d07012626"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Symmetric</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser8Symmetry9SymmetricE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser8Symmetry13SkewSymmetricE">
+<span class="target" id="classNetworKit_1_1MTXParser_1a1d9e28197c1e11333a3c8276d57a6deeaebf502793f6fac972d2dfc4d2bf7d93e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SkewSymmetric</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser8Symmetry13SkewSymmetricE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser8Symmetry9HermitianE">
+<span class="target" id="classNetworKit_1_1MTXParser_1a1d9e28197c1e11333a3c8276d57a6deeaac9b73b049d2c977d447525a7eafb967"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Hermitian</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser8Symmetry9HermitianE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser9MTXParserERKNSt6stringE">
+<span class="target" id="classNetworKit_1_1MTXParser_1af85b18d32fbd1edf58b727f4a9982cd2"></span><span class="sig-name descname"><span class="n"><span class="pre">MTXParser</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser9MTXParserERKNSt6stringE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser9getHeaderEv">
+<span class="target" id="classNetworKit_1_1MTXParser_1a3b8c6d4ea140b0bb56d1d82ab93f603a"></span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser9MTXHeaderE" title="NetworKit::MTXParser::MTXHeader"><span class="n"><span class="pre">MTXHeader</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getHeader</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser9getHeaderEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Get the MTX graph file header. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser13getMatrixSizeEv">
+<span class="target" id="classNetworKit_1_1MTXParser_1af3906201907645a718a5617f8888a560"></span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser10MatrixSizeE" title="NetworKit::MTXParser::MatrixSize"><span class="n"><span class="pre">MatrixSize</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMatrixSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser13getMatrixSizeEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Get the MTX graph file matrix size header. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser7getNextEb">
+<span class="target" id="classNetworKit_1_1MTXParser_1a53c3eab22db07548fe8983fd0937354c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="structNetworKit_1_1WeightedEdge.html#_CPPv4N9NetworKit12WeightedEdgeE" title="NetworKit::WeightedEdge"><span class="n"><span class="pre">WeightedEdge</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNext</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">weighted</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser7getNextEb" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Get the (weighted) edge from the next line in the MTX graph file if present.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>weighted</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>std::optional&lt;std::pair&lt;NetworKit::Edge, NetworKit::edgeweight&gt;&gt; </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser9objectMapE">
+<span class="target" id="classNetworKit_1_1MTXParser_1a5da228aa850814ccfa0bd4f8cf8a9bd7"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser6ObjectE" title="NetworKit::MTXParser::Object"><span class="n"><span class="pre">Object</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">objectMap</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;matrix&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser6ObjectE" title="NetworKit::MTXParser::Object"><span class="n"><span class="pre">Object</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser6Object6MatrixE" title="NetworKit::MTXParser::Object::Matrix"><span class="n"><span class="pre">Matrix</span></span></a><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;vector&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser6ObjectE" title="NetworKit::MTXParser::Object"><span class="n"><span class="pre">Object</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser6Object6VectorE" title="NetworKit::MTXParser::Object::Vector"><span class="n"><span class="pre">Vector</span></span></a><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser9objectMapE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser9formatMapE">
+<span class="target" id="classNetworKit_1_1MTXParser_1a91875b392532c029264785e22aaf7214"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser6FormatE" title="NetworKit::MTXParser::Format"><span class="n"><span class="pre">Format</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">formatMap</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;coordinate&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser6FormatE" title="NetworKit::MTXParser::Format"><span class="n"><span class="pre">Format</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser6Format10CoordinateE" title="NetworKit::MTXParser::Format::Coordinate"><span class="n"><span class="pre">Coordinate</span></span></a><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;array&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser6FormatE" title="NetworKit::MTXParser::Format"><span class="n"><span class="pre">Format</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser6Format5ArrayE" title="NetworKit::MTXParser::Format::Array"><span class="n"><span class="pre">Array</span></span></a><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser9formatMapE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser8fieldMapE">
+<span class="target" id="classNetworKit_1_1MTXParser_1acd40668a0aaf1bb628c997923e0cd9db"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser5FieldE" title="NetworKit::MTXParser::Field"><span class="n"><span class="pre">Field</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fieldMap</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;real&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser5FieldE" title="NetworKit::MTXParser::Field"><span class="n"><span class="pre">Field</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser5Field4RealE" title="NetworKit::MTXParser::Field::Real"><span class="n"><span class="pre">Real</span></span></a><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;double&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser5FieldE" title="NetworKit::MTXParser::Field"><span class="n"><span class="pre">Field</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser5Field6DoubleE" title="NetworKit::MTXParser::Field::Double"><span class="n"><span class="pre">Double</span></span></a><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;integer&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser5FieldE" title="NetworKit::MTXParser::Field"><span class="n"><span class="pre">Field</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser5Field7IntegerE" title="NetworKit::MTXParser::Field::Integer"><span class="n"><span class="pre">Integer</span></span></a><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;pattern&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser5FieldE" title="NetworKit::MTXParser::Field"><span class="n"><span class="pre">Field</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser5Field7PatternE" title="NetworKit::MTXParser::Field::Pattern"><span class="n"><span class="pre">Pattern</span></span></a><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser8fieldMapE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser11symmetryMapE">
+<span class="target" id="classNetworKit_1_1MTXParser_1aa1dd2ae653899436f590f0178039ec19"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser8SymmetryE" title="NetworKit::MTXParser::Symmetry"><span class="n"><span class="pre">Symmetry</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">symmetryMap</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;general&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser8SymmetryE" title="NetworKit::MTXParser::Symmetry"><span class="n"><span class="pre">Symmetry</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser8Symmetry7GeneralE" title="NetworKit::MTXParser::Symmetry::General"><span class="n"><span class="pre">General</span></span></a><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;symmetric&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser8SymmetryE" title="NetworKit::MTXParser::Symmetry"><span class="n"><span class="pre">Symmetry</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser8Symmetry9SymmetricE" title="NetworKit::MTXParser::Symmetry::Symmetric"><span class="n"><span class="pre">Symmetric</span></span></a><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;skew-symmetric&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser8SymmetryE" title="NetworKit::MTXParser::Symmetry"><span class="n"><span class="pre">Symmetry</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser8Symmetry13SkewSymmetricE" title="NetworKit::MTXParser::Symmetry::SkewSymmetric"><span class="n"><span class="pre">SkewSymmetric</span></span></a><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser11symmetryMapE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser4EdgeE">
+<span class="target" id="structNetworKit_1_1MTXParser_1_1Edge"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Edge</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser4EdgeE" title="Link to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser4Edge4EdgeE4node4nodeNSt8optionalIdEE">
+<span class="target" id="structNetworKit_1_1MTXParser_1_1Edge_1ac1e10c013b8cd26dd445f509f4a69296"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Edge</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">f</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">t</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">w</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser4Edge4EdgeE4node4nodeNSt8optionalIdEE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser4Edge4fromE">
+<span class="target" id="structNetworKit_1_1MTXParser_1_1Edge_1a0765e70c4bcc22725ddb9b4905b09ee1"></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">from</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser4Edge4fromE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser4Edge2toE">
+<span class="target" id="structNetworKit_1_1MTXParser_1_1Edge_1ae03139665ee9a98cebc9ee0498fe85c8"></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">to</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser4Edge2toE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser4Edge6weightE">
+<span class="target" id="structNetworKit_1_1MTXParser_1_1Edge_1adff15acb4ba7d2465b9aecf8d415e2f1"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weight</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser4Edge6weightE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser10MatrixSizeE">
+<span class="target" id="structNetworKit_1_1MTXParser_1_1MatrixSize"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MatrixSize</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser10MatrixSizeE" title="Link to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser10MatrixSize10MatrixSizeE5count5count5count">
+<span class="target" id="structNetworKit_1_1MTXParser_1_1MatrixSize_1afcb814d463c00601a12122b31b19900b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MatrixSize</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">r</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">c</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nz</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser10MatrixSize10MatrixSizeE5count5count5count" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser10MatrixSize4rowsE">
+<span class="target" id="structNetworKit_1_1MTXParser_1_1MatrixSize_1af8232deef71ccc45a554bfa749e1ae25"></span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rows</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser10MatrixSize4rowsE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser10MatrixSize7columnsE">
+<span class="target" id="structNetworKit_1_1MTXParser_1_1MatrixSize_1a182ba524afe8c04c5d83c7da4d8a13ea"></span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">columns</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser10MatrixSize7columnsE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser10MatrixSize8nonzerosE">
+<span class="target" id="structNetworKit_1_1MTXParser_1_1MatrixSize_1a88101a14b380f71924227b08c12e40f3"></span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nonzeros</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser10MatrixSize8nonzerosE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser9MTXHeaderE">
+<span class="target" id="structNetworKit_1_1MTXParser_1_1MTXHeader"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MTXHeader</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser9MTXHeaderE" title="Link to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser9MTXHeader6objectE">
+<span class="target" id="structNetworKit_1_1MTXParser_1_1MTXHeader_1a8507da465015e65632d7e43ce5807a7e"></span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser6ObjectE" title="NetworKit::MTXParser::Object"><span class="n"><span class="pre">Object</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">object</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser9MTXHeader6objectE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser9MTXHeader6formatE">
+<span class="target" id="structNetworKit_1_1MTXParser_1_1MTXHeader_1ab9c37d4fe6116fc3bd84f24944dd6de2"></span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser6FormatE" title="NetworKit::MTXParser::Format"><span class="n"><span class="pre">Format</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">format</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser9MTXHeader6formatE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser9MTXHeader5fieldE">
+<span class="target" id="structNetworKit_1_1MTXParser_1_1MTXHeader_1ab35ed0a601eab56333ffe6e13709fc49"></span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser5FieldE" title="NetworKit::MTXParser::Field"><span class="n"><span class="pre">Field</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">field</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser9MTXHeader5fieldE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9MTXParser9MTXHeader8symmetryE">
+<span class="target" id="structNetworKit_1_1MTXParser_1_1MTXHeader_1a3f4ef63a454565b477c83f70a27fedb0"></span><a class="reference internal" href="#_CPPv4N9NetworKit9MTXParser8SymmetryE" title="NetworKit::MTXParser::Symmetry"><span class="n"><span class="pre">Symmetry</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">symmetry</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9MTXParser9MTXHeader8symmetryE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

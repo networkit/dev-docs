@@ -1,0 +1,740 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>NetworKit Sparsification Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NetworKit Visualization Tutorial" href="Visualization.html" />
+    <link rel="prev" title="NetworKit Reachability Tutorial" href="Reachability.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../notebooks.html#tutorial-notebooks">Tutorial Notebooks</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="User-Guide.html">NetworKit User Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="User-Guide.html#Profiling">Profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Centrality.html">Centrality Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Community.html">Community Detection with NetworKit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Distance.html">NetworKit Distance Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Dynamics.html">Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Generators.html">NetworKit Graph Generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GraphNotebook.html">NetworKit Graph Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GroupCentrality.html">Group Centrality Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="IONotebook.html">NetworKit graph I/O tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LinkPrediction.html">Link Prediction with NetworKit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LinkPrediction.html#Link-prediction-algorithms">Link prediction algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LinkPrediction.html#Link-sampling-and-link-prediction">Link sampling and link prediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Plot.html">Plot Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Randomization.html">NetworKit Randomization Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Reachability.html">NetworKit Reachability Tutorial</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">NetworKit Sparsification Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Visualization.html">NetworKit Visualization Tutorial</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="NetworKit-Sparsification-Tutorial">
+<h1>NetworKit Sparsification Tutorial<a class="headerlink" href="#NetworKit-Sparsification-Tutorial" title="Link to this heading">¶</a></h1>
+<p>This notebook covers the NetworKit sparsification module, which provides algorithms to compute edge scores and to sparsify an input graph.</p>
+<p>Sparsification algorithms rely on edge scores, therefore graph edges must be indexed. Call the <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/networkit.html?highlight=indexedges#networkit.Graph.indexEdges">indexEdges()</a> function to do so.</p>
+<p>Every sparsification algorithm computing edge scores in NetworKit provides a <code class="docutils literal notranslate"><span class="pre">scores()</span></code> function that returns the edge attributes maximum parameter value such that the edge is contained in the sparsified graph.</p>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/sparsification.html?highlight=getsparsif#networkit.sparsification.Sparsifier.getSparsifiedGraph">getSparsifiedGraph(G, parameter, attribute)</a> or <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/sparsification.html?highlight=getsparsif#networkit.sparsification.Sparsifier.getSparsifiedGraphOfSize">getSparsifiedGraphOfSize(G, edgeRatio, attribute)</a> functions return the sparsified graph. <code class="docutils literal notranslate"><span class="pre">parameter</span></code> determines the degree of sparsification,
+while <code class="docutils literal notranslate"><span class="pre">edgeRatio</span></code> is the target edge ratio of the specified graph. <code class="docutils literal notranslate"><span class="pre">attribute</span></code> is an optional parameter representing a previously calculated edge attribute.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">networkit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nk</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script type="text/javascript">
+<!--
+
+{
+        var element = document.getElementById('NetworKit_script');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('script');
+        element.type = 'text/javascript';
+        element.innerHTML = 'function NetworKit_pageEmbed(id) { var i, j; var elements; elements = document.getElementById(id).getElementsByClassName("Plot"); for (i=0; i<elements.length; i++) { elements[i].id = id + "_Plot_" + i; var data = elements[i].getAttribute("data-image").split("|"); elements[i].removeAttribute("data-image"); var content = "<div class=\\"Image\\" id=\\"" + elements[i].id + "_Image\\" />"; elements[i].innerHTML = content; elements[i].setAttribute("data-image-index", 0); elements[i].setAttribute("data-image-length", data.length); for (j=0; j<data.length; j++) { elements[i].setAttribute("data-image-" + j, data[j]); } NetworKit_plotUpdate(elements[i]); elements[i].onclick = function (e) { NetworKit_overlayShow((e.target) ? e.target : e.srcElement); } } elements = document.getElementById(id).getElementsByClassName("HeatCell"); for (i=0; i<elements.length; i++) { var data = parseFloat(elements[i].getAttribute("data-heat")); var color = "#00FF00"; if (data <= 1 && data > 0) { color = "hsla(0, 100%, 75%, " + (data) + ")"; } else if (data <= 0 && data >= -1) { color = "hsla(240, 100%, 75%, " + (-data) + ")"; } elements[i].style.backgroundColor = color; } elements = document.getElementById(id).getElementsByClassName("Details"); for (i=0; i<elements.length; i++) { elements[i].setAttribute("data-title", "-"); NetworKit_toggleDetails(elements[i]); elements[i].onclick = function (e) { NetworKit_toggleDetails((e.target) ? e.target : e.srcElement); } } elements = document.getElementById(id).getElementsByClassName("MathValue"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "nan") { elements[i].parentNode.innerHTML = "" } } elements = document.getElementById(id).getElementsByClassName("SubCategory"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "") { elements[i].parentNode.removeChild(elements[i]) } } elements = document.getElementById(id).getElementsByClassName("Category"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "") { elements[i].parentNode.removeChild(elements[i]) } } var isFirefox = false; try { isFirefox = typeof InstallTrigger !== "undefined"; } catch (e) {} if (!isFirefox) { alert("Currently the function\'s output is only fully supported by Firefox."); } } function NetworKit_plotUpdate(source) { var index = source.getAttribute("data-image-index"); var data = source.getAttribute("data-image-" + index); var image = document.getElementById(source.id + "_Image"); image.style.backgroundImage = "url(" + data + ")"; } function NetworKit_showElement(id, show) { var element = document.getElementById(id); element.style.display = (show) ? "block" : "none"; } function NetworKit_overlayShow(source) { NetworKit_overlayUpdate(source); NetworKit_showElement("NetworKit_Overlay", true); } function NetworKit_overlayUpdate(source) { document.getElementById("NetworKit_Overlay_Title").innerHTML = source.title; var index = source.getAttribute("data-image-index"); var data = source.getAttribute("data-image-" + index); var image = document.getElementById("NetworKit_Overlay_Image"); image.setAttribute("data-id", source.id); image.style.backgroundImage = "url(" + data + ")"; var link = document.getElementById("NetworKit_Overlay_Toolbar_Bottom_Save"); link.href = data; link.download = source.title + ".svg"; } function NetworKit_overlayImageShift(delta) { var image = document.getElementById("NetworKit_Overlay_Image"); var source = document.getElementById(image.getAttribute("data-id")); var index = parseInt(source.getAttribute("data-image-index")); var length = parseInt(source.getAttribute("data-image-length")); var index = (index+delta) % length; if (index < 0) { index = length + index; } source.setAttribute("data-image-index", index); NetworKit_overlayUpdate(source); } function NetworKit_toggleDetails(source) { var childs = source.children; var show = false; if (source.getAttribute("data-title") == "-") { source.setAttribute("data-title", "+"); show = false; } else { source.setAttribute("data-title", "-"); show = true; } for (i=0; i<childs.length; i++) { if (show) { childs[i].style.display = "block"; } else { childs[i].style.display = "none"; } } }';
+        element.setAttribute('id', 'NetworKit_script');
+        document.head.appendChild(element);
+}
+
+
+{
+        var element = document.getElementById('NetworKit_style');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('style');
+        element.type = 'text/css';
+        element.innerHTML = '.NetworKit_Page { font-family: Arial, Helvetica, sans-serif; font-size: 14px; } .NetworKit_Page .Value:before { font-family: Arial, Helvetica, sans-serif; font-size: 1.05em; content: attr(data-title) ":"; margin-left: -2.5em; padding-right: 0.5em; } .NetworKit_Page .Details .Value:before { display: block; } .NetworKit_Page .Value { font-family: monospace; white-space: pre; padding-left: 2.5em; white-space: -moz-pre-wrap !important; white-space: -pre-wrap; white-space: -o-pre-wrap; white-space: pre-wrap; word-wrap: break-word; tab-size: 4; -moz-tab-size: 4; } .NetworKit_Page .Category { clear: both; padding-left: 1em; margin-bottom: 1.5em; } .NetworKit_Page .Category:before { content: attr(data-title); font-size: 1.75em; display: block; margin-left: -0.8em; margin-bottom: 0.5em; } .NetworKit_Page .SubCategory { margin-bottom: 1.5em; padding-left: 1em; } .NetworKit_Page .SubCategory:before { font-size: 1.6em; display: block; margin-left: -0.8em; margin-bottom: 0.5em; } .NetworKit_Page .SubCategory[data-title]:before { content: attr(data-title); } .NetworKit_Page .Block { display: block; } .NetworKit_Page .Block:after { content: "."; visibility: hidden; display: block; height: 0; clear: both; } .NetworKit_Page .Block .Thumbnail_Overview, .NetworKit_Page .Block .Thumbnail_ScatterPlot { width: 260px; float: left; } .NetworKit_Page .Block .Thumbnail_Overview img, .NetworKit_Page .Block .Thumbnail_ScatterPlot img { width: 260px; } .NetworKit_Page .Block .Thumbnail_Overview:before, .NetworKit_Page .Block .Thumbnail_ScatterPlot:before { display: block; text-align: center; font-weight: bold; } .NetworKit_Page .Block .Thumbnail_Overview:before { content: attr(data-title); } .NetworKit_Page .HeatCell { font-family: "Courier New", Courier, monospace; cursor: pointer; } .NetworKit_Page .HeatCell, .NetworKit_Page .HeatCellName { display: inline; padding: 0.1em; margin-right: 2px; background-color: #FFFFFF } .NetworKit_Page .HeatCellName { margin-left: 0.25em; } .NetworKit_Page .HeatCell:before { content: attr(data-heat); display: inline-block; color: #000000; width: 4em; text-align: center; } .NetworKit_Page .Measure { clear: both; } .NetworKit_Page .Measure .Details { cursor: pointer; } .NetworKit_Page .Measure .Details:before { content: "[" attr(data-title) "]"; display: block; } .NetworKit_Page .Measure .Details .Value { border-left: 1px dotted black; margin-left: 0.4em; padding-left: 3.5em; pointer-events: none; } .NetworKit_Page .Measure .Details .Spacer:before { content: "."; opacity: 0.0; pointer-events: none; } .NetworKit_Page .Measure .Plot { width: 440px; height: 440px; cursor: pointer; float: left; margin-left: -0.9em; margin-right: 20px; } .NetworKit_Page .Measure .Plot .Image { background-repeat: no-repeat; background-position: center center; background-size: contain; height: 100%; pointer-events: none; } .NetworKit_Page .Measure .Stat { width: 500px; float: left; } .NetworKit_Page .Measure .Stat .Group { padding-left: 1.25em; margin-bottom: 0.75em; } .NetworKit_Page .Measure .Stat .Group .Title { font-size: 1.1em; display: block; margin-bottom: 0.3em; margin-left: -0.75em; border-right-style: dotted; border-right-width: 1px; border-bottom-style: dotted; border-bottom-width: 1px; background-color: #D0D0D0; padding-left: 0.2em; } .NetworKit_Page .Measure .Stat .Group .List { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; } .NetworKit_Page .Measure .Stat .Group .List .Entry { position: relative; line-height: 1.75em; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:before { position: absolute; left: 0; top: -40px; background-color: #808080; color: #ffffff; height: 30px; line-height: 30px; border-radius: 5px; padding: 0 15px; content: attr(data-tooltip); white-space: nowrap; display: none; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:after { position: absolute; left: 15px; top: -10px; border-top: 7px solid #808080; border-left: 7px solid transparent; border-right: 7px solid transparent; content: ""; display: none; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:hover:after, .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:hover:before { display: block; } .NetworKit_Page .Measure .Stat .Group .List .Entry .MathValue { font-family: "Courier New", Courier, monospace; } .NetworKit_Page .Measure:after { content: "."; visibility: hidden; display: block; height: 0; clear: both; } .NetworKit_Page .PartitionPie { clear: both; } .NetworKit_Page .PartitionPie img { width: 600px; } #NetworKit_Overlay { left: 0px; top: 0px; display: none; position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 1000; } #NetworKit_Overlay_Title { position: absolute; color: white; transform: rotate(-90deg); width: 32em; height: 32em; padding-right: 0.5em; padding-top: 0.5em; text-align: right; font-size: 40px; } #NetworKit_Overlay .button { background: white; cursor: pointer; } #NetworKit_Overlay .button:before { size: 13px; display: inline-block; text-align: center; margin-top: 0.5em; margin-bottom: 0.5em; width: 1.5em; height: 1.5em; } #NetworKit_Overlay .icon-close:before { content: "X"; } #NetworKit_Overlay .icon-previous:before { content: "P"; } #NetworKit_Overlay .icon-next:before { content: "N"; } #NetworKit_Overlay .icon-save:before { content: "S"; } #NetworKit_Overlay_Toolbar_Top, #NetworKit_Overlay_Toolbar_Bottom { position: absolute; width: 40px; right: 13px; text-align: right; z-index: 1100; } #NetworKit_Overlay_Toolbar_Top { top: 0.5em; } #NetworKit_Overlay_Toolbar_Bottom { Bottom: 0.5em; } #NetworKit_Overlay_ImageContainer { position: absolute; top: 5%; left: 5%; height: 90%; width: 90%; background-repeat: no-repeat; background-position: center center; background-size: contain; } #NetworKit_Overlay_Image { height: 100%; width: 100%; background-repeat: no-repeat; background-position: center center; background-size: contain; }';
+        element.setAttribute('id', 'NetworKit_style');
+        document.head.appendChild(element);
+}
+
+
+{
+        var element = document.getElementById('NetworKit_Overlay');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('div');
+        element.innerHTML = '<div id="NetworKit_Overlay_Toolbar_Top"><div class="button icon-close" id="NetworKit_Overlay_Close" /></div><div id="NetworKit_Overlay_Title" /> <div id="NetworKit_Overlay_ImageContainer"> <div id="NetworKit_Overlay_Image" /> </div> <div id="NetworKit_Overlay_Toolbar_Bottom"> <div class="button icon-previous" onclick="NetworKit_overlayImageShift(-1)" /> <div class="button icon-next" onclick="NetworKit_overlayImageShift(1)" /> <a id="NetworKit_Overlay_Toolbar_Bottom_Save"><div class="button icon-save" /></a> </div>';
+        element.setAttribute('id', 'NetworKit_Overlay');
+        document.body.appendChild(element);
+        document.getElementById('NetworKit_Overlay_Close').onclick = function (e) {
+                document.getElementById('NetworKit_Overlay').style.display = 'none';
+        }
+}
+
+-->
+</script></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/jazz.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">indexEdges</span><span class="p">()</span>
+<span class="n">G</span><span class="o">.</span><span class="n">numberOfNodes</span><span class="p">(),</span> <span class="n">G</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(198, 2742)
+</pre></div></div>
+</div>
+<p>All sparsification algorithms need an <code class="docutils literal notranslate"><span class="pre">edgeRatio</span></code> parameter. We use the same <code class="docutils literal notranslate"><span class="pre">edgeRatio</span></code> in all our examples.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">targetRatio</span> <span class="o">=</span> <span class="mf">0.2</span>
+</pre></div>
+</div>
+</div>
+<section id="Forest-Fire">
+<h2>Forest Fire<a class="headerlink" href="#Forest-Fire" title="Link to this heading">¶</a></h2>
+<p>The Forest Fire sparsifier implements a variant of the Forest Fire sparsification approach that is based on random walks.</p>
+<section id="Edge-Scores">
+<h3>Edge Scores<a class="headerlink" href="#Edge-Scores" title="Link to this heading">¶</a></h3>
+<p>The <a href="#id14"><span class="problematic" id="id15">`ForestFireScore(G, pf, tebr) &lt;&gt;`__</span></a> constructor expects as inputs a graph, the probability <code class="docutils literal notranslate"><span class="pre">pf</span></code> that the neighbor nodes will burn as well, and the target burn ratio which states that forest fire will burn until <code class="docutils literal notranslate"><span class="pre">tebr</span> <span class="pre">*</span> <span class="pre">m</span></code> edges have been burnt (where <code class="docutils literal notranslate"><span class="pre">m</span></code> is the number of edges of <code class="docutils literal notranslate"><span class="pre">G</span></code>).</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">ffs</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">sparsification</span><span class="o">.</span><span class="n">ForestFireScore</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span>
+
+<span class="c1"># Run</span>
+<span class="n">ffs</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+<span class="c1"># Get edge scores</span>
+<span class="n">attributes</span> <span class="o">=</span> <span class="n">ffs</span><span class="o">.</span><span class="n">scores</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="n">attributes</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">attribute</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0.119
+0.238
+0.048
+0.048
+0.238
+</pre></div></div>
+</div>
+</section>
+<section id="Sparsification">
+<h3>Sparsification<a class="headerlink" href="#Sparsification" title="Link to this heading">¶</a></h3>
+<p>The <a href="#id14"><span class="problematic" id="id16">`ForestFireSparsifier(burnProbability, targetBurntRatio) &lt;&gt;`__</span></a> constructor expects as inputs the probability <code class="docutils literal notranslate"><span class="pre">burnProbability</span></code> that the neighbor nodes will burn as well, and the target burn ratio which states that forest fire will burn until <code class="docutils literal notranslate"><span class="pre">targetBurntRatio</span> <span class="pre">*</span> <span class="pre">m</span></code> edges have been burnt.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">fireSparsifier</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">sparsification</span><span class="o">.</span><span class="n">ForestFireSparsifier</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">)</span>
+
+<span class="c1"># Get sparsified graph</span>
+<span class="n">fireGraph</span> <span class="o">=</span> <span class="n">fireSparsifier</span><span class="o">.</span><span class="n">getSparsifiedGraphOfSize</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">targetRatio</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">(),</span> <span class="n">fireGraph</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(2742, 490)
+</pre></div></div>
+</div>
+</section>
+</section>
+<section id="Global-Threshold-Filter">
+<h2>Global Threshold Filter<a class="headerlink" href="#Global-Threshold-Filter" title="Link to this heading">¶</a></h2>
+<p>The Global Threshold Filter calculates a sparsified graph by filtering globally using a constant threshold value and a given edge attribute.</p>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/sparsification.html?highlight=globalth#networkit.sparsification.GlobalThresholdFilter">GlobalThresholdFilter(G, attribute, e, above)</a> constructor expects as inputs a graph, a list of edge attributes, a threshold value <code class="docutils literal notranslate"><span class="pre">e</span></code> and a boolean value <code class="docutils literal notranslate"><span class="pre">above</span></code>. If <code class="docutils literal notranslate"><span class="pre">above</span></code> is set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, all edges with an attribute value greater than or equal <code class="docutils literal notranslate"><span class="pre">e</span></code> will be kept in the sparsified graph. The <code class="docutils literal notranslate"><span class="pre">calculate</span></code> method returns the sparsified graph.</p>
+<section id="id1">
+<h3>Sparsification<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">gtf</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">sparsification</span><span class="o">.</span><span class="n">GlobalThresholdFilter</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">attributes</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Run</span>
+<span class="n">newG</span> <span class="o">=</span> <span class="n">gtf</span><span class="o">.</span><span class="n">calculate</span><span class="p">()</span>
+<span class="n">G</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">(),</span> <span class="n">newG</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(2742, 2368)
+</pre></div></div>
+</div>
+</section>
+</section>
+<section id="Local-Degree">
+<h2>Local Degree<a class="headerlink" href="#Local-Degree" title="Link to this heading">¶</a></h2>
+<p>The local degree sparsification strategy is based on the idea of hub nodes. For each edge of the graph, it determines the maximum parameter value such that the edge is still contained in the sparsified graph.</p>
+<section id="id2">
+<h3>Edge Scores<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/sparsification.html?highlight=local%20degree#networkit.sparsification.LocalDegreeScore">LocalDegreeScore(G)</a> constructor expects a graph as input.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">lds</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">sparsification</span><span class="o">.</span><span class="n">LocalDegreeScore</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+<span class="c1"># Run</span>
+<span class="n">lds</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+<span class="c1"># Get edge scores</span>
+<span class="n">ldsScores</span> <span class="o">=</span> <span class="n">lds</span><span class="o">.</span><span class="n">scores</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">ldsScores</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1.000
+0.061
+0.579
+0.779
+0.171
+</pre></div></div>
+</div>
+</section>
+<section id="id3">
+<h3>Sparsification<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">localDegSparsifier</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">sparsification</span><span class="o">.</span><span class="n">LocalDegreeSparsifier</span><span class="p">()</span>
+
+<span class="c1"># Get sparsified graph</span>
+<span class="n">localDegGraph</span> <span class="o">=</span> <span class="n">localDegSparsifier</span><span class="o">.</span><span class="n">getSparsifiedGraphOfSize</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">targetRatio</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">(),</span> <span class="n">localDegGraph</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(2742, 547)
+</pre></div></div>
+</div>
+</section>
+</section>
+<section id="Local-Similarity">
+<h2>Local Similarity<a class="headerlink" href="#Local-Similarity" title="Link to this heading">¶</a></h2>
+<section id="id4">
+<h3>Edge Scores<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/sparsification.html?highlight=local#networkit.sparsification.LocalSimilarityScore">LocalSimilarityScore(G, triangles)</a> constructor expects a graph and previously calculated edge triangle counts of the graph.</p>
+<p>The edge triangles can be computed using the <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/sparsification.html?highlight=triangle#networkit.sparsification.TriangleEdgeScore">TriangleEdgeScore(G)</a> algorithm.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compute triangles in G</span>
+<span class="n">e_triangles</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">sparsification</span><span class="o">.</span><span class="n">TriangleEdgeScore</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<span class="n">e_triangles</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">triangles</span> <span class="o">=</span> <span class="n">e_triangles</span><span class="o">.</span><span class="n">scores</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">lss</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">sparsification</span><span class="o">.</span><span class="n">LocalSimilarityScore</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">triangles</span><span class="p">)</span>
+
+<span class="c1"># Run</span>
+<span class="n">lss</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+<span class="c1"># Get edge scores</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="n">lss</span><span class="o">.</span><span class="n">scores</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0.159
+1.000
+0.512
+0.061
+0.379
+</pre></div></div>
+</div>
+</section>
+<section id="id5">
+<h3>Sparsification<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">similaritySparsifier</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">sparsification</span><span class="o">.</span><span class="n">LocalSimilaritySparsifier</span><span class="p">()</span>
+
+<span class="c1"># Get sparsified graph</span>
+<span class="n">similarityGraph</span> <span class="o">=</span> <span class="n">similaritySparsifier</span><span class="o">.</span><span class="n">getSparsifiedGraphOfSize</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">targetRatio</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">(),</span> <span class="n">similarityGraph</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(2742, 547)
+</pre></div></div>
+</div>
+</section>
+</section>
+<section id="Random-Edge-Score">
+<h2>Random Edge Score<a class="headerlink" href="#Random-Edge-Score" title="Link to this heading">¶</a></h2>
+<p>This strategy assigns to each edge a random value in [0,1].</p>
+<section id="id6">
+<h3>Edge Scores<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/sparsification.html?highlight=randomedge#networkit.sparsification.RandomEdgeScore">RandomEdgeScore(G)</a> constructor expects a graph as input.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">sparsification</span><span class="o">.</span><span class="n">RandomEdgeScore</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+<span class="c1"># Run</span>
+<span class="n">res</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+<span class="c1"># Get edge scores</span>
+<span class="n">randomEdgeScores</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">scores</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">randomEdgeScores</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0.426
+0.768
+0.655
+0.428
+0.616
+</pre></div></div>
+</div>
+</section>
+<section id="id7">
+<h3>Sparsification<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">randomEdgeSparsifier</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">sparsification</span><span class="o">.</span><span class="n">RandomEdgeSparsifier</span><span class="p">()</span>
+
+<span class="c1"># Get sparsified graph</span>
+<span class="n">randomGraph</span> <span class="o">=</span> <span class="n">randomEdgeSparsifier</span><span class="o">.</span><span class="n">getSparsifiedGraphOfSize</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">targetRatio</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">(),</span> <span class="n">randomGraph</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(2742, 561)
+</pre></div></div>
+</div>
+</section>
+</section>
+<section id="Random-Node-Edge-Score">
+<h2>Random Node Edge Score<a class="headerlink" href="#Random-Node-Edge-Score" title="Link to this heading">¶</a></h2>
+<p>This attributizer returns edge attributes where each value is selected uniformly at random from [0,1].</p>
+<section id="id8">
+<h3>Edge Scores<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/sparsification.html?highlight=randomnode#networkit.sparsification.RandomNodeEdgeScore">RandomNodeEdgeScore(G)</a> constructor expects a graph as input.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize</span>
+<span class="n">rn</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">sparsification</span><span class="o">.</span><span class="n">RandomNodeEdgeScore</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+<span class="c1"># Run</span>
+<span class="n">rn</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+<span class="c1"># Get edge scores</span>
+<span class="n">randomNodeScores</span> <span class="o">=</span> <span class="n">rn</span><span class="o">.</span><span class="n">scores</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">randomNodeScores</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0.510
+0.491
+0.031
+0.245
+0.376
+</pre></div></div>
+</div>
+</section>
+<section id="id9">
+<h3>Sparsification<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">randomNodeEdgeSparsifier</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">sparsification</span><span class="o">.</span><span class="n">RandomNodeEdgeSparsifier</span><span class="p">()</span>
+
+<span class="c1"># Get sparsified graph</span>
+<span class="n">randomNodeGraph</span> <span class="o">=</span> <span class="n">randomNodeEdgeSparsifier</span><span class="o">.</span><span class="n">getSparsifiedGraphOfSize</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">targetRatio</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">(),</span> <span class="n">randomNodeGraph</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(2742, 548)
+</pre></div></div>
+</div>
+</section>
+</section>
+<section id="SCAN-Structural-Similarity-Score">
+<h2>SCAN Structural Similarity Score<a class="headerlink" href="#SCAN-Structural-Similarity-Score" title="Link to this heading">¶</a></h2>
+<p>This algorithm is a Structural Clustering Algorithm for Networks (SCAN) whose goal is to find clusters, hubs, and outliers in large networks.</p>
+<section id="id10">
+<h3>Edge Scores<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/sparsification.html?highlight=scan#networkit.sparsification.SCANStructuralSimilarityScore">SCANStructuralSimilarityScore(G, triangles)</a> constructor expects as inputs a graph and previously calculated edge triangle counts of the graph.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">scan</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">sparsification</span><span class="o">.</span><span class="n">SCANStructuralSimilarityScore</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">triangles</span><span class="p">)</span>
+
+<span class="c1"># Run</span>
+<span class="n">scan</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+<span class="c1"># Get edge scores</span>
+<span class="n">scanScores</span> <span class="o">=</span> <span class="n">scan</span><span class="o">.</span><span class="n">scores</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">scanScores</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0.566
+0.609
+0.670
+0.348
+0.490
+</pre></div></div>
+</div>
+</section>
+<section id="id11">
+<h3>Sparsification<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize</span>
+<span class="n">scanSparsifier</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">sparsification</span><span class="o">.</span><span class="n">SCANSparsifier</span><span class="p">()</span>
+
+<span class="c1"># Get sparsified graph</span>
+<span class="n">scanGraph</span> <span class="o">=</span> <span class="n">scanSparsifier</span><span class="o">.</span><span class="n">getSparsifiedGraphOfSize</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">targetRatio</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">(),</span> <span class="n">scanGraph</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(2742, 548)
+</pre></div></div>
+</div>
+</section>
+</section>
+<section id="Simmelian-Overlap-Score">
+<h2>Simmelian Overlap Score<a class="headerlink" href="#Simmelian-Overlap-Score" title="Link to this heading">¶</a></h2>
+<p>This is an implementation of the parametric variant of Simmelian Backbones. It calculates for each edge the minimum parameter value such that the edge is still contained in the sparsified graph.</p>
+<section id="id12">
+<h3>Edge Scores<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/sparsification.html?highlight=simmelian#networkit.sparsification.SimmelianOverlapScore">SimmelianOverlapScore(G, triangles, maxRank)</a> constructor expects as inputs a graph, triangles and the maximum rank that is considered for overlap calculation.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">sos</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">sparsification</span><span class="o">.</span><span class="n">SimmelianOverlapScore</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">triangles</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># Run</span>
+<span class="n">sos</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+<span class="c1"># Get edge scores</span>
+<span class="n">sosScores</span> <span class="o">=</span> <span class="n">sos</span><span class="o">.</span><span class="n">scores</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">sosScores</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+3.000
+2.000
+2.000
+2.000
+0.000
+</pre></div></div>
+</div>
+</section>
+<section id="id13">
+<h3>Sparsification<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">simmelianSparsifier</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">sparsification</span><span class="o">.</span><span class="n">SimmelianSparsifierNonParametric</span><span class="p">()</span>
+
+<span class="c1"># Get sparsified graph</span>
+<span class="n">simmelieanGraph</span> <span class="o">=</span> <span class="n">simmelianSparsifier</span><span class="o">.</span><span class="n">getSparsifiedGraphOfSize</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">targetRatio</span><span class="p">)</span>
+<span class="n">G</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">(),</span> <span class="n">simmelieanGraph</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+(2742, 548)
+</pre></div></div>
+</div>
+</section>
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

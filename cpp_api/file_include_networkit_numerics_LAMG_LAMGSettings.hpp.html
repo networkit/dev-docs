@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>File LAMGSettings.hpp</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="file-lamgsettings-hpp">
+<span id="file-include-networkit-numerics-lamg-lamgsettings-hpp"></span><h1>File LAMGSettings.hpp<a class="headerlink" href="#file-lamgsettings-hpp" title="Link to this heading">¶</a></h1>
+<p>↰ <a class="reference internal" href="dir_include_networkit_numerics_LAMG.html#dir-include-networkit-numerics-lamg"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">include/networkit/numerics/LAMG</span></code>)</p>
+<nav class="contents local" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-include-networkit-numerics-lamg-lamgsettings-hpp" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">include/networkit/numerics/LAMG/LAMGSettings.hpp</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id2">Includes</a></p></li>
+<li><p><a class="reference internal" href="#included-by" id="id3">Included By</a></p></li>
+<li><p><a class="reference internal" href="#namespaces" id="id4">Namespaces</a></p></li>
+<li><p><a class="reference internal" href="#variables" id="id5">Variables</a></p></li>
+</ul>
+</nav>
+<section id="definition-include-networkit-numerics-lamg-lamgsettings-hpp">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">include/networkit/numerics/LAMG/LAMGSettings.hpp</span></code>)<a class="headerlink" href="#definition-include-networkit-numerics-lamg-lamgsettings-hpp" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="program_listing_file_include_networkit_numerics_LAMG_LAMGSettings.hpp.html">Program Listing for File LAMGSettings.hpp</a></li>
+</ul>
+</div>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">networkit/Globals.hpp</span></code> (<a class="reference internal" href="file_include_networkit_Globals.hpp.html#file-include-networkit-globals-hpp"><span class="std std-ref">File Globals.hpp</span></a>)</p></li>
+</ul>
+</section>
+<section id="included-by">
+<h2>Included By<a class="headerlink" href="#included-by" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="file_include_networkit_numerics_LAMG_LevelHierarchy.hpp.html#file-include-networkit-numerics-lamg-levelhierarchy-hpp"><span class="std std-ref">File LevelHierarchy.hpp</span></a></p></li>
+</ul>
+</section>
+<section id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="namespace_NetworKit.html#namespace-networkit"><span class="std std-ref">Namespace NetworKit</span></a></p></li>
+</ul>
+</section>
+<section id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a1ff3bdeb2a7891f3fe3410ba9d1323ec.html#exhale-variable-namespacenetworkit-1a1ff3bdeb2a7891f3fe3410ba9d1323ec"><span class="std std-ref">Variable NetworKit::MAX_COMBINED_ITERATES</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1aba2b0766936a22351ff096bf43f56666.html#exhale-variable-namespacenetworkit-1aba2b0766936a22351ff096bf43f56666"><span class="std std-ref">Variable NetworKit::MAX_DIRECT_SOLVE_SIZE</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a5063161a8727b1f2f5c75e6ec277073a.html#exhale-variable-namespacenetworkit-1a5063161a8727b1f2f5c75e6ec277073a"><span class="std std-ref">Variable NetworKit::SETUP_AGGREGATION_DEGREE_THRESHOLD</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1ad9c85d4de6bbcc3ac9a91a123a2b957c.html#exhale-variable-namespacenetworkit-1ad9c85d4de6bbcc3ac9a91a123a2b957c"><span class="std std-ref">Variable NetworKit::SETUP_AGGREGATION_WEAK_EDGE_THRESHOLD</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a5c6ee4e1ae157255022973347d69a4b5.html#exhale-variable-namespacenetworkit-1a5c6ee4e1ae157255022973347d69a4b5"><span class="std std-ref">Variable NetworKit::SETUP_COARSENING_WORK_GUARD</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a0b7b60f318ba5a7df708663bf225e85b.html#exhale-variable-namespacenetworkit-1a0b7b60f318ba5a7df708663bf225e85b"><span class="std std-ref">Variable NetworKit::SETUP_CYCLE_INDEX</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a14d4fff88f0849e92869648edc554f11.html#exhale-variable-namespacenetworkit-1a14d4fff88f0849e92869648edc554f11"><span class="std std-ref">Variable NetworKit::SETUP_ELIMINATION_MAX_DEGREE</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a67384273a31e83b10e4756494812d56a.html#exhale-variable-namespacenetworkit-1a67384273a31e83b10e4756494812d56a"><span class="std std-ref">Variable NetworKit::SETUP_ELIMINATION_MAX_STAGES</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1ae7139ce64c1b77f0a24195c75ef48221.html#exhale-variable-namespacenetworkit-1ae7139ce64c1b77f0a24195c75ef48221"><span class="std std-ref">Variable NetworKit::SETUP_ELIMINATION_MIN_ELIM_FRACTION</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a78c425d387dd8afcc5c5c35871abcc08.html#exhale-variable-namespacenetworkit-1a78c425d387dd8afcc5c5c35871abcc08"><span class="std std-ref">Variable NetworKit::SETUP_MAX_AGG_LEVELS</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a9abd256cad83a7d542a96ef811c18977.html#exhale-variable-namespacenetworkit-1a9abd256cad83a7d542a96ef811c18977"><span class="std std-ref">Variable NetworKit::SETUP_MAX_AGGREGATION_STAGES</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a5abc13d613d058e52bea849ddc8b8692.html#exhale-variable-namespacenetworkit-1a5abc13d613d058e52bea849ddc8b8692"><span class="std std-ref">Variable NetworKit::SETUP_MAX_COARSE_RELAX_ACF</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a048d172b8feb3b1c212f31c12e0a8fd6.html#exhale-variable-namespacenetworkit-1a048d172b8feb3b1c212f31c12e0a8fd6"><span class="std std-ref">Variable NetworKit::SETUP_MAX_LEVELS</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1ad163883d076426d55ae9e85a612e638f.html#exhale-variable-namespacenetworkit-1ad163883d076426d55ae9e85a612e638f"><span class="std std-ref">Variable NetworKit::SETUP_MIN_AGGREGATION_STAGES</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1aacb217396a646dd582a340f40177a30d.html#exhale-variable-namespacenetworkit-1aacb217396a646dd582a340f40177a30d"><span class="std std-ref">Variable NetworKit::SETUP_NU_DEFAULT</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a356b0131527a4105da2a83453d0c9c2b.html#exhale-variable-namespacenetworkit-1a356b0131527a4105da2a83453d0c9c2b"><span class="std std-ref">Variable NetworKit::SETUP_RELAX_ACF_MIN_SWEEPS</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a7036d6788a4e8e61585a7541d825b300.html#exhale-variable-namespacenetworkit-1a7036d6788a4e8e61585a7541d825b300"><span class="std std-ref">Variable NetworKit::SETUP_RELAX_COARSEST_SWEEPS</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1af52d832b9e6d66e292d2ec78499facf1.html#exhale-variable-namespacenetworkit-1af52d832b9e6d66e292d2ec78499facf1"><span class="std std-ref">Variable NetworKit::SETUP_TV_SWEEPS</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1a454d509d121e61a3764184d560d72783.html#exhale-variable-namespacenetworkit-1a454d509d121e61a3764184d560d72783"><span class="std std-ref">Variable NetworKit::TV_INC</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1ae9ca5f6b3df33758d5b2857cab57d5dd.html#exhale-variable-namespacenetworkit-1ae9ca5f6b3df33758d5b2857cab57d5dd"><span class="std std-ref">Variable NetworKit::TV_MAX</span></a></p></li>
+<li><p><a class="reference internal" href="variable_namespaceNetworKit_1af473a6be1323485701f34bb24d6af42f.html#exhale-variable-namespacenetworkit-1af473a6be1323485701f34bb24d6af42f"><span class="std std-ref">Variable NetworKit::TV_NUM</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

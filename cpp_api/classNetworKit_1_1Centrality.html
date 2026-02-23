@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Class Centrality</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class ChanceCorrectedTriangleScore" href="classNetworKit_1_1ChanceCorrectedTriangleScore.html" />
+    <link rel="prev" title="Class BSuitorMatcher" href="classNetworKit_1_1BSuitorMatcher.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#directories">Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#pages">Pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="class-centrality">
+<span id="exhale-class-classnetworkit-1-1centrality"></span><h1>Class Centrality<a class="headerlink" href="#class-centrality" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_networkit_centrality_Centrality.hpp.html#file-include-networkit-centrality-centrality-hpp"><span class="std std-ref">File Centrality.hpp</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Link to this heading">¶</a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::Algorithm</span></code> (<a class="reference internal" href="classNetworKit_1_1Algorithm.html#exhale-class-classnetworkit-1-1algorithm"><span class="std std-ref">Class Algorithm</span></a>)</p></li>
+</ul>
+</section>
+<section id="derived-types">
+<h3>Derived Types<a class="headerlink" href="#derived-types" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::AlgebraicPageRank&lt;</span> <span class="pre">Matrix</span> <span class="pre">&gt;</span></code> (<a class="reference internal" href="classNetworKit_1_1AlgebraicPageRank.html#exhale-class-classnetworkit-1-1algebraicpagerank"><span class="std std-ref">Template Class AlgebraicPageRank</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::AlgebraicSpanningEdgeCentrality&lt;</span> <span class="pre">Matrix</span> <span class="pre">&gt;</span></code> (<a class="reference internal" href="classNetworKit_1_1AlgebraicSpanningEdgeCentrality.html#exhale-class-classnetworkit-1-1algebraicspanningedgecentrality"><span class="std std-ref">Template Class AlgebraicSpanningEdgeCentrality</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::ApproxBetweenness</span></code> (<a class="reference internal" href="classNetworKit_1_1ApproxBetweenness.html#exhale-class-classnetworkit-1-1approxbetweenness"><span class="std std-ref">Class ApproxBetweenness</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::ApproxCloseness</span></code> (<a class="reference internal" href="classNetworKit_1_1ApproxCloseness.html#exhale-class-classnetworkit-1-1approxcloseness"><span class="std std-ref">Class ApproxCloseness</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::ApproxElectricalCloseness</span></code> (<a class="reference internal" href="classNetworKit_1_1ApproxElectricalCloseness.html#exhale-class-classnetworkit-1-1approxelectricalcloseness"><span class="std std-ref">Class ApproxElectricalCloseness</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::Betweenness</span></code> (<a class="reference internal" href="classNetworKit_1_1Betweenness.html#exhale-class-classnetworkit-1-1betweenness"><span class="std std-ref">Class Betweenness</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::Closeness</span></code> (<a class="reference internal" href="classNetworKit_1_1Closeness.html#exhale-class-classnetworkit-1-1closeness"><span class="std std-ref">Class Closeness</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::CoreDecomposition</span></code> (<a class="reference internal" href="classNetworKit_1_1CoreDecomposition.html#exhale-class-classnetworkit-1-1coredecomposition"><span class="std std-ref">Class CoreDecomposition</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::DegreeCentrality</span></code> (<a class="reference internal" href="classNetworKit_1_1DegreeCentrality.html#exhale-class-classnetworkit-1-1degreecentrality"><span class="std std-ref">Class DegreeCentrality</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::DynApproxBetweenness</span></code> (<a class="reference internal" href="classNetworKit_1_1DynApproxBetweenness.html#exhale-class-classnetworkit-1-1dynapproxbetweenness"><span class="std std-ref">Class DynApproxBetweenness</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::DynBetweenness</span></code> (<a class="reference internal" href="classNetworKit_1_1DynBetweenness.html#exhale-class-classnetworkit-1-1dynbetweenness"><span class="std std-ref">Class DynBetweenness</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::DynKatzCentrality</span></code> (<a class="reference internal" href="classNetworKit_1_1DynKatzCentrality.html#exhale-class-classnetworkit-1-1dynkatzcentrality"><span class="std std-ref">Class DynKatzCentrality</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::EigenvectorCentrality</span></code> (<a class="reference internal" href="classNetworKit_1_1EigenvectorCentrality.html#exhale-class-classnetworkit-1-1eigenvectorcentrality"><span class="std std-ref">Class EigenvectorCentrality</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::EstimateBetweenness</span></code> (<a class="reference internal" href="classNetworKit_1_1EstimateBetweenness.html#exhale-class-classnetworkit-1-1estimatebetweenness"><span class="std std-ref">Class EstimateBetweenness</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::ForestCentrality</span></code> (<a class="reference internal" href="classNetworKit_1_1ForestCentrality.html#exhale-class-classnetworkit-1-1forestcentrality"><span class="std std-ref">Class ForestCentrality</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::HarmonicCloseness</span></code> (<a class="reference internal" href="classNetworKit_1_1HarmonicCloseness.html#exhale-class-classnetworkit-1-1harmoniccloseness"><span class="std std-ref">Class HarmonicCloseness</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::KPathCentrality</span></code> (<a class="reference internal" href="classNetworKit_1_1KPathCentrality.html#exhale-class-classnetworkit-1-1kpathcentrality"><span class="std std-ref">Class KPathCentrality</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::KatzCentrality</span></code> (<a class="reference internal" href="classNetworKit_1_1KatzCentrality.html#exhale-class-classnetworkit-1-1katzcentrality"><span class="std std-ref">Class KatzCentrality</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::LaplacianCentrality</span></code> (<a class="reference internal" href="classNetworKit_1_1LaplacianCentrality.html#exhale-class-classnetworkit-1-1laplaciancentrality"><span class="std std-ref">Class LaplacianCentrality</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::LocalClusteringCoefficient</span></code> (<a class="reference internal" href="classNetworKit_1_1LocalClusteringCoefficient.html#exhale-class-classnetworkit-1-1localclusteringcoefficient"><span class="std std-ref">Class LocalClusteringCoefficient</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::LocalPartitionCoverage</span></code> (<a class="reference internal" href="classNetworKit_1_1LocalPartitionCoverage.html#exhale-class-classnetworkit-1-1localpartitioncoverage"><span class="std std-ref">Class LocalPartitionCoverage</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::LocalSquareClusteringCoefficient</span></code> (<a class="reference internal" href="classNetworKit_1_1LocalSquareClusteringCoefficient.html#exhale-class-classnetworkit-1-1localsquareclusteringcoefficient"><span class="std std-ref">Class LocalSquareClusteringCoefficient</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::PageRank</span></code> (<a class="reference internal" href="classNetworKit_1_1PageRank.html#exhale-class-classnetworkit-1-1pagerank"><span class="std std-ref">Class PageRank</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::Sfigality</span></code> (<a class="reference internal" href="classNetworKit_1_1Sfigality.html#exhale-class-classnetworkit-1-1sfigality"><span class="std std-ref">Class Sfigality</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::SpanningEdgeCentrality</span></code> (<a class="reference internal" href="classNetworKit_1_1SpanningEdgeCentrality.html#exhale-class-classnetworkit-1-1spanningedgecentrality"><span class="std std-ref">Class SpanningEdgeCentrality</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10CentralityE">
+<span class="target" id="classNetworKit_1_1Centrality"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Centrality</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1Algorithm.html#_CPPv4N9NetworKit9AlgorithmE" title="NetworKit::Algorithm"><span class="n"><span class="pre">Algorithm</span></span></a><a class="headerlink" href="#_CPPv4N9NetworKit10CentralityE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Abstract base class for centrality measures. </p>
+<p>Subclassed by <a class="reference internal" href="classNetworKit_1_1AlgebraicPageRank.html#classNetworKit_1_1AlgebraicPageRank"><span class="std std-ref">NetworKit::AlgebraicPageRank&lt; Matrix &gt;</span></a>, <a class="reference internal" href="classNetworKit_1_1AlgebraicSpanningEdgeCentrality.html#classNetworKit_1_1AlgebraicSpanningEdgeCentrality"><span class="std std-ref">NetworKit::AlgebraicSpanningEdgeCentrality&lt; Matrix &gt;</span></a>, <a class="reference internal" href="classNetworKit_1_1ApproxBetweenness.html#classNetworKit_1_1ApproxBetweenness"><span class="std std-ref">NetworKit::ApproxBetweenness</span></a>, <a class="reference internal" href="classNetworKit_1_1ApproxCloseness.html#classNetworKit_1_1ApproxCloseness"><span class="std std-ref">NetworKit::ApproxCloseness</span></a>, <a class="reference internal" href="classNetworKit_1_1ApproxElectricalCloseness.html#classNetworKit_1_1ApproxElectricalCloseness"><span class="std std-ref">NetworKit::ApproxElectricalCloseness</span></a>, <a class="reference internal" href="classNetworKit_1_1Betweenness.html#classNetworKit_1_1Betweenness"><span class="std std-ref">NetworKit::Betweenness</span></a>, <a class="reference internal" href="classNetworKit_1_1Closeness.html#classNetworKit_1_1Closeness"><span class="std std-ref">NetworKit::Closeness</span></a>, <a class="reference internal" href="classNetworKit_1_1CoreDecomposition.html#classNetworKit_1_1CoreDecomposition"><span class="std std-ref">NetworKit::CoreDecomposition</span></a>, <a class="reference internal" href="classNetworKit_1_1DegreeCentrality.html#classNetworKit_1_1DegreeCentrality"><span class="std std-ref">NetworKit::DegreeCentrality</span></a>, <a class="reference internal" href="classNetworKit_1_1DynApproxBetweenness.html#classNetworKit_1_1DynApproxBetweenness"><span class="std std-ref">NetworKit::DynApproxBetweenness</span></a>, <a class="reference internal" href="classNetworKit_1_1DynBetweenness.html#classNetworKit_1_1DynBetweenness"><span class="std std-ref">NetworKit::DynBetweenness</span></a>, <a class="reference internal" href="classNetworKit_1_1DynKatzCentrality.html#classNetworKit_1_1DynKatzCentrality"><span class="std std-ref">NetworKit::DynKatzCentrality</span></a>, <a class="reference internal" href="classNetworKit_1_1EigenvectorCentrality.html#classNetworKit_1_1EigenvectorCentrality"><span class="std std-ref">NetworKit::EigenvectorCentrality</span></a>, <a class="reference internal" href="classNetworKit_1_1EstimateBetweenness.html#classNetworKit_1_1EstimateBetweenness"><span class="std std-ref">NetworKit::EstimateBetweenness</span></a>, <a class="reference internal" href="classNetworKit_1_1ForestCentrality.html#classNetworKit_1_1ForestCentrality"><span class="std std-ref">NetworKit::ForestCentrality</span></a>, <a class="reference internal" href="classNetworKit_1_1HarmonicCloseness.html#classNetworKit_1_1HarmonicCloseness"><span class="std std-ref">NetworKit::HarmonicCloseness</span></a>, <a class="reference internal" href="classNetworKit_1_1KPathCentrality.html#classNetworKit_1_1KPathCentrality"><span class="std std-ref">NetworKit::KPathCentrality</span></a>, <a class="reference internal" href="classNetworKit_1_1KatzCentrality.html#classNetworKit_1_1KatzCentrality"><span class="std std-ref">NetworKit::KatzCentrality</span></a>, <a class="reference internal" href="classNetworKit_1_1LaplacianCentrality.html#classNetworKit_1_1LaplacianCentrality"><span class="std std-ref">NetworKit::LaplacianCentrality</span></a>, <a class="reference internal" href="classNetworKit_1_1LocalClusteringCoefficient.html#classNetworKit_1_1LocalClusteringCoefficient"><span class="std std-ref">NetworKit::LocalClusteringCoefficient</span></a>, <a class="reference internal" href="classNetworKit_1_1LocalPartitionCoverage.html#classNetworKit_1_1LocalPartitionCoverage"><span class="std std-ref">NetworKit::LocalPartitionCoverage</span></a>, <a class="reference internal" href="classNetworKit_1_1LocalSquareClusteringCoefficient.html#classNetworKit_1_1LocalSquareClusteringCoefficient"><span class="std std-ref">NetworKit::LocalSquareClusteringCoefficient</span></a>, <a class="reference internal" href="classNetworKit_1_1PageRank.html#classNetworKit_1_1PageRank"><span class="std std-ref">NetworKit::PageRank</span></a>, <a class="reference internal" href="classNetworKit_1_1Sfigality.html#classNetworKit_1_1Sfigality"><span class="std std-ref">NetworKit::Sfigality</span></a>, <a class="reference internal" href="classNetworKit_1_1SpanningEdgeCentrality.html#classNetworKit_1_1SpanningEdgeCentrality"><span class="std std-ref">NetworKit::SpanningEdgeCentrality</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10Centrality10CentralityERK5Graphbb">
+<span class="target" id="classNetworKit_1_1Centrality_1a081d950e37ca2144674234209ef6e1d7"></span><span class="sig-name descname"><span class="n"><span class="pre">Centrality</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">normalized</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">computeEdgeCentrality</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit10Centrality10CentralityERK5Graphbb" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Constructs the <a class="reference internal" href="#classNetworKit_1_1Centrality"><span class="std std-ref">Centrality</span></a> class for the given <a class="reference internal" href="classNetworKit_1_1Graph.html#classNetworKit_1_1Graph"><span class="std std-ref">Graph</span></a> <em>G</em>. If the centrality scores should be normalized, then set <em>normalized</em> to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> – The graph. </p></li>
+<li><p><strong>normalized</strong> – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code> the scores are normalized in the interval [0,1]. </p></li>
+<li><p><strong>computeEdgeCentrality</strong> – If true, compute also edge centralities (for algorithms where this is applicable) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10Centrality3runEv">
+<span class="target" id="classNetworKit_1_1Centrality_1a3dbe40c42692ba49987b9017fa3074de"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N9NetworKit10Centrality3runEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Computes centrality scores on the graph passed in constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit10Centrality6scoresEv">
+<span class="target" id="classNetworKit_1_1Centrality_1a34eca44d3af4005992d4a3e96dc01a91"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">scores</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit10Centrality6scoresEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Get a vector containing the centrality score for each node in the graph.</p>
+<p>Note: The size of the returned vector is equal to the upper node id bound of the graph. The vector also contains scores for non-existing nodes. The score of a non-existing node is implementation-defined (often 0).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The centrality scores calculated by <a class="reference internal" href="#classNetworKit_1_1Centrality_1a3dbe40c42692ba49987b9017fa3074de"><span class="std std-ref">run()</span></a>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit10Centrality13compactScoresEv">
+<span class="target" id="classNetworKit_1_1Centrality_1a480f23a3b1d0c30441d48aa3e2463d72"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compactScores</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit10Centrality13compactScoresEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Get a vector containing the centrality score for each existing node in the graph.</p>
+<p>Note: This method creates a compact score vector, using additional memory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The centrality scores calculated by <a class="reference internal" href="#classNetworKit_1_1Centrality_1a3dbe40c42692ba49987b9017fa3074de"><span class="std std-ref">run()</span></a>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10Centrality10edgeScoresEv">
+<span class="target" id="classNetworKit_1_1Centrality_1a800a17b63ade94ba9c51a74de7c04f70"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">edgeScores</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit10Centrality10edgeScoresEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Get a vector containing the edge centrality score for each edge in the graph (where applicable).</p>
+<p>Note: The size of the returned vector is equal to the upper edge id bound of the graph. The vector also contains scores for non-existing edges. The score of a non-existing edges is implementation-defined.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The edge betweenness scores calculated by <a class="reference internal" href="#classNetworKit_1_1Centrality_1a3dbe40c42692ba49987b9017fa3074de"><span class="std std-ref">run()</span></a>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10Centrality17compactEdgeScoresEv">
+<span class="target" id="classNetworKit_1_1Centrality_1a27bb293a41af6caa258c52b46b8bff45"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compactEdgeScores</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit10Centrality17compactEdgeScoresEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Get a vector containing the edge centrality score for each existing edge in the graph (where applicable).</p>
+<p>Note: This method creates a compact score vector, using additional memory for creation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The edge betweenness scores calculated by <a class="reference internal" href="#classNetworKit_1_1Centrality_1a3dbe40c42692ba49987b9017fa3074de"><span class="std std-ref">run()</span></a>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10Centrality7rankingEv">
+<span class="target" id="classNetworKit_1_1Centrality_1ab9673b04277358c03ab7024979a680ec"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ranking</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit10Centrality7rankingEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Get a vector of pairs sorted into descending order. Each pair contains a node and the corresponding score calculated by <a class="reference internal" href="#classNetworKit_1_1Centrality_1a3dbe40c42692ba49987b9017fa3074de"><span class="std std-ref">run()</span></a>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A vector of pairs. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10Centrality5scoreE4node">
+<span class="target" id="classNetworKit_1_1Centrality_1a6073d5f75fc3dfc82f72f4a455b1768f"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">score</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit10Centrality5scoreE4node" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Get the centrality score of node <em>v</em> calculated by <a class="reference internal" href="#classNetworKit_1_1Centrality_1a3dbe40c42692ba49987b9017fa3074de"><span class="std std-ref">run()</span></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> – A node. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The betweenness score of node <em>v</em>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10Centrality7maximumEv">
+<span class="target" id="classNetworKit_1_1Centrality_1a5856578e04bae077a859b99b44c8a0b8"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">maximum</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit10Centrality7maximumEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Get the theoretical maximum of centrality score in the given graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The maximum centrality score. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10Centrality14centralizationEv">
+<span class="target" id="classNetworKit_1_1Centrality_1a20b8e8093ea8671b7748507842b89521"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">centralization</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit10Centrality14centralizationEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Compute the centralization of a network with respect to some centrality measure.</p>
+<p>The centralization of any network is a measure of how central its most central node is in relation to how central all the other nodes are. Centralization measures then (a) calculate the sum in differences in centrality between the most central node in a network and all other nodes; and (b) divide this quantity by the theoretically largest such sum of differences in any network of the same size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>centrality index </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10Centrality1GE">
+<span class="target" id="classNetworKit_1_1Centrality_1abc6b4922835104a87bc9833040d06141"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">G</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit10Centrality1GE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10Centrality9scoreDataE">
+<span class="target" id="classNetworKit_1_1Centrality_1affbde66b21a1f876985167829203c37e"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">scoreData</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit10Centrality9scoreDataE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10Centrality13edgeScoreDataE">
+<span class="target" id="classNetworKit_1_1Centrality_1a930096c8760f156e376d8722f6a3bc2e"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">edgeScoreData</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit10Centrality13edgeScoreDataE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10Centrality10normalizedE">
+<span class="target" id="classNetworKit_1_1Centrality_1ac43d1bbb6dc9767c75300fcde2509450"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">normalized</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit10Centrality10normalizedE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10Centrality21computeEdgeCentralityE">
+<span class="target" id="classNetworKit_1_1Centrality_1a7a52148695f32131043b32ad938fca03"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeEdgeCentrality</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit10Centrality21computeEdgeCentralityE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

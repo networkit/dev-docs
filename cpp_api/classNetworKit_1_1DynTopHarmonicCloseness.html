@@ -1,0 +1,510 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Class DynTopHarmonicCloseness</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class DynWeaklyConnectedComponents" href="classNetworKit_1_1DynWeaklyConnectedComponents.html" />
+    <link rel="prev" title="Class DynSSSP" href="classNetworKit_1_1DynSSSP.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#directories">Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#pages">Pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="class-dyntopharmoniccloseness">
+<span id="exhale-class-classnetworkit-1-1dyntopharmoniccloseness"></span><h1>Class DynTopHarmonicCloseness<a class="headerlink" href="#class-dyntopharmoniccloseness" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_networkit_centrality_DynTopHarmonicCloseness.hpp.html#file-include-networkit-centrality-dyntopharmoniccloseness-hpp"><span class="std std-ref">File DynTopHarmonicCloseness.hpp</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Link to this heading">¶</a></h2>
+<section id="base-types">
+<h3>Base Types<a class="headerlink" href="#base-types" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::Algorithm</span></code> (<a class="reference internal" href="classNetworKit_1_1Algorithm.html#exhale-class-classnetworkit-1-1algorithm"><span class="std std-ref">Class Algorithm</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::DynAlgorithm</span></code> (<a class="reference internal" href="classNetworKit_1_1DynAlgorithm.html#exhale-class-classnetworkit-1-1dynalgorithm"><span class="std std-ref">Class DynAlgorithm</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicClosenessE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DynTopHarmonicCloseness</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1Algorithm.html#_CPPv4N9NetworKit9AlgorithmE" title="NetworKit::Algorithm"><span class="n"><span class="pre">Algorithm</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1DynAlgorithm.html#_CPPv4N9NetworKit12DynAlgorithmE" title="NetworKit::DynAlgorithm"><span class="n"><span class="pre">DynAlgorithm</span></span></a><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicClosenessE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Manages the list of the k nodes with the highest closeness centrality in a dynamic graph. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness23DynTopHarmonicClosenessERK5Graph5countb">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1affe294ee22abf90561511745904f70e4"></span><span class="sig-name descname"><span class="n"><span class="pre">DynTopHarmonicCloseness</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">k</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">useBFSbound</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness23DynTopHarmonicClosenessERK5Graph5countb" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Constructs the <a class="reference internal" href="#classNetworKit_1_1DynTopHarmonicCloseness"><span class="std std-ref">DynTopHarmonicCloseness</span></a> class. This class implements dynamic algorithms for harmonic top-k closeness centrality. The implementation is based on the static algorithms by Borassi et al. (complex networks) and Bergamini et al. (large-diameter networks).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> – The graph. </p></li>
+<li><p><strong>k</strong> – The number of top nodes. </p></li>
+<li><p><strong>useBFSbound</strong> – Whether to use the algorithm for networks with large diameter </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicClosenessD0Ev">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1af99ad9df7b9cd8b91234bd61631f05aa"></span><span class="sig-name descname"><span class="n"><span class="pre">~DynTopHarmonicCloseness</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicClosenessD0Ev" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness3runEv">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a90cac6b75dcd96f02656173ae906f219"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness3runEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Computes the k most central nodes on the initial graph. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness13topkNodesListEb">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1af6b8f25f2cd3e1c98b9b7bd68478a5d5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">topkNodesList</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">includeTrail</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness13topkNodesListEb" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Returns a list with the k most central nodes. WARNING: closeness centrality of some nodes below the top-k could be equal to the k-th closeness, we call them trail. Set the parameter includeTrail to true to also include those nodes but consider that the resulting vector could be longer than k.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>includeTrail</strong> – Whether or not to include trail nodes. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The list of the top-k nodes. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness14topkScoresListEb">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a8163b5f350f7001744cb200379816fb1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">topkScoresList</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">includeTrail</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness14topkScoresListEb" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Returns a list with the k highest closeness centralities. WARNING: closeness centrality of some nodes below the top-k could be equal to the k-th closeness, we call them trail. Set the parameter includeTrail to true to also include those centrality values but consider that the resulting vector could be longer than k.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>includeTrail</strong> – Whether or not to include trail centrality value. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The closeness centralities of the k most central nodes. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness7rankingEb">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1aa312abf209aeb8a1e05b27be6b52c501"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ranking</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">includeTrail</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness7rankingEb" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Returns the ranking of the k most central nodes in the graph. WARNING: closeness centrality of some nodes below the top-k could be equal to the k-th closeness, we call them trail. Set the parameter includeTrail to true to also include those nodes but consider that the resulting vector could be longer than k.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>includeTrail</strong> – Whether or not to include trail nodes. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The ranking. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness5resetEv">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a3f120739436909ed03849976884d4d55"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness5resetEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness6updateE10GraphEvent">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a79e4cf342fbddf1308d448e5ef6231cb"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classNetworKit_1_1GraphEvent.html#_CPPv4N9NetworKit10GraphEventE" title="NetworKit::GraphEvent"><span class="n"><span class="pre">GraphEvent</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">event</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness6updateE10GraphEvent" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Updates the list of the k nodes with the highest closeness in G.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> – The edge modification event. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness11updateBatchENSt4spanIK10GraphEventEE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a3be0341542a2d39ae1697f574649353f"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateBatch</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">span</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1GraphEvent.html#_CPPv4N9NetworKit10GraphEventE" title="NetworKit::GraphEvent"><span class="n"><span class="pre">GraphEvent</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">batch</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness11updateBatchENSt4spanIK10GraphEventEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Updates the list of k nodes with the highest closeness in G after a batch of updates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>batch</strong> – A vector of edge modification events. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness6BFScutE4node10edgeweight5count5countRNSt6vectorI7uint8_tEERNSt6vectorI5countEERNSt6vectorI4nodeEER5count">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1ac6d08afa60e5a25e95309ce7f0e08313"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BFScut</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">r</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint8_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">visited</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">distances</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pred</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">visitedEdges</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness6BFScutE4node10edgeweight5count5countRNSt6vectorI7uint8_tEERNSt6vectorI5countEERNSt6vectorI4nodeEER5count" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Runs a pruned <a class="reference internal" href="classNetworKit_1_1BFS.html#classNetworKit_1_1BFS"><span class="std std-ref">BFS</span></a> from the node <em>u</em>. The search is aborted once the closeness centrality of <em>u</em> must be smaller than <em>x</em>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v</strong> – The start node. </p></li>
+<li><p><strong>x</strong> – The closeness centrality of the k-th most central node. </p></li>
+<li><p><strong>n</strong> – The number of nodes in the graph. </p></li>
+<li><p><strong>r</strong> – The number of reachable nodes (or an upper bound in directed graphs) for each node. </p></li>
+<li><p><strong>visited</strong> – The vector containing the visited status. </p></li>
+<li><p><strong>distances</strong> – The vector containing the distances. </p></li>
+<li><p><strong>pred</strong> – The vector containing the predecessor of each node. </p></li>
+<li><p><strong>visitedEdges</strong> – The number of visited edges. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness8BFSboundE4nodeRNSt6vectorIdEEP5count">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a0473988dee2c97cef5265a25870df783"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BFSbound</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">x</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">S2</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">visEdges</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness8BFSboundE4nodeRNSt6vectorIdEEP5count" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Computes the exact closeness centrality of the node <em>x</em> and stores upper bounds for all other nodes in <em>S2</em>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – The start node. </p></li>
+<li><p><strong>S2</strong> – The upper bounds for all other nodes. </p></li>
+<li><p><strong>visEdges</strong> – The number of visited edges. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness7addEdgeERK10GraphEvent">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1ad7c30f62fc2ed2a2d9bea489e074567a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addEdge</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1GraphEvent.html#_CPPv4N9NetworKit10GraphEventE" title="NetworKit::GraphEvent"><span class="n"><span class="pre">GraphEvent</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">event</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness7addEdgeERK10GraphEvent" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Handles an edge insertion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> – The graph event. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness10removeEdgeERK10GraphEvent">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a280452a4a12af31c6d0049474d625440"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">removeEdge</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1GraphEvent.html#_CPPv4N9NetworKit10GraphEventE" title="NetworKit::GraphEvent"><span class="n"><span class="pre">GraphEvent</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">event</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness10removeEdgeERK10GraphEvent" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Handles an edge removal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> – The graph event. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness21computeReachableNodesEv">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a71dcf0102fd4c5bbd0911e177bbf52c9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeReachableNodes</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness21computeReachableNodesEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Computes the number of reachable nodes or an upper bound in directed graphs. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness29computeReachableNodesDirectedEv">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1af8cfa0ef512ad515ae3a0e4b9dbe4449"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeReachableNodesDirected</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness29computeReachableNodesDirectedEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Computes an upper bound for the number of reachable nodes for each node in a directed graph. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness31computeReachableNodesUndirectedEv">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a886f9db602c70f0c0c722fccd41baff9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeReachableNodesUndirected</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness31computeReachableNodesUndirectedEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Computes the number of reachable nodes in an undirected graph. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness34updateReachableNodesAfterInsertionE4node4node">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a7a2bc287915ef47d2a994c39edba8408"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateReachableNodesAfterInsertion</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness34updateReachableNodesAfterInsertionE4node4node" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Recomputes the number of reachable nodes in an undirected graph after inserting an edge between <em>u</em> and <em>v</em>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> – The first node. </p></li>
+<li><p><strong>v</strong> – The second node. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness33updateReachableNodesAfterDeletionERK10GraphEvent">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1aed4abe92b0dd6e2c12245f623f2bef85"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateReachableNodesAfterDeletion</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1GraphEvent.html#_CPPv4N9NetworKit10GraphEventE" title="NetworKit::GraphEvent"><span class="n"><span class="pre">GraphEvent</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">event</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness33updateReachableNodesAfterDeletionERK10GraphEvent" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Recomputes the number of reachable nodes in an undirected graph after removing an edge between <em>u</em> and <em>v</em>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> – The first node. </p></li>
+<li><p><strong>v</strong> – The second node. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness4initEv">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a4a462ec916e0ca1ecbc62675ed92443a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness4initEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness1GE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a5eaa0324c56f672be6bf4071f3fa0825"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">G</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness1GE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness1nE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a2dc6f61fcee68f1e762bb43017a0083e"></span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">n</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness1nE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness1kE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1ad5b28f0d3c2bfcd6506c466fb531dba1"></span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">k</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness1kE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness11useBFSboundE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a22008e947785eada39fb00dd12dde829"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">useBFSbound</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness11useBFSboundE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness5trailE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a228f4aec15e47eb1e5c65b80ad19ac42"></span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">trail</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness5trailE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness12minClosenessE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a70e8c6b764ea65e9cc442708bd5de7bb"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">minCloseness</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness12minClosenessE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness13nMinClosenessE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a261daf8702d95a6d4431d410209afa82"></span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nMinCloseness</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness13nMinClosenessE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness4topkE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1abf47d8f42813a35166b7e9e7ea47a0d7"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">topk</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness4topkE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness10topkScoresE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a24530ed164b316f0727d078a97fc39b5"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">topkScores</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness10topkScoresE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness9allScoresE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a7ca08ad101da100631f4b2157337c436"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">allScores</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness9allScoresE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness7isExactE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a27c9d1a04ead1168bb95e2bb230eb3d0"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint8_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isExact</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness7isExactE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness7isValidE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1ae7264d326fe555728f8fcabf551f657b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint8_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isValid</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness7isValidE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness6cutOffE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1aff6830ddc5f0bcfd672c52539ef9e99a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cutOff</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness6cutOffE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness11exactCutOffE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a31f0e95fd0caab8ef8b9d9e1a72812fc"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">uint8_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">exactCutOff</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness11exactCutOffE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness5compsE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a3c20ac9f467ca71dbc7aacdfd2c72478"></span><a class="reference internal" href="classNetworKit_1_1DynConnectedComponents.html#_CPPv4N9NetworKit22DynConnectedComponentsE" title="NetworKit::DynConnectedComponents"><span class="n"><span class="pre">DynConnectedComponents</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">comps</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness5compsE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness8hasCompsE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1ab00052c6da79185d4d4065e8881b4680"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hasComps</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness8hasCompsE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness9componentE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a6a75f78db3f243a52703fb0f0dc7602c"></span><a class="reference internal" href="classNetworKit_1_1Partition.html#_CPPv4N9NetworKit9PartitionE" title="NetworKit::Partition"><span class="n"><span class="pre">Partition</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">component</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness9componentE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness6wCompsE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1aaad2c0ed33d347382f3ea62f0bb21219"></span><a class="reference internal" href="classNetworKit_1_1DynWeaklyConnectedComponents.html#_CPPv4N9NetworKit28DynWeaklyConnectedComponentsE" title="NetworKit::DynWeaklyConnectedComponents"><span class="n"><span class="pre">DynWeaklyConnectedComponents</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">wComps</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness6wCompsE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness9hasWCompsE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1aeb8241290709bc16361dfa79942b7324"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hasWComps</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness9hasWCompsE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness1rE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1ad68edd6d04ae2f0dfd84158834f0d34f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">r</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness1rE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness4rOldE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1a8b9961c97f5bf40a35310ab734a98771"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rOld</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness4rOldE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23DynTopHarmonicCloseness6reachLE">
+<span class="target" id="classNetworKit_1_1DynTopHarmonicCloseness_1ab8cdc8f32fde8cde6f3952180c67c005"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reachL</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit23DynTopHarmonicCloseness6reachLE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

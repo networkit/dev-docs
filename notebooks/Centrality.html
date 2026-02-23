@@ -1,0 +1,1204 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Centrality Tutorial</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Community Detection with NetworKit" href="Community.html" />
+    <link rel="prev" title="NetworKit User Guide" href="User-Guide.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../notebooks.html#tutorial-notebooks">Tutorial Notebooks</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="User-Guide.html">NetworKit User Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="User-Guide.html#Profiling">Profiling</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Centrality Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Community.html">Community Detection with NetworKit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Distance.html">NetworKit Distance Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Dynamics.html">Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Generators.html">NetworKit Graph Generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GraphNotebook.html">NetworKit Graph Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GroupCentrality.html">Group Centrality Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="IONotebook.html">NetworKit graph I/O tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LinkPrediction.html">Link Prediction with NetworKit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LinkPrediction.html#Link-prediction-algorithms">Link prediction algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="LinkPrediction.html#Link-sampling-and-link-prediction">Link sampling and link prediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Plot.html">Plot Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Randomization.html">NetworKit Randomization Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Reachability.html">NetworKit Reachability Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Sparsification.html">NetworKit Sparsification Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Visualization.html">NetworKit Visualization Tutorial</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="Centrality-Tutorial">
+<h1>Centrality Tutorial<a class="headerlink" href="#Centrality-Tutorial" title="Link to this heading">¶</a></h1>
+<p>This notebook covers some of the centrality algorithms implemented in NetworKit. <a class="reference external" href="http://en.wikipedia.org/wiki/Centrality">Centrality</a> measures the relative importance of a node within a graph. Code for centrality analysis in NetworKit is grouped into the <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html">centrality</a> module.</p>
+<p>As always, the first step is to start by importing NetworKit.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">networkit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nk</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script type="text/javascript">
+<!--
+
+{
+        var element = document.getElementById('NetworKit_script');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('script');
+        element.type = 'text/javascript';
+        element.innerHTML = 'function NetworKit_pageEmbed(id) { var i, j; var elements; elements = document.getElementById(id).getElementsByClassName("Plot"); for (i=0; i<elements.length; i++) { elements[i].id = id + "_Plot_" + i; var data = elements[i].getAttribute("data-image").split("|"); elements[i].removeAttribute("data-image"); var content = "<div class=\\"Image\\" id=\\"" + elements[i].id + "_Image\\" />"; elements[i].innerHTML = content; elements[i].setAttribute("data-image-index", 0); elements[i].setAttribute("data-image-length", data.length); for (j=0; j<data.length; j++) { elements[i].setAttribute("data-image-" + j, data[j]); } NetworKit_plotUpdate(elements[i]); elements[i].onclick = function (e) { NetworKit_overlayShow((e.target) ? e.target : e.srcElement); } } elements = document.getElementById(id).getElementsByClassName("HeatCell"); for (i=0; i<elements.length; i++) { var data = parseFloat(elements[i].getAttribute("data-heat")); var color = "#00FF00"; if (data <= 1 && data > 0) { color = "hsla(0, 100%, 75%, " + (data) + ")"; } else if (data <= 0 && data >= -1) { color = "hsla(240, 100%, 75%, " + (-data) + ")"; } elements[i].style.backgroundColor = color; } elements = document.getElementById(id).getElementsByClassName("Details"); for (i=0; i<elements.length; i++) { elements[i].setAttribute("data-title", "-"); NetworKit_toggleDetails(elements[i]); elements[i].onclick = function (e) { NetworKit_toggleDetails((e.target) ? e.target : e.srcElement); } } elements = document.getElementById(id).getElementsByClassName("MathValue"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "nan") { elements[i].parentNode.innerHTML = "" } } elements = document.getElementById(id).getElementsByClassName("SubCategory"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "") { elements[i].parentNode.removeChild(elements[i]) } } elements = document.getElementById(id).getElementsByClassName("Category"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "") { elements[i].parentNode.removeChild(elements[i]) } } var isFirefox = false; try { isFirefox = typeof InstallTrigger !== "undefined"; } catch (e) {} if (!isFirefox) { alert("Currently the function\'s output is only fully supported by Firefox."); } } function NetworKit_plotUpdate(source) { var index = source.getAttribute("data-image-index"); var data = source.getAttribute("data-image-" + index); var image = document.getElementById(source.id + "_Image"); image.style.backgroundImage = "url(" + data + ")"; } function NetworKit_showElement(id, show) { var element = document.getElementById(id); element.style.display = (show) ? "block" : "none"; } function NetworKit_overlayShow(source) { NetworKit_overlayUpdate(source); NetworKit_showElement("NetworKit_Overlay", true); } function NetworKit_overlayUpdate(source) { document.getElementById("NetworKit_Overlay_Title").innerHTML = source.title; var index = source.getAttribute("data-image-index"); var data = source.getAttribute("data-image-" + index); var image = document.getElementById("NetworKit_Overlay_Image"); image.setAttribute("data-id", source.id); image.style.backgroundImage = "url(" + data + ")"; var link = document.getElementById("NetworKit_Overlay_Toolbar_Bottom_Save"); link.href = data; link.download = source.title + ".svg"; } function NetworKit_overlayImageShift(delta) { var image = document.getElementById("NetworKit_Overlay_Image"); var source = document.getElementById(image.getAttribute("data-id")); var index = parseInt(source.getAttribute("data-image-index")); var length = parseInt(source.getAttribute("data-image-length")); var index = (index+delta) % length; if (index < 0) { index = length + index; } source.setAttribute("data-image-index", index); NetworKit_overlayUpdate(source); } function NetworKit_toggleDetails(source) { var childs = source.children; var show = false; if (source.getAttribute("data-title") == "-") { source.setAttribute("data-title", "+"); show = false; } else { source.setAttribute("data-title", "-"); show = true; } for (i=0; i<childs.length; i++) { if (show) { childs[i].style.display = "block"; } else { childs[i].style.display = "none"; } } }';
+        element.setAttribute('id', 'NetworKit_script');
+        document.head.appendChild(element);
+}
+
+
+{
+        var element = document.getElementById('NetworKit_style');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('style');
+        element.type = 'text/css';
+        element.innerHTML = '.NetworKit_Page { font-family: Arial, Helvetica, sans-serif; font-size: 14px; } .NetworKit_Page .Value:before { font-family: Arial, Helvetica, sans-serif; font-size: 1.05em; content: attr(data-title) ":"; margin-left: -2.5em; padding-right: 0.5em; } .NetworKit_Page .Details .Value:before { display: block; } .NetworKit_Page .Value { font-family: monospace; white-space: pre; padding-left: 2.5em; white-space: -moz-pre-wrap !important; white-space: -pre-wrap; white-space: -o-pre-wrap; white-space: pre-wrap; word-wrap: break-word; tab-size: 4; -moz-tab-size: 4; } .NetworKit_Page .Category { clear: both; padding-left: 1em; margin-bottom: 1.5em; } .NetworKit_Page .Category:before { content: attr(data-title); font-size: 1.75em; display: block; margin-left: -0.8em; margin-bottom: 0.5em; } .NetworKit_Page .SubCategory { margin-bottom: 1.5em; padding-left: 1em; } .NetworKit_Page .SubCategory:before { font-size: 1.6em; display: block; margin-left: -0.8em; margin-bottom: 0.5em; } .NetworKit_Page .SubCategory[data-title]:before { content: attr(data-title); } .NetworKit_Page .Block { display: block; } .NetworKit_Page .Block:after { content: "."; visibility: hidden; display: block; height: 0; clear: both; } .NetworKit_Page .Block .Thumbnail_Overview, .NetworKit_Page .Block .Thumbnail_ScatterPlot { width: 260px; float: left; } .NetworKit_Page .Block .Thumbnail_Overview img, .NetworKit_Page .Block .Thumbnail_ScatterPlot img { width: 260px; } .NetworKit_Page .Block .Thumbnail_Overview:before, .NetworKit_Page .Block .Thumbnail_ScatterPlot:before { display: block; text-align: center; font-weight: bold; } .NetworKit_Page .Block .Thumbnail_Overview:before { content: attr(data-title); } .NetworKit_Page .HeatCell { font-family: "Courier New", Courier, monospace; cursor: pointer; } .NetworKit_Page .HeatCell, .NetworKit_Page .HeatCellName { display: inline; padding: 0.1em; margin-right: 2px; background-color: #FFFFFF } .NetworKit_Page .HeatCellName { margin-left: 0.25em; } .NetworKit_Page .HeatCell:before { content: attr(data-heat); display: inline-block; color: #000000; width: 4em; text-align: center; } .NetworKit_Page .Measure { clear: both; } .NetworKit_Page .Measure .Details { cursor: pointer; } .NetworKit_Page .Measure .Details:before { content: "[" attr(data-title) "]"; display: block; } .NetworKit_Page .Measure .Details .Value { border-left: 1px dotted black; margin-left: 0.4em; padding-left: 3.5em; pointer-events: none; } .NetworKit_Page .Measure .Details .Spacer:before { content: "."; opacity: 0.0; pointer-events: none; } .NetworKit_Page .Measure .Plot { width: 440px; height: 440px; cursor: pointer; float: left; margin-left: -0.9em; margin-right: 20px; } .NetworKit_Page .Measure .Plot .Image { background-repeat: no-repeat; background-position: center center; background-size: contain; height: 100%; pointer-events: none; } .NetworKit_Page .Measure .Stat { width: 500px; float: left; } .NetworKit_Page .Measure .Stat .Group { padding-left: 1.25em; margin-bottom: 0.75em; } .NetworKit_Page .Measure .Stat .Group .Title { font-size: 1.1em; display: block; margin-bottom: 0.3em; margin-left: -0.75em; border-right-style: dotted; border-right-width: 1px; border-bottom-style: dotted; border-bottom-width: 1px; background-color: #D0D0D0; padding-left: 0.2em; } .NetworKit_Page .Measure .Stat .Group .List { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; } .NetworKit_Page .Measure .Stat .Group .List .Entry { position: relative; line-height: 1.75em; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:before { position: absolute; left: 0; top: -40px; background-color: #808080; color: #ffffff; height: 30px; line-height: 30px; border-radius: 5px; padding: 0 15px; content: attr(data-tooltip); white-space: nowrap; display: none; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:after { position: absolute; left: 15px; top: -10px; border-top: 7px solid #808080; border-left: 7px solid transparent; border-right: 7px solid transparent; content: ""; display: none; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:hover:after, .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:hover:before { display: block; } .NetworKit_Page .Measure .Stat .Group .List .Entry .MathValue { font-family: "Courier New", Courier, monospace; } .NetworKit_Page .Measure:after { content: "."; visibility: hidden; display: block; height: 0; clear: both; } .NetworKit_Page .PartitionPie { clear: both; } .NetworKit_Page .PartitionPie img { width: 600px; } #NetworKit_Overlay { left: 0px; top: 0px; display: none; position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 1000; } #NetworKit_Overlay_Title { position: absolute; color: white; transform: rotate(-90deg); width: 32em; height: 32em; padding-right: 0.5em; padding-top: 0.5em; text-align: right; font-size: 40px; } #NetworKit_Overlay .button { background: white; cursor: pointer; } #NetworKit_Overlay .button:before { size: 13px; display: inline-block; text-align: center; margin-top: 0.5em; margin-bottom: 0.5em; width: 1.5em; height: 1.5em; } #NetworKit_Overlay .icon-close:before { content: "X"; } #NetworKit_Overlay .icon-previous:before { content: "P"; } #NetworKit_Overlay .icon-next:before { content: "N"; } #NetworKit_Overlay .icon-save:before { content: "S"; } #NetworKit_Overlay_Toolbar_Top, #NetworKit_Overlay_Toolbar_Bottom { position: absolute; width: 40px; right: 13px; text-align: right; z-index: 1100; } #NetworKit_Overlay_Toolbar_Top { top: 0.5em; } #NetworKit_Overlay_Toolbar_Bottom { Bottom: 0.5em; } #NetworKit_Overlay_ImageContainer { position: absolute; top: 5%; left: 5%; height: 90%; width: 90%; background-repeat: no-repeat; background-position: center center; background-size: contain; } #NetworKit_Overlay_Image { height: 100%; width: 100%; background-repeat: no-repeat; background-position: center center; background-size: contain; }';
+        element.setAttribute('id', 'NetworKit_style');
+        document.head.appendChild(element);
+}
+
+
+{
+        var element = document.getElementById('NetworKit_Overlay');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('div');
+        element.innerHTML = '<div id="NetworKit_Overlay_Toolbar_Top"><div class="button icon-close" id="NetworKit_Overlay_Close" /></div><div id="NetworKit_Overlay_Title" /> <div id="NetworKit_Overlay_ImageContainer"> <div id="NetworKit_Overlay_Image" /> </div> <div id="NetworKit_Overlay_Toolbar_Bottom"> <div class="button icon-previous" onclick="NetworKit_overlayImageShift(-1)" /> <div class="button icon-next" onclick="NetworKit_overlayImageShift(1)" /> <a id="NetworKit_Overlay_Toolbar_Bottom_Save"><div class="button icon-save" /></a> </div>';
+        element.setAttribute('id', 'NetworKit_Overlay');
+        document.body.appendChild(element);
+        document.getElementById('NetworKit_Overlay_Close').onclick = function (e) {
+                document.getElementById('NetworKit_Overlay').style.display = 'none';
+        }
+}
+
+-->
+</script></div>
+</div>
+<p>Every algorithm within the <code class="docutils literal notranslate"><span class="pre">centrality</span></code> module in NetworKit has a <code class="docutils literal notranslate"><span class="pre">run()</span></code> function that must be called in order for the algorithm to be executed after initialization.</p>
+<section id="Betweeness-Centrality">
+<h2>Betweeness Centrality<a class="headerlink" href="#Betweeness-Centrality" title="Link to this heading">¶</a></h2>
+<p>Betweenness centrality measures the extent to which a vertex lies on shortest paths between other vertices. Vertices with high betweenness may have considerable influence within a network.</p>
+<section id="Betweenness">
+<h3>Betweenness<a class="headerlink" href="#Betweenness" title="Link to this heading">¶</a></h3>
+<p>The fastest algorithm for the exact computation of the betweenness centrality is Brandes’ algorithm, and it is implemented in the <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=betweenness#networkit.centrality.Betweenness">Betweenness</a> class. The constructor <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=betweenness#networkit.centrality.Betweenness">Betweenness(G, normalized=False, computeEdgeCentrality=False)</a> expects a mandatory
+<a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graph.html?highlight=graph#module-networkit.graph">networkit.Graph</a>, and two optional parameters <code class="docutils literal notranslate"><span class="pre">normalized</span></code> and <code class="docutils literal notranslate"><span class="pre">computeEdgeCentrality</span></code>. If <code class="docutils literal notranslate"><span class="pre">normalized</span></code> is set to true the centrality scores will be normalized. The parameter <code class="docutils literal notranslate"><span class="pre">computeEdgeCentrality</span></code> should be set to true if edge betweeness should be computed as well.</p>
+<p>We start by reading a graph, and then inititalising the algorithm with the parameters we want. Assuming we shall use the default parameters, i.e., centrality scores should not be normalized and edge betweeness should not be computed, we only need to pass a graph to the method.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/power.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<span class="c1"># Initalize algorithm</span>
+<span class="n">btwn</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">Betweenness</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run</span>
+<span class="n">btwn</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.centrality.Betweenness at 0x7f19dc3ee5f0&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The 10 most central nodes according to betweenness are then</span>
+<span class="n">btwn</span><span class="o">.</span><span class="n">ranking</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(4164, 7036954.687164464),
+ (2543, 6873056.733431251),
+ (1243, 6824187.837966224),
+ (4219, 6774285.210945555),
+ (2528, 6521871.002117599),
+ (1267, 6057480.123171414),
+ (1308, 5770690.329252719),
+ (1244, 5007410.4328002585),
+ (426, 5000602.048322921),
+ (2606, 4955764.654483631)]
+</pre></div></div>
+</div>
+</section>
+<section id="ApproxBetweenness">
+<h3>ApproxBetweenness<a class="headerlink" href="#ApproxBetweenness" title="Link to this heading">¶</a></h3>
+<p>Since exact calculation of betweenness scores is often out of reach, NetworKit provides an approximation algorithm based on path sampling. This functionality is provided by the ApproxBetweenness class, <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=approx#networkit.centrality.ApproxBetweenness">(G, epsilon=0.01, delta=0.1, universalConstant=1.0)</a>. It expects a mandatory undirected
+<a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graph.html?highlight=graph#module-networkit.graph">networkit.Graph</a>. Here we estimate betweenness centrality in <code class="docutils literal notranslate"><span class="pre">PGPgiantcompo</span></code>, with a guarantee that the error is no larger than an additive constant <code class="docutils literal notranslate"><span class="pre">epsilon</span></code> with a probability of at least 1 - <code class="docutils literal notranslate"><span class="pre">delta</span></code>. The <code class="docutils literal notranslate"><span class="pre">universalConstant</span></code> is used to compute the sample size.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/PGPgiantcompo.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ab</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">ApproxBetweenness</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">ab</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.centrality.ApproxBetweenness at 0x7f19dcf4a3b0&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The 10 most central nodes according to betweenness are then</span>
+<span class="n">ab</span><span class="o">.</span><span class="n">ranking</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(1143, 0.11552346570397089),
+ (7297, 0.10228640192539093),
+ (6555, 0.10108303249097457),
+ (6655, 0.09386281588447641),
+ (6932, 0.08784596871239461),
+ (6744, 0.07099879663056557),
+ (2258, 0.05535499398315286),
+ (3156, 0.05174488567990376),
+ (5165, 0.05174488567990376),
+ (6098, 0.050541516245487396)]
+</pre></div></div>
+</div>
+</section>
+<section id="EstimateBetweenness">
+<h3>EstimateBetweenness<a class="headerlink" href="#EstimateBetweenness" title="Link to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=estimate#networkit.centrality.EstimateBetweenness">EstimateBetweenness</a> class estimates the betweenness centrality according to the algorthm described in <code class="docutils literal notranslate"><span class="pre">Sanders,</span> <span class="pre">Geisberger,</span> <span class="pre">Schultes:</span> <span class="pre">Better</span> <span class="pre">Approximation</span> <span class="pre">of</span> <span class="pre">Betweenness</span> <span class="pre">Centrality</span></code>. Despite the algorithm performing well in practice, no guarantee can be given. If a theoritical guarantee is required, use the
+<a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=approx#networkit.centrality.ApproxBetweenness">ApproxBetweenness</a> algorithm.</p>
+<p>The constructor <code class="docutils literal notranslate"><span class="pre">EstimateBetweenness(Graph</span> <span class="pre">G,</span> <span class="pre">count</span> <span class="pre">nSamples,</span> <span class="pre">bool</span> <span class="pre">normalized=False,</span> <span class="pre">bool</span> <span class="pre">parallel_flag=False)</span></code> expects a <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graph.html?highlight=graph#module-networkit.graph">networkit.Graph</a> and the number of samples as mandatory parameters. Further, the centrality values can be optionally normalized by setting <code class="docutils literal notranslate"><span class="pre">normalized</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code>; by default the centrality values are not normalized. This algorithm can be run in parallel by setting the
+<code class="docutils literal notranslate"><span class="pre">parallel_flag</span></code> to true. Running in parallel, however, comes with an additional cost in memory of z + 3z + t.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read a graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/PGPgiantcompo.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">est</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">EstimateBetweenness</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">est</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.centrality.EstimateBetweenness at 0x7f19dc220b80&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#The 10 most central nodes according to betweenness are then</span>
+<span class="n">est</span><span class="o">.</span><span class="n">ranking</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(1143, 0.14724362154539933),
+ (6555, 0.10594069303928107),
+ (6655, 0.09983368112596727),
+ (6932, 0.09352748225778375),
+ (7297, 0.08566817253456173),
+ (6744, 0.0841092017943486),
+ (4466, 0.06791082574262886),
+ (3156, 0.06449803462184114),
+ (4662, 0.057506041859237626),
+ (2258, 0.05297471247482791)]
+</pre></div></div>
+</div>
+</section>
+<section id="KadabraBetweenness">
+<h3>KadabraBetweenness<a class="headerlink" href="#KadabraBetweenness" title="Link to this heading">¶</a></h3>
+<p><a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=kadabra#networkit.centrality.KadabraBetweenness">KadabraBetweenness</a> is an ADaptive Algorithm for Betweennes via Random Approximation presented by <a class="reference external" href="https://arxiv.org/abs/1604.08553">Borassi M., and Natale E.</a>. NetworKit provides variants of the algorithm that either reduce this memory consumption to O(1) or ensure that deterministic results are obtained. For more details about the implementation, see this
+<a class="reference external" href="https://arxiv.org/abs/1903.09422">paper</a> by <code class="docutils literal notranslate"><span class="pre">Van</span> <span class="pre">der</span> <span class="pre">Grinten</span> <span class="pre">A.,</span> <span class="pre">Angriman</span> <span class="pre">E.,</span> <span class="pre">and</span> <span class="pre">Meyerhenke</span> <span class="pre">H.</span> <span class="pre">(2019)</span></code>.</p>
+<p>The constructor <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=kadabra#networkit.centrality.KadabraBetweenness">KadabraBetweennes(G, err=0.01, delta=0.1, deterministic=False, k=0, unionSample=0, startFactor=100)</a> only expects a <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graph.html?highlight=graph#module-networkit.graph">networkit.Graph</a> as a mandatory parameter. <code class="docutils literal notranslate"><span class="pre">err</span></code> is the maximum additive error guaranteeded when approximating the betweenness
+centrality of all nodes, while <code class="docutils literal notranslate"><span class="pre">delta</span></code> is the probability that the values of the betweenness centrality are within the error guarantee. The parameter <code class="docutils literal notranslate"><span class="pre">k</span></code> expresses the number of top k-nodes to be computed; if set to zero the approximate betweenness centrality of all nodes will be computed. <code class="docutils literal notranslate"><span class="pre">unionSample</span></code> and <code class="docutils literal notranslate"><span class="pre">startFactor</span></code> are algorithm parameters that are automatically chosen.</p>
+<p>Hence, computing the KadabraBetweenness for all nodes with a maximum additive error of 0.05, and a probabilty of 0.8 that the values of the betweenness centrality are within that range can be done as follows:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read a graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/PGPgiantcompo.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">kadabra</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">KadabraBetweenness</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">)</span>
+<span class="n">kadabra</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.centrality.KadabraBetweenness at 0x7f19dc208ad0&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#The 10 most central nodes according to betweenness are then</span>
+<span class="n">kadabra</span><span class="o">.</span><span class="n">ranking</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(1143, 0.25894206549118387),
+ (6555, 0.20251889168765744),
+ (6932, 0.19143576826196473),
+ (6655, 0.19042821158690176),
+ (7297, 0.1672544080604534),
+ (3156, 0.1420654911838791),
+ (6744, 0.13602015113350127),
+ (6098, 0.12896725440806045),
+ (2258, 0.12191435768261964),
+ (5165, 0.10680100755667506)]
+</pre></div></div>
+</div>
+</section>
+</section>
+<section id="Closeness-Centrality">
+<h2>Closeness Centrality<a class="headerlink" href="#Closeness-Centrality" title="Link to this heading">¶</a></h2>
+<p>Closeness centrality indicates how close a node is to all other nodes in the network. It is calculated as inverse of the average of the shortest path length from the node to every other node in the network.</p>
+<section id="Closeness">
+<h3>Closeness<a class="headerlink" href="#Closeness" title="Link to this heading">¶</a></h3>
+<p>The NetworKit Closeness class computes the exact closeness centrality of all the nodes of a graph. The constructor <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=closeness#networkit.centrality.Closeness">Closeness(G, normalized=True, variant=networkit.centrality.ClosenessVariant.STANDARD)</a> expects a mandatory <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graph.html?highlight=graph#module-networkit.graph">networkit.Graph</a>, and two optional parameters,
+<code class="docutils literal notranslate"><span class="pre">normalized</span></code> and <code class="docutils literal notranslate"><span class="pre">variant</span></code>. The centrality values can be optionally normalized for unweighted graphs by setting <code class="docutils literal notranslate"><span class="pre">normalized</span></code> to True; by default the centrality values are normalized. The parameter<code class="docutils literal notranslate"><span class="pre">variant</span></code> dictates the closeness variant to be used when computing the closeness. Set <code class="docutils literal notranslate"><span class="pre">variant</span></code> to <code class="docutils literal notranslate"><span class="pre">networkit.centrality.ClosenessVariant.STANDARD</span></code> to use the standard definition of closeness which is defined for connected graphs only, or to
+<code class="docutils literal notranslate"><span class="pre">networkit.centrality.ClosenessVariant.GENERALIZED</span></code> to use the generalized definition of closeness that is also defined for non-connected graphs.</p>
+<p>As the graph we will use is weighted the values should not be normalized. So, to compute the closeness of a graph using the generalised closeness variant because our graph is disconnected we can do the following:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read a graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.konect&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">close</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">Closeness</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">ClosenessVariant</span><span class="o">.</span><span class="n">GENERALIZED</span><span class="p">)</span>
+<span class="n">close</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.centrality.Closeness at 0x7f19dc2212d0&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#The 10 most central nodes according to betweenness are then</span>
+<span class="n">close</span><span class="o">.</span><span class="n">ranking</span><span class="p">()</span> <span class="p">[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(8, 0.962150639989747),
+ (64, 0.8484943683258478),
+ (57, 0.7951252523231831),
+ (55, 0.7405035792871096),
+ (65, 0.48508765673100607),
+ (66, 0.469459105637361),
+ (58, 0.46525538614449846),
+ (82, 0.46179282298925417),
+ (85, 0.46142579646975274),
+ (83, 0.46137631059745826)]
+</pre></div></div>
+</div>
+</section>
+<section id="ApproxCloseness">
+<h3>ApproxCloseness<a class="headerlink" href="#ApproxCloseness" title="Link to this heading">¶</a></h3>
+<p>Since exact calculation of closeness scores is often out of reach, NetworKit provides an approximation closeness centrality according to the algorithm described in ‘<code class="docutils literal notranslate"><span class="pre">Cohen</span> <span class="pre">et</span> <span class="pre">al.,</span> <span class="pre">Computing</span> <span class="pre">Classic</span> <span class="pre">Closeness</span> <span class="pre">Centrality,</span> <span class="pre">at</span> <span class="pre">Scale</span></code>.</p>
+<p>The constructor expects a mandatory connected <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graph.html?highlight=graph#module-networkit.graph">networkit.Graph</a> among other optional values: <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=approx#networkit.centrality.ApproxCloseness">ApproxCloseness(G, nSamples, epsilon=0.1, normalized=False, type=OUTBOUND)</a>. <code class="docutils literal notranslate"><span class="pre">nSamples</span></code> dictates the number of samples that should be used when computing the approximate closeness;
+this value depends on the size of graph and the more samples that are used, the better the results are likely to be. <code class="docutils literal notranslate"><span class="pre">epsilon</span></code> can be any value between 0 and <span class="math notranslate nohighlight">\(\infty\)</span>-1 and is used for the error guarantee. The centrality values can be optionally normalized by setting <code class="docutils literal notranslate"><span class="pre">normalized</span></code> to True; by default the centrality values are not normalized. If G is undirected, <code class="docutils literal notranslate"><span class="pre">type</span></code> can be ignored. Otherwise use <code class="docutils literal notranslate"><span class="pre">0</span></code> for inbound centrality, <code class="docutils literal notranslate"><span class="pre">1</span></code> for outbound centrality and <code class="docutils literal notranslate"><span class="pre">2</span></code> for the sum of
+both.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read a graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.konect&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ac</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">ApproxCloseness</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">ac</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.centrality.ApproxCloseness at 0x7f19dc2205b0&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 10 most central nodes according to closeness are</span>
+<span class="n">ac</span><span class="o">.</span><span class="n">ranking</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(8, 1.0764180244867094),
+ (64, 0.9907512864705486),
+ (57, 0.9298813583874934),
+ (55, 0.8576172310504608),
+ (65, 0.5653060617951939),
+ (66, 0.5470645465869076),
+ (58, 0.5415565229191879),
+ (60, 0.5333410242662254),
+ (82, 0.5332049816533194),
+ (85, 0.5328872427994832)]
+</pre></div></div>
+</div>
+</section>
+<section id="HarmonicCloseness">
+<h3>HarmonicCloseness<a class="headerlink" href="#HarmonicCloseness" title="Link to this heading">¶</a></h3>
+<p>Harmonic centrality is a variant of closeness centrality. It deals with the problem of unconnected graphs. The constructor, <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=harmon#networkit.centrality.HarmonicCloseness">HarmonicCloseness(G, normalized=True)</a>, expects a <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graph.html?highlight=graph#module-networkit.graph">networkit.Graph</a> and an optional parameter <code class="docutils literal notranslate"><span class="pre">normalized</span></code> that is set to true by default. If
+<code class="docutils literal notranslate"><span class="pre">normalized</span></code> is set to true, centrality scores are normalized to into an interval between 0 and 1.</p>
+<p>Computing the harmonic closeness of a graph, and then normalizing the scores can be done as follows:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read a graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.konect&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">harmonic</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">HarmonicCloseness</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">harmonic</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.centrality.HarmonicCloseness at 0x7f19dc220910&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 10 most central nodes according to closeness are</span>
+<span class="n">harmonic</span><span class="o">.</span><span class="n">ranking</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(54, 563818.6552013048),
+ (90, 334190.4744932203),
+ (86, 321218.72482692736),
+ (15, 296940.9093191127),
+ (16, 254101.51104106667),
+ (21, 226571.16590482905),
+ (51, 218140.5689005639),
+ (22, 211206.7510456232),
+ (78, 184407.6584481432),
+ (97, 173715.2379835851)]
+</pre></div></div>
+</div>
+</section>
+<section id="TopHarmonicCloseness">
+<h3>TopHarmonicCloseness<a class="headerlink" href="#TopHarmonicCloseness" title="Link to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=top#networkit.centrality.TopHarmonicCloseness">TopHarmonicCloseness(G, k=1, useBFSbound=True)</a> algorithm finds the exact top k nodes with highest harmonic closeness centrality. It is faster than computing the harmonic closeness for all nodes. The implementation is based on <a class="reference external" href="https://arxiv.org/abs/1710.01143">Computing Top-k Centrality Faster in Unweighted Graphs, Bergamini et al., ALENEX16</a>. The parameter <code class="docutils literal notranslate"><span class="pre">k</span></code>
+expresses the number of nodes with the highest centrality scores that the algorithm must find. The algorithms are based on two heuristics. We recommend to use <code class="docutils literal notranslate"><span class="pre">useBFSbound</span> <span class="pre">=</span> <span class="pre">False</span></code> for complex networks (or networks with small diameter) and <code class="docutils literal notranslate"><span class="pre">useBFSbound</span> <span class="pre">=</span> <span class="pre">True</span></code> for street networks (or networks with large diameters).</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read a graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.konect&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">topHarmClose</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">TopHarmonicCloseness</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">useNBbound</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">topHarmClose</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.centrality.TopHarmonicCloseness at 0x7f19dc220d30&gt;
+</pre></div></div>
+</div>
+<p>Unlike all the other algorithms we have seen before, <code class="docutils literal notranslate"><span class="pre">TopHarmonicCloseness</span></code> does not have a <code class="docutils literal notranslate"><span class="pre">ranking</span></code> method which stores a sorted list of all centrality scores. Instead, we have the <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=topknodes#networkit.centrality.TopHarmonicCloseness.topkNodesList">topkNodesList(includeTrail=False)</a> method. By calling this method, we can print the the top <code class="docutils literal notranslate"><span class="pre">k</span></code> central nodes. If <code class="docutils literal notranslate"><span class="pre">includeTrail</span></code> is true the closeness centrality of
+some nodes below the top-k could be equal to the k-th closeness will also be printed. Note, that the resulting vector may be longet than <code class="docutils literal notranslate"><span class="pre">k</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># k most central nodes according to closeness are</span>
+<span class="n">topHarmClose</span><span class="o">.</span><span class="n">topkNodesList</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[54, 90, 86, 15, 16, 21, 51, 22, 78, 97]
+</pre></div></div>
+</div>
+<p>Alternatively, the <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=topkscores#networkit.centrality.TopCloseness.topkScoresList">topKScores(includeTrail=False)</a> method may be used.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">topHarmClose</span><span class="o">.</span><span class="n">topkScoresList</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[71604969.2105657,
+ 42442190.26063897,
+ 40794778.05301977,
+ 37711495.4835273,
+ 32270891.902215466,
+ 28774538.069913305,
+ 27703852.250371616,
+ 26823257.38279415,
+ 23419772.622914188,
+ 22061835.223915298]
+</pre></div></div>
+</div>
+</section>
+<section id="TopCloseness">
+<h3>TopCloseness<a class="headerlink" href="#TopCloseness" title="Link to this heading">¶</a></h3>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=topcloseness#networkit.centrality.TopCloseness">TopCloseness(G, k=1, first_heu=True, sec_heu=True)</a> algorithm finds the exact top k nodes with highest harmonic closeness centrality. It is faster than computing the harmonic closeness for all nodes. The implementation is based on <a class="reference external" href="https://arxiv.org/abs/1710.01143">Computing Top-k Centrality Faster in Unweighted Graphs, Bergamini et al., ALENEX16</a>. The algorithm is
+based on two independent heuristics described in the above paper. The parameter <code class="docutils literal notranslate"><span class="pre">k</span></code> expresses the number of nodes with the highest centrality scores that have to be found by the algorithm. If <code class="docutils literal notranslate"><span class="pre">first_heu</span></code> is true, the neighborhood-based lower bound is computed and nodes are sorted according to it. If false, nodes are simply sorted by degree. If <code class="docutils literal notranslate"><span class="pre">sec_heu</span></code> is true, the BFSbound is re-computed at each iteration. If false, BFScut is used.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read a graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.konect&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">topClose</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">TopCloseness</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">first_heu</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">topClose</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.centrality.TopCloseness at 0x7f19dc221900&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># k most central nodes according to closeness are</span>
+<span class="n">topClose</span><span class="o">.</span><span class="n">topkNodesList</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[84, 83, 14, 20, 71, 87, 2, 80, 72, 81]
+</pre></div></div>
+</div>
+</section>
+</section>
+<section id="Degree-Centrality">
+<h2>Degree Centrality<a class="headerlink" href="#Degree-Centrality" title="Link to this heading">¶</a></h2>
+<p>Degree is a centrality measure that counts how many neighbors a node has.</p>
+<section id="id1">
+<h3>Degree Centrality<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<p>Degree centrality is a centrality measure that counts how many neighbors a node has. Degree centrality can be computed in NetworKit using the <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=degreecentrality#networkit.centrality.DegreeCentrality">DegreeCentrality(G, normalized=False, outDeg=True, ignoreSelfLoops=True)</a> class. It expects a <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graph.html?highlight=graph#module-networkit.graph">networkit.Graph</a>. Set
+<code class="docutils literal notranslate"><span class="pre">normalized</span></code> to True if the centrality scored should be normalized to values between 0 and 1. If the network is directed, we have two versions of the measure: in-degree is the number of incoming links; out-degree is the number of outgoing links. By default, the out-degree is used.</p>
+<p>For an undirected graph, using the default parameters, the degree centrality can be computed as follows:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/wiki-Vote.txt&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">SNAP</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">deg</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">DegreeCentrality</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<span class="n">deg</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.centrality.DegreeCentrality at 0x7f19dc221cc0&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 10 most central nodes according to degree centrality are</span>
+<span class="n">deg</span><span class="o">.</span><span class="n">ranking</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(699, 1065.0),
+ (2374, 773.0),
+ (408, 743.0),
+ (286, 740.0),
+ (2013, 732.0),
+ (1052, 688.0),
+ (3714, 618.0),
+ (517, 533.0),
+ (483, 517.0),
+ (1221, 495.0)]
+</pre></div></div>
+</div>
+</section>
+</section>
+<section id="Eigenvector-Centrality-and-PageRank">
+<h2>Eigenvector Centrality and PageRank<a class="headerlink" href="#Eigenvector-Centrality-and-PageRank" title="Link to this heading">¶</a></h2>
+<p>Eigenvector centrality measures the influence of a node in a network by assinging relative scores to each node in a network.</p>
+<section id="id2">
+<h3>Eigenvector Centrality and PageRank<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<p>Eigenvector centrality and its variant PageRank assign relative importance to nodes according to their connections, incorporating the idea that edges to high-scoring nodes contribute more. PageRank is a version of eigenvector centrality which introduces a damping factor, modeling a random web surfer which at some point stops following links and jumps to a random page. In PageRank theory, centrality is understood as the probability of such a web surfer to arrive on a certain page. Our
+implementation of both measures is based on parallel power iteration, a relatively simple eigensolver.</p>
+<p>We demonstrate it here on the small Karate club graph.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
+<span class="n">K</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/karate.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Eigenvector centrality</span>
+<span class="n">ec</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">EigenvectorCentrality</span><span class="p">(</span><span class="n">K</span><span class="p">)</span>
+<span class="n">ec</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">ec</span><span class="o">.</span><span class="n">ranking</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span> <span class="c1"># the 10 most central nodes</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(33, 0.37335860763538437),
+ (0, 0.35548796275763045),
+ (2, 0.31719212126079693),
+ (32, 0.30864169996172613),
+ (1, 0.26595844854862444),
+ (8, 0.2274061452435449),
+ (13, 0.22647475684342064),
+ (3, 0.2111796960531623),
+ (31, 0.1910365857249303),
+ (30, 0.1747599501690216)]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># PageRank</span>
+<span class="n">pr</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">PageRank</span><span class="p">(</span><span class="n">K</span><span class="p">,</span> <span class="n">damp</span><span class="o">=</span><span class="mf">0.85</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-9</span><span class="p">)</span>
+<span class="n">pr</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">pr</span><span class="o">.</span><span class="n">ranking</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span> <span class="c1"># the 10 most central nodes</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(33, 0.10091918107710363),
+ (0, 0.09699728673391753),
+ (32, 0.07169322502169574),
+ (2, 0.05707850945632192),
+ (1, 0.05287692444772233),
+ (31, 0.03715808671239322),
+ (3, 0.035859858105808544),
+ (23, 0.031522514279355436),
+ (8, 0.02976605594632442),
+ (13, 0.029536456269206687)]
+</pre></div></div>
+</div>
+<p>By default, PageRank uses the L2 norm as convergence criterion. Alternatively, one can also use the L1 norm. Additionally, one can also set the maximum amount of iterations.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># PageRank using L1 norm, and a 100 maximum iterations</span>
+<span class="n">pr</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">PageRank</span><span class="p">(</span><span class="n">K</span><span class="p">,</span> <span class="n">damp</span><span class="o">=</span><span class="mf">0.85</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-9</span><span class="p">)</span>
+<span class="n">pr</span><span class="o">.</span><span class="n">norm</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">Norm</span><span class="o">.</span><span class="n">L1_NORM</span>
+<span class="n">pr</span><span class="o">.</span><span class="n">maxIterations</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">pr</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">pr</span><span class="o">.</span><span class="n">ranking</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span> <span class="c1"># the 10 most central nodes</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(33, 0.10091918205705729),
+ (0, 0.09699728568137082),
+ (32, 0.07169322578984548),
+ (2, 0.057078509481399156),
+ (1, 0.05287692414515951),
+ (31, 0.03715808699163245),
+ (3, 0.03585985785613518),
+ (23, 0.03152251466832272),
+ (8, 0.029766056051855488),
+ (13, 0.029536456177810026)]
+</pre></div></div>
+</div>
+</section>
+<section id="Katz-Centrality">
+<h3>Katz Centrality<a class="headerlink" href="#Katz-Centrality" title="Link to this heading">¶</a></h3>
+<p>Katz centrality computes the relative influence of a node within a network by measuring the number of the immediate neighbors, and also all other nodes in the network that connect to the node through these immediate neighbors. Connections made with distant neighbors are, however, penalized by an attenuation factor <span class="math notranslate nohighlight">\(\alpha\)</span>. Each path or connection between a pair of nodes is assigned a weight determined by <span class="math notranslate nohighlight">\(\alpha\)</span> and the distance between nodes as <span class="math notranslate nohighlight">\(\alpha ^d\)</span>.</p>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=katz#networkit.centrality.KatzCentrality">KatzCentrality(G, alpha=5e-4, beta=0.1, tol=1e-8)</a> constructor expects a <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graph.html?highlight=graph#module-networkit.graph">networkit.Graph</a> as a mandatory parameter. The parameter <code class="docutils literal notranslate"><span class="pre">alpha</span></code> is the damping of the matrix vector result, while <code class="docutils literal notranslate"><span class="pre">beta</span></code> is a constant value added to the centrality of each vertex. The parameter
+<code class="docutils literal notranslate"><span class="pre">tol</span></code> dictates the tolerance for convergence. Computing the Katz centrality in NetworKit can be like below.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/karate.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">katz</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">KatzCentrality</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mf">1e-3</span><span class="p">)</span>
+<span class="n">katz</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.centrality.KatzCentrality at 0x7f19dc223220&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 10 most central nodes</span>
+<span class="n">katz</span><span class="o">.</span><span class="n">ranking</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(33, 0.19367744613991514),
+ (0, 0.1918907986471833),
+ (32, 0.18470136309691013),
+ (2, 0.18112282552442752),
+ (1, 0.1793038647977577),
+ (31, 0.17392597722904418),
+ (3, 0.17391172244381983),
+ (8, 0.1721413052741721),
+ (13, 0.1721395007428994),
+ (23, 0.17210705607838117)]
+</pre></div></div>
+</div>
+</section>
+</section>
+<section id="Others">
+<h2>Others<a class="headerlink" href="#Others" title="Link to this heading">¶</a></h2>
+<section id="Spanning-Edge-Centrality">
+<h3>Spanning Edge Centrality<a class="headerlink" href="#Spanning-Edge-Centrality" title="Link to this heading">¶</a></h3>
+<p>The spanning centrality of an edge <code class="docutils literal notranslate"><span class="pre">e</span></code> in an undirected graph is the fraction of the spanning trees of the graph that contain the edge <code class="docutils literal notranslate"><span class="pre">e</span></code>. The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=spanning#networkit.centrality.SpanningEdgeCentrality">SpanningEdgeCentrality(const Graph&amp; G, double tol = 0.1)</a> constructor expects a <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graph.html?highlight=graph#module-networkit.graph">networkit.Graph</a> as a mandatory
+parameter. The <code class="docutils literal notranslate"><span class="pre">tol</span></code> parameter determines the tolerance used for approximation: with probability at least 1-1/n, the approximated scores are within a factor 1+<code class="docutils literal notranslate"><span class="pre">tol</span></code> from the exact scores.</p>
+<p>Computing the SpanningEdge Centrality in NetworKit is then demonstrated below.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/karate.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">G</span><span class="o">.</span><span class="n">indexEdges</span><span class="p">()</span>
+<span class="n">span</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">SpanningEdgeCentrality</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mf">1e-6</span><span class="p">)</span>
+<span class="n">span</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.centrality.SpanningEdgeCentrality at 0x7f19dc223490&gt;
+</pre></div></div>
+</div>
+<p>Using the <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=scores#networkit.centrality.SpanningEdgeCentrality.scores">scores()</a> method we can get a vector containing the SEC score for each edge in the graph.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">span</span><span class="o">.</span><span class="n">scores</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[0.19306324991625834,
+ 0.20762324500950174,
+ 0.2315296370329742,
+ 0.25009766179369525,
+ 0.277246201614483,
+ 0.28002802664810306,
+ 0.46491028639734855,
+ 0.43859344555259383,
+ 0.4385942727910844,
+ 0.5175438525005359]
+</pre></div></div>
+</div>
+</section>
+<section id="Approximate-Spanning-Edge-Centrality">
+<h3>Approximate Spanning Edge Centrality<a class="headerlink" href="#Approximate-Spanning-Edge-Centrality" title="Link to this heading">¶</a></h3>
+<p>An algorithm from <a class="reference external" href="https://www.ijcai.org/Proceedings/16/Papers/525.pdf">Hayashi et al.</a> based on sampling of spanning trees uniformly at random approximates the spanning edge centrality of each edge of a graph up to a maximum absolute error. <code class="docutils literal notranslate"><span class="pre">ApproxSpanningEdge(G,</span> <span class="pre">eps=0.1)</span></code> expects as input an undirected graph, and the maximum absolute error <code class="docutils literal notranslate"><span class="pre">eps</span></code>. The algorithm requires the edges of the graph to be indexed.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read a graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphtools</span><span class="o">.</span><span class="n">toUndirected</span><span class="p">(</span><span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.konect&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">))</span>
+<span class="n">G</span><span class="o">.</span><span class="n">indexEdges</span><span class="p">()</span>
+<span class="n">apx_span</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">ApproxSpanningEdge</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span>
+<span class="n">_</span><span class="o">=</span><span class="n">apx_span</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">apx_span</span><span class="o">.</span><span class="n">scores</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[0.10769814182783466,
+ 0.09594235874099355,
+ 0.13955252180508154,
+ 0.13765642775881684,
+ 0.1167993932499052,
+ 0.1315889268107698,
+ 0.12817595752749336,
+ 0.10504361016306409,
+ 0.11642017444065225,
+ 0.11035267349260523]
+</pre></div></div>
+</div>
+</section>
+<section id="Local-ClusteringCoefficient">
+<h3>Local ClusteringCoefficient<a class="headerlink" href="#Local-ClusteringCoefficient" title="Link to this heading">¶</a></h3>
+<p>The local clustering coefficient of a vertex in a graph quantifies how close its neighbours are to being a clique (complete graph).</p>
+<p>The <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=coeff#networkit.centrality.LocalClusteringCoefficient">LocalClusteringCoefficient(G, turbo=False)</a> constructor expects a <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/graph.html?highlight=graph#module-networkit.graph">networkit.Graph</a> and a Boolean parameter <code class="docutils literal notranslate"><span class="pre">turbo</span></code> which is by default initialized to false. <code class="docutils literal notranslate"><span class="pre">turbo</span></code> activates a (sequential, but fast) pre-processing step using ideas from <a class="reference external" href="https://dl.acm.org/citation.cfm?id=2790175">this
+paper</a>. This reduces the running time significantly for most graphs. However, the turbo mode needs O(m) additional memory. The turbo mode is particularly effective for graphs with nodes of very high degree and a very skewed degree distribution.</p>
+<p>We demonstrate the use using the same graph as before,</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/karate.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize algorithm</span>
+<span class="n">lcc</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">LocalClusteringCoefficient</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<span class="n">lcc</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;networkit.centrality.LocalClusteringCoefficient at 0x7f19dc223310&gt;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lcc</span><span class="o">.</span><span class="n">ranking</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+[(7, 1.0),
+ (12, 1.0),
+ (14, 1.0),
+ (15, 1.0),
+ (16, 1.0),
+ (17, 1.0),
+ (18, 1.0),
+ (20, 1.0),
+ (21, 1.0),
+ (22, 1.0)]
+</pre></div></div>
+</div>
+</section>
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

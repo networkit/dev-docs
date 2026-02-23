@@ -1,0 +1,493 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Link Prediction with NetworKit</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Plot Tutorial" href="Plot.html" />
+    <link rel="prev" title="NetworKit graph I/O tutorial" href="IONotebook.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../notebooks.html#tutorial-notebooks">Tutorial Notebooks</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="User-Guide.html">NetworKit User Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="User-Guide.html#Profiling">Profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Centrality.html">Centrality Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Community.html">Community Detection with NetworKit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Distance.html">NetworKit Distance Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Dynamics.html">Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Generators.html">NetworKit Graph Generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GraphNotebook.html">NetworKit Graph Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="GroupCentrality.html">Group Centrality Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="IONotebook.html">NetworKit graph I/O tutorial</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Link Prediction with NetworKit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Link-prediction-algorithms">Link prediction algorithms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Link-sampling-and-link-prediction">Link sampling and link prediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Plot.html">Plot Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Randomization.html">NetworKit Randomization Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Reachability.html">NetworKit Reachability Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Sparsification.html">NetworKit Sparsification Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Visualization.html">NetworKit Visualization Tutorial</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="Link-Prediction-with-NetworKit">
+<h1>Link Prediction with NetworKit<a class="headerlink" href="#Link-Prediction-with-NetworKit" title="Link to this heading">¶</a></h1>
+<p>Link prediction is concerned with estimating the probability of the existence of edges between nodes in a graph. The <code class="docutils literal notranslate"><span class="pre">linkprediction</span></code> module in NetworKit provides sampling algorithms as well link prediction algorithms.</p>
+<p>This notebook introduces a several link prediction algorithms available in NetworKit. It shows how to calculate link prediction measures, and how to use the sampling algorithms in combination with link prediction algorithms.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">networkit</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nk</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area rendered_html docutils container">
+<script type="text/javascript">
+<!--
+
+{
+        var element = document.getElementById('NetworKit_script');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('script');
+        element.type = 'text/javascript';
+        element.innerHTML = 'function NetworKit_pageEmbed(id) { var i, j; var elements; elements = document.getElementById(id).getElementsByClassName("Plot"); for (i=0; i<elements.length; i++) { elements[i].id = id + "_Plot_" + i; var data = elements[i].getAttribute("data-image").split("|"); elements[i].removeAttribute("data-image"); var content = "<div class=\\"Image\\" id=\\"" + elements[i].id + "_Image\\" />"; elements[i].innerHTML = content; elements[i].setAttribute("data-image-index", 0); elements[i].setAttribute("data-image-length", data.length); for (j=0; j<data.length; j++) { elements[i].setAttribute("data-image-" + j, data[j]); } NetworKit_plotUpdate(elements[i]); elements[i].onclick = function (e) { NetworKit_overlayShow((e.target) ? e.target : e.srcElement); } } elements = document.getElementById(id).getElementsByClassName("HeatCell"); for (i=0; i<elements.length; i++) { var data = parseFloat(elements[i].getAttribute("data-heat")); var color = "#00FF00"; if (data <= 1 && data > 0) { color = "hsla(0, 100%, 75%, " + (data) + ")"; } else if (data <= 0 && data >= -1) { color = "hsla(240, 100%, 75%, " + (-data) + ")"; } elements[i].style.backgroundColor = color; } elements = document.getElementById(id).getElementsByClassName("Details"); for (i=0; i<elements.length; i++) { elements[i].setAttribute("data-title", "-"); NetworKit_toggleDetails(elements[i]); elements[i].onclick = function (e) { NetworKit_toggleDetails((e.target) ? e.target : e.srcElement); } } elements = document.getElementById(id).getElementsByClassName("MathValue"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "nan") { elements[i].parentNode.innerHTML = "" } } elements = document.getElementById(id).getElementsByClassName("SubCategory"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "") { elements[i].parentNode.removeChild(elements[i]) } } elements = document.getElementById(id).getElementsByClassName("Category"); for (i=elements.length-1; i>=0; i--) { value = elements[i].innerHTML.trim(); if (value === "") { elements[i].parentNode.removeChild(elements[i]) } } var isFirefox = false; try { isFirefox = typeof InstallTrigger !== "undefined"; } catch (e) {} if (!isFirefox) { alert("Currently the function\'s output is only fully supported by Firefox."); } } function NetworKit_plotUpdate(source) { var index = source.getAttribute("data-image-index"); var data = source.getAttribute("data-image-" + index); var image = document.getElementById(source.id + "_Image"); image.style.backgroundImage = "url(" + data + ")"; } function NetworKit_showElement(id, show) { var element = document.getElementById(id); element.style.display = (show) ? "block" : "none"; } function NetworKit_overlayShow(source) { NetworKit_overlayUpdate(source); NetworKit_showElement("NetworKit_Overlay", true); } function NetworKit_overlayUpdate(source) { document.getElementById("NetworKit_Overlay_Title").innerHTML = source.title; var index = source.getAttribute("data-image-index"); var data = source.getAttribute("data-image-" + index); var image = document.getElementById("NetworKit_Overlay_Image"); image.setAttribute("data-id", source.id); image.style.backgroundImage = "url(" + data + ")"; var link = document.getElementById("NetworKit_Overlay_Toolbar_Bottom_Save"); link.href = data; link.download = source.title + ".svg"; } function NetworKit_overlayImageShift(delta) { var image = document.getElementById("NetworKit_Overlay_Image"); var source = document.getElementById(image.getAttribute("data-id")); var index = parseInt(source.getAttribute("data-image-index")); var length = parseInt(source.getAttribute("data-image-length")); var index = (index+delta) % length; if (index < 0) { index = length + index; } source.setAttribute("data-image-index", index); NetworKit_overlayUpdate(source); } function NetworKit_toggleDetails(source) { var childs = source.children; var show = false; if (source.getAttribute("data-title") == "-") { source.setAttribute("data-title", "+"); show = false; } else { source.setAttribute("data-title", "-"); show = true; } for (i=0; i<childs.length; i++) { if (show) { childs[i].style.display = "block"; } else { childs[i].style.display = "none"; } } }';
+        element.setAttribute('id', 'NetworKit_script');
+        document.head.appendChild(element);
+}
+
+
+{
+        var element = document.getElementById('NetworKit_style');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('style');
+        element.type = 'text/css';
+        element.innerHTML = '.NetworKit_Page { font-family: Arial, Helvetica, sans-serif; font-size: 14px; } .NetworKit_Page .Value:before { font-family: Arial, Helvetica, sans-serif; font-size: 1.05em; content: attr(data-title) ":"; margin-left: -2.5em; padding-right: 0.5em; } .NetworKit_Page .Details .Value:before { display: block; } .NetworKit_Page .Value { font-family: monospace; white-space: pre; padding-left: 2.5em; white-space: -moz-pre-wrap !important; white-space: -pre-wrap; white-space: -o-pre-wrap; white-space: pre-wrap; word-wrap: break-word; tab-size: 4; -moz-tab-size: 4; } .NetworKit_Page .Category { clear: both; padding-left: 1em; margin-bottom: 1.5em; } .NetworKit_Page .Category:before { content: attr(data-title); font-size: 1.75em; display: block; margin-left: -0.8em; margin-bottom: 0.5em; } .NetworKit_Page .SubCategory { margin-bottom: 1.5em; padding-left: 1em; } .NetworKit_Page .SubCategory:before { font-size: 1.6em; display: block; margin-left: -0.8em; margin-bottom: 0.5em; } .NetworKit_Page .SubCategory[data-title]:before { content: attr(data-title); } .NetworKit_Page .Block { display: block; } .NetworKit_Page .Block:after { content: "."; visibility: hidden; display: block; height: 0; clear: both; } .NetworKit_Page .Block .Thumbnail_Overview, .NetworKit_Page .Block .Thumbnail_ScatterPlot { width: 260px; float: left; } .NetworKit_Page .Block .Thumbnail_Overview img, .NetworKit_Page .Block .Thumbnail_ScatterPlot img { width: 260px; } .NetworKit_Page .Block .Thumbnail_Overview:before, .NetworKit_Page .Block .Thumbnail_ScatterPlot:before { display: block; text-align: center; font-weight: bold; } .NetworKit_Page .Block .Thumbnail_Overview:before { content: attr(data-title); } .NetworKit_Page .HeatCell { font-family: "Courier New", Courier, monospace; cursor: pointer; } .NetworKit_Page .HeatCell, .NetworKit_Page .HeatCellName { display: inline; padding: 0.1em; margin-right: 2px; background-color: #FFFFFF } .NetworKit_Page .HeatCellName { margin-left: 0.25em; } .NetworKit_Page .HeatCell:before { content: attr(data-heat); display: inline-block; color: #000000; width: 4em; text-align: center; } .NetworKit_Page .Measure { clear: both; } .NetworKit_Page .Measure .Details { cursor: pointer; } .NetworKit_Page .Measure .Details:before { content: "[" attr(data-title) "]"; display: block; } .NetworKit_Page .Measure .Details .Value { border-left: 1px dotted black; margin-left: 0.4em; padding-left: 3.5em; pointer-events: none; } .NetworKit_Page .Measure .Details .Spacer:before { content: "."; opacity: 0.0; pointer-events: none; } .NetworKit_Page .Measure .Plot { width: 440px; height: 440px; cursor: pointer; float: left; margin-left: -0.9em; margin-right: 20px; } .NetworKit_Page .Measure .Plot .Image { background-repeat: no-repeat; background-position: center center; background-size: contain; height: 100%; pointer-events: none; } .NetworKit_Page .Measure .Stat { width: 500px; float: left; } .NetworKit_Page .Measure .Stat .Group { padding-left: 1.25em; margin-bottom: 0.75em; } .NetworKit_Page .Measure .Stat .Group .Title { font-size: 1.1em; display: block; margin-bottom: 0.3em; margin-left: -0.75em; border-right-style: dotted; border-right-width: 1px; border-bottom-style: dotted; border-bottom-width: 1px; background-color: #D0D0D0; padding-left: 0.2em; } .NetworKit_Page .Measure .Stat .Group .List { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; } .NetworKit_Page .Measure .Stat .Group .List .Entry { position: relative; line-height: 1.75em; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:before { position: absolute; left: 0; top: -40px; background-color: #808080; color: #ffffff; height: 30px; line-height: 30px; border-radius: 5px; padding: 0 15px; content: attr(data-tooltip); white-space: nowrap; display: none; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:after { position: absolute; left: 15px; top: -10px; border-top: 7px solid #808080; border-left: 7px solid transparent; border-right: 7px solid transparent; content: ""; display: none; } .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:hover:after, .NetworKit_Page .Measure .Stat .Group .List .Entry[data-tooltip]:hover:before { display: block; } .NetworKit_Page .Measure .Stat .Group .List .Entry .MathValue { font-family: "Courier New", Courier, monospace; } .NetworKit_Page .Measure:after { content: "."; visibility: hidden; display: block; height: 0; clear: both; } .NetworKit_Page .PartitionPie { clear: both; } .NetworKit_Page .PartitionPie img { width: 600px; } #NetworKit_Overlay { left: 0px; top: 0px; display: none; position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 1000; } #NetworKit_Overlay_Title { position: absolute; color: white; transform: rotate(-90deg); width: 32em; height: 32em; padding-right: 0.5em; padding-top: 0.5em; text-align: right; font-size: 40px; } #NetworKit_Overlay .button { background: white; cursor: pointer; } #NetworKit_Overlay .button:before { size: 13px; display: inline-block; text-align: center; margin-top: 0.5em; margin-bottom: 0.5em; width: 1.5em; height: 1.5em; } #NetworKit_Overlay .icon-close:before { content: "X"; } #NetworKit_Overlay .icon-previous:before { content: "P"; } #NetworKit_Overlay .icon-next:before { content: "N"; } #NetworKit_Overlay .icon-save:before { content: "S"; } #NetworKit_Overlay_Toolbar_Top, #NetworKit_Overlay_Toolbar_Bottom { position: absolute; width: 40px; right: 13px; text-align: right; z-index: 1100; } #NetworKit_Overlay_Toolbar_Top { top: 0.5em; } #NetworKit_Overlay_Toolbar_Bottom { Bottom: 0.5em; } #NetworKit_Overlay_ImageContainer { position: absolute; top: 5%; left: 5%; height: 90%; width: 90%; background-repeat: no-repeat; background-position: center center; background-size: contain; } #NetworKit_Overlay_Image { height: 100%; width: 100%; background-repeat: no-repeat; background-position: center center; background-size: contain; }';
+        element.setAttribute('id', 'NetworKit_style');
+        document.head.appendChild(element);
+}
+
+
+{
+        var element = document.getElementById('NetworKit_Overlay');
+        if (element) {
+                element.parentNode.removeChild(element);
+        }
+        element = document.createElement('div');
+        element.innerHTML = '<div id="NetworKit_Overlay_Toolbar_Top"><div class="button icon-close" id="NetworKit_Overlay_Close" /></div><div id="NetworKit_Overlay_Title" /> <div id="NetworKit_Overlay_ImageContainer"> <div id="NetworKit_Overlay_Image" /> </div> <div id="NetworKit_Overlay_Toolbar_Bottom"> <div class="button icon-previous" onclick="NetworKit_overlayImageShift(-1)" /> <div class="button icon-next" onclick="NetworKit_overlayImageShift(1)" /> <a id="NetworKit_Overlay_Toolbar_Bottom_Save"><div class="button icon-save" /></a> </div>';
+        element.setAttribute('id', 'NetworKit_Overlay');
+        document.body.appendChild(element);
+        document.getElementById('NetworKit_Overlay_Close').onclick = function (e) {
+                document.getElementById('NetworKit_Overlay').style.display = 'none';
+        }
+}
+
+-->
+</script></div>
+</div>
+</section>
+<section id="Link-prediction-algorithms">
+<h1>Link prediction algorithms<a class="headerlink" href="#Link-prediction-algorithms" title="Link to this heading">¶</a></h1>
+<section id="Adamic/Adar-Index">
+<h2>Adamic/Adar Index<a class="headerlink" href="#Adamic/Adar-Index" title="Link to this heading">¶</a></h2>
+<p>The Adamic/Adar Index predicts links in a graph according to the amount of shared links between two nodes. The index sums up the reciprocals of the logarithm of the degree of all common neighbors between two nodes <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+<p>The constructor, <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/linkprediction.html?highlight=adamic#networkit.linkprediction.AdamicAdarIndex">AdamicAdarIndex(G)</a> expects a graph as input. The <code class="docutils literal notranslate"><span class="pre">run(u,</span> <span class="pre">v)</span></code> method takes a pair of nodes <code class="docutils literal notranslate"><span class="pre">(u,</span> <span class="pre">v)</span></code> as input and returns the Adamic/Adar Index of the given pair of nodes.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/karate.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+
+<span class="c1"># Initialize algorithm</span>
+<span class="n">aai</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">linkprediction</span><span class="o">.</span><span class="n">AdamicAdarIndex</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+<span class="c1"># Get Adamic/Adar Index of two nodes</span>
+<span class="n">aai</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0.35295612386476116
+</pre></div></div>
+</div>
+</section>
+<section id="Algebraic-Distance-Index">
+<h2>Algebraic Distance Index<a class="headerlink" href="#Algebraic-Distance-Index" title="Link to this heading">¶</a></h2>
+<p>The Algebraic Distance Index assigns a distance value to pairs of nodes according to their structural closeness in the graph.</p>
+<p>The constructor <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/linkprediction.html?highlight=algeb#networkit.linkprediction.AlgebraicDistanceIndex">AlgebraicDistanceIndex(G, numberSystems, numberIterations, omega=0.5, norm= 2)</a> expects as inputs a graph, the number of systems to use for algebraic iteration, and the number of iterations in each system. <code class="docutils literal notranslate"><span class="pre">omega</span></code> is the over-relaxation parameter and <code class="docutils literal notranslate"><span class="pre">norm</span></code> is the norm factor of the extended algebraic distance. Maximum norm is realized by
+setting <code class="docutils literal notranslate"><span class="pre">norm</span></code> to 0.</p>
+<p>After initialization, call the <code class="docutils literal notranslate"><span class="pre">preprocess()</span></code> method. Afterwards, call the <code class="docutils literal notranslate"><span class="pre">run</span></code> method: it takes a pair of nodes <code class="docutils literal notranslate"><span class="pre">(u,</span> <span class="pre">v)</span></code> as input and returns the Algebraic Distance Index of the given pair of nodes.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">adi</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">linkprediction</span><span class="o">.</span><span class="n">AlgebraicDistanceIndex</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">adi</span><span class="o">.</span><span class="n">preprocess</span><span class="p">()</span>
+
+<span class="c1"># Get the algebraic distance index of two nodes</span>
+<span class="n">adi</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+3.633782552322431e-07
+</pre></div></div>
+</div>
+</section>
+<section id="Common-Neighbors-Index">
+<h2>Common Neighbors Index<a class="headerlink" href="#Common-Neighbors-Index" title="Link to this heading">¶</a></h2>
+<p>The Common Neighbors Index calculates the number of common neighbors of a pair of nodes in a graph.</p>
+<p>The constructor <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/linkprediction.html?highlight=common#networkit.linkprediction.CommonNeighborsIndex">CommonNeighborsIndex(G)</a>, expects a graph as input. The <code class="docutils literal notranslate"><span class="pre">run(u,</span> <span class="pre">v)</span></code> method takes as input a pair of nodes <code class="docutils literal notranslate"><span class="pre">(u,</span> <span class="pre">v)</span></code> and returns the number of common neighbors between <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">cni</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">linkprediction</span><span class="o">.</span><span class="n">CommonNeighborsIndex</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+<span class="c1"># Calculate common neighbors between two nodes</span>
+<span class="n">cni</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+2.0
+</pre></div></div>
+</div>
+</section>
+<section id="Neighbors-Measure-Index">
+<h2>Neighbors Measure Index<a class="headerlink" href="#Neighbors-Measure-Index" title="Link to this heading">¶</a></h2>
+<p>The Neighbors Measure Index returns the number of connections between neighbors of the given nodes <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+<p>The constructor <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/linkprediction.html?highlight=neighborsme#networkit.linkprediction.NeighborsMeasureIndex">NeighborsMeasureIndex(G)</a> expects a graph as input. The <code class="docutils literal notranslate"><span class="pre">run(u,</span> <span class="pre">v)</span></code> takes a pair of nodes <code class="docutils literal notranslate"><span class="pre">(u,</span> <span class="pre">v)</span></code> as input and returns the neighbors measure index between <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">nmi</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">linkprediction</span><span class="o">.</span><span class="n">NeighborsMeasureIndex</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+<span class="c1"># Calculate the neighbors measure index between two nodes</span>
+<span class="n">nmi</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+23.0
+</pre></div></div>
+</div>
+</section>
+<section id="Preferential-Attachment-Index">
+<h2>Preferential Attachment Index<a class="headerlink" href="#Preferential-Attachment-Index" title="Link to this heading">¶</a></h2>
+<p>The Preferential Attachment Index suggests that the more connected a node is, the more likely it is to receive new links.</p>
+<p>The constructor <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/linkprediction.html?highlight=preferential#networkit.linkprediction.PreferentialAttachmentIndex">PreferentialAttachmentIndex(G)</a> expects a graph as input. The <code class="docutils literal notranslate"><span class="pre">run(u,</span> <span class="pre">v)</span></code> method takes a pair of nodes <code class="docutils literal notranslate"><span class="pre">(u,</span> <span class="pre">v)</span></code> as input and returns the product of the cardinalities of the neighborhoods of nodes <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">pai</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">linkprediction</span><span class="o">.</span><span class="n">PreferentialAttachmentIndex</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+<span class="c1"># Calculate the preferential attachment index between two nodes</span>
+<span class="n">pai</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+24.0
+</pre></div></div>
+</div>
+</section>
+<section id="Resource-Allocation-Index">
+<h2>Resource Allocation Index<a class="headerlink" href="#Resource-Allocation-Index" title="Link to this heading">¶</a></h2>
+<p>The constructor <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/linkprediction.html?highlight=resource#networkit.linkprediction.ResourceAllocationIndex">ResourceAllocationIndex(G)</a> expects a graph as input. The <code class="docutils literal notranslate"><span class="pre">run(u,</span> <span class="pre">v)</span></code> method takes a pair of nodes <code class="docutils literal notranslate"><span class="pre">(u,</span> <span class="pre">v)</span></code> as input and returns the Resource Allocation Index between <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">rai</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">linkprediction</span><span class="o">.</span><span class="n">ResourceAllocationIndex</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+<span class="c1"># Calculate the resource allocation index between two nodes</span>
+<span class="n">rai</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0.058823529411764705
+</pre></div></div>
+</div>
+</section>
+<section id="Same-Community-Index">
+<h2>Same Community Index<a class="headerlink" href="#Same-Community-Index" title="Link to this heading">¶</a></h2>
+<p>The Same Community Index determines whether two nodes <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> are in the same community.</p>
+<p>The constructor <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/linkprediction.html?highlight=samecommunity#networkit.linkprediction.SameCommunityIndex">SameCommunityIndex(G)</a> expects a graph as input. The <code class="docutils literal notranslate"><span class="pre">run(u,</span> <span class="pre">v)</span></code> method takes a pair of nodes <code class="docutils literal notranslate"><span class="pre">(u,</span> <span class="pre">v)</span></code> as input and returns <code class="docutils literal notranslate"><span class="pre">1</span></code> if <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code> are in the same community, <code class="docutils literal notranslate"><span class="pre">0</span></code> otherwise.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">sni</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">linkprediction</span><span class="o">.</span><span class="n">SameCommunityIndex</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+<span class="c1"># Compute the Same Community Index between two pairs of nodes</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sni</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">32</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sni</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">32</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1.0
+0.0
+</pre></div></div>
+</div>
+</section>
+<section id="Total-Neighbors-Index">
+<h2>Total Neighbors Index<a class="headerlink" href="#Total-Neighbors-Index" title="Link to this heading">¶</a></h2>
+<p>The Total Neighbors Index returns the number of nodes in the neighborhood-union of nodes <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+<p>The constructor <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/linkprediction.html?highlight=totalneighb#networkit.linkprediction.TotalNeighborsIndex">TotalNeighborsIndex(G)</a> expects a graph as input. The <code class="docutils literal notranslate"><span class="pre">run(u,</span> <span class="pre">v)</span></code> method takes a pair of nodes <code class="docutils literal notranslate"><span class="pre">(u,</span> <span class="pre">v)</span></code> as input and returns the Total Neighbors Index between <code class="docutils literal notranslate"><span class="pre">u</span></code> and <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the algorithm</span>
+<span class="n">tni</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">linkprediction</span><span class="o">.</span><span class="n">TotalNeighborsIndex</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+<span class="c1"># Calculate the Total Neighbors Index between two nodes</span>
+<span class="n">tni</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+13.0
+</pre></div></div>
+</div>
+</section>
+</section>
+<section id="Link-sampling-and-link-prediction">
+<h1>Link sampling and link prediction<a class="headerlink" href="#Link-sampling-and-link-prediction" title="Link to this heading">¶</a></h1>
+<p>This section shows how to use the training algorithms in combination with link prediction algorithms. In this example, we use the Random Link Sampler, the Missing Links Finder and the Katz Index algorithms.</p>
+<p>The Katz index assigns a similarity score to a pair of nodes. This score is based on the weighted sum of the number of paths with length <span class="math notranslate nohighlight">\(l\)</span>, where <span class="math notranslate nohighlight">\(l\)</span> is smaller than a given limit.</p>
+<p><a class="reference external" href="https://networkit.github.io/dev-docs/python_api/linkprediction.html?highlight=katzindex#networkit.linkprediction.KatzIndex">KatzIndex(G=None, maxPathLength=5, dampingValue=0.005)</a> takes as inputs a graph (optional), the maximum length of paths to consider, and the damping value.</p>
+<p><a class="reference external" href="https://networkit.github.io/dev-docs/python_api/linkprediction.html?highlight=randomlinksampler#networkit.linkprediction.RandomLinkSampler">RandomLinkSampler(G, numLinks)</a> provides methods to randomly sample a number of edges from a given graph. <code class="docutils literal notranslate"><span class="pre">numLinks</span></code> is the number of edges the returned graph should have.</p>
+<p><a class="reference external" href="https://networkit.github.io/dev-docs/python_api/linkprediction.html?highlight=missing#networkit.linkprediction.MissingLinksFinder">MissingLinksFinder(G)</a> finds the missing edges in the given graph. The <code class="docutils literal notranslate"><span class="pre">findAtDistance(k)</span></code> function returns all missing links in the graph. The absent links to find are narrowed down by providing a distance that the nodes of the missing links should have. For example in case of distance 2 only node-pairs that would close a triangle in the given graph get
+returned.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/jazz.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+
+<span class="c1"># Sample graph</span>
+<span class="n">trainingGraph</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">linkprediction</span><span class="o">.</span><span class="n">RandomLinkSampler</span><span class="o">.</span><span class="n">byPercentage</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">)</span>
+
+<span class="c1"># Find missing links</span>
+<span class="n">missingLinks</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">linkprediction</span><span class="o">.</span><span class="n">MissingLinksFinder</span><span class="p">(</span><span class="n">trainingGraph</span><span class="p">)</span><span class="o">.</span><span class="n">findAtDistance</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># Run link prediticion</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">linkprediction</span><span class="o">.</span><span class="n">KatzIndex</span><span class="p">(</span><span class="n">G</span><span class="p">)</span><span class="o">.</span><span class="n">runOn</span><span class="p">(</span><span class="n">missingLinks</span><span class="p">)</span>
+
+<span class="c1"># Print the first 5 predictions</span>
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">predictions</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+((14, 123), 8.175e-09)
+((14, 197), 6.91875e-09)
+((15, 26), 8.165625e-09)
+((15, 101), 6.934375000000001e-09)
+((15, 123), 8.175e-09)
+</pre></div></div>
+</div>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

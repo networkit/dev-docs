@@ -1,0 +1,1370 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>networkit.graph</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="networkit.graphio" href="graphio.html" />
+    <link rel="prev" title="networkit.globals" href="globals.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="networkit.html">networkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algebraic.html">networkit.algebraic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="base.html">networkit.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="centrality.html">networkit.centrality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clique.html">networkit.clique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coarsening.html">networkit.coarsening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coloring.html">networkit.coloring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="community.html">networkit.community</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">networkit.components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="correlation.html">networkit.correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="distance.html">networkit.distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamic.html">networkit.dynamic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamics.html">networkit.dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynbase.html">networkit.dynbase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="embedding.html">networkit.embedding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engineering.html">networkit.engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow.html">networkit.flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generators.html">networkit.generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gephi.html">networkit.gephi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="globals.html">networkit.globals</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">networkit.graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphio.html">networkit.graphio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphtools.html">networkit.graphtools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="helpers.html">networkit.helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="independentset.html">networkit.independentset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkprediction.html">networkit.linkprediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matching.html">networkit.matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nxadapter.html">networkit.nxadapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot.html">networkit.plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">networkit.profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="randomization.html">networkit.randomization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reachability.html">networkit.reachability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scd.html">networkit.scd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html">networkit.simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sparsification.html">networkit.sparsification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stats.html">networkit.stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structures.html">networkit.structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="traversal.html">networkit.traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viz.html">networkit.viz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vizbridges.html">networkit.vizbridges</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="module-networkit.graph">
+<span id="networkit-graph"></span><h1>networkit.graph<a class="headerlink" href="#module-networkit.graph" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graph.EdgeAttribute">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.graph.</span></span><span class="sig-name descname"><span class="pre">EdgeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typedEdgeAttribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.EdgeAttribute" title="Link to this definition">¶</a></dt>
+<dd><p>Generic class for edge attributes returned by networkit.graph.attachEdgeAttribute().
+Example of attaching an int attribute to a graph g:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>att = g.attachEdgeAttribute(&quot;name&quot;, int)`
+</pre></div>
+</div>
+<p>Set/get attributes of a single edgeId ‘eid’ with the [] operator:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">att</span><span class="p">[</span><span class="n">eid</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">att_val</span> <span class="o">=</span> <span class="n">att</span><span class="p">[</span><span class="n">eid</span><span class="p">]</span> <span class="c1"># &#39;att_val&#39; is 0</span>
+</pre></div>
+</div>
+<p>Iterate over all the values of an attribute:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">eid</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">att</span><span class="p">:</span>
+        <span class="c1"># The attribute value of edge `eid` is `val`.</span>
+</pre></div>
+</div>
+<p class="rubric">Notes</p>
+<p>Using edge attributes is in experimental state. The API may change in future updates.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graph.Graph">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.graph.</span></span><span class="sig-name descname"><span class="pre">Graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weighted</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edgesIndexed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph" title="Link to this definition">¶</a></dt>
+<dd><p>An undirected graph (with optional weights) and parallel iterator methods.</p>
+<p>Create a graph of <cite>n</cite> nodes. The graph has assignable edge weights if <cite>weighted</cite> is set to True.
+If <cite>weighted</cite> is set to False each edge has edge weight 1.0 and any other weight assignment will
+be ignored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of nodes. Default: 0</p></li>
+<li><p><strong>weighted</strong> (<em>bool</em><em>, </em><em>optional</em>) – If set to True, the graph can have edge weights other than 1.0. Default: False</p></li>
+<li><p><strong>directed</strong> (<em>bool</em><em>, </em><em>optional</em>) – If set to True, the graph will be directed. Default: False</p></li>
+<li><p><strong>edgesIndexed</strong> (<em>bool</em><em>, </em><em>optional</em>) – If set to True, the graph’s edges will be indexed. Default: False</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.addEdge">
+<span class="sig-name descname"><span class="pre">addEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">addMissing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checkMultiEdge</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.addEdge" title="Link to this definition">¶</a></dt>
+<dd><p>Insert an undirected edge between the nodes <cite>u</cite> and <cite>v</cite>. If the graph is weighted you can optionally set a weight for this edge.
+The default weight is 1.0. If one or both end-points do not exists and addMissing is set, they are silently added.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default it is not checked whether this edge already exists, thus it is possible to create multi-edges. Multi-edges are not supported and will NOT be
+handled consistently by the graph data structure. To enable set <code class="code docutils literal notranslate"><span class="pre">checkMultiEdge</span></code> to True. Note that this increases the runtime of the function by O(max(deg(u), deg(v))).</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>int</em>) – Endpoint of edge.</p></li>
+<li><p><strong>v</strong> (<em>int</em>) – Endpoint of edge.</p></li>
+<li><p><strong>w</strong> (<em>float</em><em>, </em><em>optional</em>) – Edge weight. Default: 1.0</p></li>
+<li><p><strong>addMissing</strong> (<em>bool</em><em>, </em><em>optional</em>) – Add missing endpoints if necessary (i.e., increase numberOfNodes). Default: False</p></li>
+<li><p><strong>checkMultiEdge</strong> (<em>bool</em><em>, </em><em>optional</em>) – Check if edge is already present in the graph. If detected, do not insert the edge. Default: False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Indicates whether the edge has been added. Is <cite>False</cite> in case <code class="code docutils literal notranslate"><span class="pre">checkMultiEdge</span></code> is set to <cite>True</cite> and the new edge would have been a multi-edge.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.addEdges">
+<span class="sig-name descname"><span class="pre">addEdges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputData</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.addEdges" title="Link to this definition">¶</a></dt>
+<dd><p>Inserts edges from several sources based on the type of <code class="code docutils literal notranslate"><span class="pre">inputData</span></code>.</p>
+<p>If the graph is undirected, each pair (i,j) in <code class="code docutils literal notranslate"><span class="pre">inputData</span></code> is inserted twice twice: once as (i,j) and once as (j,i).</p>
+<p>Parameter <code class="code docutils literal notranslate"><span class="pre">inputData</span></code> can be one of the following:</p>
+<ul class="simple">
+<li><p>scipy.sparse.coo_matrix</p></li>
+<li><p>(data, (i,j)) where data, i and j are of type np.ndarray</p></li>
+<li><p>(i,j) where i and j are of type np.ndarray</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If only pairs of row and column indices (i,j) are given, each edge is given weight 1.0 (even in case of a weighted graph).</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inputData</strong> (<em>several</em>) – Input data encoded as one of the supported formats.</p></li>
+<li><p><strong>addMissing</strong> (<em>bool</em><em>, </em><em>optional</em>) – Add missing endpoints if necessary (i.e., increase numberOfNodes). Default: False</p></li>
+<li><p><strong>checkMultiEdge</strong> (<em>bool</em><em>, </em><em>optional</em>) – Check if edge is already present in the graph. If detected, do not insert the edge. Default: False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.addNode">
+<span class="sig-name descname"><span class="pre">addNode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.addNode" title="Link to this definition">¶</a></dt>
+<dd><p>Add a new node to the graph and return it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The new node.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.addNodes">
+<span class="sig-name descname"><span class="pre">addNodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numberOfNewNodes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.addNodes" title="Link to this definition">¶</a></dt>
+<dd><p>Add numberOfNewNodes many new nodes to the graph and return
+the id of the last node added.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>numberOfNewNodes</strong> (<em>int</em>) – Number of nodes to be added.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The id of the last node added.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.attachEdgeAttribute">
+<span class="sig-name descname"><span class="pre">attachEdgeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofType</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.attachEdgeAttribute" title="Link to this definition">¶</a></dt>
+<dd><p>Attaches an edge attribute to the graph and returns it.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">attachEdgeAttribute</span><span class="p">(</span><span class="s2">&quot;attributeIdentifier&quot;</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>All values are initially undefined for existing edges values can be set/get by</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="p">[</span><span class="n">edgeId</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span> <span class="c1"># set</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">edgeId</span><span class="p">]</span> <span class="c1"># get</span>
+</pre></div>
+</div>
+<p>Getting undefined values raises a ValueError removing an edge makes all
+its attributes undefined</p>
+<p class="rubric">Notes</p>
+<p>Using edge attributes is in experimental state. The API may change in future updates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Name for this attribute</p></li>
+<li><p><strong>ofType</strong> (<a class="reference internal" href="dynamics.html#networkit.dynamics.GraphEvent.type" title="networkit.dynamics.GraphEvent.type"><em>type</em></a>) – Type of the attribute (either int, float, or str)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The resulting edge attribute container.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#networkit.graph.EdgeAttribute" title="networkit.graph.EdgeAttribute">networkit.graph.EdgeAttribute</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.attachNodeAttribute">
+<span class="sig-name descname"><span class="pre">attachNodeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofType</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.attachNodeAttribute" title="Link to this definition">¶</a></dt>
+<dd><p>Attaches a node attribute to the graph and returns it.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">attachNodeAttribute</span><span class="p">(</span><span class="s2">&quot;attributeIdentifier&quot;</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>All values are initially undefined for existing nodes values can be set/get
+by</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span> <span class="c1"># set</span>
+<span class="n">value</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="c1"># get</span>
+</pre></div>
+</div>
+<p>Getting undefined values raises a ValueError removing a node makes all
+its attributes undefined</p>
+<p class="rubric">Notes</p>
+<p>Using node attributes is in experimental state. The API may change in future updates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Name for this attribute</p></li>
+<li><p><strong>ofType</strong> (<a class="reference internal" href="dynamics.html#networkit.dynamics.GraphEvent.type" title="networkit.dynamics.GraphEvent.type"><em>type</em></a>) – Type of the attribute (either int, float, or str)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The resulting node attribute container.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#networkit.graph.NodeAttribute" title="networkit.graph.NodeAttribute">networkit.graph.NodeAttribute</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.checkConsistency">
+<span class="sig-name descname"><span class="pre">checkConsistency</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.checkConsistency" title="Link to this definition">¶</a></dt>
+<dd><p>Check for invalid graph states, such as multi-edges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if graph contains invalid graph states.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.compactEdges">
+<span class="sig-name descname"><span class="pre">compactEdges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.compactEdges" title="Link to this definition">¶</a></dt>
+<dd><p>Compact the edge storage, this should be called after executing many edge deletions.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.degree">
+<span class="sig-name descname"><span class="pre">degree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.degree" title="Link to this definition">¶</a></dt>
+<dd><p>Get the number of neighbors of <cite>u</cite>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The existence of the node is not checked. Calling this function with a non-existing node results in a segmentation fault.
+Node existence can be checked by calling hasNode(u).</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>u</strong> (<em>int</em>) – The input Node.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The number of neighbors.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.degreeIn">
+<span class="sig-name descname"><span class="pre">degreeIn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.degreeIn" title="Link to this definition">¶</a></dt>
+<dd><p>Get the number of in-neighbors of <cite>u</cite>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The existence of the node is not checked. Calling this function with a non-existing node results in a segmentation fault.
+Node existence can be checked by calling hasNode(u).</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>u</strong> (<em>int</em>) – The input Node.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The number of in-neighbors.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.degreeOut">
+<span class="sig-name descname"><span class="pre">degreeOut</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.degreeOut" title="Link to this definition">¶</a></dt>
+<dd><p>Get the number of out-neighbors of <cite>u</cite>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The existence of the node is not checked. Calling this function with a non-existing node results in a segmentation fault.
+Node existence can be checked by calling hasNode(u).</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>u</strong> (<em>int</em>) – The Input Node.i</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The number of out-neighbors.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.detachEdgeAttribute">
+<span class="sig-name descname"><span class="pre">detachEdgeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.detachEdgeAttribute" title="Link to this definition">¶</a></dt>
+<dd><p>Detaches an edge attribute from the graph.</p>
+<p class="rubric">Notes</p>
+<p>Using edge attributes is in experimental state. The API may change in future updates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The distinguished name for the attribute to detach.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.detachNodeAttribute">
+<span class="sig-name descname"><span class="pre">detachNodeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.detachNodeAttribute" title="Link to this definition">¶</a></dt>
+<dd><p>Detaches a node attribute from the graph.</p>
+<p class="rubric">Notes</p>
+<p>Using node attributes is in experimental state. The API may change in future updates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The distinguished name for the attribute to detach.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.edgeId">
+<span class="sig-name descname"><span class="pre">edgeId</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.edgeId" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>node</em>) – Node Id from u.</p></li>
+<li><p><strong>v</strong> (<em>node</em>) – Node Id from v.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Id of the edge.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.forEdges">
+<span class="sig-name descname"><span class="pre">forEdges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.forEdges" title="Link to this definition">¶</a></dt>
+<dd><p>This iterator can be used to visit each edge in the order of their edge ids.
+For this to work, indexEdges() must have been called once before.
+If the graph has changed since the last call to indexEdges(), the edge ids may not be in the
+correct order. In this case, calling indexEdges(True) again will restore the correct order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>callback</strong> (<em>object</em>) – Any callable object that takes the parameter tuple(int, int, float, int).
+Parameter list refering to (node id, node id, edge weight, edge id).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.forEdgesOf">
+<span class="sig-name descname"><span class="pre">forEdgesOf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.forEdgesOf" title="Link to this definition">¶</a></dt>
+<dd><p>This iterator can be used to visit each edge in the order of their edge ids.
+For this to work, indexEdges() must have been called once before.
+If the graph has changed since the last call to indexEdges(), the edge ids may not be in the
+correct order. In this case, calling indexEdges(True) again will restore the correct order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>int</em>) – The node of which incident edges shall be passed to the callback</p></li>
+<li><p><strong>callback</strong> (<em>object</em>) – Any callable object that takes the parameter tuple(int, int, float, int).
+Parameter list refering to (node id, node id, edge weight, edge id).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.forInEdgesOf">
+<span class="sig-name descname"><span class="pre">forInEdgesOf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.forInEdgesOf" title="Link to this definition">¶</a></dt>
+<dd><p>This iterator can be used to visit each edge in the order of their edge ids.
+For this to work, indexEdges() must have been called once before.
+If the graph has changed since the last call to indexEdges(), the edge ids may not be in the
+correct order. In this case, calling indexEdges(True) again will restore the correct order.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>int</em>) – The node of which incident edges shall be passed to the callback</p></li>
+<li><p><strong>callback</strong> (<em>object</em>) – Any callable object that takes the parameter tuple(int, int, float, int).
+Parameter list refering to (node id, node id, edge weight, edge id).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.forNodePairs">
+<span class="sig-name descname"><span class="pre">forNodePairs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.forNodePairs" title="Link to this definition">¶</a></dt>
+<dd><p>Experimental node pair iterator interface</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>callback</strong> (<em>object</em>) – Any callable object that takes the parameters tuple(int, int).
+Parameter list refering to (node id, node id).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.forNodes">
+<span class="sig-name descname"><span class="pre">forNodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.forNodes" title="Link to this definition">¶</a></dt>
+<dd><p>Experimental node iterator interface</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>callback</strong> (<em>object</em>) – Any callable object that takes the parameter node.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.forNodesInRandomOrder">
+<span class="sig-name descname"><span class="pre">forNodesInRandomOrder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.forNodesInRandomOrder" title="Link to this definition">¶</a></dt>
+<dd><p>Experimental node iterator interface</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.getEdgeAttribute">
+<span class="sig-name descname"><span class="pre">getEdgeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofType</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.getEdgeAttribute" title="Link to this definition">¶</a></dt>
+<dd><p>Gets an edge attribute that is already attached to the graph and returns it.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">getEdgeAttribute</span><span class="p">(</span><span class="s2">&quot;attributeIdentifier&quot;</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="rubric">Notes</p>
+<p>Using edge attributes is in experimental state. The API may change in future updates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Name for this attribute</p></li>
+<li><p><strong>ofType</strong> (<a class="reference internal" href="dynamics.html#networkit.dynamics.GraphEvent.type" title="networkit.dynamics.GraphEvent.type"><em>type</em></a>) – Type of the attribute (either int, float, or str)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The resulting edge attribute container.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#networkit.graph.EdgeAttribute" title="networkit.graph.EdgeAttribute">networkit.graph.EdgeAttribute</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.getNodeAttribute">
+<span class="sig-name descname"><span class="pre">getNodeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofType</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.getNodeAttribute" title="Link to this definition">¶</a></dt>
+<dd><p>Gets a node attribute that is already attached to the graph and returns it.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">getNodeAttribute</span><span class="p">(</span><span class="s2">&quot;attributeIdentifier&quot;</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="rubric">Notes</p>
+<p>Using node attributes is in experimental state. The API may change in future updates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Name for this attribute</p></li>
+<li><p><strong>ofType</strong> (<a class="reference internal" href="dynamics.html#networkit.dynamics.GraphEvent.type" title="networkit.dynamics.GraphEvent.type"><em>type</em></a>) – Type of the attribute (either int, float, or str)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The resulting node attribute container.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#networkit.graph.NodeAttribute" title="networkit.graph.NodeAttribute">networkit.graph.NodeAttribute</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.hasEdge">
+<span class="sig-name descname"><span class="pre">hasEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.hasEdge" title="Link to this definition">¶</a></dt>
+<dd><p>Checks if undirected edge {<cite>u</cite>,`v`} exists in the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>int</em>) – Endpoint of edge.</p></li>
+<li><p><strong>v</strong> (<em>int</em>) – Endpoint of edge.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the edge exists, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.hasEdgeIds">
+<span class="sig-name descname"><span class="pre">hasEdgeIds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.hasEdgeIds" title="Link to this definition">¶</a></dt>
+<dd><p>Returns true if edges have been indexed</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>If edges have been indexed</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.hasNode">
+<span class="sig-name descname"><span class="pre">hasNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.hasNode" title="Link to this definition">¶</a></dt>
+<dd><p>Checks if the Graph has the node <cite>u</cite>, i.e. if <cite>u</cite> hasn’t been deleted and is in the range of valid ids.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>u</strong> (<em>int</em>) – Id of node queried.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Indicates whether node <cite>u</cite> is part of the graph.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.increaseWeight">
+<span class="sig-name descname"><span class="pre">increaseWeight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.increaseWeight" title="Link to this definition">¶</a></dt>
+<dd><p>Increase the weight of an edge. If the edge does not exist, it will be inserted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>int</em>) – Endpoint of edge.</p></li>
+<li><p><strong>v</strong> (<em>int</em>) – Endpoint of edge.</p></li>
+<li><p><strong>w</strong> (<em>float</em>) – Edge weight.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.indexEdges">
+<span class="sig-name descname"><span class="pre">indexEdges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.indexEdges" title="Link to this definition">¶</a></dt>
+<dd><p>Assign integer ids to edges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>force</strong> (<em>bool</em><em>, </em><em>optional</em>) – Force re-indexing of edges. Default: False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.isDirected">
+<span class="sig-name descname"><span class="pre">isDirected</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.isDirected" title="Link to this definition">¶</a></dt>
+<dd><p>Returns whether a graph is directed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if graph is directed.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.isIsolated">
+<span class="sig-name descname"><span class="pre">isIsolated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.isIsolated" title="Link to this definition">¶</a></dt>
+<dd><p>If the node <cite>u</cite> is isolated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>u</strong> (<em>int</em>) – The input node.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Indicates whether the node is isolated.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.isWeighted">
+<span class="sig-name descname"><span class="pre">isWeighted</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.isWeighted" title="Link to this definition">¶</a></dt>
+<dd><p>Returns whether a graph is weighted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if this graph supports edge weights other than 1.0.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.iterEdges">
+<span class="sig-name descname"><span class="pre">iterEdges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.iterEdges" title="Link to this definition">¶</a></dt>
+<dd><p>Iterates over the edges of the graph.</p>
+<p>For each node u in the graph in ascending node id order,
+the iterator yields the out-edges of u in directed graphs
+and the edges (u,v) in which u &lt; v for undirected graphs.</p>
+<p>It does not follow the order of edge ids (if present).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.iterEdgesWeights">
+<span class="sig-name descname"><span class="pre">iterEdgesWeights</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.iterEdgesWeights" title="Link to this definition">¶</a></dt>
+<dd><p>Iterates over the edges of the graph and their weights.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.iterInNeighbors">
+<span class="sig-name descname"><span class="pre">iterInNeighbors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.iterInNeighbors" title="Link to this definition">¶</a></dt>
+<dd><p>Iterates over a range of the in-neighbors of a node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>u</strong> (<em>int</em>) – The input node.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.iterInNeighborsWeights">
+<span class="sig-name descname"><span class="pre">iterInNeighborsWeights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.iterInNeighborsWeights" title="Link to this definition">¶</a></dt>
+<dd><p>Iterates over a range of the in-neighbors of a node including the edge weights.
+The iterator is not safe to use with unweighted graphs. To avoid unsafe behavior
+a runtime error will be thrown.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>u</strong> (<em>int</em>) – The input node.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.iterNeighbors">
+<span class="sig-name descname"><span class="pre">iterNeighbors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.iterNeighbors" title="Link to this definition">¶</a></dt>
+<dd><p>Iterates over a range of the neighbors of a node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>u</strong> (<em>int</em>) – The input node.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.iterNeighborsWeights">
+<span class="sig-name descname"><span class="pre">iterNeighborsWeights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.iterNeighborsWeights" title="Link to this definition">¶</a></dt>
+<dd><p>Iterates over a range of the neighbors of a node including the edge weights.
+The iterator is not safe to use with unweighted graphs. To avoid unsafe behavior
+a runtime error will be thrown.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>u</strong> (<em>int</em>) – The input node.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.iterNodes">
+<span class="sig-name descname"><span class="pre">iterNodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.iterNodes" title="Link to this definition">¶</a></dt>
+<dd><p>Iterates over the nodes of the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.numberOfEdges">
+<span class="sig-name descname"><span class="pre">numberOfEdges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.numberOfEdges" title="Link to this definition">¶</a></dt>
+<dd><p>Get the number of edges in the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The number of edges.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.numberOfNodes">
+<span class="sig-name descname"><span class="pre">numberOfNodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.numberOfNodes" title="Link to this definition">¶</a></dt>
+<dd><p>Get the number of nodes in the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The number of nodes.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.numberOfSelfLoops">
+<span class="sig-name descname"><span class="pre">numberOfSelfLoops</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.numberOfSelfLoops" title="Link to this definition">¶</a></dt>
+<dd><p>Get number of self-loops, i.e. edges {v, v}.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Number of self-loops.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.removeAllEdges">
+<span class="sig-name descname"><span class="pre">removeAllEdges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.removeAllEdges" title="Link to this definition">¶</a></dt>
+<dd><p>Removes all the edges in the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.removeEdge">
+<span class="sig-name descname"><span class="pre">removeEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.removeEdge" title="Link to this definition">¶</a></dt>
+<dd><p>Removes the undirected edge {<cite>u</cite>,`v`}.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>int</em>) – Endpoint of edge.</p></li>
+<li><p><strong>v</strong> (<em>int</em>) – Endpoint of edge.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.removeMultiEdges">
+<span class="sig-name descname"><span class="pre">removeMultiEdges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.removeMultiEdges" title="Link to this definition">¶</a></dt>
+<dd><p>Removes all multi-edges from the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.removeNode">
+<span class="sig-name descname"><span class="pre">removeNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.removeNode" title="Link to this definition">¶</a></dt>
+<dd><p>Remove a node <cite>u</cite> and all incident edges from the graph.</p>
+<p>Incoming as well as outgoing edges will be removed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>u</strong> (<em>int</em>) – Id of node to be removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.removeSelfLoops">
+<span class="sig-name descname"><span class="pre">removeSelfLoops</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.removeSelfLoops" title="Link to this definition">¶</a></dt>
+<dd><p>Removes all self-loops from the graph.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.restoreNode">
+<span class="sig-name descname"><span class="pre">restoreNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.restoreNode" title="Link to this definition">¶</a></dt>
+<dd><p>Restores a previously deleted node <cite>u</cite> with its previous id in the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>u</strong> (<em>int</em>) – The input node.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.setWeight">
+<span class="sig-name descname"><span class="pre">setWeight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.setWeight" title="Link to this definition">¶</a></dt>
+<dd><p>Set the weight of an edge. If the edge does not exist, it will be inserted.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>int</em>) – Endpoint of edge.</p></li>
+<li><p><strong>v</strong> (<em>int</em>) – Endpoint of edge.</p></li>
+<li><p><strong>w</strong> (<em>float</em>) – Edge weight.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.sortEdges">
+<span class="sig-name descname"><span class="pre">sortEdges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.sortEdges" title="Link to this definition">¶</a></dt>
+<dd><p>Sorts the adjacency arrays by node id. While the running time is linear this
+temporarily duplicates the memory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.swapEdge">
+<span class="sig-name descname"><span class="pre">swapEdge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.swapEdge" title="Link to this definition">¶</a></dt>
+<dd><p>Changes the edge (s1, t1) into (s1, t2) and the edge (s2, t2) into (s2, t1).</p>
+<p>If there are edge weights or edge ids, they are preserved.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>No check is performed if the swap is actually possible, i.e. does not generate duplicate edges.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s1</strong> (<em>int</em>) – Source node of the first edge.</p></li>
+<li><p><strong>t1</strong> (<em>int</em>) – Target node of the first edge.</p></li>
+<li><p><strong>s2</strong> (<em>int</em>) – Source node of the second edge.</p></li>
+<li><p><strong>t2</strong> (<em>int</em>) – Target node of the second edge.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.totalEdgeWeight">
+<span class="sig-name descname"><span class="pre">totalEdgeWeight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.totalEdgeWeight" title="Link to this definition">¶</a></dt>
+<dd><p>Get the sum of all edge weights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The sum of all edge weights.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.upperEdgeIdBound">
+<span class="sig-name descname"><span class="pre">upperEdgeIdBound</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.upperEdgeIdBound" title="Link to this definition">¶</a></dt>
+<dd><p>Get an upper bound for the edge ids in the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An upper bound for the edge ids in the graph.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.upperNodeIdBound">
+<span class="sig-name descname"><span class="pre">upperNodeIdBound</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.upperNodeIdBound" title="Link to this definition">¶</a></dt>
+<dd><p>Get an upper bound for the node ids in the graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An upper bound for the node ids in the graph.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.weight">
+<span class="sig-name descname"><span class="pre">weight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.weight" title="Link to this definition">¶</a></dt>
+<dd><p>Get edge weight of edge {<cite>u</cite> , <cite>v</cite>}. Returns 0 if edge does not exist.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>int</em>) – Endpoint of edge.</p></li>
+<li><p><strong>v</strong> (<em>int</em>) – Endpoint of edge.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Edge weight of edge {<cite>u</cite> , <cite>v</cite>} or 0 if edge does not exist.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.weightedDegree">
+<span class="sig-name descname"><span class="pre">weightedDegree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">countSelfLoopsTwice</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.weightedDegree" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the weighted out-degree of u.</p>
+<p>For directed graphs this is the sum of weights of all outgoing edges of u.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>int</em>) – The input Node.</p></li>
+<li><p><strong>countSelfLoopsTwice</strong> (<em>bool</em><em>, </em><em>optional</em>) – If set to True, self-loops will be counted twice. Default: False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The weighted out-degree of u.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.Graph.weightedDegreeIn">
+<span class="sig-name descname"><span class="pre">weightedDegreeIn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">countSelfLoopsTwice</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.weightedDegreeIn" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the weighted in-degree of u.</p>
+<p>For directed graphs this is the sum of weights of all ingoing edges of u.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>int</em>) – The input node.</p></li>
+<li><p><strong>countSelfLoopsTwice</strong> (<em>bool</em><em>, </em><em>optional</em>) – If set to True, self-loops will be counted twice. Default: False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The weighted in-degree of u.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.graph.GraphFromCoo">
+<span class="sig-prename descclassname"><span class="pre">networkit.graph.</span></span><span class="sig-name descname"><span class="pre">GraphFromCoo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputData</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weighted</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edgesIndexed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.GraphFromCoo" title="Link to this definition">¶</a></dt>
+<dd><p>graphFromInputData(inputData, n=0, bool_t weighted=False, bool_t directed=False, bool_t edgesIndexed=False):</p>
+<p>Creates a graph based on <code class="code docutils literal notranslate"><span class="pre">inputData</span></code> (edge data). Input data is given in triplet format (also known
+as ijk or coo format). See here for more details: <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.coo_array.html">https://docs.scipy.org/doc/scipy/reference/generated/scipy.sparse.coo_array.html</a></p>
+<p>If the resulting graph is undirected (default case), each pair (i,j) in <code class="code docutils literal notranslate"><span class="pre">inputData</span></code> is
+inserted twice twice: once as (i,j) and once as (j,i).</p>
+<p>Parameter <code class="code docutils literal notranslate"><span class="pre">inputData</span></code> can be one of the following:</p>
+<ul class="simple">
+<li><p>scipy.sparse.coo_matrix</p></li>
+<li><p>(data, (i,j)) where data, i and j are of type np.ndarray</p></li>
+<li><p>(i,j) where i and j are of type np.ndarray</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>If only pairs of row and column indices (i,j) are given, each edge is given weight 1.0 (even in case of a weighted graph).</p></li>
+<li><p>There is no check if <code class="code docutils literal notranslate"><span class="pre">n</span></code> is the correct size. If the parameter is used, make sure that it is at least the</p></li>
+</ul>
+<p>maximum index from the coordinate data.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inputData</strong> (<em>several</em>) – Input data encoded as one of the supported formats.</p></li>
+<li><p><strong>n</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of nodes for the created graph. If n is not given, the nodes are added on the fly during building
+of the graph. For better performance, it is advised to correctly set the number of nodes. Default: 0</p></li>
+<li><p><strong>weighted</strong> (<em>bool</em><em>, </em><em>optional</em>) – If set to True, the graph can have edge weights other than 1.0. Default: False</p></li>
+<li><p><strong>directed</strong> (<em>bool</em><em>, </em><em>optional</em>) – If set to True, the graph will be directed. Default: False</p></li>
+<li><p><strong>edgesIndexed</strong> (<em>bool</em><em>, </em><em>optional</em>) – If set to True, the graph’s edges will be indexed. Default: False</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graph.KruskalMSF">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.graph.</span></span><span class="sig-name descname"><span class="pre">KruskalMSF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.KruskalMSF" title="Link to this definition">¶</a></dt>
+<dd><p>Generates a minimum spanning forest for a given graph based on Kruskal’s algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.KruskalMSF.getTotalWeight">
+<span class="sig-name descname"><span class="pre">getTotalWeight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.KruskalMSF.getTotalWeight" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the total weight of the minimum spanning forest.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The total weight of the minimum spanning forest.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.KruskalMSF.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.KruskalMSF.run" title="Link to this definition">¶</a></dt>
+<dd><p>Executes the algorithm.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graph.NodeAttribute">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.graph.</span></span><span class="sig-name descname"><span class="pre">NodeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typedNodeAttribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.NodeAttribute" title="Link to this definition">¶</a></dt>
+<dd><p>Generic class for node attributes returned by networkit.graph.attachNodeAttribute().
+Example of attaching an int attribute to a graph g:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>att = g.attachNodeAttribute(&quot;name&quot;, int)`
+</pre></div>
+</div>
+<p>Set/get attributes of a single node ‘u’ with the [] operator:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">att</span><span class="p">[</span><span class="n">u</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">att_val</span> <span class="o">=</span> <span class="n">att</span><span class="p">[</span><span class="n">u</span><span class="p">]</span> <span class="c1"># &#39;att_val&#39; is 0</span>
+</pre></div>
+</div>
+<p>Iterate over all the values of an attribute:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">att</span><span class="p">:</span>
+        <span class="c1"># The attribute value of node `u` is `val`.</span>
+</pre></div>
+</div>
+<p class="rubric">Notes</p>
+<p>Using node attributes is in experimental state. The API may change in future updates.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graph.PrimMSF">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.graph.</span></span><span class="sig-name descname"><span class="pre">PrimMSF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.PrimMSF" title="Link to this definition">¶</a></dt>
+<dd><p>Generates a minimum spanning forest for a given graph based on Prim’s algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.PrimMSF.getTotalWeight">
+<span class="sig-name descname"><span class="pre">getTotalWeight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.PrimMSF.getTotalWeight" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the total weight of the minimum spanning forest.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The total weight of the minimum spanning forest.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.PrimMSF.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.PrimMSF.run" title="Link to this definition">¶</a></dt>
+<dd><p>Executes the algorithm.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graph.RandomMaximumSpanningForest">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.graph.</span></span><span class="sig-name descname"><span class="pre">RandomMaximumSpanningForest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attributes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.RandomMaximumSpanningForest" title="Link to this definition">¶</a></dt>
+<dd><p>Computes a random maximum-weight spanning forest using Kruskal’s algorithm by randomizing the order of edges of the same weight.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>int</em><em>) or </em><em>list</em><em>(</em><em>float</em><em>)</em>) – If given, this edge attribute is used instead of the edge weights.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.RandomMaximumSpanningForest.getAttribute">
+<span class="sig-name descname"><span class="pre">getAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">move</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.RandomMaximumSpanningForest.getAttribute" title="Link to this definition">¶</a></dt>
+<dd><p>Get a bool attribute that indicates for each edge if it is part of the calculated maximum-weight spanning forest.
+This attribute is only calculated and can thus only be request if the supplied graph has edge ids.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>move</strong> (<em>bool</em><em>, </em><em>optional</em>) – If the attribute shall be moved out of the algorithm instance. Default: False</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The list with the bool attribute for each edge.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(bool)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.RandomMaximumSpanningForest.getMSF">
+<span class="sig-name descname"><span class="pre">getMSF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">move</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.RandomMaximumSpanningForest.getMSF" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the calculated maximum-weight spanning forest as graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>move</strong> (<em>bool</em>) – If the graph shall be moved out of the algorithm instance.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The calculated maximum-weight spanning forest.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.RandomMaximumSpanningForest.inMSF">
+<span class="sig-name descname"><span class="pre">inMSF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.RandomMaximumSpanningForest.inMSF" title="Link to this definition">¶</a></dt>
+<dd><p>Checks if the edge (u, v) or the edge with id u is part of the calculated maximum-weight spanning forest.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>int</em>) – The first node of the edge to check or the edge id of the edge to check.</p></li>
+<li><p><strong>v</strong> (<em>int</em><em>, </em><em>optional</em>) – The second node of the edge to check (only if u is not an edge id). Default: None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>If the edge is part of the calculated maximum-weight spanning forest.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graph.SpanningForest">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.graph.</span></span><span class="sig-name descname"><span class="pre">SpanningForest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.SpanningForest" title="Link to this definition">¶</a></dt>
+<dd><p>Generates a spanning forest for a given graph</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.SpanningForest.getForest">
+<span class="sig-name descname"><span class="pre">getForest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.SpanningForest.getForest" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the spanning forest.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The computed spanning forest.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.SpanningForest.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.SpanningForest.run" title="Link to this definition">¶</a></dt>
+<dd><p>Executes the algorithm.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graph.UnionMaximumSpanningForest">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.graph.</span></span><span class="sig-name descname"><span class="pre">UnionMaximumSpanningForest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.UnionMaximumSpanningForest" title="Link to this definition">¶</a></dt>
+<dd><p>Union maximum-weight spanning forest algorithm, computes the union of all maximum-weight spanning forests using Kruskal’s algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>int</em><em>) or </em><em>list</em><em>(</em><em>float</em><em>)</em>) – If given, this edge attribute is used instead of the edge weights.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.UnionMaximumSpanningForest.getAttribute">
+<span class="sig-name descname"><span class="pre">getAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">move</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.UnionMaximumSpanningForest.getAttribute" title="Link to this definition">¶</a></dt>
+<dd><p>Get a bool attribute that indicates for each edge if it is part of any maximum-weight spanning forest.</p>
+<p>This attribute is only calculated and can thus only be request if the supplied graph has edge ids.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>move</strong> (<em>bool</em><em>, </em><em>optional</em>) – If the attribute shall be moved out of the algorithm instance. Default: False</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The list with the bool attribute for each edge.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(bool)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.UnionMaximumSpanningForest.getUMSF">
+<span class="sig-name descname"><span class="pre">getUMSF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">move</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.UnionMaximumSpanningForest.getUMSF" title="Link to this definition">¶</a></dt>
+<dd><p>Gets the union of all maximum-weight spanning forests as graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>move</strong> (<em>bool</em><em>, </em><em>optional</em>) – If the graph shall be moved out of the algorithm instance. Default: False</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The calculated union of all maximum-weight spanning forests.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.UnionMaximumSpanningForest.inUMST">
+<span class="sig-name descname"><span class="pre">inUMST</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.UnionMaximumSpanningForest.inUMST" title="Link to this definition">¶</a></dt>
+<dd><p>Checks if the edge (u, v) or the edge with id u is part of any maximum-weight spanning forest.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> (<em>int</em>) – The first node of the edge to check or the edge id of the edge to check.</p></li>
+<li><p><strong>v</strong> (<em>int</em><em>, </em><em>optional</em>) – The second node of the edge to check (only if u is not an edge id). Default: None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>If the edge is part of any maximum-weight spanning forest.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

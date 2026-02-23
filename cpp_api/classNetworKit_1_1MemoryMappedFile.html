@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Class MemoryMappedFile</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class METISGraphReader" href="classNetworKit_1_1METISGraphReader.html" />
+    <link rel="prev" title="Class MaximalCliques" href="classNetworKit_1_1MaximalCliques.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#directories">Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#pages">Pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="class-memorymappedfile">
+<span id="exhale-class-classnetworkit-1-1memorymappedfile"></span><h1>Class MemoryMappedFile<a class="headerlink" href="#class-memorymappedfile" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_networkit_io_MemoryMappedFile.hpp.html#file-include-networkit-io-memorymappedfile-hpp"><span class="std std-ref">File MemoryMappedFile.hpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16MemoryMappedFileE">
+<span class="target" id="classNetworKit_1_1MemoryMappedFile"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MemoryMappedFile</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit16MemoryMappedFileE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>This class is a wrapper to os-dependend file mapping implementations. It supports to map a read-only file into virtual address space. After successful opening, pointers to the begin/end of the virtual address space are accessible via <a class="reference internal" href="#classNetworKit_1_1MemoryMappedFile_1adeb98ea6e507974cf1b392cccc4f24d3"><span class="std std-ref">cbegin()</span></a> / <a class="reference internal" href="#classNetworKit_1_1MemoryMappedFile_1a145bed44e8ece05d3678a10f85919ea1"><span class="std std-ref">cend()</span></a>. All file and mapping handlers are freed automatically.</p>
+<p>This wrapper is non-copyable but can be cheaply moved and swapped. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16MemoryMappedFile10value_typeE">
+<span class="target" id="classNetworKit_1_1MemoryMappedFile_1a168bbc83027a103f3e75b0ac1beab5b1"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">value_type</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><a class="headerlink" href="#_CPPv4N9NetworKit16MemoryMappedFile10value_typeE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16MemoryMappedFile14const_iteratorE">
+<span class="target" id="classNetworKit_1_1MemoryMappedFile_1acc0d066c950b53fb891b4944c1897f8b"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">const_iterator</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit16MemoryMappedFile10value_typeE" title="NetworKit::MemoryMappedFile::value_type"><span class="n"><span class="pre">value_type</span></span></a><span class="p"><span class="pre">*</span></span><a class="headerlink" href="#_CPPv4N9NetworKit16MemoryMappedFile14const_iteratorE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16MemoryMappedFile16MemoryMappedFileEv">
+<span class="target" id="classNetworKit_1_1MemoryMappedFile_1ad26bcdc7ef75cd0071c0a3ffc7ce384e"></span><span class="sig-name descname"><span class="n"><span class="pre">MemoryMappedFile</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit16MemoryMappedFile16MemoryMappedFileEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Creates a <a class="reference internal" href="#classNetworKit_1_1MemoryMappedFile"><span class="std std-ref">MemoryMappedFile</span></a> instance in an unmapped state. A call to <a class="reference internal" href="#classNetworKit_1_1MemoryMappedFile_1a96f27f39751a98b4d2f7ced32dc4fc6d"><span class="std std-ref">open()</span></a> is required. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16MemoryMappedFile16MemoryMappedFileENSt11string_viewE">
+<span class="target" id="classNetworKit_1_1MemoryMappedFile_1a3fd6eafbccb9747ac5eb1156064a82b2"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MemoryMappedFile</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit16MemoryMappedFile16MemoryMappedFileENSt11string_viewE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Invokes open(path) automatically. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16MemoryMappedFileD0Ev">
+<span class="target" id="classNetworKit_1_1MemoryMappedFile_1aa492d10d5dfe3f825c42c6d3f331749f"></span><span class="sig-name descname"><span class="n"><span class="pre">~MemoryMappedFile</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit16MemoryMappedFileD0Ev" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Invokes close. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16MemoryMappedFile16MemoryMappedFileERK16MemoryMappedFile">
+<span class="target" id="classNetworKit_1_1MemoryMappedFile_1a308df29a4f4140a654891fb41aed9f44"></span><span class="sig-name descname"><span class="n"><span class="pre">MemoryMappedFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit16MemoryMappedFile16MemoryMappedFileERK16MemoryMappedFile" title="NetworKit::MemoryMappedFile::MemoryMappedFile"><span class="n"><span class="pre">MemoryMappedFile</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N9NetworKit16MemoryMappedFile16MemoryMappedFileERK16MemoryMappedFile" title="Link to this definition">¶</a><br /></dt>
+<dd><p>It’s non copy-able. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16MemoryMappedFileaSERK16MemoryMappedFile">
+<span class="target" id="classNetworKit_1_1MemoryMappedFile_1a97bca82ec0760daa2ac96073fa815923"></span><a class="reference internal" href="#_CPPv4N9NetworKit16MemoryMappedFileE" title="NetworKit::MemoryMappedFile"><span class="n"><span class="pre">MemoryMappedFile</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit16MemoryMappedFileE" title="NetworKit::MemoryMappedFile"><span class="n"><span class="pre">MemoryMappedFile</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N9NetworKit16MemoryMappedFileaSERK16MemoryMappedFile" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16MemoryMappedFile16MemoryMappedFileERR16MemoryMappedFile">
+<span class="target" id="classNetworKit_1_1MemoryMappedFile_1aa897fcf5e83f2e7c91a7f4d116a8283a"></span><span class="sig-name descname"><span class="n"><span class="pre">MemoryMappedFile</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9NetworKit16MemoryMappedFile16MemoryMappedFileERR16MemoryMappedFile" title="NetworKit::MemoryMappedFile::MemoryMappedFile"><span class="n"><span class="pre">MemoryMappedFile</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">o</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N9NetworKit16MemoryMappedFile16MemoryMappedFileERR16MemoryMappedFile" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Takes over the mapping (if any) from o, leaves o in a “closed” state ready to be opened again. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16MemoryMappedFileaSERR16MemoryMappedFile">
+<span class="target" id="classNetworKit_1_1MemoryMappedFile_1ae427c84ecd42386093342eb6619eba8a"></span><a class="reference internal" href="#_CPPv4N9NetworKit16MemoryMappedFileE" title="NetworKit::MemoryMappedFile"><span class="n"><span class="pre">MemoryMappedFile</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9NetworKit16MemoryMappedFileE" title="NetworKit::MemoryMappedFile"><span class="n"><span class="pre">MemoryMappedFile</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">o</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N9NetworKit16MemoryMappedFileaSERR16MemoryMappedFile" title="Link to this definition">¶</a><br /></dt>
+<dd><p>If *this currently holds a mapping, it is closed and replaced the other’s state which in turn is left closed. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16MemoryMappedFile4openENSt11string_viewE">
+<span class="target" id="classNetworKit_1_1MemoryMappedFile_1a96f27f39751a98b4d2f7ced32dc4fc6d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">open</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">file</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit16MemoryMappedFile4openENSt11string_viewE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Opens the file and maps it to <a class="reference internal" href="#classNetworKit_1_1MemoryMappedFile_1adeb98ea6e507974cf1b392cccc4f24d3"><span class="std std-ref">cbegin()</span></a> … <a class="reference internal" href="#classNetworKit_1_1MemoryMappedFile_1a145bed44e8ece05d3678a10f85919ea1"><span class="std std-ref">cend()</span></a> Opening an empty file is considered an error. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16MemoryMappedFile5closeEv">
+<span class="target" id="classNetworKit_1_1MemoryMappedFile_1a47aa03187ee739ce020b9d9d5a954e65"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">close</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4N9NetworKit16MemoryMappedFile5closeEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>If a file is mapped, it is closed. Otherwise, operation is carried out. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is automatically called by the destructor. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit16MemoryMappedFile6cbeginEv">
+<span class="target" id="classNetworKit_1_1MemoryMappedFile_1adeb98ea6e507974cf1b392cccc4f24d3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit16MemoryMappedFile14const_iteratorE" title="NetworKit::MemoryMappedFile::const_iterator"><span class="n"><span class="pre">const_iterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cbegin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit16MemoryMappedFile6cbeginEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>If a file is opened, a random-access iterator to the first byte mapped is returned. If no file is opened, nullptr is returned. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit16MemoryMappedFile4cendEv">
+<span class="target" id="classNetworKit_1_1MemoryMappedFile_1a145bed44e8ece05d3678a10f85919ea1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit16MemoryMappedFile14const_iteratorE" title="NetworKit::MemoryMappedFile::const_iterator"><span class="n"><span class="pre">const_iterator</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cend</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit16MemoryMappedFile4cendEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Analogously to <a class="reference internal" href="#classNetworKit_1_1MemoryMappedFile_1adeb98ea6e507974cf1b392cccc4f24d3"><span class="std std-ref">cbegin()</span></a></p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit16MemoryMappedFile4sizeEv">
+<span class="target" id="classNetworKit_1_1MemoryMappedFile_1a38d13e48d0491dad44695469cf50b52c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">size</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit16MemoryMappedFile4sizeEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Number of bytes mapped. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

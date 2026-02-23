@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Program Listing for File GedWalk.hpp</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul>
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="program-listing-for-file-gedwalk-hpp">
+<span id="program-listing-file-include-networkit-centrality-gedwalk-hpp"></span><h1>Program Listing for File GedWalk.hpp<a class="headerlink" href="#program-listing-for-file-gedwalk-hpp" title="Link to this heading">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_include_networkit_centrality_GedWalk.hpp.html#file-include-networkit-centrality-gedwalk-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">include/networkit/centrality/GedWalk.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/* GedWalk.hpp</span>
+<span class="cm"> *</span>
+<span class="cm"> *  Created on: 18.6.2018</span>
+<span class="cm"> *     Authors: Eugenio Angriman &lt;angrimae@hu-berlin.de&gt;</span>
+<span class="cm"> *              Alexander van der Grinten &lt;avdgrinten@hu-berlin.de&gt;</span>
+<span class="cm"> */</span>
+
+<span class="cp">#ifndef NETWORKIT_CENTRALITY_GED_WALK_HPP_</span>
+<span class="cp">#define NETWORKIT_CENTRALITY_GED_WALK_HPP_</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/auxiliary/VectorComparator.hpp&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/base/Algorithm.hpp&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/graph/Graph.hpp&gt;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tlx/container/d_ary_addressable_int_heap.hpp&gt;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">NetworKit</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">GedWalk</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Algorithm</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">walks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">double</span><span class="p">;</span>
+
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="nc">GreedyStrategy</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">LAZY</span><span class="p">,</span>
+<span class="w">        </span><span class="n">STOCHASTIC</span><span class="p">,</span>
+<span class="w">        </span><span class="n">lazy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LAZY</span><span class="p">,</span><span class="w"> </span><span class="c1">// this + following added for backwards compatibility</span>
+<span class="w">        </span><span class="n">stochastic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STOCHASTIC</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="nc">BoundStrategy</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">NO</span><span class="p">,</span>
+<span class="w">        </span><span class="n">SPECTRAL</span><span class="p">,</span>
+<span class="w">        </span><span class="n">GEOMETRIC</span><span class="p">,</span>
+<span class="w">        </span><span class="n">ADAPTIVE_GEOMETRIC</span><span class="p">,</span>
+<span class="w">        </span><span class="n">no</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NO</span><span class="p">,</span><span class="w"> </span><span class="c1">// this + following added for backwards compatibility</span>
+<span class="w">        </span><span class="n">spectral</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SPECTRAL</span><span class="p">,</span>
+<span class="w">        </span><span class="n">geometric</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GEOMETRIC</span><span class="p">,</span>
+<span class="w">        </span><span class="n">adaptiveGeometric</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ADAPTIVE_GEOMETRIC</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">stocEpsilon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span><span class="p">;</span>
+
+<span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="o">*</span><span class="n">G</span><span class="p">;</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="n">k</span><span class="p">;</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">epsilon</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">alpha</span><span class="p">;</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">BoundStrategy</span><span class="w"> </span><span class="n">boundStrategy</span><span class="p">;</span>
+<span class="w">    </span><span class="n">GreedyStrategy</span><span class="w"> </span><span class="n">greedyStrategy</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">spectralDelta</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">degOutMax</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">degInMax</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alphas</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Size of pathsIn / pathsOut and related vectors.</span>
+<span class="w">    </span><span class="n">count</span><span class="w"> </span><span class="n">allocatedLevels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">sigmaMax</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Similar to gainScore, gainBound and gainW, but for the entire group.</span>
+<span class="w">    </span><span class="c1">// These values are always maintained exactly.</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">groupScore</span><span class="p">;</span><span class="w"> </span><span class="c1">// Score of the group.</span>
+<span class="w">    </span><span class="n">walks</span><span class="w"> </span><span class="n">groupW</span><span class="p">;</span><span class="w">      </span><span class="c1">// Number of walks on the last level.</span>
+<span class="w">    </span><span class="n">walks</span><span class="w"> </span><span class="n">groupBound</span><span class="p">;</span><span class="w">  </span><span class="c1">// Upper bound on the score of the group.</span>
+
+<span class="w">    </span><span class="n">walks</span><span class="w"> </span><span class="n">graphW</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">count</span><span class="w"> </span><span class="n">nLevels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">group</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">inGroup</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">isExact</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nodesToPick</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">walks</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">pathsIn</span><span class="p">,</span><span class="w"> </span><span class="n">pathsOut</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">walks</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">pathsHit</span><span class="p">,</span><span class="w"> </span><span class="n">pathsMiss</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Unless isExact[x], these values might be upper bounds on the true values.</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">gainScore</span><span class="p">;</span><span class="w"> </span><span class="c1">// Marginal score of the group.</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">walks</span><span class="o">&gt;</span><span class="w"> </span><span class="n">gainW</span><span class="p">;</span><span class="w">      </span><span class="c1">// Number of marginal walks on the last level.</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">gainBound</span><span class="p">;</span><span class="w"> </span><span class="c1">// Upper bound on the marginal score.</span>
+
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">EvaluationResult</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">score</span><span class="p">;</span>
+<span class="w">        </span><span class="n">walks</span><span class="w"> </span><span class="n">w</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="n">tlx</span><span class="o">::</span><span class="n">d_ary_addressable_int_heap</span><span class="o">&lt;</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">Aux</span><span class="o">::</span><span class="n">GreaterInVector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">scoreQ</span><span class="p">{</span><span class="n">gainScore</span><span class="p">},</span>
+<span class="w">        </span><span class="n">boundQ</span><span class="p">{</span><span class="n">gainBound</span><span class="p">};</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">computeGamma</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">estimateGains</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">computeMarginalGain</span><span class="p">(</span><span class="n">node</span><span class="w"> </span><span class="n">z</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">maximizeGain</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">separateNodes</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">computeSigmaMax</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">fillPQs</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">updateAlphas</span><span class="p">();</span>
+<span class="w">    </span><span class="n">EvaluationResult</span><span class="w"> </span><span class="nf">evaluateGraph</span><span class="p">();</span>
+<span class="w">    </span><span class="n">EvaluationResult</span><span class="w"> </span><span class="nf">evaluateGroup</span><span class="p">();</span>
+
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="n">GedWalk</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">initEpsilon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-1.</span><span class="p">,</span>
+<span class="w">            </span><span class="n">BoundStrategy</span><span class="w"> </span><span class="n">bs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BoundStrategy</span><span class="o">::</span><span class="n">GEOMETRIC</span><span class="p">,</span><span class="w"> </span><span class="n">GreedyStrategy</span><span class="w"> </span><span class="n">gs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GreedyStrategy</span><span class="o">::</span><span class="n">LAZY</span><span class="p">,</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">spectralDelta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">getApproximateScore</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">assureFinished</span><span class="p">();</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">groupScore</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">InputIt</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">scoreOfGroup</span><span class="p">(</span><span class="n">InputIt</span><span class="w"> </span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="n">InputIt</span><span class="w"> </span><span class="n">last</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">scoreEpsilon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">.1</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">groupMaxGedWalk</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">assureFinished</span><span class="p">();</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">group</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">boundOfMarginalGains</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">gainBound</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">};</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">InputIt</span><span class="o">&gt;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">GedWalk</span><span class="o">::</span><span class="n">scoreOfGroup</span><span class="p">(</span><span class="n">InputIt</span><span class="w"> </span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="n">InputIt</span><span class="w"> </span><span class="n">last</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">scoreEpsilon</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">boundStrategy</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">BoundStrategy</span><span class="o">::</span><span class="n">SPECTRAL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">assert</span><span class="p">(</span><span class="n">alpha</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">sigmaMax</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">1.</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">boundStrategy</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">BoundStrategy</span><span class="o">::</span><span class="n">GEOMETRIC</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">assert</span><span class="p">(</span><span class="n">alpha</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">degInMax</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">1.</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">assert</span><span class="p">(</span><span class="n">boundStrategy</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">BoundStrategy</span><span class="o">::</span><span class="n">ADAPTIVE_GEOMETRIC</span><span class="p">);</span>
+<span class="w">        </span><span class="n">assert</span><span class="p">(</span><span class="n">alpha</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">degOutMax</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">degInMax</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">1.</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">fill</span><span class="p">(</span><span class="n">pathsHit</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">pathsHit</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">walks</span><span class="p">{</span><span class="mi">0</span><span class="p">});</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">fill</span><span class="p">(</span><span class="n">pathsMiss</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">pathsMiss</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">walks</span><span class="p">{</span><span class="mi">1</span><span class="p">});</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">fill</span><span class="p">(</span><span class="n">inGroup</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">inGroup</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">first</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">last</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="n">first</span><span class="p">;</span>
+<span class="w">        </span><span class="n">inGroup</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="n">pathsHit</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">pathsMiss</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
+<span class="w">        </span><span class="o">++</span><span class="n">first</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">graphW</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">evaluateGraph</span><span class="p">().</span><span class="n">w</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">evaluateGroup</span><span class="p">();</span>
+<span class="w">        </span><span class="n">groupScore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">score</span><span class="p">;</span>
+<span class="w">        </span><span class="n">groupW</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">w</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">boundStrategy</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">BoundStrategy</span><span class="o">::</span><span class="n">SPECTRAL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">gamma</span><span class="w"> </span><span class="o">=</span>
+<span class="w">                </span><span class="n">std</span><span class="o">::</span><span class="n">sqrt</span><span class="p">(</span><span class="n">G</span><span class="o">-&gt;</span><span class="n">numberOfNodes</span><span class="p">())</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">sigmaMax</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sigmaMax</span><span class="p">));</span>
+<span class="w">            </span><span class="n">groupBound</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">alphas</span><span class="p">[</span><span class="n">nLevels</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">gamma</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">graphW</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">boundStrategy</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">BoundStrategy</span><span class="o">::</span><span class="n">GEOMETRIC</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">gamma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">degInMax</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">degInMax</span><span class="p">));</span>
+<span class="w">            </span><span class="n">groupBound</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">alphas</span><span class="p">[</span><span class="n">nLevels</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">gamma</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">graphW</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">assert</span><span class="p">(</span><span class="n">boundStrategy</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">BoundStrategy</span><span class="o">::</span><span class="n">ADAPTIVE_GEOMETRIC</span><span class="p">);</span>
+<span class="w">            </span><span class="n">groupBound</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">score</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">alphas</span><span class="p">[</span><span class="n">nLevels</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">computeGamma</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">w</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">DEBUG</span><span class="p">(</span><span class="s">&quot;score is &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">groupScore</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;, bound is &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">groupBound</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">groupBound</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">groupScore</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">scoreEpsilon</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">groupScore</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">DEBUG</span><span class="p">(</span><span class="s">&quot;increasing path length to &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nLevels</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nLevels</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">allocatedLevels</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DEBUG</span><span class="p">(</span><span class="s">&quot;allocating &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nLevels</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; GedWalk levels&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">allocatedLevels</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nLevels</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">pathsIn</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">((</span><span class="n">G</span><span class="o">-&gt;</span><span class="n">upperNodeIdBound</span><span class="p">()));</span>
+<span class="w">                </span><span class="n">pathsOut</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">((</span><span class="n">G</span><span class="o">-&gt;</span><span class="n">upperNodeIdBound</span><span class="p">()));</span>
+<span class="w">                </span><span class="n">pathsHit</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">((</span><span class="n">G</span><span class="o">-&gt;</span><span class="n">upperNodeIdBound</span><span class="p">()));</span>
+<span class="w">                </span><span class="n">pathsMiss</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">((</span><span class="n">G</span><span class="o">-&gt;</span><span class="n">upperNodeIdBound</span><span class="p">()));</span>
+<span class="w">                </span><span class="o">++</span><span class="n">allocatedLevels</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="n">updateAlphas</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="o">++</span><span class="n">nLevels</span><span class="p">;</span>
+<span class="w">        </span><span class="n">graphW</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">evaluateGraph</span><span class="p">().</span><span class="n">w</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace NetworKit</span>
+<span class="cp">#endif </span><span class="c1">// NETWORKIT_CENTRALITY_GED_WALK_HPP_</span>
+</pre></div>
+</div>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>
