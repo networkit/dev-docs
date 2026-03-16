@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <meta property="article:modified_time" content="2020-10-21T10:17:44+02:00" />
     <title>networkit.distance</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
@@ -94,7 +95,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
@@ -148,7 +166,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -170,7 +187,7 @@
 Computes all pairwise shortest-path distances in G.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p>
 </dd>
 </dl>
 <dl class="py method">
@@ -221,7 +238,7 @@ type is float.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>heu</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – List of lower bounds of the distance of each node to the target.</p></li>
 <li><p><strong>source</strong> (<em>int</em>) – The source node.</p></li>
 <li><p><strong>target</strong> (<em>int</em>) – The target node.</p></li>
@@ -239,7 +256,7 @@ and reconstruct a shortest path from source and target. Default: True</p></li>
 <p>Calculate the adamic adar similarity.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 <dl class="py method">
@@ -293,7 +310,7 @@ Algebraic distances will become small within dense subgraphs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to calculate Jaccard distances for.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to calculate Jaccard distances for.</p></li>
 <li><p><strong>numberSystems</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of vectors/systems used for algebraic iteration. Default: 10</p></li>
 <li><p><strong>numberIterations</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of iterations in each system. Default: 30</p></li>
 <li><p><strong>omega</strong> (<em>float</em><em>, </em><em>optional</em>) – Attenuation factor in [0,1] influencing convergence speed. Default: 0.5</p></li>
@@ -379,7 +396,7 @@ CAUTION: This algorithm could take a lot of time on large networks (many edges),
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
 <li><p><strong>source</strong> (<em>int</em>) – The source node of the breadth-first search.</p></li>
 <li><p><strong>storePaths</strong> (<em>bool</em><em>, </em><em>optional</em>) – Controls whether to store paths and number of paths. Default: True</p></li>
 <li><p><strong>storeNodesSortedByDistance</strong> (<em>bool</em><em>, </em><em>optional</em>) – Controls whether to store nodes sorted by distance. Default: False</p></li>
@@ -398,7 +415,7 @@ Explores the graph from both the source and target nodes until the two explorati
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>source</strong> (<em>int</em>) – The source node.</p></li>
 <li><p><strong>target</strong> (<em>int</em>) – The target node.</p></li>
 <li><p><strong>storePred</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, the algorithm will also store the predecessors
@@ -427,7 +444,7 @@ the two explorations meet.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
 <li><p><strong>tol</strong> (<em>float</em><em>, </em><em>optional</em>) – Tolerance for computation (higher tolerance leads to faster running times). Default: 0.1</p></li>
 </ul>
 </dd>
@@ -519,7 +536,7 @@ the two explorations meet.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>algo</strong> (<a class="reference internal" href="#networkit.distance.DiameterAlgo" title="networkit.distance.DiameterAlgo"><em>networkit.distance.DiameterAlgo</em></a><em>, </em><em>optional</em>) – Algorithm which should be used for diameter computation. Default: networkit.distance.DiameterAlgo.AUTOMATIC</p></li>
 <li><p><strong>error</strong> (<em>float</em><em>, </em><em>optional</em>) – Possible error used for diameter algorithm EstimatedRange. Default: -1</p></li>
 <li><p><strong>nSamples</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of samples (influencing the quality of the output) used for diameter algorithm EstimatedSamples. Default: 0</p></li>
@@ -606,7 +623,7 @@ any other node.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
 <li><p><strong>source</strong> (<em>int</em>) – The source node of the Dijkstra search.</p></li>
 <li><p><strong>storePaths</strong> (<em>bool</em><em>, </em><em>optional</em>) – Controls whether to store paths and number of paths. Default: True</p></li>
 <li><p><strong>storeNodesSortedByDistance</strong> (<em>bool</em><em>, </em><em>optional</em>) – Controls whether to store nodes sorted by distance. Default: False</p></li>
@@ -624,7 +641,7 @@ any other node.</p>
 Computes all pairwise shortest-path distances in G.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -637,7 +654,7 @@ Computes all pairwise shortest-path distances in G.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
 <li><p><strong>source</strong> (<em>int</em>) – The source node of the breadth-first search.</p></li>
 </ul>
 </dd>
@@ -652,7 +669,7 @@ Computes all pairwise shortest-path distances in G.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
 <li><p><strong>source</strong> (<em>int</em>) – The source node of the Dijkstra search.</p></li>
 </ul>
 </dd>
@@ -672,7 +689,7 @@ Note: this algorithm only works for unweighted graphs and only supports
 edge insertions.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 <dl class="py method">
@@ -743,7 +760,7 @@ depending on whether node t has been modified by the update.</p>
 <dd><p>Get eccentricity value of node v from graph G.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>First index is the farthest node v from u, and the second index is the length of the shortest path from u to v.</p>
@@ -765,7 +782,7 @@ The effective diameter is defined as the number of edges on average to reach a g
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
 <li><p><strong>ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of nodes that shall be within stepwidth; default = 0.9</p></li>
 </ul>
 </dd>
@@ -796,7 +813,7 @@ The effective diameter is defined as the number of edges on average to reach a g
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
 <li><p><strong>ratio</strong> (<em>float</em><em>, </em><em>optional</em>) – The percentage of nodes that shall be within stepwidth, default = 0.9</p></li>
 <li><p><strong>k</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of parallel approximations, bigger k -&gt; longer runtime, more precise result; default = 64</p></li>
 <li><p><strong>r</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of additional bits, important in tiny graphs; default = 7</p></li>
@@ -819,95 +836,6 @@ The effective diameter is defined as the number of edges on average to reach a g
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="networkit.distance.FloydWarshall">
-<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">FloydWarshall</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.FloydWarshall" title="Link to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
-<p>Computes all-pairs shortest paths using the Floyd–Warshall algorithm.
-This algorithm finds the shortest paths between all node pairs in a weighted graph
-(directed or undirected). It correctly handles negative edge weights and can detect
-nodes that lie on negative cycles.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>)</p></li>
-<li><p><strong>undirected.</strong> (<em>Weighted input graph. May be directed or</em>)</p></li>
-</ul>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>The algorithm runs in O(n^3) time and is mainly suitable for small to
-medium-sized graphs.</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="networkit.distance.FloydWarshall.getDistance">
-<span class="sig-name descname"><span class="pre">getDistance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.FloydWarshall.getDistance" title="Link to this definition">¶</a></dt>
-<dd><p>Returns the shortest distance between two nodes.</p>
-<p>If no path exists, this returns a very large sentinel value
-(typically std::numeric_limits&lt;edgeweight&gt;::max()).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>source</strong> (<em>int</em>) – Source node.</p></li>
-<li><p><strong>target</strong> (<em>int</em>) – Target node.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Distance from source to target.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="networkit.distance.FloydWarshall.getNodesOnShortestPath">
-<span class="sig-name descname"><span class="pre">getNodesOnShortestPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.FloydWarshall.getNodesOnShortestPath" title="Link to this definition">¶</a></dt>
-<dd><p>Returns the nodes on one shortest path from source to target.</p>
-<p>If multiple shortest paths exist with the same total distance,
-the path with the fewest nodes is returned. If no path exists,
-an empty list is returned.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>source</strong> (<em>int</em>) – Source node.</p></li>
-<li><p><strong>target</strong> (<em>int</em>) – Target node.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Sequence of nodes forming the path from source to target.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list(int)</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="networkit.distance.FloydWarshall.isNodeInNegativeCycle">
-<span class="sig-name descname"><span class="pre">isNodeInNegativeCycle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.FloydWarshall.isNodeInNegativeCycle" title="Link to this definition">¶</a></dt>
-<dd><p>Check whether a node is part of a negative cycle.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>u</strong> (<em>int</em>) – Node to check.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>True if u lies on a negative cycle, False otherwise.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="networkit.distance.FloydWarshall.run">
-<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.FloydWarshall.run" title="Link to this definition">¶</a></dt>
-<dd><p>Execute the Floyd–Warshall algorithm and compute all-pairs shortest paths.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
 <dt class="sig sig-object py" id="networkit.distance.HopPlotApproximation">
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.distance.</span></span><span class="sig-name descname"><span class="pre">HopPlotApproximation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxDistance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">64</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">7</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.HopPlotApproximation" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
@@ -919,7 +847,7 @@ and where g(d) is the fraction of connected node pairs whose shortest connecting
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
 <li><p><strong>maxDistance</strong> (<em>float</em><em>, </em><em>optional</em>) – Maximum distance between considered nodes set to 0 or negative to get the hop-plot
 for the entire graph so that each node can reach each other node.</p></li>
 <li><p><strong>k</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of parallel approximations, bigger k -&gt; longer runtime, more precise result; default = 64</p></li>
@@ -973,7 +901,7 @@ of the neighborhoods of the two adjacent nodes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
 <li><p><strong>source</strong> (<em>int</em>) – The source node of the breadth-first search.</p></li>
 <li><p><strong>targets</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – List of target nodes.</p></li>
 </ul>
@@ -989,7 +917,7 @@ of the neighborhoods of the two adjacent nodes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
 <li><p><strong>source</strong> (<em>int</em>) – The source node of the Dijkstra search.</p></li>
 <li><p><strong>targets</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – List of target nodes.</p></li>
 </ul>
@@ -1006,7 +934,7 @@ The neighborhood function N of a graph G for a given distance t is defined
 as the number of node pairs (u,v) that can be reached within distance t.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p>
 </dd>
 </dl>
 <dl class="py method">
@@ -1037,7 +965,7 @@ as the number of node pairs (u,v) that can be reached within distance t.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
 <li><p><strong>k</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of approximations, bigger k -&gt; longer runtime, more precise result; default = 64</p></li>
 <li><p><strong>r</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of additional bits, important in tiny graphs; default = 7</p></li>
 </ul>
@@ -1073,7 +1001,7 @@ The algorithm runs nSamples breadth-first searches and scales the results up to 
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
 <li><p><strong>nSamples</strong> (<em>int</em><em>, </em><em>optional</em>) – The amount of samples, set to zero for heuristic of max(sqrt(m), 0.15*n). Default: 0</p></li>
 <li><p><strong>strategy</strong> (<a class="reference internal" href="#networkit.distance.SelectionStrategy" title="networkit.distance.SelectionStrategy"><em>networkit.distance.SelectionStrategy</em></a><em>, </em><em>optional</em>) – The strategy to select the samples, accepts RANDOM (0) or SPLIT (1). Default: networkit.distance.SelectionStrategy.SPLIT</p></li>
 </ul>
@@ -1106,7 +1034,7 @@ vertex. Labels are used to quickly retrieve shortest-path distances between node
 Note: this algorithm only works for unweighted graphs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 <dl class="py method">
@@ -1139,7 +1067,7 @@ Note: this algorithm only works for unweighted graphs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
 <li><p><strong>source</strong> (<em>int</em>) – The source node of the breadth-first search.</p></li>
 <li><p><strong>storePaths</strong> (<em>bool</em><em>, </em><em>optional</em>) – Controls whether to store paths and number of paths. Default: True</p></li>
 <li><p><strong>storeNodesSortedByDistance</strong> (<em>bool</em><em>, </em><em>optional</em>) – Controls whether to store nodes sorted by distance. Default: False</p></li>
@@ -1159,7 +1087,7 @@ Computes pairwise shortest-path distances from the source nodes to all the nodes
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
 <li><p><strong>sources</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – Set of source nodes.</p></li>
 </ul>
 </dd>
@@ -1497,7 +1425,7 @@ a list containing the number for every radius is returned.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – the graph</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – the graph</p></li>
 <li><p><strong>r</strong> (<em>float</em>) – the radius (or radii)</p></li>
 <li><p><strong>samples</strong> (<em>int</em><em>, </em><em>optional</em>) – The number of samples. Default: 500</p></li>
 </ul>
@@ -1532,6 +1460,7 @@ a list containing the number for every radius is returned.</p>
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Last updated on Oct 21, 2020.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
     </p>
     <span style="padding-left: 10px">

@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <meta property="article:modified_time" content="2020-10-21T10:17:44+02:00" />
     <title>networkit.globals</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
@@ -96,7 +97,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
@@ -150,7 +168,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -177,7 +194,7 @@ A <code class="code docutils literal notranslate"><span class="pre">ClusteringCo
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>trials</strong> (<em>int</em>) – Number of runs. Higher values result in higher quality and larger running times.</p></li>
 </ul>
 </dd>
@@ -191,7 +208,7 @@ A <code class="code docutils literal notranslate"><span class="pre">ClusteringCo
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>trials</strong> (<em>int</em>) – Number of runs. Higher values result in higher quality and larger running times.</p></li>
 </ul>
 </dd>
@@ -204,7 +221,7 @@ A <code class="code docutils literal notranslate"><span class="pre">ClusteringCo
 <dd><p>Calculates the global clustering coefficient.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -221,7 +238,7 @@ A <code class="code docutils literal notranslate"><span class="pre">ClusteringCo
 \[c(u) := \frac{2 \cdot |E(N(u))| }{\deg(u) \cdot ( \deg(u) - 1)}\]</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -237,7 +254,7 @@ and determines the number of samples taken.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>error</strong> (<em>float</em>) – Maximum allowed error. Default: 0.01</p></li>
 </ul>
 </dd>
@@ -262,6 +279,7 @@ and determines the number of samples taken.</p>
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Last updated on Oct 21, 2020.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
     </p>
     <span style="padding-left: 10px">

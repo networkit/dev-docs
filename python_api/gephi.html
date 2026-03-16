@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <meta property="article:modified_time" content="2023-07-05T12:27:40+02:00" />
     <title>networkit.gephi</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
@@ -94,7 +95,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
@@ -148,7 +166,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -175,7 +192,7 @@ to a CSV file. The values can then be imported to Gephi.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>values</strong> (<em>list</em><em>(</em><em>float</em><em>) or </em><em>networkit.Partition</em>) – Python list or Partition object that contains the values to be exported.</p></li>
+<li><p><strong>values</strong> (<em>list</em><em>(</em><em>float</em><em>) or </em><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – Python list or Partition object that contains the values to be exported.</p></li>
 <li><p><strong>fpath</strong> (<em>str</em>) – The file including its path to be written to.</p></li>
 <li><p><strong>column_name</strong> (<em>str</em>) – Name of the column as description for the data.</p></li>
 </ul>
@@ -380,7 +397,7 @@ If the graph is directed, the edge goes from u to v.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>graph</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>graph</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>scale</strong> (<em>int</em>) – Determines the exported x and y coordinates. Using default scale=1, all node coordinates are being exported, increasing the scale decreases the number of node coordinates being exported.</p></li>
 </ul>
 </dd>
@@ -395,8 +412,8 @@ Use exportGraph(Graph) first to export graph itself.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>graph</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
-<li><p><strong>values</strong> (<em>list</em><em>(</em><em>float</em><em>) or </em><em>networkit.Partition</em>) – Python list or Partition object that contains the values to be exported.</p></li>
+<li><p><strong>graph</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
+<li><p><strong>values</strong> (<em>list</em><em>(</em><em>float</em><em>) or </em><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – Python list or Partition object that contains the values to be exported.</p></li>
 <li><p><strong>attribute_name</strong> (<em>str</em>) – Name of the node attribute in Gephi.</p></li>
 </ul>
 </dd>
@@ -425,7 +442,7 @@ Please note that only graphs with indexed edges can be exported, so
 edges will be indexed if neccessary.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>graph</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>graph</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -439,8 +456,8 @@ the graph itself.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>graph</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
-<li><p><strong>values</strong> (<em>list</em><em>(</em><em>float</em><em>) or </em><em>networkit.Partition</em>) – Python list or Partition object that contains the values to be exported.</p></li>
+<li><p><strong>graph</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
+<li><p><strong>values</strong> (<em>list</em><em>(</em><em>float</em><em>) or </em><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – Python list or Partition object that contains the values to be exported.</p></li>
 <li><p><strong>attribute_name</strong> (<em>str</em>) – Name of the node attribute in Gephi.</p></li>
 </ul>
 </dd>
@@ -482,6 +499,7 @@ the graph itself.</p>
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Last updated on Jul 05, 2023.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
     </p>
     <span style="padding-left: 10px">

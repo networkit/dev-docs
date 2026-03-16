@@ -92,7 +92,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul>
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ Documentation</a></li>
@@ -101,7 +118,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -131,6 +147,7 @@
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/auxiliary/Timer.hpp&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/generators/StaticGraphGenerator.hpp&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/generators/quadtree/Quadtree.hpp&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/geometric/HyperbolicSpace.hpp&gt;</span>
 
 <span class="k">namespace</span><span class="w"> </span><span class="nn">NetworKit</span><span class="w"> </span><span class="p">{</span>
@@ -202,6 +219,7 @@
 
 <span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getMinMaxTheta</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">angle</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">radius</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">cLow</span><span class="p">,</span>
 <span class="w">                                                     </span><span class="kt">double</span><span class="w"> </span><span class="n">thresholdDistance</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
 <span class="w">        </span><span class="c1">// Most innerband is defined by cLow = 0</span>
 <span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">minTheta</span><span class="p">,</span><span class="w"> </span><span class="n">maxTheta</span><span class="p">;</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cLow</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>

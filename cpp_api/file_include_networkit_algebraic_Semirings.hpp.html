@@ -92,7 +92,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul>
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ Documentation</a></li>
@@ -101,7 +118,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -148,13 +164,13 @@
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="classArithmeticSemiring.html#exhale-class-classarithmeticsemiring"><span class="std std-ref">Class ArithmeticSemiring</span></a></p></li>
-<li><p><a class="reference internal" href="classGaloisFieldSemiring.html#exhale-class-classgaloisfieldsemiring"><span class="std std-ref">Class GaloisFieldSemiring</span></a></p></li>
-<li><p><a class="reference internal" href="classIntLogicalSemiring.html#exhale-class-classintlogicalsemiring"><span class="std std-ref">Class IntLogicalSemiring</span></a></p></li>
-<li><p><a class="reference internal" href="classMaxMinSemiring.html#exhale-class-classmaxminsemiring"><span class="std std-ref">Class MaxMinSemiring</span></a></p></li>
-<li><p><a class="reference internal" href="classMaxPlusSemiring.html#exhale-class-classmaxplussemiring"><span class="std std-ref">Class MaxPlusSemiring</span></a></p></li>
-<li><p><a class="reference internal" href="classMinMaxSemiring.html#exhale-class-classminmaxsemiring"><span class="std std-ref">Class MinMaxSemiring</span></a></p></li>
-<li><p><a class="reference internal" href="classMinPlusSemiring.html#exhale-class-classminplussemiring"><span class="std std-ref">Class MinPlusSemiring</span></a></p></li>
+<li><p><a class="reference internal" href="class_arithmetic_semiring.html#exhale-class-class-arithmetic-semiring"><span class="std std-ref">Class ArithmeticSemiring</span></a></p></li>
+<li><p><a class="reference internal" href="class_galois_field_semiring.html#exhale-class-class-galois-field-semiring"><span class="std std-ref">Class GaloisFieldSemiring</span></a></p></li>
+<li><p><a class="reference internal" href="class_int_logical_semiring.html#exhale-class-class-int-logical-semiring"><span class="std std-ref">Class IntLogicalSemiring</span></a></p></li>
+<li><p><a class="reference internal" href="class_max_min_semiring.html#exhale-class-class-max-min-semiring"><span class="std std-ref">Class MaxMinSemiring</span></a></p></li>
+<li><p><a class="reference internal" href="class_max_plus_semiring.html#exhale-class-class-max-plus-semiring"><span class="std std-ref">Class MaxPlusSemiring</span></a></p></li>
+<li><p><a class="reference internal" href="class_min_max_semiring.html#exhale-class-class-min-max-semiring"><span class="std std-ref">Class MinMaxSemiring</span></a></p></li>
+<li><p><a class="reference internal" href="class_min_plus_semiring.html#exhale-class-class-min-plus-semiring"><span class="std std-ref">Class MinPlusSemiring</span></a></p></li>
 </ul>
 </section>
 </section>

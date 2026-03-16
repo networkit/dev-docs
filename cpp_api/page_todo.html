@@ -94,7 +94,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
@@ -120,7 +137,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -139,7 +155,7 @@
 <span class="target" id="todo"></span><em><span class="pre">page</span></em> <span class="sig-name descname"><span class="pre">Todo</span> <span class="pre">List</span></span></dt>
 <dd><p><dl>
 <dt class="sig sig-object cpp">
-<span class="pre">Member</span> <a class="reference internal" href="classNetworKit_1_1IncompleteDijkstra.html#classNetworKit_1_1IncompleteDijkstra_1ad15d2c81148e8bd36f921039817df1a3"><span class="std std-ref"><span class="pre">NetworKit::IncompleteDijkstra::IncompleteDijkstra</span></span></a>&#160; <span class="pre">(const</span> <a class="reference internal" href="classNetworKit_1_1Graph.html#classNetworKit_1_1Graph"><span class="std std-ref"><span class="pre">Graph</span></span></a> <span class="pre">*G,</span> <span class="pre">const</span> <span class="pre">std::vector&lt;</span> <span class="pre">node</span> <span class="pre">&gt;</span> <span class="pre">&amp;sources,</span> <span class="pre">const</span> <span class="pre">std::unordered_set&lt;</span> <span class="pre">node</span> <span class="pre">&gt;</span> <span class="pre">*explored=nullptr)</span></dt>
+<span class="pre">Member</span> <a class="reference internal" href="class_networ_kit_1_1_incomplete_dijkstra.html#class_networ_kit_1_1_incomplete_dijkstra_1ad15d2c81148e8bd36f921039817df1a3"><span class="std std-ref"><span class="pre">NetworKit::IncompleteDijkstra::IncompleteDijkstra</span></span></a>&#160; <span class="pre">(const</span> <a class="reference internal" href="class_networ_kit_1_1_graph.html#class_networ_kit_1_1_graph"><span class="std std-ref"><span class="pre">Graph</span></span></a> <span class="pre">*G,</span> <span class="pre">const</span> <span class="pre">std::vector&lt;</span> <span class="pre">node</span> <span class="pre">&gt;</span> <span class="pre">&amp;sources,</span> <span class="pre">const</span> <span class="pre">std::unordered_set&lt;</span> <span class="pre">node</span> <span class="pre">&gt;</span> <span class="pre">*explored=nullptr)</span></dt>
 <dd><p><span class="target" id="todo_1_todo000001"></span>This is somewhat ugly, but we do not want introduce a std::shared_ptr&lt;&gt; since <em>G</em> and <em>explored</em> could well be stack allocated. </p>
 </dd></dl>
 

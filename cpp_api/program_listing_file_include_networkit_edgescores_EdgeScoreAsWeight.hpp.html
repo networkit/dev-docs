@@ -92,7 +92,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul>
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ Documentation</a></li>
@@ -101,7 +118,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -126,7 +142,6 @@
 <span class="cp">#ifndef NETWORKIT_EDGESCORES_EDGE_SCORE_AS_WEIGHT_HPP_</span>
 <span class="cp">#define NETWORKIT_EDGESCORES_EDGE_SCORE_AS_WEIGHT_HPP_</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tlx/define/deprecated.hpp&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/graph/Graph.hpp&gt;</span>
 
 <span class="k">namespace</span><span class="w"> </span><span class="nn">NetworKit</span><span class="w"> </span><span class="p">{</span>
@@ -134,11 +149,9 @@
 <span class="k">class</span><span class="w"> </span><span class="nc">EdgeScoreAsWeight</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="p">{</span>
 
 <span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="c1">// Please note this class EdgeScoreAsWeight is deprecated and will be removed in future releases</span>
-<span class="w">    </span><span class="n">TLX_DEPRECATED</span><span class="p">(</span><span class="n">EdgeScoreAsWeight</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">score</span><span class="p">,</span>
-<span class="w">                                     </span><span class="kt">bool</span><span class="w"> </span><span class="n">squared</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="n">edgeweight</span><span class="w"> </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<span class="w">                                     </span><span class="n">edgeweight</span><span class="w"> </span><span class="n">factor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span>
-<span class="w">    </span><span class="n">TLX_DEPRECATED</span><span class="p">(</span><span class="n">Graph</span><span class="w"> </span><span class="n">calculate</span><span class="p">());</span>
+<span class="w">    </span><span class="n">EdgeScoreAsWeight</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">score</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">squared</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">edgeweight</span><span class="w"> </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">edgeweight</span><span class="w"> </span><span class="n">factor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Graph</span><span class="w"> </span><span class="nf">calculate</span><span class="p">();</span>
 
 <span class="k">private</span><span class="o">:</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="o">*</span><span class="n">G</span><span class="p">;</span>

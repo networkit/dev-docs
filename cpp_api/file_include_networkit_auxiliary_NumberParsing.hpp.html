@@ -92,7 +92,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul>
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ Documentation</a></li>
@@ -101,7 +118,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -159,24 +175,24 @@
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="classAux_1_1Parsing_1_1Impl_1_1IntegerTag.html#exhale-class-classaux-1-1parsing-1-1impl-1-1integertag"><span class="std std-ref">Class IntegerTag</span></a></p></li>
-<li><p><a class="reference internal" href="classAux_1_1Parsing_1_1Impl_1_1RealTag.html#exhale-class-classaux-1-1parsing-1-1impl-1-1realtag"><span class="std std-ref">Class RealTag</span></a></p></li>
+<li><p><a class="reference internal" href="class_aux_1_1_parsing_1_1_impl_1_1_integer_tag.html#exhale-class-class-aux-1-1-parsing-1-1-impl-1-1-integer-tag"><span class="std std-ref">Class IntegerTag</span></a></p></li>
+<li><p><a class="reference internal" href="class_aux_1_1_parsing_1_1_impl_1_1_real_tag.html#exhale-class-class-aux-1-1-parsing-1-1-impl-1-1-real-tag"><span class="std std-ref">Class RealTag</span></a></p></li>
 </ul>
 </section>
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="function_NumberParsing_8hpp_1a002da095182b7d7093b4f6ce8019f2dd.html#exhale-function-numberparsing-8hpp-1a002da095182b7d7093b4f6ce8019f2dd"><span class="std std-ref">Template Function Aux::Parsing::Impl::dropSpaces</span></a></p></li>
-<li><p><a class="reference internal" href="function_NumberParsing_8hpp_1a3ecd035e35701ff8d1b98ca16e06c1d6.html#exhale-function-numberparsing-8hpp-1a3ecd035e35701ff8d1b98ca16e06c1d6"><span class="std std-ref">Template Function Aux::Parsing::Impl::powerOf10</span></a></p></li>
-<li><p><a class="reference internal" href="function_NumberParsing_8hpp_1acfef505529191c8b85aa827ee3f45e69.html#exhale-function-numberparsing-8hpp-1acfef505529191c8b85aa827ee3f45e69"><span class="std std-ref">Template Function Aux::Parsing::Impl::strTo(CharIterator, CharIterator, IntegerTag)</span></a></p></li>
-<li><p><a class="reference internal" href="function_NumberParsing_8hpp_1a8ddb8114dbb19f4f3eaee1cdb941b0a2.html#exhale-function-numberparsing-8hpp-1a8ddb8114dbb19f4f3eaee1cdb941b0a2"><span class="std std-ref">Template Function Aux::Parsing::Impl::strTo(CharIterator, CharIterator, RealTag)</span></a></p></li>
-<li><p><a class="reference internal" href="function_NumberParsing_8hpp_1ae92bfdebbb7af2708e855c0290a2c8f7.html#exhale-function-numberparsing-8hpp-1ae92bfdebbb7af2708e855c0290a2c8f7"><span class="std std-ref">Template Function Aux::Parsing::strTo</span></a></p></li>
+<li><p><a class="reference internal" href="function__number_parsing_8hpp_1a002da095182b7d7093b4f6ce8019f2dd.html#exhale-function-number-parsing-8hpp-1a002da095182b7d7093b4f6ce8019f2dd"><span class="std std-ref">Template Function Aux::Parsing::Impl::dropSpaces</span></a></p></li>
+<li><p><a class="reference internal" href="function__number_parsing_8hpp_1a3ecd035e35701ff8d1b98ca16e06c1d6.html#exhale-function-number-parsing-8hpp-1a3ecd035e35701ff8d1b98ca16e06c1d6"><span class="std std-ref">Template Function Aux::Parsing::Impl::powerOf10</span></a></p></li>
+<li><p><a class="reference internal" href="function__number_parsing_8hpp_1acfef505529191c8b85aa827ee3f45e69.html#exhale-function-number-parsing-8hpp-1acfef505529191c8b85aa827ee3f45e69"><span class="std std-ref">Template Function Aux::Parsing::Impl::strTo(CharIterator, CharIterator, IntegerTag)</span></a></p></li>
+<li><p><a class="reference internal" href="function__number_parsing_8hpp_1a8ddb8114dbb19f4f3eaee1cdb941b0a2.html#exhale-function-number-parsing-8hpp-1a8ddb8114dbb19f4f3eaee1cdb941b0a2"><span class="std std-ref">Template Function Aux::Parsing::Impl::strTo(CharIterator, CharIterator, RealTag)</span></a></p></li>
+<li><p><a class="reference internal" href="function__number_parsing_8hpp_1a53e6ce1dcc4557fb3881cbf85ba38357.html#exhale-function-number-parsing-8hpp-1a53e6ce1dcc4557fb3881cbf85ba38357"><span class="std std-ref">Template Function Aux::Parsing::strTo</span></a></p></li>
 </ul>
 </section>
 <section id="typedefs">
 <h2>Typedefs<a class="headerlink" href="#typedefs" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="typedef_NumberParsing_8hpp_1ad178c2e84d5d1b854c97c364430f27aa.html#exhale-typedef-numberparsing-8hpp-1ad178c2e84d5d1b854c97c364430f27aa"><span class="std std-ref">Typedef Aux::Parsing::Impl::ArithmeticTag</span></a></p></li>
+<li><p><a class="reference internal" href="typedef__number_parsing_8hpp_1a25bc5ea3879a482b74ef877b5675e081.html#exhale-typedef-number-parsing-8hpp-1a25bc5ea3879a482b74ef877b5675e081"><span class="std std-ref">Typedef Aux::Parsing::Impl::ArithmeticTag</span></a></p></li>
 </ul>
 </section>
 </section>

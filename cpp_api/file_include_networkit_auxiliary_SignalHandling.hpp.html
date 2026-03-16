@@ -92,7 +92,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul>
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ Documentation</a></li>
@@ -101,7 +118,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -143,9 +159,9 @@
 <section id="included-by">
 <h2>Included By<a class="headerlink" href="#included-by" title="Link to this heading">¶</a></h2>
 <ul class="simple">
+<li><p><a class="reference internal" href="file_include_networkit_GlobalState.hpp.html#file-include-networkit-globalstate-hpp"><span class="std std-ref">File GlobalState.hpp</span></a></p></li>
 <li><p><a class="reference internal" href="file_include_networkit_community_ParallelLeiden.hpp.html#file-include-networkit-community-parallelleiden-hpp"><span class="std std-ref">File ParallelLeiden.hpp</span></a></p></li>
 <li><p><a class="reference internal" href="file_include_networkit_generators_ErdosRenyiEnumerator.hpp.html#file-include-networkit-generators-erdosrenyienumerator-hpp"><span class="std std-ref">File ErdosRenyiEnumerator.hpp</span></a></p></li>
-<li><p><a class="reference internal" href="file_include_networkit_GlobalState.hpp.html#file-include-networkit-globalstate-hpp"><span class="std std-ref">File GlobalState.hpp</span></a></p></li>
 </ul>
 </section>
 <section id="namespaces">
@@ -157,8 +173,8 @@
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="classAux_1_1SignalHandler.html#exhale-class-classaux-1-1signalhandler"><span class="std std-ref">Class SignalHandler</span></a></p></li>
-<li><p><a class="reference internal" href="classAux_1_1SignalHandler_1_1InterruptException.html#exhale-class-classaux-1-1signalhandler-1-1interruptexception"><span class="std std-ref">Class SignalHandler::InterruptException</span></a></p></li>
+<li><p><a class="reference internal" href="class_aux_1_1_signal_handler.html#exhale-class-class-aux-1-1-signal-handler"><span class="std std-ref">Class SignalHandler</span></a></p></li>
+<li><p><a class="reference internal" href="class_aux_1_1_signal_handler_1_1_interrupt_exception.html#exhale-class-class-aux-1-1-signal-handler-1-1-interrupt-exception"><span class="std std-ref">Class SignalHandler::InterruptException</span></a></p></li>
 </ul>
 </section>
 </section>

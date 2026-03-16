@@ -94,7 +94,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
@@ -120,7 +137,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -143,45 +159,45 @@
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a5e481335db685d3ca19eb5631edade99.html#exhale-function-graphtools-8hpp-1a5e481335db685d3ca19eb5631edade99"><span class="std std-ref">Function NetworKit::GraphTools::append</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a05c760e9942062b2df8dab73a234bf04.html#exhale-function-graphtools-8hpp-1a05c760e9942062b2df8dab73a234bf04"><span class="std std-ref">Function NetworKit::GraphTools::augmentGraph</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a1a33f6a58791749e4973f2fa05a81872.html#exhale-function-graphtools-8hpp-1a1a33f6a58791749e4973f2fa05a81872"><span class="std std-ref">Function NetworKit::GraphTools::copyNodes</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a951c7c9e9f4559fddb54d4e1fc1e970b.html#exhale-function-graphtools-8hpp-1a951c7c9e9f4559fddb54d4e1fc1e970b"><span class="std std-ref">Function NetworKit::GraphTools::createAugmentedGraph</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a37de0d910d860e0e50029daa1efb2363.html#exhale-function-graphtools-8hpp-1a37de0d910d860e0e50029daa1efb2363"><span class="std std-ref">Function NetworKit::GraphTools::density</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a4ca64e2e2201df79501d27e9e61c7af9.html#exhale-function-graphtools-8hpp-1a4ca64e2e2201df79501d27e9e61c7af9"><span class="std std-ref">Function NetworKit::GraphTools::getCompactedGraph</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a4a0be39a990bffef81b8b9f01937759b.html#exhale-function-graphtools-8hpp-1a4a0be39a990bffef81b8b9f01937759b"><span class="std std-ref">Function NetworKit::GraphTools::getContinuousNodeIds</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1acdb2fd6aabafd79e3176008fb3278706.html#exhale-function-graphtools-8hpp-1acdb2fd6aabafd79e3176008fb3278706"><span class="std std-ref">Function NetworKit::GraphTools::getRandomContinuousNodeIds</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1aa28d6c75546f85c635073d67106cafb1.html#exhale-function-graphtools-8hpp-1aa28d6c75546f85c635073d67106cafb1"><span class="std std-ref">Template Function NetworKit::GraphTools::getRemappedGraph(const Graph&amp;, count, UnaryIdMapper&amp;&amp;, SkipEdgePredicate&amp;&amp;, bool)</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a22bdd3555fb48d202c108b3a67495ccd.html#exhale-function-graphtools-8hpp-1a22bdd3555fb48d202c108b3a67495ccd"><span class="std std-ref">Template Function NetworKit::GraphTools::getRemappedGraph(const Graph&amp;, count, UnaryIdMapper&amp;&amp;, bool)</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a234ea4c833b63a3c4161ea05068e489b.html#exhale-function-graphtools-8hpp-1a234ea4c833b63a3c4161ea05068e489b"><span class="std std-ref">Function NetworKit::GraphTools::invertContinuousNodeIds</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a6fbbc09849955975b2efec58f3a3ffd7.html#exhale-function-graphtools-8hpp-1a6fbbc09849955975b2efec58f3a3ffd7"><span class="std std-ref">Template Function NetworKit::GraphTools::inVolume</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a414c36611a9fa6ff3e7a32c4a8be32cc.html#exhale-function-graphtools-8hpp-1a414c36611a9fa6ff3e7a32c4a8be32cc"><span class="std std-ref">Function NetworKit::GraphTools::isBipartite</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1af41528e323a7faec3b51ac89c562f4c7.html#exhale-function-graphtools-8hpp-1af41528e323a7faec3b51ac89c562f4c7"><span class="std std-ref">Function NetworKit::GraphTools::maxDegree</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a46e351dedf765706522d4976cbfa577b.html#exhale-function-graphtools-8hpp-1a46e351dedf765706522d4976cbfa577b"><span class="std std-ref">Function NetworKit::GraphTools::maxInDegree</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1acd14038f1a135c6ed319d228e10d8c85.html#exhale-function-graphtools-8hpp-1acd14038f1a135c6ed319d228e10d8c85"><span class="std std-ref">Function NetworKit::GraphTools::maxWeightedDegree</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a9da4d676237974b4bdfc521271a42d18.html#exhale-function-graphtools-8hpp-1a9da4d676237974b4bdfc521271a42d18"><span class="std std-ref">Function NetworKit::GraphTools::maxWeightedInDegree</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1ac593463838b8f92ef1f5d1d08127b98d.html#exhale-function-graphtools-8hpp-1ac593463838b8f92ef1f5d1d08127b98d"><span class="std std-ref">Function NetworKit::GraphTools::merge</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a418280f0f720e6f3442c0e3076805128.html#exhale-function-graphtools-8hpp-1a418280f0f720e6f3442c0e3076805128"><span class="std std-ref">Function NetworKit::GraphTools::randomEdge</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a83497507f3eefb5be11bd7049488fd28.html#exhale-function-graphtools-8hpp-1a83497507f3eefb5be11bd7049488fd28"><span class="std std-ref">Function NetworKit::GraphTools::randomEdges</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a5dd7a22d3b05cdbaf922c7083b15298e.html#exhale-function-graphtools-8hpp-1a5dd7a22d3b05cdbaf922c7083b15298e"><span class="std std-ref">Template Function NetworKit::GraphTools::randomizeWeights</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a8932fd72810fdc36fad211494a82ba68.html#exhale-function-graphtools-8hpp-1a8932fd72810fdc36fad211494a82ba68"><span class="std std-ref">Function NetworKit::GraphTools::randomNeighbor</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1ac9072b0e113933902f563d65d21c5277.html#exhale-function-graphtools-8hpp-1ac9072b0e113933902f563d65d21c5277"><span class="std std-ref">Function NetworKit::GraphTools::randomNode</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1ace46f30c5196f2ab9a54a6f12be7d39b.html#exhale-function-graphtools-8hpp-1ace46f30c5196f2ab9a54a6f12be7d39b"><span class="std std-ref">Function NetworKit::GraphTools::randomNodes</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1aa917b6deb83b48595a97ad1f5df26fe9.html#exhale-function-graphtools-8hpp-1aa917b6deb83b48595a97ad1f5df26fe9"><span class="std std-ref">Template Function NetworKit::GraphTools::removeEdgesFromIsolatedSet</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a0fdcd7d906ff6bf75cff441d221a0298.html#exhale-function-graphtools-8hpp-1a0fdcd7d906ff6bf75cff441d221a0298"><span class="std std-ref">Function NetworKit::GraphTools::restoreGraph</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1af4612f7557397f5716e0177a2f2948c1.html#exhale-function-graphtools-8hpp-1af4612f7557397f5716e0177a2f2948c1"><span class="std std-ref">Function NetworKit::GraphTools::size</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a1064b9795858fd86e2f0810434c2def4.html#exhale-function-graphtools-8hpp-1a1064b9795858fd86e2f0810434c2def4"><span class="std std-ref">Function NetworKit::GraphTools::sortEdgesByWeight</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a6d1b7a702186728be07c33d53a31cbad.html#exhale-function-graphtools-8hpp-1a6d1b7a702186728be07c33d53a31cbad"><span class="std std-ref">Function NetworKit::GraphTools::subgraphAndNeighborsFromNodes</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a6a523f1a2ac8124ce40884e65b570f21.html#exhale-function-graphtools-8hpp-1a6a523f1a2ac8124ce40884e65b570f21"><span class="std std-ref">Function NetworKit::GraphTools::subgraphFromNodes(const Graph&amp;, const std::unordered_set&lt;node&gt;&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1ae1ca9980825cf4b263391cf4787fe048.html#exhale-function-graphtools-8hpp-1ae1ca9980825cf4b263391cf4787fe048"><span class="std std-ref">Template Function NetworKit::GraphTools::subgraphFromNodes(const Graph&amp;, InputIt, InputIt, bool)</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1ac008c86a9555aa3611502a48b7523dbf.html#exhale-function-graphtools-8hpp-1ac008c86a9555aa3611502a48b7523dbf"><span class="std std-ref">Function NetworKit::GraphTools::topologicalSort(const Graph&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a7340316e10052b5dc921a2cd18ac4ae2.html#exhale-function-graphtools-8hpp-1a7340316e10052b5dc921a2cd18ac4ae2"><span class="std std-ref">Function NetworKit::GraphTools::topologicalSort(const Graph&amp;, const std::unordered_map&lt;node, node&gt;&amp;, bool)</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a46b2d158ec1e74fbf9436baa076ccdba.html#exhale-function-graphtools-8hpp-1a46b2d158ec1e74fbf9436baa076ccdba"><span class="std std-ref">Function NetworKit::GraphTools::toUndirected</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a881d21afde773b8141a850453632bb20.html#exhale-function-graphtools-8hpp-1a881d21afde773b8141a850453632bb20"><span class="std std-ref">Function NetworKit::GraphTools::toUnweighted</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1aba9faaae601f305592ba4d9c90b51cb8.html#exhale-function-graphtools-8hpp-1aba9faaae601f305592ba4d9c90b51cb8"><span class="std std-ref">Function NetworKit::GraphTools::toWeighted</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a5681cfbe4d4089af7b4f5527ce5830a8.html#exhale-function-graphtools-8hpp-1a5681cfbe4d4089af7b4f5527ce5830a8"><span class="std std-ref">Function NetworKit::GraphTools::transpose</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1a55770f115a03bad20956558f5fcf7ba7.html#exhale-function-graphtools-8hpp-1a55770f115a03bad20956558f5fcf7ba7"><span class="std std-ref">Function NetworKit::GraphTools::volume(const Graph&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_GraphTools_8hpp_1adee899f18a90df81f4c60ba54adb2d7b.html#exhale-function-graphtools-8hpp-1adee899f18a90df81f4c60ba54adb2d7b"><span class="std std-ref">Template Function NetworKit::GraphTools::volume(const Graph&amp;, InputIt, InputIt)</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a5e481335db685d3ca19eb5631edade99.html#exhale-function-graph-tools-8hpp-1a5e481335db685d3ca19eb5631edade99"><span class="std std-ref">Function NetworKit::GraphTools::append</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a05c760e9942062b2df8dab73a234bf04.html#exhale-function-graph-tools-8hpp-1a05c760e9942062b2df8dab73a234bf04"><span class="std std-ref">Function NetworKit::GraphTools::augmentGraph</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a1a33f6a58791749e4973f2fa05a81872.html#exhale-function-graph-tools-8hpp-1a1a33f6a58791749e4973f2fa05a81872"><span class="std std-ref">Function NetworKit::GraphTools::copyNodes</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1abadd75235cf6b29927840db04fbe3c62.html#exhale-function-graph-tools-8hpp-1abadd75235cf6b29927840db04fbe3c62"><span class="std std-ref">Function NetworKit::GraphTools::createAugmentedGraph</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a37de0d910d860e0e50029daa1efb2363.html#exhale-function-graph-tools-8hpp-1a37de0d910d860e0e50029daa1efb2363"><span class="std std-ref">Function NetworKit::GraphTools::density</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a4ca64e2e2201df79501d27e9e61c7af9.html#exhale-function-graph-tools-8hpp-1a4ca64e2e2201df79501d27e9e61c7af9"><span class="std std-ref">Function NetworKit::GraphTools::getCompactedGraph</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1adc11ba99638b1a05714ac66ea74bb3f8.html#exhale-function-graph-tools-8hpp-1adc11ba99638b1a05714ac66ea74bb3f8"><span class="std std-ref">Function NetworKit::GraphTools::getContinuousNodeIds</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a872dad157d6df0e606196a873f6fa06b.html#exhale-function-graph-tools-8hpp-1a872dad157d6df0e606196a873f6fa06b"><span class="std std-ref">Function NetworKit::GraphTools::getRandomContinuousNodeIds</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1aa28d6c75546f85c635073d67106cafb1.html#exhale-function-graph-tools-8hpp-1aa28d6c75546f85c635073d67106cafb1"><span class="std std-ref">Template Function NetworKit::GraphTools::getRemappedGraph(const Graph&amp;, count, UnaryIdMapper&amp;&amp;, SkipEdgePredicate&amp;&amp;, bool)</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a22bdd3555fb48d202c108b3a67495ccd.html#exhale-function-graph-tools-8hpp-1a22bdd3555fb48d202c108b3a67495ccd"><span class="std std-ref">Template Function NetworKit::GraphTools::getRemappedGraph(const Graph&amp;, count, UnaryIdMapper&amp;&amp;, bool)</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a8edc70bcafe4313589ea6af02350562b.html#exhale-function-graph-tools-8hpp-1a8edc70bcafe4313589ea6af02350562b"><span class="std std-ref">Function NetworKit::GraphTools::invertContinuousNodeIds</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a6fbbc09849955975b2efec58f3a3ffd7.html#exhale-function-graph-tools-8hpp-1a6fbbc09849955975b2efec58f3a3ffd7"><span class="std std-ref">Template Function NetworKit::GraphTools::inVolume</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a414c36611a9fa6ff3e7a32c4a8be32cc.html#exhale-function-graph-tools-8hpp-1a414c36611a9fa6ff3e7a32c4a8be32cc"><span class="std std-ref">Function NetworKit::GraphTools::isBipartite</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1af41528e323a7faec3b51ac89c562f4c7.html#exhale-function-graph-tools-8hpp-1af41528e323a7faec3b51ac89c562f4c7"><span class="std std-ref">Function NetworKit::GraphTools::maxDegree</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a46e351dedf765706522d4976cbfa577b.html#exhale-function-graph-tools-8hpp-1a46e351dedf765706522d4976cbfa577b"><span class="std std-ref">Function NetworKit::GraphTools::maxInDegree</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1acd14038f1a135c6ed319d228e10d8c85.html#exhale-function-graph-tools-8hpp-1acd14038f1a135c6ed319d228e10d8c85"><span class="std std-ref">Function NetworKit::GraphTools::maxWeightedDegree</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a9da4d676237974b4bdfc521271a42d18.html#exhale-function-graph-tools-8hpp-1a9da4d676237974b4bdfc521271a42d18"><span class="std std-ref">Function NetworKit::GraphTools::maxWeightedInDegree</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1ac593463838b8f92ef1f5d1d08127b98d.html#exhale-function-graph-tools-8hpp-1ac593463838b8f92ef1f5d1d08127b98d"><span class="std std-ref">Function NetworKit::GraphTools::merge</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a6dae9b913ec537fdb7180fbc995d4c94.html#exhale-function-graph-tools-8hpp-1a6dae9b913ec537fdb7180fbc995d4c94"><span class="std std-ref">Function NetworKit::GraphTools::randomEdge</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a75947a5a9bbb2bf74bfdd2995a797afc.html#exhale-function-graph-tools-8hpp-1a75947a5a9bbb2bf74bfdd2995a797afc"><span class="std std-ref">Function NetworKit::GraphTools::randomEdges</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a5dd7a22d3b05cdbaf922c7083b15298e.html#exhale-function-graph-tools-8hpp-1a5dd7a22d3b05cdbaf922c7083b15298e"><span class="std std-ref">Template Function NetworKit::GraphTools::randomizeWeights</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a8932fd72810fdc36fad211494a82ba68.html#exhale-function-graph-tools-8hpp-1a8932fd72810fdc36fad211494a82ba68"><span class="std std-ref">Function NetworKit::GraphTools::randomNeighbor</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1ac9072b0e113933902f563d65d21c5277.html#exhale-function-graph-tools-8hpp-1ac9072b0e113933902f563d65d21c5277"><span class="std std-ref">Function NetworKit::GraphTools::randomNode</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a772a86d9d7f022d432423589e675ab95.html#exhale-function-graph-tools-8hpp-1a772a86d9d7f022d432423589e675ab95"><span class="std std-ref">Function NetworKit::GraphTools::randomNodes</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1aa917b6deb83b48595a97ad1f5df26fe9.html#exhale-function-graph-tools-8hpp-1aa917b6deb83b48595a97ad1f5df26fe9"><span class="std std-ref">Template Function NetworKit::GraphTools::removeEdgesFromIsolatedSet</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a0fdcd7d906ff6bf75cff441d221a0298.html#exhale-function-graph-tools-8hpp-1a0fdcd7d906ff6bf75cff441d221a0298"><span class="std std-ref">Function NetworKit::GraphTools::restoreGraph</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a4f7fac02ecd735b95450f5a02eea8aa6.html#exhale-function-graph-tools-8hpp-1a4f7fac02ecd735b95450f5a02eea8aa6"><span class="std std-ref">Function NetworKit::GraphTools::size</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a1064b9795858fd86e2f0810434c2def4.html#exhale-function-graph-tools-8hpp-1a1064b9795858fd86e2f0810434c2def4"><span class="std std-ref">Function NetworKit::GraphTools::sortEdgesByWeight</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a6d1b7a702186728be07c33d53a31cbad.html#exhale-function-graph-tools-8hpp-1a6d1b7a702186728be07c33d53a31cbad"><span class="std std-ref">Function NetworKit::GraphTools::subgraphAndNeighborsFromNodes</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a6a523f1a2ac8124ce40884e65b570f21.html#exhale-function-graph-tools-8hpp-1a6a523f1a2ac8124ce40884e65b570f21"><span class="std std-ref">Function NetworKit::GraphTools::subgraphFromNodes(const Graph&amp;, const std::unordered_set&lt;node&gt;&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1ae1ca9980825cf4b263391cf4787fe048.html#exhale-function-graph-tools-8hpp-1ae1ca9980825cf4b263391cf4787fe048"><span class="std std-ref">Template Function NetworKit::GraphTools::subgraphFromNodes(const Graph&amp;, InputIt, InputIt, bool)</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a28f8eb2bf09160018f8dbf19f126ce9d.html#exhale-function-graph-tools-8hpp-1a28f8eb2bf09160018f8dbf19f126ce9d"><span class="std std-ref">Function NetworKit::GraphTools::topologicalSort(const Graph&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a2801efd6dac51372fa6068c2f17ce5bf.html#exhale-function-graph-tools-8hpp-1a2801efd6dac51372fa6068c2f17ce5bf"><span class="std std-ref">Function NetworKit::GraphTools::topologicalSort(const Graph&amp;, const std::unordered_map&lt;node, node&gt;&amp;, bool)</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a46b2d158ec1e74fbf9436baa076ccdba.html#exhale-function-graph-tools-8hpp-1a46b2d158ec1e74fbf9436baa076ccdba"><span class="std std-ref">Function NetworKit::GraphTools::toUndirected</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a881d21afde773b8141a850453632bb20.html#exhale-function-graph-tools-8hpp-1a881d21afde773b8141a850453632bb20"><span class="std std-ref">Function NetworKit::GraphTools::toUnweighted</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1aba9faaae601f305592ba4d9c90b51cb8.html#exhale-function-graph-tools-8hpp-1aba9faaae601f305592ba4d9c90b51cb8"><span class="std std-ref">Function NetworKit::GraphTools::toWeighted</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a5681cfbe4d4089af7b4f5527ce5830a8.html#exhale-function-graph-tools-8hpp-1a5681cfbe4d4089af7b4f5527ce5830a8"><span class="std std-ref">Function NetworKit::GraphTools::transpose</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1a55770f115a03bad20956558f5fcf7ba7.html#exhale-function-graph-tools-8hpp-1a55770f115a03bad20956558f5fcf7ba7"><span class="std std-ref">Function NetworKit::GraphTools::volume(const Graph&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function__graph_tools_8hpp_1adee899f18a90df81f4c60ba54adb2d7b.html#exhale-function-graph-tools-8hpp-1adee899f18a90df81f4c60ba54adb2d7b"><span class="std std-ref">Template Function NetworKit::GraphTools::volume(const Graph&amp;, InputIt, InputIt)</span></a></p></li>
 </ul>
 </section>
 </section>

@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <meta property="article:modified_time" content="2020-10-21T10:17:44+02:00" />
     <title>networkit.flow</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
@@ -94,7 +95,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
@@ -148,7 +166,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -163,54 +180,6 @@
   <section id="module-networkit.flow">
 <span id="networkit-flow"></span><h1>networkit.flow<a class="headerlink" href="#module-networkit.flow" title="Link to this heading">¶</a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="networkit.flow.Dinic">
-<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.flow.</span></span><span class="sig-name descname"><span class="pre">Dinic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sink</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.flow.Dinic" title="Link to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
-<p>Computes maximum flow in a directed, weighted graph using Dinic’s
-blocking-flow algorithm.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>graph</strong> (<em>networkit.Graph</em>) – Directed, weighted input graph.</p></li>
-<li><p><strong>source</strong> (<em>int</em>) – Source node identifier.</p></li>
-<li><p><strong>sink</strong> (<em>int</em>) – Target node identifier.</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="networkit.flow.Dinic.getMaxFlow">
-<span class="sig-name descname"><span class="pre">getMaxFlow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.flow.Dinic.getMaxFlow" title="Link to this definition">¶</a></dt>
-<dd><p>Returns the computed maximum flow from source to sink.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The maximum flow value.</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="networkit.flow.EdgeDoubleAttribute">
-<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.flow.</span></span><span class="sig-name descname"><span class="pre">EdgeDoubleAttribute</span></span><a class="headerlink" href="#networkit.flow.EdgeDoubleAttribute" title="Link to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Thin Python wrapper for NetworKit::Graph::EdgeDoubleAttribute</p>
-<dl class="py method">
-<dt class="sig sig-object py" id="networkit.flow.EdgeDoubleAttribute.get">
-<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.flow.EdgeDoubleAttribute.get" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="networkit.flow.EdgeDoubleAttribute.size">
-<span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.flow.EdgeDoubleAttribute.size" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
 <dt class="sig sig-object py" id="networkit.flow.EdmondsKarp">
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.flow.</span></span><span class="sig-name descname"><span class="pre">EdmondsKarp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sink</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.flow.EdmondsKarp" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
@@ -218,7 +187,7 @@ blocking-flow algorithm.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>graph</strong> (<em>networkit.Graph</em>) – The graph</p></li>
+<li><p><strong>graph</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph</p></li>
 <li><p><strong>source</strong> (<em>int</em>) – The source node for the flow calculation</p></li>
 <li><p><strong>sink</strong> (<em>int</em>) – The sink node for the flow calculation</p></li>
 </ul>
@@ -289,22 +258,6 @@ Warning: The variant with two edge ids is linear in the degree of u.</p>
 
 </dd></dl>
 
-<dl class="py class">
-<dt class="sig sig-object py" id="networkit.flow.SuccessiveShortestPathMinCostFlow">
-<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.flow.</span></span><span class="sig-name descname"><span class="pre">SuccessiveShortestPathMinCostFlow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capacityAttributeName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">supplyAttributeName</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.flow.SuccessiveShortestPathMinCostFlow" title="Link to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
-<dl class="py method">
-<dt class="sig sig-object py" id="networkit.flow.SuccessiveShortestPathMinCostFlow.getFlow">
-<span class="sig-name descname"><span class="pre">getFlow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.flow.SuccessiveShortestPathMinCostFlow.getFlow" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="networkit.flow.SuccessiveShortestPathMinCostFlow.getTotalCost">
-<span class="sig-name descname"><span class="pre">getTotalCost</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.flow.SuccessiveShortestPathMinCostFlow.getTotalCost" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
 </section>
 
 
@@ -323,6 +276,7 @@ Warning: The variant with two edge ids is linear in the degree of u.</p>
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Last updated on Oct 21, 2020.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
     </p>
     <span style="padding-left: 10px">

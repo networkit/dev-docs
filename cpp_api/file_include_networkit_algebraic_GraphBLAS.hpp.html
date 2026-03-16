@@ -92,7 +92,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul>
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ Documentation</a></li>
@@ -101,7 +118,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -146,8 +162,8 @@
 <section id="included-by">
 <h2>Included By<a class="headerlink" href="#included-by" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="file_include_networkit_algebraic_algorithms_AlgebraicBellmanFord.hpp.html#file-include-networkit-algebraic-algorithms-algebraicbellmanford-hpp"><span class="std std-ref">File AlgebraicBellmanFord.hpp</span></a></p></li>
 <li><p><a class="reference internal" href="file_include_networkit_algebraic_algorithms_AlgebraicBFS.hpp.html#file-include-networkit-algebraic-algorithms-algebraicbfs-hpp"><span class="std std-ref">File AlgebraicBFS.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_algebraic_algorithms_AlgebraicBellmanFord.hpp.html#file-include-networkit-algebraic-algorithms-algebraicbellmanford-hpp"><span class="std std-ref">File AlgebraicBellmanFord.hpp</span></a></p></li>
 <li><p><a class="reference internal" href="file_include_networkit_algebraic_algorithms_AlgebraicPageRank.hpp.html#file-include-networkit-algebraic-algorithms-algebraicpagerank-hpp"><span class="std std-ref">File AlgebraicPageRank.hpp</span></a></p></li>
 </ul>
 </section>
@@ -160,17 +176,17 @@
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="function_namespaceGraphBLAS_1a5b5ae23bdec9625fb29b12ce1e683701.html#exhale-function-namespacegraphblas-1a5b5ae23bdec9625fb29b12ce1e683701"><span class="std std-ref">Template Function GraphBLAS::columnReduce</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceGraphBLAS_1a8681d7209b8c23055c3f30d28445dd76.html#exhale-function-namespacegraphblas-1a8681d7209b8c23055c3f30d28445dd76"><span class="std std-ref">Template Function GraphBLAS::eWiseAdd</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceGraphBLAS_1a957da3499fc5cb2dc34b2a7de5454d4a.html#exhale-function-namespacegraphblas-1a957da3499fc5cb2dc34b2a7de5454d4a"><span class="std std-ref">Template Function GraphBLAS::eWiseBinOp</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceGraphBLAS_1a8a5b0c16929c8feee257fe961bb472c1.html#exhale-function-namespacegraphblas-1a8a5b0c16929c8feee257fe961bb472c1"><span class="std std-ref">Template Function GraphBLAS::eWiseMult</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceGraphBLAS_1ac4ec1aa628e308b65f80e1662a7e818a.html#exhale-function-namespacegraphblas-1ac4ec1aa628e308b65f80e1662a7e818a"><span class="std std-ref">Template Function GraphBLAS::MxM(const Matrix&amp;, const Matrix&amp;, Matrix&amp;, F)</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceGraphBLAS_1aae22bec0ba522ae962e50128a53fef42.html#exhale-function-namespacegraphblas-1aae22bec0ba522ae962e50128a53fef42"><span class="std std-ref">Template Function GraphBLAS::MxM(const Matrix&amp;, const Matrix&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceGraphBLAS_1ae53d3f9b27374bfb5cc71da1ea274151.html#exhale-function-namespacegraphblas-1ae53d3f9b27374bfb5cc71da1ea274151"><span class="std std-ref">Template Function GraphBLAS::MxM(const Matrix&amp;, const Matrix&amp;, Matrix&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceGraphBLAS_1a7db56e1ffc8cb04264b1ab87f4d31c9b.html#exhale-function-namespacegraphblas-1a7db56e1ffc8cb04264b1ab87f4d31c9b"><span class="std std-ref">Template Function GraphBLAS::MxV(const Matrix&amp;, const NetworKit::Vector&amp;, NetworKit::Vector&amp;, F)</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceGraphBLAS_1a16b1e6a8e5fee19516db522e4455f948.html#exhale-function-namespacegraphblas-1a16b1e6a8e5fee19516db522e4455f948"><span class="std std-ref">Template Function GraphBLAS::MxV(const Matrix&amp;, const NetworKit::Vector&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceGraphBLAS_1a507ab4a4c99dae6b906d290ef1d7b1d0.html#exhale-function-namespacegraphblas-1a507ab4a4c99dae6b906d290ef1d7b1d0"><span class="std std-ref">Template Function GraphBLAS::MxV(const Matrix&amp;, const NetworKit::Vector&amp;, NetworKit::Vector&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceGraphBLAS_1a846af3b031c85b4f07877f6f5d3c0cca.html#exhale-function-namespacegraphblas-1a846af3b031c85b4f07877f6f5d3c0cca"><span class="std std-ref">Template Function GraphBLAS::rowReduce</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_graph_b_l_a_s_1a5b5ae23bdec9625fb29b12ce1e683701.html#exhale-function-namespace-graph-b-l-a-s-1a5b5ae23bdec9625fb29b12ce1e683701"><span class="std std-ref">Template Function GraphBLAS::columnReduce</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_graph_b_l_a_s_1a8681d7209b8c23055c3f30d28445dd76.html#exhale-function-namespace-graph-b-l-a-s-1a8681d7209b8c23055c3f30d28445dd76"><span class="std std-ref">Template Function GraphBLAS::eWiseAdd</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_graph_b_l_a_s_1a957da3499fc5cb2dc34b2a7de5454d4a.html#exhale-function-namespace-graph-b-l-a-s-1a957da3499fc5cb2dc34b2a7de5454d4a"><span class="std std-ref">Template Function GraphBLAS::eWiseBinOp</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_graph_b_l_a_s_1a8a5b0c16929c8feee257fe961bb472c1.html#exhale-function-namespace-graph-b-l-a-s-1a8a5b0c16929c8feee257fe961bb472c1"><span class="std std-ref">Template Function GraphBLAS::eWiseMult</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_graph_b_l_a_s_1ac4ec1aa628e308b65f80e1662a7e818a.html#exhale-function-namespace-graph-b-l-a-s-1ac4ec1aa628e308b65f80e1662a7e818a"><span class="std std-ref">Template Function GraphBLAS::MxM(const Matrix&amp;, const Matrix&amp;, Matrix&amp;, F)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_graph_b_l_a_s_1aae22bec0ba522ae962e50128a53fef42.html#exhale-function-namespace-graph-b-l-a-s-1aae22bec0ba522ae962e50128a53fef42"><span class="std std-ref">Template Function GraphBLAS::MxM(const Matrix&amp;, const Matrix&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_graph_b_l_a_s_1ae53d3f9b27374bfb5cc71da1ea274151.html#exhale-function-namespace-graph-b-l-a-s-1ae53d3f9b27374bfb5cc71da1ea274151"><span class="std std-ref">Template Function GraphBLAS::MxM(const Matrix&amp;, const Matrix&amp;, Matrix&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_graph_b_l_a_s_1a507ab4a4c99dae6b906d290ef1d7b1d0.html#exhale-function-namespace-graph-b-l-a-s-1a507ab4a4c99dae6b906d290ef1d7b1d0"><span class="std std-ref">Template Function GraphBLAS::MxV(const Matrix&amp;, const NetworKit::Vector&amp;, NetworKit::Vector&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_graph_b_l_a_s_1a7db56e1ffc8cb04264b1ab87f4d31c9b.html#exhale-function-namespace-graph-b-l-a-s-1a7db56e1ffc8cb04264b1ab87f4d31c9b"><span class="std std-ref">Template Function GraphBLAS::MxV(const Matrix&amp;, const NetworKit::Vector&amp;, NetworKit::Vector&amp;, F)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_graph_b_l_a_s_1a16b1e6a8e5fee19516db522e4455f948.html#exhale-function-namespace-graph-b-l-a-s-1a16b1e6a8e5fee19516db522e4455f948"><span class="std std-ref">Template Function GraphBLAS::MxV(const Matrix&amp;, const NetworKit::Vector&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_graph_b_l_a_s_1a846af3b031c85b4f07877f6f5d3c0cca.html#exhale-function-namespace-graph-b-l-a-s-1a846af3b031c85b4f07877f6f5d3c0cca"><span class="std std-ref">Template Function GraphBLAS::rowReduce</span></a></p></li>
 </ul>
 </section>
 </section>

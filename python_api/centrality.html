@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <meta property="article:modified_time" content="2023-07-05T12:27:40+02:00" />
     <title>networkit.centrality</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
@@ -96,7 +97,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
@@ -150,7 +168,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -179,7 +196,7 @@ Therefore, we recommend to use EstimateBetweenness if no theoretical guarantee i
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph</p></li>
 <li><p><strong>epsilon</strong> (<em>double</em><em>, </em><em>optional</em>) – Maximum additive error. Default: 0.01</p></li>
 <li><p><strong>delta</strong> (<em>double</em><em>, </em><em>optional</em>) – Probability that the values are within the error guarantee. Default: 0.1</p></li>
 <li><p><strong>universalConstant</strong> (<em>double</em><em>, </em><em>optional</em>) – The universal constant to be used in computing the sample size.
@@ -209,7 +226,7 @@ Otherwise, a pivoting approach is used. Notice that the input graph has to be co
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – Input graph (undirected).</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – Input graph (undirected).</p></li>
 <li><p><strong>nSamples</strong> (<em>int</em>) – User defined number of samples.</p></li>
 <li><p><strong>epsilon</strong> (<em>float</em><em>, </em><em>optional</em>) – Parameter used for the error guarantee; it is also used to control when to use sampling and when to use pivoting. Default: 0.1</p></li>
 <li><p><strong>normalized</strong> (<em>bool</em><em>, </em><em>optional</em>) – Normalize centrality values in interval [0,1]. Default: False</p></li>
@@ -249,7 +266,7 @@ faster) but more USTs need to be sampled, vice versa for a low value of kappa.</
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>eps</strong> (<em>float</em><em>, </em><em>optional</em>) – Maximum absolute error of the elements in the diagonal. Default: 0.1</p></li>
 <li><p><strong>kappa</strong> (<em>float</em><em>, </em><em>optional</em>) – Balances the tolerance of the solver for the linear system and the
 number of USTs to be sampled. Default: 0.3</p></li>
@@ -300,7 +317,7 @@ LAMG solver.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>groupSize</strong> (<em>int</em>) – The desired size of the group.</p></li>
 <li><p><strong>epsilon</strong> (<em>float</em>) – Determines the accuracy of the approximation.</p></li>
 </ul>
@@ -350,7 +367,7 @@ Centrality”, Hayashi et al., IJCAI, 2016. This implementation also supports mu
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>eps</strong> (<em>float</em><em>, </em><em>optional</em>) – Maximum additive error. Default: 0.1</p></li>
 </ul>
 </dd>
@@ -382,34 +399,17 @@ of nodes and m is the number of edges of the graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>normalized</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set this parameter to True if scores should be normalized in the interval [0,1]. Default: False</p></li>
 <li><p><strong>computeEdgeCentrality</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set this to true if edge betweenness scores should be computed as well. Default: False</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="networkit.centrality.Betweenness.compactEdgeScores">
-<span class="sig-name descname"><span class="pre">compactEdgeScores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.centrality.Betweenness.compactEdgeScores" title="Link to this definition">¶</a></dt>
-<dd><p>Get a list containing the betweenness score for each existing edge in the graph
-in ascending edge ID order. For the creation of this list, additional memory is
-allocated.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The betweenness scores calculated by run().</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>list(float)</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="networkit.centrality.Betweenness.edgeScores">
 <span class="sig-name descname"><span class="pre">edgeScores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.centrality.Betweenness.edgeScores" title="Link to this definition">¶</a></dt>
-<dd><p>Get a list containing the betweenness score for each edge in the graph
-in ascending edge ID order. For the creation of this list, additional memory is
-allocated.</p>
+<dd><p>Get a vector containing the betweenness score for each edge in the graph
+in ascending edge ID order.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The betweenness scores calculated by run().</p>
@@ -443,20 +443,6 @@ differences in any network of the same size.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="networkit.centrality.Centrality.compactScores">
-<span class="sig-name descname"><span class="pre">compactScores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.centrality.Centrality.compactScores" title="Link to this definition">¶</a></dt>
-<dd><p>Returns the scores of all existing nodes for the centrality algorithm.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The list of all scores for existing nodes.</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>list(float)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -511,14 +497,11 @@ differences in any network of the same size.</p>
 <span class="sig-name descname"><span class="pre">scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.centrality.Centrality.scores" title="Link to this definition">¶</a></dt>
 <dd><p>Returns the scores of all nodes for the centrality algorithm.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>asarray</strong> (<em>optional</em>) – Return the result as a numpy array. Default: None</p>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The list of all scores.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The list of all scores.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>list(float) or ndarray</p>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(float)</p>
 </dd>
 </dl>
 </dd></dl>
@@ -542,7 +525,7 @@ of nodes and m is the number of edges of the graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
 <li><p><strong>normalized</strong> (<em>bool</em>) – Set this parameter to False if scores should not be normalized into an interval of [0,1].
 Normalization only works for unweighted graphs.</p></li>
 <li><p><strong>checkConnectedness</strong> (<em>bool</em>) – Set this parameter to True to also check if the graph is connected before computing closeness.
@@ -575,7 +558,7 @@ Nat Commun 12, 4430 (2021).
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
 <li><p><strong>threshold</strong> (<em>int</em>) – The complex path width: minimal number of neighbors.</p></li>
 </ul>
 </dd>
@@ -648,7 +631,7 @@ Only available when called in mode ComplexPathMode.ALL_NODES.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
 <li><p><strong>normalized</strong> (<em>bool</em><em>, </em><em>optional</em>) – Divide each core number by the maximum degree. Default: False</p></li>
 <li><p><strong>enforceBucketQueueAlgorithm</strong> (<em>bool</em><em>, </em><em>optional</em>) – Enforce switch to sequential algorithm. Default: False</p></li>
 <li><p><strong>storeNodeOrder</strong> (<em>bool</em><em>, </em><em>optional</em>) – If set to True, the order of the nodes in ascending order of the cores is stored and can later be returned using getNodeOrder().
@@ -693,7 +676,7 @@ Enforces the sequential bucket priority queue algorithm. Default: False</p></li>
 <dd class="field-odd"><p>The k-shells.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>networkit.Partition</p>
+<dd class="field-even"><p><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition">networkit.Partition</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -726,7 +709,7 @@ then set <cite>normalized</cite> to True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>normalized</strong> (<em>bool</em><em>, </em><em>optional</em>) – Normalize centrality values in the interval [0,1]. Default: False</p></li>
 <li><p><strong>outdeg</strong> (<em>bool</em><em>, </em><em>optional</em>) – If set to true, computes the centrality based on out-degrees, otherwise based on the in-degrees. Default: True</p></li>
 <li><p><strong>ignoreSelfLoops</strong> (<em>bool</em><em>, </em><em>optional</em>) – If set to true, self loops will not be taken into account. Default: True</p></li>
@@ -748,7 +731,7 @@ The values are normalized by default.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph</p></li>
 <li><p><strong>epsilon</strong> (<em>float</em><em>, </em><em>optional</em>) – Maximum additive error. Default: 0.01</p></li>
 <li><p><strong>delta</strong> (<em>float</em><em>, </em><em>optional</em>) – Probability that the values are within the error guarantee. Default: 0.1</p></li>
 <li><p><strong>storePredecessors</strong> (<em>bool</em><em>, </em><em>optional</em>) – Store lists of predecessors. Default: True</p></li>
@@ -828,7 +811,7 @@ calculated by run().</p>
 and updates them after an edge insertion.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 <dl class="py method">
@@ -890,7 +873,7 @@ proposed by Bergamini et al. “Improving the betweenness centrality of a node b
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph</p></li>
 <li><p><strong>x</strong> (<em>int</em>) – The node for which you want to update betweenness</p></li>
 </ul>
 </dd>
@@ -963,7 +946,7 @@ DynKatzCentrality(G, k, groupOnly=False, tolerance=1e-9)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>k</strong> (<em>float</em>) – The number k for which we want to find the top-k nodes with highest Katz centrality.</p></li>
 <li><p><strong>groupOnly</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set whether the update will only update top-k nodes. Default: False</p></li>
 <li><p><strong>tolerance</strong> (<em>float</em><em>, </em><em>optional</em>) – The tolerance for convergence. Default: 1e-9</p></li>
@@ -1042,7 +1025,7 @@ However, for most networks the empirical running time is O(m).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – An unweighted graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – An unweighted graph.</p></li>
 <li><p><strong>k</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of nodes with highest closeness that have to be found.
 For example, if k = 10, the top 10 nodes with highest closeness will be computed. Default: 1</p></li>
 <li><p><strong>useBFSbound</strong> (<em>bool</em><em>, </em><em>optional</em>) – If true, the BFSbound is re-computed at each iteration. If false, BFScut is used. Default: True</p></li>
@@ -1124,7 +1107,7 @@ Interpreted as eigenvector centrality score.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>tol</strong> (<em>float</em><em>, </em><em>optional</em>) – The tolerance for convergence.</p></li>
 </ul>
 </dd>
@@ -1145,7 +1128,7 @@ was shown to perform well in practice. If a guarantee is required, use ApproxBet
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – Input graph</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – Input graph</p></li>
 <li><p><strong>nSamples</strong> (<em>count</em>) – User defined number of samples</p></li>
 <li><p><strong>normalized</strong> (<em>bool</em><em>, </em><em>optional</em>) – Normalize centrality values in interval [0,1]</p></li>
 <li><p><strong>parallel</strong> (<em>bool</em><em>, </em><em>optional</em>) – Run in parallel with additional memory cost z + 3z * t</p></li>
@@ -1172,7 +1155,7 @@ details). An augmented graphs can be generated with graphtools.createAugmentedGr
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph. Must be an augmented graph; an augmented graph can be crated with
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph. Must be an augmented graph; an augmented graph can be crated with
 graphtools.createAugmentedGraph.</p></li>
 <li><p><strong>root</strong> (<em>int</em>) – Root node of the augmented graph.</p></li>
 <li><p><strong>epsilon</strong> (<em>float</em><em>, </em><em>optional</em>) – Maximum absolute error of the elements in the diagonal. Default: 0.1</p></li>
@@ -1221,7 +1204,7 @@ GedWalk score of a given set of nodes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – A (weakly) connected graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – A (weakly) connected graph.</p></li>
 <li><p><strong>k</strong> (<em>int</em><em>, </em><em>optional</em>) – The desired group size. Default: 1</p></li>
 <li><p><strong>epsilon</strong> (<em>float</em><em>, </em><em>optional</em>) – Precision of the algorithm. Default: 0.1</p></li>
 <li><p><strong>alpha</strong> (<em>float</em><em>, </em><em>optional</em>) – Exponent to compute the GedWalk score. Default: -1.0</p></li>
@@ -1293,7 +1276,7 @@ The worst-case running time of this approach is quadratic, but usually much fast
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – An unweighted graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – An unweighted graph.</p></li>
 <li><p><strong>k</strong> (<em>int</em><em>, </em><em>optional</em>) – Size of the group. Default: 1</p></li>
 <li><p><strong>H</strong> (<em>int</em><em>, </em><em>optional</em>) – If equal 0, simply runs the algorithm proposed in Bergamini et al..
 If &gt; 0, interrupts all BFSs after H iterations (suggested for very large networks). Default: 0</p></li>
@@ -1366,7 +1349,7 @@ group by performing vertex exchanges.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – A connected, undirected, unweighted graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – A connected, undirected, unweighted graph.</p></li>
 <li><p><strong>group</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – The initial group of nodes.</p></li>
 <li><p><strong>extended</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set this parameter to true for the Extended Grow-Shrink algorithm (i.e.,
 swaps are not restricted to only neighbors of the group). Default: False</p></li>
@@ -1422,7 +1405,7 @@ on directed graphs it has not been demonstrated.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – A connected, undirected, unweighted graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – A connected, undirected, unweighted graph.</p></li>
 <li><p><strong>group</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – The initial group of nodes.</p></li>
 <li><p><strong>useGrowShrink</strong> (<em>bool</em>) – Whether or not to run the GrowShrink algorithm on the initial group.</p></li>
 <li><p><strong>maxIterations</strong> (<em>int</em>) – Maximum number of swaps allowed. Prevents the algorithm from performing
@@ -1473,7 +1456,7 @@ group by performing vertex exchanges.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – An undirected, unweighted graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – An undirected, unweighted graph.</p></li>
 <li><p><strong>group</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – The initial group of nodes.</p></li>
 <li><p><strong>maxSwaps</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of vertex exchanges allowed. Default: 0</p></li>
 </ul>
@@ -1525,7 +1508,7 @@ is guaranteed to return a <span class="math notranslate nohighlight">\((1 - 1/e)
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>k</strong> (<em>int</em><em>, </em><em>optional</em>) – Size of the group of nodes. Default: 1</p></li>
 <li><p><strong>countGroupNodes</strong> (<em>bool</em><em>, </em><em>optional</em>) – If nodes inside the group should be counted in the centrality score. Default: True</p></li>
 </ul>
@@ -1597,7 +1580,7 @@ quadratic, but usually much faster in practice.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>k</strong> (<em>int</em><em>, </em><em>optional</em>) – Size of the group of nodes. Default: 1</p></li>
 </ul>
 </dd>
@@ -1623,7 +1606,7 @@ quadratic, but usually much faster in practice.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>graph</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>graph</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>inputGroup</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – The input group of nodes.</p></li>
 </ul>
 </dd>
@@ -1650,7 +1633,7 @@ of nodes and m is the number of edges of the graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>normalized</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set this parameter to False if scores should not be normalized
 into an interval of [0,1]. Normalization only for unweighted graphs. Default: True</p></li>
 </ul>
@@ -1666,7 +1649,7 @@ into an interval of [0,1]. Normalization only for unweighted graphs. Default: Tr
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
 <li><p><strong>alpha</strong> (<em>float</em><em>, </em><em>optional</em>) – Tradeoff between runtime and precision with -0.5: maximum precision, maximum runtime
 and 0.5: lowest precision, lowest runtime. Default: 0.2</p></li>
 <li><p><strong>k</strong> (<em>int</em><em>, </em><em>optional</em>) – maximum length of paths. Default: 0</p></li>
@@ -1706,7 +1689,7 @@ setSeed(&lt;your_seed&gt;, True) fuction within the Random module.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>err</strong> (<em>float</em><em>, </em><em>optional</em>) – Maximum additive error guaranteed when approximating the
 betweenness centrality of all nodes. Default: 0.01</p></li>
 <li><p><strong>delta</strong> (<em>float</em><em>, </em><em>optional</em>) – Probability that the values of the betweenness centrality are
@@ -1824,7 +1807,7 @@ The number of iterations depends on how long it takes to reach the convergence
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>alpha</strong> (<em>float</em><em>, </em><em>optional</em>) – Damping of the matrix vector product result, must be non negative.
 Leave this parameter to 0 to use the default value <span class="math notranslate nohighlight">\(1 / (max_degree + 1)\)</span>. Default: 0</p></li>
 <li><p><strong>beta</strong> (<em>float</em><em>, </em><em>optional</em>) – Constant value added to the centrality of each vertex. Default: 0.1</p></li>
@@ -1857,7 +1840,7 @@ Leave this parameter to 0 to use the default value <span class="math notranslate
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>normalized</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether scores should be normalized by the energy of the full graph. Default: False</p></li>
 </ul>
 </dd>
@@ -1879,7 +1862,7 @@ and a very skewed degree distribution.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>turbo</strong> (<em>bool</em><em>, </em><em>optional</em>) – If the turbo mode shall be activated. Default: False</p></li>
 </ul>
 </dd>
@@ -1895,8 +1878,8 @@ The running time of the run() method is O(m), where m is the number of edges in 
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
-<li><p><strong>P</strong> (<em>networkit.Partition</em>) – The partition to use.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
+<li><p><strong>P</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The partition to use.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1909,7 +1892,7 @@ The running time of the run() method is O(m), where m is the number of edges in 
 <p>Constructs the LocalSquareClusteringCoefficient class for the given Graph <cite>G</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1936,7 +1919,7 @@ to true. Note that, sink-node handling is automatically activated if normalizati
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – Graph to be processed.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – Graph to be processed.</p></li>
 <li><p><strong>damp</strong> (<em>float</em><em>, </em><em>optional</em>) – Damping factor of the PageRank algorithm. Default: 0.85</p></li>
 <li><p><strong>tol</strong> (<em>float</em><em>, </em><em>optional</em>) – Error tolerance for PageRank iteration. Default: 1e-8</p></li>
 <li><p><strong>distributeSinks</strong> (<em>networkit.centrality.SinkHandling</em><em>, </em><em>optional</em>) – Set to distribute PageRank values for sink nodes. Default: SinkHandling.NO_SINK_HANDLING</p></li>
@@ -1991,8 +1974,8 @@ Niloy Ganguly, Animesh Mukherjee, and Sanjukta Bhowmick. 2014)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
-<li><p><strong>P</strong> (<em>networkit.Partition</em>) – Partition for graph G.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
+<li><p><strong>P</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – Partition for graph G.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2040,7 +2023,7 @@ Niloy Ganguly, Animesh Mukherjee, and Sanjukta Bhowmick. 2014)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph of which to compute the centrality.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph of which to compute the centrality.</p></li>
 <li><p><strong>normalized</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to normalize the results or not. Default: False</p></li>
 </ul>
 </dd>
@@ -2075,7 +2058,7 @@ Niloy Ganguly, Animesh Mukherjee, and Sanjukta Bhowmick. 2014)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph of which to compute the centrality.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph of which to compute the centrality.</p></li>
 <li><p><strong>damp</strong> (<em>float</em><em>, </em><em>optional</em>) – Damping factor used for computation. Default: 0.95</p></li>
 <li><p><strong>normalized</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to normalize the results or not. Default: False</p></li>
 </ul>
@@ -2111,7 +2094,7 @@ Niloy Ganguly, Animesh Mukherjee, and Sanjukta Bhowmick. 2014)</p>
 if your friends have more friends than you. Formally this means: <span class="math notranslate nohighlight">\(\sigma(u) = \frac{| \{ v: \{u,v\} \in E, deg(u) &lt; deg(v) \} |}{ deg(u) }\)</span></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -2124,7 +2107,7 @@ if your friends have more friends than you. Formally this means: <span class="ma
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
 <li><p><strong>tol</strong> (<em>float</em><em>, </em><em>optional</em>) – Tolerance used for the approximation: with probability at least 1-1/n, the approximated
 scores are within a factor 1+tol from the exact scores. Default: 0.1</p></li>
 </ul>
@@ -2172,7 +2155,7 @@ to generate the correct matrices and do the correct normalization.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph of which to compute the centrality.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph of which to compute the centrality.</p></li>
 <li><p><strong>normalized</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to normalize the results or not. Default: False</p></li>
 </ul>
 </dd>
@@ -2240,7 +2223,7 @@ However, for most networks the empirical running time is <span class="math notra
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – An unweighted graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – An unweighted graph.</p></li>
 <li><p><strong>k</strong> (<em>int</em>) – Number of nodes with highest closeness that have to be found.
 For example, if k = 10, the top 10 nodes with highest closeness will be computed.</p></li>
 <li><p><strong>first_heu</strong> (<em>bool</em><em>, </em><em>optional</em>) – If true, the neighborhood-based lower bound is computed and nodes are sorted according to it.
@@ -2324,7 +2307,7 @@ networks the empirical running time is O(m).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph. If useNBbound is set to ‘True’, edge weights will be ignored.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph. If useNBbound is set to ‘True’, edge weights will be ignored.</p></li>
 <li><p><strong>k</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of nodes with highest closeness that have to be found. For example, if k = 10, the
 top 10 nodes with highest closeness will be computed. Default: 1</p></li>
 <li><p><strong>useNBbound</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True, the NBbound is re-computed at each iteration. If False, NBcut is used. The worst case
@@ -2414,7 +2397,7 @@ but consider that the resulting vector could be longer than k.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>algorithm</strong> (<a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><em>networkit.centrality.Centrality</em></a><em>, </em><em>optional</em>) – Instance of centrality algorithm to run. Default: networkit.centrality.Betweenness</p></li>
 <li><p><strong>normalized</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set whether the ranking values should be normalized. Default: False</p></li>
 </ul>
@@ -2456,7 +2439,7 @@ The relative rank error of node <cite>u</cite> is defined as <span class="math n
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>algorithm</strong> (<a class="reference internal" href="#networkit.centrality.Centrality" title="networkit.centrality.Centrality"><em>networkit.centrality.Centrality</em></a><em>, </em><em>optional</em>) – Instance of centrality algorithm to run. Default: networkit.centrality.Betweenness</p></li>
 <li><p><strong>normalized</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set whether the ranking values should be normalized. Default: False</p></li>
 </ul>
@@ -2488,6 +2471,7 @@ The relative rank error of node <cite>u</cite> is defined as <span class="math n
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Last updated on Jul 05, 2023.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
     </p>
     <span style="padding-left: 10px">

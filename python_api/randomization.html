@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <meta property="article:modified_time" content="2020-10-21T10:17:44+02:00" />
     <title>networkit.randomization</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
@@ -94,7 +95,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
@@ -148,7 +166,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -185,7 +202,7 @@ footprint which increases linearly with the number of trades
 performed in a run.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to be randomized. For a given degree sequence, e.g.
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to be randomized. For a given degree sequence, e.g.
 generators.HavelHakimi can be used to obtain this graph.</p>
 </dd>
 </dl>
@@ -198,7 +215,7 @@ generators.HavelHakimi can be used to obtain this graph.</p>
 <dd class="field-odd"><p>The randomized graph.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>networkit.Graph</p>
+<dd class="field-even"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -256,7 +273,7 @@ num_global_trades * floor(num_nodes / 2) trades)</p></li>
 <dd class="field-odd"><p>The randomized graph.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>networkit.Graph</p>
+<dd class="field-even"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -305,7 +322,7 @@ leads to a faster mixing time. If you want to use it as a preprocessing step to 
 it’s more efficient to set degreePreservingShufflePreprocessing in GlobalCurveball’s constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to be randomized. For a given degree sequence, e.g.
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to be randomized. For a given degree sequence, e.g.
 generators.HavelHakimi can be used to obtain this graph.</p>
 </dd>
 </dl>
@@ -318,7 +335,7 @@ generators.HavelHakimi can be used to obtain this graph.</p>
 <dd class="field-odd"><p>The randomized graph.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>networkit.Graph</p>
+<dd class="field-even"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -361,7 +378,7 @@ mixing. It is performed by default for owned graphs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to be randomized.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to be randomized.</p></li>
 <li><p><strong>numberOfSwapsPerEdge</strong> (<em>float</em><em>, </em><em>optional</em>) – The average number of swaps to be carried out per edge.
 Has to be non-negative. Default: 10.0</p></li>
 <li><p><strong>degreePreservingShufflePreprocessing</strong> (<em>bool</em><em>, </em><em>optional</em>) – If true (default), in a preprocessing step jump starts the perturbation process.
@@ -422,7 +439,7 @@ garbage collection.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to be randomized.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to be randomized.</p></li>
 <li><p><strong>numberOfSwitchesPerEdge</strong> (<em>int</em><em>, </em><em>optional</em>) – The average number of switches to be carried out per edge.
 Has to be non-negative. Default: 10</p></li>
 </ul>
@@ -437,7 +454,7 @@ Has to be non-negative. Default: 10</p></li>
 <dd class="field-odd"><p>The graph after applying edge switches.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>networkit.Graph</p>
+<dd class="field-even"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -496,7 +513,7 @@ footprint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to be randomized. For a given degree sequence, e.g.
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to be randomized. For a given degree sequence, e.g.
 generators.HavelHakimi can be used to obtain this graph.</p></li>
 <li><p><strong>number_of_global_rounds</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of global rounds to carry out. The runtime scales
 asymptotically linearly in this parameter. Default: 20,
@@ -528,7 +545,7 @@ and how to fix it” by C. J. Carstens K. J. Horadam</p>
 <dd class="field-odd"><p>The randomized graph.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>networkit.Graph</p>
+<dd class="field-even"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -553,6 +570,7 @@ and how to fix it” by C. J. Carstens K. J. Horadam</p>
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Last updated on Oct 21, 2020.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
     </p>
     <span style="padding-left: 10px">

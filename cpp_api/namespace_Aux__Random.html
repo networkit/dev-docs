@@ -94,7 +94,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
@@ -120,7 +137,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -149,19 +165,19 @@
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="function_namespaceAux_1_1Random_1a4046b1f2dcad3414ca92cbafec97aa42.html#exhale-function-namespaceaux-1-1random-1a4046b1f2dcad3414ca92cbafec97aa42"><span class="std std-ref">Template Function Aux::Random::choice</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceAux_1_1Random_1a337ae9965cade00727392c9cf2e6dfb8.html#exhale-function-namespaceaux-1-1random-1a337ae9965cade00727392c9cf2e6dfb8"><span class="std std-ref">Function Aux::Random::getSeed</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceAux_1_1Random_1aee3a4eca162ec35641aa29088fce3a8c.html#exhale-function-namespaceaux-1-1random-1aee3a4eca162ec35641aa29088fce3a8c"><span class="std std-ref">Function Aux::Random::getURNG</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceAux_1_1Random_1af380ebb2a995f7895bd66795be2b44e1.html#exhale-function-namespaceaux-1-1random-1af380ebb2a995f7895bd66795be2b44e1"><span class="std std-ref">Function Aux::Random::index</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceAux_1_1Random_1ae899268c2294ff547d4b665521fe7fc0.html#exhale-function-namespaceaux-1-1random-1ae899268c2294ff547d4b665521fe7fc0"><span class="std std-ref">Function Aux::Random::integer(uint64_t)</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceAux_1_1Random_1a30ee294fbdbc9c272026efadc03af97c.html#exhale-function-namespaceaux-1-1random-1a30ee294fbdbc9c272026efadc03af97c"><span class="std std-ref">Function Aux::Random::integer(uint64_t, uint64_t)</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceAux_1_1Random_1af8ab773a2c8cccef2e591e1827d2f54d.html#exhale-function-namespaceaux-1-1random-1af8ab773a2c8cccef2e591e1827d2f54d"><span class="std std-ref">Function Aux::Random::integer()</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceAux_1_1Random_1ad61c6b5149de13aa1a1ee0a93849f21d.html#exhale-function-namespaceaux-1-1random-1ad61c6b5149de13aa1a1ee0a93849f21d"><span class="std std-ref">Function Aux::Random::probability</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceAux_1_1Random_1ab0532015f7ed7d0eddffeb10405720f9.html#exhale-function-namespaceaux-1-1random-1ab0532015f7ed7d0eddffeb10405720f9"><span class="std std-ref">Function Aux::Random::real()</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceAux_1_1Random_1a524378ca1bc4c65777d2826549a421ea.html#exhale-function-namespaceaux-1-1random-1a524378ca1bc4c65777d2826549a421ea"><span class="std std-ref">Function Aux::Random::real(double)</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceAux_1_1Random_1acbc17fbbf5e0e150600a117af6d630dc.html#exhale-function-namespaceaux-1-1random-1acbc17fbbf5e0e150600a117af6d630dc"><span class="std std-ref">Function Aux::Random::real(double, double)</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceAux_1_1Random_1ae1051793fb0658f95b7ed53aa850decb.html#exhale-function-namespaceaux-1-1random-1ae1051793fb0658f95b7ed53aa850decb"><span class="std std-ref">Function Aux::Random::setSeed</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceAux_1_1Random_1ac3b4dd8f31d1a834f0efa58c562b66ed.html#exhale-function-namespaceaux-1-1random-1ac3b4dd8f31d1a834f0efa58c562b66ed"><span class="std std-ref">Template Function Aux::Random::weightedChoice</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_aux_1_1_random_1a4046b1f2dcad3414ca92cbafec97aa42.html#exhale-function-namespace-aux-1-1-random-1a4046b1f2dcad3414ca92cbafec97aa42"><span class="std std-ref">Template Function Aux::Random::choice</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_aux_1_1_random_1a337ae9965cade00727392c9cf2e6dfb8.html#exhale-function-namespace-aux-1-1-random-1a337ae9965cade00727392c9cf2e6dfb8"><span class="std std-ref">Function Aux::Random::getSeed</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_aux_1_1_random_1a66b1c5d4cf3840697051d4690bdcf06f.html#exhale-function-namespace-aux-1-1-random-1a66b1c5d4cf3840697051d4690bdcf06f"><span class="std std-ref">Function Aux::Random::getURNG</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_aux_1_1_random_1af380ebb2a995f7895bd66795be2b44e1.html#exhale-function-namespace-aux-1-1-random-1af380ebb2a995f7895bd66795be2b44e1"><span class="std std-ref">Function Aux::Random::index</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_aux_1_1_random_1ae899268c2294ff547d4b665521fe7fc0.html#exhale-function-namespace-aux-1-1-random-1ae899268c2294ff547d4b665521fe7fc0"><span class="std std-ref">Function Aux::Random::integer(uint64_t)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_aux_1_1_random_1a30ee294fbdbc9c272026efadc03af97c.html#exhale-function-namespace-aux-1-1-random-1a30ee294fbdbc9c272026efadc03af97c"><span class="std std-ref">Function Aux::Random::integer(uint64_t, uint64_t)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_aux_1_1_random_1af8ab773a2c8cccef2e591e1827d2f54d.html#exhale-function-namespace-aux-1-1-random-1af8ab773a2c8cccef2e591e1827d2f54d"><span class="std std-ref">Function Aux::Random::integer()</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_aux_1_1_random_1ad61c6b5149de13aa1a1ee0a93849f21d.html#exhale-function-namespace-aux-1-1-random-1ad61c6b5149de13aa1a1ee0a93849f21d"><span class="std std-ref">Function Aux::Random::probability</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_aux_1_1_random_1acbc17fbbf5e0e150600a117af6d630dc.html#exhale-function-namespace-aux-1-1-random-1acbc17fbbf5e0e150600a117af6d630dc"><span class="std std-ref">Function Aux::Random::real(double, double)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_aux_1_1_random_1ab0532015f7ed7d0eddffeb10405720f9.html#exhale-function-namespace-aux-1-1-random-1ab0532015f7ed7d0eddffeb10405720f9"><span class="std std-ref">Function Aux::Random::real()</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_aux_1_1_random_1a524378ca1bc4c65777d2826549a421ea.html#exhale-function-namespace-aux-1-1-random-1a524378ca1bc4c65777d2826549a421ea"><span class="std std-ref">Function Aux::Random::real(double)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_aux_1_1_random_1ae1051793fb0658f95b7ed53aa850decb.html#exhale-function-namespace-aux-1-1-random-1ae1051793fb0658f95b7ed53aa850decb"><span class="std std-ref">Function Aux::Random::setSeed</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespace_aux_1_1_random_1af84a7795f05c2c061f20445a08c2452a.html#exhale-function-namespace-aux-1-1-random-1af84a7795f05c2c061f20445a08c2452a"><span class="std std-ref">Template Function Aux::Random::weightedChoice</span></a></p></li>
 </ul>
 </section>
 </section>

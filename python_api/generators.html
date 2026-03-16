@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <meta property="article:modified_time" content="2022-03-17T10:27:30+01:00" />
     <title>networkit.generators</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
@@ -94,7 +95,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
@@ -148,7 +166,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -178,7 +195,7 @@ the call in bter.m can be easily replaced.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>scale</strong> (<em>int</em><em>, </em><em>optional</em>) – Scale the maximum number of nodes by a factor. Default: 1</p></li>
 </ul>
 </dd>
@@ -186,7 +203,7 @@ the call in bter.m can be easily replaced.</p>
 <dd class="field-even"><p>A new scaled graph.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Graph</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -232,7 +249,7 @@ which is basically asymptotically equivalent but produces multi-graphs.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>scale</strong> (<em>int</em><em>, </em><em>optional</em>) – Scale the maximum number of nodes by a factor. Default: 1</p></li>
 </ul>
 </dd>
@@ -240,7 +257,7 @@ which is basically asymptotically equivalent but produces multi-graphs.</p>
 <dd class="field-even"><p>A new scaled graph.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Graph</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -274,7 +291,7 @@ for intra-cluster and inter-cluster edges.</p>
 <dd class="field-odd"><p>The generated ground truth clustering.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>networkit.Partition</p>
+<dd class="field-even"><p><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition">networkit.Partition</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -304,7 +321,7 @@ for intra-cluster and inter-cluster edges.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>scale</strong> (<em>int</em><em>, </em><em>optional</em>) – Scale the maximum number of nodes by a factor. Default: 1</p></li>
 </ul>
 </dd>
@@ -312,7 +329,7 @@ for intra-cluster and inter-cluster edges.</p>
 <dd class="field-even"><p>A new scaled graph.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Graph</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -436,7 +453,7 @@ Shringking Diameters and Possible Explanations</p>
 <dd class="field-odd"><p>The current graph.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>networkit.Graph</p>
+<dd class="field-even"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -523,7 +540,7 @@ time complexity has been resolved)</p></li>
 <dd class="field-odd"><p>The resulting graph.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>networkit.Graph</p>
+<dd class="field-even"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -576,7 +593,7 @@ Some nodes may get lower degrees than requested in the sequence. Default: False<
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>scale</strong> (<em>int</em><em>, </em><em>optional</em>) – Scale the maximum number of nodes by a factor. Default: 1</p></li>
 </ul>
 </dd>
@@ -584,7 +601,7 @@ Some nodes may get lower degrees than requested in the sequence. Default: False<
 <dd class="field-even"><p>A new scaled graph.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Graph</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -644,7 +661,7 @@ generation of large random networks”, Phys Rev E 71, 036113 (2005).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>scale</strong> (<em>int</em><em>, </em><em>optional</em>) – Scale the maximum number of nodes by a factor. Default: 1</p></li>
 </ul>
 </dd>
@@ -652,7 +669,7 @@ generation of large random networks”, Phys Rev E 71, 036113 (2005).</p>
 <dd class="field-even"><p>A new scaled graph.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Graph</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -732,7 +749,7 @@ For a temperature of 0, the model resembles a unit-disk model in hyperbolic spac
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>scale</strong> (<em>int</em><em>, </em><em>optional</em>) – Scale the maximum number of nodes by a factor. Default: 1</p></li>
 </ul>
 </dd>
@@ -740,7 +757,7 @@ For a temperature of 0, the model resembles a unit-disk model in hyperbolic spac
 <dd class="field-even"><p>A new scaled graph.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Graph</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -837,7 +854,7 @@ instead of heavily modifying the distributions.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>scale</strong> (<em>int</em><em>, </em><em>optional</em>) – Scale the maximum number of nodes by a factor. Default: 1</p></li>
 <li><p><strong>vanilla</strong> (<em>bool</em><em>, </em><em>optional</em>) – If set to True, fit power law to degree distribution. Otherwise fit to community sequence.</p></li>
 <li><p><strong>communityDetectionAlgorithm</strong> (<em>nk.community.CommunityDetector</em><em>, </em><em>optional</em>) – Community detection algorithm used for fitting. Default: nk.community.PLM</p></li>
@@ -848,7 +865,7 @@ instead of heavily modifying the distributions.</p>
 <dd class="field-even"><p>A new scaled graph.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Graph</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -865,7 +882,7 @@ instead of heavily modifying the distributions.</p>
 <dd class="field-even"><p>The generated graph.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Graph</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -909,7 +926,7 @@ instead of heavily modifying the distributions.</p>
 <dd class="field-odd"><p>The generated graph.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>networkit.Graph</p>
+<dd class="field-even"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -923,7 +940,7 @@ instead of heavily modifying the distributions.</p>
 <dd class="field-odd"><p>The generated partition.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>networkit.Partition</p>
+<dd class="field-even"><p><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition">networkit.Partition</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -980,7 +997,7 @@ instead of heavily modifying the distributions.</p>
 <dd><p>Set the partition, this replaces the community size sequence and the random assignment of the nodes to communities.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>zeta</strong> (<em>networkit.Partition</em>) – The partition to use.</p>
+<dd class="field-odd"><p><strong>zeta</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The partition to use.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1070,7 +1087,7 @@ value of the sequence and fits the exponent such that the expected average degre
 <li><p><strong>minDeg</strong> (<em>int</em>) – The minium degree.</p></li>
 <li><p><strong>maxDeg</strong> (<em>int</em><em>, </em><em>optional</em>) – The maximum degree.</p></li>
 <li><p><strong>gamma</strong> (<em>float</em><em>, </em><em>optional</em>) – The powerlaw exponent. Default: -2.0</p></li>
-<li><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>alternative</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a><em>, </em><em>alternative</em>) – The input graph.</p></li>
 <li><p><strong>degreeSequence</strong> (<em>list</em><em>(</em><em>int</em><em>)</em><em>, </em><em>alternative</em>) – List of degrees to fit.</p></li>
 </ul>
 </dd>
@@ -1295,7 +1312,7 @@ R-MAT: A Recursive Model for Graph Mining. SDM 2004: 442-446.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>scale</strong> (<em>int</em><em>, </em><em>optional</em>) – Scale the maximum number of nodes by a factor. Default: 1</p></li>
 <li><p><strong>initiator</strong> (<em>tuple</em><em>(</em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>, </em><em>float</em><em>)</em><em>, </em><em>optional</em>) – Initiate quadrants with custom values. Default: None</p></li>
 <li><p><strong>kronfit</strong> (<em>bool</em><em>, </em><em>optional</em>) – Indicates whether a slower but more accurate fitting functions is used. Default: True</p></li>
@@ -1306,7 +1323,7 @@ R-MAT: A Recursive Model for Graph Mining. SDM 2004: 442-446.</p>
 <dd class="field-even"><p>A new scaled graph.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Graph</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1338,7 +1355,7 @@ R-MAT: A Recursive Model for Graph Mining. SDM 2004: 442-446.</p>
 <dd class="field-odd"><p>The generated graph.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>networkit.Graph</p>
+<dd class="field-even"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1381,6 +1398,7 @@ with a given probability.</p>
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Last updated on Mar 17, 2022.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
     </p>
     <span style="padding-left: 10px">

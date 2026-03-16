@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <meta property="article:modified_time" content="2023-07-05T12:27:40+02:00" />
     <title>networkit.community</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
@@ -96,7 +97,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
@@ -150,7 +168,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -176,9 +193,9 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
-<li><p><strong>first</strong> (<em>networkit.Partition</em>) – The first partition.</p></li>
-<li><p><strong>second</strong> (<em>networkit.Partition</em>) – The second partition.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
+<li><p><strong>first</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The first partition.</p></li>
+<li><p><strong>second</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The second partition.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -204,7 +221,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph for which the clustering shall be generated.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph for which the clustering shall be generated.</p></li>
 <li><p><strong>k</strong> (<em>int</em>) – The number of clusters that shall be generated.</p></li>
 </ul>
 </dd>
@@ -212,7 +229,7 @@
 <dd class="field-even"><p>The generated partition.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Partition</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition">networkit.Partition</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -226,7 +243,7 @@ of nodes that is in the same cluster in one of the clusterings is in the same cl
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph for which the clustering shall be generated.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph for which the clustering shall be generated.</p></li>
 <li><p><strong>k</strong> (<em>int</em>) – The number of clusters that shall be generated.</p></li>
 </ul>
 </dd>
@@ -234,7 +251,7 @@ of nodes that is in the same cluster in one of the clusterings is in the same cl
 <dd class="field-even"><p>The generated partition.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Partition</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition">networkit.Partition</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -245,13 +262,13 @@ of nodes that is in the same cluster in one of the clusterings is in the same cl
 <dd><p>Generate a clustering with one cluster consisting of all nodes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph for which the clustering shall be generated.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph for which the clustering shall be generated.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The generated partition.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Partition</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition">networkit.Partition</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -263,7 +280,7 @@ of nodes that is in the same cluster in one of the clusterings is in the same cl
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph for which the clustering shall be generated.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph for which the clustering shall be generated.</p></li>
 <li><p><strong>k</strong> (<em>int</em>) – The number of clusters that shall be generated.</p></li>
 </ul>
 </dd>
@@ -271,7 +288,7 @@ of nodes that is in the same cluster in one of the clusterings is in the same cl
 <dd class="field-even"><p>The generated partition.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Partition</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition">networkit.Partition</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -282,13 +299,13 @@ of nodes that is in the same cluster in one of the clusterings is in the same cl
 <dd><p>Generate a clustering where each node has its own cluster</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph for which the clustering shall be generated.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph for which the clustering shall be generated.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The generated partition.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Partition</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition">networkit.Partition</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -309,7 +326,7 @@ of nodes that is in the same cluster in one of the clusterings is in the same cl
 <dd class="field-odd"><p>A Partition of the clustering.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>networkit.Partition</p>
+<dd class="field-even"><p><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition">networkit.Partition</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -337,9 +354,9 @@ International Conference on Knowledge Discovery and Data Mining
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph on which the evaluation is performed.</p></li>
-<li><p><strong>C</strong> (<em>networkit.Cover</em>) – The cover that shall be evaluated.</p></li>
-<li><p><strong>reference</strong> (<em>networkit.Cover</em>) – The cover to which the similarity shall be computed.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph on which the evaluation is performed.</p></li>
+<li><p><strong>C</strong> (<a class="reference internal" href="networkit.html#networkit.Cover" title="networkit.Cover"><em>networkit.Cover</em></a>) – The cover that shall be evaluated.</p></li>
+<li><p><strong>reference</strong> (<a class="reference internal" href="networkit.html#networkit.Cover" title="networkit.Cover"><em>networkit.Cover</em></a>) – The cover to which the similarity shall be computed.</p></li>
 </ul>
 </dd>
 </dl>
@@ -363,8 +380,8 @@ PLoS ONE 5(8): e11976. doi: 10.1371/journal.pone.0011976
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph on which the measure shall be evaluated.</p></li>
-<li><p><strong>C</strong> (<em>networkit.Cover</em>) – The cover that shall be evaluated.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph on which the measure shall be evaluated.</p></li>
+<li><p><strong>C</strong> (<a class="reference internal" href="networkit.html#networkit.Cover" title="networkit.Cover"><em>networkit.Cover</em></a>) – The cover that shall be evaluated.</p></li>
 </ul>
 </dd>
 </dl>
@@ -383,8 +400,8 @@ Graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>zeta</strong> (<em>networkit.Partition</em>) – The Partition for which the coverage shall be calculated.</p></li>
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The Graph to which zeta belongs.</p></li>
+<li><p><strong>zeta</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The Partition for which the coverage shall be calculated.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The Graph to which zeta belongs.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -408,7 +425,7 @@ Internet Mathematics 1 (2003), no. 4, 385–408.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>alpha</strong> (<em>float</em>) – The parameter for the cut clustering algorithm.</p></li>
 </ul>
 </dd>
@@ -423,7 +440,7 @@ Furthermore the completeness of the hierarchy cannot be guaranteed because of th
 This implementation hasn’t been optimized for performance.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A dictionary with the parameter values as keys and the corresponding Partition instances as values.</p>
@@ -456,8 +473,8 @@ Graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>zeta</strong> (<em>networkit.Partition</em>) – The Partition for which the edgeCut shall be calculated.</p></li>
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The Graph to which zeta belongs.</p></li>
+<li><p><strong>zeta</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The Partition for which the edgeCut shall be calculated.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The Graph to which zeta belongs.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -488,15 +505,15 @@ clusters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>graph</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
-<li><p><strong>zeta</strong> (<em>networkit.Partition</em>) – Partition, which contains information about clusters in the graph.</p></li>
+<li><p><strong>graph</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
+<li><p><strong>zeta</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – Partition, which contains information about clusters in the graph.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Communication graph given by the input graph and its partition.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Graph</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -508,9 +525,9 @@ clusters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>zeta</strong> (<em>networkit.Partition</em>) – The first partition.</p></li>
-<li><p><strong>eta</strong> (<em>networkit.Partition</em>) – The second partition.</p></li>
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>zeta</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The first partition.</p></li>
+<li><p><strong>eta</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The second partition.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -529,8 +546,8 @@ clusters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>zeta</strong> (<em>networkit.Partition</em>) – The first partition.</p></li>
-<li><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The input graph to compare the imbalance to. Default: None</p></li>
+<li><p><strong>zeta</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The first partition.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a><em>, </em><em>optional</em>) – The input graph to compare the imbalance to. Default: None</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -549,8 +566,8 @@ clusters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
-<li><p><strong>zeta</strong> (<em>networkit.Partition</em>) – The first partition.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
+<li><p><strong>zeta</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The first partition.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -569,8 +586,8 @@ clusters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
-<li><p><strong>zeta</strong> (<em>networkit.Partition</em>) – The first partition.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
+<li><p><strong>zeta</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The first partition.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -589,8 +606,8 @@ clusters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
-<li><p><strong>zeta</strong> (<em>networkit.Partition</em>) – The first partition.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
+<li><p><strong>zeta</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The first partition.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -609,8 +626,8 @@ clusters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>graph</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
-<li><p><strong>zeta</strong> (<em>networkit.Partition</em>) – Partition, which contains information about clusters in the graph.</p></li>
+<li><p><strong>graph</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
+<li><p><strong>zeta</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – Partition, which contains information about clusters in the graph.</p></li>
 <li><p><strong>u</strong> (<em>int</em>) – The input node.</p></li>
 <li><p><strong>cid</strong> (<em>int</em>) – Index of cluster.</p></li>
 </ul>
@@ -639,9 +656,9 @@ to two partitions of a graph, by considering connected pairs of nodes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
-<li><p><strong>first</strong> (<em>networkit.Partition</em>) – The first partition.</p></li>
-<li><p><strong>second</strong> (<em>networkit.Partition</em>) – The second partition.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
+<li><p><strong>first</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The first partition.</p></li>
+<li><p><strong>second</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The second partition.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -677,8 +694,8 @@ Graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>zeta</strong> (<em>networkit.Partition</em><em> or </em><em>networkit.Cover</em>) – The Partition or Cover for which the hub dominance shall be calculated.</p></li>
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The Graph to which zeta belongs.</p></li>
+<li><p><strong>zeta</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a><em> or </em><a class="reference internal" href="networkit.html#networkit.Cover" title="networkit.Cover"><em>networkit.Cover</em></a>) – The Partition or Cover for which the hub dominance shall be calculated.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The Graph to which zeta belongs.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -701,8 +718,8 @@ The global value is the sum of all existing intra-cluster edges divided by the s
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph on which the measure shall be evaluated.</p></li>
-<li><p><strong>P</strong> (<em>networkit.Partition</em>) – The partition that shall be evaluated.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph on which the measure shall be evaluated.</p></li>
+<li><p><strong>P</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The partition that shall be evaluated.</p></li>
 </ul>
 </dd>
 </dl>
@@ -740,8 +757,8 @@ Robert Grke, Andrea Kappes and  Dorothea Wagner, JEA 2015:
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph on which the measure shall be evaluated.</p></li>
-<li><p><strong>P</strong> (<em>networkit.Partition</em>) – The partition that shall be evaluated.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph on which the measure shall be evaluated.</p></li>
+<li><p><strong>P</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The partition that shall be evaluated.</p></li>
 </ul>
 </dd>
 </dl>
@@ -765,8 +782,8 @@ Robert Grke, Andrea Kappes and Dorothea Wagner, JEA 2015:
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph on which the measure shall be evaluated.</p></li>
-<li><p><strong>P</strong> (<em>networkit.Partition</em>) – The partition that shall be evaluated.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph on which the measure shall be evaluated.</p></li>
+<li><p><strong>P</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The partition that shall be evaluated.</p></li>
 </ul>
 </dd>
 </dl>
@@ -783,9 +800,9 @@ Robert Grke, Andrea Kappes and Dorothea Wagner, JEA 2015:
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
-<li><p><strong>first</strong> (<em>networkit.Partition</em>) – The first partition.</p></li>
-<li><p><strong>second</strong> (<em>networkit.Partition</em>) – The second partition.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
+<li><p><strong>first</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The first partition.</p></li>
+<li><p><strong>second</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The second partition.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -810,7 +827,7 @@ for different random seed nodes which have not yet been assigned to any communit
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph on which the algorithm has to run.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph on which the algorithm has to run.</p></li>
 <li><p><strong>scd</strong> (<a class="reference internal" href="scd.html#networkit.scd.SelectiveCommunityDetector" title="networkit.scd.SelectiveCommunityDetector"><em>networkit.scd.SelectiveCommunityDetector</em></a>) – The selective community detector algorithm which is run on
 randomly selected seed nodes</p></li>
 </ul>
@@ -978,7 +995,7 @@ This is the base class for Partitions.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph on which the algorithm has to run.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph on which the algorithm has to run.</p></li>
 <li><p><strong>hierarchical</strong> (<em>bool</em><em>, </em><em>optional</em>) – Iteratively create a graph of the locally optimal clusters and optimize locally on that graph.</p></li>
 <li><p><strong>maxIterations</strong> (<em>int</em><em>, </em><em>optional</em>) – The maximum number of local move iterations. Default: 32</p></li>
 <li><p><strong>parallelizationStrategy</strong> (<em>str</em><em>, </em><em>optional</em>) – Parallelization strategy, possible values: “relaxmap”, “synchronous”, “none”. Default: “relaxmap”</p></li>
@@ -1006,8 +1023,8 @@ Graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>zeta</strong> (<em>networkit.Partition</em>) – The Partition for which the modularity shall be calculated</p></li>
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The Graph to which zeta belongs</p></li>
+<li><p><strong>zeta</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The Partition for which the modularity shall be calculated</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The Graph to which zeta belongs</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1034,9 +1051,9 @@ of a graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph.</p></li>
-<li><p><strong>first</strong> (<em>networkit.Partition</em>) – The first partition.</p></li>
-<li><p><strong>second</strong> (<em>networkit.Partition</em>) – The second partition.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph.</p></li>
+<li><p><strong>first</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The first partition.</p></li>
+<li><p><strong>second</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The second partition.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1063,9 +1080,9 @@ to two partitions of a graph, by considering all pairs of nodes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
-<li><p><strong>first</strong> (<em>networkit.Partition</em>) – The first partition.</p></li>
-<li><p><strong>second</strong> (<em>networkit.Partition</em>) – The second partition.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
+<li><p><strong>first</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The first partition.</p></li>
+<li><p><strong>second</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The second partition.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1149,7 +1166,7 @@ to two partitions of a graph, by considering all pairs of nodes.</p>
 <dd class="field-odd"><p>A Cover of the clustering.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>networkit.Cover</p>
+<dd class="field-even"><p><a class="reference internal" href="networkit.html#networkit.Cover" title="networkit.Cover">networkit.Cover</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1193,9 +1210,9 @@ Community Finding Algorithms.” ArXiv:1110.2515 [Physics], August 2, 2013. http
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
-<li><p><strong>first</strong> (<em>networkit.Partition</em><em> or </em><em>networkit.Cover</em>) – The first input partition/cover.</p></li>
-<li><p><strong>second</strong> (<em>networkit.Partition</em><em> or </em><em>networkit.Cover</em>) – The second input partition/cover. Must be the same type as <cite>first</cite>.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
+<li><p><strong>first</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a><em> or </em><a class="reference internal" href="networkit.html#networkit.Cover" title="networkit.Cover"><em>networkit.Cover</em></a>) – The first input partition/cover.</p></li>
+<li><p><strong>second</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a><em> or </em><a class="reference internal" href="networkit.html#networkit.Cover" title="networkit.Cover"><em>networkit.Cover</em></a>) – The second input partition/cover. Must be the same type as <cite>first</cite>.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
@@ -1246,7 +1263,7 @@ a full multi-level algorithm with refinement.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>refine</strong> (<em>bool</em><em>, </em><em>optional</em>) – Add a second move phase to refine the communities. Default: False</p></li>
 <li><p><strong>gamma</strong> (<em>float</em><em>, </em><em>optional</em>) – Multi-resolution modularity parameter: 1.0 (standard modularity), 0.0 (one community), 2m (singleton communities). Default: 1.0</p></li>
 <li><p><strong>par</strong> (<em>str</em><em>, </em><em>optional</em>) – Parallelization strategy, possible values: “none”, “simple”, “balanced”, “none randomized”. Default “balanced”</p></li>
@@ -1265,8 +1282,8 @@ for the nodes from fine to coarse.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
-<li><p><strong>zeta</strong> (<em>networkit.Partition</em>) – Partition of the graph, which represents the desired state of the coarsened graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
+<li><p><strong>zeta</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – Partition of the graph, which represents the desired state of the coarsened graph.</p></li>
 <li><p><strong>parallel</strong> (<em>bool</em><em>, </em><em>optional</em>) – Do the coarsening in parallel. Default: False</p></li>
 </ul>
 </dd>
@@ -1274,7 +1291,7 @@ for the nodes from fine to coarse.</p>
 <dd class="field-even"><p>Pair of coarsened graph and node-mappings from fine to coarse graph.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Graph</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1301,9 +1318,9 @@ to a cluster-id from partition based on a coarse graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>Gcoarse</strong> (<em>networkit.Graph</em>) – A coarse graph.</p></li>
-<li><p><strong>zetaCoarse</strong> (<em>networkit.Partition</em>) – The first partition.</p></li>
-<li><p><strong>Gfine</strong> (<em>networkit.Graph</em>) – A fine graph.</p></li>
+<li><p><strong>Gcoarse</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – A coarse graph.</p></li>
+<li><p><strong>zetaCoarse</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The first partition.</p></li>
+<li><p><strong>Gfine</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – A fine graph.</p></li>
 <li><p><strong>nodeToMetaNode</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – Partition, which contains the cluster-id in the coarse graph for every node from the fine graph.</p></li>
 </ul>
 </dd>
@@ -1311,7 +1328,7 @@ to a cluster-id from partition based on a coarse graph.</p>
 <dd class="field-even"><p>Output partition.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Partition</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition">networkit.Partition</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1327,10 +1344,10 @@ Moderate solution quality, very short time to solution.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph on which the algorithm has to run.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph on which the algorithm has to run.</p></li>
 <li><p><strong>updateThreshold</strong> (<em>int</em><em>, </em><em>optional</em>) – number of nodes that have to be changed in each iteration so that a new iteration starts. Default: None</p></li>
 <li><p><strong>maxIterations</strong> (<em>int</em><em>, </em><em>optional</em>) – The maximum number of local move iterations. Default: None</p></li>
-<li><p><strong>baseClustering</strong> (<em>networkit.Partition</em><em>, </em><em>optional</em>) – PLP needs a base clustering to start from; if none is given the algorithm will
+<li><p><strong>baseClustering</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a><em>, </em><em>optional</em>) – PLP needs a base clustering to start from; if none is given the algorithm will
 run on a singleton clustering. Default: None</p></li>
 </ul>
 </dd>
@@ -1380,7 +1397,7 @@ has the label that at least half of its neighbors have.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – A graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – A graph.</p></li>
 <li><p><strong>randomize</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to randomize the node order or not. Default: True</p></li>
 <li><p><strong>iterations</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum count of Leiden runs. Default: 3</p></li>
 <li><p><strong>gamma</strong> (<em>float</em><em>, </em><em>optional</em>) – Multi-resolution modularity parameter: 1.0 (standard modularity), 0.0 (one community), 2m (singleton communities). Default: 1.0</p></li>
@@ -1398,8 +1415,8 @@ number of nodes in its maximum connected componented divided by its total number
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph on which the measure shall be evaluated.</p></li>
-<li><p><strong>P</strong> (<em>networkit.Partition</em>) – The partition that shall be evaluated.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph on which the measure shall be evaluated.</p></li>
+<li><p><strong>P</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The partition that shall be evaluated.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1422,8 +1439,8 @@ PLoS ONE 5(8): e11976. doi: 10.1371/journal.pone.0011976
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph on which the measure shall be evaluated.</p></li>
-<li><p><strong>P</strong> (<em>networkit.Partition</em>) – The partition that shall be evaluated.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph on which the measure shall be evaluated.</p></li>
+<li><p><strong>P</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The partition that shall be evaluated.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1442,15 +1459,15 @@ such that each cluster is a subset of a cluster in both partitions.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>zeta</strong> (<em>networkit.Partition</em>) – The first partition.</p></li>
-<li><p><strong>eta</strong> (<em>networkit.Partition</em>) – The second partition.</p></li>
+<li><p><strong>zeta</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The first partition.</p></li>
+<li><p><strong>eta</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The second partition.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The intersection of zeta and eta.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Partition</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition">networkit.Partition</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1467,7 +1484,7 @@ from 0 to n.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>graph</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>graph</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>count</strong> (<em>int</em>) – The number of partitions to create.</p></li>
 <li><p><strong>balanced</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set this to false if you do not want to enforce balance, possibly increasing quality. Default: True</p></li>
 </ul>
@@ -1482,7 +1499,7 @@ from 0 to n.</p>
 <dd class="field-odd"><p>The resulting partition. Only valid if <code class="code docutils literal notranslate"><span class="pre">run()</span></code> was called before.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>networkit.Partition</p>
+<dd class="field-even"><p><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition">networkit.Partition</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1506,8 +1523,8 @@ Larger values indicate that a clustering is more stable and thus better defined.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph on which the measure shall be evaluated.</p></li>
-<li><p><strong>P</strong> (<em>networkit.Partition</em>) – The partition that shall be evaluated.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph on which the measure shall be evaluated.</p></li>
+<li><p><strong>P</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The partition that shall be evaluated.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1538,8 +1555,8 @@ between communities, from a given graph and a community detection solution.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph on which the evaluation is performed.</p></li>
-<li><p><strong>P</strong> (<em>networkit.Partition</em>) – The input Partition.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph on which the evaluation is performed.</p></li>
+<li><p><strong>P</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The input Partition.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1569,7 +1586,7 @@ between communities, from a given graph and a community detection solution.</p>
 <dd class="field-even"><p>Return communities (as type Partition).</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Partition</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition">networkit.Partition</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1582,7 +1599,7 @@ between communities, from a given graph and a community detection solution.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>algo</strong> (<a class="reference internal" href="#networkit.community.CommunityDetector" title="networkit.community.CommunityDetector"><em>networkit.community.CommunityDetector</em></a>) – Community detection algorithm instance</p></li>
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph on which the evaluation is performed.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph on which the evaluation is performed.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1601,8 +1618,8 @@ between communities, from a given graph and a community detection solution.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>zeta</strong> (<em>networkit.Partition</em>) – The input Partition.</p></li>
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph on which the evaluation is performed.</p></li>
+<li><p><strong>zeta</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The input Partition.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph on which the evaluation is performed.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1621,7 +1638,7 @@ between communities, from a given graph and a community detection solution.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph on which the evaluation is performed.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph on which the evaluation is performed.</p></li>
 <li><p><strong>k</strong> (<em>float</em>) – Set k as used in k-core.</p></li>
 <li><p><strong>algo</strong> (<a class="reference internal" href="#networkit.community.CommunityDetector" title="networkit.community.CommunityDetector"><em>networkit.community.CommunityDetector</em></a><em>, </em><em>optional</em>) – Community detection algorithm instance. Default: None</p></li>
 <li><p><strong>inspect</strong> (<em>bool</em><em>, </em><em>optional</em>) – Print properties of the found solution. Default: True</p></li>
@@ -1631,7 +1648,7 @@ between communities, from a given graph and a community detection solution.</p>
 <dd class="field-even"><p>Return communities (as type Partition).</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Partition</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition">networkit.Partition</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1657,7 +1674,7 @@ between communities, from a given graph and a community detection solution.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>communities</strong> (<em>networkit.Partition</em>) – The input communities.</p></li>
+<li><p><strong>communities</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The input communities.</p></li>
 <li><p><strong>path</strong> (<em>str</em>) – Path to write the file to.</p></li>
 </ul>
 </dd>
@@ -1682,6 +1699,7 @@ between communities, from a given graph and a community detection solution.</p>
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Last updated on Jul 05, 2023.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
     </p>
     <span style="padding-left: 10px">

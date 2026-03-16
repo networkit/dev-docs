@@ -94,7 +94,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
@@ -120,7 +137,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -143,30 +159,30 @@
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a7e1bdc60e8c6660430d116f3431c9e6c.html#exhale-function-globalstate-8hpp-1a7e1bdc60e8c6660430d116f3431c9e6c"><span class="std std-ref">Function NetworKit::GlobalState::getGlobalSeed</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a8c4bc2ddc7dbbcadcb14bd10308bd18e.html#exhale-function-globalstate-8hpp-1a8c4bc2ddc7dbbcadcb14bd10308bd18e"><span class="std std-ref">Function NetworKit::GlobalState::getLogFile</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a0381d4cb571cd592245b617d94e9300c.html#exhale-function-globalstate-8hpp-1a0381d4cb571cd592245b617d94e9300c"><span class="std std-ref">Function NetworKit::GlobalState::getLogFileIsOpen</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1ad823655b80ab4faa5cc4c2445192c58f.html#exhale-function-globalstate-8hpp-1ad823655b80ab4faa5cc4c2445192c58f"><span class="std std-ref">Function NetworKit::GlobalState::getLogFileMutex</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a21833a7d08a3157ac2dc1038ee2af5f6.html#exhale-function-globalstate-8hpp-1a21833a7d08a3157ac2dc1038ee2af5f6"><span class="std std-ref">Function NetworKit::GlobalState::getLogLevel</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a058b65ea0f1766dc9a618bdf40e113d0.html#exhale-function-globalstate-8hpp-1a058b65ea0f1766dc9a618bdf40e113d0"><span class="std std-ref">Function NetworKit::GlobalState::getPrevHandler</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a67366ecab38415a6b05b6282af26d52b.html#exhale-function-globalstate-8hpp-1a67366ecab38415a6b05b6282af26d52b"><span class="std std-ref">Function NetworKit::GlobalState::getPrintLocation</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a16d8e4373ff61c9bf4c4ff5f80d8fc2e.html#exhale-function-globalstate-8hpp-1a16d8e4373ff61c9bf4c4ff5f80d8fc2e"><span class="std std-ref">Function NetworKit::GlobalState::getPrintTime</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a669d3c49d5099790dece7b31638724f7.html#exhale-function-globalstate-8hpp-1a669d3c49d5099790dece7b31638724f7"><span class="std std-ref">Function NetworKit::GlobalState::getReceivedSIGINT</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a12133059c691dae789c4854a11e9938a.html#exhale-function-globalstate-8hpp-1a12133059c691dae789c4854a11e9938a"><span class="std std-ref">Function NetworKit::GlobalState::getRoot</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1ad303ee6a7a6df973c606c776d84e8a60.html#exhale-function-globalstate-8hpp-1ad303ee6a7a6df973c606c776d84e8a60"><span class="std std-ref">Function NetworKit::GlobalState::getRootSet</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a2277df3cf5b91dd20d17f16deaecdbaf.html#exhale-function-globalstate-8hpp-1a2277df3cf5b91dd20d17f16deaecdbaf"><span class="std std-ref">Function NetworKit::GlobalState::getSeed</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a3d428d35f61bd14b4cc51713294ddcfa.html#exhale-function-globalstate-8hpp-1a3d428d35f61bd14b4cc51713294ddcfa"><span class="std std-ref">Function NetworKit::GlobalState::getSeedUseThreadId</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a58d278f3235f131bb0102e2e74d81e88.html#exhale-function-globalstate-8hpp-1a58d278f3235f131bb0102e2e74d81e88"><span class="std std-ref">Function NetworKit::GlobalState::incGlobalSeed</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a01fd311065fe03dc08a2a4f28c0e2b8e.html#exhale-function-globalstate-8hpp-1a01fd311065fe03dc08a2a4f28c0e2b8e"><span class="std std-ref">Function NetworKit::GlobalState::setLogfile</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a7275beaa32a650f1cf0453d40e8554aa.html#exhale-function-globalstate-8hpp-1a7275beaa32a650f1cf0453d40e8554aa"><span class="std std-ref">Function NetworKit::GlobalState::setLogLevel</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1acb5dd79767ab77b9a37405f72f13439c.html#exhale-function-globalstate-8hpp-1acb5dd79767ab77b9a37405f72f13439c"><span class="std std-ref">Function NetworKit::GlobalState::setPrevHandler</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a3c882dbece87b0b539062e95e088a227.html#exhale-function-globalstate-8hpp-1a3c882dbece87b0b539062e95e088a227"><span class="std std-ref">Function NetworKit::GlobalState::setPrintLocation</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a76dc40478194b2e766e08a557195b167.html#exhale-function-globalstate-8hpp-1a76dc40478194b2e766e08a557195b167"><span class="std std-ref">Function NetworKit::GlobalState::setPrintTime</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1af00f8e6b6ed073148a97b350b123067d.html#exhale-function-globalstate-8hpp-1af00f8e6b6ed073148a97b350b123067d"><span class="std std-ref">Function NetworKit::GlobalState::setReceivedSIGINT</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a98bb2c813f59a1bf56de2d5fc5601581.html#exhale-function-globalstate-8hpp-1a98bb2c813f59a1bf56de2d5fc5601581"><span class="std std-ref">Function NetworKit::GlobalState::setRoot</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a573949e436754f387f2060c9f37cd204.html#exhale-function-globalstate-8hpp-1a573949e436754f387f2060c9f37cd204"><span class="std std-ref">Function NetworKit::GlobalState::setRootSet</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a30039bf7a6e53a895d0ca1ea15080549.html#exhale-function-globalstate-8hpp-1a30039bf7a6e53a895d0ca1ea15080549"><span class="std std-ref">Function NetworKit::GlobalState::setSeed</span></a></p></li>
-<li><p><a class="reference internal" href="function_GlobalState_8hpp_1a21cf0184a823323910096e266d08862d.html#exhale-function-globalstate-8hpp-1a21cf0184a823323910096e266d08862d"><span class="std std-ref">Function NetworKit::GlobalState::setSeedUseThreadId</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a7e1bdc60e8c6660430d116f3431c9e6c.html#exhale-function-global-state-8hpp-1a7e1bdc60e8c6660430d116f3431c9e6c"><span class="std std-ref">Function NetworKit::GlobalState::getGlobalSeed</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1ad80bd118419c06bffe0cee7817822cb6.html#exhale-function-global-state-8hpp-1ad80bd118419c06bffe0cee7817822cb6"><span class="std std-ref">Function NetworKit::GlobalState::getLogFile</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a0381d4cb571cd592245b617d94e9300c.html#exhale-function-global-state-8hpp-1a0381d4cb571cd592245b617d94e9300c"><span class="std std-ref">Function NetworKit::GlobalState::getLogFileIsOpen</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a358d1d21613f9cb2bb1c7b4ef60dd702.html#exhale-function-global-state-8hpp-1a358d1d21613f9cb2bb1c7b4ef60dd702"><span class="std std-ref">Function NetworKit::GlobalState::getLogFileMutex</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a21833a7d08a3157ac2dc1038ee2af5f6.html#exhale-function-global-state-8hpp-1a21833a7d08a3157ac2dc1038ee2af5f6"><span class="std std-ref">Function NetworKit::GlobalState::getLogLevel</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a058b65ea0f1766dc9a618bdf40e113d0.html#exhale-function-global-state-8hpp-1a058b65ea0f1766dc9a618bdf40e113d0"><span class="std std-ref">Function NetworKit::GlobalState::getPrevHandler</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a67366ecab38415a6b05b6282af26d52b.html#exhale-function-global-state-8hpp-1a67366ecab38415a6b05b6282af26d52b"><span class="std std-ref">Function NetworKit::GlobalState::getPrintLocation</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a16d8e4373ff61c9bf4c4ff5f80d8fc2e.html#exhale-function-global-state-8hpp-1a16d8e4373ff61c9bf4c4ff5f80d8fc2e"><span class="std std-ref">Function NetworKit::GlobalState::getPrintTime</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a669d3c49d5099790dece7b31638724f7.html#exhale-function-global-state-8hpp-1a669d3c49d5099790dece7b31638724f7"><span class="std std-ref">Function NetworKit::GlobalState::getReceivedSIGINT</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a9eb8f6c46263549267f8ed65a181c249.html#exhale-function-global-state-8hpp-1a9eb8f6c46263549267f8ed65a181c249"><span class="std std-ref">Function NetworKit::GlobalState::getRoot</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1ad303ee6a7a6df973c606c776d84e8a60.html#exhale-function-global-state-8hpp-1ad303ee6a7a6df973c606c776d84e8a60"><span class="std std-ref">Function NetworKit::GlobalState::getRootSet</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a2277df3cf5b91dd20d17f16deaecdbaf.html#exhale-function-global-state-8hpp-1a2277df3cf5b91dd20d17f16deaecdbaf"><span class="std std-ref">Function NetworKit::GlobalState::getSeed</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a3d428d35f61bd14b4cc51713294ddcfa.html#exhale-function-global-state-8hpp-1a3d428d35f61bd14b4cc51713294ddcfa"><span class="std std-ref">Function NetworKit::GlobalState::getSeedUseThreadId</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a58d278f3235f131bb0102e2e74d81e88.html#exhale-function-global-state-8hpp-1a58d278f3235f131bb0102e2e74d81e88"><span class="std std-ref">Function NetworKit::GlobalState::incGlobalSeed</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a01fd311065fe03dc08a2a4f28c0e2b8e.html#exhale-function-global-state-8hpp-1a01fd311065fe03dc08a2a4f28c0e2b8e"><span class="std std-ref">Function NetworKit::GlobalState::setLogfile</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a7275beaa32a650f1cf0453d40e8554aa.html#exhale-function-global-state-8hpp-1a7275beaa32a650f1cf0453d40e8554aa"><span class="std std-ref">Function NetworKit::GlobalState::setLogLevel</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1acb5dd79767ab77b9a37405f72f13439c.html#exhale-function-global-state-8hpp-1acb5dd79767ab77b9a37405f72f13439c"><span class="std std-ref">Function NetworKit::GlobalState::setPrevHandler</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a3c882dbece87b0b539062e95e088a227.html#exhale-function-global-state-8hpp-1a3c882dbece87b0b539062e95e088a227"><span class="std std-ref">Function NetworKit::GlobalState::setPrintLocation</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a76dc40478194b2e766e08a557195b167.html#exhale-function-global-state-8hpp-1a76dc40478194b2e766e08a557195b167"><span class="std std-ref">Function NetworKit::GlobalState::setPrintTime</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1af00f8e6b6ed073148a97b350b123067d.html#exhale-function-global-state-8hpp-1af00f8e6b6ed073148a97b350b123067d"><span class="std std-ref">Function NetworKit::GlobalState::setReceivedSIGINT</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a98bb2c813f59a1bf56de2d5fc5601581.html#exhale-function-global-state-8hpp-1a98bb2c813f59a1bf56de2d5fc5601581"><span class="std std-ref">Function NetworKit::GlobalState::setRoot</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a573949e436754f387f2060c9f37cd204.html#exhale-function-global-state-8hpp-1a573949e436754f387f2060c9f37cd204"><span class="std std-ref">Function NetworKit::GlobalState::setRootSet</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a30039bf7a6e53a895d0ca1ea15080549.html#exhale-function-global-state-8hpp-1a30039bf7a6e53a895d0ca1ea15080549"><span class="std std-ref">Function NetworKit::GlobalState::setSeed</span></a></p></li>
+<li><p><a class="reference internal" href="function__global_state_8hpp_1a21cf0184a823323910096e266d08862d.html#exhale-function-global-state-8hpp-1a21cf0184a823323910096e266d08862d"><span class="std std-ref">Function NetworKit::GlobalState::setSeedUseThreadId</span></a></p></li>
 </ul>
 </section>
 </section>

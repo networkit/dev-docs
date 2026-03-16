@@ -94,7 +94,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
@@ -120,7 +137,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -150,7 +166,7 @@
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="function_NumberParsing_8hpp_1ae92bfdebbb7af2708e855c0290a2c8f7.html#exhale-function-numberparsing-8hpp-1ae92bfdebbb7af2708e855c0290a2c8f7"><span class="std std-ref">Template Function Aux::Parsing::strTo</span></a></p></li>
+<li><p><a class="reference internal" href="function__number_parsing_8hpp_1a53e6ce1dcc4557fb3881cbf85ba38357.html#exhale-function-number-parsing-8hpp-1a53e6ce1dcc4557fb3881cbf85ba38357"><span class="std std-ref">Template Function Aux::Parsing::strTo</span></a></p></li>
 </ul>
 </section>
 </section>

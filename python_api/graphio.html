@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <meta property="article:modified_time" content="2022-03-17T08:28:54+01:00" />
     <title>networkit.graphio</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
@@ -94,7 +95,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
@@ -148,7 +166,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -188,7 +205,7 @@ It is assumed that all integers are unsigned.</p>
 <dd class="field-even"><p>The resulting partition.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Partition</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition">networkit.Partition</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -215,7 +232,7 @@ It is assumed that all integers are unsigned.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>P</strong> (<em>networkit.Partition</em>) – The input partition.</p></li>
+<li><p><strong>P</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The input partition.</p></li>
 <li><p><strong>path</strong> (<em>str</em>) – The output path.</p></li>
 </ul>
 </dd>
@@ -247,7 +264,7 @@ of the given width for each node.</p>
 <dd class="field-even"><p>The resulting partition.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Partition</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition">networkit.Partition</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -283,14 +300,14 @@ File format: each line contains the space-separated node ids of a community</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>path</strong> (<em>str</em>) – Input file path.</p></li>
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – Graph corresponding to the community from path.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – Graph corresponding to the community from path.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The resulting cover of a graph.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Cover</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Cover" title="networkit.Cover">networkit.Cover</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -304,7 +321,7 @@ File format: each line contains the space-separated node ids of a community</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>zeta</strong> (<em>networkit.Partition</em>) – The input partition.</p></li>
+<li><p><strong>zeta</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The input partition.</p></li>
 <li><p><strong>path</strong> (<em>str</em>) – The output path.</p></li>
 </ul>
 </dd>
@@ -337,14 +354,14 @@ File format: each line starts with a node id and continues with a list of the co
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>path</strong> (<em>str</em>) – The input path.</p></li>
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – Graph corresponding to the community from path.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – Graph corresponding to the community from path.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Cover of graph.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Cover</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Cover" title="networkit.Cover">networkit.Cover</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -376,7 +393,7 @@ File format: each line starts with a node id and continues with a list of the co
 <dd class="field-even"><p>The resulting partition.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Partition</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition">networkit.Partition</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -566,7 +583,7 @@ if the same element also contains spells)</p>
 <dd class="field-even"><p>Tuple with the graph parsed from the given fpath and the list of graph events sorted by timestamp.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>tuple(networkit.Graph, list(str))</p>
+<dd class="field-odd"><p>tuple(<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a>, list(str))</p>
 </dd>
 </dl>
 </dd></dl>
@@ -585,7 +602,7 @@ if the same element also contains spells)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>graph</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>graph</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>fname</strong> (<em>str</em>) – The desired file path and name to be written to.</p></li>
 <li><p><strong>eventStream</strong> (<em>list</em><em>(</em><a class="reference internal" href="dynamics.html#networkit.dynamics.GraphEvent" title="networkit.dynamics.GraphEvent"><em>networkit.dynamics.GraphEvent</em></a><em>)</em>) – Stream of events, each represented by networkit.dynamics.GraphEvent. Default: list()</p></li>
 <li><p><strong>mapping</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – Random node mapping. Default: list()</p></li>
@@ -671,7 +688,7 @@ a graph.</p>
 <dd class="field-even"><p>The constructed graph.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Graph</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -746,7 +763,7 @@ GraphML format.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>graph</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>graph</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>fname</strong> (<em>str</em>) – The desired file path and name to be written to.</p></li>
 <li><p><strong>nodeAttributes</strong> (<em>dict</em><em>(</em><em>)</em><em>, </em><em>optional</em>) – Dictionary of node attributes in the form attribute name =&gt; list of attribute values. Default: {}</p></li>
 <li><p><strong>edgeAttributes</strong> (<em>dict</em><em>(</em><em>)</em><em>, </em><em>optional</em>) – Dictionary of edge attributes in the form attribute name =&gt; list of attribute values. Default: {}</p></li>
@@ -774,7 +791,7 @@ GraphML format.</p>
 <dd class="field-even"><p>The resulting graph.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Graph</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -800,7 +817,7 @@ GraphML format.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to write.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to write.</p></li>
 <li><p><strong>paths</strong> (<em>str</em>) – The output path.</p></li>
 </ul>
 </dd>
@@ -900,7 +917,7 @@ File format: Adjacency matrix in matlab file format.</p>
 <dd class="field-even"><p>The resulting graph.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Graph</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -924,7 +941,7 @@ File format: Adjacency matrix in matlab file format.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>path</strong> (<em>str</em>) – The output path.</p></li>
 <li><p><strong>key</strong> (<em>str</em><em>, </em><em>optional</em>) – Key to identify graph. Default: ‘G’</p></li>
 </ul>
@@ -943,12 +960,6 @@ Note that there are multiple versions of the Networkit binary format.
 This Reader can read files that are written with format version 2 and 3.
 Format version 3 was released with Networkit 9.1 (December 2021).
 Further information can be found here: <a class="reference external" href="https://github.com/networkit/networkit/blob/master/networkit/cpp/io/NetworkitBinaryGraph.md">https://github.com/networkit/networkit/blob/master/networkit/cpp/io/NetworkitBinaryGraph.md</a></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>A new version 4 is slated for an upcoming release (time of statement: February 2026). This version supports writing/reading
-graphs with deleted nodes. As with version 3, all networks written with the new code are automatically upgraded to the newest version 4.
-If you want to use v4 right away, you can use nightly builds (see Readme on github).</p>
-</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="networkit.graphio.NetworkitBinaryReader.readFromBuffer">
 <span class="sig-name descname"><span class="pre">readFromBuffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graphio.NetworkitBinaryReader.readFromBuffer" title="Link to this definition">¶</a></dt>
@@ -971,19 +982,13 @@ Note that there are multiple versions of the Networkit binary format.
 Since Networkit 9.1 (December 2021), the writer always writes files using format version 3.
 Reading a binary file with version &lt; 3 and re-writing it, implicitly upgrades the format to the current version.
 Further information can be found here: <a class="reference external" href="https://github.com/networkit/networkit/blob/master/networkit/cpp/io/NetworkitBinaryGraph.md">https://github.com/networkit/networkit/blob/master/networkit/cpp/io/NetworkitBinaryGraph.md</a></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>A new version 4 is slated for an upcoming release (time of statement: February 2026). This version supports writing/reading
-graphs with deleted nodes. As with version 3, all networks written with the new code are automatically upgraded to the newest version 4.
-If you want to use v4 right away, you can use nightly builds (see Readme on github).</p>
-</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="networkit.graphio.NetworkitBinaryWriter.writeToBuffer">
 <span class="sig-name descname"><span class="pre">writeToBuffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graphio.NetworkitBinaryWriter.writeToBuffer" title="Link to this definition">¶</a></dt>
 <dd><p>Write graph to data buffer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1008,7 +1013,7 @@ File format: line i contains subset id of element i.</p>
 <dd class="field-even"><p>The resulting partition.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Partition</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition">networkit.Partition</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1029,7 +1034,7 @@ File format: line i contains subset id of element i.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>zeta</strong> (<em>networkit.Partition</em>) – The input partition.</p></li>
+<li><p><strong>zeta</strong> (<a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition"><em>networkit.Partition</em></a>) – The input partition.</p></li>
 <li><p><strong>path</strong> (<em>str</em>) – The output path.</p></li>
 </ul>
 </dd>
@@ -1100,7 +1105,7 @@ Edges must be present only in one direction.</p>
 <dd class="field-even"><p>The resulting graph.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Graph</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1272,7 +1277,7 @@ pass the generic Format.EdgeList accompanied by the defining paramaters as follo
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>path</strong> (<em>str</em>) – Output file path.</p></li>
 <li><p><strong>fileformat</strong> (<a class="reference internal" href="#networkit.graphio.Format" title="networkit.graphio.Format"><em>networkit.graphio.Format</em></a>) – A supported file format.</p></li>
 <li><p><strong>*kargs</strong> (<em>tuple</em><em>(</em><em>)</em>) – Additional input parameter (depending on the file format).</p></li>
@@ -1293,7 +1298,7 @@ pass the generic Format.EdgeList accompanied by the defining paramaters as follo
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>path</strong> (<em>str</em>) – The output path.</p></li>
 <li><p><strong>key</strong> (<em>str</em><em>, </em><em>optional</em>) – Key to identify graph. Default: ‘G’</p></li>
 </ul>
@@ -1333,6 +1338,7 @@ pass the generic Format.EdgeList accompanied by the defining paramaters as follo
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Last updated on Mar 17, 2022.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
     </p>
     <span style="padding-left: 10px">

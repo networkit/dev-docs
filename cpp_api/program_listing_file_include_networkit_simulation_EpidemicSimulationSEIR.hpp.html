@@ -92,7 +92,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul>
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ Documentation</a></li>
@@ -101,7 +118,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -134,7 +150,7 @@
 <span class="k">class</span><span class="w"> </span><span class="nc">EpidemicSimulationSEIR</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Algorithm</span><span class="w"> </span><span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
 <span class="w">    </span><span class="n">EpidemicSimulationSEIR</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="n">tMax</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">transP</span><span class="p">,</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="n">eTime</span><span class="p">,</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="n">iTime</span><span class="p">,</span>
-<span class="w">                           </span><span class="n">node</span><span class="w"> </span><span class="n">start</span><span class="p">);</span>
+<span class="w">                           </span><span class="n">node</span><span class="w"> </span><span class="n">zero</span><span class="p">);</span>
 
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 
@@ -142,12 +158,12 @@
 
 <span class="k">private</span><span class="o">:</span>
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="o">*</span><span class="n">G</span><span class="p">;</span>
-<span class="w">    </span><span class="n">count</span><span class="w"> </span><span class="n">maxTimestamps</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">transmissionProbability</span><span class="p">;</span>
-<span class="w">    </span><span class="n">count</span><span class="w"> </span><span class="n">exposedTime</span><span class="p">;</span>
-<span class="w">    </span><span class="n">count</span><span class="w"> </span><span class="n">infectiousTime</span><span class="p">;</span>
-<span class="w">    </span><span class="n">node</span><span class="w"> </span><span class="n">start</span><span class="p">;</span>
-<span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">State</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Susceptible</span><span class="p">,</span><span class="w"> </span><span class="n">Exposed</span><span class="p">,</span><span class="w"> </span><span class="n">Infectious</span><span class="p">,</span><span class="w"> </span><span class="n">Removed</span><span class="p">,</span><span class="w"> </span><span class="n">Undefined</span><span class="w"> </span><span class="p">};</span>
+<span class="w">    </span><span class="n">count</span><span class="w"> </span><span class="n">tMax</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">transP</span><span class="p">;</span>
+<span class="w">    </span><span class="n">count</span><span class="w"> </span><span class="n">eTime</span><span class="p">;</span>
+<span class="w">    </span><span class="n">count</span><span class="w"> </span><span class="n">iTime</span><span class="p">;</span>
+<span class="w">    </span><span class="n">node</span><span class="w"> </span><span class="n">zero</span><span class="p">;</span>
+<span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">State</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">S</span><span class="p">,</span><span class="w"> </span><span class="n">E</span><span class="p">,</span><span class="w"> </span><span class="n">I</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="p">,</span><span class="w"> </span><span class="n">U</span><span class="w"> </span><span class="p">};</span><span class="w"> </span><span class="c1">// Susceptible, Exposed, Infectious, Removed, Undefined</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">State</span><span class="o">&gt;</span><span class="w"> </span><span class="n">state</span><span class="p">;</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">index</span><span class="o">&gt;</span><span class="w"> </span><span class="n">timestamp</span><span class="p">;</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">count</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">stats</span><span class="p">;</span>

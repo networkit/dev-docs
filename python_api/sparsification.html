@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <meta property="article:modified_time" content="2020-10-21T10:17:44+02:00" />
     <title>networkit.sparsification</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
@@ -94,7 +95,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
@@ -148,7 +166,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -183,7 +200,7 @@
 <dd><p>Returns the inverted algebraic distance score of the input graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -214,7 +231,7 @@ given target edge ratio. (To be implemented by derived class.)</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>algorithm</strong> (<a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><em>networkit.sparsification.Sparsifier</em></a>) – The sparsification algorithm.</p></li>
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – An input edge attribute.</p></li>
 <li><p><strong>edgeRatio</strong> (<em>float</em>) – The target edge ratio.</p></li>
 </ul>
@@ -232,7 +249,7 @@ given target edge ratio. (To be implemented by derived class.)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>triangles</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – Triangle count.</p></li>
 </ul>
 </dd>
@@ -246,7 +263,7 @@ given target edge ratio. (To be implemented by derived class.)</p>
 <p>Calculates for each edge the number of quadrangles (circles of length 4) it is embedded in.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to count quadrangles on.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to count quadrangles on.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -258,7 +275,7 @@ given target edge ratio. (To be implemented by derived class.)</p>
 <p>Calculates for each edge the number of triangles it is embedded in.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to count triangles on.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to count triangles on.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -287,7 +304,7 @@ given target edge ratio. (To be implemented by derived class.)</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>algorithm</strong> (<a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><em>networkit.sparsification.Sparsifier</em></a>) – The sparsification algorithm.</p></li>
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – An input edge attribute.</p></li>
 <li><p><strong>edgeRatio</strong> (<em>float</em>) – The target edge ratio.</p></li>
 </ul>
@@ -314,7 +331,7 @@ given target edge ratio. (To be implemented by derived class.)</p>
 in the constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -338,7 +355,7 @@ in the constructor.</p>
 such that the edge is contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -394,7 +411,7 @@ such that the edge is contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to assign edge weights to.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to assign edge weights to.</p></li>
 <li><p><strong>score</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – The input edge score.</p></li>
 <li><p><strong>squared</strong> (<em>bool</em>) – Edge weights will be squared if set to True.</p></li>
 <li><p><strong>offset</strong> (<em>float</em>) – This offset will be added to each edge weight.</p></li>
@@ -410,7 +427,7 @@ such that the edge is contained in the sparsified graph.</p>
 <dd class="field-odd"><p>The weighted result graph.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>networkit.Graph</p>
+<dd class="field-even"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -425,7 +442,7 @@ such that the edge is contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph for which the attribute shall be blended</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph for which the attribute shall be blended</p></li>
 <li><p><strong>attribute0</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – The first attribute (chosen for selection[eid] == False)</p></li>
 <li><p><strong>attribute1</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – The second attribute (chosen for selection[eid] == True)</p></li>
 <li><p><strong>selection</strong> (<em>list</em><em>(</em><em>bool</em><em>)</em>) – The selection vector.</p></li>
@@ -442,7 +459,7 @@ such that the edge is contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>a</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – Edge score that shall be linearized.</p></li>
 <li><p><strong>inverse</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set to True in order to inverse the resulting score. Default: False</p></li>
 </ul>
@@ -458,7 +475,7 @@ such that the edge is contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph the edge score is defined on.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph the edge score is defined on.</p></li>
 <li><p><strong>score</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – The edge score to normalize.</p></li>
 <li><p><strong>inverse</strong> (<em>bool</em><em>, </em><em>optional</em>) – Set to True in order to inverse the resulting score. Default: False</p></li>
 <li><p><strong>lower</strong> (<em>float</em><em>, </em><em>optional</em>) – Lower bound of the target range. Default: 0.0</p></li>
@@ -478,7 +495,7 @@ such that the edge is still contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to apply the Forest Fire algorithm to.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to apply the Forest Fire algorithm to.</p></li>
 <li><p><strong>pf</strong> (<em>float</em>) – The probability for neighbor nodes to get burned aswell.</p></li>
 <li><p><strong>tebr</strong> (<em>float</em>) – The Forest Fire will burn until tebr * numberOfEdges edges have been burnt.</p></li>
 </ul>
@@ -506,7 +523,7 @@ such that the edge is still contained in the sparsified graph.</p>
 such that the edge is contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -521,7 +538,7 @@ such that the edge is contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>a</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – Edge attribute that shall be normalized.</p></li>
 </ul>
 </dd>
@@ -537,7 +554,7 @@ and a given edge attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to sparsify.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to sparsify.</p></li>
 <li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – The edge attribute to consider for filtering.</p></li>
 <li><p><strong>e</strong> (<em>float</em>) – Threshold value.</p></li>
 <li><p><strong>above</strong> (<em>bool</em>) – If set to True (False), all edges with an attribute value equal to or above (below)
@@ -563,7 +580,7 @@ will be kept in the sparsified graph.</p></li>
 <dd><p>Returns the jaccard coefficient of the neighborhoods of the two incident nodes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -579,7 +596,7 @@ This attributizer calculates for each edge the maximum parameter value
 such that the edge is still contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to apply the Local Degree  algorithm to.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to apply the Local Degree  algorithm to.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -596,7 +613,7 @@ such that the edge is still contained in the sparsified graph.</p>
 such that the edge is contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -614,7 +631,7 @@ If bothRequired is set (default: false), both neighbors need to indicate that th
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph</p></li>
 <li><p><strong>a</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – The input attribute according to which the edges shall be fitlered locally.</p></li>
 <li><p><strong>logarithmic</strong> (<em>bool</em><em>, </em><em>optional</em>) – If the score shall be logarithmic in the rank (then d^e edges are kept), linear otherwise. Default: True</p></li>
 </ul>
@@ -632,7 +649,7 @@ such that the edge is still contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to apply the Local Similarity algorithm to.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to apply the Local Similarity algorithm to.</p></li>
 <li><p><strong>triangles</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – Previously calculated edge triangle counts.</p></li>
 </ul>
 </dd>
@@ -651,7 +668,7 @@ such that the edge is still contained in the sparsified graph.</p>
 such that the edge is contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -672,7 +689,7 @@ edges, which should be present in the sparsified graph.</p>
 such that the edge is contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -693,7 +710,7 @@ community.</p>
 such that the edge is contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -709,7 +726,7 @@ parameter value such that the edge is still contained in the sparsified graph.</
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to apply the Multiscale algorithm to.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to apply the Multiscale algorithm to.</p></li>
 <li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – The edge attribute the Multiscale algorithm is to be applied to.</p></li>
 </ul>
 </dd>
@@ -728,7 +745,7 @@ parameter value such that the edge is still contained in the sparsified graph.</
 such that the edge is contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -752,7 +769,7 @@ such that the edge is contained in the sparsified graph.</p>
 <dd><p>Returns an edge scoring attribute that can be used for global filtering.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -766,7 +783,7 @@ such that the edge is contained in the sparsified graph.</p>
 <p>Generates a random edge attribute. Each edge is assigned a random value in [0,1].</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to calculate the Random Edge attribute for.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to calculate the Random Edge attribute for.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -783,7 +800,7 @@ such that the edge is contained in the sparsified graph.</p>
 such that the edge is contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -798,7 +815,7 @@ such that the edge is contained in the sparsified graph.</p>
 each value is selected uniformly at random from [0,1].</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to calculate the Random Edge attribute for.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to calculate the Random Edge attribute for.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -821,7 +838,7 @@ will be kept in the sparsified graph. Default: True</p>
 such that the edge is contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -840,7 +857,7 @@ such that the edge is contained in the sparsified graph.</p>
 such that the edge is contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -855,7 +872,7 @@ such that the edge is contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to apply the Local Similarity algorithm to.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to apply the Local Similarity algorithm to.</p></li>
 <li><p><strong>triangles</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – Previously calculated edge triangle counts.</p></li>
 </ul>
 </dd>
@@ -874,7 +891,7 @@ such that the edge is contained in the sparsified graph.</p>
 such that the edge is contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -891,7 +908,7 @@ the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to apply the Simmelian Backbone algorithm to.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to apply the Simmelian Backbone algorithm to.</p></li>
 <li><p><strong>triangles</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – Previously calculated edge triangle counts on G.</p></li>
 <li><p><strong>maxRank</strong> (<em>int</em>) – Maximum rank that is considered for overlap calculation.</p></li>
 </ul>
@@ -912,7 +929,7 @@ introduced by Nick et al.</p>
 such that the edge is contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -932,7 +949,7 @@ introduced by Nick et al.</p>
 such that the edge is contained in the sparsified graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -956,7 +973,7 @@ given target edge ratio. (To be implemented by derived class.)</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>algorithm</strong> (<a class="reference internal" href="#networkit.sparsification.Sparsifier" title="networkit.sparsification.Sparsifier"><em>networkit.sparsification.Sparsifier</em></a>) – The sparsification algorithm.</p></li>
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – An input edge attribute.</p></li>
 <li><p><strong>edgeRatio</strong> (<em>float</em>) – The target edge ratio.</p></li>
 </ul>
@@ -981,7 +998,7 @@ graph of the desired size.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>edgeRatio</strong> (<em>float</em>) – The target edge ratio.</p></li>
 <li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) – A previously calculated edge attribute. If none is provided, we will try to calculate it. Default: None</p></li>
 </ul>
@@ -996,7 +1013,7 @@ graph of the desired size.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>parameter</strong> (<em>float</em>) – A parameter value that determines the degree of sparsification</p></li>
 <li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) – A previously calculated edge attribute. If none is provided, we will try to calculate it. Default: None</p></li>
 </ul>
@@ -1013,7 +1030,7 @@ graph of the desired size and then calls getSparsifiedGraph(…) with that param
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
 <li><p><strong>edgeRatio</strong> (<em>float</em>) – The target edge ratio.</p></li>
 <li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>float</em><em>)</em><em>, </em><em>optional</em>) – A previously calculated edge attribute. If none is provided, we will try to calculate it. Default: None</p></li>
 </ul>
@@ -1022,7 +1039,7 @@ graph of the desired size and then calls getSparsifiedGraph(…) with that param
 <dd class="field-even"><p>The sparsified graph.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>networkit.Graph</p>
+<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1033,7 +1050,7 @@ graph of the desired size and then calls getSparsifiedGraph(…) with that param
 <dd><p>Returns an edge attribute.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Edge scores.</p>
@@ -1053,7 +1070,7 @@ graph of the desired size and then calls getSparsifiedGraph(…) with that param
 <p>Triangle counting.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to count triangles on.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to count triangles on.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1069,7 +1086,7 @@ graph of the desired size and then calls getSparsifiedGraph(…) with that param
 <dd><p>Returns the triangle counts of the input graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1111,6 +1128,7 @@ value 1, and so on.</p>
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Last updated on Oct 21, 2020.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
     </p>
     <span style="padding-left: 10px">

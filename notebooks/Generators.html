@@ -97,7 +97,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
@@ -130,7 +147,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -242,7 +258,7 @@ is directed, the graph may have self loops.</p>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-200 3981
+200 4032
 </pre></div></div>
 </div>
 </section>
@@ -365,7 +381,7 @@ Brandes</a> is implemented and the current default in NetworKit.</p>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-5000 39382
+5000 40146
 </pre></div></div>
 </div>
 </section>
@@ -402,7 +418,7 @@ sequence</a> and <a class="reference external" href="https://networkit.github.io
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.generators.LFRGenerator at 0x7f7be4cd4cf0&gt;
+&lt;networkit.generators.LFRGenerator at 0x129d58230&gt;
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -428,7 +444,7 @@ sequence</a> and <a class="reference external" href="https://networkit.github.io
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-500 4807
+500 4981
 </pre></div></div>
 </div>
 </section>
@@ -469,7 +485,7 @@ sequence</a> and <a class="reference external" href="https://networkit.github.io
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-100 303
+100 271
 </pre></div></div>
 </div>
 </section>
@@ -564,8 +580,8 @@ sequence</a> and <a class="reference external" href="https://networkit.github.io
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[3, 2, 1, 0, 1, 1]
-6 4
+[1, 2, 2, 1, 0, 0]
+6 3
 </pre></div></div>
 </div>
 </section>
@@ -694,7 +710,7 @@ Sequence is realiziable  True
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-10000 166000
+10000 164193
 </pre></div></div>
 </div>
 </section>

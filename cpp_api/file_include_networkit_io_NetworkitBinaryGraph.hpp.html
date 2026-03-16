@@ -92,7 +92,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul>
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ Documentation</a></li>
@@ -101,7 +118,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -157,39 +173,39 @@
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="structNetworKit_1_1nkbg_1_1Header.html#exhale-struct-structnetworkit-1-1nkbg-1-1header"><span class="std std-ref">Struct Header</span></a></p></li>
+<li><p><a class="reference internal" href="struct_networ_kit_1_1nkbg_1_1_header.html#exhale-struct-struct-networ-kit-1-1nkbg-1-1-header"><span class="std std-ref">Struct Header</span></a></p></li>
 </ul>
 </section>
 <section id="enums">
 <h2>Enums<a class="headerlink" href="#enums" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="enum_NetworkitBinaryGraph_8hpp_1a0fa153d6552a8d1fc0f247e155a3c624.html#exhale-enum-networkitbinarygraph-8hpp-1a0fa153d6552a8d1fc0f247e155a3c624"><span class="std std-ref">Enum WeightFormat</span></a></p></li>
+<li><p><a class="reference internal" href="enum__networkit_binary_graph_8hpp_1a0fa153d6552a8d1fc0f247e155a3c624.html#exhale-enum-networkit-binary-graph-8hpp-1a0fa153d6552a8d1fc0f247e155a3c624"><span class="std std-ref">Enum WeightFormat</span></a></p></li>
 </ul>
 </section>
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="function_NetworkitBinaryGraph_8hpp_1a4450c96be98b1eb9fb94b0a539521ff5.html#exhale-function-networkitbinarygraph-8hpp-1a4450c96be98b1eb9fb94b0a539521ff5"><span class="std std-ref">Function NetworKit::nkbg::varIntDecode</span></a></p></li>
-<li><p><a class="reference internal" href="function_NetworkitBinaryGraph_8hpp_1ae9a9d6258b1bc0d0b1e28d5d5597ee31.html#exhale-function-networkitbinarygraph-8hpp-1ae9a9d6258b1bc0d0b1e28d5d5597ee31"><span class="std std-ref">Function NetworKit::nkbg::varIntEncode</span></a></p></li>
-<li><p><a class="reference internal" href="function_NetworkitBinaryGraph_8hpp_1a7e67e194834045425c5b6b43a4de2999.html#exhale-function-networkitbinarygraph-8hpp-1a7e67e194834045425c5b6b43a4de2999"><span class="std std-ref">Function NetworKit::nkbg::zigzagDecode</span></a></p></li>
-<li><p><a class="reference internal" href="function_NetworkitBinaryGraph_8hpp_1a9f1c231bc2f32920c3c57bf4686683d4.html#exhale-function-networkitbinarygraph-8hpp-1a9f1c231bc2f32920c3c57bf4686683d4"><span class="std std-ref">Function NetworKit::nkbg::zigzagEncode</span></a></p></li>
+<li><p><a class="reference internal" href="function__networkit_binary_graph_8hpp_1a4450c96be98b1eb9fb94b0a539521ff5.html#exhale-function-networkit-binary-graph-8hpp-1a4450c96be98b1eb9fb94b0a539521ff5"><span class="std std-ref">Function NetworKit::nkbg::varIntDecode</span></a></p></li>
+<li><p><a class="reference internal" href="function__networkit_binary_graph_8hpp_1ae9a9d6258b1bc0d0b1e28d5d5597ee31.html#exhale-function-networkit-binary-graph-8hpp-1ae9a9d6258b1bc0d0b1e28d5d5597ee31"><span class="std std-ref">Function NetworKit::nkbg::varIntEncode</span></a></p></li>
+<li><p><a class="reference internal" href="function__networkit_binary_graph_8hpp_1a7e67e194834045425c5b6b43a4de2999.html#exhale-function-networkit-binary-graph-8hpp-1a7e67e194834045425c5b6b43a4de2999"><span class="std std-ref">Function NetworKit::nkbg::zigzagDecode</span></a></p></li>
+<li><p><a class="reference internal" href="function__networkit_binary_graph_8hpp_1a9f1c231bc2f32920c3c57bf4686683d4.html#exhale-function-networkit-binary-graph-8hpp-1a9f1c231bc2f32920c3c57bf4686683d4"><span class="std std-ref">Function NetworKit::nkbg::zigzagEncode</span></a></p></li>
 </ul>
 </section>
 <section id="typedefs">
 <h2>Typedefs<a class="headerlink" href="#typedefs" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="typedef_NetworkitBinaryGraph_8hpp_1a47b76cd410a01acd527d9ab4fec01be6.html#exhale-typedef-networkitbinarygraph-8hpp-1a47b76cd410a01acd527d9ab4fec01be6"><span class="std std-ref">Typedef NetworKit::nkbg::WEIGHT_FORMAT</span></a></p></li>
+<li><p><a class="reference internal" href="typedef__networkit_binary_graph_8hpp_1ad296b009f4e4ac1daf4119f27fbb6ef4.html#exhale-typedef-networkit-binary-graph-8hpp-1ad296b009f4e4ac1daf4119f27fbb6ef4"><span class="std std-ref">Typedef NetworKit::nkbg::WEIGHT_FORMAT</span></a></p></li>
 </ul>
 </section>
 <section id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="variable_NetworkitBinaryGraph_8hpp_1a38390584e3aede754d1b2342161f1998.html#exhale-variable-networkitbinarygraph-8hpp-1a38390584e3aede754d1b2342161f1998"><span class="std std-ref">Variable NetworKit::nkbg::DELETED_BIT</span></a></p></li>
-<li><p><a class="reference internal" href="variable_NetworkitBinaryGraph_8hpp_1ab014de9b340d256eea508b4cf8290d79.html#exhale-variable-networkitbinarygraph-8hpp-1ab014de9b340d256eea508b4cf8290d79"><span class="std std-ref">Variable NetworKit::nkbg::DIR_MASK</span></a></p></li>
-<li><p><a class="reference internal" href="variable_NetworkitBinaryGraph_8hpp_1a647869cf5ed660e5af7e712111d86f64.html#exhale-variable-networkitbinarygraph-8hpp-1a647869cf5ed660e5af7e712111d86f64"><span class="std std-ref">Variable NetworKit::nkbg::INDEX_MASK</span></a></p></li>
-<li><p><a class="reference internal" href="variable_NetworkitBinaryGraph_8hpp_1a207750e88a6f2924a11aba23c7aac9c3.html#exhale-variable-networkitbinarygraph-8hpp-1a207750e88a6f2924a11aba23c7aac9c3"><span class="std std-ref">Variable NetworKit::nkbg::INDEX_SHIFT</span></a></p></li>
-<li><p><a class="reference internal" href="variable_NetworkitBinaryGraph_8hpp_1a36e1e3d5fccf2117af86b092871620c5.html#exhale-variable-networkitbinarygraph-8hpp-1a36e1e3d5fccf2117af86b092871620c5"><span class="std std-ref">Variable NetworKit::nkbg::WGHT_MASK</span></a></p></li>
-<li><p><a class="reference internal" href="variable_NetworkitBinaryGraph_8hpp_1ac3ab20cf6551768115fa51ed9a458775.html#exhale-variable-networkitbinarygraph-8hpp-1ac3ab20cf6551768115fa51ed9a458775"><span class="std std-ref">Variable NetworKit::nkbg::WGHT_SHIFT</span></a></p></li>
+<li><p><a class="reference internal" href="variable__networkit_binary_graph_8hpp_1a38390584e3aede754d1b2342161f1998.html#exhale-variable-networkit-binary-graph-8hpp-1a38390584e3aede754d1b2342161f1998"><span class="std std-ref">Variable NetworKit::nkbg::DELETED_BIT</span></a></p></li>
+<li><p><a class="reference internal" href="variable__networkit_binary_graph_8hpp_1ab014de9b340d256eea508b4cf8290d79.html#exhale-variable-networkit-binary-graph-8hpp-1ab014de9b340d256eea508b4cf8290d79"><span class="std std-ref">Variable NetworKit::nkbg::DIR_MASK</span></a></p></li>
+<li><p><a class="reference internal" href="variable__networkit_binary_graph_8hpp_1a647869cf5ed660e5af7e712111d86f64.html#exhale-variable-networkit-binary-graph-8hpp-1a647869cf5ed660e5af7e712111d86f64"><span class="std std-ref">Variable NetworKit::nkbg::INDEX_MASK</span></a></p></li>
+<li><p><a class="reference internal" href="variable__networkit_binary_graph_8hpp_1a207750e88a6f2924a11aba23c7aac9c3.html#exhale-variable-networkit-binary-graph-8hpp-1a207750e88a6f2924a11aba23c7aac9c3"><span class="std std-ref">Variable NetworKit::nkbg::INDEX_SHIFT</span></a></p></li>
+<li><p><a class="reference internal" href="variable__networkit_binary_graph_8hpp_1a36e1e3d5fccf2117af86b092871620c5.html#exhale-variable-networkit-binary-graph-8hpp-1a36e1e3d5fccf2117af86b092871620c5"><span class="std std-ref">Variable NetworKit::nkbg::WGHT_MASK</span></a></p></li>
+<li><p><a class="reference internal" href="variable__networkit_binary_graph_8hpp_1ac3ab20cf6551768115fa51ed9a458775.html#exhale-variable-networkit-binary-graph-8hpp-1ac3ab20cf6551768115fa51ed9a458775"><span class="std std-ref">Variable NetworKit::nkbg::WGHT_SHIFT</span></a></p></li>
 </ul>
 </section>
 </section>

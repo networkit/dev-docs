@@ -92,7 +92,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul>
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ Documentation</a></li>
@@ -101,7 +118,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -162,12 +178,12 @@
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="function_MatrixTools_8hpp_1a6062ac0c594cfe180830dd7f9cc43a12.html#exhale-function-matrixtools-8hpp-1a6062ac0c594cfe180830dd7f9cc43a12"><span class="std std-ref">Template Function MatrixTools::isLaplacian</span></a></p></li>
-<li><p><a class="reference internal" href="function_MatrixTools_8hpp_1a5ff825d51f1f85f5c522e870648b53d4.html#exhale-function-matrixtools-8hpp-1a5ff825d51f1f85f5c522e870648b53d4"><span class="std std-ref">Template Function MatrixTools::isSDD</span></a></p></li>
-<li><p><a class="reference internal" href="function_MatrixTools_8hpp_1a3c364669bbb762fc846f29666794a7f8.html#exhale-function-matrixtools-8hpp-1a3c364669bbb762fc846f29666794a7f8"><span class="std std-ref">Template Function MatrixTools::isSymmetric</span></a></p></li>
-<li><p><a class="reference internal" href="function_MatrixTools_8hpp_1a43e20982e86ab2b2b5e9fea9dfd0534a.html#exhale-function-matrixtools-8hpp-1a43e20982e86ab2b2b5e9fea9dfd0534a"><span class="std std-ref">Template Function MatrixTools::laplacianToGraph</span></a></p></li>
-<li><p><a class="reference internal" href="function_MatrixTools_8hpp_1a0903f1a8aa1adc8a45419e7da7f50ca2.html#exhale-function-matrixtools-8hpp-1a0903f1a8aa1adc8a45419e7da7f50ca2"><span class="std std-ref">Template Function MatrixTools::matrixTo</span></a></p></li>
-<li><p><a class="reference internal" href="function_MatrixTools_8hpp_1ad4232494f9ceb0e5ff34c57c756f3f35.html#exhale-function-matrixtools-8hpp-1ad4232494f9ceb0e5ff34c57c756f3f35"><span class="std std-ref">Template Function MatrixTools::matrixToGraph</span></a></p></li>
+<li><p><a class="reference internal" href="function__matrix_tools_8hpp_1a6062ac0c594cfe180830dd7f9cc43a12.html#exhale-function-matrix-tools-8hpp-1a6062ac0c594cfe180830dd7f9cc43a12"><span class="std std-ref">Template Function MatrixTools::isLaplacian</span></a></p></li>
+<li><p><a class="reference internal" href="function__matrix_tools_8hpp_1a5ff825d51f1f85f5c522e870648b53d4.html#exhale-function-matrix-tools-8hpp-1a5ff825d51f1f85f5c522e870648b53d4"><span class="std std-ref">Template Function MatrixTools::isSDD</span></a></p></li>
+<li><p><a class="reference internal" href="function__matrix_tools_8hpp_1a3c364669bbb762fc846f29666794a7f8.html#exhale-function-matrix-tools-8hpp-1a3c364669bbb762fc846f29666794a7f8"><span class="std std-ref">Template Function MatrixTools::isSymmetric</span></a></p></li>
+<li><p><a class="reference internal" href="function__matrix_tools_8hpp_1a43e20982e86ab2b2b5e9fea9dfd0534a.html#exhale-function-matrix-tools-8hpp-1a43e20982e86ab2b2b5e9fea9dfd0534a"><span class="std std-ref">Template Function MatrixTools::laplacianToGraph</span></a></p></li>
+<li><p><a class="reference internal" href="function__matrix_tools_8hpp_1a0903f1a8aa1adc8a45419e7da7f50ca2.html#exhale-function-matrix-tools-8hpp-1a0903f1a8aa1adc8a45419e7da7f50ca2"><span class="std std-ref">Template Function MatrixTools::matrixTo</span></a></p></li>
+<li><p><a class="reference internal" href="function__matrix_tools_8hpp_1ad4232494f9ceb0e5ff34c57c756f3f35.html#exhale-function-matrix-tools-8hpp-1ad4232494f9ceb0e5ff34c57c756f3f35"><span class="std std-ref">Template Function MatrixTools::matrixToGraph</span></a></p></li>
 </ul>
 </section>
 </section>

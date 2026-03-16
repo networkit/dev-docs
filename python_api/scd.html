@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <meta property="article:modified_time" content="2022-03-17T10:27:30+01:00" />
     <title>networkit.scd</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
@@ -94,7 +95,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
@@ -148,7 +166,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -170,7 +187,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – Graph in which an APR is computed.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – Graph in which an APR is computed.</p></li>
 <li><p><strong>alpha</strong> (<em>float</em>) – Loop probability of random walk.</p></li>
 <li><p><strong>epsilon</strong> (<em>float</em>) – Error tolerance.</p></li>
 </ul>
@@ -215,7 +232,7 @@ Local Community Detection Based on Small Cliques.
 Algorithms 2017, 10, 90. <a class="reference external" href="https://doi.org/10.3390/a10030090">https://doi.org/10.3390/a10030090</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -235,7 +252,7 @@ It greedily adds nodes from the shell to improve community quality.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph, must be unweighted.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph, must be unweighted.</p></li>
 <li><p><strong>Q</strong> (<em>str</em>) – The quality function. Supported values: “M” or “L”.</p></li>
 </ul>
 </dd>
@@ -272,7 +289,7 @@ In 2014 IEEE/ACM International Conference on Advances in Social Networks Analysi
 <a class="reference external" href="https://doi.org/10.1109/ASONAM.2014.6921568">https://doi.org/10.1109/ASONAM.2014.6921568</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – Graph in which the community shell be found.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – Graph in which the community shell be found.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -291,7 +308,7 @@ PLOS ONE, 6(8), e23829.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – Graph in which the community shell be found.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – Graph in which the community shell be found.</p></li>
 <li><p><strong>alpha</strong> (<em>float</em><em>, </em><em>optional</em>) – Tightness coefficient - smaller values lead to larger communities. Default: 1.0</p></li>
 </ul>
 </dd>
@@ -307,7 +324,7 @@ see Andersen, Chung, Lang: Local Graph Partitioning using PageRank Vectors</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph, must be unweighted.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph, must be unweighted.</p></li>
 <li><p><strong>alpha</strong> (<em>float</em>) – Loop probability of random walk; smaller values tend to produce larger communities.</p></li>
 <li><p><strong>epsilon</strong> (<em>float</em>) – Tolerance threshold for approximation of PageRank vectors.</p></li>
 </ul>
@@ -325,8 +342,8 @@ BFS order that is selected at random among all possible prefixes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – Graph in which the community shall be found.</p></li>
-<li><p><strong>C</strong> (<em>networkit.Cover</em>) – Ground truth communities to get size information from.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – Graph in which the community shall be found.</p></li>
+<li><p><strong>C</strong> (<a class="reference internal" href="networkit.html#networkit.Cover" title="networkit.Cover"><em>networkit.Cover</em></a>) – Ground truth communities to get size information from.</p></li>
 </ul>
 </dd>
 </dl>
@@ -353,8 +370,8 @@ size of the union of found and ground truth community.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to compare on</p></li>
-<li><p><strong>groundTruth</strong> (<em>networkit.Cover</em>) – The ground truth cover</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to compare on</p></li>
+<li><p><strong>groundTruth</strong> (<a class="reference internal" href="networkit.html#networkit.Cover" title="networkit.Cover"><em>networkit.Cover</em></a>) – The ground truth cover</p></li>
 <li><p><strong>found</strong> (dict(bool <cite>:</cite> int)) – The found communities, where the keys are the seed nodes and the values are the found nodes.</p></li>
 <li><p><strong>ignoreSeeds</strong> (<em>bool</em>) – If the seed values shall be ignored, i.e. if any ground truth community is a match</p></li>
 </ul>
@@ -532,7 +549,7 @@ of the graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to calculate the conductance on.</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to calculate the conductance on.</p></li>
 <li><p><strong>community</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – The list of nodes to calculate the conductance of.</p></li>
 </ul>
 </dd>
@@ -561,7 +578,7 @@ of the graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<em>networkit.Graph</em>) – graph in which the community shell be found</p></li>
+<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – graph in which the community shell be found</p></li>
 <li><p><strong>refine</strong> (<em>bool</em><em>, </em><em>optional</em>) – If nodes shall be removed again if this improves the quality. Default: True</p></li>
 <li><p><strong>useJaccard</strong> (<em>bool</em><em>, </em><em>optional</em>) – If the jaccard index shall be used for weights. Default: False</p></li>
 </ul>
@@ -581,7 +598,7 @@ In 2009 International Conference on Advances in Social Network Analysis and Mini
 <a class="reference external" href="https://doi.org/10.1109/ASONAM.2009.14">https://doi.org/10.1109/ASONAM.2009.14</a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -604,6 +621,7 @@ In 2009 International Conference on Advances in Social Network Analysis and Mini
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Last updated on Mar 17, 2022.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
     </p>
     <span style="padding-left: 10px">

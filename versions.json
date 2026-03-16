@@ -1,16 +1,17 @@
 {
-  "base_path": "/dev-docs",
-  "channels": {
-    "nightly": {
-      "date": "2026-03-16",
-      "label": "Nightly (2026-03-16)",
-      "updated_at": "2026-03-16T14:49:42+00:00",
-      "url": "/dev-docs/nightly/"
+    "base_path": "/dev-docs",
+    "channels": {
+        "nightly": {
+            "date": "2026-03-16",
+            "label": "Nightly (2026-03-16)",
+            "updated_at": "2026-03-16T13:19:58+00:00",
+            "url": "/dev-docs/nightly/"
+        },
+        "stable": {
+            "label": "Stable (11.2.1)",
+            "url": "/dev-docs/"
+        }
     },
-    "stable": {
-      "url": "/dev-docs/"
-    }
-  },
-  "default_channel": "stable",
-  "generated_at": "2026-03-16T14:49:42+00:00"
+    "default_channel": "stable",
+    "generated_at": "2026-03-16T13:19:58+00:00"
 }

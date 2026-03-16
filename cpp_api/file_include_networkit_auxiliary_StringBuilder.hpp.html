@@ -92,7 +92,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul>
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ Documentation</a></li>
@@ -101,7 +118,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -169,52 +185,56 @@
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="structAux_1_1Impl_1_1IsIteratableHelper.html#exhale-struct-structaux-1-1impl-1-1isiteratablehelper"><span class="std std-ref">Struct IsIteratableHelper</span></a></p></li>
-<li><p><a class="reference internal" href="structAux_1_1Impl_1_1IsPairHelper.html#exhale-struct-structaux-1-1impl-1-1ispairhelper"><span class="std std-ref">Template Struct IsPairHelper</span></a></p></li>
-<li><p><a class="reference internal" href="structAux_1_1Impl_1_1IsPairHelper_3_01std_1_1pair_3_01T1_00_01T2_01_4_01_4.html#exhale-struct-structaux-1-1impl-1-1ispairhelper-3-01std-1-1pair-3-01t1-00-01t2-01-4-01-4"><span class="std std-ref">Template Struct IsPairHelper&lt; std::pair&lt; T1, T2 &gt; &gt;</span></a></p></li>
-<li><p><a class="reference internal" href="structAux_1_1Impl_1_1IsStreamableHelper.html#exhale-struct-structaux-1-1impl-1-1isstreamablehelper"><span class="std std-ref">Struct IsStreamableHelper</span></a></p></li>
-<li><p><a class="reference internal" href="structAux_1_1Impl_1_1IsTupleHelper.html#exhale-struct-structaux-1-1impl-1-1istuplehelper"><span class="std std-ref">Template Struct IsTupleHelper</span></a></p></li>
-<li><p><a class="reference internal" href="structAux_1_1Impl_1_1IsTupleHelper_3_01std_1_1tuple_3_01T_8_8_8_01_4_01_4.html#exhale-struct-structaux-1-1impl-1-1istuplehelper-3-01std-1-1tuple-3-01t-8-8-8-01-4-01-4"><span class="std std-ref">Template Struct IsTupleHelper&lt; std::tuple&lt; T… &gt; &gt;</span></a></p></li>
-<li><p><a class="reference internal" href="structAux_1_1Impl_1_1PrintableCategoryTag.html#exhale-struct-structaux-1-1impl-1-1printablecategorytag"><span class="std std-ref">Template Struct PrintableCategoryTag</span></a></p></li>
-<li><p><a class="reference internal" href="structAux_1_1Impl_1_1printTupleHelper.html#exhale-struct-structaux-1-1impl-1-1printtuplehelper"><span class="std std-ref">Template Struct printTupleHelper</span></a></p></li>
-<li><p><a class="reference internal" href="structAux_1_1Impl_1_1printTupleHelper_3_01Tuple_00_01I_00_01I_01_4.html#exhale-struct-structaux-1-1impl-1-1printtuplehelper-3-01tuple-00-01i-00-01i-01-4"><span class="std std-ref">Template Struct printTupleHelper&lt; Tuple, I, I &gt;</span></a></p></li>
+<li><p><a class="reference internal" href="struct_aux_1_1_impl_1_1_is_iteratable_helper.html#exhale-struct-struct-aux-1-1-impl-1-1-is-iteratable-helper"><span class="std std-ref">Struct IsIteratableHelper</span></a></p></li>
+<li><p><a class="reference internal" href="struct_aux_1_1_impl_1_1_is_pair_helper.html#exhale-struct-struct-aux-1-1-impl-1-1-is-pair-helper"><span class="std std-ref">Template Struct IsPairHelper</span></a></p></li>
+<li><p><a class="reference internal" href="struct_aux_1_1_impl_1_1_is_pair_helper_3_01std_1_1pair_3_01_t1_00_01_t2_01_4_01_4.html#exhale-struct-struct-aux-1-1-impl-1-1-is-pair-helper-3-01std-1-1pair-3-01-t1-00-01-t2-01-4-01-4"><span class="std std-ref">Template Struct IsPairHelper&lt; std::pair&lt; T1, T2 &gt; &gt;</span></a></p></li>
+<li><p><a class="reference internal" href="struct_aux_1_1_impl_1_1_is_streamable_helper.html#exhale-struct-struct-aux-1-1-impl-1-1-is-streamable-helper"><span class="std std-ref">Struct IsStreamableHelper</span></a></p></li>
+<li><p><a class="reference internal" href="struct_aux_1_1_impl_1_1_is_tuple_helper.html#exhale-struct-struct-aux-1-1-impl-1-1-is-tuple-helper"><span class="std std-ref">Template Struct IsTupleHelper</span></a></p></li>
+<li><p><a class="reference internal" href="struct_aux_1_1_impl_1_1_is_tuple_helper_3_01std_1_1tuple_3_01_t_8_8_8_01_4_01_4.html#exhale-struct-struct-aux-1-1-impl-1-1-is-tuple-helper-3-01std-1-1tuple-3-01-t-8-8-8-01-4-01-4"><span class="std std-ref">Template Struct IsTupleHelper&lt; std::tuple&lt; T… &gt; &gt;</span></a></p></li>
+<li><p><a class="reference internal" href="struct_aux_1_1_impl_1_1_printable_category_tag.html#exhale-struct-struct-aux-1-1-impl-1-1-printable-category-tag"><span class="std std-ref">Template Struct PrintableCategoryTag</span></a></p></li>
+<li><p><a class="reference internal" href="struct_aux_1_1_impl_1_1print_tuple_helper.html#exhale-struct-struct-aux-1-1-impl-1-1print-tuple-helper"><span class="std std-ref">Template Struct printTupleHelper</span></a></p></li>
+<li><p><a class="reference internal" href="struct_aux_1_1_impl_1_1print_tuple_helper_3_01_tuple_00_01_i_00_01_i_01_4.html#exhale-struct-struct-aux-1-1-impl-1-1print-tuple-helper-3-01-tuple-00-01-i-00-01-i-01-4"><span class="std std-ref">Template Struct printTupleHelper&lt; Tuple, I, I &gt;</span></a></p></li>
 </ul>
 </section>
 <section id="enums">
 <h2>Enums<a class="headerlink" href="#enums" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="enum_StringBuilder_8hpp_1a433440c78efa40bc9ac7a2366e065f23.html#exhale-enum-stringbuilder-8hpp-1a433440c78efa40bc9ac7a2366e065f23"><span class="std std-ref">Enum PrintableCategory</span></a></p></li>
+<li><p><a class="reference internal" href="enum__string_builder_8hpp_1a433440c78efa40bc9ac7a2366e065f23.html#exhale-enum-string-builder-8hpp-1a433440c78efa40bc9ac7a2366e065f23"><span class="std std-ref">Enum PrintableCategory</span></a></p></li>
 </ul>
 </section>
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1a1e32ce7cc9297e73b2c82ae6f067e236.html#exhale-function-stringbuilder-8hpp-1a1e32ce7cc9297e73b2c82ae6f067e236"><span class="std std-ref">Template Function Aux::Impl::getPrintableCategory</span></a></p></li>
-<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1a2b575e7cd7e856b81f063cad3aa7d478.html#exhale-function-stringbuilder-8hpp-1a2b575e7cd7e856b81f063cad3aa7d478"><span class="std std-ref">Template Function Aux::Impl::isIteratable</span></a></p></li>
-<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1aed977bb072818cfe7d9cc165149f1971.html#exhale-function-stringbuilder-8hpp-1aed977bb072818cfe7d9cc165149f1971"><span class="std std-ref">Template Function Aux::Impl::isPair</span></a></p></li>
-<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1afe1f74d1b10135f25f4036c55d1812d1.html#exhale-function-stringbuilder-8hpp-1afe1f74d1b10135f25f4036c55d1812d1"><span class="std std-ref">Template Function Aux::Impl::isStreamable</span></a></p></li>
-<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1acf82c2aa6c370b5031318cb346d9e660.html#exhale-function-stringbuilder-8hpp-1acf82c2aa6c370b5031318cb346d9e660"><span class="std std-ref">Template Function Aux::Impl::isTuple</span></a></p></li>
-<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1a21e22b69a1e6bf375781bb471f84b068.html#exhale-function-stringbuilder-8hpp-1a21e22b69a1e6bf375781bb471f84b068"><span class="std std-ref">Function Aux::Impl::printFormatPartToStream</span></a></p></li>
-<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1ab1bebd47702d113baa87995daf12b5ba.html#exhale-function-stringbuilder-8hpp-1ab1bebd47702d113baa87995daf12b5ba"><span class="std std-ref">Template Function Aux::Impl::printToStream(std::ostream&amp;, const T&amp;, const Args&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1ae3a6518c821d136083e738a6b62b69dd.html#exhale-function-stringbuilder-8hpp-1ae3a6518c821d136083e738a6b62b69dd"><span class="std std-ref">Function Aux::Impl::printToStream(std::ostream&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1a708a6e11326c49c617c52e53d97a0be8.html#exhale-function-stringbuilder-8hpp-1a708a6e11326c49c617c52e53d97a0be8"><span class="std std-ref">Template Function Aux::Impl::printToStream(std::ostream&amp;, const T&amp;, const Args&amp;…)</span></a></p></li>
-<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1a67d2bdaf262a2bd988b70e69efc90460.html#exhale-function-stringbuilder-8hpp-1a67d2bdaf262a2bd988b70e69efc90460"><span class="std std-ref">Function Aux::Impl::printToStreamF(std::ostream&amp;, std::string_view::const_iterator, std::string_view::const_iterator)</span></a></p></li>
-<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1ac2f5947a3b5dab4966a532d6d3c1c2e9.html#exhale-function-stringbuilder-8hpp-1ac2f5947a3b5dab4966a532d6d3c1c2e9"><span class="std std-ref">Template Function Aux::Impl::printToStreamF(std::ostream&amp;, std::string_view::const_iterator, std::string_view::const_iterator, const T&amp;, const Args&amp;…)</span></a></p></li>
-<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1a10e29f813c14fc9435fc47ce205af1f4.html#exhale-function-stringbuilder-8hpp-1a10e29f813c14fc9435fc47ce205af1f4"><span class="std std-ref">Template Function Aux::Impl::printToStreamTagged</span></a></p></li>
-<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1ae486a36636ad82da03af290aec840f95.html#exhale-function-stringbuilder-8hpp-1ae486a36636ad82da03af290aec840f95"><span class="std std-ref">Template Function Aux::printToStream</span></a></p></li>
-<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1a678a74fd19cc94c36bc652db05a58262.html#exhale-function-stringbuilder-8hpp-1a678a74fd19cc94c36bc652db05a58262"><span class="std std-ref">Template Function Aux::printToStreamF</span></a></p></li>
-<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1ac45604485a827e434c15fa72202e0d8d.html#exhale-function-stringbuilder-8hpp-1ac45604485a827e434c15fa72202e0d8d"><span class="std std-ref">Template Function Aux::toString</span></a></p></li>
-<li><p><a class="reference internal" href="function_StringBuilder_8hpp_1a679fbaa3fe364760135c2cb24cc25a74.html#exhale-function-stringbuilder-8hpp-1a679fbaa3fe364760135c2cb24cc25a74"><span class="std std-ref">Template Function Aux::toStringF</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1a1e32ce7cc9297e73b2c82ae6f067e236.html#exhale-function-string-builder-8hpp-1a1e32ce7cc9297e73b2c82ae6f067e236"><span class="std std-ref">Template Function Aux::Impl::getPrintableCategory</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1a2b575e7cd7e856b81f063cad3aa7d478.html#exhale-function-string-builder-8hpp-1a2b575e7cd7e856b81f063cad3aa7d478"><span class="std std-ref">Template Function Aux::Impl::isIteratable</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1aed977bb072818cfe7d9cc165149f1971.html#exhale-function-string-builder-8hpp-1aed977bb072818cfe7d9cc165149f1971"><span class="std std-ref">Template Function Aux::Impl::isPair</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1afe1f74d1b10135f25f4036c55d1812d1.html#exhale-function-string-builder-8hpp-1afe1f74d1b10135f25f4036c55d1812d1"><span class="std std-ref">Template Function Aux::Impl::isStreamable</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1acf82c2aa6c370b5031318cb346d9e660.html#exhale-function-string-builder-8hpp-1acf82c2aa6c370b5031318cb346d9e660"><span class="std std-ref">Template Function Aux::Impl::isTuple</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1a21e22b69a1e6bf375781bb471f84b068.html#exhale-function-string-builder-8hpp-1a21e22b69a1e6bf375781bb471f84b068"><span class="std std-ref">Function Aux::Impl::printFormatPartToStream</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1a708a6e11326c49c617c52e53d97a0be8.html#exhale-function-string-builder-8hpp-1a708a6e11326c49c617c52e53d97a0be8"><span class="std std-ref">Template Function Aux::Impl::printToStream(std::ostream&amp;, const T&amp;, const Args&amp;…)</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1ab1bebd47702d113baa87995daf12b5ba.html#exhale-function-string-builder-8hpp-1ab1bebd47702d113baa87995daf12b5ba"><span class="std std-ref">Template Function Aux::Impl::printToStream(std::ostream&amp;, const T&amp;, const Args&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1ae3a6518c821d136083e738a6b62b69dd.html#exhale-function-string-builder-8hpp-1ae3a6518c821d136083e738a6b62b69dd"><span class="std std-ref">Function Aux::Impl::printToStream(std::ostream&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1a67d2bdaf262a2bd988b70e69efc90460.html#exhale-function-string-builder-8hpp-1a67d2bdaf262a2bd988b70e69efc90460"><span class="std std-ref">Function Aux::Impl::printToStreamF(std::ostream&amp;, std::string_view::const_iterator, std::string_view::const_iterator)</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1ac2f5947a3b5dab4966a532d6d3c1c2e9.html#exhale-function-string-builder-8hpp-1ac2f5947a3b5dab4966a532d6d3c1c2e9"><span class="std std-ref">Template Function Aux::Impl::printToStreamF(std::ostream&amp;, std::string_view::const_iterator, std::string_view::const_iterator, const T&amp;, const Args&amp;…)</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1a10e29f813c14fc9435fc47ce205af1f4.html#exhale-function-string-builder-8hpp-1a10e29f813c14fc9435fc47ce205af1f4"><span class="std std-ref">Template Function Aux::Impl::printToStreamTagged(std::ostream&amp;, const T&amp;, IteratableTag)</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1a2f4a0ba2b576ece25e13447dabf786fb.html#exhale-function-string-builder-8hpp-1a2f4a0ba2b576ece25e13447dabf786fb"><span class="std std-ref">Template Function Aux::Impl::printToStreamTagged(std::ostream&amp;, const T&amp;, PairTag)</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1ad4a7aa9ae15af1b9603a9169d19132c4.html#exhale-function-string-builder-8hpp-1ad4a7aa9ae15af1b9603a9169d19132c4"><span class="std std-ref">Template Function Aux::Impl::printToStreamTagged(std::ostream&amp;, const T&amp;, TupleTag)</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1a649ff8bf5a990c4eaf2a5af4b0f52459.html#exhale-function-string-builder-8hpp-1a649ff8bf5a990c4eaf2a5af4b0f52459"><span class="std std-ref">Template Function Aux::Impl::printToStreamTagged(std::ostream&amp;, const T&amp;, StreamableTag)</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1a01715261e6f19de7818e43839db3005e.html#exhale-function-string-builder-8hpp-1a01715261e6f19de7818e43839db3005e"><span class="std std-ref">Template Function Aux::Impl::printToStreamTagged(std::ostream&amp;, const T&amp;, UnprintableTag)</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1ae486a36636ad82da03af290aec840f95.html#exhale-function-string-builder-8hpp-1ae486a36636ad82da03af290aec840f95"><span class="std std-ref">Template Function Aux::printToStream</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1a678a74fd19cc94c36bc652db05a58262.html#exhale-function-string-builder-8hpp-1a678a74fd19cc94c36bc652db05a58262"><span class="std std-ref">Template Function Aux::printToStreamF</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1ac45604485a827e434c15fa72202e0d8d.html#exhale-function-string-builder-8hpp-1ac45604485a827e434c15fa72202e0d8d"><span class="std std-ref">Template Function Aux::toString</span></a></p></li>
+<li><p><a class="reference internal" href="function__string_builder_8hpp_1a679fbaa3fe364760135c2cb24cc25a74.html#exhale-function-string-builder-8hpp-1a679fbaa3fe364760135c2cb24cc25a74"><span class="std std-ref">Template Function Aux::toStringF</span></a></p></li>
 </ul>
 </section>
 <section id="typedefs">
 <h2>Typedefs<a class="headerlink" href="#typedefs" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="typedef_StringBuilder_8hpp_1a7b91e2a7941d4f9dc8ee63a7fe314f59.html#exhale-typedef-stringbuilder-8hpp-1a7b91e2a7941d4f9dc8ee63a7fe314f59"><span class="std std-ref">Typedef Aux::Impl::IteratableTag</span></a></p></li>
-<li><p><a class="reference internal" href="typedef_StringBuilder_8hpp_1abf17f0523518f87ea02921f1374ee18c.html#exhale-typedef-stringbuilder-8hpp-1abf17f0523518f87ea02921f1374ee18c"><span class="std std-ref">Typedef Aux::Impl::PairTag</span></a></p></li>
-<li><p><a class="reference internal" href="typedef_StringBuilder_8hpp_1a14df1171f8a64cc01de0a5b965e53986.html#exhale-typedef-stringbuilder-8hpp-1a14df1171f8a64cc01de0a5b965e53986"><span class="std std-ref">Typedef Aux::Impl::StreamableTag</span></a></p></li>
-<li><p><a class="reference internal" href="typedef_StringBuilder_8hpp_1a59fcf29fda9b47c25804db55c3205c00.html#exhale-typedef-stringbuilder-8hpp-1a59fcf29fda9b47c25804db55c3205c00"><span class="std std-ref">Typedef Aux::Impl::TupleTag</span></a></p></li>
-<li><p><a class="reference internal" href="typedef_StringBuilder_8hpp_1a8cfaef94591c61c24bf25d5e67cbed21.html#exhale-typedef-stringbuilder-8hpp-1a8cfaef94591c61c24bf25d5e67cbed21"><span class="std std-ref">Typedef Aux::Impl::UnprintableTag</span></a></p></li>
+<li><p><a class="reference internal" href="typedef__string_builder_8hpp_1a85b2f323a1d9609a4934d3d205d6e6f0.html#exhale-typedef-string-builder-8hpp-1a85b2f323a1d9609a4934d3d205d6e6f0"><span class="std std-ref">Typedef Aux::Impl::IteratableTag</span></a></p></li>
+<li><p><a class="reference internal" href="typedef__string_builder_8hpp_1a802c6255d2d3411d3125d6e5c467afb9.html#exhale-typedef-string-builder-8hpp-1a802c6255d2d3411d3125d6e5c467afb9"><span class="std std-ref">Typedef Aux::Impl::PairTag</span></a></p></li>
+<li><p><a class="reference internal" href="typedef__string_builder_8hpp_1a1380d2d3b3fde74466c274444cc43d2b.html#exhale-typedef-string-builder-8hpp-1a1380d2d3b3fde74466c274444cc43d2b"><span class="std std-ref">Typedef Aux::Impl::StreamableTag</span></a></p></li>
+<li><p><a class="reference internal" href="typedef__string_builder_8hpp_1a1218a9c1a8569fa9ac744ffbbcbd675d.html#exhale-typedef-string-builder-8hpp-1a1218a9c1a8569fa9ac744ffbbcbd675d"><span class="std std-ref">Typedef Aux::Impl::TupleTag</span></a></p></li>
+<li><p><a class="reference internal" href="typedef__string_builder_8hpp_1a6b618334f98f244bbe0dd28bb285c0ab.html#exhale-typedef-string-builder-8hpp-1a6b618334f98f244bbe0dd28bb285c0ab"><span class="std std-ref">Typedef Aux::Impl::UnprintableTag</span></a></p></li>
 </ul>
 </section>
 </section>

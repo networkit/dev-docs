@@ -97,7 +97,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.2.1)"
+	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
@@ -130,7 +147,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -253,7 +269,7 @@ of 0,1-matrices with fixed row and column sums” * by Annabell Berger, Corrie J
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.randomization.GlobalCurveball at 0x7efdac8ba110&gt;
+&lt;networkit.randomization.GlobalCurveball at 0x108ae4b90&gt;
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -312,12 +328,12 @@ of 0,1-matrices with fixed row and column sums” * by Annabell Berger, Corrie J
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Avg. clustering of input:         0.781
-Avg. clustering of random sample: 0.039
-Avg. clustering of random sample: 0.039
-Avg. clustering of random sample: 0.039
-Avg. clustering of random sample: 0.040
-Avg. clustering of random sample: 0.038
+Avg. clustering of input:         0.780
+Avg. clustering of random sample: 0.054
+Avg. clustering of random sample: 0.056
+Avg. clustering of random sample: 0.064
+Avg. clustering of random sample: 0.059
+Avg. clustering of random sample: 0.061
 </pre></div></div>
 </div>
 </section>
@@ -380,7 +396,7 @@ Avg. clustering of random sample: 0.038
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.randomization.Curveball at 0x7efd64ae0af0&gt;
+&lt;networkit.randomization.Curveball at 0x1220580d0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -449,7 +465,7 @@ Avg. clustering of random sample: 0.038
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.randomization.DegreePreservingShuffle at 0x7efd64b35ed0&gt;
+&lt;networkit.randomization.DegreePreservingShuffle at 0x12205b2b0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -547,16 +563,16 @@ to fix it”, Carstens and Horadam].</p>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-After     0 switches the llc score is 0.791
-After   500 switches the llc score is 0.471
-After  1000 switches the llc score is 0.290
-After  1500 switches the llc score is 0.186
-After  2000 switches the llc score is 0.128
-After  2500 switches the llc score is 0.087
-After  3000 switches the llc score is 0.070
-After  3500 switches the llc score is 0.062
-After  4000 switches the llc score is 0.057
-After  4500 switches the llc score is 0.055
+After     0 switches the llc score is 0.792
+After   500 switches the llc score is 0.482
+After  1000 switches the llc score is 0.301
+After  1500 switches the llc score is 0.200
+After  2000 switches the llc score is 0.144
+After  2500 switches the llc score is 0.110
+After  3000 switches the llc score is 0.089
+After  3500 switches the llc score is 0.080
+After  4000 switches the llc score is 0.073
+After  4500 switches the llc score is 0.072
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
