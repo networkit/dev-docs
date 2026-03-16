@@ -1,0 +1,802 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>networkit.structures</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="networkit.traversal" href="traversal.html" />
+    <link rel="prev" title="networkit.stats" href="stats.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="modules.html#modules">Modules</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="networkit.html">networkit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="algebraic.html">networkit.algebraic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="base.html">networkit.base</a></li>
+<li class="toctree-l3"><a class="reference internal" href="centrality.html">networkit.centrality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clique.html">networkit.clique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coarsening.html">networkit.coarsening</a></li>
+<li class="toctree-l3"><a class="reference internal" href="coloring.html">networkit.coloring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="community.html">networkit.community</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html">networkit.components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="correlation.html">networkit.correlation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="distance.html">networkit.distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamic.html">networkit.dynamic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynamics.html">networkit.dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dynbase.html">networkit.dynbase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="embedding.html">networkit.embedding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="engineering.html">networkit.engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow.html">networkit.flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generators.html">networkit.generators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gephi.html">networkit.gephi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="globals.html">networkit.globals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graph.html">networkit.graph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphio.html">networkit.graphio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="graphtools.html">networkit.graphtools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="helpers.html">networkit.helpers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="independentset.html">networkit.independentset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="linkprediction.html">networkit.linkprediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="matching.html">networkit.matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nxadapter.html">networkit.nxadapter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plot.html">networkit.plot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="profiling.html">networkit.profiling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="randomization.html">networkit.randomization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reachability.html">networkit.reachability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scd.html">networkit.scd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simulation.html">networkit.simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sparsification.html">networkit.sparsification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stats.html">networkit.stats</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">networkit.structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="traversal.html">networkit.traversal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viz.html">networkit.viz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vizbridges.html">networkit.vizbridges</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="module-networkit.structures">
+<span id="networkit-structures"></span><h1>networkit.structures<a class="headerlink" href="#module-networkit.structures" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.structures.Cover">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.structures.</span></span><span class="sig-name descname"><span class="pre">Cover</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Implements a cover of a set, i.e. an assignment of its elements to possibly overlapping subsets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>n</strong> (<em>int</em><em> or </em><em>networkit.Partition</em><em>, </em><em>optional</em>) – Used for initialization of the cover. Either a node or a partition. Default: 0</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Cover.addToSubset">
+<span class="sig-name descname"><span class="pre">addToSubset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover.addToSubset" title="Link to this definition">¶</a></dt>
+<dd><p>Add the (previously unassigned) element <cite>e</cite> to the set <cite>s</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> (<em>int</em>) – The input subset.</p></li>
+<li><p><strong>e</strong> (<em>int</em>) – The element to be added.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Cover.allToSingletons">
+<span class="sig-name descname"><span class="pre">allToSingletons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover.allToSingletons" title="Link to this definition">¶</a></dt>
+<dd><p>Assigns every element to a singleton set. Set id is equal to element id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Cover.contains">
+<span class="sig-name descname"><span class="pre">contains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover.contains" title="Link to this definition">¶</a></dt>
+<dd><p>Check if cover assigns a valid subset to the element <cite>e</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>e</strong> (<em>int</em>) – The input element.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True, if <cite>e</cite> is assigned to a valid subset, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Cover.extend">
+<span class="sig-name descname"><span class="pre">extend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover.extend" title="Link to this definition">¶</a></dt>
+<dd><p>Add an additional element (node).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Id of added node.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Cover.getMembers">
+<span class="sig-name descname"><span class="pre">getMembers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover.getMembers" title="Link to this definition">¶</a></dt>
+<dd><p>Get the members of a specific subset <cite>s</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The list of members of subset <cite>s</cite>.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Cover.getSubsetIds">
+<span class="sig-name descname"><span class="pre">getSubsetIds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover.getSubsetIds" title="Link to this definition">¶</a></dt>
+<dd><p>Get the ids of nonempty subsets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of ids of nonempty subsets.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Cover.inSameSubset">
+<span class="sig-name descname"><span class="pre">inSameSubset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover.inSameSubset" title="Link to this definition">¶</a></dt>
+<dd><p>Check if two elements <cite>e1</cite> and <cite>e2</cite> belong to the same subset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>e1</strong> (<em>int</em>) – The first element.</p></li>
+<li><p><strong>e2</strong> (<em>int</em>) – The second element.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if <cite>e1</cite> and <cite>e2</cite> belong to the same subset; False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Cover.lowerBound">
+<span class="sig-name descname"><span class="pre">lowerBound</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover.lowerBound" title="Link to this definition">¶</a></dt>
+<dd><p>Get a lower bound for the subset ids that have been assigned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A lower bound.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Cover.mergeSubsets">
+<span class="sig-name descname"><span class="pre">mergeSubsets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover.mergeSubsets" title="Link to this definition">¶</a></dt>
+<dd><p>Assigns the elements from both sets to a new set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> (<em>int</em>) – The first subset.</p></li>
+<li><p><strong>t</strong> (<em>int</em>) – The second subset.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Cover.moveToSubset">
+<span class="sig-name descname"><span class="pre">moveToSubset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover.moveToSubset" title="Link to this definition">¶</a></dt>
+<dd><p>Move the element <cite>e</cite> to subset <cite>s</cite>, i.e. remove it from all other subsets and place it in the subset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> (<em>int</em>) – The input subset.</p></li>
+<li><p><strong>e</strong> (<em>int</em>) – The element to be moved.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Cover.numberOfElements">
+<span class="sig-name descname"><span class="pre">numberOfElements</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover.numberOfElements" title="Link to this definition">¶</a></dt>
+<dd><p>Get the current number of elements in this cover.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current number of elements.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Cover.numberOfSubsets">
+<span class="sig-name descname"><span class="pre">numberOfSubsets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover.numberOfSubsets" title="Link to this definition">¶</a></dt>
+<dd><p>Get the current number of sets in this cover.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The number of sets in this cover.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Cover.removeFromSubset">
+<span class="sig-name descname"><span class="pre">removeFromSubset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover.removeFromSubset" title="Link to this definition">¶</a></dt>
+<dd><p>Remove the element <cite>e</cite> from the set <cite>s</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> (<em>int</em>) – The input subset.</p></li>
+<li><p><strong>e</strong> (<em>int</em>) – The element to be removed.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Cover.setUpperBound">
+<span class="sig-name descname"><span class="pre">setUpperBound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">upper</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover.setUpperBound" title="Link to this definition">¶</a></dt>
+<dd><p>Sets an upper bound for the subset ids that CAN be assigned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>upper</strong> (<em>int</em>) – Upper bound.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Cover.subsetSizeMap">
+<span class="sig-name descname"><span class="pre">subsetSizeMap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover.subsetSizeMap" title="Link to this definition">¶</a></dt>
+<dd><p>Get a map from subset id to size of the subset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A map from subset id to size of the subset.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict(int <code class="docutils literal notranslate"><span class="pre">:</span></code> int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Cover.subsetSizes">
+<span class="sig-name descname"><span class="pre">subsetSizes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover.subsetSizes" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of subset sizes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of subset sizes.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(int)</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Indices do not necessarily correspond to subset ids.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Cover.subsetsOf">
+<span class="sig-name descname"><span class="pre">subsetsOf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover.subsetsOf" title="Link to this definition">¶</a></dt>
+<dd><p>Get the ids of subsets in which the element <cite>e</cite> is contained.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>e</strong> (<em>int</em>) – An element</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A set of subset ids in which <cite>e</cite> is contained.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Cover.toSingleton">
+<span class="sig-name descname"><span class="pre">toSingleton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover.toSingleton" title="Link to this definition">¶</a></dt>
+<dd><p>Creates a singleton set containing the element <cite>e</cite> and returns the index of the new set.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>e</strong> (<em>int</em>) – The input element.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The id of the new set.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Cover.upperBound">
+<span class="sig-name descname"><span class="pre">upperBound</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Cover.upperBound" title="Link to this definition">¶</a></dt>
+<dd><p>Get an upper bound for the subset ids that have been assigned.
+(This is the maximum id + 1.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>An upper bound.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.structures.Partition">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.structures.</span></span><span class="sig-name descname"><span class="pre">Partition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Implements a partition of a set, i.e. a subdivision of the
+set into disjoint subsets.</p>
+<p>Create a new partition data structure for <cite>z</cite> elements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>size</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum index of an element. Default: 0</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.addToSubset">
+<span class="sig-name descname"><span class="pre">addToSubset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.addToSubset" title="Link to this definition">¶</a></dt>
+<dd><p>Add a (previously unassigned) element <cite>e</cite> to the set <cite>s</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> (<em>int</em>) – The index of the subset.</p></li>
+<li><p><strong>e</strong> (<em>int</em>) – The element to add.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.allToSingletons">
+<span class="sig-name descname"><span class="pre">allToSingletons</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.allToSingletons" title="Link to this definition">¶</a></dt>
+<dd><p>Assigns every element to a singleton set. Set id is equal to element id.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.compact">
+<span class="sig-name descname"><span class="pre">compact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">userTurbo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.compact" title="Link to this definition">¶</a></dt>
+<dd><p>Change subset IDs to be consecutive, starting at 0.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>useTurbo</strong> (<em>bool</em><em>, </em><em>optional</em>) – If set to True, the C++ core uses a vector instead of a map to assign new ids
+which results in a shorter running time but possibly a large space overhead.
+Default: False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.contains">
+<span class="sig-name descname"><span class="pre">contains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.contains" title="Link to this definition">¶</a></dt>
+<dd><p>Check if partition assigns a valid subset to the element <cite>e</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>e</strong> (<em>int</em>) – The input element.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the assigned subset is valid; False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.extend">
+<span class="sig-name descname"><span class="pre">extend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.extend" title="Link to this definition">¶</a></dt>
+<dd><p>Extend the data structure and create a slot     for one more element.</p>
+<p>Initializes the entry to <cite>none</cite> and returns the index of the entry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The index of the new element.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.getMembers">
+<span class="sig-name descname"><span class="pre">getMembers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.getMembers" title="Link to this definition">¶</a></dt>
+<dd><p>Get the members of the subset <cite>s</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>s</strong> (<em>int</em>) – The input subset.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A list containing the members of <cite>s</cite>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.getName">
+<span class="sig-name descname"><span class="pre">getName</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.getName" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable identifier.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The name of this partition.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.getSubsetIds">
+<span class="sig-name descname"><span class="pre">getSubsetIds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.getSubsetIds" title="Link to this definition">¶</a></dt>
+<dd><p>Get the ids of nonempty subsets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A set of ids of nonempty subsets.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.getVector">
+<span class="sig-name descname"><span class="pre">getVector</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.getVector" title="Link to this definition">¶</a></dt>
+<dd><p>Get the actual vector representing the partition data structure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List containing information about partitions.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.inSameSubset">
+<span class="sig-name descname"><span class="pre">inSameSubset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.inSameSubset" title="Link to this definition">¶</a></dt>
+<dd><p>Check if two elements <cite>e1</cite> and <cite>e2</cite> belong to the same subset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>e1</strong> (<em>int</em>) – The first Element.</p></li>
+<li><p><strong>e2</strong> (<em>int</em>) – The second Element.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if <cite>e1</cite> and <cite>e2</cite> belong to same subset, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.lowerBound">
+<span class="sig-name descname"><span class="pre">lowerBound</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.lowerBound" title="Link to this definition">¶</a></dt>
+<dd><p>Get a lower bound for the subset ids that have been assigned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The lower bound.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.mergeSubsets">
+<span class="sig-name descname"><span class="pre">mergeSubsets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.mergeSubsets" title="Link to this definition">¶</a></dt>
+<dd><p>Assigns the elements from both sets to a new set and returns the id of it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> (<em>int</em>) – Set to merge.</p></li>
+<li><p><strong>t</strong> (<em>int</em>) – Set to merge.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Id of newly created set.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.moveToSubset">
+<span class="sig-name descname"><span class="pre">moveToSubset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.moveToSubset" title="Link to this definition">¶</a></dt>
+<dd><p>Move the (previously assigned) element <cite>e</cite> to the set <a href="#id1"><span class="problematic" id="id2">`</span></a>s.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> (<em>int</em>) – The index of the subset.</p></li>
+<li><p><strong>e</strong> (<em>int</em>) – The element to move.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.numberOfElements">
+<span class="sig-name descname"><span class="pre">numberOfElements</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.numberOfElements" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Number of elements in the partition.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.numberOfSubsets">
+<span class="sig-name descname"><span class="pre">numberOfSubsets</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.numberOfSubsets" title="Link to this definition">¶</a></dt>
+<dd><p>Get the current number of sets in this partition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current number of sets.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.setName">
+<span class="sig-name descname"><span class="pre">setName</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.setName" title="Link to this definition">¶</a></dt>
+<dd><p>Set a human-readable identifier <cite>name</cite> for the instance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The input name.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.setUpperBound">
+<span class="sig-name descname"><span class="pre">setUpperBound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">upper</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.setUpperBound" title="Link to this definition">¶</a></dt>
+<dd><p>Sets an upper bound for the subset ids that <strong>can</strong> be assigned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>upper</strong> (<em>int</em>) – Highest assigned subset id + 1.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.subsetOf">
+<span class="sig-name descname"><span class="pre">subsetOf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.subsetOf" title="Link to this definition">¶</a></dt>
+<dd><p>Get the set (id) in which the element <cite>e</cite> is contained.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>e</strong> (<em>int</em>) – Index of element.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The index of the set in which <cite>e</cite> is contained.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.subsetSizeMap">
+<span class="sig-name descname"><span class="pre">subsetSizeMap</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.subsetSizeMap" title="Link to this definition">¶</a></dt>
+<dd><p>Get a map from subset id to size of the subset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A map from subset id to size of the subset.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict(int <code class="docutils literal notranslate"><span class="pre">:</span></code> int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.subsetSizes">
+<span class="sig-name descname"><span class="pre">subsetSizes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.subsetSizes" title="Link to this definition">¶</a></dt>
+<dd><p>Get a list of subset sizes. Indices do not necessarily correspond to subset ids.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A list of subset sizes.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list(int)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.toSingleton">
+<span class="sig-name descname"><span class="pre">toSingleton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.toSingleton" title="Link to this definition">¶</a></dt>
+<dd><p>Creates a singleton set containing the element <cite>e</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>e</strong> (<em>int</em>) – The index of the element.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.structures.Partition.upperBound">
+<span class="sig-name descname"><span class="pre">upperBound</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.structures.Partition.upperBound" title="Link to this definition">¶</a></dt>
+<dd><p>Return an upper bound for the subset ids that have been assigned.
+(This is the maximum id + 1.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The upper bound.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

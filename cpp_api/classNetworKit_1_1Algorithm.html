@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Class Algorithm</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class AllSimplePaths" href="classNetworKit_1_1AllSimplePaths.html" />
+    <link rel="prev" title="Template Class AlgebraicTriangleCounting" href="classNetworKit_1_1AlgebraicTriangleCounting.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#directories">Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#pages">Pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="class-algorithm">
+<span id="exhale-class-classnetworkit-1-1algorithm"></span><h1>Class Algorithm<a class="headerlink" href="#class-algorithm" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_networkit_base_Algorithm.hpp.html#file-include-networkit-base-algorithm-hpp"><span class="std std-ref">File Algorithm.hpp</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Link to this heading">¶</a></h2>
+<section id="derived-types">
+<h3>Derived Types<a class="headerlink" href="#derived-types" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::EdgeScore&lt;</span> <span class="pre">double</span> <span class="pre">&gt;</span></code> (<a class="reference internal" href="classNetworKit_1_1EdgeScore.html#exhale-class-classnetworkit-1-1edgescore"><span class="std std-ref">Template Class EdgeScore</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::EdgeScore&lt;</span> <span class="pre">count</span> <span class="pre">&gt;</span></code> (<a class="reference internal" href="classNetworKit_1_1EdgeScore.html#exhale-class-classnetworkit-1-1edgescore"><span class="std std-ref">Template Class EdgeScore</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::APSP</span></code> (<a class="reference internal" href="classNetworKit_1_1APSP.html#exhale-class-classnetworkit-1-1apsp"><span class="std std-ref">Class APSP</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::AffectedNodes</span></code> (<a class="reference internal" href="classNetworKit_1_1AffectedNodes.html#exhale-class-classnetworkit-1-1affectednodes"><span class="std std-ref">Class AffectedNodes</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::AlgebraicBFS&lt;</span> <span class="pre">Matrix</span> <span class="pre">&gt;</span></code> (<a class="reference internal" href="classNetworKit_1_1AlgebraicBFS.html#exhale-class-classnetworkit-1-1algebraicbfs"><span class="std std-ref">Template Class AlgebraicBFS</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::AlgebraicBellmanFord&lt;</span> <span class="pre">Matrix</span> <span class="pre">&gt;</span></code> (<a class="reference internal" href="classNetworKit_1_1AlgebraicBellmanFord.html#exhale-class-classnetworkit-1-1algebraicbellmanford"><span class="std std-ref">Template Class AlgebraicBellmanFord</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::AlgebraicTriangleCounting&lt;</span> <span class="pre">Matrix</span> <span class="pre">&gt;</span></code> (<a class="reference internal" href="classNetworKit_1_1AlgebraicTriangleCounting.html#exhale-class-classnetworkit-1-1algebraictrianglecounting"><span class="std std-ref">Template Class AlgebraicTriangleCounting</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::AllSimplePaths</span></code> (<a class="reference internal" href="classNetworKit_1_1AllSimplePaths.html#exhale-class-classnetworkit-1-1allsimplepaths"><span class="std std-ref">Class AllSimplePaths</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::ApproxGroupBetweenness</span></code> (<a class="reference internal" href="classNetworKit_1_1ApproxGroupBetweenness.html#exhale-class-classnetworkit-1-1approxgroupbetweenness"><span class="std std-ref">Class ApproxGroupBetweenness</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::ApproxSpanningEdge</span></code> (<a class="reference internal" href="classNetworKit_1_1ApproxSpanningEdge.html#exhale-class-classnetworkit-1-1approxspanningedge"><span class="std std-ref">Class ApproxSpanningEdge</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::Assortativity</span></code> (<a class="reference internal" href="classNetworKit_1_1Assortativity.html#exhale-class-classnetworkit-1-1assortativity"><span class="std std-ref">Class Assortativity</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::BMatcher</span></code> (<a class="reference internal" href="classNetworKit_1_1BMatcher.html#exhale-class-classnetworkit-1-1bmatcher"><span class="std std-ref">Class BMatcher</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::BiconnectedComponents</span></code> (<a class="reference internal" href="classNetworKit_1_1BiconnectedComponents.html#exhale-class-classnetworkit-1-1biconnectedcomponents"><span class="std std-ref">Class BiconnectedComponents</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::Centrality</span></code> (<a class="reference internal" href="classNetworKit_1_1Centrality.html#exhale-class-classnetworkit-1-1centrality"><span class="std std-ref">Class Centrality</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::CommunityDetectionAlgorithm</span></code> (<a class="reference internal" href="classNetworKit_1_1CommunityDetectionAlgorithm.html#exhale-class-classnetworkit-1-1communitydetectionalgorithm"><span class="std std-ref">Class CommunityDetectionAlgorithm</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::CommuteTimeDistance</span></code> (<a class="reference internal" href="classNetworKit_1_1CommuteTimeDistance.html#exhale-class-classnetworkit-1-1commutetimedistance"><span class="std std-ref">Class CommuteTimeDistance</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::ComplexPathAlgorithm</span></code> (<a class="reference internal" href="classNetworKit_1_1ComplexPathAlgorithm.html#exhale-class-classnetworkit-1-1complexpathalgorithm"><span class="std std-ref">Class ComplexPathAlgorithm</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::ComponentDecomposition</span></code> (<a class="reference internal" href="classNetworKit_1_1ComponentDecomposition.html#exhale-class-classnetworkit-1-1componentdecomposition"><span class="std std-ref">Class ComponentDecomposition</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::Curveball</span></code> (<a class="reference internal" href="classNetworKit_1_1Curveball.html#exhale-class-classnetworkit-1-1curveball"><span class="std std-ref">Class Curveball</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::DegreePreservingShuffle</span></code> (<a class="reference internal" href="classNetworKit_1_1DegreePreservingShuffle.html#exhale-class-classnetworkit-1-1degreepreservingshuffle"><span class="std std-ref">Class DegreePreservingShuffle</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::Diameter</span></code> (<a class="reference internal" href="classNetworKit_1_1Diameter.html#exhale-class-classnetworkit-1-1diameter"><span class="std std-ref">Class Diameter</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::Dinic</span></code> (<a class="reference internal" href="classNetworKit_1_1Dinic.html#exhale-class-classnetworkit-1-1dinic"><span class="std std-ref">Class Dinic</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::DynBetweennessOneNode</span></code> (<a class="reference internal" href="classNetworKit_1_1DynBetweennessOneNode.html#exhale-class-classnetworkit-1-1dynbetweennessonenode"><span class="std std-ref">Class DynBetweennessOneNode</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::DynTopHarmonicCloseness</span></code> (<a class="reference internal" href="classNetworKit_1_1DynTopHarmonicCloseness.html#exhale-class-classnetworkit-1-1dyntopharmoniccloseness"><span class="std std-ref">Class DynTopHarmonicCloseness</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::EdgeScore&lt;</span> <span class="pre">T</span> <span class="pre">&gt;</span></code> (<a class="reference internal" href="classNetworKit_1_1EdgeScore.html#exhale-class-classnetworkit-1-1edgescore"><span class="std std-ref">Template Class EdgeScore</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::EdgeSwitching</span></code> (<a class="reference internal" href="classNetworKit_1_1EdgeSwitching.html#exhale-class-classnetworkit-1-1edgeswitching"><span class="std std-ref">Class EdgeSwitching</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::EdgeSwitchingInPlace</span></code> (<a class="reference internal" href="classNetworKit_1_1EdgeSwitchingInPlace.html#exhale-class-classnetworkit-1-1edgeswitchinginplace"><span class="std std-ref">Class EdgeSwitchingInPlace</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::EdmondsKarp</span></code> (<a class="reference internal" href="classNetworKit_1_1EdmondsKarp.html#exhale-class-classnetworkit-1-1edmondskarp"><span class="std std-ref">Class EdmondsKarp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::EffectiveDiameter</span></code> (<a class="reference internal" href="classNetworKit_1_1EffectiveDiameter.html#exhale-class-classnetworkit-1-1effectivediameter"><span class="std std-ref">Class EffectiveDiameter</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::EffectiveDiameterApproximation</span></code> (<a class="reference internal" href="classNetworKit_1_1EffectiveDiameterApproximation.html#exhale-class-classnetworkit-1-1effectivediameterapproximation"><span class="std std-ref">Class EffectiveDiameterApproximation</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::EpidemicSimulationSEIR</span></code> (<a class="reference internal" href="classNetworKit_1_1EpidemicSimulationSEIR.html#exhale-class-classnetworkit-1-1epidemicsimulationseir"><span class="std std-ref">Class EpidemicSimulationSEIR</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::FloydWarshall</span></code> (<a class="reference internal" href="classNetworKit_1_1FloydWarshall.html#exhale-class-classnetworkit-1-1floydwarshall"><span class="std std-ref">Class FloydWarshall</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::GedWalk</span></code> (<a class="reference internal" href="classNetworKit_1_1GedWalk.html#exhale-class-classnetworkit-1-1gedwalk"><span class="std std-ref">Class GedWalk</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::GlobalCurveball</span></code> (<a class="reference internal" href="classNetworKit_1_1GlobalCurveball.html#exhale-class-classnetworkit-1-1globalcurveball"><span class="std std-ref">Class GlobalCurveball</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::GraphCoarsening</span></code> (<a class="reference internal" href="classNetworKit_1_1GraphCoarsening.html#exhale-class-classnetworkit-1-1graphcoarsening"><span class="std std-ref">Class GraphCoarsening</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::GraphDifference</span></code> (<a class="reference internal" href="classNetworKit_1_1GraphDifference.html#exhale-class-classnetworkit-1-1graphdifference"><span class="std std-ref">Class GraphDifference</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::GroupCloseness</span></code> (<a class="reference internal" href="classNetworKit_1_1GroupCloseness.html#exhale-class-classnetworkit-1-1groupcloseness"><span class="std std-ref">Class GroupCloseness</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::GroupClosenessGrowShrink</span></code> (<a class="reference internal" href="classNetworKit_1_1GroupClosenessGrowShrink.html#exhale-class-classnetworkit-1-1groupclosenessgrowshrink"><span class="std std-ref">Class GroupClosenessGrowShrink</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::GroupClosenessLocalSearch</span></code> (<a class="reference internal" href="classNetworKit_1_1GroupClosenessLocalSearch.html#exhale-class-classnetworkit-1-1groupclosenesslocalsearch"><span class="std std-ref">Class GroupClosenessLocalSearch</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::GroupClosenessLocalSearch::GroupClosenessLocalSearchInterface</span></code> (<a class="reference internal" href="classNetworKit_1_1GroupClosenessLocalSearch_1_1GroupClosenessLocalSearchInterface.html#exhale-class-classnetworkit-1-1groupclosenesslocalsearch-1-1groupclosenesslocalsearchinterface"><span class="std std-ref">Class GroupClosenessLocalSearch::GroupClosenessLocalSearchInterface</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::GroupClosenessLocalSwaps</span></code> (<a class="reference internal" href="classNetworKit_1_1GroupClosenessLocalSwaps.html#exhale-class-classnetworkit-1-1groupclosenesslocalswaps"><span class="std std-ref">Class GroupClosenessLocalSwaps</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::GroupDegree</span></code> (<a class="reference internal" href="classNetworKit_1_1GroupDegree.html#exhale-class-classnetworkit-1-1groupdegree"><span class="std std-ref">Class GroupDegree</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::GroupHarmonicCloseness</span></code> (<a class="reference internal" href="classNetworKit_1_1GroupHarmonicCloseness.html#exhale-class-classnetworkit-1-1groupharmoniccloseness"><span class="std std-ref">Class GroupHarmonicCloseness</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::GroupHarmonicCloseness::GroupHarmonicClosenessInterface</span></code> (<a class="reference internal" href="classNetworKit_1_1GroupHarmonicCloseness_1_1GroupHarmonicClosenessInterface.html#exhale-class-classnetworkit-1-1groupharmoniccloseness-1-1groupharmonicclosenessinterface"><span class="std std-ref">Class GroupHarmonicCloseness::GroupHarmonicClosenessInterface</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::HopPlotApproximation</span></code> (<a class="reference internal" href="classNetworKit_1_1HopPlotApproximation.html#exhale-class-classnetworkit-1-1hopplotapproximation"><span class="std std-ref">Class HopPlotApproximation</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::KadabraBetweenness</span></code> (<a class="reference internal" href="classNetworKit_1_1KadabraBetweenness.html#exhale-class-classnetworkit-1-1kadabrabetweenness"><span class="std std-ref">Class KadabraBetweenness</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::LFRGenerator</span></code> (<a class="reference internal" href="classNetworKit_1_1LFRGenerator.html#exhale-class-classnetworkit-1-1lfrgenerator"><span class="std std-ref">Class LFRGenerator</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::LeftRightPlanarityCheck</span></code> (<a class="reference internal" href="classNetworKit_1_1LeftRightPlanarityCheck.html#exhale-class-classnetworkit-1-1leftrightplanaritycheck"><span class="std std-ref">Class LeftRightPlanarityCheck</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::LocalCommunityEvaluation</span></code> (<a class="reference internal" href="classNetworKit_1_1LocalCommunityEvaluation.html#exhale-class-classnetworkit-1-1localcommunityevaluation"><span class="std std-ref">Class LocalCommunityEvaluation</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::Matcher</span></code> (<a class="reference internal" href="classNetworKit_1_1Matcher.html#exhale-class-classnetworkit-1-1matcher"><span class="std std-ref">Class Matcher</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::MaximalCliques</span></code> (<a class="reference internal" href="classNetworKit_1_1MaximalCliques.html#exhale-class-classnetworkit-1-1maximalcliques"><span class="std std-ref">Class MaximalCliques</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::NeighborhoodFunction</span></code> (<a class="reference internal" href="classNetworKit_1_1NeighborhoodFunction.html#exhale-class-classnetworkit-1-1neighborhoodfunction"><span class="std std-ref">Class NeighborhoodFunction</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::NeighborhoodFunctionApproximation</span></code> (<a class="reference internal" href="classNetworKit_1_1NeighborhoodFunctionApproximation.html#exhale-class-classnetworkit-1-1neighborhoodfunctionapproximation"><span class="std std-ref">Class NeighborhoodFunctionApproximation</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::NeighborhoodFunctionHeuristic</span></code> (<a class="reference internal" href="classNetworKit_1_1NeighborhoodFunctionHeuristic.html#exhale-class-classnetworkit-1-1neighborhoodfunctionheuristic"><span class="std std-ref">Class NeighborhoodFunctionHeuristic</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::Node2Vec</span></code> (<a class="reference internal" href="classNetworKit_1_1Node2Vec.html#exhale-class-classnetworkit-1-1node2vec"><span class="std std-ref">Class Node2Vec</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::OverlappingCommunityDetectionAlgorithm</span></code> (<a class="reference internal" href="classNetworKit_1_1OverlappingCommunityDetectionAlgorithm.html#exhale-class-classnetworkit-1-1overlappingcommunitydetectionalgorithm"><span class="std std-ref">Class OverlappingCommunityDetectionAlgorithm</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::PermanenceCentrality</span></code> (<a class="reference internal" href="classNetworKit_1_1PermanenceCentrality.html#exhale-class-classnetworkit-1-1permanencecentrality"><span class="std std-ref">Class PermanenceCentrality</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::PowerlawDegreeSequence</span></code> (<a class="reference internal" href="classNetworKit_1_1PowerlawDegreeSequence.html#exhale-class-classnetworkit-1-1powerlawdegreesequence"><span class="std std-ref">Class PowerlawDegreeSequence</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::PrunedLandmarkLabeling</span></code> (<a class="reference internal" href="classNetworKit_1_1PrunedLandmarkLabeling.html#exhale-class-classnetworkit-1-1prunedlandmarklabeling"><span class="std std-ref">Class PrunedLandmarkLabeling</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::RandomMaximumSpanningForest</span></code> (<a class="reference internal" href="classNetworKit_1_1RandomMaximumSpanningForest.html#exhale-class-classnetworkit-1-1randommaximumspanningforest"><span class="std std-ref">Class RandomMaximumSpanningForest</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::ReachableNodes</span></code> (<a class="reference internal" href="classNetworKit_1_1ReachableNodes.html#exhale-class-classnetworkit-1-1reachablenodes"><span class="std std-ref">Class ReachableNodes</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::SCDGroundTruthComparison</span></code> (<a class="reference internal" href="classNetworKit_1_1SCDGroundTruthComparison.html#exhale-class-classnetworkit-1-1scdgroundtruthcomparison"><span class="std std-ref">Class SCDGroundTruthComparison</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::SPSP</span></code> (<a class="reference internal" href="classNetworKit_1_1SPSP.html#exhale-class-classnetworkit-1-1spsp"><span class="std std-ref">Class SPSP</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::SSSP</span></code> (<a class="reference internal" href="classNetworKit_1_1SSSP.html#exhale-class-classnetworkit-1-1sssp"><span class="std std-ref">Class SSSP</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::STSP</span></code> (<a class="reference internal" href="classNetworKit_1_1STSP.html#exhale-class-classnetworkit-1-1stsp"><span class="std std-ref">Class STSP</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::SetConductance</span></code> (<a class="reference internal" href="classNetworKit_1_1SetConductance.html#exhale-class-classnetworkit-1-1setconductance"><span class="std std-ref">Class SetConductance</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::SpanningForest</span></code> (<a class="reference internal" href="classNetworKit_1_1SpanningForest.html#exhale-class-classnetworkit-1-1spanningforest"><span class="std std-ref">Class SpanningForest</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::SuccessiveShortestPathMinCostFlow</span></code> (<a class="reference internal" href="classNetworKit_1_1SuccessiveShortestPathMinCostFlow.html#exhale-class-classnetworkit-1-1successiveshortestpathmincostflow"><span class="std std-ref">Class SuccessiveShortestPathMinCostFlow</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::TopCloseness</span></code> (<a class="reference internal" href="classNetworKit_1_1TopCloseness.html#exhale-class-classnetworkit-1-1topcloseness"><span class="std std-ref">Class TopCloseness</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::TopHarmonicCloseness</span></code> (<a class="reference internal" href="classNetworKit_1_1TopHarmonicCloseness.html#exhale-class-classnetworkit-1-1topharmoniccloseness"><span class="std std-ref">Class TopHarmonicCloseness</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::TopologicalSort</span></code> (<a class="reference internal" href="classNetworKit_1_1TopologicalSort.html#exhale-class-classnetworkit-1-1topologicalsort"><span class="std std-ref">Class TopologicalSort</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::UnionMaximumSpanningForest</span></code> (<a class="reference internal" href="classNetworKit_1_1UnionMaximumSpanningForest.html#exhale-class-classnetworkit-1-1unionmaximumspanningforest"><span class="std std-ref">Class UnionMaximumSpanningForest</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9AlgorithmE">
+<span class="target" id="classNetworKit_1_1Algorithm"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Algorithm</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit9AlgorithmE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Subclassed by <a class="reference internal" href="classNetworKit_1_1EdgeScore.html#classNetworKit_1_1EdgeScore"><span class="std std-ref">NetworKit::EdgeScore&lt; double &gt;</span></a>, <a class="reference internal" href="classNetworKit_1_1EdgeScore.html#classNetworKit_1_1EdgeScore"><span class="std std-ref">NetworKit::EdgeScore&lt; count &gt;</span></a>, <a class="reference internal" href="classNetworKit_1_1APSP.html#classNetworKit_1_1APSP"><span class="std std-ref">NetworKit::APSP</span></a>, <a class="reference internal" href="classNetworKit_1_1AffectedNodes.html#classNetworKit_1_1AffectedNodes"><span class="std std-ref">NetworKit::AffectedNodes</span></a>, <a class="reference internal" href="classNetworKit_1_1AlgebraicBFS.html#classNetworKit_1_1AlgebraicBFS"><span class="std std-ref">NetworKit::AlgebraicBFS&lt; Matrix &gt;</span></a>, <a class="reference internal" href="classNetworKit_1_1AlgebraicBellmanFord.html#classNetworKit_1_1AlgebraicBellmanFord"><span class="std std-ref">NetworKit::AlgebraicBellmanFord&lt; Matrix &gt;</span></a>, <a class="reference internal" href="classNetworKit_1_1AlgebraicTriangleCounting.html#classNetworKit_1_1AlgebraicTriangleCounting"><span class="std std-ref">NetworKit::AlgebraicTriangleCounting&lt; Matrix &gt;</span></a>, <a class="reference internal" href="classNetworKit_1_1AllSimplePaths.html#classNetworKit_1_1AllSimplePaths"><span class="std std-ref">NetworKit::AllSimplePaths</span></a>, <a class="reference internal" href="classNetworKit_1_1ApproxGroupBetweenness.html#classNetworKit_1_1ApproxGroupBetweenness"><span class="std std-ref">NetworKit::ApproxGroupBetweenness</span></a>, <a class="reference internal" href="classNetworKit_1_1ApproxSpanningEdge.html#classNetworKit_1_1ApproxSpanningEdge"><span class="std std-ref">NetworKit::ApproxSpanningEdge</span></a>, <a class="reference internal" href="classNetworKit_1_1Assortativity.html#classNetworKit_1_1Assortativity"><span class="std std-ref">NetworKit::Assortativity</span></a>, <a class="reference internal" href="classNetworKit_1_1BMatcher.html#classNetworKit_1_1BMatcher"><span class="std std-ref">NetworKit::BMatcher</span></a>, <a class="reference internal" href="classNetworKit_1_1BiconnectedComponents.html#classNetworKit_1_1BiconnectedComponents"><span class="std std-ref">NetworKit::BiconnectedComponents</span></a>, <a class="reference internal" href="classNetworKit_1_1Centrality.html#classNetworKit_1_1Centrality"><span class="std std-ref">NetworKit::Centrality</span></a>, <a class="reference internal" href="classNetworKit_1_1CommunityDetectionAlgorithm.html#classNetworKit_1_1CommunityDetectionAlgorithm"><span class="std std-ref">NetworKit::CommunityDetectionAlgorithm</span></a>, <a class="reference internal" href="classNetworKit_1_1CommuteTimeDistance.html#classNetworKit_1_1CommuteTimeDistance"><span class="std std-ref">NetworKit::CommuteTimeDistance</span></a>, <a class="reference internal" href="classNetworKit_1_1ComplexPathAlgorithm.html#classNetworKit_1_1ComplexPathAlgorithm"><span class="std std-ref">NetworKit::ComplexPathAlgorithm</span></a>, <a class="reference internal" href="classNetworKit_1_1ComponentDecomposition.html#classNetworKit_1_1ComponentDecomposition"><span class="std std-ref">NetworKit::ComponentDecomposition</span></a>, <a class="reference internal" href="classNetworKit_1_1Curveball.html#classNetworKit_1_1Curveball"><span class="std std-ref">NetworKit::Curveball</span></a>, <a class="reference internal" href="classNetworKit_1_1DegreePreservingShuffle.html#classNetworKit_1_1DegreePreservingShuffle"><span class="std std-ref">NetworKit::DegreePreservingShuffle</span></a>, <a class="reference internal" href="classNetworKit_1_1Diameter.html#classNetworKit_1_1Diameter"><span class="std std-ref">NetworKit::Diameter</span></a>, <a class="reference internal" href="classNetworKit_1_1Dinic.html#classNetworKit_1_1Dinic"><span class="std std-ref">NetworKit::Dinic</span></a>, <a class="reference internal" href="classNetworKit_1_1DynBetweennessOneNode.html#classNetworKit_1_1DynBetweennessOneNode"><span class="std std-ref">NetworKit::DynBetweennessOneNode</span></a>, <a class="reference internal" href="classNetworKit_1_1DynTopHarmonicCloseness.html#classNetworKit_1_1DynTopHarmonicCloseness"><span class="std std-ref">NetworKit::DynTopHarmonicCloseness</span></a>, <a class="reference internal" href="classNetworKit_1_1EdgeScore.html#classNetworKit_1_1EdgeScore"><span class="std std-ref">NetworKit::EdgeScore&lt; T &gt;</span></a>, <a class="reference internal" href="classNetworKit_1_1EdgeSwitching.html#classNetworKit_1_1EdgeSwitching"><span class="std std-ref">NetworKit::EdgeSwitching</span></a>, <a class="reference internal" href="classNetworKit_1_1EdgeSwitchingInPlace.html#classNetworKit_1_1EdgeSwitchingInPlace"><span class="std std-ref">NetworKit::EdgeSwitchingInPlace</span></a>, <a class="reference internal" href="classNetworKit_1_1EdmondsKarp.html#classNetworKit_1_1EdmondsKarp"><span class="std std-ref">NetworKit::EdmondsKarp</span></a>, <a class="reference internal" href="classNetworKit_1_1EffectiveDiameter.html#classNetworKit_1_1EffectiveDiameter"><span class="std std-ref">NetworKit::EffectiveDiameter</span></a>, <a class="reference internal" href="classNetworKit_1_1EffectiveDiameterApproximation.html#classNetworKit_1_1EffectiveDiameterApproximation"><span class="std std-ref">NetworKit::EffectiveDiameterApproximation</span></a>, <a class="reference internal" href="classNetworKit_1_1EpidemicSimulationSEIR.html#classNetworKit_1_1EpidemicSimulationSEIR"><span class="std std-ref">NetworKit::EpidemicSimulationSEIR</span></a>, <a class="reference internal" href="classNetworKit_1_1FloydWarshall.html#classNetworKit_1_1FloydWarshall"><span class="std std-ref">NetworKit::FloydWarshall</span></a>, <a class="reference internal" href="classNetworKit_1_1GedWalk.html#classNetworKit_1_1GedWalk"><span class="std std-ref">NetworKit::GedWalk</span></a>, <a class="reference internal" href="classNetworKit_1_1GlobalCurveball.html#classNetworKit_1_1GlobalCurveball"><span class="std std-ref">NetworKit::GlobalCurveball</span></a>, <a class="reference internal" href="classNetworKit_1_1GraphCoarsening.html#classNetworKit_1_1GraphCoarsening"><span class="std std-ref">NetworKit::GraphCoarsening</span></a>, <a class="reference internal" href="classNetworKit_1_1GraphDifference.html#classNetworKit_1_1GraphDifference"><span class="std std-ref">NetworKit::GraphDifference</span></a>, <a class="reference internal" href="classNetworKit_1_1GroupCloseness.html#classNetworKit_1_1GroupCloseness"><span class="std std-ref">NetworKit::GroupCloseness</span></a>, <a class="reference internal" href="classNetworKit_1_1GroupClosenessGrowShrink.html#classNetworKit_1_1GroupClosenessGrowShrink"><span class="std std-ref">NetworKit::GroupClosenessGrowShrink</span></a>, <a class="reference internal" href="classNetworKit_1_1GroupClosenessLocalSearch.html#classNetworKit_1_1GroupClosenessLocalSearch"><span class="std std-ref">NetworKit::GroupClosenessLocalSearch</span></a>, <a class="reference internal" href="classNetworKit_1_1GroupClosenessLocalSearch_1_1GroupClosenessLocalSearchInterface.html#classNetworKit_1_1GroupClosenessLocalSearch_1_1GroupClosenessLocalSearchInterface"><span class="std std-ref">NetworKit::GroupClosenessLocalSearch::GroupClosenessLocalSearchInterface</span></a>, <a class="reference internal" href="classNetworKit_1_1GroupClosenessLocalSwaps.html#classNetworKit_1_1GroupClosenessLocalSwaps"><span class="std std-ref">NetworKit::GroupClosenessLocalSwaps</span></a>, <a class="reference internal" href="classNetworKit_1_1GroupDegree.html#classNetworKit_1_1GroupDegree"><span class="std std-ref">NetworKit::GroupDegree</span></a>, <a class="reference internal" href="classNetworKit_1_1GroupHarmonicCloseness.html#classNetworKit_1_1GroupHarmonicCloseness"><span class="std std-ref">NetworKit::GroupHarmonicCloseness</span></a>, <a class="reference internal" href="classNetworKit_1_1GroupHarmonicCloseness_1_1GroupHarmonicClosenessInterface.html#classNetworKit_1_1GroupHarmonicCloseness_1_1GroupHarmonicClosenessInterface"><span class="std std-ref">NetworKit::GroupHarmonicCloseness::GroupHarmonicClosenessInterface</span></a>, <a class="reference internal" href="classNetworKit_1_1HopPlotApproximation.html#classNetworKit_1_1HopPlotApproximation"><span class="std std-ref">NetworKit::HopPlotApproximation</span></a>, <a class="reference internal" href="classNetworKit_1_1KadabraBetweenness.html#classNetworKit_1_1KadabraBetweenness"><span class="std std-ref">NetworKit::KadabraBetweenness</span></a>, <a class="reference internal" href="classNetworKit_1_1LFRGenerator.html#classNetworKit_1_1LFRGenerator"><span class="std std-ref">NetworKit::LFRGenerator</span></a>, <a class="reference internal" href="classNetworKit_1_1LeftRightPlanarityCheck.html#classNetworKit_1_1LeftRightPlanarityCheck"><span class="std std-ref">NetworKit::LeftRightPlanarityCheck</span></a>, <a class="reference internal" href="classNetworKit_1_1LocalCommunityEvaluation.html#classNetworKit_1_1LocalCommunityEvaluation"><span class="std std-ref">NetworKit::LocalCommunityEvaluation</span></a>, <a class="reference internal" href="classNetworKit_1_1Matcher.html#classNetworKit_1_1Matcher"><span class="std std-ref">NetworKit::Matcher</span></a>, <a class="reference internal" href="classNetworKit_1_1MaximalCliques.html#classNetworKit_1_1MaximalCliques"><span class="std std-ref">NetworKit::MaximalCliques</span></a>, <a class="reference internal" href="classNetworKit_1_1NeighborhoodFunction.html#classNetworKit_1_1NeighborhoodFunction"><span class="std std-ref">NetworKit::NeighborhoodFunction</span></a>, <a class="reference internal" href="classNetworKit_1_1NeighborhoodFunctionApproximation.html#classNetworKit_1_1NeighborhoodFunctionApproximation"><span class="std std-ref">NetworKit::NeighborhoodFunctionApproximation</span></a>, <a class="reference internal" href="classNetworKit_1_1NeighborhoodFunctionHeuristic.html#classNetworKit_1_1NeighborhoodFunctionHeuristic"><span class="std std-ref">NetworKit::NeighborhoodFunctionHeuristic</span></a>, <a class="reference internal" href="classNetworKit_1_1Node2Vec.html#classNetworKit_1_1Node2Vec"><span class="std std-ref">NetworKit::Node2Vec</span></a>, <a class="reference internal" href="classNetworKit_1_1OverlappingCommunityDetectionAlgorithm.html#classNetworKit_1_1OverlappingCommunityDetectionAlgorithm"><span class="std std-ref">NetworKit::OverlappingCommunityDetectionAlgorithm</span></a>, <a class="reference internal" href="classNetworKit_1_1PermanenceCentrality.html#classNetworKit_1_1PermanenceCentrality"><span class="std std-ref">NetworKit::PermanenceCentrality</span></a>, <a class="reference internal" href="classNetworKit_1_1PowerlawDegreeSequence.html#classNetworKit_1_1PowerlawDegreeSequence"><span class="std std-ref">NetworKit::PowerlawDegreeSequence</span></a>, <a class="reference internal" href="classNetworKit_1_1PrunedLandmarkLabeling.html#classNetworKit_1_1PrunedLandmarkLabeling"><span class="std std-ref">NetworKit::PrunedLandmarkLabeling</span></a>, <a class="reference internal" href="classNetworKit_1_1RandomMaximumSpanningForest.html#classNetworKit_1_1RandomMaximumSpanningForest"><span class="std std-ref">NetworKit::RandomMaximumSpanningForest</span></a>, <a class="reference internal" href="classNetworKit_1_1ReachableNodes.html#classNetworKit_1_1ReachableNodes"><span class="std std-ref">NetworKit::ReachableNodes</span></a>, <a class="reference internal" href="classNetworKit_1_1SCDGroundTruthComparison.html#classNetworKit_1_1SCDGroundTruthComparison"><span class="std std-ref">NetworKit::SCDGroundTruthComparison</span></a>, <a class="reference internal" href="classNetworKit_1_1SPSP.html#classNetworKit_1_1SPSP"><span class="std std-ref">NetworKit::SPSP</span></a>, <a class="reference internal" href="classNetworKit_1_1SSSP.html#classNetworKit_1_1SSSP"><span class="std std-ref">NetworKit::SSSP</span></a>, <a class="reference internal" href="classNetworKit_1_1STSP.html#classNetworKit_1_1STSP"><span class="std std-ref">NetworKit::STSP</span></a>, <a class="reference internal" href="classNetworKit_1_1SetConductance.html#classNetworKit_1_1SetConductance"><span class="std std-ref">NetworKit::SetConductance</span></a>, <a class="reference internal" href="classNetworKit_1_1SpanningForest.html#classNetworKit_1_1SpanningForest"><span class="std std-ref">NetworKit::SpanningForest</span></a>, <a class="reference internal" href="classNetworKit_1_1SuccessiveShortestPathMinCostFlow.html#classNetworKit_1_1SuccessiveShortestPathMinCostFlow"><span class="std std-ref">NetworKit::SuccessiveShortestPathMinCostFlow</span></a>, <a class="reference internal" href="classNetworKit_1_1TopCloseness.html#classNetworKit_1_1TopCloseness"><span class="std std-ref">NetworKit::TopCloseness</span></a>, <a class="reference internal" href="classNetworKit_1_1TopHarmonicCloseness.html#classNetworKit_1_1TopHarmonicCloseness"><span class="std std-ref">NetworKit::TopHarmonicCloseness</span></a>, <a class="reference internal" href="classNetworKit_1_1TopologicalSort.html#classNetworKit_1_1TopologicalSort"><span class="std std-ref">NetworKit::TopologicalSort</span></a>, <a class="reference internal" href="classNetworKit_1_1UnionMaximumSpanningForest.html#classNetworKit_1_1UnionMaximumSpanningForest"><span class="std std-ref">NetworKit::UnionMaximumSpanningForest</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9AlgorithmD0Ev">
+<span class="target" id="classNetworKit_1_1Algorithm_1a416a97ebc5de310d4db6fc4b52d33817"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~Algorithm</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N9NetworKit9AlgorithmD0Ev" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9Algorithm3runEv">
+<span class="target" id="classNetworKit_1_1Algorithm_1abe1459c8268a114c5a7d08393ec280e7"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N9NetworKit9Algorithm3runEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>The generic run method which calls runImpl() and takes care of setting hasRun to the appropriate value. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit9Algorithm11hasFinishedEv">
+<span class="target" id="classNetworKit_1_1Algorithm_1ac12067129d50655665b606bbe1b0dff2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hasFinished</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit9Algorithm11hasFinishedEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Indicates whether an algorithm has completed computation or not.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The value of hasRun. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit9Algorithm14assureFinishedEv">
+<span class="target" id="classNetworKit_1_1Algorithm_1a827b2f5246132196ff5dfd734aa6f527"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assureFinished</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit9Algorithm14assureFinishedEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Assure that the algorithm has been run, throws a std::runtime_error otherwise. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit9Algorithm6hasRunE">
+<span class="target" id="classNetworKit_1_1Algorithm_1a871ee33b3f9034b4047a2a0c177a4ae2"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hasRun</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N9NetworKit9Algorithm6hasRunE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

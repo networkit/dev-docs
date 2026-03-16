@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Class BSuitorMatcher</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="../_static/particles.min.js"></script>
+    <script src="../_static/custom.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class Centrality" href="classNetworKit_1_1Centrality.html" />
+    <link rel="prev" title="Class BMatching" href="classNetworKit_1_1BMatching.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="../index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#directories">Directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#pages">Pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
+</ul>
+
+</ul>
+  
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="class-bsuitormatcher">
+<span id="exhale-class-classnetworkit-1-1bsuitormatcher"></span><h1>Class BSuitorMatcher<a class="headerlink" href="#class-bsuitormatcher" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_networkit_matching_BSuitorMatcher.hpp.html#file-include-networkit-matching-bsuitormatcher-hpp"><span class="std std-ref">File BSuitorMatcher.hpp</span></a></p></li>
+</ul>
+<section id="nested-relationships">
+<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Link to this heading">¶</a></h2>
+<section id="nested-types">
+<h3>Nested Types<a class="headerlink" href="#nested-types" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="structNetworKit_1_1BSuitorMatcher_1_1MatchingNode.html#exhale-struct-structnetworkit-1-1bsuitormatcher-1-1matchingnode"><span class="std std-ref">Struct BSuitorMatcher::MatchingNode</span></a></p></li>
+<li><p><a class="reference internal" href="structNetworKit_1_1BSuitorMatcher_1_1MatchingNodeInfo.html#exhale-struct-structnetworkit-1-1bsuitormatcher-1-1matchingnodeinfo"><span class="std std-ref">Struct BSuitorMatcher::MatchingNodeInfo</span></a></p></li>
+</ul>
+</section>
+</section>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Link to this heading">¶</a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::BMatcher</span></code> (<a class="reference internal" href="classNetworKit_1_1BMatcher.html#exhale-class-classnetworkit-1-1bmatcher"><span class="std std-ref">Class BMatcher</span></a>)</p></li>
+</ul>
+</section>
+<section id="derived-type">
+<h3>Derived Type<a class="headerlink" href="#derived-type" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::DynamicBSuitorMatcher</span></code> (<a class="reference internal" href="classNetworKit_1_1DynamicBSuitorMatcher.html#exhale-class-classnetworkit-1-1dynamicbsuitormatcher"><span class="std std-ref">Class DynamicBSuitorMatcher</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcherE">
+<span class="target" id="classNetworKit_1_1BSuitorMatcher"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BSuitorMatcher</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1BMatcher.html#_CPPv4N9NetworKit8BMatcherE" title="NetworKit::BMatcher"><span class="n"><span class="pre">BMatcher</span></span></a><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcherE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>B-Suitor matching finding algorithm. </p>
+<p>Subclassed by <a class="reference internal" href="classNetworKit_1_1DynamicBSuitorMatcher.html#classNetworKit_1_1DynamicBSuitorMatcher"><span class="std std-ref">NetworKit::DynamicBSuitorMatcher</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher14BSuitorMatcherERK5GraphRKNSt6vectorI5countEE">
+<span class="target" id="classNetworKit_1_1BSuitorMatcher_1a5ab9d0ef6f3285cbeed24b71502b7fb2"></span><span class="sig-name descname"><span class="n"><span class="pre">BSuitorMatcher</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">b</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher14BSuitorMatcherERK5GraphRKNSt6vectorI5countEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Computes a 1/2-approximate maximum weight b-matching of an undirected weighted <a class="reference internal" href="classNetworKit_1_1Graph.html#classNetworKit_1_1Graph"><span class="std std-ref">Graph</span></a> <code class="docutils literal notranslate"><span class="pre">G</span></code><p>using the sequential b-Suitor algorithm published by Khan et al. in “Efficient Approximation</p>
+<p>Algorithms For Weighted B-Matching”, SIAM Journal on Scientific Computing, Vol. 38, Iss. 5 (2016).</p>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> – An undirected graph. </p></li>
+<li><p><strong>b</strong> – A vector of <em>b</em> values that represents the max number of edges per vertex <em>v</em> in the b-Matching (b.at(v)). </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher14BSuitorMatcherERK5Graph5count">
+<span class="target" id="classNetworKit_1_1BSuitorMatcher_1a66a6d9f916cbe995d594c7e3b4a15db7"></span><span class="sig-name descname"><span class="n"><span class="pre">BSuitorMatcher</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">b</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher14BSuitorMatcherERK5Graph5count" title="Link to this definition">¶</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> – An undirected graph. </p></li>
+<li><p><strong>b</strong> – A value <em>b</em> that represents the max number of edges per vertex in the b-Matching. Defaults to the ordinary 1-<a class="reference internal" href="classNetworKit_1_1Matching.html#classNetworKit_1_1Matching"><span class="std std-ref">Matching</span></a>. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcherD0Ev">
+<span class="target" id="classNetworKit_1_1BSuitorMatcher_1af127477d7ceb984ec3a6eca8a7991359"></span><span class="sig-name descname"><span class="n"><span class="pre">~BSuitorMatcher</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcherD0Ev" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher3runEv">
+<span class="target" id="classNetworKit_1_1BSuitorMatcher_1a3a293c058b140872da58441679a5acd7"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher3runEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Runs the algorithm. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher14buildBMatchingEv">
+<span class="target" id="classNetworKit_1_1BSuitorMatcher_1a421d60cb8bc821a90657ed7293690bd7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">buildBMatching</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher14buildBMatchingEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Creates the b-matching for given graph G. Function <a class="reference internal" href="#classNetworKit_1_1BSuitorMatcher_1a3a293c058b140872da58441679a5acd7"><span class="std std-ref">run()</span></a> automatically invokes buildMatching. After invoking <a class="reference internal" href="#classNetworKit_1_1BSuitorMatcher_1a421d60cb8bc821a90657ed7293690bd7"><span class="std std-ref">buildBMatching()</span></a>, use <a class="reference internal" href="classNetworKit_1_1BMatcher.html#classNetworKit_1_1BMatcher_1ad5e3ed35fc730f53351d9d1dc2000c5e"><span class="std std-ref">getBMatching()</span></a> to retrieve the resulting b-matching. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher11findSuitorsE4node">
+<span class="target" id="classNetworKit_1_1BSuitorMatcher_1a3f8d2eed1fb43675ca274261fe0a728a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">findSuitors</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher11findSuitorsE4node" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Iterates up to <em>b</em> times over the heaviest neighbors of node <em>u</em> and makes them to suitors if eligible.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>u</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher13findPreferredE4node">
+<span class="target" id="classNetworKit_1_1BSuitorMatcher_1a0e8bb4993a86f54486a8446e476f06f8"></span><a class="reference internal" href="#_CPPv4N9NetworKit14BSuitorMatcher12MatchingNodeE" title="NetworKit::BSuitorMatcher::MatchingNode"><span class="n"><span class="pre">MatchingNode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">findPreferred</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher13findPreferredE4node" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Finds the heaviest unmatched neighbor that <em>u</em> has not yet proposed to if it exists. For equally weighted edges w(u, t), w(u, v) and t &lt; v, w(u, t) is considered smaller than w(u, v) to break ties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>y</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Node </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher10makeSuitorE4node10edgeweight4node">
+<span class="target" id="classNetworKit_1_1BSuitorMatcher_1a803168106a943a2c7bda40bfaf45ece4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">makeSuitor</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">w</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">v</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher10makeSuitorE4node10edgeweight4node" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Makes <em>v</em> a suitor of <em>u</em> and recursively calls itself for previous worse suitors of <em>u</em> that got replaced with their new best match.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>u</strong> – </p></li>
+<li><p><strong>w</strong> – </p></li>
+<li><p><strong>v</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit14BSuitorMatcher13isSymmetricalEv">
+<span class="target" id="classNetworKit_1_1BSuitorMatcher_1a6cf94b668a74920fa885936c2a8e7a1f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isSymmetrical</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit14BSuitorMatcher13isSymmetricalEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Checks the symmetry of pairs of nodes. It must hold that v is in suitors(u) iff u is in suitors(v). </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher7suitorsE">
+<span class="target" id="classNetworKit_1_1BSuitorMatcher_1a56cabaa4a0a009b3eb9deb70f99ad30d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfoE" title="NetworKit::BSuitorMatcher::MatchingNodeInfo"><span class="n"><span class="pre">MatchingNodeInfo</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">suitors</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher7suitorsE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher8proposedE">
+<span class="target" id="classNetworKit_1_1BSuitorMatcher_1af2bba935186402423b1ef3d345e98ce6"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfoE" title="NetworKit::BSuitorMatcher::MatchingNodeInfo"><span class="n"><span class="pre">MatchingNodeInfo</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">proposed</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher8proposedE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher1bE">
+<span class="target" id="classNetworKit_1_1BSuitorMatcher_1a9b3b5b1bc2eff9d83dd0be393d7aaef6"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">b</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher1bE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher12MatchingNodeE">
+<span class="target" id="structNetworKit_1_1BSuitorMatcher_1_1MatchingNode"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MatchingNode</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher12MatchingNodeE" title="Link to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher12MatchingNode12MatchingNodeEv">
+<span class="target" id="structNetworKit_1_1BSuitorMatcher_1_1MatchingNode_1aa47c7e8ebec5cc50817e9be5e7a21936"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MatchingNode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher12MatchingNode12MatchingNodeEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher12MatchingNode12MatchingNodeE4node10edgeweight">
+<span class="target" id="structNetworKit_1_1BSuitorMatcher_1_1MatchingNode_1ae04d8cfbc47490ee66dc3495edd1a3f8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MatchingNode</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">w</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher12MatchingNode12MatchingNodeE4node10edgeweight" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit14BSuitorMatcher12MatchingNodessERK12MatchingNode">
+<span class="target" id="structNetworKit_1_1BSuitorMatcher_1_1MatchingNode_1a95d7bb34d1aac56414e2779180c77b2d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">partial_ordering</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;=&gt;</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit14BSuitorMatcher12MatchingNodeE" title="NetworKit::BSuitorMatcher::MatchingNode"><span class="n"><span class="pre">MatchingNode</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit14BSuitorMatcher12MatchingNodessERK12MatchingNode" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit14BSuitorMatcher12MatchingNodeeqERK12MatchingNode">
+<span class="target" id="structNetworKit_1_1BSuitorMatcher_1_1MatchingNode_1a383edfe7f42fa44acb7c2bbdc4a27d69"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit14BSuitorMatcher12MatchingNodeE" title="NetworKit::BSuitorMatcher::MatchingNode"><span class="n"><span class="pre">MatchingNode</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit14BSuitorMatcher12MatchingNodeeqERK12MatchingNode" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher12MatchingNode2idE">
+<span class="target" id="structNetworKit_1_1BSuitorMatcher_1_1MatchingNode_1a7b174e76afc9a66fa757f9ac29183c0e"></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">id</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher12MatchingNode2idE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher12MatchingNode6weightE">
+<span class="target" id="structNetworKit_1_1BSuitorMatcher_1_1MatchingNode_1a0e895a5e666b702ff03c157189d30a88"></span><a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weight</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher12MatchingNode6weightE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfoE">
+<span class="target" id="structNetworKit_1_1BSuitorMatcher_1_1MatchingNodeInfo"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MatchingNodeInfo</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfoE" title="Link to this definition">¶</a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfo16MatchingNodeInfoEv">
+<span class="target" id="structNetworKit_1_1BSuitorMatcher_1_1MatchingNodeInfo_1abdb1eb34190071116630f37694602a08"></span><span class="sig-name descname"><span class="n"><span class="pre">MatchingNodeInfo</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfo16MatchingNodeInfoEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfo16MatchingNodeInfoE5count">
+<span class="target" id="structNetworKit_1_1BSuitorMatcher_1_1MatchingNodeInfo_1a607c70ae1340865134a900502af528e5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MatchingNodeInfo</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">b</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfo16MatchingNodeInfoE5count" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit14BSuitorMatcher16MatchingNodeInfo10hasPartnerE4node">
+<span class="target" id="structNetworKit_1_1BSuitorMatcher_1_1MatchingNodeInfo_1a4ad2cb5d44f93e74a13a747fdeb31877"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hasPartner</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit14BSuitorMatcher16MatchingNodeInfo10hasPartnerE4node" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfo12popMinIfFullEv">
+<span class="target" id="structNetworKit_1_1BSuitorMatcher_1_1MatchingNodeInfo_1a94a4fc3467cd99444d654d688bee48db"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit14BSuitorMatcher12MatchingNodeE" title="NetworKit::BSuitorMatcher::MatchingNode"><span class="n"><span class="pre">MatchingNode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">popMinIfFull</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfo12popMinIfFullEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfo6insertERK12MatchingNode">
+<span class="target" id="structNetworKit_1_1BSuitorMatcher_1_1MatchingNodeInfo_1a1777ec5dfe73e74b07748330e95057f0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit14BSuitorMatcher12MatchingNodeE" title="NetworKit::BSuitorMatcher::MatchingNode"><span class="n"><span class="pre">MatchingNode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">insert</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit14BSuitorMatcher12MatchingNodeE" title="NetworKit::BSuitorMatcher::MatchingNode"><span class="n"><span class="pre">MatchingNode</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">u</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfo6insertERK12MatchingNode" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfo6removeE4node">
+<span class="target" id="structNetworKit_1_1BSuitorMatcher_1_1MatchingNodeInfo_1a6e3055fa067823c225b6c860332f1130"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">remove</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfo6removeE4node" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfo8partnersE">
+<span class="target" id="structNetworKit_1_1BSuitorMatcher_1_1MatchingNodeInfo_1ac8d7ce45bc44336fcdca40193202725a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N9NetworKit14BSuitorMatcher12MatchingNodeE" title="NetworKit::BSuitorMatcher::MatchingNode"><span class="n"><span class="pre">MatchingNode</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">partners</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfo8partnersE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfo3minE">
+<span class="target" id="structNetworKit_1_1BSuitorMatcher_1_1MatchingNodeInfo_1ab5421c38ffcc19ad81d9af04fb8cf9ca"></span><a class="reference internal" href="#_CPPv4N9NetworKit14BSuitorMatcher12MatchingNodeE" title="NetworKit::BSuitorMatcher::MatchingNode"><span class="n"><span class="pre">MatchingNode</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">min</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfo3minE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfo8max_sizeE">
+<span class="target" id="structNetworKit_1_1BSuitorMatcher_1_1MatchingNodeInfo_1a9c67f4dd9e1bbbf1725a2e0f51c31466"></span><a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">max_size</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit14BSuitorMatcher16MatchingNodeInfo8max_sizeE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>

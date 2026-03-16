@@ -1,0 +1,703 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>NetworKit Development Guide</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css?v=fa2d15c4" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
+    <link rel="stylesheet" href="_static/style.css" type="text/css" />
+    <script src="_static/documentation_options.js?v=89fba709"></script>
+    <script src="_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/bootstrap-treeview/bootstrap-treeview.min.js?v=6a1e96b4"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="_static/particles.min.js"></script>
+    <script src="_static/custom.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="NetworKit Visualization Tutorial" href="notebooks/Visualization.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+  
+  <a href="https://github.com/networkit/networkit"
+     class="visible-desktop hidden-xs"><img style="position: absolute; width:auto; height: auto; max-width: 200px; top:
+     0px; right: 0; border: 0; z-index: 3;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>  
+
+
+     <div id="fancy-particles-small"></div>
+  <div id="navbar" class="navbar navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div style="float:left;height:auto; line-height:30px;">
+          <div style="overflow:hidden; line-height:15px">
+              <span style="display:block">
+                <a style="text-decoration: none; padding-top: 19.5px; padding-left:15px; height:30px;" class="navbar-brand" href="https://networkit.github.io">
+                  NetworKit</a>
+              </span>
+              <div style="font-size:9pt; clear:left;">Large-Scale Network Analysis</div>              
+          </div>
+        </div>
+      </div>
+
+
+
+        <div id="main-nav" class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="https://networkit.github.io/get_started.html">Get Started</a></li>
+                <li><a href="index.html">Documentation</a></li>
+                <li><a href="https://networkit.github.io/features.html">Features</a></li>
+                <li><a href="https://networkit.github.io/news.html">News</a></li>
+                <li><a href="https://networkit.github.io/publications.html">Publications</a></li>
+                <li><a href="https://networkit.github.io/networkit-day.html">NetworKit Day</a></li>
+                <li><a href="https://networkit.github.io/credits.html">Credits & References</a></li>
+            
+            
+              
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+	<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="python_api/modules.html">Python Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cpp_api/library_root.html">C++ Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Jupyter Notebook</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Developer Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#contribution-workflow">Contribution Workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fork-the-networkit-repository">1. Fork the NetworKit repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-feature-branch">2. Create a Feature Branch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-your-code">3. Add Your Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#send-a-pull-request">4. Send a Pull Request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#participate-in-the-pull-request-discussion">5. Participate in the Pull Request Discussion</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#style-guide">Style guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#report-bugs">Report bugs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tags">Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-networkit">Using NetworKit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#student-projects">Student Projects</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#branching-cheat-sheet">Branching Cheat Sheet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conventions">Conventions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#versioning">Versioning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#unit-tests-and-testing">Unit Tests and Testing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#test-driven-development">Test-driven development</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#algorithm-interface-and-class-hierarchy">Algorithm interface and class hierarchy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#exposing-c-code-to-python">Exposing C++ Code to Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#make-algorithms-interruptable-with-ctrl-c-sigint">Make algorithms interruptable with CTRL+C/SIGINT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contact">Contact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-the-documentation">Building the documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#further-reading">Further Reading</a></li>
+</ul>
+</li>
+</ul>
+
+</ul>
+  
+<form action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <section id="networkit-development-guide">
+<span id="devguide"></span><h1>NetworKit Development Guide<a class="headerlink" href="#networkit-development-guide" title="Link to this heading">¶</a></h1>
+<p>This guide is designed to give potential contributors a quick understanding of the structure of NetworKit as well as what they need to look out for when adding new functionality to NetworKit.</p>
+<p>The following text assumes some basic familiarity with the Git
+version control software. It is not a Git tutorial, because you
+will find a good one <a class="reference external" href="https://try.github.io/">here</a>. Rather, it
+explains concepts and workflows for the development of this project.</p>
+<p>If you want to contribute, you should consider reading the <a class="reference external" href="https://arxiv.org/pdf/1403.3005.pdf">technical
+report</a> on NetworKit to get
+familiar with the architecture.</p>
+<p>If you use NetworKit in your research publications, please cite the
+mentioned technical report or the specific algorithm. A list of
+publications is available on the
+<a class="reference external" href="https://networkit.github.io/publications.html">website</a>.</p>
+<section id="contribution-workflow">
+<h2>Contribution Workflow<a class="headerlink" href="#contribution-workflow" title="Link to this heading">¶</a></h2>
+<p>The development of the NetworKit project takes place at our <a class="reference external" href="https://github.com/networkit/networkit">official repository on GitHub</a>.</p>
+<p>In order to successfully contribute to the project and add your feature to the master branch, there are a couple of steps you need to follow:</p>
+<ol class="arabic simple">
+<li><p>Fork the NetworKit repository</p></li>
+<li><p>Create a feature branch</p></li>
+<li><p>Add your code</p></li>
+<li><p>Send a pull request (against the master branch)</p></li>
+<li><p>Participate in the pull request discussion</p></li>
+</ol>
+<p>In the following part we will take a closer look at each step of the workflow outlined above.
+To make it more tangible, let’s assume you want to contribute to NetworKit by adding a new algorithm to the existing suite.</p>
+<section id="fork-the-networkit-repository">
+<h3>1. Fork the NetworKit repository<a class="headerlink" href="#fork-the-networkit-repository" title="Link to this heading">¶</a></h3>
+<p>Visit our official repository on GitHub and click the ‘Fork’ button in the top right to create a personal fork in your account.</p>
+<p>Next up, you want to clone your fork to your local machine:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="p">:[</span><span class="n">YOUR</span><span class="o">-</span><span class="n">USERNAME</span><span class="p">]</span><span class="o">/</span><span class="p">[</span><span class="n">FORKED</span><span class="o">-</span><span class="n">NETWORKIT</span><span class="p">]</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>Since the algorithm you’re working on will take some time to implement, you want to make sure to stay up to date with the original NetworKit repository. This can be accomplished by tracking the original <code class="docutils literal notranslate"><span class="pre">upstream</span></code> branch:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">upstream</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">networkit</span><span class="o">/</span><span class="n">networkit</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>Now you can update your fork on a regular basis with changes from the original repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fetch changes from original repository</span>
+<span class="n">git</span> <span class="n">fetch</span> <span class="n">upstream</span>
+
+<span class="c1"># Merge changes into your local branch</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="o">--</span><span class="n">track</span> <span class="n">origin</span><span class="o">/</span><span class="n">master</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span>
+</pre></div>
+</div>
+<p>This will for example allow you to keep the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch up to date. Doing this will prevent an unpleasent surprise once you’re ready to submit your pull request since there will be less or no merge conflicts.</p>
+</section>
+<section id="create-a-feature-branch">
+<h3>2. Create a Feature Branch<a class="headerlink" href="#create-a-feature-branch" title="Link to this heading">¶</a></h3>
+<p>To make sure that the work on your algorithm does not disrupt the development process, be sure to create your own branch where you can add new code.
+In order to have a coherent naming scheme that allows for easier communication, please name your branch in the following way: <code class="docutils literal notranslate"><span class="pre">feature/descriptive-name-of-feature</span></code>.
+If we’re assuming you’re creating an implementation of the shortest path algorithm from Dijkstra, this could be <code class="docutils literal notranslate"><span class="pre">feature/dijkstra-shortest-path</span></code> for example. Make sure to pick a meaningful and short description that is easy to understand.</p>
+<p>New feature branches should be based off the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch where they will be merged back into at a later stage.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Make sure your branch is based off the master branch</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
+
+<span class="c1"># Create your new branch</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">feature</span><span class="o">/</span><span class="p">[</span><span class="n">my</span><span class="o">-</span><span class="n">awesome</span><span class="o">-</span><span class="n">feature</span><span class="o">-</span><span class="n">name</span><span class="p">]</span>
+
+<span class="c1"># You&#39;re now on your new feature branch</span>
+</pre></div>
+</div>
+</section>
+<section id="add-your-code">
+<h3>3. Add Your Code<a class="headerlink" href="#add-your-code" title="Link to this heading">¶</a></h3>
+<p>In this step you’re going to make and commit the changes needed for your new feature. Please make sure to write clean code that adheres to the style guide outlined further below. It is also important that each feature has appropriate unit tests that cover all of the expected behaviour of the code. Please see the Test-driven development section below for details.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">feature</span><span class="o">/</span><span class="p">[</span><span class="n">my</span><span class="o">-</span><span class="n">awesome</span><span class="o">-</span><span class="n">feature</span><span class="o">-</span><span class="n">name</span><span class="p">]</span>
+<span class="n">git</span> <span class="n">add</span> <span class="p">[</span><span class="n">files</span><span class="p">]</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;[descriptive message about the changes you made]&quot;</span>
+<span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+<p>Also, from time to time, you should make sure to keep your feature branch up to date with the changes on the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch in the main repository. If you followed step 1 from above, this can be easily accomplished:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">feature</span><span class="o">/</span><span class="p">[</span><span class="n">my</span><span class="o">-</span><span class="n">awesome</span><span class="o">-</span><span class="n">feature</span><span class="o">-</span><span class="n">name</span><span class="p">]</span>
+<span class="n">git</span> <span class="n">fetch</span> <span class="n">upstream</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="n">upstream</span><span class="o">/</span><span class="n">master</span>
+</pre></div>
+</div>
+</section>
+<section id="send-a-pull-request">
+<h3>4. Send a Pull Request<a class="headerlink" href="#send-a-pull-request" title="Link to this heading">¶</a></h3>
+<p>Once you finished the development and testing of your new feature, it is time to create a pull request to get your changes merged into the master branch of the NetworKit repository.</p>
+<p>This can be done by visiting the <strong>Pull requests page</strong> (<a class="reference external" href="https://github.com/[YOUR-USERNAME]/[FORKED-NETWORKIT]/pulls">https://github.com/[YOUR-USERNAME]/[FORKED-NETWORKIT]/pulls</a>) of your NetworKit fork on GitHub and clicking on the green <strong>New pull request</strong> button at the top right side of the page.</p>
+<p>Here the <code class="docutils literal notranslate"><span class="pre">base</span> <span class="pre">fork</span></code> at the top should point to <code class="docutils literal notranslate"><span class="pre">networkit/networkit</span></code> and the base should be <code class="docutils literal notranslate"><span class="pre">master</span></code>. The <code class="docutils literal notranslate"><span class="pre">head</span> <span class="pre">fork</span></code> should point to your fork of networkit and the <code class="docutils literal notranslate"><span class="pre">compare</span></code> branch to the right should point to the feature branch (<code class="docutils literal notranslate"><span class="pre">feature/[my-awesome-feature-name]</span></code>) you would like to create the pull request for.</p>
+<p>Once you’ve reviewed all changes, click the green <strong>Create pull request</strong> button and your pull request will be created.</p>
+</section>
+<section id="participate-in-the-pull-request-discussion">
+<h3>5. Participate in the Pull Request Discussion<a class="headerlink" href="#participate-in-the-pull-request-discussion" title="Link to this heading">¶</a></h3>
+<p>Once your pull request has been submitted, other developers of NetworKit, including the core development team, will take a look at your code and explanation.
+In this process there are oftentimes questions that arise or small adjustments that need to be incorporated into the pull request. For this reason, it is important that you actively participate in the discussions around your pull request. This ensures your new feature will eventually make it to the next release.</p>
+<p>In case a developer points out a potential issue that needs to be resolved, please make the appropriate changes to your code and push these changes to your feature branch:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">feature</span><span class="o">/</span><span class="p">[</span><span class="n">my</span><span class="o">-</span><span class="n">awesome</span><span class="o">-</span><span class="n">feature</span><span class="o">-</span><span class="n">name</span><span class="p">]</span>
+<span class="c1"># Make appropriate changes to files</span>
+<span class="n">git</span> <span class="n">add</span> <span class="p">[</span><span class="n">files</span><span class="p">]</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;[message-about-the-resolved-issue]&quot;</span>
+<span class="n">git</span> <span class="n">push</span>
+</pre></div>
+</div>
+<p>The pull request will automatically show your newest changes and developers will know that you resolved the issue. Once all issues have been resolved and your code is accepted, the pull request will be closed and your feature will be merged into the master branch. In the next release, all users of NetworKit will have access to your awesome feature. Hooray!</p>
+</section>
+</section>
+<section id="style-guide">
+<h2>Style guide<a class="headerlink" href="#style-guide" title="Link to this heading">¶</a></h2>
+<p>We want to ensure that code across NetworKit is easy to understand for existing as well as new developers. This is why new code added to the project should adhere to the existing code style. At this point in time, there is no comprehensive documentation about the code style being used in NetworKit but there are a few things to look out for:</p>
+<ul class="simple">
+<li><p>Compiler warnings are likely to turn into future errors. Try to fix
+them as soon as they appear. Use the <code class="docutils literal notranslate"><span class="pre">-Wall</span></code> flag when compiling C++ code.</p></li>
+<li><p>Read some code to get used to the code style and try to adopt it.</p></li>
+<li><p>Document classes, methods and attributes in Doxygen style.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">count</span></code> and <code class="docutils literal notranslate"><span class="pre">index</span></code> integer types for non-negative
+integer quantities and indices.</p></li>
+<li><p>All member variables should be pointers and not references.</p></li>
+<li><p>In most cases, objects are passed by reference. New objects are
+stack-allocated and returned by value. Avoid <code class="docutils literal notranslate"><span class="pre">new</span></code>
+where possible.</p></li>
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">override</span></code> keyword to indicate that a method overrides a
+virtual method in the superclass.</p></li>
+<li><p>A class should be declared <code class="docutils literal notranslate"><span class="pre">final</span></code> unless it is a superclass.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtual</span></code> methods should only be declared in superclasses.</p></li>
+<li><p>In Python, indent using tabs, not spaces.</p></li>
+</ul>
+<p>In order to maintain the same standard of code across the entire NetworKit code base, some coding standards are enforced. However, there is some automation to help developers with this. Below is a list of these standards and instructions on how to use the available automation tools that ensure your code adheres to them.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CppClangFormat</span></code> applies clang-format to all C++ files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CppIndentation</span></code> checks that all C++ code is indented with spaces
+and not tabs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CppIncludeGuards</span></code> ensures that the header files contain an include guard and
+that it follows the following naming convention: <code class="docutils literal notranslate"><span class="pre">NETWORKIT_MODULENAME_HEADERFILE_HPP_</span></code>.</p></li>
+</ul>
+<p>The executable file <code class="docutils literal notranslate"><span class="pre">check_code.sh</span></code> in NetworKit’s root directory carries out all checks in read-only mode and reports if errors are found. Running <code class="docutils literal notranslate"><span class="pre">./check_code.sh</span> <span class="pre">-w</span></code> will fix these errors. Run this script before commiting your files to make sure your changes are in complaince with the guidelines. The script is executed during CI and will cause your pull request to fail if your code does not conform to the style guide.</p>
+<p>On top of the aforementioned mentioned points concerning style, the NetworKit C++ code base also complies to a selection of <code class="docutils literal notranslate"><span class="pre">clang-tidy</span></code> static-code analysis checks.
+New code must pass these tests before being merged into the development branch. The list of checks can be found in the <code class="docutils literal notranslate"><span class="pre">.clang-tidy</span></code> file.
+In order to run the <code class="docutils literal notranslate"><span class="pre">clang-tidy</span></code> checks while building NetworKit, set the <code class="docutils literal notranslate"><span class="pre">CMake</span></code> flag <code class="docutils literal notranslate"><span class="pre">-NETWORKIT_CLANG_TIDY</span></code> to <code class="docutils literal notranslate"><span class="pre">ON</span></code> in addition to the other compile flags, e.g.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">-</span><span class="n">DCMAKE_CXX_COMPILER</span><span class="o">=</span><span class="n">clang</span><span class="o">++</span> <span class="o">-</span><span class="n">DCMAKE_EXPORT_COMPILE_COMMANDS</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DCMAKE_BUILD_TYPE</span><span class="o">=</span><span class="n">Debug</span> <span class="o">-</span><span class="n">DNETWORKIT_WARNINGS_AS_ERRORS</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DNETWORKIT_CLANG_TIDY</span><span class="o">=</span><span class="n">ON</span> <span class="o">..</span>
+</pre></div>
+</div>
+<p>In a nutshell, new developers should familiarise themselves with the existing code base and adapt the existing style in the C++ as well as Python code base when contributing to NetworKit. Always ensure your code is easy to understand and properly documented.</p>
+</section>
+<section id="report-bugs">
+<h2>Report bugs<a class="headerlink" href="#report-bugs" title="Link to this heading">¶</a></h2>
+<p>Please report any bugs on the <a class="reference external" href="https://github.com/networkit/networkit/issues">issues page</a> of the official NetworKit repository on GitHub.
+In very urgent cases it might also make sense to write on the <a class="reference external" href="https://sympa.cms.hu-berlin.de/sympa/subscribe/networkit">mailing list</a>.
+Please provide a minimal example so that others can reproduce that bug.</p>
+</section>
+<section id="tags">
+<h2>Tags<a class="headerlink" href="#tags" title="Link to this heading">¶</a></h2>
+<p>A tag is nothing more than a “symbolic name” for a revision. In
+NetworKit tags are used to mark release versions in the <code class="docutils literal notranslate"><span class="pre">master</span></code>
+branch, with a <code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR</span></code> version name scheme.</p>
+</section>
+<section id="using-networkit">
+<h2>Using NetworKit<a class="headerlink" href="#using-networkit" title="Link to this heading">¶</a></h2>
+<p>If you want to build and use NetworKit and do not plan to contribute
+changes, simply clone the repository. By default, you will be on the
+<code class="docutils literal notranslate"><span class="pre">master</span></code> branch, which represents the current release. Follow the
+setup instructions in the <code class="docutils literal notranslate"><span class="pre">README</span></code> file.</p>
+<section id="student-projects">
+<h3>Student Projects<a class="headerlink" href="#student-projects" title="Link to this heading">¶</a></h3>
+<p>Students with long-term projects like Bachelor’s or Master’s theses
+should familiarize themselves with the guidelines and select a
+forking/branching model with their advisor.</p>
+</section>
+</section>
+<section id="branching-cheat-sheet">
+<h2>Branching Cheat Sheet<a class="headerlink" href="#branching-cheat-sheet" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>list all available branches with highlight for the current branch: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">branch</span></code></p></li>
+<li><p>switch to a specific branch: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">&lt;branchname&gt;</span></code></p></li>
+<li><p>start a new branch: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">&lt;branchname&gt;</span></code></p></li>
+<li><p>merge <code class="docutils literal notranslate"><span class="pre">branch-y</span></code> into <code class="docutils literal notranslate"><span class="pre">branch-x</span></code>: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">branch-x</span></code>, then
+<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">branch-y</span></code></p></li>
+<li><p>see heads (most recent commits) of all branches: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">show-ref</span> <span class="pre">--heads</span></code></p></li>
+</ul>
+</section>
+<section id="conventions">
+<h2>Conventions<a class="headerlink" href="#conventions" title="Link to this heading">¶</a></h2>
+<p>The following general conventions apply to all NetworKit developers.</p>
+<section id="versioning">
+<h3>Versioning<a class="headerlink" href="#versioning" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Before you commit, make sure your code compiles and run the unit
+tests. Never push code which breaks the build for others.</p></li>
+<li><p>Commit regularly and often to your local repository.</p></li>
+<li><p>Use meaningful commit messages.</p></li>
+<li><p>Get the newest changes from the repository regularly and merge them
+into your local repository.</p></li>
+<li><p>Make sure that you merged correctly and did not break other people’s
+work.</p></li>
+<li><p>Push correct code early if possible. Merging is easier if all
+developers are up to date.</p></li>
+<li><p>Never <code class="docutils literal notranslate"><span class="pre">push</span> <span class="pre">--force</span></code> to the main repository.</p></li>
+</ul>
+</section>
+</section>
+<section id="unit-tests-and-testing">
+<span id="devguide-unittests"></span><h2>Unit Tests and Testing<a class="headerlink" href="#unit-tests-and-testing" title="Link to this heading">¶</a></h2>
+<p>Every new feature must be covered by a unit test. Omitting unit tests
+makes it very likely that your feature will break silently as the
+project develops, leading to unneccessary work in tracing back the
+source of the error. Also your pull request for this feature will most
+likely not be accepted.</p>
+<p>Unit tests for the C++ part of NetworKit are based on the <code class="docutils literal notranslate"><span class="pre">googletest</span></code>
+library. For more information read the <a class="reference external" href="https://google.github.io/googletest/primer.html">googletest
+primer</a>. The Python
+test framework currently relies on <code class="docutils literal notranslate"><span class="pre">nose</span></code> to collect the tests.</p>
+<ul class="simple">
+<li><p>Each source folder contains a <code class="docutils literal notranslate"><span class="pre">test</span></code> folder with <code class="docutils literal notranslate"><span class="pre">googletest</span></code>
+classes. Create the unit tests for each feature in the appropriate
+<code class="docutils literal notranslate"><span class="pre">test/*GTest</span></code> class by adding a <code class="docutils literal notranslate"><span class="pre">TEST_F</span></code> function.</p></li>
+<li><p>Prefix standard unit tests with <code class="docutils literal notranslate"><span class="pre">test</span></code> and experimental feature
+tests with <code class="docutils literal notranslate"><span class="pre">try</span></code>. A <code class="docutils literal notranslate"><span class="pre">test*</span></code> must pass when pushed to the main
+repository, a <code class="docutils literal notranslate"><span class="pre">try*</span></code> is allowed to fail.</p></li>
+<li><p>Keep the running time of test functions to the minimum needed for
+testing functionality. Testing should be fast, long-running unit
+tests look like infinite loops.</p></li>
+<li><p>If the unit test requires a data set, add the file to the <code class="docutils literal notranslate"><span class="pre">input/</span></code>
+folder. Only small data sets (a few kilobytes maximum) are acceptable
+in the repository.</p></li>
+<li><p>Any output files produced by unit tests must be written to the
+<code class="docutils literal notranslate"><span class="pre">output/</span></code> folder.</p></li>
+</ul>
+<p>To build and run the tests you need the <a class="reference external" href="https://github.com/google/googletest">gtest
+library</a>. Assuming, gtest is
+successfully installed and you add the paths to your build.conf, the
+unit tests should be compiled with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">build</span><span class="o">/</span>
+<span class="n">cmake</span> <span class="o">-</span><span class="n">DNETWORKIT_BUILD_TESTS</span><span class="o">=</span><span class="n">ON</span> <span class="o">..</span>
+<span class="n">make</span> <span class="o">-</span><span class="n">jX</span> <span class="c1"># To speed up the compilation with make a multi-core machine, you can append `-jX` where X denotes the number of threads to compile with.</span>
+</pre></div>
+</div>
+<p>To verify that the code was built correctly: Run all unit tests with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ctest</span> <span class="o">-</span><span class="n">V</span>
+</pre></div>
+</div>
+<p>To select only a subset of tests, you can run instead</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">..</span> <span class="c1"># Navigate to the project root directory</span>
+<span class="n">build</span><span class="o">/</span><span class="n">networkit_tests</span> <span class="p">[</span><span class="n">options</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Here’s a rundown of the available options: Non-performance tests can be selected with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">build</span><span class="o">/</span><span class="n">networkit_tests</span> <span class="o">--</span><span class="n">tests</span><span class="o">/-</span><span class="n">t</span>
+</pre></div>
+</div>
+<p>while performance tests are called with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">build</span><span class="o">/</span><span class="n">networkit_tests</span> <span class="o">--</span><span class="n">benchmarks</span><span class="o">/-</span><span class="n">b</span>
+</pre></div>
+</div>
+<p>Further options are:</p>
+<dl>
+<dt>::</dt><dd><dl class="option-list">
+<dt><kbd><span class="option">-r</span>, <span class="option">--run</span></kbd></dt>
+<dd><p>Run unit tests which don’t use assertions</p>
+</dd>
+<dt><kbd><span class="option">-d</span>, <span class="option">--debug</span></kbd></dt>
+<dd><p>Run tests to debug some algorithms
+–threads     set the maximum number of threads; 0 (=default) uses OMP</p>
+<blockquote>
+<div><p>default</p>
+</div></blockquote>
+<dl class="option-list">
+<dt><kbd><span class="option">--loglevel</span></kbd></dt>
+<dd><p>set the log level (TRACE|DEBUG|INFO|WARN|ERROR|FATAL)</p>
+</dd>
+<dt><kbd><span class="option">--srcloc</span></kbd></dt>
+<dd><p>print source location of log messages</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>To run only specific unit tests, you can also add a filter expression,
+e. g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">build</span><span class="o">/</span><span class="n">networkit_tests</span> <span class="o">--</span><span class="n">gtest_filter</span><span class="o">=*</span><span class="n">PartitionGTest</span><span class="o">*/-</span><span class="n">f</span><span class="o">*</span><span class="n">PartitionGTest</span><span class="o">*</span>
+</pre></div>
+</div>
+<p>initiates unit tests only for the Partition data structure.</p>
+<p>For the <strong>Python</strong> unit tests, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">test</span> <span class="p">[</span><span class="o">--</span><span class="n">cpp</span><span class="o">-</span><span class="n">tests</span><span class="o">/-</span><span class="n">c</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>This command will compile the _NetworKit extension and then run all
+test cases on the Python layer. If you append <code class="docutils literal notranslate"><span class="pre">--cpp-tests/-c</span></code>, the
+unit tests of the c++ side will be compiled and run before the Python
+test cases.</p>
+<section id="test-driven-development">
+<h3>Test-driven development<a class="headerlink" href="#test-driven-development" title="Link to this heading">¶</a></h3>
+<p>If you implement a new feature for NetworKit, we encourage you to adapt
+your development process to test driven development. This means that you
+start with a one or ideally several test-cases for your feature and then
+write the feature for the test case(s). If your feature is mostly
+implemented in C++, you should write your test cases there. If you
+expose your feature to Python, you should also write a test case for the
+extension module on the Python layer. The same applies for features in
+Pyton.</p>
+</section>
+<section id="algorithm-interface-and-class-hierarchy">
+<h3>Algorithm interface and class hierarchy<a class="headerlink" href="#algorithm-interface-and-class-hierarchy" title="Link to this heading">¶</a></h3>
+<p>We use the possibilities provided through inheritance to generalize the
+common behaviour of algorithm implementations:</p>
+<ul class="simple">
+<li><p>Data and paramters should be passed in the constructor.</p></li>
+<li><p>A void run()-method that takes no parameter triggers the execution.</p></li>
+<li><p>To retrieve the result(s), getter-functions() may be defined.</p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">Algorithm</span></code> base class also defines a few other other functions to
+query whether the algorithm can be run in parallel or to retrieve a
+string representation.</p>
+<p>There may be more levels in the class hierarchy between an algorithm
+implementation and the base class, e.g. a single-source shortest-path
+class <code class="docutils literal notranslate"><span class="pre">SSSP</span></code> that generalizes the behaviour of BFS and Dijkstra
+implementations or the <code class="docutils literal notranslate"><span class="pre">Centrality</span></code> base class. When implementing new
+features or algorithms, make sure to adapt to the existing class
+hierarchies. The least thing to do is to inherit from the <code class="docutils literal notranslate"><span class="pre">Algorithm</span></code>
+base class. Changes to existing interfaces or suggestions for new
+interfaces should be discussed through the <a class="reference external" href="https://sympa.cms.hu-berlin.de/sympa/subscribe/networkit">mailing
+list</a>.</p>
+</section>
+</section>
+<section id="exposing-c-code-to-python">
+<h2>Exposing C++ Code to Python<a class="headerlink" href="#exposing-c-code-to-python" title="Link to this heading">¶</a></h2>
+<p>Assuming the unit tests for the new feature you implemented are correct
+and successful, you need to make your feature available to Python in
+order to use it. NetworKit uses Cython to bridge C++ and Python. All of
+this bridge code is contained in the <code class="docutils literal notranslate"><span class="pre">networkit/</span></code> directory. The Cython
+files in this directory correspond to the C++ modules. Files with a <code class="docutils literal notranslate"><span class="pre">.pxd</span></code>
+extension declare C++ data types, functions and variables that are imported
+by other files. Therefore, if the new code does not introduce new C++ types
+or functions that are needed elsewhere, the code should only be added to the
+correct <code class="docutils literal notranslate"><span class="pre">.pyx</span></code> file. The content is automatically translated into C++ and
+then compiled to a Python extension module.</p>
+<p>Cython syntax is a superset of Python that knows about static type
+declarations and other things from the C/C++ world. The best way to
+getting used to it is working on examples. Take the most common case of
+exposing a C++ class as a Python class. Care for the following example
+that exposes the class <code class="docutils literal notranslate"><span class="pre">NetworKit::Dijkstra</span></code> in <code class="docutils literal notranslate"><span class="pre">distance.pyx</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.base</span> <span class="n">cimport</span> <span class="n">_Algorithm</span><span class="p">,</span> <span class="n">Algorithm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.graph</span> <span class="n">cimport</span> <span class="n">_Graph</span><span class="p">,</span> <span class="n">Graph</span>
+<span class="p">[</span><span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>In order to inherit from <code class="docutils literal notranslate"><span class="pre">Algorithm</span></code> and use the <code class="docutils literal notranslate"><span class="pre">Graph</span></code> data structure,
+we must import the C++ and Python types like is done above.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cdef</span> <span class="n">extern</span> <span class="kn">from</span><span class="w"> </span><span class="o">&lt;</span><span class="n">networkit</span><span class="o">/</span><span class="n">distance</span><span class="o">/</span><span class="n">Dijkstra</span><span class="o">.</span><span class="n">hpp</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="n">cdef</span> <span class="n">cppclass</span> <span class="n">_Dijkstra</span> <span class="s2">&quot;NetworKit::Dijkstra&quot;</span><span class="p">(</span><span class="n">_SSSP</span><span class="p">):</span>
+        <span class="n">_Dijkstra</span><span class="p">(</span><span class="n">_Graph</span> <span class="n">G</span><span class="p">,</span> <span class="n">node</span> <span class="n">source</span><span class="p">,</span> <span class="n">bool_t</span> <span class="n">storePaths</span><span class="p">,</span> <span class="n">bool_t</span> <span class="n">storeNodesSortedByDistance</span><span class="p">,</span> <span class="n">node</span> <span class="n">target</span><span class="p">)</span> <span class="k">except</span> <span class="o">+</span>
+</pre></div>
+</div>
+<p>The code above exposes the C++ class definition to Cython - but not yet
+to Python. First of all, Cython needs to know which C++ declarations to
+use so the the first line directs Cython to place an <code class="docutils literal notranslate"><span class="pre">#include</span></code>
+statement. The second line defines a class that is only accessible in
+the Cython world. Our convention is that the name of the new class is
+the name of the referenced C++ class with a prepended underscore to
+avoid namespace conflicts. What follows is the “real” C++ name of the
+class. After that, the declarations of the methods you want to make
+available for Python are needed. The <code class="docutils literal notranslate"><span class="pre">except</span> <span class="pre">+</span></code> statement is necessary
+for exceptions thrown by the C++ code to be rethrown as Python
+exceptions rather than causing a crash. Also, take care that the Cython
+declarations match the declarations from the referenced header file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cdef</span> <span class="n">extern</span> <span class="kn">from</span><span class="w"> </span><span class="o">&lt;</span><span class="n">networkit</span><span class="o">/</span><span class="n">distance</span><span class="o">/</span><span class="n">_SSSP</span><span class="o">.</span><span class="n">hpp</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="n">cdef</span> <span class="n">cppclass</span> <span class="n">_SSSP</span> <span class="s2">&quot;NetworKit::SSSP&quot;</span><span class="p">(</span><span class="n">_Algorithm</span><span class="p">):</span>
+        <span class="n">_SSSP</span><span class="p">(</span><span class="n">_Graph</span> <span class="n">G</span><span class="p">,</span> <span class="n">node</span> <span class="n">source</span><span class="p">,</span> <span class="n">bool_t</span> <span class="n">storePaths</span><span class="p">,</span> <span class="n">bool_t</span> <span class="n">storeNodesSortedByDistance</span><span class="p">,</span> <span class="n">node</span> <span class="n">target</span><span class="p">)</span> <span class="k">except</span> <span class="o">+</span>
+        <span class="n">vector</span><span class="p">[</span><span class="n">edgeweight</span><span class="p">]</span> <span class="n">getDistances</span><span class="p">(</span><span class="nb">bool</span> <span class="n">moveOut</span><span class="p">)</span> <span class="k">except</span> <span class="o">+</span>
+        <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+
+<span class="n">cdef</span> <span class="k">class</span><span class="w"> </span><span class="nc">SSSP</span><span class="p">(</span><span class="n">Algorithm</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Base class for single source shortest path algorithms. &quot;&quot;&quot;</span>
+
+    <span class="n">cdef</span> <span class="n">Graph</span> <span class="n">_G</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">namedargs</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">==</span> <span class="n">SSSP</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Error, you may not use SSSP directly, use a sub-class instead&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">__dealloc__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_G</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># just to be sure the graph is deleted</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">getDistances</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">moveOut</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a vector of weighted distances from the source node, i.e. the</span>
+<span class="sd">        length of the shortest path from the source node to any other node.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        vector</span>
+<span class="sd">            The weighted distances from the source node to any other node in the graph.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="o">&lt;</span><span class="n">_SSSP</span><span class="o">*&gt;</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_this</span><span class="p">))</span><span class="o">.</span><span class="n">getDistances</span><span class="p">(</span><span class="n">moveOut</span><span class="p">)</span>
+    <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>We mirror the class hierarchy of the C++ world also in Cython and
+Python. This also saves some boiler plate wrapping code as the functions
+shared by Dijkstra and BFS only need to be wrapped through SSSP.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cdef</span> <span class="k">class</span><span class="w"> </span><span class="nc">Dijkstra</span><span class="p">(</span><span class="n">SSSP</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Dijkstra&#39;s SSSP algorithm.</span>
+
+<span class="sd">    Returns list of weighted distances from node source, i.e. the length of the shortest path from source to</span>
+<span class="sd">    any other node.</span>
+
+<span class="sd">    Dijkstra(G, source, [storePaths], [storeStack], target)</span>
+
+<span class="sd">    Creates Dijkstra for `G` and source node `source`.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    G : networkit.Graph</span>
+<span class="sd">        The graph.</span>
+<span class="sd">    source : node</span>
+<span class="sd">        The source node.</span>
+<span class="sd">    storePaths : bool</span>
+<span class="sd">        store paths and number of paths?</span>
+<span class="sd">    storeStack : bool</span>
+<span class="sd">        maintain a stack of nodes in order of decreasing distance?</span>
+<span class="sd">    target : node</span>
+<span class="sd">        target node. Search ends when target node is reached. t is set to None by default.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">__cinit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Graph</span> <span class="n">G</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">storePaths</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">storeStack</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">node</span> <span class="n">target</span><span class="o">=</span><span class="n">none</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_G</span> <span class="o">=</span> <span class="n">G</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_this</span> <span class="o">=</span> <span class="n">new</span> <span class="n">_Dijkstra</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">_this</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">storePaths</span><span class="p">,</span> <span class="n">storeStack</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For the class to be accessible from the Python world, you need to define
+a Python wrapper class which delegates method calls to the native class.
+The Python class variable <code class="docutils literal notranslate"><span class="pre">_this</span></code> holds a pointer to an instance of
+the native class. Please note that the parameters are now Python
+objects. Method wrappers take these Python objects as parameters and
+pass the internal native objects to the actuall C++ method call. The
+constructor of such a wrapper class is called <code class="docutils literal notranslate"><span class="pre">__cinit__</span></code>, and it
+creates an instance of the native object.</p>
+<p>The docstring between the triple quotation marks can be accessed through
+Python’s <code class="docutils literal notranslate"><span class="pre">help(...)</span></code> function and are the main documentation of
+NetworKit. Always provide at least a short and precise docstring so the
+user can get in idea of the functionality of the class. For C++ types
+available to Python and further examples, see through the various
+Cython files. The whole process has certainly some
+intricacies, e.g. some tricks are needed to avoid memory waste when
+passing around large objects such as graphs. When in doubt, look at
+examples of similar classes already exposed. Listen to the Cython
+compiler - coming from C++, its error messages are in general pleasantly
+human-readable.</p>
+<p>After having added a new C++ module to NetwoKit, you need to do the same
+in Cython before the new code is available in Python.
+According to the NetwoKit naming conventions, the corresponding Cython file
+should have the same name as your C++ module. For illustration purposes,
+assume the new C++ module is called “features”. The new the Cython file is,
+therefore, also named <code class="docutils literal notranslate"><span class="pre">features.pyx</span></code>. In order to expose “features” to Python,
+the following must be done:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Create the <code class="docutils literal notranslate"><span class="pre">features.pyx</span></code> file in the <code class="docutils literal notranslate"><span class="pre">networkit/networkit</span></code> directory and
+add the following line:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># distutils: language=c++</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Add the string “features” to the CMakeLists file in the root directory where
+the other Python extension modules are listed. At this point the new file
+should be found and compiled.</p></li>
+<li><p>Export the C++ code as explained in the previous section to the new <code class="docutils literal notranslate"><span class="pre">features.pyx</span></code> file.
+- Note that you will need to import all the NetworKit and C++ data types
+needed in your code.
+- <code class="docutils literal notranslate"><span class="pre">graph.pxd</span></code> and <code class="docutils literal notranslate"><span class="pre">generators.pyx</span></code> are a good starting point to find various
+types as they import several data types.</p></li>
+<li><p>Build using the usual commands, i.e.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build_ext</span> <span class="p">[</span><span class="o">-</span><span class="n">jX</span><span class="p">]</span>
+<span class="n">pip3</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Once the features shared object is successfully created, import it in the
+<code class="docutils literal notranslate"><span class="pre">networkit/__init__.py</span></code> file as is done with the other modules.
+The <code class="docutils literal notranslate"><span class="pre">features</span></code> module has now been exposed to Python.</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="make-algorithms-interruptable-with-ctrl-c-sigint">
+<h2>Make algorithms interruptable with CTRL+C/SIGINT<a class="headerlink" href="#make-algorithms-interruptable-with-ctrl-c-sigint" title="Link to this heading">¶</a></h2>
+<p>When an algorithms takes too long to produce a result, it can be
+interrupted with a SIGINT signal triggered by CTRL+C. When triggering
+from the Python shell while the runtime is in the C++ domain, execution
+is aborted and even terminates the Python shell. Therefore, we
+implemented a signal handler infrastructure in C++ that raises a special
+exception instead of aborting. When implementing an algorithm, it is
+strongly encouraged to integrate the signal handler into the
+implementation. There are many examples of how to use it, e.g.
+<code class="docutils literal notranslate"><span class="pre">networkit/cpp/centrality/Betweenness.cpp</span></code> or
+<code class="docutils literal notranslate"><span class="pre">networkit/cpp/community/PartitionFragmentation.cpp</span></code></p>
+</section>
+<section id="contact">
+<h2>Contact<a class="headerlink" href="#contact" title="Link to this heading">¶</a></h2>
+<p>To discuss important changes to NetworKit, use the <a class="reference external" href="https://sympa.cms.hu-berlin.de/sympa/subscribe/networkit">e-mail
+list</a>
+(<code class="docutils literal notranslate"><span class="pre">networkit&#64;lists.hu-berlin.de</span></code>).</p>
+<p>We also appreciate new issues or pull requests on the GitHub repository.</p>
+</section>
+<section id="building-the-documentation">
+<h2>Building the documentation<a class="headerlink" href="#building-the-documentation" title="Link to this heading">¶</a></h2>
+<p>The documentation can be automatically generated with sphinx. You will need the following software to generate the documentation:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.sphinx-doc.org">Sphinx</a> (e.g. via <code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">sphinx</span></code>)</p></li>
+<li><p><a class="reference external" href="http://pandoc.org">Pandoc</a></p></li>
+<li><p><a class="reference external" href="http://www.stack.nl/~dimitri/doxygen/">Doxygen</a></p></li>
+</ul>
+<p>After you installed the above mentioned software, you can build the
+class documentation by calling <code class="docutils literal notranslate"><span class="pre">./make_doc.sh</span></code> in the folder
+<code class="docutils literal notranslate"><span class="pre">Doc/doc</span></code>. This will generate the class documentation for C++ and
+Python in <code class="docutils literal notranslate"><span class="pre">Doc/Documentation</span></code>.</p>
+</section>
+<section id="further-reading">
+<h2>Further Reading<a class="headerlink" href="#further-reading" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://try.github.io/">Interactive Git tutorial</a></p></li>
+<li><p><a class="reference external" href="http://humblecoder.co.uk/blog/2010/02/24/working-with-named-branches-in-mercurial/">Working with named
+branches</a></p></li>
+<li><p><a class="reference external" href="http://hgbook.red-bean.com/read/managing-releases-and-branchy-development.html">Managing releases and branchy
+development</a></p></li>
+<li><p><a class="reference external" href="http://docs.cython.org/index.html">Cython Documentation</a></p></li>
+</ul>
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p style="float:left; max-width: 70%;">
+        &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+    </p>
+    <span style="padding-left: 10px">
+      <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
+    </span>
+  </div>
+</footer>
+  </body>
+</html>
