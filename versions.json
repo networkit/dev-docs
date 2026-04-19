@@ -4,7 +4,7 @@
     "nightly": {
       "date": "2026-04-19",
       "label": "Nightly (2026-04-19)",
-      "updated_at": "2026-04-19T11:07:30+00:00",
+      "updated_at": "2026-04-19T13:15:56+00:00",
       "url": "/dev-docs/nightly/"
     },
     "stable": {
@@ -13,5 +13,5 @@
     }
   },
   "default_channel": "stable",
-  "generated_at": "2026-04-19T11:07:30+00:00"
+  "generated_at": "2026-04-19T13:15:56+00:00"
 }
