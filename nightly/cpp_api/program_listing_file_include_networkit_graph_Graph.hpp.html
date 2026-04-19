@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-03-16)"
+	        data-docs-version-label="Nightly (2026-04-19)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-03-16)"
+	        data-docs-nightly-label="Nightly (2026-04-19)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-03-16)</option>
+	  <option value="nightly" selected>Nightly (2026-04-19)</option>
 	</select>
 </div>
 
@@ -517,7 +517,7 @@
 <span class="w">    </span><span class="k">public</span><span class="o">:</span>
 <span class="w">        </span><span class="n">NeighborRange</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">G</span><span class="p">(</span><span class="o">&amp;</span><span class="n">G</span><span class="p">),</span><span class="w"> </span><span class="n">u</span><span class="p">(</span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">assert</span><span class="p">(</span><span class="n">G</span><span class="p">.</span><span class="n">hasNode</span><span class="p">(</span><span class="n">u</span><span class="p">));</span><span class="w"> </span><span class="p">};</span>
 
-<span class="w">        </span><span class="n">NeighborRange</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">G</span><span class="p">(</span><span class="k">nullptr</span><span class="p">){};</span>
+<span class="w">        </span><span class="n">NeighborRange</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">G</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">){};</span>
 
 <span class="w">        </span><span class="n">NeighborIterator</span><span class="w"> </span><span class="nf">begin</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">assert</span><span class="p">(</span><span class="n">G</span><span class="p">);</span>
@@ -544,7 +544,7 @@
 <span class="w">    </span><span class="k">public</span><span class="o">:</span>
 <span class="w">        </span><span class="n">NeighborWeightRange</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">G</span><span class="p">(</span><span class="o">&amp;</span><span class="n">G</span><span class="p">),</span><span class="w"> </span><span class="n">u</span><span class="p">(</span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">assert</span><span class="p">(</span><span class="n">G</span><span class="p">.</span><span class="n">hasNode</span><span class="p">(</span><span class="n">u</span><span class="p">));</span><span class="w"> </span><span class="p">};</span>
 
-<span class="w">        </span><span class="n">NeighborWeightRange</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">G</span><span class="p">(</span><span class="k">nullptr</span><span class="p">){};</span>
+<span class="w">        </span><span class="n">NeighborWeightRange</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">G</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">){};</span>
 
 <span class="w">        </span><span class="n">NeighborWeightIterator</span><span class="w"> </span><span class="nf">begin</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">assert</span><span class="p">(</span><span class="n">G</span><span class="p">);</span>
