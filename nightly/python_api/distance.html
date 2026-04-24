@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=fd6457a4" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <script src="../_static/documentation_options.js?v=89fba709"></script>
@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-04-19)"
+	        data-docs-version-label="Nightly (2026-04-24)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-04-19)"
+	        data-docs-nightly-label="Nightly (2026-04-24)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-04-19)</option>
+	  <option value="nightly" selected>Nightly (2026-04-24)</option>
 	</select>
 </div>
 
@@ -871,6 +871,25 @@ medium-sized graphs.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.distance.FloydWarshall.getDistances">
+<span class="sig-name descname"><span class="pre">getDistances</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">asarray</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.distance.FloydWarshall.getDistances" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the full all-pairs distance matrix.</p>
+<p>Note: the returned matrix is a reference to internal storage.
+Do not modify it directly; call run() again if the graph changes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>asarray</strong> (<em>optional</em>) – Return the result as a numpy array. Default: Falsy.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>distances[u][v] is the shortest path distance from u to v.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list(list(float)) or np.ndarray</p>
 </dd>
 </dl>
 </dd></dl>

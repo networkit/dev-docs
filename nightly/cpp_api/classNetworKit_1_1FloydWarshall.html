@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=fd6457a4" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <script src="../_static/documentation_options.js?v=89fba709"></script>
@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-04-19)"
+	        data-docs-version-label="Nightly (2026-04-24)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-04-19)"
+	        data-docs-nightly-label="Nightly (2026-04-24)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-04-19)</option>
+	  <option value="nightly" selected>Nightly (2026-04-24)</option>
 	</select>
 </div>
 
@@ -239,6 +239,18 @@
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A vector of nodes forming the shortest path. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit13FloydWarshall12getDistancesEv">
+<span class="target" id="classNetworKit_1_1FloydWarshall_1a13b7e8cc97ba6cd7d224e126a5f1cc59"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getDistances</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit13FloydWarshall12getDistancesEv" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Returns the full all-pairs distance matrix. </p>
+<p>The returned object is a reference to internal storage. Do not modify it directly; call <a class="reference internal" href="#classNetworKit_1_1FloydWarshall_1a24f3c0da96491fba5d91355a919a764d"><span class="std std-ref">run()</span></a> again if the graph changes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A matrix where entry [u][v] is the shortest distance from u to v. </p>
 </dd>
 </dl>
 </dd></dl>
