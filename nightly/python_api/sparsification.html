@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-05-05)"
+	        data-docs-version-label="Nightly (2026-05-09)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-05-05)"
+	        data-docs-nightly-label="Nightly (2026-05-09)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-05-05)</option>
+	  <option value="nightly" selected>Nightly (2026-05-09)</option>
 	</select>
 </div>
 
@@ -873,6 +873,24 @@ such that the edge is contained in the sparsified graph.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to apply the Local Similarity algorithm to.</p></li>
 <li><p><strong>triangles</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – Previously calculated edge triangle counts.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.sparsification.SimRankScore">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.sparsification.</span></span><span class="sig-name descname"><span class="pre">SimRankScore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">similarityPropagationFactor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxIterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-4</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.sparsification.SimRankScore" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#networkit.sparsification.EdgeScore" title="networkit.sparsification.EdgeScore"><code class="xref py py-class docutils literal notranslate"><span class="pre">EdgeScore</span></code></a></p>
+<p>Computes a SimRank-based edge score. The score of an edge is the SimRank
+similarity of its two endpoints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph. The graph must have indexed edges.</p></li>
+<li><p><strong>similarityPropagationFactor</strong> (<em>float</em><em>, </em><em>optional</em>) – SimRank decay factor. Must be in [0, 1].</p></li>
+<li><p><strong>maxIterations</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximum number of iterations. Must be greater than zero.</p></li>
+<li><p><strong>tolerance</strong> (<em>float</em><em>, </em><em>optional</em>) – Convergence tolerance. Must be non-negative.</p></li>
 </ul>
 </dd>
 </dl>
