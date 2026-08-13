@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Template Class AdjListGraph::NeighborWeightRange</title>
+    <title>Typedef NetworKit::SSSP</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -26,8 +26,8 @@
     <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class AdjustedRandIndex" href="classNetworKit_1_1AdjustedRandIndex.html" />
-    <link rel="prev" title="Template Class AdjListGraph::NeighborRange" href="classNetworKit_1_1AdjListGraph_1_1NeighborRange.html" />
+    <link rel="next" title="Typedef NetworKit::UnionFind" href="typedef_namespaceNetworKit_1afc900fa27df13bfbd2a9f03535d8306c.html" />
+    <link rel="prev" title="Typedef NetworKit::RankedNeighbors" href="typedef_namespaceNetworKit_1a0ce4fe8f9079a9b40bb354fecc30ea57.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -120,12 +120,12 @@
 <li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#directories">Directories</a></li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#pages">Pages</a></li>
 </ul>
@@ -148,45 +148,17 @@
       </div>
     <div class="col-md-9 content">
       
-  <section id="template-class-adjlistgraph-neighborweightrange">
-<span id="exhale-class-classnetworkit-1-1adjlistgraph-1-1neighborweightrange"></span><h1>Template Class AdjListGraph::NeighborWeightRange<a class="headerlink" href="#template-class-adjlistgraph-neighborweightrange" title="Link to this heading">¶</a></h1>
+  <section id="typedef-networkit-sssp">
+<span id="exhale-typedef-namespacenetworkit-1a2defa0aaeef0e61e1fe73d85c2ab9101"></span><h1>Typedef NetworKit::SSSP<a class="headerlink" href="#typedef-networkit-sssp" title="Link to this heading">¶</a></h1>
 <ul class="simple">
-<li><p>Defined in <a class="reference internal" href="file_include_networkit_graph_AdjListGraph.hpp.html#file-include-networkit-graph-adjlistgraph-hpp"><span class="std std-ref">File AdjListGraph.hpp</span></a></p></li>
+<li><p>Defined in <a class="reference internal" href="file_include_networkit_distance_SSSP.hpp.html#file-include-networkit-distance-sssp-hpp"><span class="std std-ref">File SSSP.hpp</span></a></p></li>
 </ul>
-<section id="nested-relationships">
-<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Link to this heading">¶</a></h2>
-<p>This class is a nested type of <a class="reference internal" href="classNetworKit_1_1AdjListGraph.html#exhale-class-classnetworkit-1-1adjlistgraph"><span class="std std-ref">Template Class AdjListGraph</span></a>.</p>
-</section>
-<section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
-<dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv4I_bEN9NetworKit12AdjListGraph19NeighborWeightRangeE">
-<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">InEdges</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classNetworKit_1_1AdjListGraph_1_1NeighborWeightRange"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NeighborWeightRange</span></span></span><a class="headerlink" href="#_CPPv4I_bEN9NetworKit12AdjListGraph19NeighborWeightRangeE" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Wrapper class to iterate over a range of the neighbors of a node including the edge weights within a for loop. Values are std::pair&lt;NodeT, edgeweight&gt;. </p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12AdjListGraph19NeighborWeightRange19NeighborWeightRangeERK12AdjListGraph5NodeT">
-<span class="target" id="classNetworKit_1_1AdjListGraph_1_1NeighborWeightRange_1a9f964c4b4f3a29c60b823bd8dc20fcb6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NeighborWeightRange</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">AdjListGraph</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <span class="n"><span class="pre">NodeT</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12AdjListGraph19NeighborWeightRange19NeighborWeightRangeERK12AdjListGraph5NodeT" title="Link to this definition">¶</a><br /></dt>
+<section id="typedef-documentation">
+<h2>Typedef Documentation<a class="headerlink" href="#typedef-documentation" title="Link to this heading">¶</a></h2>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit4SSSPE">
+<span class="target" id="namespaceNetworKit_1a2defa0aaeef0e61e1fe73d85c2ab9101"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">SSSP</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1SingleSourceShortestPaths.html#_CPPv4I0EN9NetworKit25SingleSourceShortestPathsE" title="NetworKit::SingleSourceShortestPaths"><span class="n"><span class="pre">SingleSourceShortestPaths</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classNetworKit_1_1AdjListGraph.html#_CPPv4I_9GraphNode_15GraphEdgeWeightEN9NetworKit12AdjListGraphE" title="NetworKit::AdjListGraph"><span class="n"><span class="pre">AdjListGraph</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N9NetworKit4SSSPE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit12AdjListGraph19NeighborWeightRange19NeighborWeightRangeEv">
-<span class="target" id="classNetworKit_1_1AdjListGraph_1_1NeighborWeightRange_1a7f1045342143ae39d77e3fce54162186"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NeighborWeightRange</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit12AdjListGraph19NeighborWeightRange19NeighborWeightRangeEv" title="Link to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit12AdjListGraph19NeighborWeightRange5beginEv">
-<span class="target" id="classNetworKit_1_1AdjListGraph_1_1NeighborWeightRange_1a13dae3cf6a6dce447ff918adcc650d4c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">NeighborWeightIterator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">begin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit12AdjListGraph19NeighborWeightRange5beginEv" title="Link to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit12AdjListGraph19NeighborWeightRange3endEv">
-<span class="target" id="classNetworKit_1_1AdjListGraph_1_1NeighborWeightRange_1aeccb39be8c7d053a78d9cbcfc90ab99e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">NeighborWeightIterator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">end</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit12AdjListGraph19NeighborWeightRange3endEv" title="Link to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-</div>
-</dd></dl>
 
 </section>
 </section>
