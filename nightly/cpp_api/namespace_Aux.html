@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-06-29)"
+	        data-docs-version-label="Nightly (2026-08-13)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-06-29)"
+	        data-docs-nightly-label="Nightly (2026-08-13)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-06-29)</option>
+	  <option value="nightly" selected>Nightly (2026-08-13)</option>
 	</select>
 </div>
 
@@ -178,7 +178,6 @@
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="structAux_1_1BucketPQ_1_1OptionalIterator.html#exhale-struct-structaux-1-1bucketpq-1-1optionaliterator"><span class="std std-ref">Struct BucketPQ::OptionalIterator</span></a></p></li>
 <li><p><a class="reference internal" href="structAux_1_1FunctionTraits.html#exhale-struct-structaux-1-1functiontraits"><span class="std std-ref">Template Struct FunctionTraits</span></a></p></li>
 <li><p><a class="reference internal" href="structAux_1_1FunctionTraits_3_01F_01_6_01_4.html#exhale-struct-structaux-1-1functiontraits-3-01f-01-6-01-4"><span class="std std-ref">Template Struct FunctionTraits&lt; F &amp; &gt;</span></a></p></li>
 <li><p><a class="reference internal" href="structAux_1_1FunctionTraits_3_01F_01_6_6_01_4.html#exhale-struct-structaux-1-1functiontraits-3-01f-01-6-6-01-4"><span class="std std-ref">Template Struct FunctionTraits&lt; F &amp;&amp; &gt;</span></a></p></li>
@@ -194,7 +193,7 @@
 <li><p><a class="reference internal" href="structAux_1_1LessInVector.html#exhale-struct-structaux-1-1lessinvector"><span class="std std-ref">Template Struct LessInVector</span></a></p></li>
 <li><p><a class="reference internal" href="structAux_1_1PairHash.html#exhale-struct-structaux-1-1pairhash"><span class="std std-ref">Struct PairHash</span></a></p></li>
 <li><p><a class="reference internal" href="classAux_1_1BloomFilter.html#exhale-class-classaux-1-1bloomfilter"><span class="std std-ref">Class BloomFilter</span></a></p></li>
-<li><p><a class="reference internal" href="classAux_1_1BucketPQ.html#exhale-class-classaux-1-1bucketpq"><span class="std std-ref">Class BucketPQ</span></a></p></li>
+<li><p><a class="reference internal" href="classAux_1_1BucketPriorityQueue.html#exhale-class-classaux-1-1bucketpriorityqueue"><span class="std std-ref">Template Class BucketPriorityQueue</span></a></p></li>
 <li><p><a class="reference internal" href="classAux_1_1IncrementalUniformRandomSelector.html#exhale-class-classaux-1-1incrementaluniformrandomselector"><span class="std std-ref">Class IncrementalUniformRandomSelector</span></a></p></li>
 <li><p><a class="reference internal" href="classAux_1_1LoggingTimer.html#exhale-class-classaux-1-1loggingtimer"><span class="std std-ref">Class LoggingTimer</span></a></p></li>
 <li><p><a class="reference internal" href="classAux_1_1PrioQueue.html#exhale-class-classaux-1-1prioqueue"><span class="std std-ref">Template Class PrioQueue</span></a></p></li>
@@ -229,7 +228,7 @@
 <h2>Typedefs<a class="headerlink" href="#typedefs" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="typedef_TemplateUtils_8hpp_1ac42dccb1bf40282685dafb256a018f26.html#exhale-typedef-templateutils-8hpp-1ac42dccb1bf40282685dafb256a018f26"><span class="std std-ref">Typedef Aux::boolToType</span></a></p></li>
-<li><p><a class="reference internal" href="typedef_BucketPQ_8hpp_1a5ac75ea89590922d8ec71a81facd050d.html#exhale-typedef-bucketpq-8hpp-1a5ac75ea89590922d8ec71a81facd050d"><span class="std std-ref">Typedef Aux::Bucket</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_BucketPriorityQueue_8hpp_1a79b3202607e95849b28fa60f2a5ec0d4.html#exhale-typedef-bucketpriorityqueue-8hpp-1a79b3202607e95849b28fa60f2a5ec0d4"><span class="std std-ref">Typedef Aux::BucketPQ</span></a></p></li>
 <li><p><a class="reference internal" href="typedef_BloomFilter_8hpp_1ac376728cb718c3387bc394d674fb4ebf.html#exhale-typedef-bloomfilter-8hpp-1ac376728cb718c3387bc394d674fb4ebf"><span class="std std-ref">Typedef Aux::count</span></a></p></li>
 <li><p><a class="reference internal" href="typedef_TemplateUtils_8hpp_1adabe754b65612a11e67392e6041b5268.html#exhale-typedef-templateutils-8hpp-1adabe754b65612a11e67392e6041b5268"><span class="std std-ref">Typedef Aux::decay_t</span></a></p></li>
 <li><p><a class="reference internal" href="typedef_BloomFilter_8hpp_1af59835b79492c04802d21c2dc0ff2920.html#exhale-typedef-bloomfilter-8hpp-1af59835b79492c04802d21c2dc0ff2920"><span class="std std-ref">Typedef Aux::index</span></a></p></li>
@@ -238,7 +237,8 @@
 <section id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="variable_BucketPQ_8hpp_1ad6e8c8fa6eb1787ef390581be1e364a3.html#exhale-variable-bucketpq-8hpp-1ad6e8c8fa6eb1787ef390581be1e364a3"><span class="std std-ref">Variable Aux::none</span></a></p></li>
+<li><p><a class="reference internal" href="variable_BucketPriorityQueue_8hpp_1af25bcf9abf9b550ac03b796b99f0eab9.html#exhale-variable-bucketpriorityqueue-8hpp-1af25bcf9abf9b550ac03b796b99f0eab9"><span class="std std-ref">Variable Aux::IntegralValue</span></a></p></li>
+<li><p><a class="reference internal" href="variable_BucketPriorityQueue_8hpp_1a50c22707b416e80334f77a6f983eb223.html#exhale-variable-bucketpriorityqueue-8hpp-1a50c22707b416e80334f77a6f983eb223"><span class="std std-ref">Variable Aux::SignedIntegral</span></a></p></li>
 </ul>
 </section>
 </section>

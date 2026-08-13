@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-06-29)"
+	        data-docs-version-label="Nightly (2026-08-13)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-06-29)"
+	        data-docs-nightly-label="Nightly (2026-08-13)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-06-29)</option>
+	  <option value="nightly" selected>Nightly (2026-08-13)</option>
 	</select>
 </div>
 
@@ -172,7 +172,7 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13SuitorMatcher13SuitorMatcherERK5Graphbb">
-<span class="target" id="classNetworKit_1_1SuitorMatcher_1ac0945fb8b90c5848de789bd702b6634b"></span><span class="sig-name descname"><span class="n"><span class="pre">SuitorMatcher</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sortSuitor</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">checkSortedEdges</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit13SuitorMatcher13SuitorMatcherERK5Graphbb" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1SuitorMatcher_1ac0945fb8b90c5848de789bd702b6634b"></span><span class="sig-name descname"><span class="n"><span class="pre">SuitorMatcher</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sortSuitor</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">checkSortedEdges</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit13SuitorMatcher13SuitorMatcherERK5Graphbb" title="Link to this definition">¶</a><br /></dt>
 <dd><p><p>Computes a 1/2-approximation of the maximum (weighted) matching of an undirected graph using the Suitor algorithm from Manne and Halappanavar presented in “New Effective Multithreaded</p>
 <p>Matching Algorithms”, IPDPS 2014. The algorithm has two versions: SortSuitor (faster, but only works on graphs with adjacency lists sorted by non-increasing edge weight) and Suitor (works on generic graphs). If using SortSuitor, use GrapTools::sortEdgesByWeight(G, true) to sort the adjacency lists by non-increasing edge weight.</p>
 </p>

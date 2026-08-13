@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-06-29)"
+	        data-docs-version-label="Nightly (2026-08-13)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-06-29)"
+	        data-docs-nightly-label="Nightly (2026-08-13)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-06-29)</option>
+	  <option value="nightly" selected>Nightly (2026-08-13)</option>
 	</select>
 </div>
 
@@ -155,7 +155,7 @@
 <span class="target" id="todo"></span><em><span class="pre">page</span></em> <span class="sig-name descname"><span class="pre">Todo</span> <span class="pre">List</span></span></dt>
 <dd><p><dl>
 <dt class="sig sig-object cpp">
-<span class="pre">Member</span> <a class="reference internal" href="classNetworKit_1_1IncompleteDijkstra.html#classNetworKit_1_1IncompleteDijkstra_1ad15d2c81148e8bd36f921039817df1a3"><span class="std std-ref"><span class="pre">NetworKit::IncompleteDijkstra::IncompleteDijkstra</span></span></a>&#160; <span class="pre">(const</span> <a class="reference internal" href="classNetworKit_1_1Graph.html#classNetworKit_1_1Graph"><span class="std std-ref"><span class="pre">Graph</span></span></a> <span class="pre">*G,</span> <span class="pre">const</span> <span class="pre">std::vector&lt;</span> <span class="pre">node</span> <span class="pre">&gt;</span> <span class="pre">&amp;sources,</span> <span class="pre">const</span> <span class="pre">std::unordered_set&lt;</span> <span class="pre">node</span> <span class="pre">&gt;</span> <span class="pre">*explored=nullptr)</span></dt>
+<span class="pre">Member</span> <a class="reference internal" href="classNetworKit_1_1IncompleteDijkstra.html#classNetworKit_1_1IncompleteDijkstra_1ad15d2c81148e8bd36f921039817df1a3"><span class="std std-ref"><span class="pre">NetworKit::IncompleteDijkstra::IncompleteDijkstra</span></span></a>&#160; <span class="pre">(const</span> <span class="pre">Graph</span> <span class="pre">*G,</span> <span class="pre">const</span> <span class="pre">std::vector&lt;</span> <span class="pre">node</span> <span class="pre">&gt;</span> <span class="pre">&amp;sources,</span> <span class="pre">const</span> <span class="pre">std::unordered_set&lt;</span> <span class="pre">node</span> <span class="pre">&gt;</span> <span class="pre">*explored=nullptr)</span></dt>
 <dd><p><span class="target" id="todo_1_todo000001"></span>This is somewhat ugly, but we do not want introduce a std::shared_ptr&lt;&gt; since <em>G</em> and <em>explored</em> could well be stack allocated. </p>
 </dd></dl>
 

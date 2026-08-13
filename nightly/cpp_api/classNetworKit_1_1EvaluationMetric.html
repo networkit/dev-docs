@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-06-29)"
+	        data-docs-version-label="Nightly (2026-08-13)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-06-29)"
+	        data-docs-nightly-label="Nightly (2026-08-13)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-06-29)</option>
+	  <option value="nightly" selected>Nightly (2026-08-13)</option>
 	</select>
 </div>
 
@@ -179,11 +179,11 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16EvaluationMetric16EvaluationMetricERK5Graph">
-<span class="target" id="classNetworKit_1_1EvaluationMetric_1aa6b22c7014503f10f03b5658e4ca3946"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EvaluationMetric</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">testGraph</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit16EvaluationMetric16EvaluationMetricERK5Graph" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1EvaluationMetric_1aa6b22c7014503f10f03b5658e4ca3946"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EvaluationMetric</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">testGraph</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit16EvaluationMetric16EvaluationMetricERK5Graph" title="Link to this definition">¶</a><br /></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>testGraph</strong> – <a class="reference internal" href="classNetworKit_1_1Graph.html#classNetworKit_1_1Graph"><span class="std std-ref">Graph</span></a> containing the links to use for evaluation </p></li>
+<li><p><strong>testGraph</strong> – Graph containing the links to use for evaluation </p></li>
 <li><p><strong>predictions</strong> – Dyad-score-pairs whose prediction quality will be evaluated </p></li>
 </ul>
 </dd>
@@ -198,7 +198,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16EvaluationMetric12setTestGraphERK5Graph">
-<span class="target" id="classNetworKit_1_1EvaluationMetric_1aab6f29f6b10a5cf815cd9c13534bc7c4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTestGraph</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newTestGraph</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit16EvaluationMetric12setTestGraphERK5Graph" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1EvaluationMetric_1aab6f29f6b10a5cf815cd9c13534bc7c4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTestGraph</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">newTestGraph</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit16EvaluationMetric12setTestGraphERK5Graph" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Sets a new graph to use as ground truth for evaluation. Note that this won’t reset the most recently calculated curve and as a consequence <a class="reference internal" href="#classNetworKit_1_1EvaluationMetric_1a61f6cdad3eaa98324dfcaa8fb3f2b8bf"><span class="std std-ref">getAreaUnderCurve() const </span></a>will still behave as expected by returning the AUC of the most recent curve. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -260,7 +260,7 @@
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16EvaluationMetric9testGraphE">
-<span class="target" id="classNetworKit_1_1EvaluationMetric_1a374c570f3a4bea589e809b2a633df21b"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">testGraph</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit16EvaluationMetric9testGraphE" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1EvaluationMetric_1a374c570f3a4bea589e809b2a633df21b"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">testGraph</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit16EvaluationMetric9testGraphE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Used to evaluate the binary predictions at the thresholds. </p>
 </dd></dl>
 

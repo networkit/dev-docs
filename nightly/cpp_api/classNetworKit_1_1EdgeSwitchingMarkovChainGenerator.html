@@ -26,7 +26,7 @@
     <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Template Class EdgeTypeIterator" href="classNetworKit_1_1EdgeTypeIterator.html" />
+    <link rel="next" title="Template Class EdgeWeightTIterator" href="classNetworKit_1_1EdgeWeightTIterator.html" />
     <link rel="prev" title="Class EdgeSwitchingInPlace" href="classNetworKit_1_1EdgeSwitchingInPlace.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-06-29)"
+	        data-docs-version-label="Nightly (2026-08-13)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-06-29)"
+	        data-docs-nightly-label="Nightly (2026-08-13)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-06-29)</option>
+	  <option value="nightly" selected>Nightly (2026-08-13)</option>
 	</select>
 </div>
 
@@ -167,7 +167,7 @@
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit33EdgeSwitchingMarkovChainGeneratorE">
 <span class="target" id="classNetworKit_1_1EdgeSwitchingMarkovChainGenerator"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EdgeSwitchingMarkovChainGenerator</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1StaticDegreeSequenceGenerator.html#_CPPv4N9NetworKit29StaticDegreeSequenceGeneratorE" title="NetworKit::StaticDegreeSequenceGenerator"><span class="n"><span class="pre">StaticDegreeSequenceGenerator</span></span></a><a class="headerlink" href="#_CPPv4N9NetworKit33EdgeSwitchingMarkovChainGeneratorE" title="Link to this definition">¶</a><br /></dt>
-<dd><p><a class="reference internal" href="classNetworKit_1_1Graph.html#classNetworKit_1_1Graph"><span class="std std-ref">Graph</span></a> generator for generating a random simple graph with exactly the given degree sequence based on the Edge-Switching Markov-Chain method.</p>
+<dd><p>Graph generator for generating a random simple graph with exactly the given degree sequence based on the Edge-Switching Markov-Chain method.</p>
 <p>This implementation is based on the paper “Random generation of large connected simple graphs with prescribed degree distribution” by Fabien Viger and Matthieu Latapy, available at <a class="reference external" href="http://www-rp.lip6.fr/~latapy/FV/generation.html">http://www-rp.lip6.fr/~latapy/FV/generation.html</a>, however without preserving connectivity (this could later be added as optional feature).</p>
 <p>The Havel-Hakami generator is used for the initial graph generation, then the Markov-Chain Monte-Carlo algorithm as described and implemented by Fabien Viger and Matthieu Latapy but without the steps for ensuring connectivity is executed. This should lead to a graph that is drawn uniformly at random from all graphs with the given degree sequence.</p>
 <p>Note that at most 10 times the number of edges edge swaps are performed (same number as in the aforementioned implementation) and in order to limit the running time, at most 200 times as many attempts to perform an edge swap are made (as certain degree distributions do not allow edge swaps at all). </p>
@@ -191,7 +191,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit33EdgeSwitchingMarkovChainGenerator8generateEv">
-<span class="target" id="classNetworKit_1_1EdgeSwitchingMarkovChainGenerator_1aa29b736e32681c541360bd144a089799"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">generate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9NetworKit33EdgeSwitchingMarkovChainGenerator8generateEv" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1EdgeSwitchingMarkovChainGenerator_1aa29b736e32681c541360bd144a089799"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">generate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9NetworKit33EdgeSwitchingMarkovChainGenerator8generateEv" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Generate a graph according to the configuration model.</p>
 <p>Issues a INFO log message if the wanted number of edge swaps cannot be performed because of the limit of attempts (see in the description of the class for details).</p>
 <dl class="field-list simple">

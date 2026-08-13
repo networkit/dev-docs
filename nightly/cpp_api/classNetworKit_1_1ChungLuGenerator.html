@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-06-29)"
+	        data-docs-version-label="Nightly (2026-08-13)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-06-29)"
+	        data-docs-nightly-label="Nightly (2026-08-13)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-06-29)</option>
+	  <option value="nightly" selected>Nightly (2026-08-13)</option>
 	</select>
 </div>
 
@@ -168,7 +168,7 @@
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16ChungLuGeneratorE">
 <span class="target" id="classNetworKit_1_1ChungLuGenerator"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ChungLuGenerator</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1StaticDegreeSequenceGenerator.html#_CPPv4N9NetworKit29StaticDegreeSequenceGeneratorE" title="NetworKit::StaticDegreeSequenceGenerator"><span class="n"><span class="pre">StaticDegreeSequenceGenerator</span></span></a><a class="headerlink" href="#_CPPv4N9NetworKit16ChungLuGeneratorE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Given an arbitrary degree sequence, the Chung-Lu generative model will produce a random graph with the same expected degree sequence.</p>
-<p>see Chung, Lu: The average distances in random graphs with given expected degrees and Chung, Lu: Connected Components in Random Graphs with Given Expected Degree Sequences. Aiello, Chung, Lu: A Random <a class="reference internal" href="classNetworKit_1_1Graph.html#classNetworKit_1_1Graph"><span class="std std-ref">Graph</span></a> Model for Massive Graphs describes a different generative model which is basically asymptotically equivalent but produces multi-graphs.</p>
+<p>see Chung, Lu: The average distances in random graphs with given expected degrees and Chung, Lu: Connected Components in Random Graphs with Given Expected Degree Sequences. Aiello, Chung, Lu: A Random Graph Model for Massive Graphs describes a different generative model which is basically asymptotically equivalent but produces multi-graphs.</p>
 <p>This follows the implementation of Joel Miller and Aric Hagberg’s “Efficient Generation of Networks with Given Expected Degrees” (2011) <a class="reference external" href="http://aric.hagberg.org/papers/miller-2011-efficient.pdf">http://aric.hagberg.org/papers/miller-2011-efficient.pdf</a> . It gives a complexity of O(n+m) as opposed to quadratic. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
@@ -179,7 +179,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16ChungLuGenerator8generateEv">
-<span class="target" id="classNetworKit_1_1ChungLuGenerator_1a8d00023133d055f4e98379414ded246b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">generate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9NetworKit16ChungLuGenerator8generateEv" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1ChungLuGenerator_1a8d00023133d055f4e98379414ded246b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">generate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9NetworKit16ChungLuGenerator8generateEv" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Generates graph with expected degree sequence seq. </p>
 </dd></dl>
 

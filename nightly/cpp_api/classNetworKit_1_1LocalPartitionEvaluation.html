@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-06-29)"
+	        data-docs-version-label="Nightly (2026-08-13)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-06-29)"
+	        data-docs-nightly-label="Nightly (2026-08-13)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-06-29)</option>
+	  <option value="nightly" selected>Nightly (2026-08-13)</option>
 	</select>
 </div>
 
@@ -178,13 +178,13 @@
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit24LocalPartitionEvaluationE">
 <span class="target" id="classNetworKit_1_1LocalPartitionEvaluation"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LocalPartitionEvaluation</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1LocalCommunityEvaluation.html#_CPPv4N9NetworKit24LocalCommunityEvaluationE" title="NetworKit::LocalCommunityEvaluation"><span class="n"><span class="pre">LocalCommunityEvaluation</span></span></a><a class="headerlink" href="#_CPPv4N9NetworKit24LocalPartitionEvaluationE" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Virtual base class of all evaluation methods for a single <a class="reference internal" href="classNetworKit_1_1Partition.html#classNetworKit_1_1Partition"><span class="std std-ref">Partition</span></a> which is based on the evaluation of single clusters. This is the base class for Partitions. </p>
+<dd><p>Virtual base class of all evaluation methods for a single Partition which is based on the evaluation of single clusters. This is the base class for Partitions. </p>
 <p>Subclassed by <a class="reference internal" href="classNetworKit_1_1IntrapartitionDensity.html#classNetworKit_1_1IntrapartitionDensity"><span class="std std-ref">NetworKit::IntrapartitionDensity</span></a>, <a class="reference internal" href="classNetworKit_1_1IsolatedInterpartitionConductance.html#classNetworKit_1_1IsolatedInterpartitionConductance"><span class="std std-ref">NetworKit::IsolatedInterpartitionConductance</span></a>, <a class="reference internal" href="classNetworKit_1_1IsolatedInterpartitionExpansion.html#classNetworKit_1_1IsolatedInterpartitionExpansion"><span class="std std-ref">NetworKit::IsolatedInterpartitionExpansion</span></a>, <a class="reference internal" href="classNetworKit_1_1PartitionFragmentation.html#classNetworKit_1_1PartitionFragmentation"><span class="std std-ref">NetworKit::PartitionFragmentation</span></a>, <a class="reference internal" href="classNetworKit_1_1PartitionHubDominance.html#classNetworKit_1_1PartitionHubDominance"><span class="std std-ref">NetworKit::PartitionHubDominance</span></a>, <a class="reference internal" href="classNetworKit_1_1StablePartitionNodes.html#classNetworKit_1_1StablePartitionNodes"><span class="std std-ref">NetworKit::StablePartitionNodes</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit24LocalPartitionEvaluation24LocalPartitionEvaluationERK5GraphRK9Partition">
-<span class="target" id="classNetworKit_1_1LocalPartitionEvaluation_1a6d6e2464f9641bade494bdabf9228c4b"></span><span class="sig-name descname"><span class="n"><span class="pre">LocalPartitionEvaluation</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Partition.html#_CPPv4N9NetworKit9PartitionE" title="NetworKit::Partition"><span class="n"><span class="pre">Partition</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">P</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit24LocalPartitionEvaluation24LocalPartitionEvaluationERK5GraphRK9Partition" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1LocalPartitionEvaluation_1a6d6e2464f9641bade494bdabf9228c4b"></span><span class="sig-name descname"><span class="n"><span class="pre">LocalPartitionEvaluation</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1a3bae5e056a6d5e0728b47df800fa35a7.html#_CPPv4N9NetworKit9PartitionE" title="NetworKit::Partition"><span class="n"><span class="pre">Partition</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">P</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit24LocalPartitionEvaluation24LocalPartitionEvaluationERK5GraphRK9Partition" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Initialize the partition evaluation method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -201,12 +201,12 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit24LocalPartitionEvaluation1GE">
-<span class="target" id="classNetworKit_1_1LocalPartitionEvaluation_1acbd146567298cbdaa6c4cc95daa4fd2a"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">G</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit24LocalPartitionEvaluation1GE" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1LocalPartitionEvaluation_1acbd146567298cbdaa6c4cc95daa4fd2a"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">G</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit24LocalPartitionEvaluation1GE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit24LocalPartitionEvaluation1PE">
-<span class="target" id="classNetworKit_1_1LocalPartitionEvaluation_1a5c5826f9662e9977659ef834f2cdc664"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Partition.html#_CPPv4N9NetworKit9PartitionE" title="NetworKit::Partition"><span class="n"><span class="pre">Partition</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">P</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit24LocalPartitionEvaluation1PE" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1LocalPartitionEvaluation_1a5c5826f9662e9977659ef834f2cdc664"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1a3bae5e056a6d5e0728b47df800fa35a7.html#_CPPv4N9NetworKit9PartitionE" title="NetworKit::Partition"><span class="n"><span class="pre">Partition</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">P</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit24LocalPartitionEvaluation1PE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>

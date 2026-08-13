@@ -99,14 +99,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-06-29)"
+	        data-docs-version-label="Nightly (2026-08-13)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-06-29)"
+	        data-docs-nightly-label="Nightly (2026-08-13)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-06-29)</option>
+	  <option value="nightly" selected>Nightly (2026-08-13)</option>
 	</select>
 </div>
 
@@ -296,10 +296,11 @@ that it follows the following naming convention: <code class="docutils literal n
 <p>The executable file <code class="docutils literal notranslate"><span class="pre">check_code.sh</span></code> in NetworKit’s root directory carries out all checks in read-only mode and reports if errors are found. Running <code class="docutils literal notranslate"><span class="pre">./check_code.sh</span> <span class="pre">-w</span></code> will fix these errors. Run this script before commiting your files to make sure your changes are in complaince with the guidelines. The script is executed during CI and will cause your pull request to fail if your code does not conform to the style guide.</p>
 <p>On top of the aforementioned mentioned points concerning style, the NetworKit C++ code base also complies to a selection of <code class="docutils literal notranslate"><span class="pre">clang-tidy</span></code> static-code analysis checks.
 New code must pass these tests before being merged into the development branch. The list of checks can be found in the <code class="docutils literal notranslate"><span class="pre">.clang-tidy</span></code> file.
-In order to run the <code class="docutils literal notranslate"><span class="pre">clang-tidy</span></code> checks while building NetworKit, set the <code class="docutils literal notranslate"><span class="pre">CMake</span></code> flag <code class="docutils literal notranslate"><span class="pre">-NETWORKIT_CLANG_TIDY</span></code> to <code class="docutils literal notranslate"><span class="pre">ON</span></code> in addition to the other compile flags, e.g.</p>
+In order to run the <code class="docutils literal notranslate"><span class="pre">clang-tidy</span></code> checks while building NetworKit, set the <code class="docutils literal notranslate"><span class="pre">CMake</span></code> flag <code class="docutils literal notranslate"><span class="pre">-DNETWORKIT_CLANG_TIDY</span></code> to <code class="docutils literal notranslate"><span class="pre">ON</span></code> in addition to the other compile flags, e.g.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cmake</span> <span class="o">-</span><span class="n">DCMAKE_CXX_COMPILER</span><span class="o">=</span><span class="n">clang</span><span class="o">++</span> <span class="o">-</span><span class="n">DCMAKE_EXPORT_COMPILE_COMMANDS</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DCMAKE_BUILD_TYPE</span><span class="o">=</span><span class="n">Debug</span> <span class="o">-</span><span class="n">DNETWORKIT_WARNINGS_AS_ERRORS</span><span class="o">=</span><span class="n">ON</span> <span class="o">-</span><span class="n">DNETWORKIT_CLANG_TIDY</span><span class="o">=</span><span class="n">ON</span> <span class="o">..</span>
 </pre></div>
 </div>
+<p>To use a specific <code class="docutils literal notranslate"><span class="pre">clang-tidy</span></code> executable, set <code class="docutils literal notranslate"><span class="pre">-DNETWORKIT_CLANG_TIDY_EXECUTABLE</span></code>, e.g. <code class="docutils literal notranslate"><span class="pre">-DNETWORKIT_CLANG_TIDY_EXECUTABLE=clang-tidy-22</span></code>.</p>
 <p>In a nutshell, new developers should familiarise themselves with the existing code base and adapt the existing style in the C++ as well as Python code base when contributing to NetworKit. Always ensure your code is easy to understand and properly documented.</p>
 </section>
 <section id="report-bugs">

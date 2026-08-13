@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-06-29)"
+	        data-docs-version-label="Nightly (2026-08-13)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-06-29)"
+	        data-docs-nightly-label="Nightly (2026-08-13)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-06-29)</option>
+	  <option value="nightly" selected>Nightly (2026-08-13)</option>
 	</select>
 </div>
 
@@ -1078,7 +1078,7 @@ as ijk or coo format). See here for more details: <a class="reference external" 
 inserted twice twice: once as (i,j) and once as (j,i).</p>
 <p>Parameter <code class="code docutils literal notranslate"><span class="pre">inputData</span></code> can be one of the following:</p>
 <ul class="simple">
-<li><p>scipy.sparse.coo_matrix</p></li>
+<li><p>scipy.sparse.coo_matrix, where the <cite>scipy.sparse.coo_matrix.data</cite> become the weights</p></li>
 <li><p>(data, (i,j)) where data, i and j are of type np.ndarray</p></li>
 <li><p>(i,j) where i and j are of type np.ndarray</p></li>
 </ul>
@@ -1100,6 +1100,27 @@ of the graph. For better performance, it is advised to correctly set the number 
 <li><p><strong>directed</strong> (<em>bool</em><em>, </em><em>optional</em>) – If set to True, the graph will be directed. Default: False</p></li>
 <li><p><strong>edgesIndexed</strong> (<em>bool</em><em>, </em><em>optional</em>) – If set to True, the graph’s edges will be indexed. Default: False</p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.graph.GraphFromCsr">
+<span class="sig-prename descclassname"><span class="pre">networkit.graph.</span></span><span class="sig-name descname"><span class="pre">GraphFromCsr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">csr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weighted</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.GraphFromCsr" title="Link to this definition">¶</a></dt>
+<dd><p>Create a Graph from a SciPy CSR matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>csr</strong> (<em>scipy.sparse.csr_matrix</em>) – The SciPy CSR matrix representing the adjacency matrix.</p></li>
+<li><p><strong>directed</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to treat the matrix as directed. Default: True</p></li>
+<li><p><strong>weighted</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to treat the matrix as weighted. Default: False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A new NetworKit Graph built from the CSR matrix.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#networkit.graph.Graph" title="networkit.graph.Graph">Graph</a></p>
 </dd>
 </dl>
 </dd></dl>

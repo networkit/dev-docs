@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-06-29)"
+	        data-docs-version-label="Nightly (2026-08-13)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-06-29)"
+	        data-docs-nightly-label="Nightly (2026-08-13)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-06-29)</option>
+	  <option value="nightly" selected>Nightly (2026-08-13)</option>
 	</select>
 </div>
 
@@ -171,7 +171,7 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit25ApproxElectricalCloseness25ApproxElectricalClosenessERK5Graphdd">
-<span class="target" id="classNetworKit_1_1ApproxElectricalCloseness_1aad0008194ded78e6fa02d8c75bb82993"></span><span class="sig-name descname"><span class="n"><span class="pre">ApproxElectricalCloseness</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">epsilon</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">kappa</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.3</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit25ApproxElectricalCloseness25ApproxElectricalClosenessERK5Graphdd" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1ApproxElectricalCloseness_1aad0008194ded78e6fa02d8c75bb82993"></span><span class="sig-name descname"><span class="n"><span class="pre">ApproxElectricalCloseness</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">epsilon</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">kappa</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.3</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit25ApproxElectricalCloseness25ApproxElectricalClosenessERK5Graphdd" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Approximates the electrical closeness of all the vertices of the graph by approximating the diagonal of the laplacian’s pseudoinverse of <em>G</em>. Every element of the diagonal is guaranteed to have a maximum absolute error of <em>epsilon</em><p>. Based on “Approximation of the</p>
 <p>Diagonal of a Laplacian’s Pseudoinverse for Complex Network Analysis”, Angriman et al., ESA</p>
 <ol class="lowerroman simple">

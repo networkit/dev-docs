@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-06-29)"
+	        data-docs-version-label="Nightly (2026-08-13)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-06-29)"
+	        data-docs-nightly-label="Nightly (2026-08-13)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-06-29)</option>
+	  <option value="nightly" selected>Nightly (2026-08-13)</option>
 	</select>
 </div>
 
@@ -145,19 +145,20 @@
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iterator&gt;</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/Globals.hpp&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/graph/GraphConcepts.hpp&gt;</span>
 
 <span class="k">namespace</span><span class="w"> </span><span class="nn">NetworKit</span><span class="w"> </span><span class="p">{</span>
 
-<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">GraphType</span><span class="o">&gt;</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">GraphType</span><span class="p">,</span><span class="w"> </span><span class="n">GraphNode</span><span class="w"> </span><span class="n">NodeT</span><span class="p">,</span><span class="w"> </span><span class="n">GraphEdgeWeight</span><span class="w"> </span><span class="n">EdgeWeightT</span><span class="o">&gt;</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">NodeIteratorBase</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">GraphType</span><span class="w"> </span><span class="o">*</span><span class="n">G</span><span class="p">;</span>
-<span class="w">    </span><span class="n">node</span><span class="w"> </span><span class="n">u</span><span class="p">{</span><span class="n">none</span><span class="p">};</span>
+<span class="w">    </span><span class="n">NodeT</span><span class="w"> </span><span class="n">u</span><span class="p">{</span><span class="n">NullNodeId</span><span class="o">&lt;</span><span class="n">NodeT</span><span class="o">&gt;</span><span class="p">};</span>
 
 <span class="k">public</span><span class="o">:</span>
 <span class="w">    </span><span class="c1">// The value type of the nodes (i.e. nodes). Returned by</span>
 <span class="w">    </span><span class="c1">// operator*().</span>
-<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">value_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">node</span><span class="p">;</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">value_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NodeT</span><span class="p">;</span>
 
 <span class="w">    </span><span class="c1">// Reference to the value_type, required by STL.</span>
 <span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">reference</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value_type</span><span class="w"> </span><span class="o">&amp;</span><span class="p">;</span>
@@ -175,7 +176,7 @@
 <span class="w">    </span><span class="c1">// Own type.</span>
 <span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">self</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NodeIteratorBase</span><span class="p">;</span>
 
-<span class="w">    </span><span class="n">NodeIteratorBase</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">GraphType</span><span class="w"> </span><span class="o">*</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">G</span><span class="p">(</span><span class="n">G</span><span class="p">),</span><span class="w"> </span><span class="n">u</span><span class="p">(</span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">NodeIteratorBase</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">GraphType</span><span class="w"> </span><span class="o">*</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">NodeT</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">G</span><span class="p">(</span><span class="n">G</span><span class="p">),</span><span class="w"> </span><span class="n">u</span><span class="p">(</span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">G</span><span class="o">-&gt;</span><span class="n">hasNode</span><span class="p">(</span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">G</span><span class="o">-&gt;</span><span class="n">upperNodeIdBound</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="o">++</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
@@ -217,13 +218,13 @@
 
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">!=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">NodeIteratorBase</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">rhs</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
 
-<span class="w">    </span><span class="n">node</span><span class="w"> </span><span class="k">operator</span><span class="o">*</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">NodeT</span><span class="w"> </span><span class="k">operator</span><span class="o">*</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">assert</span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">G</span><span class="o">-&gt;</span><span class="n">upperNodeIdBound</span><span class="p">());</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">u</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>
 
-<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">GraphType</span><span class="o">&gt;</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">GraphType</span><span class="p">,</span><span class="w"> </span><span class="n">GraphNode</span><span class="w"> </span><span class="n">NodeT</span><span class="p">,</span><span class="w"> </span><span class="n">GraphEdgeWeight</span><span class="w"> </span><span class="n">EdgeWeightT</span><span class="o">&gt;</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">NodeRangeBase</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">GraphType</span><span class="w"> </span><span class="o">*</span><span class="n">G</span><span class="p">;</span>
@@ -231,18 +232,18 @@
 <span class="k">public</span><span class="o">:</span>
 <span class="w">    </span><span class="n">NodeRangeBase</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">GraphType</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">G</span><span class="p">(</span><span class="o">&amp;</span><span class="n">G</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
 
-<span class="w">    </span><span class="n">NodeRangeBase</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">G</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">){};</span>
+<span class="w">    </span><span class="n">NodeRangeBase</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">G</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{};</span>
 
 <span class="w">    </span><span class="o">~</span><span class="n">NodeRangeBase</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
 
-<span class="w">    </span><span class="n">NodeIteratorBase</span><span class="o">&lt;</span><span class="n">GraphType</span><span class="o">&gt;</span><span class="w"> </span><span class="n">begin</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">assert</span><span class="p">(</span><span class="n">G</span><span class="p">);</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">NodeIteratorBase</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="p">{</span><span class="mi">0</span><span class="p">});</span>
+<span class="w">    </span><span class="n">NodeIteratorBase</span><span class="o">&lt;</span><span class="n">GraphType</span><span class="p">,</span><span class="w"> </span><span class="n">NodeT</span><span class="p">,</span><span class="w"> </span><span class="n">EdgeWeightT</span><span class="o">&gt;</span><span class="w"> </span><span class="n">begin</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">assert</span><span class="p">(</span><span class="n">G</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">nullptr</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">NodeIteratorBase</span><span class="o">&lt;</span><span class="n">GraphType</span><span class="p">,</span><span class="w"> </span><span class="n">NodeT</span><span class="p">,</span><span class="w"> </span><span class="n">EdgeWeightT</span><span class="o">&gt;</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">NodeT</span><span class="p">{</span><span class="mi">0</span><span class="p">});</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="n">NodeIteratorBase</span><span class="o">&lt;</span><span class="n">GraphType</span><span class="o">&gt;</span><span class="w"> </span><span class="n">end</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">NodeIteratorBase</span><span class="o">&lt;</span><span class="n">GraphType</span><span class="p">,</span><span class="w"> </span><span class="n">NodeT</span><span class="p">,</span><span class="w"> </span><span class="n">EdgeWeightT</span><span class="o">&gt;</span><span class="w"> </span><span class="n">end</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="k">noexcept</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">assert</span><span class="p">(</span><span class="n">G</span><span class="p">);</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">NodeIteratorBase</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">G</span><span class="o">-&gt;</span><span class="n">upperNodeIdBound</span><span class="p">());</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">NodeIteratorBase</span><span class="o">&lt;</span><span class="n">GraphType</span><span class="p">,</span><span class="w"> </span><span class="n">NodeT</span><span class="p">,</span><span class="w"> </span><span class="n">EdgeWeightT</span><span class="o">&gt;</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">G</span><span class="o">-&gt;</span><span class="n">upperNodeIdBound</span><span class="p">());</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">};</span>
 
