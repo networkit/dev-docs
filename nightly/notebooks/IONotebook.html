@@ -103,14 +103,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -242,7 +242,7 @@ number of nodes.</p>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/wiki-Vote.txt&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">SNAP</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/wiki-Vote.txt"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">SNAP</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -251,7 +251,7 @@ number of nodes.</p>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">SNAPGraphReader</span><span class="p">()</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;../input/wiki-Vote.txt&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">SNAPGraphReader</span><span class="p">()</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">"../input/wiki-Vote.txt"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -261,7 +261,7 @@ number of nodes.</p>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">snapReader</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">SNAPGraphReader</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mi">7115</span><span class="p">)</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">snapReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;../input/wiki-Vote.txt&quot;</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">snapReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">"../input/wiki-Vote.txt"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -272,9 +272,9 @@ number of nodes.</p>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
-<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/wikiSNAP&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">SNAP</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">'./output/'</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">'./output'</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">"./output/wikiSNAP"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">SNAP</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -296,7 +296,7 @@ False)</a> expects 5 parameters that dictate the exact format of the edge lists.
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specify seperator, firstNode and commentPrefix for the EdgeListReader</span>
-<span class="n">edgeListReader</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">EdgeListReader</span><span class="p">(</span><span class="s1">&#39;$&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;;&#39;</span><span class="p">)</span>
+<span class="n">edgeListReader</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">EdgeListReader</span><span class="p">(</span><span class="s1">'$'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">';'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -305,7 +305,7 @@ False)</a> expects 5 parameters that dictate the exact format of the edge lists.
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/example.edgelist&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">EdgeListTabOne</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/example.edgelist"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">EdgeListTabOne</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -316,9 +316,9 @@ False)</a> expects 5 parameters that dictate the exact format of the edge lists.
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
-<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="s1">&#39;./output/example.edgelist.TabOne&#39;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">EdgeListTabOne</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">'./output'</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">'./output'</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="s1">'./output/example.edgelist.TabOne'</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">EdgeListTabOne</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -331,10 +331,10 @@ False)</a> expects 5 parameters that dictate the exact format of the edge lists.
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/celegans_metabolic.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/celegans_metabolic.graph"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
 <span class="c1"># Alternative:</span>
 <span class="n">metisReader</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">METISGraphReader</span><span class="p">()</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">metisReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;../input/celegans_metabolic.graph&quot;</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">metisReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">"../input/celegans_metabolic.graph"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -345,9 +345,9 @@ False)</a> expects 5 parameters that dictate the exact format of the edge lists.
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
-<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/celegans_metabolicMETIS&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">'./output/'</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">'./output'</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">"./output/celegans_metabolicMETIS"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -359,10 +359,10 @@ False)</a> expects 5 parameters that dictate the exact format of the edge lists.
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/jazz2_directed.gml&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GML</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/jazz2_directed.gml"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GML</span><span class="p">)</span>
 <span class="c1"># Alternative:</span>
 <span class="n">gmlReader</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">GMLGraphReader</span><span class="p">()</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">gmlReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;../input/jazz2_directed.gml&quot;</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">gmlReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">"../input/jazz2_directed.gml"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -373,9 +373,9 @@ False)</a> expects 5 parameters that dictate the exact format of the edge lists.
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
-<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/jazz2_directedGML&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GML</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">'./output/'</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">'./output'</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">"./output/jazz2_directedGML"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GML</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -389,14 +389,14 @@ False)</a> expects 5 parameters that dictate the exact format of the edge lists.
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="c1"># Read graph in GML</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/jazz2_directed.gml&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GML</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/jazz2_directed.gml"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GML</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">'./output/'</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">'./output'</span><span class="p">)</span>
 <span class="c1"># Write G in GraphViz/DOT</span>
-<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/jazz2_directedGraphViz&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GraphViz</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">"./output/jazz2_directedGraphViz"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GraphViz</span><span class="p">)</span>
 <span class="c1"># Write G in DOT</span>
-<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/jazz2_directedDOT&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">"./output/jazz2_directedDOT"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">DOT</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -409,12 +409,12 @@ The same goes for writing a graph to a file in the <code class="docutils literal
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/network_overlapping.dat&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">LFR</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/network_overlapping.dat"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">LFR</span><span class="p">)</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
-<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/network_overlapping.dat&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">LFR</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">'./output/'</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">'./output'</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">"./output/network_overlapping.dat"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">LFR</span><span class="p">)</span>
 <br/></pre></div>
 </div>
 </div>
@@ -433,7 +433,7 @@ The same goes for writing a graph to a file in the <code class="docutils literal
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">konectReader</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">KONECTGraphReader</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">konectReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.konect&quot;</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">konectReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">"../input/foodweb-baydry.konect"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -446,10 +446,10 @@ The same goes for writing a graph to a file in the <code class="docutils literal
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/power.gt&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GraphToolBinary</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/power.gt"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GraphToolBinary</span><span class="p">)</span>
 <span class="c1"># Alternative:</span>
 <span class="n">graphToolReader</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">GraphToolBinaryReader</span><span class="p">()</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">graphToolReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;../input/power.gt&quot;</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">graphToolReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">"../input/power.gt"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -459,9 +459,9 @@ The same goes for writing a graph to a file in the <code class="docutils literal
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
-<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/power.gt&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GraphToolBinary</span><span class="p">,</span> <span class="n">littleEndianness</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">'./output/'</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">'./output'</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">"./output/power.gt"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GraphToolBinary</span><span class="p">,</span> <span class="n">littleEndianness</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <br/></pre></div>
 </div>
 </div>
@@ -473,10 +473,10 @@ The same goes for writing a graph to a file in the <code class="docutils literal
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/celegans_metabolic.thrill&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">ThrillBinary</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/celegans_metabolic.thrill"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">ThrillBinary</span><span class="p">)</span>
 <span class="c1"># Alternative:</span>
 <span class="n">thrillBinaryReader</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">ThrillGraphBinaryReader</span><span class="p">()</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">thrillBinaryReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;../input/celegans_metabolic.thrill&quot;</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">thrillBinaryReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">"../input/celegans_metabolic.thrill"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -486,9 +486,9 @@ The same goes for writing a graph to a file in the <code class="docutils literal
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
-<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/foodweb-baydry.thrill&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">ThrillBinary</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">'./output/'</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">'./output'</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">"./output/foodweb-baydry.thrill"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">ThrillBinary</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -500,10 +500,10 @@ The same goes for writing a graph to a file in the <code class="docutils literal
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.nkbg004&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">NetworkitBinary</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/foodweb-baydry.nkbg004"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">NetworkitBinary</span><span class="p">)</span>
 <span class="c1">#Alternative:</span>
 <span class="n">networkitBinaryReader</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">NetworkitBinaryReader</span><span class="p">()</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">networkitBinaryReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.nkbg004&quot;</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">networkitBinaryReader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">"../input/foodweb-baydry.nkbg004"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -514,9 +514,9 @@ weights automatically. <code class="docutils literal notranslate"><span class="p
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
-<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/foodweb-baydry.nkbg004&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">NetworkitBinary</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">NetworkitBinaryWeights</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">'./output/'</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">'./output'</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">"./output/foodweb-baydry.nkbg004"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">NetworkitBinary</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">NetworkitBinaryWeights</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -528,7 +528,7 @@ weights automatically. <code class="docutils literal notranslate"><span class="p
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">convertGraph</span><span class="p">(</span><span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">SNAP</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GML</span><span class="p">,</span> <span class="s2">&quot;../input/wiki-Vote.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;output/example.gml&quot;</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">convertGraph</span><span class="p">(</span><span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">SNAP</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GML</span><span class="p">,</span> <span class="s2">"../input/wiki-Vote.txt"</span><span class="p">,</span> <span class="s2">"output/example.gml"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -547,9 +547,9 @@ converted ../input/wiki-Vote.txt to output/example.gml
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;./output/&#39;</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;./output&#39;</span><span class="p">)</span>
-<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">&quot;./output/example.gml&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GML</span><span class="p">)</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">'./output/'</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">'./output'</span><span class="p">)</span>
+<span class="n">nk</span><span class="o">.</span><span class="n">writeGraph</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="s2">"./output/example.gml"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GML</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -195,7 +195,7 @@
 <span class="w">    </span><span class="n">T</span><span class="w"> </span><span class="o">*</span><span class="n">allocate</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// The return value of allocate(0) is unspecified.</span>
 <span class="w">        </span><span class="c1">// Mallocator returns NULL in order to avoid depending</span>
-<span class="w">        </span><span class="c1">// on malloc(0)&#39;s implementation-defined behavior</span>
+<span class="w">        </span><span class="c1">// on malloc(0)'s implementation-defined behavior</span>
 <span class="w">        </span><span class="c1">// (the implementation can define malloc(0) to return NULL,</span>
 <span class="w">        </span><span class="c1">// in which case the bad_alloc check below would fire).</span>
 <span class="w">        </span><span class="c1">// All allocators can return NULL in this case.</span>
@@ -206,7 +206,7 @@
 <span class="w">        </span><span class="c1">// The Standardization Committee recommends that std::length_error</span>
 <span class="w">        </span><span class="c1">// be thrown in the case of integer overflow.</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">max_size</span><span class="p">())</span>
-<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">length_error</span><span class="p">(</span><span class="s">&quot;AlignedAllocator&lt;T&gt;::allocate() - Integer overflow.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">length_error</span><span class="p">(</span><span class="s">"AlignedAllocator&lt;T&gt;::allocate() - Integer overflow."</span><span class="p">);</span>
 
 <span class="w">        </span><span class="c1">// Mallocator wraps malloc().</span>
 <span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">pv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_mm_malloc</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">T</span><span class="p">),</span><span class="w"> </span><span class="n">Alignment</span><span class="p">);</span>
@@ -230,8 +230,8 @@
 <span class="w">    </span><span class="c1">// all allocators should have a private unimplemented</span>
 <span class="w">    </span><span class="c1">// assignment operator. Note that this will trigger the</span>
 <span class="w">    </span><span class="c1">// off-by-default (enabled under /Wall) warning C4626</span>
-<span class="w">    </span><span class="c1">// &quot;assignment operator could not be generated because a</span>
-<span class="w">    </span><span class="c1">// base class assignment operator is inaccessible&quot; within</span>
+<span class="w">    </span><span class="c1">// "assignment operator could not be generated because a</span>
+<span class="w">    </span><span class="c1">// base class assignment operator is inaccessible" within</span>
 <span class="w">    </span><span class="c1">// the STL headers, but that warning is useless.</span>
 <span class="k">private</span><span class="o">:</span>
 <span class="w">    </span><span class="n">AlignedAllocator</span><span class="w"> </span><span class="o">&amp;</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">AlignedAllocator</span><span class="w"> </span><span class="o">&amp;</span><span class="p">);</span>

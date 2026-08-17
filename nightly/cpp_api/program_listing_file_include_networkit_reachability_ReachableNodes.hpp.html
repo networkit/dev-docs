@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -151,8 +151,8 @@
 <span class="w">    </span><span class="n">count</span><span class="w"> </span><span class="nf">numberOfReachableNodes</span><span class="p">(</span><span class="n">node</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">assureFinished</span><span class="p">();</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">exact</span><span class="p">)</span>
-<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;The number of nodes is not computed exactly, run the &quot;</span>
-<span class="w">                                     </span><span class="s">&quot;algorithm with exact = true.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">"The number of nodes is not computed exactly, run the "</span>
+<span class="w">                                     </span><span class="s">"algorithm with exact = true."</span><span class="p">);</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">reachableLB</span><span class="p">[</span><span class="n">u</span><span class="p">];</span>
 <span class="w">    </span><span class="p">}</span>
 

@@ -103,14 +103,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -428,7 +428,7 @@ True
 <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">iterNodes</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">u</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;...&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'...'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -456,7 +456,7 @@ True
 <span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">iterEdges</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">u</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;...&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'...'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -484,7 +484,7 @@ True
 <span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">G1</span><span class="o">.</span><span class="n">iterEdgesWeights</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">u</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;...&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'...'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -508,7 +508,7 @@ node. First, we define such a function.</p>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">nodeFunc</span><span class="p">(</span><span class="n">u</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Node &quot;</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="s2">&quot; passed to nodeFunc()&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Node "</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="s2">" passed to nodeFunc()"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -539,7 +539,7 @@ Node  6  passed to nodeFunc()
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="o">.</span><span class="n">forNodes</span><span class="p">(</span><span class="k">lambda</span> <span class="n">u</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Node &quot;</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="s2">&quot; passed to lambda&quot;</span><span class="p">))</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span><span class="o">.</span><span class="n">forNodes</span><span class="p">(</span><span class="k">lambda</span> <span class="n">u</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"Node "</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="s2">" passed to lambda"</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -565,7 +565,7 @@ Node  6  passed to lambda
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First define callback function</span>
 <span class="c1"># that accepts exactly 4 parameters:</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">edgeFunc</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">edgeId</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Edge from </span><span class="si">{}</span><span class="s2"> to </span><span class="si">{}</span><span class="s2"> has weight </span><span class="si">{}</span><span class="s2"> and id </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">edgeId</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Edge from </span><span class="si">{}</span><span class="s2"> to </span><span class="si">{}</span><span class="s2"> has weight </span><span class="si">{}</span><span class="s2"> and id </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">weight</span><span class="p">,</span> <span class="n">edgeId</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -683,13 +683,13 @@ directed).</p>
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persons</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">CategoricalDtype</span><span class="p">(</span><span class="n">categories</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Carol&#39;</span><span class="p">,</span> <span class="s1">&#39;Dan&#39;</span><span class="p">,</span> <span class="s1">&#39;Erin&#39;</span><span class="p">,</span> <span class="s1">&#39;Frank&#39;</span><span class="p">],</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">relations</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;Carol&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Dan&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Dan&#39;</span><span class="p">,</span> <span class="s1">&#39;Erin&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Carol&#39;</span><span class="p">,</span> <span class="s1">&#39;Frank&#39;</span><span class="p">)]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">persons</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">CategoricalDtype</span><span class="p">(</span><span class="n">categories</span><span class="o">=</span><span class="p">[</span><span class="s1">'Alice'</span><span class="p">,</span> <span class="s1">'Bob'</span><span class="p">,</span> <span class="s1">'Carol'</span><span class="p">,</span> <span class="s1">'Dan'</span><span class="p">,</span> <span class="s1">'Erin'</span><span class="p">,</span> <span class="s1">'Frank'</span><span class="p">],</span> <span class="n">ordered</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">relations</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'Alice'</span><span class="p">,</span> <span class="s1">'Carol'</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Bob'</span><span class="p">,</span> <span class="s1">'Dan'</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Dan'</span><span class="p">,</span> <span class="s1">'Erin'</span><span class="p">),</span> <span class="p">(</span><span class="s1">'Carol'</span><span class="p">,</span> <span class="s1">'Frank'</span><span class="p">)]</span>
 
-<span class="n">friends_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">relations</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Person_1&#39;</span><span class="p">,</span> <span class="s1">&#39;Person_2&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">persons</span><span class="p">)</span>
+<span class="n">friends_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">relations</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'Person_1'</span><span class="p">,</span> <span class="s1">'Person_2'</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">persons</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">friends_df</span><span class="p">)</span>
 
-<span class="n">GData</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">GraphFromCoo</span><span class="p">((</span><span class="n">friends_df</span><span class="p">[</span><span class="s1">&#39;Person_1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint</span><span class="p">,</span> <span class="n">copy</span> <span class="o">=</span> <span class="kc">False</span><span class="p">),</span> <span class="n">friends_df</span><span class="p">[</span><span class="s1">&#39;Person_2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint</span><span class="p">,</span> <span class="n">copy</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)),</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">persons</span><span class="o">.</span><span class="n">categories</span><span class="p">),</span> <span class="n">directed</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">GData</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">GraphFromCoo</span><span class="p">((</span><span class="n">friends_df</span><span class="p">[</span><span class="s1">'Person_1'</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint</span><span class="p">,</span> <span class="n">copy</span> <span class="o">=</span> <span class="kc">False</span><span class="p">),</span> <span class="n">friends_df</span><span class="p">[</span><span class="s1">'Person_2'</span><span class="p">]</span><span class="o">.</span><span class="n">cat</span><span class="o">.</span><span class="n">codes</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint</span><span class="p">,</span> <span class="n">copy</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)),</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">persons</span><span class="o">.</span><span class="n">categories</span><span class="p">),</span> <span class="n">directed</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
 <span class="n">nk</span><span class="o">.</span><span class="n">overview</span><span class="p">(</span><span class="n">GData</span><span class="p">)</span>
 </pre></div>
@@ -726,19 +726,19 @@ size of largest component       1 (16.67 %)
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a new attribute named &#39;myAtt&#39; of type &#39;str&#39;</span>
-<span class="n">att</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">attachNodeAttribute</span><span class="p">(</span><span class="s2">&quot;myAtt&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a new attribute named 'myAtt' of type 'str'</span>
+<span class="n">att</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">attachNodeAttribute</span><span class="p">(</span><span class="s2">"myAtt"</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
 
 <span class="c1"># Set attribute values</span>
-<span class="n">att</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;foo&quot;</span> <span class="c1"># Attribute of node 0</span>
-<span class="n">att</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;bar&quot;</span> <span class="c1"># Attribute of node 1</span>
+<span class="n">att</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"foo"</span> <span class="c1"># Attribute of node 0</span>
+<span class="n">att</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"bar"</span> <span class="c1"># Attribute of node 1</span>
 
 <span class="c1"># Get attribute value</span>
 <span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">iterNodes</span><span class="p">():</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Attribute of node </span><span class="si">{</span><span class="n">u</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">att</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Attribute of node </span><span class="si">{</span><span class="n">u</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">att</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Node </span><span class="si">{</span><span class="n">u</span><span class="si">}</span><span class="s2"> has no attribute&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Node </span><span class="si">{</span><span class="n">u</span><span class="si">}</span><span class="s2"> has no attribute"</span><span class="p">)</span>
         <span class="k">break</span>
 </pre></div>
 </div>
@@ -765,28 +765,28 @@ Node 2 has no attribute
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Call indexEdges once (all edges inserted afterwards will also get indexed)</span>
 <span class="n">G</span><span class="o">.</span><span class="n">indexEdges</span><span class="p">()</span>
 
-<span class="c1"># Create a new attribute named &#39;myAtt&#39; of type &#39;str&#39;</span>
-<span class="n">att</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">attachEdgeAttribute</span><span class="p">(</span><span class="s2">&quot;myAtt&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+<span class="c1"># Create a new attribute named 'myAtt' of type 'str'</span>
+<span class="n">att</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">attachEdgeAttribute</span><span class="p">(</span><span class="s2">"myAtt"</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
 
 <span class="c1"># Set attribute values</span>
 <span class="c1"># Edges 1-3 and 4-0 were added earlier in the notebook</span>
-<span class="n">att</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;foo&quot;</span> <span class="c1"># Attribute of edge 1-3</span>
-<span class="n">att</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;bar&quot;</span> <span class="c1"># Attribute of node 4-0</span>
+<span class="n">att</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"foo"</span> <span class="c1"># Attribute of edge 1-3</span>
+<span class="n">att</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"bar"</span> <span class="c1"># Attribute of node 4-0</span>
 
 <span class="c1"># Get attribute value by edge endpoints (fast)</span>
 <span class="k">for</span> <span class="n">u</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">iterEdges</span><span class="p">():</span>
     <span class="k">try</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Attribute of edge </span><span class="si">{</span><span class="n">u</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">att</span><span class="p">[</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Attribute of edge </span><span class="si">{</span><span class="n">u</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">att</span><span class="p">[</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Edge </span><span class="si">{</span><span class="n">u</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2"> has no attribute&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Edge </span><span class="si">{</span><span class="n">u</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2"> has no attribute"</span><span class="p">)</span>
 
 <span class="c1"># Get attribute value by edge index (slow)</span>
 <span class="k">for</span> <span class="n">u</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">iterEdges</span><span class="p">():</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">edgeId</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">edgeId</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Attribute of edge </span><span class="si">{</span><span class="n">u</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">att</span><span class="p">[</span><span class="n">edgeId</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Attribute of edge </span><span class="si">{</span><span class="n">u</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">att</span><span class="p">[</span><span class="n">edgeId</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Edge </span><span class="si">{</span><span class="n">u</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2"> has no attribute&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Edge </span><span class="si">{</span><span class="n">u</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="s2"> has no attribute"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -839,7 +839,7 @@ Edge 3,4 has no attribute
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-5
+3
 </pre></div></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">randomNeighbor(G,</span> <span class="pre">u)</span></code> returns a random (out) neighbor of node <code class="docutils literal notranslate"><span class="pre">u</span></code> in the graph <code class="docutils literal notranslate"><span class="pre">G</span></code>.</p>
@@ -857,7 +857,7 @@ Edge 3,4 has no attribute
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-6
+5
 </pre></div></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">randomEdge(G,</span> <span class="pre">uniformDistribution=False)</span></code> returns a random edge of graph <code class="docutils literal notranslate"><span class="pre">G</span></code>. If <code class="docutils literal notranslate"><span class="pre">uniformDistribution</span></code> is set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, the edge is selected uniformly at random.</p>
@@ -875,7 +875,7 @@ Edge 3,4 has no attribute
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(3, 4)
+(3, 1)
 </pre></div></div>
 </div>
 <p>Sometimes it makes sense to compact the graph, e.g., after deleting nodes. The method <code class="docutils literal notranslate"><span class="pre">getCompactedGraph(G,</span> <span class="pre">nodeIdMap)</span></code> does just that by designating continuous node ids. <code class="docutils literal notranslate"><span class="pre">nodeIdMap</span></code> maps each node id of graph <code class="docutils literal notranslate"><span class="pre">G</span></code> to their new ids.</p>

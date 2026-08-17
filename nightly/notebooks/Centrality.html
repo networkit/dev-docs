@@ -103,14 +103,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -234,7 +234,7 @@
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/power.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/power.graph"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
 <span class="c1"># Initalize algorithm</span>
 <span class="n">btwn</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">Betweenness</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
 </pre></div>
@@ -255,7 +255,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.centrality.Betweenness at 0x7fc708178c70&gt;
+&lt;networkit.centrality.Betweenness at 0x7f0d99112fe0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -274,15 +274,15 @@
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 [(4164, 7036954.687164514),
- (2543, 6873056.733431113),
- (1243, 6824187.83796636),
+ (2543, 6873056.733431111),
+ (1243, 6824187.837966361),
  (4219, 6774285.210945552),
- (2528, 6521871.002117622),
- (1267, 6057480.123171382),
- (1308, 5770690.329252604),
- (1244, 5007410.432800195),
- (426, 5000602.048322874),
- (2606, 4955764.654483665)]
+ (2528, 6521871.002117623),
+ (1267, 6057480.123171381),
+ (1308, 5770690.3292526025),
+ (1244, 5007410.4328001905),
+ (426, 5000602.048322867),
+ (2606, 4955764.654483664)]
 </pre></div></div>
 </div>
 </section>
@@ -295,7 +295,7 @@
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/PGPgiantcompo.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/PGPgiantcompo.graph"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -314,7 +314,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.centrality.ApproxBetweenness at 0x7fc708a103d0&gt;
+&lt;networkit.centrality.ApproxBetweenness at 0x7f0ded0fc910&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -332,16 +332,16 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[(1143, 0.13959085439229826),
- (6555, 0.1239470517448854),
- (7297, 0.09626955475330913),
- (6655, 0.09265944645006005),
- (6932, 0.09145607701564369),
- (6744, 0.07220216606498193),
- (3156, 0.06016847172081833),
- (6098, 0.05896510228640196),
- (5165, 0.05535499398315286),
- (2258, 0.054151624548736496)]
+[(1143, 0.14560770156438013),
+ (6655, 0.10950661853188909),
+ (6555, 0.10348977135980729),
+ (7297, 0.08303249097472917),
+ (6744, 0.07821901323706373),
+ (6932, 0.07821901323706373),
+ (5165, 0.06377858002406742),
+ (4466, 0.06257521058965106),
+ (6098, 0.061371841155234697),
+ (3156, 0.06016847172081833)]
 </pre></div></div>
 </div>
 </section>
@@ -356,7 +356,7 @@
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read a graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/PGPgiantcompo.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/PGPgiantcompo.graph"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -376,7 +376,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.centrality.EstimateBetweenness at 0x7fc7080b8e50&gt;
+&lt;networkit.centrality.EstimateBetweenness at 0x7f0d982dd840&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -394,16 +394,16 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[(1143, 0.13695188632442895),
- (6555, 0.10165255293943185),
- (7297, 0.09973491796353415),
- (6655, 0.09185140489411278),
- (6098, 0.07857930198582966),
- (6744, 0.07595071654100986),
- (3156, 0.07554850037165586),
- (2258, 0.07183864526733867),
- (6932, 0.06654937869195632),
- (7324, 0.049268727004181646)]
+[(1143, 0.13473414783528356),
+ (6555, 0.10614898996968478),
+ (6655, 0.07899493420010001),
+ (7297, 0.07527235290736839),
+ (6932, 0.06860448553455485),
+ (6744, 0.06663551924601771),
+ (6098, 0.06194674076611911),
+ (604, 0.05951659389206814),
+ (5165, 0.05948588376004614),
+ (3156, 0.04939334664682046)]
 </pre></div></div>
 </div>
 </section>
@@ -419,7 +419,7 @@ centrality of all nodes, while <code class="docutils literal notranslate"><span 
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read a graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/PGPgiantcompo.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/PGPgiantcompo.graph"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -439,7 +439,7 @@ centrality of all nodes, while <code class="docutils literal notranslate"><span 
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.centrality.KadabraBetweenness at 0x7fc7080163f0&gt;
+&lt;networkit.centrality.KadabraBetweenness at 0x7f0d98285890&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -457,16 +457,16 @@ centrality of all nodes, while <code class="docutils literal notranslate"><span 
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[(1143, 0.29795520934761444),
- (6555, 0.19279454722492698),
- (6655, 0.18500486854917234),
- (7297, 0.17137293086660174),
- (6932, 0.1655306718597858),
- (3156, 0.13924050632911392),
- (6098, 0.12950340798442064),
- (6744, 0.12852969814995133),
- (2258, 0.12074001947419669),
- (5165, 0.11781888997078871)]
+[(1143, 0.2751054852320675),
+ (6555, 0.20253164556962025),
+ (6655, 0.1940928270042194),
+ (6744, 0.1620253164556962),
+ (7297, 0.15780590717299578),
+ (6932, 0.15443037974683543),
+ (3156, 0.14261603375527426),
+ (6098, 0.13839662447257384),
+ (2258, 0.11308016877637131),
+ (5165, 0.10464135021097046)]
 </pre></div></div>
 </div>
 </section>
@@ -485,7 +485,7 @@ centrality of all nodes, while <code class="docutils literal notranslate"><span 
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read a graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.konect&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/foodweb-baydry.konect"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -505,7 +505,7 @@ centrality of all nodes, while <code class="docutils literal notranslate"><span 
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.centrality.Closeness at 0x7fc7080b9330&gt;
+&lt;networkit.centrality.Closeness at 0x7f0d982de0b0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -547,7 +547,7 @@ both.</p>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read a graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.konect&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/foodweb-baydry.konect"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -566,7 +566,7 @@ both.</p>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.centrality.ApproxCloseness at 0x7fc7080b8a60&gt;
+&lt;networkit.centrality.ApproxCloseness at 0x7f0d982dd390&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -584,16 +584,16 @@ both.</p>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[(8, 1.0709194274827651),
- (64, 0.9879189180517659),
- (57, 0.9277625080323699),
- (55, 0.8558325794994107),
- (65, 0.5642550594215887),
- (66, 0.5461993399291244),
- (58, 0.5415637641470383),
- (79, 0.5336663771956682),
- (82, 0.5329252521340335),
- (72, 0.5326024007134506)]
+[(8, 1.0714207172967682),
+ (64, 0.9897391792221372),
+ (57, 0.928862076538223),
+ (55, 0.856758805201508),
+ (65, 0.5649764174027975),
+ (66, 0.5467558424197418),
+ (58, 0.5413949064274771),
+ (63, 0.5341233407819919),
+ (82, 0.5329102604854018),
+ (85, 0.532482353383652)]
 </pre></div></div>
 </div>
 </section>
@@ -607,7 +607,7 @@ both.</p>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read a graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.konect&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/foodweb-baydry.konect"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -626,7 +626,7 @@ both.</p>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.centrality.HarmonicCloseness at 0x7fc7080b88e0&gt;
+&lt;networkit.centrality.HarmonicCloseness at 0x7f0d982dd510&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -666,7 +666,7 @@ expresses the number of nodes with the highest centrality scores that the algori
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read a graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.konect&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/foodweb-baydry.konect"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -686,7 +686,7 @@ expresses the number of nodes with the highest centrality scores that the algori
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.centrality.TopHarmonicCloseness at 0x7fc7080b9a50&gt;
+&lt;networkit.centrality.TopHarmonicCloseness at 0x7f0dd8c8d210&gt;
 </pre></div></div>
 </div>
 <p>Unlike all the other algorithms we have seen before, <code class="docutils literal notranslate"><span class="pre">TopHarmonicCloseness</span></code> does not have a <code class="docutils literal notranslate"><span class="pre">ranking</span></code> method which stores a sorted list of all centrality scores. Instead, we have the <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=topknodes#networkit.centrality.TopHarmonicCloseness.topkNodesList">topkNodesList(includeTrail=False)</a> method. By calling this method, we can print the the top <code class="docutils literal notranslate"><span class="pre">k</span></code> central nodes. If <code class="docutils literal notranslate"><span class="pre">includeTrail</span></code> is true the closeness centrality of
@@ -746,7 +746,7 @@ based on two independent heuristics described in the above paper. The parameter 
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read a graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.konect&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/foodweb-baydry.konect"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -766,7 +766,7 @@ based on two independent heuristics described in the above paper. The parameter 
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.centrality.TopCloseness at 0x7fc7080b9c30&gt;
+&lt;networkit.centrality.TopCloseness at 0x7f0d982ddf00&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -802,7 +802,7 @@ based on two independent heuristics described in the above paper. The parameter 
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/wiki-Vote.txt&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">SNAP</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/wiki-Vote.txt"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">SNAP</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -822,7 +822,7 @@ based on two independent heuristics described in the above paper. The parameter 
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.centrality.DegreeCentrality at 0x7fc7080b8820&gt;
+&lt;networkit.centrality.DegreeCentrality at 0x7f0d982dd870&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -867,7 +867,7 @@ implementation of both measures is based on parallel power iteration, a relative
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
-<span class="n">K</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/karate.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<span class="n">K</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/karate.graph"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -888,15 +888,15 @@ implementation of both measures is based on parallel power iteration, a relative
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[(33, 0.3733586076353844),
- (0, 0.3554879627576305),
- (2, 0.317192121260797),
- (32, 0.3086416999617261),
- (1, 0.26595844854862444),
- (8, 0.22740614524354494),
- (13, 0.2264747568434207),
- (3, 0.21117969605316234),
- (31, 0.19103658572493032),
+[(33, 0.37335860763538437),
+ (0, 0.3554879627576304),
+ (2, 0.31719212126079693),
+ (32, 0.308641699961726),
+ (1, 0.2659584485486244),
+ (8, 0.2274061452435449),
+ (13, 0.22647475684342064),
+ (3, 0.2111796960531623),
+ (31, 0.19103658572493037),
  (30, 0.1747599501690216)]
 </pre></div></div>
 </div>
@@ -971,7 +971,7 @@ implementation of both measures is based on parallel power iteration, a relative
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/karate.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/karate.graph"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -991,7 +991,7 @@ implementation of both measures is based on parallel power iteration, a relative
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.centrality.KatzCentrality at 0x7fc7080ba380&gt;
+&lt;networkit.centrality.KatzCentrality at 0x7f0d982df5e0&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1035,7 +1035,7 @@ parameter. The <code class="docutils literal notranslate"><span class="pre">tol<
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/karate.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/karate.graph"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1056,7 +1056,7 @@ parameter. The <code class="docutils literal notranslate"><span class="pre">tol<
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.centrality.SpanningEdgeCentrality at 0x7fc7080b8160&gt;
+&lt;networkit.centrality.SpanningEdgeCentrality at 0x7f0d982dfeb0&gt;
 </pre></div></div>
 </div>
 <p>Using the <a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=scores#networkit.centrality.SpanningEdgeCentrality.scores">scores()</a> method we can get a vector containing the SEC score for each edge in the graph.</p>
@@ -1082,7 +1082,7 @@ parameter. The <code class="docutils literal notranslate"><span class="pre">tol<
  0.28002802664810306,
  0.46491028639734855,
  0.4385934455525938,
- 0.4385942727910844,
+ 0.43859427279108437,
  0.5175438525005359]
 </pre></div></div>
 </div>
@@ -1095,7 +1095,7 @@ parameter. The <code class="docutils literal notranslate"><span class="pre">tol<
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read a graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphtools</span><span class="o">.</span><span class="n">toUndirected</span><span class="p">(</span><span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.konect&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">))</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphtools</span><span class="o">.</span><span class="n">toUndirected</span><span class="p">(</span><span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/foodweb-baydry.konect"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">))</span>
 <span class="n">G</span><span class="o">.</span><span class="n">indexEdges</span><span class="p">()</span>
 <span class="n">apx_span</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">ApproxSpanningEdge</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span>
 <span class="n">_</span><span class="o">=</span><span class="n">apx_span</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
@@ -1116,16 +1116,16 @@ parameter. The <code class="docutils literal notranslate"><span class="pre">tol<
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[0.11149032992036405,
- 0.10200985968904058,
- 0.14144861585134622,
+[0.12135001896094046,
+ 0.09442548350398179,
+ 0.14713689799014032,
  0.12703830109973455,
- 0.12779673871824043,
- 0.12703830109973455,
- 0.12286689419795221,
- 0.12248767538869929,
- 0.11224876753886993,
- 0.11149032992036405]
+ 0.11755783086841107,
+ 0.11376564277588168,
+ 0.12400455062571103,
+ 0.11945392491467577,
+ 0.11262798634812286,
+ 0.12059158134243458]
 </pre></div></div>
 </div>
 </section>
@@ -1140,7 +1140,7 @@ paper</a>. This reduces the running time significantly for most graphs. However,
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/karate.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/karate.graph"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1160,7 +1160,7 @@ paper</a>. This reduces the running time significantly for most graphs. However,
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.centrality.LocalClusteringCoefficient at 0x7fc7080b95d0&gt;
+&lt;networkit.centrality.LocalClusteringCoefficient at 0x7f0d982fc520&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">

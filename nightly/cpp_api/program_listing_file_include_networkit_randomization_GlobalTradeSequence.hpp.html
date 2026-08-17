@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -147,9 +147,9 @@
 
 <span class="cp">#ifndef NETWORKIT_PRIVATE_RANDOMIZATION_GLOBAL_TRADE_SEQUENCE_HPP_</span>
 <span class="cp">#if defined(__clang__) || defined(__GNUG__)</span>
-<span class="cp">#warning &quot;This header file is deprecated. Do not included it directly.&quot;</span>
+<span class="cp">#warning "This header file is deprecated. Do not included it directly."</span>
 <span class="cp">#elif defined(_MSC_VER)</span>
-<span class="cp">#pragma message(&quot;This header file is deprecated. Do not included it directly.&quot;)</span>
+<span class="cp">#pragma message("This header file is deprecated. Do not included it directly.")</span>
 <span class="cp">#endif</span>
 <span class="cp">#endif </span><span class="c1">// NETWORKIT_PRIVATE_RANDOMIZATION_GLOBAL_TRADE_SEQUENCE_HPP_</span>
 
@@ -171,7 +171,7 @@
 
 <span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">LinearCongruentialMap</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">static_assert</span><span class="p">(</span><span class="o">!</span><span class="n">std</span><span class="o">::</span><span class="n">is_signed</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;LinearCongruentialMap requires unsigned types&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">static_assert</span><span class="p">(</span><span class="o">!</span><span class="n">std</span><span class="o">::</span><span class="n">is_signed</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="s">"LinearCongruentialMap requires unsigned types"</span><span class="p">);</span>
 
 <span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">signed_value_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">make_signed</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">type</span><span class="p">;</span>
 <span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">signed_tuple</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">signed_value_type</span><span class="p">,</span><span class="w"> </span><span class="n">signed_value_type</span><span class="p">,</span><span class="w"> </span><span class="n">signed_value_type</span><span class="o">&gt;</span><span class="p">;</span>
@@ -212,8 +212,8 @@
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sampleParameters</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">mt19937_64</span><span class="w"> </span><span class="o">&amp;</span><span class="n">prng</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">value_type</span><span class="w"> </span><span class="n">max_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">value_type</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">max_a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;WARNING: Reduce randomness of hash function to avoid integer &quot;</span>
-<span class="w">                         </span><span class="s">&quot;precision issues</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"WARNING: Reduce randomness of hash function to avoid integer "</span>
+<span class="w">                         </span><span class="s">"precision issues</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">uniform_int_distribution</span><span class="o">&lt;</span><span class="n">value_type</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">min</span><span class="o">&lt;</span><span class="n">value_type</span><span class="o">&gt;</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">max_a</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">}(</span><span class="n">prng</span><span class="p">);</span>
@@ -280,7 +280,7 @@
 
 <span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">FixedLinearCongruentialMap</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">static_assert</span><span class="p">(</span><span class="o">!</span><span class="n">std</span><span class="o">::</span><span class="n">is_signed</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;LinearCongruentialMap requires unsigned types&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">static_assert</span><span class="p">(</span><span class="o">!</span><span class="n">std</span><span class="o">::</span><span class="n">is_signed</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="s">"LinearCongruentialMap requires unsigned types"</span><span class="p">);</span>
 
 <span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">signed_value_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">make_signed</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;::</span><span class="n">type</span><span class="p">;</span>
 <span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">signed_tuple</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="n">signed_value_type</span><span class="p">,</span><span class="w"> </span><span class="n">signed_value_type</span><span class="p">,</span><span class="w"> </span><span class="n">signed_value_type</span><span class="o">&gt;</span><span class="p">;</span>
@@ -320,7 +320,7 @@
 
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sampleParameters</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">mt19937_64</span><span class="w"> </span><span class="o">&amp;</span><span class="n">prng</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">p</span><span class="p">)</span>
-<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;Support only up to 2147483646 nodes&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">"Support only up to 2147483646 nodes"</span><span class="p">);</span>
 
 <span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">uniform_int_distribution</span><span class="o">&lt;</span><span class="n">value_type</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">}(</span><span class="n">prng</span><span class="p">);</span>
 <span class="w">        </span><span class="n">ainv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">value_type</span><span class="o">&gt;</span><span class="p">(</span>

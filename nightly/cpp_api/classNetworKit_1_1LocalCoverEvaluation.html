@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -174,13 +174,13 @@
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit20LocalCoverEvaluationE">
 <span class="target" id="classNetworKit_1_1LocalCoverEvaluation"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LocalCoverEvaluation</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1LocalCommunityEvaluation.html#_CPPv4N9NetworKit24LocalCommunityEvaluationE" title="NetworKit::LocalCommunityEvaluation"><span class="n"><span class="pre">LocalCommunityEvaluation</span></span></a><a class="headerlink" href="#_CPPv4N9NetworKit20LocalCoverEvaluationE" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Virtual base class of all evaluation methods for a single <a class="reference internal" href="classNetworKit_1_1Cover.html#classNetworKit_1_1Cover"><span class="std std-ref">Cover</span></a> which is based on the evaluation of single clusters. This is the base class for Covers. </p>
+<dd><p>Virtual base class of all evaluation methods for a single Cover which is based on the evaluation of single clusters. This is the base class for Covers. </p>
 <p>Subclassed by <a class="reference internal" href="classNetworKit_1_1CoverF1Similarity.html#classNetworKit_1_1CoverF1Similarity"><span class="std std-ref">NetworKit::CoverF1Similarity</span></a>, <a class="reference internal" href="classNetworKit_1_1CoverHubDominance.html#classNetworKit_1_1CoverHubDominance"><span class="std std-ref">NetworKit::CoverHubDominance</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit20LocalCoverEvaluation20LocalCoverEvaluationERK5GraphRK5Cover">
-<span class="target" id="classNetworKit_1_1LocalCoverEvaluation_1ad14bf5c18e6afefa08cb076225a92274"></span><span class="sig-name descname"><span class="n"><span class="pre">LocalCoverEvaluation</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Cover.html#_CPPv4N9NetworKit5CoverE" title="NetworKit::Cover"><span class="n"><span class="pre">Cover</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">C</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit20LocalCoverEvaluation20LocalCoverEvaluationERK5GraphRK5Cover" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1LocalCoverEvaluation_1ad14bf5c18e6afefa08cb076225a92274"></span><span class="sig-name descname"><span class="n"><span class="pre">LocalCoverEvaluation</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1a7a811ec8454ae220dec240d7bde057cf.html#_CPPv4N9NetworKit5CoverE" title="NetworKit::Cover"><span class="n"><span class="pre">Cover</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">C</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit20LocalCoverEvaluation20LocalCoverEvaluationERK5GraphRK5Cover" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Initialize the cover evaluation method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -202,7 +202,7 @@
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit20LocalCoverEvaluation1CE">
-<span class="target" id="classNetworKit_1_1LocalCoverEvaluation_1a7e720a7a3f73026b944a937d4dfa2cd5"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Cover.html#_CPPv4N9NetworKit5CoverE" title="NetworKit::Cover"><span class="n"><span class="pre">Cover</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">C</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit20LocalCoverEvaluation1CE" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1LocalCoverEvaluation_1a7e720a7a3f73026b944a937d4dfa2cd5"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1a7a811ec8454ae220dec240d7bde057cf.html#_CPPv4N9NetworKit5CoverE" title="NetworKit::Cover"><span class="n"><span class="pre">Cover</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">C</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit20LocalCoverEvaluation1CE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>

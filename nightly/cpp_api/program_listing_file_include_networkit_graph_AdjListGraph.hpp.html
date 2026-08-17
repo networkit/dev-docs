@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -378,7 +378,7 @@
 
 <span class="w">    </span><span class="cm">/* Compile-time callable dispatcher.</span>
 <span class="cm">     *</span>
-<span class="cm">     * Aux::FunctionTraits lets us inspect a callable&#39;s arity and parameter types</span>
+<span class="cm">     * Aux::FunctionTraits lets us inspect a callable's arity and parameter types</span>
 <span class="cm">     * so we can invoke it with the best matching edge callback signature.</span>
 <span class="cm">     * SafeArg prevents out-of-bounds access to Traits::arg&lt;N&gt; by returning void</span>
 <span class="cm">     * when the callable has fewer than N + 1 parameters.</span>
@@ -436,8 +436,8 @@
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="k">static_assert</span><span class="p">(</span><span class="o">!</span><span class="n">std</span><span class="o">::</span><span class="n">is_same_v</span><span class="o">&lt;</span><span class="n">F</span><span class="p">,</span><span class="w"> </span><span class="n">F</span><span class="o">&gt;</span><span class="p">,</span>
-<span class="w">                          </span><span class="s">&quot;Your lambda does not support the required parameters or the parameters &quot;</span>
-<span class="w">                          </span><span class="s">&quot;have the wrong type.&quot;</span><span class="p">);</span>
+<span class="w">                          </span><span class="s">"Your lambda does not support the required parameters or the parameters "</span>
+<span class="w">                          </span><span class="s">"have the wrong type."</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 
@@ -552,7 +552,7 @@
 
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">G</span><span class="p">.</span><span class="n">isDirected</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">directed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="c1">// G.inEdges might be empty (if G is undirected), but</span>
-<span class="w">            </span><span class="c1">// that&#39;s fine</span>
+<span class="w">            </span><span class="c1">// that's fine</span>
 <span class="w">            </span><span class="n">inEdges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">G</span><span class="p">.</span><span class="n">inEdges</span><span class="p">;</span>
 <span class="w">            </span><span class="n">outEdges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">G</span><span class="p">.</span><span class="n">outEdges</span><span class="p">;</span>
 <span class="w">            </span><span class="n">edgeAttributeMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AttributeMap</span><span class="p">(</span><span class="n">G</span><span class="p">.</span><span class="n">edgeAttributeMap</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">);</span>
@@ -589,8 +589,8 @@
 
 <span class="w">            </span><span class="c1">// for edge attributes, it is not well defined how they should be comined - we will skip</span>
 <span class="w">            </span><span class="c1">// that step and warn the user</span>
-<span class="w">            </span><span class="n">WARN</span><span class="p">(</span><span class="s">&quot;Edge attributes are not preserved when converting from directed to undirected &quot;</span>
-<span class="w">                 </span><span class="s">&quot;graphs. The resulting graph will have empty edge attributes.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">WARN</span><span class="p">(</span><span class="s">"Edge attributes are not preserved when converting from directed to undirected "</span>
+<span class="w">                 </span><span class="s">"graphs. The resulting graph will have empty edge attributes."</span><span class="p">);</span>
 
 <span class="w">            </span><span class="n">outEdges</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">z</span><span class="p">);</span>
 <span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">weighted</span><span class="p">)</span>
@@ -645,7 +645,7 @@
 <span class="w">                        </span><span class="p">}</span>
 <span class="w">                        </span><span class="k">break</span><span class="p">;</span>
 <span class="w">                    </span><span class="p">}</span>
-<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">alreadyPresent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// an equivalent out edge wasn&#39;t present so we add it</span>
+<span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">alreadyPresent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// an equivalent out edge wasn't present so we add it</span>
 <span class="w">                        </span><span class="n">outEdges</span><span class="p">[</span><span class="n">u</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
 <span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">weighted</span><span class="p">)</span>
 <span class="w">                            </span><span class="n">outEdgeWeights</span><span class="p">[</span><span class="n">u</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">G</span><span class="p">.</span><span class="n">isWeighted</span><span class="p">()</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">G</span><span class="p">.</span><span class="n">inEdgeWeights</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
@@ -662,8 +662,8 @@
 <span class="w">            </span><span class="c1">// generally we can can copy G.out stuff into our in stuff</span>
 
 <span class="w">            </span><span class="c1">// for edge attributes, we currently do not have a way to iterate them for duplication</span>
-<span class="w">            </span><span class="n">WARN</span><span class="p">(</span><span class="s">&quot;Edge attributes are currently not preserved when converting from undirected to &quot;</span>
-<span class="w">                 </span><span class="s">&quot;directed graphs.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">WARN</span><span class="p">(</span><span class="s">"Edge attributes are currently not preserved when converting from undirected to "</span>
+<span class="w">                 </span><span class="s">"directed graphs."</span><span class="p">);</span>
 
 <span class="w">            </span><span class="n">inEdges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">G</span><span class="p">.</span><span class="n">outEdges</span><span class="p">;</span>
 <span class="w">            </span><span class="n">outEdges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">G</span><span class="p">.</span><span class="n">outEdges</span><span class="p">;</span>
@@ -890,7 +890,7 @@
 
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">isIsolated</span><span class="p">(</span><span class="n">NodeT</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">exists</span><span class="p">[</span><span class="n">v</span><span class="p">])</span>
-<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;Error, the node does not exist!&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">"Error, the node does not exist!"</span><span class="p">);</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">outEdges</span><span class="p">[</span><span class="n">v</span><span class="p">].</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">directed</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">inEdges</span><span class="p">[</span><span class="n">v</span><span class="p">].</span><span class="n">empty</span><span class="p">());</span>
 <span class="w">    </span><span class="p">}</span>
 
@@ -959,12 +959,12 @@
 <span class="w">    </span><span class="cm">/* DYNAMICS */</span>
 
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">timeStep</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">WARN</span><span class="p">(</span><span class="s">&quot;Graph::timeStep should not be used and will be deprecated in the future.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">WARN</span><span class="p">(</span><span class="s">"Graph::timeStep should not be used and will be deprecated in the future."</span><span class="p">);</span>
 <span class="w">        </span><span class="o">++</span><span class="n">t</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="n">count</span><span class="w"> </span><span class="nf">time</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">WARN</span><span class="p">(</span><span class="s">&quot;Graph::time should not be used and will be deprecated in the future.&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">WARN</span><span class="p">(</span><span class="s">"Graph::time should not be used and will be deprecated in the future."</span><span class="p">);</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">t</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 

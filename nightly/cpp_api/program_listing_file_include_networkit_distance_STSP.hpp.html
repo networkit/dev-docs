@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -159,20 +159,20 @@
 <span class="w">    </span><span class="n">STSP</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="n">target</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">storePred</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">)</span>
 <span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">G</span><span class="p">(</span><span class="o">&amp;</span><span class="n">G</span><span class="p">),</span><span class="w"> </span><span class="n">source</span><span class="p">(</span><span class="n">source</span><span class="p">),</span><span class="w"> </span><span class="n">target</span><span class="p">(</span><span class="n">target</span><span class="p">),</span><span class="w"> </span><span class="n">storePred</span><span class="p">(</span><span class="n">storePred</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">G</span><span class="p">.</span><span class="n">hasNode</span><span class="p">(</span><span class="n">source</span><span class="p">))</span>
-<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;Error: source node not in the graph!&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">"Error: source node not in the graph!"</span><span class="p">);</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">G</span><span class="p">.</span><span class="n">hasNode</span><span class="p">(</span><span class="n">target</span><span class="p">))</span>
-<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;Error: target node not in the graph!&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">"Error: target node not in the graph!"</span><span class="p">);</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">source</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">target</span><span class="p">)</span>
-<span class="w">            </span><span class="n">WARN</span><span class="p">(</span><span class="s">&quot;Source and target nodes are equal!&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">WARN</span><span class="p">(</span><span class="s">"Source and target nodes are equal!"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">InputIt</span><span class="o">&gt;</span>
 <span class="w">    </span><span class="n">STSP</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="n">InputIt</span><span class="w"> </span><span class="n">targetsFirst</span><span class="p">,</span><span class="w"> </span><span class="n">InputIt</span><span class="w"> </span><span class="n">targetsLast</span><span class="p">)</span>
 <span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">G</span><span class="p">(</span><span class="o">&amp;</span><span class="n">G</span><span class="p">),</span><span class="w"> </span><span class="n">source</span><span class="p">(</span><span class="n">source</span><span class="p">),</span><span class="w"> </span><span class="n">targets</span><span class="p">(</span><span class="n">targetsFirst</span><span class="p">,</span><span class="w"> </span><span class="n">targetsLast</span><span class="p">),</span><span class="w"> </span><span class="n">storePred</span><span class="p">(</span><span class="nb">false</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">G</span><span class="p">.</span><span class="n">hasNode</span><span class="p">(</span><span class="n">source</span><span class="p">))</span>
-<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;Error: source node not in the graph!&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">"Error: source node not in the graph!"</span><span class="p">);</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">std</span><span class="o">::</span><span class="n">all_of</span><span class="p">(</span><span class="n">targetsFirst</span><span class="p">,</span><span class="w"> </span><span class="n">targetsLast</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="n">G</span><span class="p">](</span><span class="n">node</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">G</span><span class="p">.</span><span class="n">hasNode</span><span class="p">(</span><span class="n">u</span><span class="p">);</span><span class="w"> </span><span class="p">}))</span>
-<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;Error: target node not in the graph!&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">"Error: target node not in the graph!"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getPath</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
@@ -235,7 +235,7 @@
 
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">checkStorePredecessors</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">storePred</span><span class="p">)</span>
-<span class="w">            </span><span class="n">WARN</span><span class="p">(</span><span class="s">&quot;Predecessors not stored.&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">WARN</span><span class="p">(</span><span class="s">"Predecessors not stored."</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>

@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -260,7 +260,7 @@
 <span class="w">            </span><span class="c1">// Does not increase the complexity, since we have to check these points anyway</span>
 <span class="w">            </span><span class="n">slab</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">slab</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="n">last</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="c1">// Case 2: We have &#39;forward&#39; overlap at 2pi, that is maxTheta &gt; 2pi</span>
+<span class="w">        </span><span class="c1">// Case 2: We have 'forward' overlap at 2pi, that is maxTheta &gt; 2pi</span>
 <span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">maxTheta</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">PI</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="c1">// 1. Get points from minTheta to 2pi</span>
 <span class="w">            </span><span class="n">low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">lower_bound</span><span class="p">(</span><span class="n">bandAngles</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">bandAngles</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">minTheta</span><span class="p">);</span>
@@ -277,7 +277,7 @@
 <span class="w">            </span><span class="k">auto</span><span class="w"> </span><span class="n">last2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">band</span><span class="p">.</span><span class="n">begin</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">high</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">bandAngles</span><span class="p">.</span><span class="n">begin</span><span class="p">());</span>
 <span class="w">            </span><span class="n">slab</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">slab</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="n">first2</span><span class="p">,</span><span class="w"> </span><span class="n">last2</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="c1">// Case 3: We have &#39;backward&#39; overlap at 2pi, that is minTheta &lt; 0</span>
+<span class="w">        </span><span class="c1">// Case 3: We have 'backward' overlap at 2pi, that is minTheta &lt; 0</span>
 <span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">minTheta</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="c1">// 1. Get points from 2pi + minTheta to 2pi</span>
 <span class="w">            </span><span class="n">minTheta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">PI</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">minTheta</span><span class="p">;</span>

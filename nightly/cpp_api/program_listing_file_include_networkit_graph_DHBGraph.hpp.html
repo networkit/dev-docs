@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -355,11 +355,11 @@
 <span class="w">        </span><span class="c1">// the strange condition is used in order to delay the evaluation of the</span>
 <span class="w">        </span><span class="c1">// static assert to the moment when this function is actually used</span>
 <span class="w">        </span><span class="k">static_assert</span><span class="p">(</span><span class="o">!</span><span class="n">std</span><span class="o">::</span><span class="n">is_same</span><span class="o">&lt;</span><span class="n">F</span><span class="p">,</span><span class="w"> </span><span class="n">F</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span>
-<span class="w">                      </span><span class="s">&quot;Your lambda does not support the required parameters or the &quot;</span>
-<span class="w">                      </span><span class="s">&quot;parameters have the wrong type.&quot;</span><span class="p">);</span>
+<span class="w">                      </span><span class="s">"Your lambda does not support the required parameters or the "</span>
+<span class="w">                      </span><span class="s">"parameters have the wrong type."</span><span class="p">);</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">declval</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Aux</span><span class="o">::</span><span class="n">FunctionTraits</span><span class="o">&lt;</span><span class="n">F</span><span class="o">&gt;::</span><span class="n">result_type</span><span class="o">&gt;</span><span class="p">();</span><span class="w"> </span><span class="c1">// use the correct</span>
 <span class="w">                                                                             </span><span class="c1">// return type (this</span>
-<span class="w">                                                                             </span><span class="c1">// won&#39;t compile)</span>
+<span class="w">                                                                             </span><span class="c1">// won't compile)</span>
 <span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">F</span><span class="p">,</span>
@@ -577,13 +577,13 @@
 
 <span class="w">        </span><span class="n">NeighborIterator</span><span class="w"> </span><span class="nf">begin</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">assert</span><span class="p">(</span><span class="n">G</span><span class="p">);</span>
-<span class="w">            </span><span class="c1">// in DHB we don&#39;t support iterator over InEdges = true;</span>
+<span class="w">            </span><span class="c1">// in DHB we don't support iterator over InEdges = true;</span>
 <span class="w">            </span><span class="k">static_assert</span><span class="p">(</span><span class="o">!</span><span class="n">InEdges</span><span class="p">);</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">NeighborIterator</span><span class="p">(</span><span class="n">G</span><span class="o">-&gt;</span><span class="n">m_dhb_graph</span><span class="p">.</span><span class="n">neighbors</span><span class="p">(</span><span class="n">u</span><span class="p">).</span><span class="n">begin</span><span class="p">());</span>
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="n">NeighborIterator</span><span class="w"> </span><span class="nf">end</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="c1">// in DHB we don&#39;t support iterator over InEdges = true;</span>
+<span class="w">            </span><span class="c1">// in DHB we don't support iterator over InEdges = true;</span>
 <span class="w">            </span><span class="k">static_assert</span><span class="p">(</span><span class="o">!</span><span class="n">InEdges</span><span class="p">);</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">NeighborIterator</span><span class="p">(</span><span class="n">G</span><span class="o">-&gt;</span><span class="n">m_dhb_graph</span><span class="p">.</span><span class="n">neighbors</span><span class="p">(</span><span class="n">u</span><span class="p">).</span><span class="n">end</span><span class="p">());</span>
 <span class="w">        </span><span class="p">}</span>
@@ -603,14 +603,14 @@
 
 <span class="w">        </span><span class="n">NeighborWeightIterator</span><span class="w"> </span><span class="nf">begin</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">assert</span><span class="p">(</span><span class="n">G</span><span class="p">);</span>
-<span class="w">            </span><span class="c1">// in DHB we don&#39;t support iterator over InEdges = true;</span>
+<span class="w">            </span><span class="c1">// in DHB we don't support iterator over InEdges = true;</span>
 <span class="w">            </span><span class="k">static_assert</span><span class="p">(</span><span class="o">!</span><span class="n">InEdges</span><span class="p">);</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">NeighborWeightIterator</span><span class="p">(</span><span class="n">G</span><span class="o">-&gt;</span><span class="n">m_dhb_graph</span><span class="p">.</span><span class="n">neighbors</span><span class="p">(</span><span class="n">u</span><span class="p">).</span><span class="n">begin</span><span class="p">());</span>
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="n">NeighborWeightIterator</span><span class="w"> </span><span class="nf">end</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">assert</span><span class="p">(</span><span class="n">G</span><span class="p">);</span>
-<span class="w">            </span><span class="c1">// in DHB we don&#39;t support iterator over InEdges = true;</span>
+<span class="w">            </span><span class="c1">// in DHB we don't support iterator over InEdges = true;</span>
 <span class="w">            </span><span class="k">static_assert</span><span class="p">(</span><span class="o">!</span><span class="n">InEdges</span><span class="p">);</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">NeighborWeightIterator</span><span class="p">(</span><span class="n">G</span><span class="o">-&gt;</span><span class="n">m_dhb_graph</span><span class="p">.</span><span class="n">neighbors</span><span class="p">(</span><span class="n">u</span><span class="p">).</span><span class="n">end</span><span class="p">());</span>
 <span class="w">        </span><span class="p">}</span>
@@ -643,7 +643,7 @@
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">copy_directed_graph_to_undirected</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="c1">// insert bidirectional edges if they don&#39;t exist</span>
+<span class="w">            </span><span class="c1">// insert bidirectional edges if they don't exist</span>
 <span class="w">            </span><span class="n">removeAllEdges</span><span class="p">();</span>
 <span class="w">            </span><span class="n">G</span><span class="p">.</span><span class="n">forEdges</span><span class="p">([</span><span class="o">&amp;</span><span class="p">](</span><span class="n">node</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">edgeweight</span><span class="w"> </span><span class="n">ew</span><span class="p">,</span><span class="w"> </span><span class="n">edgeid</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">addEdge</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">ew</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">);</span><span class="w"> </span><span class="p">});</span>
 <span class="w">        </span><span class="p">}</span>
@@ -1099,7 +1099,7 @@
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">neighbors</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">neighbors</span><span class="p">.</span><span class="n">end</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">it</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">dhb</span><span class="o">::</span><span class="n">Vertex</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">vertex</span><span class="p">();</span>
 <span class="w">            </span><span class="c1">// if the graph is not directed, only call the handle on edges that u &gt; v.</span>
-<span class="w">            </span><span class="c1">// So we don&#39;t want to use this sometimes, when we want to iterate all edges in an</span>
+<span class="w">            </span><span class="c1">// So we don't want to use this sometimes, when we want to iterate all edges in an</span>
 <span class="w">            </span><span class="c1">// undirected graph</span>
 <span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">useEdgeInIteration</span><span class="o">&lt;</span><span class="n">graphIsDirected</span><span class="o">&gt;</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                </span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">[</span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getDHBEdgeData</span><span class="o">&lt;</span><span class="n">hasWeights</span><span class="p">,</span><span class="w"> </span><span class="n">graphHasEdgeIds</span><span class="o">&gt;</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="p">);</span>

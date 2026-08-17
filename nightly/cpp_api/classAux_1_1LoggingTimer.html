@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -170,8 +170,8 @@
 <dd><p>A timer for running time measurements within a scope.</p>
 <p>Same as <a class="reference internal" href="classAux_1_1Timer.html#classAux_1_1Timer"><span class="std std-ref">Timer</span></a> but automatically starts on construction and report on destruction.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-   <span class="n">Aux</span><span class="p">::</span><span class="n">ScopedTimer</span><span class="p">(</span><span class="s2">&quot;Algorithm A&quot;</span><span class="p">);</span> <span class="o">//</span> <span class="n">WRONG</span><span class="p">;</span> <span class="n">will</span> <span class="n">directly</span> <span class="n">report</span> <span class="n">without</span> <span class="n">measuring</span> <span class="n">the</span> <span class="n">scope</span>
-   <span class="n">Aux</span><span class="p">::</span><span class="n">ScopedTimer</span> <span class="n">someName</span><span class="p">(</span><span class="s2">&quot;Algorithm B&quot;</span><span class="p">);</span> <span class="o">//</span> <span class="n">OK</span><span class="p">:</span> <span class="n">the</span> <span class="n">named</span> <span class="n">instance</span> <span class="ow">is</span> <span class="n">valid</span> <span class="n">until</span> <span class="n">the</span> <span class="n">end</span> <span class="n">of</span>
+   <span class="n">Aux</span><span class="p">::</span><span class="n">ScopedTimer</span><span class="p">(</span><span class="s2">"Algorithm A"</span><span class="p">);</span> <span class="o">//</span> <span class="n">WRONG</span><span class="p">;</span> <span class="n">will</span> <span class="n">directly</span> <span class="n">report</span> <span class="n">without</span> <span class="n">measuring</span> <span class="n">the</span> <span class="n">scope</span>
+   <span class="n">Aux</span><span class="p">::</span><span class="n">ScopedTimer</span> <span class="n">someName</span><span class="p">(</span><span class="s2">"Algorithm B"</span><span class="p">);</span> <span class="o">//</span> <span class="n">OK</span><span class="p">:</span> <span class="n">the</span> <span class="n">named</span> <span class="n">instance</span> <span class="ow">is</span> <span class="n">valid</span> <span class="n">until</span> <span class="n">the</span> <span class="n">end</span> <span class="n">of</span>
 <span class="n">the</span> <span class="n">scope</span>
    <span class="o">//</span> <span class="n">some</span> <span class="n">expensive</span> <span class="n">operations</span>
 

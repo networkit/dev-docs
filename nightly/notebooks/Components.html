@@ -103,14 +103,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -228,7 +228,7 @@
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/hep-th.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/hep-th.graph"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -247,7 +247,7 @@
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run algorithm</span>
 <span class="n">cc</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;number of components &quot;</span><span class="p">,</span> <span class="n">cc</span><span class="o">.</span><span class="n">numberOfComponents</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"number of components "</span><span class="p">,</span> <span class="n">cc</span><span class="o">.</span><span class="n">numberOfComponents</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -265,9 +265,9 @@ number of components  1332
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get components as unordered sets of nodes</span>
 <span class="n">v</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;component of node &quot;</span><span class="p">,</span> <span class="n">v</span> <span class="p">,</span> <span class="s2">&quot;: &quot;</span> <span class="p">,</span> <span class="n">cc</span><span class="o">.</span><span class="n">componentOfNode</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"component of node "</span><span class="p">,</span> <span class="n">v</span> <span class="p">,</span> <span class="s2">": "</span> <span class="p">,</span> <span class="n">cc</span><span class="o">.</span><span class="n">componentOfNode</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
 
-<span class="c1"># Get all nodes in in v&#39;s component</span>
+<span class="c1"># Get all nodes in in v's component</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">cc</span><span class="o">.</span><span class="n">getComponents</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -302,7 +302,7 @@ renumbered; otherwise they will not be changed.</p>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/karate.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/karate.graph"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -321,7 +321,7 @@ renumbered; otherwise they will not be changed.</p>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Run algorithm</span>
 <span class="n">bicc</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;number of components: &quot;</span><span class="p">,</span> <span class="n">bicc</span><span class="o">.</span><span class="n">numberOfComponents</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"number of components: "</span><span class="p">,</span> <span class="n">bicc</span><span class="o">.</span><span class="n">numberOfComponents</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -359,7 +359,7 @@ number of components:  3
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/jazz2_directed.gml&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GML</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/jazz2_directed.gml"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">GML</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -376,7 +376,7 @@ number of components:  3
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wcc</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;number of components: &quot;</span><span class="p">,</span> <span class="n">wcc</span><span class="o">.</span><span class="n">numberOfComponents</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"number of components: "</span><span class="p">,</span> <span class="n">wcc</span><span class="o">.</span><span class="n">numberOfComponents</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -415,7 +415,7 @@ mandatory parameter.</p>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/foodweb-baydry.konect&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/foodweb-baydry.konect"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">KONECT</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -433,7 +433,7 @@ mandatory parameter.</p>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Run recursively</span>
 <span class="n">scc</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;number of components: &quot;</span><span class="p">,</span> <span class="n">scc</span><span class="o">.</span><span class="n">numberOfComponents</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"number of components: "</span><span class="p">,</span> <span class="n">scc</span><span class="o">.</span><span class="n">numberOfComponents</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -455,7 +455,7 @@ number of components:  26
 
 <span class="c1"># Print every member of each component</span>
 <span class="k">for</span> <span class="n">cmp</span> <span class="ow">in</span> <span class="n">indexes</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Members of component </span><span class="si">{}</span><span class="s2"> : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cmp</span><span class="p">,</span> <span class="n">partition</span><span class="o">.</span><span class="n">getMembers</span><span class="p">(</span><span class="n">cmp</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Members of component </span><span class="si">{}</span><span class="s2"> : </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cmp</span><span class="p">,</span> <span class="n">partition</span><span class="o">.</span><span class="n">getMembers</span><span class="p">(</span><span class="n">cmp</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>

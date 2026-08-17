@@ -103,14 +103,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -232,7 +232,7 @@
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/karate.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/karate.graph"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
 
 <span class="c1"># Initialize algorithm</span>
 <span class="n">aai</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">linkprediction</span><span class="o">.</span><span class="n">AdamicAdarIndex</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
@@ -277,7 +277,7 @@ setting <code class="docutils literal notranslate"><span class="pre">norm</span>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-5.793742084846652e-07
+4.889934128693763e-07
 </pre></div></div>
 </div>
 </section>
@@ -451,7 +451,7 @@ returned.</p>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read graph</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/jazz.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">graphio</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/jazz.graph"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
 
 <span class="c1"># Sample graph</span>
 <span class="n">trainingGraph</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">linkprediction</span><span class="o">.</span><span class="n">RandomLinkSampler</span><span class="o">.</span><span class="n">byPercentage</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">)</span>
@@ -473,11 +473,10 @@ returned.</p>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-((3, 15), 5.6749999999999995e-09)
-((15, 114), 1.890625e-09)
-((15, 123), 8.175e-09)
-((15, 162), 1.3128750000000002e-07)
-((15, 185), 5.081656250000001e-07)
+((3, 47), 5.6749999999999995e-09)
+((37, 40), 3.863093750000001e-07)
+((47, 101), 6.934375000000001e-09)
+((47, 123), 8.175e-09)
 </pre></div></div>
 </div>
 </section>

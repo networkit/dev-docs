@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -175,7 +175,7 @@
 <span class="w">        </span><span class="n">Interval</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
 <span class="w">        </span><span class="n">Interval</span><span class="p">(</span><span class="n">edgeid</span><span class="w"> </span><span class="n">lowId</span><span class="p">,</span><span class="w"> </span><span class="n">edgeid</span><span class="w"> </span><span class="n">highId</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">low</span><span class="p">(</span><span class="n">lowId</span><span class="p">),</span><span class="w"> </span><span class="n">high</span><span class="p">(</span><span class="n">highId</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
 
-<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">isEmpty</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">low</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">noneEdgeId</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">high</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">noneEdgeId</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="nf">isEmpty</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">low</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">noneEdgeId</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">high</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">noneEdgeId</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 
 <span class="w">        </span><span class="k">friend</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Interval</span><span class="w"> </span><span class="o">&amp;</span><span class="n">lhs</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Interval</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">lhs</span><span class="p">.</span><span class="n">low</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">low</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">lhs</span><span class="p">.</span><span class="n">high</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">high</span><span class="p">;</span>
@@ -225,7 +225,7 @@
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">edgeid</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parentEdgeIds</span><span class="p">;</span><span class="w"> </span><span class="c1">// parent edge for each node (noneEdgeId if root)</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parentNodes</span><span class="p">;</span><span class="w">     </span><span class="c1">// parent node for each node (none if root)</span>
 
-<span class="w">    </span><span class="c1">// For each *underlying* edge ID, remember the DFS orientation&#39;s head (v)</span>
+<span class="w">    </span><span class="c1">// For each *underlying* edge ID, remember the DFS orientation's head (v)</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">edgeEndpoints</span><span class="p">;</span><span class="w"> </span><span class="c1">// edgeEndpoints[eid] = v in oriented DFS edge (u -&gt; v)</span>
 
 <span class="w">    </span><span class="c1">// Conflict stack</span>

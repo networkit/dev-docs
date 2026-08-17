@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -183,12 +183,12 @@
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.graph.</span></span><span class="sig-name descname"><span class="pre">EdgeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typedEdgeAttribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.EdgeAttribute" title="Link to this definition">¶</a></dt>
 <dd><p>Generic class for edge attributes returned by networkit.graph.attachEdgeAttribute().
 Example of attaching an int attribute to a graph g:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>att = g.attachEdgeAttribute(&quot;name&quot;, int)`
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>att = g.attachEdgeAttribute("name", int)`
 </pre></div>
 </div>
 <p>Set/get attributes of a single edgeId ‘eid’ with the [] operator:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">att</span><span class="p">[</span><span class="n">eid</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">att_val</span> <span class="o">=</span> <span class="n">att</span><span class="p">[</span><span class="n">eid</span><span class="p">]</span> <span class="c1"># &#39;att_val&#39; is 0</span>
+<span class="n">att_val</span> <span class="o">=</span> <span class="n">att</span><span class="p">[</span><span class="n">eid</span><span class="p">]</span> <span class="c1"># 'att_val' is 0</span>
 </pre></div>
 </div>
 <p>Iterate over all the values of an attribute:</p>
@@ -308,7 +308,7 @@ the id of the last node added.</p>
 <dt class="sig sig-object py" id="networkit.graph.Graph.attachEdgeAttribute">
 <span class="sig-name descname"><span class="pre">attachEdgeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofType</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.attachEdgeAttribute" title="Link to this definition">¶</a></dt>
 <dd><p>Attaches an edge attribute to the graph and returns it.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">attachEdgeAttribute</span><span class="p">(</span><span class="s2">&quot;attributeIdentifier&quot;</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">attachEdgeAttribute</span><span class="p">(</span><span class="s2">"attributeIdentifier"</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>All values are initially undefined for existing edges values can be set/get by</p>
@@ -340,7 +340,7 @@ its attributes undefined</p>
 <dt class="sig sig-object py" id="networkit.graph.Graph.attachNodeAttribute">
 <span class="sig-name descname"><span class="pre">attachNodeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofType</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.attachNodeAttribute" title="Link to this definition">¶</a></dt>
 <dd><p>Attaches a node attribute to the graph and returns it.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">attachNodeAttribute</span><span class="p">(</span><span class="s2">&quot;attributeIdentifier&quot;</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">attachNodeAttribute</span><span class="p">(</span><span class="s2">"attributeIdentifier"</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>All values are initially undefined for existing nodes values can be set/get
@@ -584,7 +584,7 @@ Parameter list refering to (node id, node id).</p>
 <dt class="sig sig-object py" id="networkit.graph.Graph.getEdgeAttribute">
 <span class="sig-name descname"><span class="pre">getEdgeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofType</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.getEdgeAttribute" title="Link to this definition">¶</a></dt>
 <dd><p>Gets an edge attribute that is already attached to the graph and returns it.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">getEdgeAttribute</span><span class="p">(</span><span class="s2">&quot;attributeIdentifier&quot;</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">getEdgeAttribute</span><span class="p">(</span><span class="s2">"attributeIdentifier"</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
 </pre></div>
 </div>
 <p class="rubric">Notes</p>
@@ -609,7 +609,7 @@ Parameter list refering to (node id, node id).</p>
 <dt class="sig sig-object py" id="networkit.graph.Graph.getNodeAttribute">
 <span class="sig-name descname"><span class="pre">getNodeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofType</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.getNodeAttribute" title="Link to this definition">¶</a></dt>
 <dd><p>Gets a node attribute that is already attached to the graph and returns it.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">getNodeAttribute</span><span class="p">(</span><span class="s2">&quot;attributeIdentifier&quot;</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">getNodeAttribute</span><span class="p">(</span><span class="s2">"attributeIdentifier"</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
 </pre></div>
 </div>
 <p class="rubric">Notes</p>
@@ -1161,12 +1161,12 @@ of the graph. For better performance, it is advised to correctly set the number 
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.graph.</span></span><span class="sig-name descname"><span class="pre">NodeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typedNodeAttribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.NodeAttribute" title="Link to this definition">¶</a></dt>
 <dd><p>Generic class for node attributes returned by networkit.graph.attachNodeAttribute().
 Example of attaching an int attribute to a graph g:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>att = g.attachNodeAttribute(&quot;name&quot;, int)`
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>att = g.attachNodeAttribute("name", int)`
 </pre></div>
 </div>
 <p>Set/get attributes of a single node ‘u’ with the [] operator:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">att</span><span class="p">[</span><span class="n">u</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">att_val</span> <span class="o">=</span> <span class="n">att</span><span class="p">[</span><span class="n">u</span><span class="p">]</span> <span class="c1"># &#39;att_val&#39; is 0</span>
+<span class="n">att_val</span> <span class="o">=</span> <span class="n">att</span><span class="p">[</span><span class="n">u</span><span class="p">]</span> <span class="c1"># 'att_val' is 0</span>
 </pre></div>
 </div>
 <p>Iterate over all the values of an attribute:</p>

@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -151,7 +151,7 @@
 <span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">neighborConnections</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">        </span><span class="n">G</span><span class="o">-&gt;</span><span class="n">forNeighborsOf</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="n">node</span><span class="w"> </span><span class="n">uNeighbor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">G</span><span class="o">-&gt;</span><span class="n">forNeighborsOf</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="n">node</span><span class="w"> </span><span class="n">vNeighbor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="c1">// Don&#39;t count self-loops</span>
+<span class="w">                </span><span class="c1">// Don't count self-loops</span>
 <span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">uNeighbor</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">vNeighbor</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">G</span><span class="o">-&gt;</span><span class="n">hasEdge</span><span class="p">(</span><span class="n">uNeighbor</span><span class="p">,</span><span class="w"> </span><span class="n">vNeighbor</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                    </span><span class="o">++</span><span class="n">neighborConnections</span><span class="p">;</span>
 <span class="w">                </span><span class="p">}</span>

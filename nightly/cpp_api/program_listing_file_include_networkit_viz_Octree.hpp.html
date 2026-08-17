@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -256,15 +256,15 @@
 
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">str</span><span class="p">;</span>
-<span class="w">        </span><span class="n">str</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">bBox</span><span class="p">.</span><span class="n">getCenter</span><span class="p">().</span><span class="n">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; sL=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">bBox</span><span class="p">.</span><span class="n">getSideLength</span><span class="p">())</span>
-<span class="w">               </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;w=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">weight</span><span class="p">);</span>
-<span class="w">        </span><span class="n">str</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">&quot;(&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">str</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">bBox</span><span class="p">.</span><span class="n">getCenter</span><span class="p">().</span><span class="n">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" sL="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">bBox</span><span class="p">.</span><span class="n">getSideLength</span><span class="p">())</span>
+<span class="w">               </span><span class="o">+</span><span class="w"> </span><span class="s">"w="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">to_string</span><span class="p">(</span><span class="n">weight</span><span class="p">);</span>
+<span class="w">        </span><span class="n">str</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">"("</span><span class="p">;</span>
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">child</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">children</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">str</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">&quot;[ &quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">str</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">"[ "</span><span class="p">;</span>
 <span class="w">            </span><span class="n">str</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">child</span><span class="p">.</span><span class="n">toString</span><span class="p">();</span>
-<span class="w">            </span><span class="n">str</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">&quot; ]&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">str</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">" ]"</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="n">str</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="n">str</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">")"</span><span class="p">;</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">str</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 
@@ -296,7 +296,7 @@
 <span class="w">                    </span><span class="k">return</span><span class="p">;</span>
 <span class="w">                </span><span class="p">}</span>
 <span class="w">                </span><span class="n">split</span><span class="p">(</span><span class="n">dimensions</span><span class="p">,</span><span class="w"> </span><span class="n">numChildrenPerNode</span><span class="p">);</span>
-<span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">child</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">children</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// add leaf point to one of this node&#39;s new children</span>
+<span class="w">                </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">child</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">children</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// add leaf point to one of this node's new children</span>
 <span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">child</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="n">centerOfMass</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                        </span><span class="n">child</span><span class="p">.</span><span class="n">addPoint</span><span class="p">(</span><span class="n">centerOfMass</span><span class="p">,</span><span class="w"> </span><span class="n">dimensions</span><span class="p">,</span><span class="w"> </span><span class="n">numChildrenPerNode</span><span class="p">);</span>
 <span class="w">                        </span><span class="k">break</span><span class="p">;</span>

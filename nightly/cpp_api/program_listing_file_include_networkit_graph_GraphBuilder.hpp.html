@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -170,7 +170,7 @@
 <span class="cm"> * autoCompleteEdges set to true, will make each half Edge in GraphBuilder to</span>
 <span class="cm"> * one full edge in Graph.</span>
 <span class="cm"> *</span>
-<span class="cm"> * So far I didn&#39;t came up with a good parallelization for toGraph, so at some</span>
+<span class="cm"> * So far I didn't came up with a good parallelization for toGraph, so at some</span>
 <span class="cm"> * point I might omit the parallel parameter for toGraph.</span>
 <span class="cm"> */</span>
 
@@ -238,9 +238,9 @@
 
 <span class="w">    </span><span class="n">Graph</span><span class="w"> </span><span class="nf">completeGraph</span><span class="p">();</span>
 
-<span class="w">    </span><span class="n">Graph</span><span class="w"> </span><span class="nf">TLX_DEPRECATED</span><span class="p">(</span><span class="n">completeGraph</span><span class="p">([[</span><span class="n">maybe_unused</span><span class="p">]]</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">parallel</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">WARN</span><span class="p">(</span><span class="s">&quot;GraphBuilder::completeGraph(bool parallel) is deprecated, use &quot;</span>
-<span class="w">             </span><span class="s">&quot;GraphBuilder::completeGraph() instead&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Graph</span><span class="w"> </span><span class="nf">TLX_DEPRECATED</span><span class="p">(</span><span class="n">completeGraph</span><span class="p">([[</span><span class="na">maybe_unused</span><span class="p">]]</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">parallel</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">WARN</span><span class="p">(</span><span class="s">"GraphBuilder::completeGraph(bool parallel) is deprecated, use "</span>
+<span class="w">             </span><span class="s">"GraphBuilder::completeGraph() instead"</span><span class="p">);</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">completeGraph</span><span class="p">();</span>
 <span class="w">    </span><span class="p">}</span>
 

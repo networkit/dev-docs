@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -178,7 +178,7 @@
 <span class="cp">#define DEBUGF(...) LOG_ATF(::Aux::Log::LogLevel::DEBUG, __VA_ARGS__)</span>
 <span class="cp">#define TRACEF(...) LOG_ATF(::Aux::Log::LogLevel::TRACE, __VA_ARGS__)</span>
 
-<span class="cp">#define TRACEPOINT LOG_AT(::Aux::Log::LogLevel::TRACE, &quot;tracepoint&quot;)</span>
+<span class="cp">#define TRACEPOINT LOG_AT(::Aux::Log::LogLevel::TRACE, "tracepoint")</span>
 <span class="cp">#endif </span><span class="c1">// defined(NETWORKIT_RELEASE_LOGGING)</span>
 
 <span class="k">namespace</span><span class="w"> </span><span class="nn">Aux</span><span class="w"> </span><span class="p">{</span>
@@ -215,7 +215,7 @@
 <span class="kt">void</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Location</span><span class="w"> </span><span class="o">&amp;</span><span class="n">loc</span><span class="p">,</span><span class="w"> </span><span class="n">LogLevel</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">msg</span><span class="p">);</span>
 <span class="p">}</span><span class="w"> </span><span class="c1">// namespace Impl</span>
 
-<span class="kt">bool</span><span class="w"> </span><span class="n">isLogLevelEnabled</span><span class="p">(</span><span class="n">LogLevel</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
+<span class="kt">bool</span><span class="w"> </span><span class="nf">isLogLevelEnabled</span><span class="p">(</span><span class="n">LogLevel</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="k">noexcept</span><span class="p">;</span>
 
 <span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="p">...</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span>
 <span class="kt">void</span><span class="w"> </span><span class="n">log</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Location</span><span class="w"> </span><span class="o">&amp;</span><span class="n">loc</span><span class="p">,</span><span class="w"> </span><span class="n">LogLevel</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="p">...</span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>

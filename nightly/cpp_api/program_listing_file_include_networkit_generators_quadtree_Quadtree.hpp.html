@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-14)"
+	        data-docs-version-label="Nightly (2026-08-17)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-14)"
+	        data-docs-nightly-label="Nightly (2026-08-17)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-14)</option>
+	  <option value="nightly" selected>Nightly (2026-08-17)</option>
 	</select>
 </div>
 
@@ -248,8 +248,8 @@
 
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">denizen</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">circleDenizens</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">denizen</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">size</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">DEBUG</span><span class="p">(</span><span class="s">&quot;Content &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">denizen</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; found in quadtree of size &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;, as one of &quot;</span><span class="p">,</span>
-<span class="w">                      </span><span class="n">circleDenizens</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot; neighbors.&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">DEBUG</span><span class="p">(</span><span class="s">"Content "</span><span class="p">,</span><span class="w"> </span><span class="n">denizen</span><span class="p">,</span><span class="w"> </span><span class="s">" found in quadtree of size "</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="s">", as one of "</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">circleDenizens</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="s">" neighbors."</span><span class="p">);</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">        </span><span class="p">}</span>
 
@@ -261,15 +261,15 @@
 <span class="w">            </span><span class="n">count</span><span class="w"> </span><span class="n">toRemove</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">circleDenizens</span><span class="p">.</span><span class="n">end</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">newend</span><span class="p">;</span>
 <span class="w">            </span><span class="n">count</span><span class="w"> </span><span class="n">remaining</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newend</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">circleDenizens</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
 <span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">toRemove</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">DEBUG</span><span class="p">(</span><span class="s">&quot;Removing, &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">toRemove</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; duplicate entries, keeping &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">remaining</span><span class="p">);</span>
+<span class="w">                </span><span class="n">DEBUG</span><span class="p">(</span><span class="s">"Removing, "</span><span class="p">,</span><span class="w"> </span><span class="n">toRemove</span><span class="p">,</span><span class="w"> </span><span class="s">" duplicate entries, keeping "</span><span class="p">,</span><span class="w"> </span><span class="n">remaining</span><span class="p">);</span>
 <span class="w">                </span><span class="n">circleDenizens</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">remaining</span><span class="p">);</span>
 <span class="w">            </span><span class="p">}</span>
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">denizen</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">circleDenizens</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">denizen</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">size</span><span class="p">())</span>
-<span class="w">                </span><span class="n">DEBUG</span><span class="p">(</span><span class="s">&quot;Content &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">denizen</span><span class="p">,</span><span class="w"> </span><span class="s">&quot; found in quadtree of size &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;, as one of &quot;</span><span class="p">,</span>
-<span class="w">                      </span><span class="n">circleDenizens</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot; neighbors, after sorting&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">DEBUG</span><span class="p">(</span><span class="s">"Content "</span><span class="p">,</span><span class="w"> </span><span class="n">denizen</span><span class="p">,</span><span class="w"> </span><span class="s">" found in quadtree of size "</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="s">", as one of "</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">circleDenizens</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="s">" neighbors, after sorting"</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 
