@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-17)"
+	        data-docs-version-label="Nightly (2026-09-10)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-17)"
+	        data-docs-nightly-label="Nightly (2026-09-10)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-17)</option>
+	  <option value="nightly" selected>Nightly (2026-09-10)</option>
 	</select>
 </div>
 
@@ -142,6 +142,7 @@
 <span class="cp">#ifndef NETWORKIT_DISTANCE_SSSP_HPP_</span>
 <span class="cp">#define NETWORKIT_DISTANCE_SSSP_HPP_</span>
 
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;limits&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;set&gt;</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/auxiliary/Multiprecision.hpp&gt;</span>
@@ -219,8 +220,8 @@
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">GraphT</span><span class="w"> </span><span class="o">*</span><span class="n">G</span><span class="p">;</span>
 <span class="w">    </span><span class="n">NodeT</span><span class="w"> </span><span class="n">source</span><span class="p">;</span>
 <span class="w">    </span><span class="n">NodeT</span><span class="w"> </span><span class="n">target</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">sumDist</span><span class="p">;</span>
-<span class="w">    </span><span class="n">count</span><span class="w"> </span><span class="n">reachedNodes</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">sumDist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">();</span>
+<span class="w">    </span><span class="n">count</span><span class="w"> </span><span class="n">reachedNodes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">EdgeWeightT</span><span class="o">&gt;</span><span class="w"> </span><span class="n">distances</span><span class="p">;</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">NodeT</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">previous</span><span class="p">;</span><span class="w"> </span><span class="c1">// predecessors on shortest path</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">bigfloat</span><span class="o">&gt;</span><span class="w"> </span><span class="n">npaths</span><span class="p">;</span>

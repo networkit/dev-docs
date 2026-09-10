@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Class FloydWarshall</title>
+    <title>Template Class GenericFloydWarshall</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -26,8 +26,8 @@
     <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class ForestCentrality" href="classNetworKit_1_1ForestCentrality.html" />
-    <link rel="prev" title="Class EvaluationMetric" href="classNetworKit_1_1EvaluationMetric.html" />
+    <link rel="next" title="Template Class GenericLeftRightPlanarityCheck" href="classNetworKit_1_1GenericLeftRightPlanarityCheck.html" />
+    <link rel="prev" title="Template Class GenericCover" href="classNetworKit_1_1GenericCover.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-17)"
+	        data-docs-version-label="Nightly (2026-09-10)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-17)"
+	        data-docs-nightly-label="Nightly (2026-09-10)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-17)</option>
+	  <option value="nightly" selected>Nightly (2026-09-10)</option>
 	</select>
 </div>
 
@@ -148,8 +148,8 @@
       </div>
     <div class="col-md-9 content">
       
-  <section id="class-floydwarshall">
-<span id="exhale-class-classnetworkit-1-1floydwarshall"></span><h1>Class FloydWarshall<a class="headerlink" href="#class-floydwarshall" title="Link to this heading">¶</a></h1>
+  <section id="template-class-genericfloydwarshall">
+<span id="exhale-class-classnetworkit-1-1genericfloydwarshall"></span><h1>Template Class GenericFloydWarshall<a class="headerlink" href="#template-class-genericfloydwarshall" title="Link to this heading">¶</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_include_networkit_distance_FloydWarshall.hpp.html#file-include-networkit-distance-floydwarshall-hpp"><span class="std std-ref">File FloydWarshall.hpp</span></a></p></li>
 </ul>
@@ -165,16 +165,34 @@
 <section id="class-documentation">
 <h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
 <dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13FloydWarshallE">
-<span class="target" id="classNetworKit_1_1FloydWarshall"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FloydWarshall</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1Algorithm.html#_CPPv4N9NetworKit9AlgorithmE" title="NetworKit::Algorithm"><span class="n"><span class="pre">Algorithm</span></span></a><a class="headerlink" href="#_CPPv4N9NetworKit13FloydWarshallE" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4I0EN9NetworKit20GenericFloydWarshallE">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GraphT</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classNetworKit_1_1GenericFloydWarshall"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenericFloydWarshall</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1Algorithm.html#_CPPv4N9NetworKit9AlgorithmE" title="NetworKit::Algorithm"><span class="n"><span class="pre">Algorithm</span></span></a><a class="headerlink" href="#_CPPv4I0EN9NetworKit20GenericFloydWarshallE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Computes all-pairs shortest paths using the Floyd-Warshall algorithm. </p>
 <p>This algorithm finds the shortest paths between all node pairs in a weighted graph, supporting both directed and undirected graphs. It correctly handles negative edge weights and detects negative cycles. If multiple shortest paths exist, it returns one with the fewest nodes.</p>
 <p>The algorithm has a time complexity of O(n³), making it suitable for small to medium-sized graphs. </p>
 <div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit20GenericFloydWarshall5NodeTE">
+<span class="target" id="classNetworKit_1_1GenericFloydWarshall_1a4d065de443f434861e43b45b2e1a0e3e"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NodeT</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN9NetworKit20GenericFloydWarshallE" title="NetworKit::GenericFloydWarshall::GraphT"><span class="n"><span class="pre">GraphT</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">NodeT</span></span><a class="headerlink" href="#_CPPv4N9NetworKit20GenericFloydWarshall5NodeTE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit20GenericFloydWarshall11EdgeWeightTE">
+<span class="target" id="classNetworKit_1_1GenericFloydWarshall_1a684e38559896ad4a71488380e2682473"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EdgeWeightT</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN9NetworKit20GenericFloydWarshallE" title="NetworKit::GenericFloydWarshall::GraphT"><span class="n"><span class="pre">GraphT</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">EdgeWeightT</span></span><a class="headerlink" href="#_CPPv4N9NetworKit20GenericFloydWarshall11EdgeWeightTE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit20GenericFloydWarshall9DistanceTE">
+<span class="target" id="classNetworKit_1_1GenericFloydWarshall_1a83f014cafc856832cb48c4bc179d6832"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DistanceT</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><a class="headerlink" href="#_CPPv4N9NetworKit20GenericFloydWarshall9DistanceTE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13FloydWarshall13FloydWarshallERK5Graph">
-<span class="target" id="classNetworKit_1_1FloydWarshall_1ad08e4e21d5988863417791d13afe2df5"></span><span class="sig-name descname"><span class="n"><span class="pre">FloydWarshall</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit13FloydWarshall13FloydWarshallERK5Graph" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit20GenericFloydWarshall20GenericFloydWarshallERK6GraphT">
+<span class="target" id="classNetworKit_1_1GenericFloydWarshall_1a7906a97902fbac286ebb652d8dd45fef"></span><span class="sig-name descname"><span class="n"><span class="pre">GenericFloydWarshall</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN9NetworKit20GenericFloydWarshallE" title="NetworKit::GenericFloydWarshall::GraphT"><span class="n"><span class="pre">GraphT</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit20GenericFloydWarshall20GenericFloydWarshallERK6GraphT" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Initializes the Floyd-Warshall algorithm for a given graph. </p>
 <p>The input graph must be weighted and may be either directed or undirected.</p>
 <dl class="field-list simple">
@@ -185,15 +203,15 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13FloydWarshall3runEv">
-<span class="target" id="classNetworKit_1_1FloydWarshall_1a24f3c0da96491fba5d91355a919a764d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9NetworKit13FloydWarshall3runEv" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit20GenericFloydWarshall3runEv">
+<span class="target" id="classNetworKit_1_1GenericFloydWarshall_1a84e3d32850822ee6d9a4d28d5887c9f4"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9NetworKit20GenericFloydWarshall3runEv" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Runs the Floyd-Warshall algorithm. </p>
 <p>Computes shortest path distances and reconstructs paths between all node pairs. Also identifies nodes involved in negative cycles. </p>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit13FloydWarshall11getDistanceE4node4node">
-<span class="target" id="classNetworKit_1_1FloydWarshall_1a5fe81e32c6f6eddef60ca978752ad61f"></span><a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getDistance</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">source</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">target</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit13FloydWarshall11getDistanceE4node4node" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit20GenericFloydWarshall11getDistanceE5NodeT5NodeT">
+<span class="target" id="classNetworKit_1_1GenericFloydWarshall_1a54f989ec8a69b3c40ee756c5dba78ed7"></span><a class="reference internal" href="#_CPPv4N9NetworKit20GenericFloydWarshall9DistanceTE" title="NetworKit::GenericFloydWarshall::DistanceT"><span class="n"><span class="pre">DistanceT</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getDistance</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9NetworKit20GenericFloydWarshall5NodeTE" title="NetworKit::GenericFloydWarshall::NodeT"><span class="n"><span class="pre">NodeT</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">source</span></span>, <a class="reference internal" href="#_CPPv4N9NetworKit20GenericFloydWarshall5NodeTE" title="NetworKit::GenericFloydWarshall::NodeT"><span class="n"><span class="pre">NodeT</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">target</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit20GenericFloydWarshall11getDistanceE5NodeT5NodeT" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Returns the shortest distance between two nodes. </p>
 <p>If no path exists, returns <code class="docutils literal notranslate"><span class="pre">std::numeric_limits&lt;edgeweight&gt;::max()</span></code>.</p>
 <dl class="field-list simple">
@@ -210,8 +228,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit13FloydWarshall21isNodeInNegativeCycleE4node">
-<span class="target" id="classNetworKit_1_1FloydWarshall_1ab6107e0cfb1328189616741242a4431a"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isNodeInNegativeCycle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit13FloydWarshall21isNodeInNegativeCycleE4node" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit20GenericFloydWarshall21isNodeInNegativeCycleE5NodeT">
+<span class="target" id="classNetworKit_1_1GenericFloydWarshall_1a4788742637b61bd23c2323bcbb1f0a50"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isNodeInNegativeCycle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9NetworKit20GenericFloydWarshall5NodeTE" title="NetworKit::GenericFloydWarshall::NodeT"><span class="n"><span class="pre">NodeT</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit20GenericFloydWarshall21isNodeInNegativeCycleE5NodeT" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Checks whether a node is part of a negative cycle. </p>
 <p>A node is considered part of a negative cycle if its shortest path distance to itself is negative.</p>
 <dl class="field-list simple">
@@ -225,8 +243,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit13FloydWarshall22getNodesOnShortestPathE4node4node">
-<span class="target" id="classNetworKit_1_1FloydWarshall_1aab2879ced676100a72425c650fcba74e"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNodesOnShortestPath</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">source</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">target</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit13FloydWarshall22getNodesOnShortestPathE4node4node" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit20GenericFloydWarshall22getNodesOnShortestPathE5NodeT5NodeT">
+<span class="target" id="classNetworKit_1_1GenericFloydWarshall_1ab1df41e9dace8fd9e4b960f325aa9b0e"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N9NetworKit20GenericFloydWarshall5NodeTE" title="NetworKit::GenericFloydWarshall::NodeT"><span class="n"><span class="pre">NodeT</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNodesOnShortestPath</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N9NetworKit20GenericFloydWarshall5NodeTE" title="NetworKit::GenericFloydWarshall::NodeT"><span class="n"><span class="pre">NodeT</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">source</span></span>, <a class="reference internal" href="#_CPPv4N9NetworKit20GenericFloydWarshall5NodeTE" title="NetworKit::GenericFloydWarshall::NodeT"><span class="n"><span class="pre">NodeT</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">target</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit20GenericFloydWarshall22getNodesOnShortestPathE5NodeT5NodeT" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Retrieves the shortest path between two nodes. </p>
 <p>Returns a sequence of nodes representing the shortest path from <code class="docutils literal notranslate"><span class="pre">source</span></code> to <code class="docutils literal notranslate"><span class="pre">target</span></code>. If no path exists, returns an empty vector.</p>
 <p>If multiple shortest paths exist with the same total distance, the function returns the one with the fewest nodes.</p>
@@ -244,10 +262,10 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit13FloydWarshall12getDistancesEv">
-<span class="target" id="classNetworKit_1_1FloydWarshall_1a13b7e8cc97ba6cd7d224e126a5f1cc59"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1aa228345b8a49a2ea1e954a59ee6ede66.html#_CPPv4N9NetworKit10edgeweightE" title="NetworKit::edgeweight"><span class="n"><span class="pre">edgeweight</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getDistances</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit13FloydWarshall12getDistancesEv" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit20GenericFloydWarshall12getDistancesEv">
+<span class="target" id="classNetworKit_1_1GenericFloydWarshall_1ab8d97aa62f2885d7e55080ef196fc24c"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N9NetworKit20GenericFloydWarshall9DistanceTE" title="NetworKit::GenericFloydWarshall::DistanceT"><span class="n"><span class="pre">DistanceT</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getDistances</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit20GenericFloydWarshall12getDistancesEv" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Returns the full all-pairs distance matrix. </p>
-<p>The returned object is a reference to internal storage. Do not modify it directly; call <a class="reference internal" href="#classNetworKit_1_1FloydWarshall_1a24f3c0da96491fba5d91355a919a764d"><span class="std std-ref">run()</span></a> again if the graph changes.</p>
+<p>The returned object is a reference to internal storage. Do not modify it directly; call <a class="reference internal" href="#classNetworKit_1_1GenericFloydWarshall_1a84e3d32850822ee6d9a4d28d5887c9f4"><span class="std std-ref">run()</span></a> again if the graph changes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A matrix where entry [u][v] is the shortest distance from u to v. </p>

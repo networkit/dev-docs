@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-17)"
+	        data-docs-version-label="Nightly (2026-09-10)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-17)"
+	        data-docs-nightly-label="Nightly (2026-09-10)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-17)</option>
+	  <option value="nightly" selected>Nightly (2026-09-10)</option>
 	</select>
 </div>
 
@@ -142,19 +142,97 @@
 <span class="cp">#ifndef NETWORKIT_DISTANCE_BFS_HPP_</span>
 <span class="cp">#define NETWORKIT_DISTANCE_BFS_HPP_</span>
 
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;queue&gt;</span>
+
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/distance/SSSP.hpp&gt;</span>
 
 <span class="k">namespace</span><span class="w"> </span><span class="nn">NetworKit</span><span class="w"> </span><span class="p">{</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">BFS</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">SSSP</span><span class="w"> </span><span class="p">{</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">GraphT</span><span class="o">&gt;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">BreadthFirstSearch</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">SingleSourceShortestPaths</span><span class="o">&lt;</span><span class="n">GraphT</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">NodeT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">GraphT</span><span class="o">::</span><span class="n">NodeT</span><span class="p">;</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">EdgeWeightT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">GraphT</span><span class="o">::</span><span class="n">EdgeWeightT</span><span class="p">;</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="n">NodeT</span><span class="w"> </span><span class="n">nullNodeId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NullNodeId</span><span class="o">&lt;</span><span class="n">NodeT</span><span class="o">&gt;</span><span class="p">;</span>
 
 <span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="n">BFS</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">storePaths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
-<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="n">storeNodesSortedByDistance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">none</span><span class="p">);</span>
+<span class="w">    </span><span class="n">BreadthFirstSearch</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">GraphT</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">NodeT</span><span class="w"> </span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">storePaths</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span>
+<span class="w">                       </span><span class="kt">bool</span><span class="w"> </span><span class="n">storeNodesSortedByDistance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="n">NodeT</span><span class="w"> </span><span class="n">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nullNodeId</span><span class="p">)</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="n">SingleSourceShortestPaths</span><span class="o">&lt;</span><span class="n">GraphT</span><span class="o">&gt;</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="n">storePaths</span><span class="p">,</span><span class="w"> </span><span class="n">storeNodesSortedByDistance</span><span class="p">,</span>
+<span class="w">                                            </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
 
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 <span class="p">};</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">GraphT</span><span class="o">&gt;</span>
+<span class="kt">void</span><span class="w"> </span><span class="n">BreadthFirstSearch</span><span class="o">&lt;</span><span class="n">GraphT</span><span class="o">&gt;::</span><span class="n">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="n">EdgeWeightT</span><span class="w"> </span><span class="n">weightOne</span><span class="p">{</span><span class="mi">1</span><span class="p">};</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">G</span><span class="o">-&gt;</span><span class="n">upperNodeIdBound</span><span class="p">();</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">reachedNodes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">sumDist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">infDist</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">EdgeWeightT</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">();</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">ranges</span><span class="o">::</span><span class="n">fill</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">distances</span><span class="p">,</span><span class="w"> </span><span class="n">infDist</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">distances</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">z</span><span class="p">)</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">distances</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="n">infDist</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">storePaths</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">previous</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">previous</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">z</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">npaths</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">npaths</span><span class="p">.</span><span class="n">resize</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">npaths</span><span class="p">[</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">source</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">storeNodesSortedByDistance</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">NodeT</span><span class="o">&gt;</span><span class="w"> </span><span class="n">empty</span><span class="p">;</span>
+<span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">swap</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">nodesSortedByDistance</span><span class="p">,</span><span class="w"> </span><span class="n">empty</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">queue</span><span class="o">&lt;</span><span class="n">NodeT</span><span class="o">&gt;</span><span class="w"> </span><span class="n">q</span><span class="p">;</span>
+<span class="w">    </span><span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">source</span><span class="p">);</span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">distances</span><span class="p">[</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">source</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EdgeWeightT</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">breakWhenFound</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">target</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">nullNodeId</span><span class="p">);</span>
+<span class="w">    </span><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">NodeT</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+<span class="w">        </span><span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">storeNodesSortedByDistance</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">nodesSortedByDistance</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">breakWhenFound</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">target</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="c1">// insert untouched neighbors into queue</span>
+<span class="w">        </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">G</span><span class="o">-&gt;</span><span class="n">forNeighborsOf</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="n">NodeT</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">distances</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">infDist</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">v</span><span class="p">);</span>
+<span class="w">                </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">distances</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">distances</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">weightOne</span><span class="p">;</span>
+<span class="w">                </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">sumDist</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">distances</span><span class="p">[</span><span class="n">v</span><span class="p">];</span>
+<span class="w">                </span><span class="o">++</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">reachedNodes</span><span class="p">;</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">storePaths</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">previous</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">u</span><span class="p">};</span>
+<span class="w">                    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">npaths</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">npaths</span><span class="p">[</span><span class="n">u</span><span class="p">];</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">storePaths</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">distances</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">distances</span><span class="p">[</span><span class="n">u</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">weightOne</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="c1">// additional predecessor</span>
+<span class="w">                </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">previous</span><span class="p">[</span><span class="n">v</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
+<span class="w">                </span><span class="c1">// all the shortest paths to u are also shortest paths to v now</span>
+<span class="w">                </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">npaths</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">npaths</span><span class="p">[</span><span class="n">u</span><span class="p">];</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">q</span><span class="p">.</span><span class="n">empty</span><span class="p">());</span>
+
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">hasRun</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">using</span><span class="w"> </span><span class="n">BFS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BreadthFirstSearch</span><span class="o">&lt;</span><span class="n">AdjListGraph</span><span class="o">&lt;</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="n">edgeweight</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+
 <span class="p">}</span><span class="w"> </span><span class="cm">/* namespace NetworKit */</span>
+
 <span class="cp">#endif </span><span class="c1">// NETWORKIT_DISTANCE_BFS_HPP_</span>
 </pre></div>
 </div>

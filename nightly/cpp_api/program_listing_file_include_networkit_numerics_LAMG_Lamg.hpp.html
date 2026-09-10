@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-17)"
+	        data-docs-version-label="Nightly (2026-09-10)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-17)"
+	        data-docs-nightly-label="Nightly (2026-09-10)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-17)</option>
+	  <option value="nightly" selected>Nightly (2026-09-10)</option>
 	</select>
 </div>
 
@@ -339,12 +339,18 @@
 <span class="w">        </span><span class="c1">// construct new objects</span>
 <span class="w">        </span><span class="n">compHierarchies</span><span class="p">[</span><span class="n">compIdx</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LevelHierarchy</span><span class="o">&lt;</span><span class="n">Matrix</span><span class="o">&gt;</span><span class="p">();</span>
 
-<span class="w">        </span><span class="c1">// construct block matrix via neighborsOf in G</span>
+<span class="w">        </span><span class="c1">// Construct the component's Laplacian block</span>
 <span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">Triplet</span><span class="o">&gt;</span><span class="w"> </span><span class="n">triplets</span><span class="p">;</span>
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">node</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">component</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">weightedDegree</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span>
 <span class="w">            </span><span class="n">G</span><span class="p">.</span><span class="n">forNeighborsOf</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;</span><span class="p">](</span><span class="n">node</span><span class="w"> </span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">edgeweight</span><span class="w"> </span><span class="n">w</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">triplets</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="n">graph2Components</span><span class="p">[</span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">graph2Components</span><span class="p">[</span><span class="n">v</span><span class="p">],</span><span class="w"> </span><span class="n">w</span><span class="p">});</span>
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">weightedDegree</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">w</span><span class="p">;</span>
+<span class="w">                    </span><span class="n">triplets</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="n">graph2Components</span><span class="p">[</span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">graph2Components</span><span class="p">[</span><span class="n">v</span><span class="p">],</span><span class="w"> </span><span class="o">-</span><span class="n">w</span><span class="p">});</span>
+<span class="w">                </span><span class="p">}</span>
 <span class="w">            </span><span class="p">});</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">weightedDegree</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">)</span>
+<span class="w">                </span><span class="n">triplets</span><span class="p">.</span><span class="n">push_back</span><span class="p">({</span><span class="n">graph2Components</span><span class="p">[</span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">graph2Components</span><span class="p">[</span><span class="n">u</span><span class="p">],</span><span class="w"> </span><span class="n">weightedDegree</span><span class="p">});</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="n">Matrix</span><span class="w"> </span><span class="n">compMatrix</span><span class="p">(</span><span class="n">component</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="n">component</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="n">triplets</span><span class="p">);</span>
 <span class="w">        </span><span class="n">lamgSetup</span><span class="p">.</span><span class="n">setup</span><span class="p">(</span><span class="n">compMatrix</span><span class="p">,</span><span class="w"> </span><span class="n">compHierarchies</span><span class="p">[</span><span class="n">compIdx</span><span class="p">]);</span>
@@ -399,7 +405,7 @@
 
 <span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">Matrix</span><span class="o">&gt;</span>
 <span class="kt">void</span><span class="w"> </span><span class="n">Lamg</span><span class="o">&lt;</span><span class="n">Matrix</span><span class="o">&gt;::</span><span class="n">setup</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Matrix</span><span class="w"> </span><span class="o">&amp;</span><span class="n">laplacianMatrix</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">Graph</span><span class="w"> </span><span class="n">G</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MatrixTools</span><span class="o">::</span><span class="n">matrixToGraph</span><span class="p">(</span><span class="n">laplacianMatrix</span><span class="p">);</span>
+<span class="w">    </span><span class="n">Graph</span><span class="w"> </span><span class="n">G</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MatrixTools</span><span class="o">::</span><span class="n">laplacianToGraph</span><span class="p">(</span><span class="n">laplacianMatrix</span><span class="p">);</span>
 <span class="w">    </span><span class="n">setup</span><span class="p">(</span><span class="n">laplacianMatrix</span><span class="p">,</span><span class="w"> </span><span class="n">G</span><span class="p">);</span>
 <span class="p">}</span>
 

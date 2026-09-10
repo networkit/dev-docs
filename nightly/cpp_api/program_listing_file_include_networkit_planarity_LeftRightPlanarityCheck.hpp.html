@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-17)"
+	        data-docs-version-label="Nightly (2026-09-10)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-17)"
+	        data-docs-nightly-label="Nightly (2026-09-10)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-17)</option>
+	  <option value="nightly" selected>Nightly (2026-09-10)</option>
 	</select>
 </div>
 
@@ -151,10 +151,14 @@
 
 <span class="k">namespace</span><span class="w"> </span><span class="nn">NetworKit</span><span class="w"> </span><span class="p">{</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">LeftRightPlanarityCheck</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Algorithm</span><span class="w"> </span><span class="p">{</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">GraphT</span><span class="o">&gt;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">GenericLeftRightPlanarityCheck</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Algorithm</span><span class="w"> </span><span class="p">{</span>
 
 <span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="n">LeftRightPlanarityCheck</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">);</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">NodeT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">GraphT</span><span class="o">::</span><span class="n">NodeT</span><span class="p">;</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">EdgeWeightT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">GraphT</span><span class="o">::</span><span class="n">EdgeWeightT</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">GenericLeftRightPlanarityCheck</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">GraphT</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">);</span>
 
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 
@@ -166,16 +170,15 @@
 <span class="k">private</span><span class="o">:</span>
 <span class="w">    </span><span class="n">count</span><span class="w"> </span><span class="n">numberOfEdges</span><span class="p">;</span>
 <span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="n">noneHeight</span><span class="p">{</span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">count</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">()};</span>
-<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="n">edgeid</span><span class="w"> </span><span class="n">noneEdgeId</span><span class="p">{</span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">edgeid</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">()};</span>
 
 <span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">Interval</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">edgeid</span><span class="w"> </span><span class="n">low</span><span class="p">{</span><span class="n">noneEdgeId</span><span class="p">};</span>
-<span class="w">        </span><span class="n">edgeid</span><span class="w"> </span><span class="n">high</span><span class="p">{</span><span class="n">noneEdgeId</span><span class="p">};</span>
+<span class="w">        </span><span class="n">edgeid</span><span class="w"> </span><span class="n">low</span><span class="p">{</span><span class="n">nullEdgeId</span><span class="p">};</span>
+<span class="w">        </span><span class="n">edgeid</span><span class="w"> </span><span class="n">high</span><span class="p">{</span><span class="n">nullEdgeId</span><span class="p">};</span>
 
 <span class="w">        </span><span class="n">Interval</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
 <span class="w">        </span><span class="n">Interval</span><span class="p">(</span><span class="n">edgeid</span><span class="w"> </span><span class="n">lowId</span><span class="p">,</span><span class="w"> </span><span class="n">edgeid</span><span class="w"> </span><span class="n">highId</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">low</span><span class="p">(</span><span class="n">lowId</span><span class="p">),</span><span class="w"> </span><span class="n">high</span><span class="p">(</span><span class="n">highId</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
 
-<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="nf">isEmpty</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">low</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">noneEdgeId</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">high</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">noneEdgeId</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="nf">isEmpty</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">low</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">nullEdgeId</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">high</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">nullEdgeId</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 
 <span class="w">        </span><span class="k">friend</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Interval</span><span class="w"> </span><span class="o">&amp;</span><span class="n">lhs</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Interval</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">lhs</span><span class="p">.</span><span class="n">low</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">low</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">lhs</span><span class="p">.</span><span class="n">high</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">high</span><span class="p">;</span>
@@ -198,21 +201,21 @@
 
 <span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">ConflictPair</span><span class="w"> </span><span class="n">NoneConflictPair</span><span class="p">{</span><span class="n">Interval</span><span class="p">{},</span><span class="w"> </span><span class="n">Interval</span><span class="p">{}};</span>
 
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="o">*</span><span class="n">graph</span><span class="p">;</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">GraphT</span><span class="w"> </span><span class="o">*</span><span class="n">graph</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">isGraphPlanar</span><span class="p">{</span><span class="nb">false</span><span class="p">};</span>
 
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">dfsOrientation</span><span class="p">(</span><span class="n">node</span><span class="w"> </span><span class="n">startNode</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">dfsTesting</span><span class="p">(</span><span class="n">node</span><span class="w"> </span><span class="n">startNode</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">dfsOrientation</span><span class="p">(</span><span class="n">NodeT</span><span class="w"> </span><span class="n">startNode</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">dfsTesting</span><span class="p">(</span><span class="n">NodeT</span><span class="w"> </span><span class="n">startNode</span><span class="p">);</span>
 
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">applyConstraints</span><span class="p">(</span><span class="n">edgeid</span><span class="w"> </span><span class="n">edgeId</span><span class="p">,</span><span class="w"> </span><span class="n">edgeid</span><span class="w"> </span><span class="n">parentEdgeId</span><span class="p">);</span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">removeBackEdges</span><span class="p">(</span><span class="n">edgeid</span><span class="w"> </span><span class="n">edgeId</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="n">parentNode</span><span class="p">);</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">removeBackEdges</span><span class="p">(</span><span class="n">edgeid</span><span class="w"> </span><span class="n">edgeId</span><span class="p">,</span><span class="w"> </span><span class="n">NodeT</span><span class="w"> </span><span class="n">parentNode</span><span class="p">);</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">sortAdjacencyListByNestingDepth</span><span class="p">();</span>
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">conflicting</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Interval</span><span class="w"> </span><span class="o">&amp;</span><span class="n">interval</span><span class="p">,</span><span class="w"> </span><span class="n">edgeid</span><span class="w"> </span><span class="n">edgeId</span><span class="p">);</span>
 <span class="w">    </span><span class="n">count</span><span class="w"> </span><span class="nf">getLowestLowPoint</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">ConflictPair</span><span class="w"> </span><span class="o">&amp;</span><span class="n">conflictPair</span><span class="p">);</span>
 
 <span class="w">    </span><span class="c1">// DFS / lowpoint state</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">count</span><span class="o">&gt;</span><span class="w"> </span><span class="n">heights</span><span class="p">;</span><span class="w"> </span><span class="c1">// per node</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">roots</span><span class="p">;</span><span class="w">    </span><span class="c1">// roots of DFS forest</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">count</span><span class="o">&gt;</span><span class="w"> </span><span class="n">heights</span><span class="p">;</span><span class="w"> </span><span class="c1">// per vertex</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">NodeT</span><span class="o">&gt;</span><span class="w"> </span><span class="n">roots</span><span class="p">;</span><span class="w">   </span><span class="c1">// roots of DFS forest</span>
 
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">count</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lowestPoint</span><span class="p">;</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">count</span><span class="o">&gt;</span><span class="w"> </span><span class="n">secondLowestPoint</span><span class="p">;</span>
@@ -221,20 +224,24 @@
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">count</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nestingDepth</span><span class="p">;</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">ConflictPair</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stackBottom</span><span class="p">;</span>
 
-<span class="w">    </span><span class="c1">// Per-node parent edge + parent node in DFS tree</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">edgeid</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parentEdgeIds</span><span class="p">;</span><span class="w"> </span><span class="c1">// parent edge for each node (noneEdgeId if root)</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parentNodes</span><span class="p">;</span><span class="w">     </span><span class="c1">// parent node for each node (none if root)</span>
+<span class="w">    </span><span class="c1">// Per-vertex parent edge + parent vertex in DFS tree</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">edgeid</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parentEdgeIds</span><span class="p">;</span><span class="w"> </span><span class="c1">// parent edge for each vertex (nullEdgeId if root)</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">NodeT</span><span class="o">&gt;</span><span class="w"> </span><span class="n">parentNodes</span><span class="p">;</span><span class="w">    </span><span class="c1">// parent vertex for each vertex (NullNodeId&lt;NodeT&gt; if root)</span>
 
 <span class="w">    </span><span class="c1">// For each *underlying* edge ID, remember the DFS orientation's head (v)</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">edgeEndpoints</span><span class="p">;</span><span class="w"> </span><span class="c1">// edgeEndpoints[eid] = v in oriented DFS edge (u -&gt; v)</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">NodeT</span><span class="o">&gt;</span><span class="w"> </span><span class="n">edgeEndpoints</span><span class="p">;</span><span class="w"> </span><span class="c1">// edgeEndpoints[eid] = v in oriented DFS edge (u -&gt; v)</span>
 
 <span class="w">    </span><span class="c1">// Conflict stack</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">stack</span><span class="o">&lt;</span><span class="n">ConflictPair</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stack</span><span class="p">;</span>
 <span class="w">    </span><span class="c1">// DFS graph with tree/back orientation</span>
-<span class="w">    </span><span class="n">Graph</span><span class="w"> </span><span class="n">dfsGraph</span><span class="p">;</span>
+<span class="w">    </span><span class="n">GraphT</span><span class="w"> </span><span class="n">dfsGraph</span><span class="p">;</span>
 <span class="p">};</span>
 
+<span class="k">using</span><span class="w"> </span><span class="n">LeftRightPlanarityCheck</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GenericLeftRightPlanarityCheck</span><span class="o">&lt;</span><span class="n">Graph</span><span class="o">&gt;</span><span class="p">;</span>
+
 <span class="p">}</span><span class="w"> </span><span class="c1">// namespace NetworKit</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/planarity/LeftRightPlanarityCheckImpl.hpp&gt;</span>
 
 <span class="cp">#endif </span><span class="c1">// NETWORKIT_PLANARITY_LEFT_RIGHT_PLANARITY_CHECK_HPP_</span>
 </pre></div>

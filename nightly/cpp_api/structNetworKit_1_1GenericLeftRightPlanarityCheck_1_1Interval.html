@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Class LeftRightPlanarityCheck</title>
+    <title>Struct GenericLeftRightPlanarityCheck::Interval</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -26,8 +26,8 @@
     <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Template Class Level" href="classNetworKit_1_1Level.html" />
-    <link rel="prev" title="Class LayoutAlgorithm" href="classNetworKit_1_1LayoutAlgorithm.html" />
+    <link rel="next" title="Struct GraphBuilder::HalfEdge" href="structNetworKit_1_1GraphBuilder_1_1HalfEdge.html" />
+    <link rel="prev" title="Struct GenericLeftRightPlanarityCheck::ConflictPair" href="structNetworKit_1_1GenericLeftRightPlanarityCheck_1_1ConflictPair.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-08-17)"
+	        data-docs-version-label="Nightly (2026-09-10)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-08-17)"
+	        data-docs-nightly-label="Nightly (2026-09-10)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-08-17)</option>
+	  <option value="nightly" selected>Nightly (2026-09-10)</option>
 	</select>
 </div>
 
@@ -148,61 +148,56 @@
       </div>
     <div class="col-md-9 content">
       
-  <section id="class-leftrightplanaritycheck">
-<span id="exhale-class-classnetworkit-1-1leftrightplanaritycheck"></span><h1>Class LeftRightPlanarityCheck<a class="headerlink" href="#class-leftrightplanaritycheck" title="Link to this heading">¶</a></h1>
+  <section id="struct-genericleftrightplanaritycheck-interval">
+<span id="exhale-struct-structnetworkit-1-1genericleftrightplanaritycheck-1-1interval"></span><h1>Struct GenericLeftRightPlanarityCheck::Interval<a class="headerlink" href="#struct-genericleftrightplanaritycheck-interval" title="Link to this heading">¶</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_include_networkit_planarity_LeftRightPlanarityCheck.hpp.html#file-include-networkit-planarity-leftrightplanaritycheck-hpp"><span class="std std-ref">File LeftRightPlanarityCheck.hpp</span></a></p></li>
 </ul>
 <section id="nested-relationships">
 <h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Link to this heading">¶</a></h2>
-<section id="nested-types">
-<h3>Nested Types<a class="headerlink" href="#nested-types" title="Link to this heading">¶</a></h3>
-<ul class="simple">
-<li><p><a class="reference internal" href="structNetworKit_1_1LeftRightPlanarityCheck_1_1ConflictPair.html#exhale-struct-structnetworkit-1-1leftrightplanaritycheck-1-1conflictpair"><span class="std std-ref">Struct LeftRightPlanarityCheck::ConflictPair</span></a></p></li>
-<li><p><a class="reference internal" href="structNetworKit_1_1LeftRightPlanarityCheck_1_1Interval.html#exhale-struct-structnetworkit-1-1leftrightplanaritycheck-1-1interval"><span class="std std-ref">Struct LeftRightPlanarityCheck::Interval</span></a></p></li>
-</ul>
+<p>This struct is a nested type of <a class="reference internal" href="classNetworKit_1_1GenericLeftRightPlanarityCheck.html#exhale-class-classnetworkit-1-1genericleftrightplanaritycheck"><span class="std std-ref">Template Class GenericLeftRightPlanarityCheck</span></a>.</p>
 </section>
-</section>
-<section id="inheritance-relationships">
-<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Link to this heading">¶</a></h2>
-<section id="base-type">
-<h3>Base Type<a class="headerlink" href="#base-type" title="Link to this heading">¶</a></h3>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::Algorithm</span></code> (<a class="reference internal" href="classNetworKit_1_1Algorithm.html#exhale-class-classnetworkit-1-1algorithm"><span class="std std-ref">Class Algorithm</span></a>)</p></li>
-</ul>
-</section>
-</section>
-<section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
-<dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23LeftRightPlanarityCheckE">
-<span class="target" id="classNetworKit_1_1LeftRightPlanarityCheck"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LeftRightPlanarityCheck</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1Algorithm.html#_CPPv4N9NetworKit9AlgorithmE" title="NetworKit::Algorithm"><span class="n"><span class="pre">Algorithm</span></span></a><a class="headerlink" href="#_CPPv4N9NetworKit23LeftRightPlanarityCheckE" title="Link to this definition">¶</a><br /></dt>
+<section id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Link to this heading">¶</a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit30GenericLeftRightPlanarityCheck8IntervalE">
+<span class="target" id="structNetworKit_1_1GenericLeftRightPlanarityCheck_1_1Interval"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Interval</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit30GenericLeftRightPlanarityCheck8IntervalE" title="Link to this definition">¶</a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23LeftRightPlanarityCheck23LeftRightPlanarityCheckERK5Graph">
-<span class="target" id="classNetworKit_1_1LeftRightPlanarityCheck_1a28f6999f7b2df0b1bd3d100b2393242b"></span><span class="sig-name descname"><span class="n"><span class="pre">LeftRightPlanarityCheck</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit23LeftRightPlanarityCheck23LeftRightPlanarityCheckERK5Graph" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Implements the left-right planarity test as described in <a class="reference external" href="https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=7963e9feffe1c9362eb1a69010a5139d1da3661e">citation</a>. This algorithm determines whether a graph is planar, i.e., whether it can be drawn on a plane without any edges crossing. For an overview of planar graphs, refer to: <a class="reference external" href="https://en.wikipedia.org/wiki/Planar_graph">https://en.wikipedia.org/wiki/Planar_graph</a></p>
-<p>The algorithm achieves (almost) linear runtime complexity. The only non-linear component arises from sorting the nodes of the depth-first search tree.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> – The input graph to test for planarity. The graph should be undirected. </p>
-</dd>
-<dt class="field-even">Throws<span class="colon">:</span></dt>
-<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – if graph is not an undirected graph </p>
-</dd>
-</dl>
-</dd></dl>
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit30GenericLeftRightPlanarityCheck8Interval8IntervalEv">
+<span class="target" id="structNetworKit_1_1GenericLeftRightPlanarityCheck_1_1Interval_1afce17a35170849aed3366109e95fb068"></span><span class="sig-name descname"><span class="n"><span class="pre">Interval</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N9NetworKit30GenericLeftRightPlanarityCheck8Interval8IntervalEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit23LeftRightPlanarityCheck3runEv">
-<span class="target" id="classNetworKit_1_1LeftRightPlanarityCheck_1a7b2703417adea929c789ac1e2cb9c000"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9NetworKit23LeftRightPlanarityCheck3runEv" title="Link to this definition">¶</a><br /></dt>
-<dd><p>The generic run method which calls runImpl() and takes care of setting hasRun to the appropriate value. </p>
-</dd></dl>
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit30GenericLeftRightPlanarityCheck8Interval8IntervalE6edgeid6edgeid">
+<span class="target" id="structNetworKit_1_1GenericLeftRightPlanarityCheck_1_1Interval_1aa866080cecf4aef464d380d3baa46759"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Interval</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1afc39c64aa91613e637d66123507a92b5.html#_CPPv4N9NetworKit6edgeidE" title="NetworKit::edgeid"><span class="n"><span class="pre">edgeid</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">lowId</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1afc39c64aa91613e637d66123507a92b5.html#_CPPv4N9NetworKit6edgeidE" title="NetworKit::edgeid"><span class="n"><span class="pre">edgeid</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">highId</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit30GenericLeftRightPlanarityCheck8Interval8IntervalE6edgeid6edgeid" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit23LeftRightPlanarityCheck8isPlanarEv">
-<span class="target" id="classNetworKit_1_1LeftRightPlanarityCheck_1a5fa75ead25993eb4e28ab2a3a1d28be5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isPlanar</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit23LeftRightPlanarityCheck8isPlanarEv" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit30GenericLeftRightPlanarityCheck8Interval7isEmptyEv">
+<span class="target" id="structNetworKit_1_1GenericLeftRightPlanarityCheck_1_1Interval_1aa027f8c0dbf3b0343f540f4f220b23f5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isEmpty</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit30GenericLeftRightPlanarityCheck8Interval7isEmptyEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit30GenericLeftRightPlanarityCheck8Interval3lowE">
+<span class="target" id="structNetworKit_1_1GenericLeftRightPlanarityCheck_1_1Interval_1a498d902653c3e368140e495025c430d7"></span><a class="reference internal" href="typedef_namespaceNetworKit_1afc39c64aa91613e637d66123507a92b5.html#_CPPv4N9NetworKit6edgeidE" title="NetworKit::edgeid"><span class="n"><span class="pre">edgeid</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">low</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><a class="reference internal" href="variable_namespaceNetworKit_1a6af27fa585882054f953dc0ba113798b.html#_CPPv4N9NetworKit10nullEdgeIdE" title="NetworKit::nullEdgeId"><span class="n"><span class="pre">nullEdgeId</span></span></a><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N9NetworKit30GenericLeftRightPlanarityCheck8Interval3lowE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit30GenericLeftRightPlanarityCheck8Interval4highE">
+<span class="target" id="structNetworKit_1_1GenericLeftRightPlanarityCheck_1_1Interval_1a5abf9fcb84e8878071941f20324dab1f"></span><a class="reference internal" href="typedef_namespaceNetworKit_1afc39c64aa91613e637d66123507a92b5.html#_CPPv4N9NetworKit6edgeidE" title="NetworKit::edgeid"><span class="n"><span class="pre">edgeid</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">high</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><a class="reference internal" href="variable_namespaceNetworKit_1a6af27fa585882054f953dc0ba113798b.html#_CPPv4N9NetworKit10nullEdgeIdE" title="NetworKit::nullEdgeId"><span class="n"><span class="pre">nullEdgeId</span></span></a><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N9NetworKit30GenericLeftRightPlanarityCheck8Interval4highE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit30GenericLeftRightPlanarityCheck8IntervaleqERK8IntervalRK8Interval">
+<span class="target" id="structNetworKit_1_1GenericLeftRightPlanarityCheck_1_1Interval_1a6271efee18a476f9474a3c9c8e60af5e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">friend</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">==</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit30GenericLeftRightPlanarityCheck8IntervalE" title="NetworKit::GenericLeftRightPlanarityCheck::Interval"><span class="n"><span class="pre">Interval</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">lhs</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit30GenericLeftRightPlanarityCheck8IntervalE" title="NetworKit::GenericLeftRightPlanarityCheck::Interval"><span class="n"><span class="pre">Interval</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">rhs</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit30GenericLeftRightPlanarityCheck8IntervaleqERK8IntervalRK8Interval" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
