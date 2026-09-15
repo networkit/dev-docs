@@ -277,7 +277,7 @@ setting <code class="docutils literal notranslate"><span class="pre">norm</span>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-5.111600261662487e-07
+4.864720847751675e-07
 </pre></div></div>
 </div>
 </section>
@@ -446,7 +446,7 @@ setting <code class="docutils literal notranslate"><span class="pre">norm</span>
 <p><a class="reference external" href="https://networkit.github.io/dev-docs/python_api/linkprediction.html?highlight=randomlinksampler#networkit.linkprediction.RandomLinkSampler">RandomLinkSampler(G, numLinks)</a> provides methods to randomly sample a number of edges from a given graph. <code class="docutils literal notranslate"><span class="pre">numLinks</span></code> is the number of edges the returned graph should have.</p>
 <p><a class="reference external" href="https://networkit.github.io/dev-docs/python_api/linkprediction.html?highlight=missing#networkit.linkprediction.MissingLinksFinder">MissingLinksFinder(G)</a> finds the missing edges in the given graph. The <code class="docutils literal notranslate"><span class="pre">findAtDistance(k)</span></code> function returns all missing links in the graph. The absent links to find are narrowed down by providing a distance that the nodes of the missing links should have. For example in case of distance 2 only node-pairs that would close a triangle in the given graph get
 returned.</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
@@ -467,18 +467,6 @@ returned.</p>
     <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-((15, 147), 3.778125e-09)
-((44, 118), 5.025e-09)
-((47, 147), 3.1499999999999997e-09)
-((58, 147), 3.825375e-07)
-((73, 147), 2.625625e-07)
-</pre></div></div>
 </div>
 </section>
 
