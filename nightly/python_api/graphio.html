@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=fd6457a4" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=c83e6b79" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <script src="../_static/documentation_options.js?v=89fba709"></script>
@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-09-15)"
+	        data-docs-version-label="Nightly (2026-09-18)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-09-15)"
+	        data-docs-nightly-label="Nightly (2026-09-18)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-09-15)</option>
+	  <option value="nightly" selected>Nightly (2026-09-18)</option>
 	</select>
 </div>
 
@@ -537,10 +537,8 @@ This requires processing the sorted eventStream and figuring out the addition or
 After that, node addition/deletion/restoration operations of this node must be readded to eventStream
 with correct mapping.
 .. note:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">New</span> <span class="n">mapping</span> <span class="n">of</span> <span class="n">a</span> <span class="n">node</span> <span class="n">can</span> <span class="n">be</span> <span class="n">equal</span> <span class="n">to</span> <span class="n">old</span> <span class="n">mapping</span> <span class="n">of</span> <span class="n">a</span> <span class="n">node</span><span class="o">.</span> <span class="n">In</span> <span class="n">order</span> <span class="n">to</span> <span class="n">prevent</span> <span class="n">collisions</span><span class="p">,</span>
-<span class="n">isMapped</span> <span class="n">array</span> <span class="n">must</span> <span class="n">be</span> <span class="n">maintained</span> <span class="ow">and</span> <span class="n">controlled</span><span class="o">.</span>
-</pre></div>
-</div>
+<p>New mapping of a node can be equal to old mapping of a node. In order to prevent collisions,
+isMapped array must be maintained and controlled.</p>
 </dd></dl>
 
 <dl class="py method">
