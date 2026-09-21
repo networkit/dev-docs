@@ -257,7 +257,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.centrality.ApproxGroupBetweenness at 0x7f3106c64bb0&gt;
+&lt;networkit.centrality.ApproxGroupBetweenness at 0x7fbffc960ca0&gt;
 </pre></div></div>
 </div>
 <p>After running the algorithm, we can extract some information about the group betweenness centrality, e.g. the group with the highest approximate betweenness centrality score.</p>
@@ -276,7 +276,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[0, 33, 32, 2, 1, 31, 23, 27, 6, 3]
+[0, 33, 32, 2, 1, 31, 23, 5, 3, 8]
 </pre></div></div>
 </div>
 <p>One may also have a group of nodes and be interested in the group’s betweeness centrality score. The function <a href="#id1"><span class="problematic" id="id2">`scoreOfGroup(group, normalized=False) &lt;&gt;`__</span></a> returns the betweenness centrality score of the list of nodes in <code class="docutils literal notranslate"><span class="pre">group</span></code>.</p>
@@ -331,7 +331,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.centrality.GroupCloseness at 0x7f3106c65570&gt;
+&lt;networkit.centrality.GroupCloseness at 0x7fbffc960b50&gt;
 </pre></div></div>
 </div>
 <p><a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=groupma#networkit.centrality.GroupCloseness.groupMaxCloseness">groupMaxCloseness()</a> returns the group of <code class="docutils literal notranslate"><span class="pre">k</span></code> nodes computed by the algorithm.</p>
@@ -350,7 +350,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[0, 33, 31, 16, 6, 29, 30, 28, 26, 27]
+[0, 33, 31, 16, 6, 30, 28, 27, 26, 25]
 </pre></div></div>
 </div>
 <p><a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=scoreof#networkit.centrality.GroupCloseness.scoreOfGroup">scoreOfGroup(group)</a> takes a group of nodes as input, and returns the group’s closeness centrality score. The score is returned as a value between 0 and 1: a score of 1 indicates maximum group closeness centrality.</p>
@@ -409,7 +409,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Initial group [7, 13, 15, 23, 28] has score 0.020
+Initial group [1, 33, 9, 17, 31] has score 0.027
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -427,7 +427,7 @@ Initial group [7, 13, 15, 23, 28] has score 0.020
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Final group [7, 32, 1, 23, 28] has score 0.025
+Final group [31, 17, 9, 33, 1] has score 0.027
 </pre></div></div>
 </div>
 <p>The LS-Restrict algorithm for group closeness only allows swaps between vertices in the group and their neighbors outside. Because it considers less candidates for a swap it is faster than Grow-Shrink, but might yield results with lower quality.</p>
@@ -449,7 +449,7 @@ Final group [7, 32, 1, 23, 28] has score 0.025
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Initial group [13, 21, 24, 25, 30] has score 0.020
+Initial group [3, 7, 24, 25, 29] has score 0.021
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -467,7 +467,7 @@ Initial group [13, 21, 24, 25, 30] has score 0.020
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Final group [25, 24, 21, 33, 13] has score 0.026
+Final group [0, 25, 29, 24, 7] has score 0.026
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -488,7 +488,7 @@ Final group [25, 24, 21, 33, 13] has score 0.026
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Initial group [32, 9, 28, 30, 31] has score 0.644
+Initial group [5, 19, 24, 25, 27] has score 0.592
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -506,7 +506,7 @@ Initial group [32, 9, 28, 30, 31] has score 0.644
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Final group [0, 33, 31, 6, 32] has score 1.000
+Final group [0, 33, 32, 31, 5] has score 1.000
 </pre></div></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">GroupClosenessLocalSearch</span></code> evaluates all possible single-swaps between vertices in the group and the vertices outside. Its time complexity is <span class="math notranslate nohighlight">\(O(k \cdot (n - k))\)</span>, compared to the aforementioned algorithms for group closeness it is slower, but it yields groups with higher group closeness score.</p>
@@ -533,7 +533,7 @@ Final group [0, 33, 31, 6, 32] has score 1.000
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Initial group [1, 2, 4, 11, 21] has score 0.630
+Initial group [1, 12, 17, 22, 30] has score 0.569
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -584,7 +584,7 @@ Initial group [1, 2, 4, 11, 21] has score 0.630
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;networkit.centrality.GroupDegree at 0x7f3106c65f90&gt;
+&lt;networkit.centrality.GroupDegree at 0x7fbffc962830&gt;
 </pre></div></div>
 </div>
 <p><a class="reference external" href="https://networkit.github.io/dev-docs/python_api/centrality.html?highlight=groupma#networkit.centrality.GroupDegree.groupMaxDegree">groupMaxDegree()</a> returns the group of <code class="docutils literal notranslate"><span class="pre">k</span></code> nodes computed by the algorithm.</p>
