@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Class TopologicalSort</title>
+    <title>Template Class GenericTopologicalSort</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -26,8 +26,8 @@
     <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class TotalNeighborsIndex" href="classNetworKit_1_1TotalNeighborsIndex.html" />
-    <link rel="prev" title="Class TopHarmonicCloseness" href="classNetworKit_1_1TopHarmonicCloseness.html" />
+    <link rel="next" title="Template Class GenericUnionFind" href="classNetworKit_1_1GenericUnionFind.html" />
+    <link rel="prev" title="Template Class GenericPartition" href="classNetworKit_1_1GenericPartition.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-09-18)"
+	        data-docs-version-label="Nightly (2026-09-21)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-09-18)"
+	        data-docs-nightly-label="Nightly (2026-09-21)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-09-18)</option>
+	  <option value="nightly" selected>Nightly (2026-09-21)</option>
 	</select>
 </div>
 
@@ -148,8 +148,8 @@
       </div>
     <div class="col-md-9 content">
       
-  <section id="class-topologicalsort">
-<span id="exhale-class-classnetworkit-1-1topologicalsort"></span><h1>Class TopologicalSort<a class="headerlink" href="#class-topologicalsort" title="Link to this heading">¶</a></h1>
+  <section id="template-class-generictopologicalsort">
+<span id="exhale-class-classnetworkit-1-1generictopologicalsort"></span><h1>Template Class GenericTopologicalSort<a class="headerlink" href="#template-class-generictopologicalsort" title="Link to this heading">¶</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_include_networkit_graph_TopologicalSort.hpp.html#file-include-networkit-graph-topologicalsort-hpp"><span class="std std-ref">File TopologicalSort.hpp</span></a></p></li>
 </ul>
@@ -165,14 +165,27 @@
 <section id="class-documentation">
 <h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
 <dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit15TopologicalSortE">
-<span class="target" id="classNetworKit_1_1TopologicalSort"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TopologicalSort</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1Algorithm.html#_CPPv4N9NetworKit9AlgorithmE" title="NetworKit::Algorithm"><span class="n"><span class="pre">Algorithm</span></span></a><a class="headerlink" href="#_CPPv4N9NetworKit15TopologicalSortE" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4I0EN9NetworKit22GenericTopologicalSortE">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GraphT</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classNetworKit_1_1GenericTopologicalSort"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenericTopologicalSort</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1Algorithm.html#_CPPv4N9NetworKit9AlgorithmE" title="NetworKit::Algorithm"><span class="n"><span class="pre">Algorithm</span></span></a><a class="headerlink" href="#_CPPv4I0EN9NetworKit22GenericTopologicalSortE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Given a directed graph G, the topology sort algorithm creates one valid topology order of nodes. Undirected graphs are not accepted as input, since a topology sort is a linear ordering of vertices such that for every edge u -&gt; v, node u comes before v in the ordering. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit22GenericTopologicalSort5NodeTE">
+<span class="target" id="classNetworKit_1_1GenericTopologicalSort_1a69ab608d152e4c2d4286a8b4f27ca4aa"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NodeT</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN9NetworKit22GenericTopologicalSortE" title="NetworKit::GenericTopologicalSort::GraphT"><span class="n"><span class="pre">GraphT</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">NodeT</span></span><a class="headerlink" href="#_CPPv4N9NetworKit22GenericTopologicalSort5NodeTE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit22GenericTopologicalSort13NodeIdMappingE">
+<span class="target" id="classNetworKit_1_1GenericTopologicalSort_1a0e6a5393543a5dc827b2c530669e2c38"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NodeIdMapping</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N9NetworKit22GenericTopologicalSort5NodeTE" title="NetworKit::GenericTopologicalSort::NodeT"><span class="n"><span class="pre">NodeT</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1a41e30d07038ef847798f304a60ea2902.html#_CPPv4N9NetworKit5indexE" title="NetworKit::index"><span class="n"><span class="pre">index</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N9NetworKit22GenericTopologicalSort13NodeIdMappingE" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit15TopologicalSort15TopologicalSortERK5Graph">
-<span class="target" id="classNetworKit_1_1TopologicalSort_1a5c90d8d3114da6e75d972a5eb259e93f"></span><span class="sig-name descname"><span class="n"><span class="pre">TopologicalSort</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit15TopologicalSort15TopologicalSortERK5Graph" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit22GenericTopologicalSort22GenericTopologicalSortERK6GraphT">
+<span class="target" id="classNetworKit_1_1GenericTopologicalSort_1a406d85995282912e82589da064232735"></span><span class="sig-name descname"><span class="n"><span class="pre">GenericTopologicalSort</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN9NetworKit22GenericTopologicalSortE" title="NetworKit::GenericTopologicalSort::GraphT"><span class="n"><span class="pre">GraphT</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit22GenericTopologicalSort22GenericTopologicalSortERK6GraphT" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Initialize the topological sort algorithm by passing an input graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -182,8 +195,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit15TopologicalSort15TopologicalSortERK5GraphRKNSt13unordered_mapI4node4nodeEEb">
-<span class="target" id="classNetworKit_1_1TopologicalSort_1a61e40f9c48c651ab978bb3ccd4a25700"></span><span class="sig-name descname"><span class="n"><span class="pre">TopologicalSort</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">nodeIdMapping</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">checkMapping</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit15TopologicalSort15TopologicalSortERK5GraphRKNSt13unordered_mapI4node4nodeEEb" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit22GenericTopologicalSort22GenericTopologicalSortERK6GraphTRK13NodeIdMappingb">
+<span class="target" id="classNetworKit_1_1GenericTopologicalSort_1a71301d1535343e18ac84d37eb6bee16c"></span><span class="sig-name descname"><span class="n"><span class="pre">GenericTopologicalSort</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN9NetworKit22GenericTopologicalSortE" title="NetworKit::GenericTopologicalSort::GraphT"><span class="n"><span class="pre">GraphT</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N9NetworKit22GenericTopologicalSort13NodeIdMappingE" title="NetworKit::GenericTopologicalSort::NodeIdMapping"><span class="n"><span class="pre">NodeIdMapping</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">nodeIdMapping</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">checkMapping</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit22GenericTopologicalSort22GenericTopologicalSortERK6GraphTRK13NodeIdMappingb" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Initialize the topological sort algorithm by passing an input graph and an node id map. The node id mapping must be a continuous. This can be checked by setting checkMapping to true.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -197,14 +210,14 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit15TopologicalSort3runEv">
-<span class="target" id="classNetworKit_1_1TopologicalSort_1a8b880c7e39271d782ed761548ecc5c59"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9NetworKit15TopologicalSort3runEv" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit22GenericTopologicalSort3runEv">
+<span class="target" id="classNetworKit_1_1GenericTopologicalSort_1a30c21c0a7c4b5647be57b84ff7582ab0"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9NetworKit22GenericTopologicalSort3runEv" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Execute the algorithm. The algorithm is not parallel. </p>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit15TopologicalSort9getResultEv">
-<span class="target" id="classNetworKit_1_1TopologicalSort_1a9a4e9accbdf6072156f4edda605367cf"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getResult</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit15TopologicalSort9getResultEv" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit22GenericTopologicalSort9getResultEv">
+<span class="target" id="classNetworKit_1_1GenericTopologicalSort_1a3db77a21d711d8346337f188bff839e4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N9NetworKit22GenericTopologicalSort5NodeTE" title="NetworKit::GenericTopologicalSort::NodeT"><span class="n"><span class="pre">NodeT</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getResult</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit22GenericTopologicalSort9getResultEv" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Return the topology</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>

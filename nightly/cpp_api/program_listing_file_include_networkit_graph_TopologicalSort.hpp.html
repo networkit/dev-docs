@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-09-18)"
+	        data-docs-version-label="Nightly (2026-09-21)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-09-18)"
+	        data-docs-nightly-label="Nightly (2026-09-21)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-09-18)</option>
+	  <option value="nightly" selected>Nightly (2026-09-21)</option>
 	</select>
 </div>
 
@@ -143,21 +143,27 @@
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;optional&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unordered_map&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/base/Algorithm.hpp&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/graph/Graph.hpp&gt;</span>
 
 <span class="k">namespace</span><span class="w"> </span><span class="nn">NetworKit</span><span class="w"> </span><span class="p">{</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">TopologicalSort</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Algorithm</span><span class="w"> </span><span class="p">{</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">GraphT</span><span class="o">&gt;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">GenericTopologicalSort</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Algorithm</span><span class="w"> </span><span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="n">TopologicalSort</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">);</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">NodeT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">GraphT</span><span class="o">::</span><span class="n">NodeT</span><span class="p">;</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">NodeIdMapping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">NodeT</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="o">&gt;</span><span class="p">;</span>
 
-<span class="w">    </span><span class="n">TopologicalSort</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">nodeIdMapping</span><span class="p">,</span>
-<span class="w">                    </span><span class="kt">bool</span><span class="w"> </span><span class="n">checkMapping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="w">    </span><span class="n">GenericTopologicalSort</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">GraphT</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">GenericTopologicalSort</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">GraphT</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">NodeIdMapping</span><span class="w"> </span><span class="o">&amp;</span><span class="n">nodeIdMapping</span><span class="p">,</span>
+<span class="w">                           </span><span class="kt">bool</span><span class="w"> </span><span class="n">checkMapping</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
 
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">node</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">getResult</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">NodeT</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">getResult</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">assureFinished</span><span class="p">();</span>
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">topology</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
@@ -165,31 +171,38 @@
 <span class="k">private</span><span class="o">:</span>
 <span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">NodeMark</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">NONE</span><span class="p">,</span><span class="w"> </span><span class="n">TEMP</span><span class="p">,</span><span class="w"> </span><span class="n">PERM</span><span class="w"> </span><span class="p">};</span>
 
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">Graph</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">;</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">GraphT</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">;</span>
 
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">computedNodeIdMap</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">NodeIdMapping</span><span class="o">&gt;</span><span class="w"> </span><span class="n">computedNodeIdMap</span><span class="p">;</span>
 
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="n">nodeIdMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nullptr</span><span class="p">;</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">NodeIdMapping</span><span class="w"> </span><span class="o">*</span><span class="n">nodeIdMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">nullptr</span><span class="p">;</span>
 
 <span class="w">    </span><span class="c1">// Used to mark the status of each node, one vector per thread</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">NodeMark</span><span class="o">&gt;</span><span class="w"> </span><span class="n">topSortMark</span><span class="p">;</span>
 
 <span class="w">    </span><span class="c1">// Contains information about the computed topology</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">topology</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">NodeT</span><span class="o">&gt;</span><span class="w"> </span><span class="n">topology</span><span class="p">;</span>
 
 <span class="w">    </span><span class="c1">// Helper structures</span>
 <span class="w">    </span><span class="n">count</span><span class="w"> </span><span class="n">current</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">NodeIdMapping</span><span class="w"> </span><span class="nf">computeContinuousNodeIds</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">GraphT</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">);</span>
 
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">checkDirected</span><span class="p">();</span>
 
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">checkNodeIdMap</span><span class="p">();</span>
 
-<span class="w">    </span><span class="n">node</span><span class="w"> </span><span class="nf">mapNode</span><span class="p">(</span><span class="n">node</span><span class="w"> </span><span class="n">u</span><span class="p">);</span>
+<span class="w">    </span><span class="n">index</span><span class="w"> </span><span class="nf">mapNode</span><span class="p">(</span><span class="n">NodeT</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 
 <span class="w">    </span><span class="c1">// Reset algorithm data structure</span>
 <span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">reset</span><span class="p">();</span>
 <span class="p">};</span>
+
+<span class="k">using</span><span class="w"> </span><span class="n">TopologicalSort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GenericTopologicalSort</span><span class="o">&lt;</span><span class="n">Graph</span><span class="o">&gt;</span><span class="p">;</span>
+
 <span class="p">}</span><span class="w"> </span><span class="c1">// namespace NetworKit</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/graph/TopologicalSortImpl.hpp&gt;</span>
 
 <span class="cp">#endif </span><span class="c1">// NETWORKIT_GRAPH_TOPOLOGICAL_SORT_HPP_</span>
 </pre></div>
