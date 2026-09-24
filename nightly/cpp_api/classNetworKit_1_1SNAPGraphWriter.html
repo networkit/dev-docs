@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-09-21)"
+	        data-docs-version-label="Nightly (2026-09-24)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-09-21)"
+	        data-docs-nightly-label="Nightly (2026-09-24)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-09-21)</option>
+	  <option value="nightly" selected>Nightly (2026-09-24)</option>
 	</select>
 </div>
 
@@ -175,7 +175,7 @@
 <p>The third parameter can be either u denoting a undirected graph, or d denoting a directed graph. Internally, an edge &lt;u, v&gt; in an undirected graph is stored as two directed links u-&gt;v and v-&gt;u.</p>
 <p>weight_type can be u (unweighted), i (integer), l (long, 8 bytes on 64-bit architectures), f (float), or d (double)</p>
 <p>For the fifth parameter, 0 indicates that the valid range of vertex IDs is 0 to n-1. 1 indicates that it is 1 to n.</p>
-<p>The problem line is followed by a listing on exactly m edges. The format is </p>
+<p>The problem line is followed by a listing on exactly m edges. The format is <span> for a weighted graph, and <span> for an unweighted graph. </span></span></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">

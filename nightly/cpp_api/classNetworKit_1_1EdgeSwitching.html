@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-09-21)"
+	        data-docs-version-label="Nightly (2026-09-24)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-09-21)"
+	        data-docs-nightly-label="Nightly (2026-09-24)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-09-21)</option>
+	  <option value="nightly" selected>Nightly (2026-09-24)</option>
 	</select>
 </div>
 
@@ -167,10 +167,9 @@
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13EdgeSwitchingE">
 <span class="target" id="classNetworKit_1_1EdgeSwitching"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EdgeSwitching</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1Algorithm.html#_CPPv4N9NetworKit9AlgorithmE" title="NetworKit::Algorithm"><span class="n"><span class="pre">Algorithm</span></span></a><a class="headerlink" href="#_CPPv4N9NetworKit13EdgeSwitchingE" title="Link to this definition">¶</a><br /></dt>
-<dd><p><a class="reference internal" href="#classNetworKit_1_1EdgeSwitching"><span class="std std-ref">EdgeSwitching</span></a> and <a class="reference internal" href="classNetworKit_1_1EdgeSwitchingInPlace.html#classNetworKit_1_1EdgeSwitchingInPlace"><span class="std std-ref">EdgeSwitchingInPlace</span></a> implement the same algorithm &amp;#8212; while the former copies the input graph provided and is more versatile, the in-place implementation only keeps a reference to the input graph.</p>
+<dd><p><a class="reference internal" href="#classNetworKit_1_1EdgeSwitching"><span class="std std-ref">EdgeSwitching</span></a> and <a class="reference internal" href="classNetworKit_1_1EdgeSwitchingInPlace.html#classNetworKit_1_1EdgeSwitchingInPlace"><span class="std std-ref">EdgeSwitchingInPlace</span></a> implement the same algorithm – while the former copies the input graph provided and is more versatile, the in-place implementation only keeps a reference to the input graph.</p>
 <p><p>The Edge Switching Markov Chain [“The markov chain simulation method for generating connected</p>
-<p>power law random graphs”, Mihail and Zegura] perturbates simple directed or undirected graphs while preserving their degrees. In each step, two edges are selected uniformly at random, and their endpoints exchanged. Swaps that introduce multi-edges or self-loops are rejected WITHOUT replacement</p>
-&amp;#8212;<p>this is necessary to allow uniform sampling [see “Switching edges to randomize</p>
+<p>power law random graphs”, Mihail and Zegura] perturbates simple directed or undirected graphs while preserving their degrees. In each step, two edges are selected uniformly at random, and their endpoints exchanged. Swaps that introduce multi-edges or self-loops are rejected WITHOUT replacement – this is necessary to allow uniform sampling [see “Switching edges to randomize</p>
 <p>networks: what goes wrong and how to fix it”, Carstens and Horadam]. The number of successful swaps can be queried using</p>
 <a class="reference internal" href="#classNetworKit_1_1EdgeSwitching_1abe5cd175b992d64e54c9f324951d9684"><span class="std std-ref">getNumberOfAffectedEdges()</span></a>/2.</p>
 <p>
