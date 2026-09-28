@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Template Function NetworKit::Traversal::callBFSHandle</title>
+    <title>Namespace NetworKit::Traversal::Impl</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -26,8 +26,8 @@
     <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Template Function NetworKit::Traversal::callDijkstraHandle" href="function_graph_2Dijkstra_8hpp_1a62e78800512973e091f91c645ec24816.html" />
-    <link rel="prev" title="Template Function NetworKit::Traversal::BFSfrom(const Graph&amp;, node, L)" href="function_graph_2BFS_8hpp_1ae625e616ddc7bfdb74c404034b65ebdb.html" />
+    <link rel="next" title="Namespace std" href="namespace_std.html" />
+    <link rel="prev" title="Namespace NetworKit::Traversal" href="namespace_NetworKit__Traversal.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-09-24)"
+	        data-docs-version-label="Nightly (2026-09-28)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-09-24)"
+	        data-docs-nightly-label="Nightly (2026-09-28)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-09-24)</option>
+	  <option value="nightly" selected>Nightly (2026-09-28)</option>
 	</select>
 </div>
 
@@ -119,10 +119,10 @@
 <li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
@@ -148,20 +148,21 @@
       </div>
     <div class="col-md-9 content">
       
-  <section id="template-function-networkit-traversal-callbfshandle">
-<span id="exhale-function-graph-2bfs-8hpp-1a6480381105e60a9fa4d9a69df86db118"></span><h1>Template Function NetworKit::Traversal::callBFSHandle<a class="headerlink" href="#template-function-networkit-traversal-callbfshandle" title="Link to this heading">¶</a></h1>
+  <section id="namespace-networkit-traversal-impl">
+<span id="id1"></span><h1>Namespace NetworKit::Traversal::Impl<a class="headerlink" href="#namespace-networkit-traversal-impl" title="Link to this heading">¶</a></h1>
+<nav class="contents local" id="contents">
+<p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p>Defined in <a class="reference internal" href="file_include_networkit_graph_BFS.hpp.html#file-include-networkit-graph-bfs-hpp"><span class="std std-ref">File BFS.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id2">Functions</a></p></li>
 </ul>
-<section id="function-documentation">
-<h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Link to this heading">¶</a></h2>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4I0EN9NetworKit9Traversal13callBFSHandleEDTcl1f1u4distEER1F4node5count">
-<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">F</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="graph_2BFS_8hpp_1a6480381105e60a9fa4d9a69df86db118"></span><span class="kt"><span class="pre">auto</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Traversal</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">callBFSHandle</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0EN9NetworKit9Traversal13callBFSHandleEDTcl1f1u4distEER1F4node5count" title="NetworKit::Traversal::callBFSHandle::F"><span class="n"><span class="pre">F</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">f</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">dist</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="o"><span class="pre">-&gt;</span></span><span class="w"> </span><span class="k"><span class="pre">decltype</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4I0EN9NetworKit9Traversal13callBFSHandleEDTcl1f1u4distEER1F4node5count" title="NetworKit::Traversal::callBFSHandle::f"><span class="n"><span class="pre">f</span></span></a><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4I0EN9NetworKit9Traversal13callBFSHandleEDTcl1f1u4distEER1F4node5count" title="NetworKit::Traversal::callBFSHandle::u"><span class="n"><span class="pre">u</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN9NetworKit9Traversal13callBFSHandleEDTcl1f1u4distEER1F4node5count" title="NetworKit::Traversal::callBFSHandle::dist"><span class="n"><span class="pre">dist</span></span></a><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4I0EN9NetworKit9Traversal13callBFSHandleEDTcl1f1u4distEER1F4node5count" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Calls the given BFS handle with distance parameter</p>
-<p>Calls the given BFS handle without distance parameter </p>
-</dd></dl>
-
+</nav>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="function_graph_2BFS_8hpp_1a7148808ebbf752c3c879814f65723e7c.html#exhale-function-graph-2bfs-8hpp-1a7148808ebbf752c3c879814f65723e7c"><span class="std std-ref">Template Function NetworKit::Traversal::Impl::callBFSHandle</span></a></p></li>
+<li><p><a class="reference internal" href="function_graph_2BFS_8hpp_1a8451214fbb67b97d63a88aa791e85140.html#exhale-function-graph-2bfs-8hpp-1a8451214fbb67b97d63a88aa791e85140"><span class="std std-ref">Template Function NetworKit::Traversal::Impl::isValidNode</span></a></p></li>
+<li><p><a class="reference internal" href="function_graph_2BFS_8hpp_1a87f5c38c84801081a1b9f12daf7f8121.html#exhale-function-graph-2bfs-8hpp-1a87f5c38c84801081a1b9f12daf7f8121"><span class="std std-ref">Template Function NetworKit::Traversal::Impl::nodeIndex</span></a></p></li>
+</ul>
 </section>
 </section>
 
