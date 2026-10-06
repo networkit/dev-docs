@@ -177,9 +177,12 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>G</strong> – An unweighted graph. </p></li>
-<li><p><strong>k</strong> – Size of the group of nodes </p></li>
-<li><p><strong>H</strong> – If equal 0, simply runs the algorithm proposed in Bergamini et al.. If &gt; 0, interrupts all BFSs after H iterations (suggested for very large networks). &#64; </p></li>
+<li><p><strong>k</strong> – Size of the group of nodes, between 1 and G.numberOfNodes(). </p></li>
+<li><p><strong>H</strong> – If equal 0, simply runs the algorithm proposed in Bergamini et al.. If &gt; 0, interrupts all BFSs after H iterations (suggested for very large networks). </p></li>
 </ul>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – If k is zero or exceeds the number of nodes. &#64; </p>
 </dd>
 </dl>
 </dd></dl>
@@ -188,6 +191,11 @@
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14GroupCloseness3runEv">
 <span class="target" id="classNetworKit_1_1GroupCloseness_1a082dd438f0025a7a5d3a41efec7f0f43"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9NetworKit14GroupCloseness3runEv" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Computes the group with maximum closeness on the graph passed in the constructor. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Throws<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – If k exceeds the current number of nodes. </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="cpp function">
