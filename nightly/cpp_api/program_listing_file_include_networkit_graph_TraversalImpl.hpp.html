@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Template Function NetworKit::Traversal::Impl::isValidNode</title>
+    <title>Program Listing for File TraversalImpl.hpp</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -26,8 +26,6 @@
     <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Template Function NetworKit::Traversal::Impl::nodeIndex" href="function_graph_2BFS_8hpp_1a87f5c38c84801081a1b9f12daf7f8121.html" />
-    <link rel="prev" title="Template Function NetworKit::Traversal::Impl::callBFSHandle" href="function_graph_2BFS_8hpp_1a7148808ebbf752c3c879814f65723e7c.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -100,38 +98,21 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-10-22)"
+	        data-docs-version-label="Nightly (2026-10-25)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-10-22)"
+	        data-docs-nightly-label="Nightly (2026-10-25)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-10-22)</option>
+	  <option value="nightly" selected>Nightly (2026-10-25)</option>
 	</select>
 </div>
 
 <ul class="sidebar">
-	<ul class="current">
+	<ul>
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="library_root.html#page-hierarchy">Page Hierarchy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#variables">Variables</a></li>
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#defines">Defines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#directories">Directories</a></li>
-<li class="toctree-l3"><a class="reference internal" href="library_root.html#pages">Pages</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notebooks.html">Jupyter Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../DevGuide.html">Developer Guide</a></li>
 </ul>
@@ -148,19 +129,47 @@
       </div>
     <div class="col-md-9 content">
       
-  <section id="template-function-networkit-traversal-impl-isvalidnode">
-<span id="exhale-function-graph-2bfs-8hpp-1a8451214fbb67b97d63a88aa791e85140"></span><h1>Template Function NetworKit::Traversal::Impl::isValidNode<a class="headerlink" href="#template-function-networkit-traversal-impl-isvalidnode" title="Link to this heading">¶</a></h1>
-<ul class="simple">
-<li><p>Defined in <a class="reference internal" href="file_include_networkit_graph_BFS.hpp.html#file-include-networkit-graph-bfs-hpp"><span class="std std-ref">File BFS.hpp</span></a></p></li>
-</ul>
-<section id="function-documentation">
-<h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Link to this heading">¶</a></h2>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4I00EN9NetworKit9Traversal4Impl11isValidNodeEbRK6GraphT5NodeT">
-<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GraphT</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NodeT</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="graph_2BFS_8hpp_1a8451214fbb67b97d63a88aa791e85140"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Traversal</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Impl</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">isValidNode</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I00EN9NetworKit9Traversal4Impl11isValidNodeEbRK6GraphT5NodeT" title="NetworKit::Traversal::Impl::isValidNode::GraphT"><span class="n"><span class="pre">GraphT</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <a class="reference internal" href="#_CPPv4I00EN9NetworKit9Traversal4Impl11isValidNodeEbRK6GraphT5NodeT" title="NetworKit::Traversal::Impl::isValidNode::NodeT"><span class="n"><span class="pre">NodeT</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">u</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I00EN9NetworKit9Traversal4Impl11isValidNodeEbRK6GraphT5NodeT" title="Link to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+  <section id="program-listing-for-file-traversalimpl-hpp">
+<span id="program-listing-file-include-networkit-graph-traversalimpl-hpp"></span><h1>Program Listing for File TraversalImpl.hpp<a class="headerlink" href="#program-listing-for-file-traversalimpl-hpp" title="Link to this heading">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_include_networkit_graph_TraversalImpl.hpp.html#file-include-networkit-graph-traversalimpl-hpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">include/networkit/graph/TraversalImpl.hpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*  TraversalImpl.hpp</span>
+<span class="cm"> *</span>
+<span class="cm"> *  Created on: 25.10.2026</span>
+<span class="cm"> *  Authors: Andreas Scharf (andreas.b.scharf@gmail.com)</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span>
 
-</section>
+<span class="cp">#ifndef NETWORKIT_GRAPH_TRAVERSAL_IMPL_HPP_</span>
+<span class="cp">#define NETWORKIT_GRAPH_TRAVERSAL_IMPL_HPP_</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cassert&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstddef&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;type_traits&gt;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">NetworKit</span><span class="o">::</span><span class="nn">Traversal</span><span class="o">::</span><span class="nn">Impl</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">NodeT</span><span class="o">&gt;</span>
+<span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">nodeIndex</span><span class="p">(</span><span class="n">NodeT</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">is_signed_v</span><span class="o">&lt;</span><span class="n">NodeT</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">assert</span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">GraphT</span><span class="p">,</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">NodeT</span><span class="o">&gt;</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">isValidNode</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">GraphT</span><span class="w"> </span><span class="o">&amp;</span><span class="n">G</span><span class="p">,</span><span class="w"> </span><span class="n">NodeT</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">is_signed_v</span><span class="o">&lt;</span><span class="n">NodeT</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">G</span><span class="p">.</span><span class="n">hasNode</span><span class="p">(</span><span class="n">u</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace NetworKit::Traversal::Impl</span>
+
+<span class="cp">#endif </span><span class="c1">// NETWORKIT_GRAPH_TRAVERSAL_IMPL_HPP_</span>
+</pre></div>
+</div>
 </section>
 
 
