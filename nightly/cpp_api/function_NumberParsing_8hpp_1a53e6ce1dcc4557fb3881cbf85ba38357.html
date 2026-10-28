@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Function NetworKit::GraphTools::topologicalSort(const Graph&amp;, const std::unordered_map&lt;node, node&gt;&amp;, bool)</title>
+    <title>Template Function Aux::Parsing::strTo</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -26,8 +26,8 @@
     <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Function NetworKit::GraphTools::toUndirected" href="function_GraphTools_8hpp_1a46b2d158ec1e74fbf9436baa076ccdba.html" />
-    <link rel="prev" title="Function NetworKit::GraphTools::topologicalSort(const Graph&amp;)" href="function_GraphTools_8hpp_1ac008c86a9555aa3611502a48b7523dbf.html" />
+    <link rel="next" title="Template Function Aux::printToStream" href="function_StringBuilder_8hpp_1ae486a36636ad82da03af290aec840f95.html" />
+    <link rel="prev" title="Template Function Aux::Parsing::Impl::strTo(CharIterator, CharIterator, RealTag)" href="function_NumberParsing_8hpp_1a8ddb8114dbb19f4f3eaee1cdb941b0a2.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -148,28 +148,31 @@
       </div>
     <div class="col-md-9 content">
       
-  <section id="function-networkit-graphtools-topologicalsort-const-graph-const-std-unordered-map-node-node-bool">
-<span id="exhale-function-graphtools-8hpp-1a7340316e10052b5dc921a2cd18ac4ae2"></span><h1>Function NetworKit::GraphTools::topologicalSort(const Graph&amp;, const std::unordered_map&lt;node, node&gt;&amp;, bool)<a class="headerlink" href="#function-networkit-graphtools-topologicalsort-const-graph-const-std-unordered-map-node-node-bool" title="Link to this heading">¶</a></h1>
+  <section id="template-function-aux-parsing-strto">
+<span id="exhale-function-numberparsing-8hpp-1a53e6ce1dcc4557fb3881cbf85ba38357"></span><h1>Template Function Aux::Parsing::strTo<a class="headerlink" href="#template-function-aux-parsing-strto" title="Link to this heading">¶</a></h1>
 <ul class="simple">
-<li><p>Defined in <a class="reference internal" href="file_include_networkit_graph_GraphTools.hpp.html#file-include-networkit-graph-graphtools-hpp"><span class="std std-ref">File GraphTools.hpp</span></a></p></li>
+<li><p>Defined in <a class="reference internal" href="file_include_networkit_auxiliary_NumberParsing.hpp.html#file-include-networkit-auxiliary-numberparsing-hpp"><span class="std std-ref">File NumberParsing.hpp</span></a></p></li>
 </ul>
 <section id="function-documentation">
 <h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Link to this heading">¶</a></h2>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10GraphTools15topologicalSortERK5GraphRKNSt13unordered_mapI4node4nodeEEb">
-<span class="target" id="GraphTools_8hpp_1a7340316e10052b5dc921a2cd18ac4ae2"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">GraphTools</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">topologicalSort</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">nodeIdMapping</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">checkMapping</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit10GraphTools15topologicalSortERK5GraphRKNSt13unordered_mapI4node4nodeEEb" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Given a directed graph G, the topology sort algorithm creates one valid topology order of nodes. Undirected graphs are not accepted as input, since a topology sort is a linear ordering of vertices such that for every edge u -&gt; v, node u comes before v in the ordering. Node ids must either be continuous or you must provide a continuous node id mapping.</p>
-<p>This is a helper function. Instead of calling it via GraphTools, it is also possible to create a TopologicalSort-object from the base-class. </p>
+<dt class="sig sig-object cpp" id="_CPPv4I000EN3Aux7Parsing5strToENSt5tupleI6Number12CharIteratorEE12CharIterator12CharIterator">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Number</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CharIterator</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidationPolicy</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">Checkers</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="structAux_1_1Checkers_1_1Asserter.html#_CPPv4N3Aux8Checkers8AsserterE" title="Aux::Checkers::Asserter"><span class="n"><span class="pre">Asserter</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="NumberParsing_8hpp_1a53e6ce1dcc4557fb3881cbf85ba38357"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I000EN3Aux7Parsing5strToENSt5tupleI6Number12CharIteratorEE12CharIterator12CharIterator" title="Aux::Parsing::strTo::Number"><span class="n"><span class="pre">Number</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I000EN3Aux7Parsing5strToENSt5tupleI6Number12CharIteratorEE12CharIterator12CharIterator" title="Aux::Parsing::strTo::CharIterator"><span class="n"><span class="pre">CharIterator</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">Aux</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Parsing</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">strTo</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I000EN3Aux7Parsing5strToENSt5tupleI6Number12CharIteratorEE12CharIterator12CharIterator" title="Aux::Parsing::strTo::CharIterator"><span class="n"><span class="pre">CharIterator</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">it</span></span>, <a class="reference internal" href="#_CPPv4I000EN3Aux7Parsing5strToENSt5tupleI6Number12CharIteratorEE12CharIterator12CharIterator" title="Aux::Parsing::strTo::CharIterator"><span class="n"><span class="pre">CharIterator</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">end</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I000EN3Aux7Parsing5strToENSt5tupleI6Number12CharIteratorEE12CharIterator12CharIterator" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Parses a range of characters as number.</p>
+<p>
+Requirements: The range [it, end) must contain a valid number.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> – Directed input graph </p></li>
-<li><p><strong>nodeIdMapping</strong> – Optional continuous node id mapping </p></li>
-<li><p><strong>checkMapping</strong> – Check whether the given node id map is continuous. </p></li>
+<li><p><strong>Number</strong> – must be either a floating-point-type or an integer-type </p></li>
+<li><p><strong>CharIterator</strong> – must be a valid input-iterator over a type that is implicitly convertable to char </p></li>
+<li><p><strong>ValidationPolicy</strong> – must be a type that is compatible to the checkers from Enforce.h, the default is Asserter, which will check conditions via assert() </p></li>
+<li><p><strong>it</strong> – the start of the character-range </p></li>
+<li><p><strong>end</strong> – the end of the character-range</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A vector of node-ids sorted according to their topology. </p>
+<dd class="field-even"><p>: A tuple of the parsed value and the iterator after parsing the number and dropping any surrounding whitespace. </p>
 </dd>
 </dl>
 </dd></dl>

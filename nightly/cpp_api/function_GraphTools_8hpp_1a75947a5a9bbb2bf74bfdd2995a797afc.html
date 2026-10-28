@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Function NetworKit::operator&lt;&lt;(std::ostream&amp;, const DenseMatrix&amp;)</title>
+    <title>Function NetworKit::GraphTools::randomEdges</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -26,8 +26,8 @@
     <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Function NetworKit::operator&lt;&lt;(std::ostream&amp;, const DynamicMatrix&amp;)" href="function_namespaceNetworKit_1a53263cb0c2d74667eb80df2135a995df.html" />
-    <link rel="prev" title="Template Function NetworKit::operator&lt;&lt;(std::ostream&amp;, const CSRGeneralMatrix&lt;T&gt;&amp;)" href="function_namespaceNetworKit_1ab53ceb724d6f156dc9d21358382c079b.html" />
+    <link rel="next" title="Template Function NetworKit::GraphTools::randomizeWeights" href="function_GraphTools_8hpp_1a5dd7a22d3b05cdbaf922c7083b15298e.html" />
+    <link rel="prev" title="Function NetworKit::GraphTools::randomEdge" href="function_GraphTools_8hpp_1a6dae9b913ec537fdb7180fbc995d4c94.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -148,17 +148,29 @@
       </div>
     <div class="col-md-9 content">
       
-  <section id="function-networkit-operator-std-ostream-const-densematrix">
-<span id="exhale-function-namespacenetworkit-1ae450cb1cc1ba2c556ffc19a260eb2748"></span><h1>Function NetworKit::operator&lt;&lt;(std::ostream&amp;, const DenseMatrix&amp;)<a class="headerlink" href="#function-networkit-operator-std-ostream-const-densematrix" title="Link to this heading">¶</a></h1>
+  <section id="function-networkit-graphtools-randomedges">
+<span id="exhale-function-graphtools-8hpp-1a75947a5a9bbb2bf74bfdd2995a797afc"></span><h1>Function NetworKit::GraphTools::randomEdges<a class="headerlink" href="#function-networkit-graphtools-randomedges" title="Link to this heading">¶</a></h1>
 <ul class="simple">
-<li><p>Defined in <a class="reference internal" href="file_include_networkit_algebraic_DenseMatrix.hpp.html#file-include-networkit-algebraic-densematrix-hpp"><span class="std std-ref">File DenseMatrix.hpp</span></a></p></li>
+<li><p>Defined in <a class="reference internal" href="file_include_networkit_graph_GraphTools.hpp.html#file-include-networkit-graph-graphtools-hpp"><span class="std std-ref">File GraphTools.hpp</span></a></p></li>
 </ul>
 <section id="function-documentation">
 <h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Link to this heading">¶</a></h2>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKitlsERNSt7ostreamERK11DenseMatrix">
-<span class="target" id="namespaceNetworKit_1ae450cb1cc1ba2c556ffc19a260eb2748"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-prename descclassname"><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;&lt;</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ostream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">os</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1DenseMatrix.html#_CPPv4N9NetworKit11DenseMatrixE" title="NetworKit::DenseMatrix"><span class="n"><span class="pre">DenseMatrix</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">M</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKitlsERNSt7ostreamERK11DenseMatrix" title="Link to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10GraphTools11randomEdgesERK5Graph5count">
+<span class="target" id="GraphTools_8hpp_1a75947a5a9bbb2bf74bfdd2995a797afc"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">GraphTools</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">randomEdges</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">nr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit10GraphTools11randomEdgesERK5Graph5count" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Returns a vector with <em>nr</em> random edges. The edges are chosen uniformly random.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> – The input graph. </p></li>
+<li><p><strong>nr</strong> – The number of random edges to be returned. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>std::vector&lt;std::pair&lt;node, node&gt;&gt; <a class="reference internal" href="classNetworKit_1_1Vector.html#classNetworKit_1_1Vector"><span class="std std-ref">Vector</span></a> with random edges. </p>
+</dd>
+</dl>
+</dd></dl>
 
 </section>
 </section>

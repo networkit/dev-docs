@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Function NetworKit::METISParserDetails::skipSpaces</title>
+    <title>Function NetworKit::GraphTools::randomNodes</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -26,8 +26,8 @@
     <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Function NetworKit::nkbg::varIntDecode" href="function_NetworkitBinaryGraph_8hpp_1a4450c96be98b1eb9fb94b0a539521ff5.html" />
-    <link rel="prev" title="Template Function NetworKit::METISParserDetails::parseNumber" href="function_METISParser_8hpp_1afbced62a92507619029f0a479576429a.html" />
+    <link rel="next" title="Template Function NetworKit::GraphTools::removeEdgesFromIsolatedSet" href="function_GraphTools_8hpp_1aa917b6deb83b48595a97ad1f5df26fe9.html" />
+    <link rel="prev" title="Function NetworKit::GraphTools::randomNode" href="function_GraphTools_8hpp_1ac9072b0e113933902f563d65d21c5277.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -148,17 +148,29 @@
       </div>
     <div class="col-md-9 content">
       
-  <section id="function-networkit-metisparserdetails-skipspaces">
-<span id="exhale-function-metisparser-8hpp-1a461db34a2b9ca7176d1f4f33adb0145d"></span><h1>Function NetworKit::METISParserDetails::skipSpaces<a class="headerlink" href="#function-networkit-metisparserdetails-skipspaces" title="Link to this heading">¶</a></h1>
+  <section id="function-networkit-graphtools-randomnodes">
+<span id="exhale-function-graphtools-8hpp-1a772a86d9d7f022d432423589e675ab95"></span><h1>Function NetworKit::GraphTools::randomNodes<a class="headerlink" href="#function-networkit-graphtools-randomnodes" title="Link to this heading">¶</a></h1>
 <ul class="simple">
-<li><p>Defined in <a class="reference internal" href="file_include_networkit_io_METISParser.hpp.html#file-include-networkit-io-metisparser-hpp"><span class="std std-ref">File METISParser.hpp</span></a></p></li>
+<li><p>Defined in <a class="reference internal" href="file_include_networkit_graph_GraphTools.hpp.html#file-include-networkit-graph-graphtools-hpp"><span class="std std-ref">File GraphTools.hpp</span></a></p></li>
 </ul>
 <section id="function-documentation">
 <h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Link to this heading">¶</a></h2>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit18METISParserDetails10skipSpacesEPKcPKc">
-<span class="target" id="METISParser_8hpp_1a461db34a2b9ca7176d1f4f33adb0145d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-prename descclassname"><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">METISParserDetails</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">skipSpaces</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">first</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">last</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit18METISParserDetails10skipSpacesEPKcPKc" title="Link to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10GraphTools11randomNodesERK5Graph5count">
+<span class="target" id="GraphTools_8hpp_1a772a86d9d7f022d432423589e675ab95"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">GraphTools</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">randomNodes</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">n</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit10GraphTools11randomNodesERK5Graph5count" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Returns n distinct random nodes of the input graph.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> – The input graph. </p></li>
+<li><p><strong>n</strong> – The number of desired nodes. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A vector of n distinct random nodes. </p>
+</dd>
+</dl>
+</dd></dl>
 
 </section>
 </section>

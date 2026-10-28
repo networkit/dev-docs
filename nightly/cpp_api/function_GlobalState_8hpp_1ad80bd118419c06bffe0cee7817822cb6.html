@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Function NetworKit::GraphTools::createAugmentedGraph</title>
+    <title>Function NetworKit::GlobalState::getLogFile</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -26,8 +26,8 @@
     <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Function NetworKit::GraphTools::density" href="function_GraphTools_8hpp_1a37de0d910d860e0e50029daa1efb2363.html" />
-    <link rel="prev" title="Function NetworKit::GraphTools::copyNodes" href="function_GraphTools_8hpp_1a1a33f6a58791749e4973f2fa05a81872.html" />
+    <link rel="next" title="Function NetworKit::GlobalState::getLogFileIsOpen" href="function_GlobalState_8hpp_1a0381d4cb571cd592245b617d94e9300c.html" />
+    <link rel="prev" title="Function NetworKit::GlobalState::getGlobalSeed" href="function_GlobalState_8hpp_1a7e1bdc60e8c6660430d116f3431c9e6c.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -148,18 +148,17 @@
       </div>
     <div class="col-md-9 content">
       
-  <section id="function-networkit-graphtools-createaugmentedgraph">
-<span id="exhale-function-graphtools-8hpp-1a951c7c9e9f4559fddb54d4e1fc1e970b"></span><h1>Function NetworKit::GraphTools::createAugmentedGraph<a class="headerlink" href="#function-networkit-graphtools-createaugmentedgraph" title="Link to this heading">¶</a></h1>
+  <section id="function-networkit-globalstate-getlogfile">
+<span id="exhale-function-globalstate-8hpp-1ad80bd118419c06bffe0cee7817822cb6"></span><h1>Function NetworKit::GlobalState::getLogFile<a class="headerlink" href="#function-networkit-globalstate-getlogfile" title="Link to this heading">¶</a></h1>
 <ul class="simple">
-<li><p>Defined in <a class="reference internal" href="file_include_networkit_graph_GraphTools.hpp.html#file-include-networkit-graph-graphtools-hpp"><span class="std std-ref">File GraphTools.hpp</span></a></p></li>
+<li><p>Defined in <a class="reference internal" href="file_include_networkit_GlobalState.hpp.html#file-include-networkit-globalstate-hpp"><span class="std std-ref">File GlobalState.hpp</span></a></p></li>
 </ul>
 <section id="function-documentation">
 <h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Link to this heading">¶</a></h2>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10GraphTools20createAugmentedGraphERK5Graph">
-<span class="target" id="GraphTools_8hpp_1a951c7c9e9f4559fddb54d4e1fc1e970b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">GraphTools</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">createAugmentedGraph</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit10GraphTools20createAugmentedGraphERK5Graph" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Constructs an augmented graph as required by <a class="reference internal" href="classNetworKit_1_1ForestCentrality.html#classNetworKit_1_1ForestCentrality"><span class="std std-ref">ForestCentrality</span></a>. With respect to the input graph G, the augmented graph has a new root node connected to all the other nodes in the graph. </p>
-</dd></dl>
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit11GlobalState10getLogFileEv">
+<span class="target" id="GlobalState_8hpp_1ad80bd118419c06bffe0cee7817822cb6"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ofstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-prename descclassname"><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">GlobalState</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getLogFile</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit11GlobalState10getLogFileEv" title="Link to this definition">¶</a><br /></dt>
+<dd></dd></dl>
 
 </section>
 </section>

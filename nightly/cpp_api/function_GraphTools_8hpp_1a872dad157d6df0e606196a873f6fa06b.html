@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Template Function NetworKit::METISParserDetails::parseNumber</title>
+    <title>Function NetworKit::GraphTools::getRandomContinuousNodeIds</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -26,8 +26,8 @@
     <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Function NetworKit::METISParserDetails::skipSpaces" href="function_METISParser_8hpp_1a461db34a2b9ca7176d1f4f33adb0145d.html" />
-    <link rel="prev" title="Template Function NetworKit::METISParserDetails::parseLine" href="function_METISParser_8hpp_1ad42a71ecee7f8abc2f087289012065a6.html" />
+    <link rel="next" title="Template Function NetworKit::GraphTools::getRemappedGraph(const Graph&amp;, count, UnaryIdMapper&amp;&amp;, SkipEdgePredicate&amp;&amp;, bool)" href="function_GraphTools_8hpp_1aa28d6c75546f85c635073d67106cafb1.html" />
+    <link rel="prev" title="Function NetworKit::GraphTools::getContinuousNodeIds" href="function_GraphTools_8hpp_1adc11ba99638b1a05714ac66ea74bb3f8.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -148,23 +148,23 @@
       </div>
     <div class="col-md-9 content">
       
-  <section id="template-function-networkit-metisparserdetails-parsenumber">
-<span id="exhale-function-metisparser-8hpp-1afbced62a92507619029f0a479576429a"></span><h1>Template Function NetworKit::METISParserDetails::parseNumber<a class="headerlink" href="#template-function-networkit-metisparserdetails-parsenumber" title="Link to this heading">¶</a></h1>
+  <section id="function-networkit-graphtools-getrandomcontinuousnodeids">
+<span id="exhale-function-graphtools-8hpp-1a872dad157d6df0e606196a873f6fa06b"></span><h1>Function NetworKit::GraphTools::getRandomContinuousNodeIds<a class="headerlink" href="#function-networkit-graphtools-getrandomcontinuousnodeids" title="Link to this heading">¶</a></h1>
 <ul class="simple">
-<li><p>Defined in <a class="reference internal" href="file_include_networkit_io_METISParser.hpp.html#file-include-networkit-io-metisparser-hpp"><span class="std std-ref">File METISParser.hpp</span></a></p></li>
+<li><p>Defined in <a class="reference internal" href="file_include_networkit_graph_GraphTools.hpp.html#file-include-networkit-graph-graphtools-hpp"><span class="std std-ref">File GraphTools.hpp</span></a></p></li>
 </ul>
 <section id="function-documentation">
 <h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Link to this heading">¶</a></h2>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4I0EN9NetworKit18METISParserDetails11parseNumberEPKcPKcPKcR1T">
-<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="METISParser_8hpp_1afbced62a92507619029f0a479576429a"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-prename descclassname"><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">METISParserDetails</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">parseNumber</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">first</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">last</span></span>, <a class="reference internal" href="#_CPPv4I0EN9NetworKit18METISParserDetails11parseNumberEPKcPKcPKcR1T" title="NetworKit::METISParserDetails::parseNumber::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN9NetworKit18METISParserDetails11parseNumberEPKcPKcPKcR1T" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Parses the whitespace-separated number at the beginning of [first, last) into <em>value</em>. Integral numbers must be representable by T exactly: unlike a detour through double, which rounds integers above 2^53, they are parsed directly into T.</p>
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10GraphTools26getRandomContinuousNodeIdsERK5Graph">
+<span class="target" id="GraphTools_8hpp_1a872dad157d6df0e606196a873f6fa06b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">GraphTools</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getRandomContinuousNodeIds</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">graph</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit10GraphTools26getRandomContinuousNodeIdsERK5Graph" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Computes a map of random node ids </p>
 <dl class="field-list simple">
-<dt class="field-odd">Throws<span class="colon">:</span></dt>
-<dd class="field-odd"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – if the range has no number, or the number is not a valid T. </p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>graph</strong> – The graph of which the node id map is wanted. </p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The position after the number. </p>
+<dd class="field-even"><p>Returns the node id map. </p>
 </dd>
 </dl>
 </dd></dl>

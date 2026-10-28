@@ -173,7 +173,7 @@
    <span class="n">Aux</span><span class="p">::</span><span class="n">ScopedTimer</span><span class="p">(</span><span class="s2">"Algorithm A"</span><span class="p">);</span> <span class="o">//</span> <span class="n">WRONG</span><span class="p">;</span> <span class="n">will</span> <span class="n">directly</span> <span class="n">report</span> <span class="n">without</span> <span class="n">measuring</span> <span class="n">the</span> <span class="n">scope</span>
    <span class="n">Aux</span><span class="p">::</span><span class="n">ScopedTimer</span> <span class="n">someName</span><span class="p">(</span><span class="s2">"Algorithm B"</span><span class="p">);</span> <span class="o">//</span> <span class="n">OK</span><span class="p">:</span> <span class="n">the</span> <span class="n">named</span> <span class="n">instance</span> <span class="ow">is</span> <span class="n">valid</span> <span class="n">until</span> <span class="n">the</span> <span class="n">end</span> <span class="n">of</span>
 <span class="n">the</span> <span class="n">scope</span>
-   <span class="o">//</span> <span class="n">some</span> <span class="n">expensive</span> <span class="n">operations</span>
+<span class="o">//</span> <span class="n">some</span> <span class="n">expensive</span> <span class="n">operations</span>
 
 
 <span class="p">}</span> <span class="o">//</span> <span class="o">&lt;-</span> <span class="n">Report</span> <span class="n">time</span> <span class="n">since</span> <span class="n">creation</span> <span class="n">of</span> <span class="n">the</span> <span class="n">timer</span> <span class="nb">object</span> <span class="n">via</span> <span class="n">Aux</span><span class="p">::</span><span class="n">Log</span>

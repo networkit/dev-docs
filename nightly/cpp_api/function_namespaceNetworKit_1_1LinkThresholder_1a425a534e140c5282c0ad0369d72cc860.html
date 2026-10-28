@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Function NetworKit::GraphTools::randomEdge</title>
+    <title>Function NetworKit::LinkThresholder::byCount</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -26,8 +26,8 @@
     <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Function NetworKit::GraphTools::randomEdges" href="function_GraphTools_8hpp_1a83497507f3eefb5be11bd7049488fd28.html" />
-    <link rel="prev" title="Function NetworKit::GraphTools::merge" href="function_GraphTools_8hpp_1ac593463838b8f92ef1f5d1d08127b98d.html" />
+    <link rel="next" title="Function NetworKit::LinkThresholder::byPercentage" href="function_namespaceNetworKit_1_1LinkThresholder_1ad4e1ae02e9a25702d36dc1fc8062de20.html" />
+    <link rel="prev" title="Template Function NetworKit::GraphTools::volume(const Graph&amp;, InputIt, InputIt)" href="function_GraphTools_8hpp_1adee899f18a90df81f4c60ba54adb2d7b.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -148,26 +148,26 @@
       </div>
     <div class="col-md-9 content">
       
-  <section id="function-networkit-graphtools-randomedge">
-<span id="exhale-function-graphtools-8hpp-1a418280f0f720e6f3442c0e3076805128"></span><h1>Function NetworKit::GraphTools::randomEdge<a class="headerlink" href="#function-networkit-graphtools-randomedge" title="Link to this heading">¶</a></h1>
+  <section id="function-networkit-linkthresholder-bycount">
+<span id="exhale-function-namespacenetworkit-1-1linkthresholder-1a425a534e140c5282c0ad0369d72cc860"></span><h1>Function NetworKit::LinkThresholder::byCount<a class="headerlink" href="#function-networkit-linkthresholder-bycount" title="Link to this heading">¶</a></h1>
 <ul class="simple">
-<li><p>Defined in <a class="reference internal" href="file_include_networkit_graph_GraphTools.hpp.html#file-include-networkit-graph-graphtools-hpp"><span class="std std-ref">File GraphTools.hpp</span></a></p></li>
+<li><p>Defined in <a class="reference internal" href="file_include_networkit_linkprediction_LinkThresholder.hpp.html#file-include-networkit-linkprediction-linkthresholder-hpp"><span class="std std-ref">File LinkThresholder.hpp</span></a></p></li>
 </ul>
 <section id="function-documentation">
 <h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Link to this heading">¶</a></h2>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit10GraphTools10randomEdgeERK5Graphb">
-<span class="target" id="GraphTools_8hpp_1a418280f0f720e6f3442c0e3076805128"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">GraphTools</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">randomEdge</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">uniformDistribution</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit10GraphTools10randomEdgeERK5Graphb" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Returns a random edge. By default a random node u is chosen and then some random neighbor v. So the probability of choosing (u, v) highly depends on the degree of u. Setting uniformDistribution to true, will give you a real uniform distributed edge, but will be slower. Exp. time complexity: O(1) for uniformDistribution = false, O(n) otherwise.</p>
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit15LinkThresholder7byCountERKNSt6vectorIN13LinkPredictor10predictionEEE5count">
+<span class="target" id="namespaceNetworKit_1_1LinkThresholder_1a425a534e140c5282c0ad0369d72cc860"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">LinkThresholder</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">byCount</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classNetworKit_1_1LinkPredictor.html#_CPPv4N9NetworKit13LinkPredictorE" title="NetworKit::LinkPredictor"><span class="n"><span class="pre">LinkPredictor</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1LinkPredictor.html#_CPPv4N9NetworKit13LinkPredictor10predictionE" title="NetworKit::LinkPredictor::prediction"><span class="n"><span class="pre">prediction</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">predictions</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a449ea33fc1a43a759bbbb3dedbd62e1a.html#_CPPv4N9NetworKit5countE" title="NetworKit::count"><span class="n"><span class="pre">count</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">numLinks</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit15LinkThresholder7byCountERKNSt6vectorIN13LinkPredictor10predictionEEE5count" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Returns the first <em>numLinks</em> highest scored node-pairs. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> – The input graph. </p></li>
-<li><p><strong>uniformDistribution</strong> – Whether the random edge should be extracted uniformly at random. </p></li>
+<li><p><strong>predictions</strong> – Predictions to filter </p></li>
+<li><p><strong>numLinks</strong> – Number of top-scored node-pairs to return </p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>std::pair&lt;node, node&gt; A random edge. </p>
+<dd class="field-even"><p>the first <em>numLinks</em> highest scored node-pairs </p>
 </dd>
 </dl>
 </dd></dl>
