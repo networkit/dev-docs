@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-10-28)"
+	        data-docs-version-label="Nightly (2026-10-29)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-10-28)"
+	        data-docs-nightly-label="Nightly (2026-10-29)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-10-28)</option>
+	  <option value="nightly" selected>Nightly (2026-10-29)</option>
 	</select>
 </div>
 
@@ -184,11 +184,18 @@
 <dd><p>Bases: <a class="reference internal" href="base.html#networkit.base.Algorithm" title="networkit.base.Algorithm"><code class="xref py py-class docutils literal notranslate"><span class="pre">Algorithm</span></code></a></p>
 <p>Assortativity computes a coefficient that expresses the correlation of a
 node attribute among connected pairs of nodes.</p>
+<p>For a partition of the node set (a nominal attribute), the coefficient is
+computed from the mixing matrix e, where e_ij is the fraction of edge counts
+from nodes in subset i to nodes in subset j. In undirected graphs, each edge
+{u, v} with u != v is counted once in each direction and each self-loop is
+counted once, and the mixing matrix is normalized by the total of these
+counts (2m minus the number of self-loops). In directed graphs, each edge is
+counted once and the matrix is normalized by m.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>G</strong> (<em>networkit.graph</em>) – The input graph.</p></li>
-<li><p><strong>data</strong> (<em>list</em><em>(</em><em>float</em><em>)</em>) – Numerical node value array.</p></li>
+<li><p><strong>data</strong> (<em>list</em><em>(</em><em>float</em><em>) or </em><em>networkit.Partition</em>) – Numerical node value array, or a partition of the node set.</p></li>
 </ul>
 </dd>
 </dl>

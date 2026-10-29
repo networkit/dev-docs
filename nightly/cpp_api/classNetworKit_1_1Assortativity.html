@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-10-28)"
+	        data-docs-version-label="Nightly (2026-10-29)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-10-28)"
+	        data-docs-nightly-label="Nightly (2026-10-29)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-10-28)</option>
+	  <option value="nightly" selected>Nightly (2026-10-29)</option>
 	</select>
 </div>
 
@@ -167,7 +167,8 @@
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13AssortativityE">
 <span class="target" id="classNetworKit_1_1Assortativity"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Assortativity</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1Algorithm.html#_CPPv4N9NetworKit9AlgorithmE" title="NetworKit::Algorithm"><span class="n"><span class="pre">Algorithm</span></span></a><a class="headerlink" href="#_CPPv4N9NetworKit13AssortativityE" title="Link to this definition">¶</a><br /></dt>
-<dd><p><a class="reference internal" href="#classNetworKit_1_1Assortativity"><span class="std std-ref">Assortativity</span></a> computes a coefficient that expresses the correlation of a node attribute among connected pairs of nodes. </p>
+<dd><p><a class="reference internal" href="#classNetworKit_1_1Assortativity"><span class="std std-ref">Assortativity</span></a> computes a coefficient that expresses the correlation of a node attribute among connected pairs of nodes.</p>
+<p>For a partition of the node set (a nominal attribute), the coefficient is computed from the mixing matrix e, where e_ij is the fraction of edge counts from nodes in subset i to nodes in subset j. In undirected graphs, each edge {u, v} with u != v is counted once in each direction and each self-loop is counted once, and the mixing matrix is normalized by the total of these counts (2m minus the number of self-loops). In directed graphs, each edge is counted once and the matrix is normalized by m. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
