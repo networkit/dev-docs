@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-10-29)"
+	        data-docs-version-label="Nightly (2026-10-30)"
 	        data-docs-stable-label="Stable (11.2.1)"
-	        data-docs-nightly-label="Nightly (2026-10-29)"
+	        data-docs-nightly-label="Nightly (2026-10-30)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.2.1)</option>
-	  <option value="nightly" selected>Nightly (2026-10-29)</option>
+	  <option value="nightly" selected>Nightly (2026-10-30)</option>
 	</select>
 </div>
 
@@ -180,7 +180,7 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16GenericPartition16GenericPartitionE9IndexType9IndexType">
 <span class="target" id="classNetworKit_1_1GenericPartition_1aa3cac26342c97c537cb0501c9b7f34fc"></span><span class="sig-name descname"><span class="n"><span class="pre">GenericPartition</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I_13IntegralValueEN9NetworKit16GenericPartitionE" title="NetworKit::GenericPartition::IndexType"><span class="n"><span class="pre">IndexType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">z</span></span>, <a class="reference internal" href="#_CPPv4I_13IntegralValueEN9NetworKit16GenericPartitionE" title="NetworKit::GenericPartition::IndexType"><span class="n"><span class="pre">IndexType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">defaultValue</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit16GenericPartition16GenericPartitionE9IndexType9IndexType" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Create a new partition data structure for <em>z</em> elements. Initialize each entry to the default value. WARNING: this circumvents the standard interface and may leave the object in an inconsistent state. Use only in exceptional cases.</p>
+<dd><p>Create a new partition data structure for <em>z</em> elements. Initialize each entry to the default value. WARNING: this circumvents the standard interface and leaves the object in an inconsistent state if <em>defaultValue</em> is neither none nor 0. Use only in exceptional cases.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -199,7 +199,16 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16GenericPartition5resetE9IndexType9IndexType">
 <span class="target" id="classNetworKit_1_1GenericPartition_1aa2c9069647e2f4e4cbe41f6cf190090c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I_13IntegralValueEN9NetworKit16GenericPartitionE" title="NetworKit::GenericPartition::IndexType"><span class="n"><span class="pre">IndexType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">newZ</span></span>, <a class="reference internal" href="#_CPPv4I_13IntegralValueEN9NetworKit16GenericPartitionE" title="NetworKit::GenericPartition::IndexType"><span class="n"><span class="pre">IndexType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">defaultValue</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit16GenericPartition5resetE9IndexType9IndexType" title="Link to this definition">¶</a><br /></dt>
-<dd></dd></dl>
+<dd><p>Updates the maximum index of the partition to <em>newZ</em> and sets all its values to <em>defaultValue</em>. WARNING: this leaves the object in an inconsistent state if <em>defaultValue</em> is neither none nor 0. Use only in exceptional cases.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>newZ</strong> – <strong>[in]</strong> New maximum index of the partition.</p></li>
+<li><p><strong>defaultValue</strong> – <strong>[in]</strong> Default value of all the elements in the partition. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit16GenericPartitionixE9IndexType">
