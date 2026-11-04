@@ -198,7 +198,9 @@ If data is true, try to convert networkx.Graph data to networkit.Graph attribute
 Note that there are limitations to this conversion: networkit only supports int, float, and str attribute types.
 Other types will be converted into their string representation.
 Attribute keys are always converted to strings.
-Optionally, a dictionary that maps attribute names to specific types can be supplied.</p>
+Optionally, a dictionary that maps attribute names to specific types can be supplied.
+Parallel edges of a networkx multigraph stay parallel edges,
+each with its own weight and attributes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
