@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Class GraphReader</title>
+    <title>Template Class GraphReaderBase</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -26,7 +26,7 @@
     <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class GraphStructuralRandMeasure" href="classNetworKit_1_1GraphStructuralRandMeasure.html" />
+    <link rel="next" title="Class GraphReaderOptions" href="classNetworKit_1_1GraphReaderOptions.html" />
     <link rel="prev" title="Template Class GraphLayoutAlgorithm" href="classNetworKit_1_1GraphLayoutAlgorithm.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -148,22 +148,28 @@
       </div>
     <div class="col-md-9 content">
       
-  <section id="class-graphreader">
-<span id="exhale-class-classnetworkit-1-1graphreader"></span><h1>Class GraphReader<a class="headerlink" href="#class-graphreader" title="Link to this heading">¶</a></h1>
+  <section id="template-class-graphreaderbase">
+<span id="exhale-class-classnetworkit-1-1graphreaderbase"></span><h1>Template Class GraphReaderBase<a class="headerlink" href="#template-class-graphreaderbase" title="Link to this heading">¶</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_include_networkit_io_GraphReader.hpp.html#file-include-networkit-io-graphreader-hpp"><span class="std std-ref">File GraphReader.hpp</span></a></p></li>
 </ul>
 <section id="inheritance-relationships">
 <h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Link to this heading">¶</a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::GraphReaderOptions</span></code> (<a class="reference internal" href="classNetworKit_1_1GraphReaderOptions.html#exhale-class-classnetworkit-1-1graphreaderoptions"><span class="std std-ref">Class GraphReaderOptions</span></a>)</p></li>
+</ul>
+</section>
 <section id="derived-types">
 <h3>Derived Types<a class="headerlink" href="#derived-types" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::DibapGraphReader</span></code> (<a class="reference internal" href="classNetworKit_1_1DibapGraphReader.html#exhale-class-classnetworkit-1-1dibapgraphreader"><span class="std std-ref">Class DibapGraphReader</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::EdgeListReader</span></code> (<a class="reference internal" href="classNetworKit_1_1EdgeListReader.html#exhale-class-classnetworkit-1-1edgelistreader"><span class="std std-ref">Class EdgeListReader</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::GMLGraphReader</span></code> (<a class="reference internal" href="classNetworKit_1_1GMLGraphReader.html#exhale-class-classnetworkit-1-1gmlgraphreader"><span class="std std-ref">Class GMLGraphReader</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::GenericMETISGraphReader&lt;</span> <span class="pre">GraphT</span> <span class="pre">&gt;</span></code> (<a class="reference internal" href="classNetworKit_1_1GenericMETISGraphReader.html#exhale-class-classnetworkit-1-1genericmetisgraphreader"><span class="std std-ref">Template Class GenericMETISGraphReader</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::GraphToolBinaryReader</span></code> (<a class="reference internal" href="classNetworKit_1_1GraphToolBinaryReader.html#exhale-class-classnetworkit-1-1graphtoolbinaryreader"><span class="std std-ref">Class GraphToolBinaryReader</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::KONECTGraphReader</span></code> (<a class="reference internal" href="classNetworKit_1_1KONECTGraphReader.html#exhale-class-classnetworkit-1-1konectgraphreader"><span class="std std-ref">Class KONECTGraphReader</span></a>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::METISGraphReader</span></code> (<a class="reference internal" href="classNetworKit_1_1METISGraphReader.html#exhale-class-classnetworkit-1-1metisgraphreader"><span class="std std-ref">Class METISGraphReader</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::MTXGraphReader</span></code> (<a class="reference internal" href="classNetworKit_1_1MTXGraphReader.html#exhale-class-classnetworkit-1-1mtxgraphreader"><span class="std std-ref">Class MTXGraphReader</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::NetworkitBinaryReader</span></code> (<a class="reference internal" href="classNetworKit_1_1NetworkitBinaryReader.html#exhale-class-classnetworkit-1-1networkitbinaryreader"><span class="std std-ref">Class NetworkitBinaryReader</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::RBGraphReader</span></code> (<a class="reference internal" href="classNetworKit_1_1RBGraphReader.html#exhale-class-classnetworkit-1-1rbgraphreader"><span class="std std-ref">Class RBGraphReader</span></a>)</p></li>
@@ -175,44 +181,20 @@
 <section id="class-documentation">
 <h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
 <dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit11GraphReaderE">
-<span class="target" id="classNetworKit_1_1GraphReader"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GraphReader</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit11GraphReaderE" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4I0EN9NetworKit15GraphReaderBaseE">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GraphT</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classNetworKit_1_1GraphReaderBase"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GraphReaderBase</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1GraphReaderOptions.html#_CPPv4N9NetworKit18GraphReaderOptionsE" title="NetworKit::GraphReaderOptions"><span class="n"><span class="pre">GraphReaderOptions</span></span></a><a class="headerlink" href="#_CPPv4I0EN9NetworKit15GraphReaderBaseE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Abstract base class for graph readers. </p>
-<p>Subclassed by <a class="reference internal" href="classNetworKit_1_1DibapGraphReader.html#classNetworKit_1_1DibapGraphReader"><span class="std std-ref">NetworKit::DibapGraphReader</span></a>, <a class="reference internal" href="classNetworKit_1_1EdgeListReader.html#classNetworKit_1_1EdgeListReader"><span class="std std-ref">NetworKit::EdgeListReader</span></a>, <a class="reference internal" href="classNetworKit_1_1GMLGraphReader.html#classNetworKit_1_1GMLGraphReader"><span class="std std-ref">NetworKit::GMLGraphReader</span></a>, <a class="reference internal" href="classNetworKit_1_1GraphToolBinaryReader.html#classNetworKit_1_1GraphToolBinaryReader"><span class="std std-ref">NetworKit::GraphToolBinaryReader</span></a>, <a class="reference internal" href="classNetworKit_1_1KONECTGraphReader.html#classNetworKit_1_1KONECTGraphReader"><span class="std std-ref">NetworKit::KONECTGraphReader</span></a>, <a class="reference internal" href="classNetworKit_1_1METISGraphReader.html#classNetworKit_1_1METISGraphReader"><span class="std std-ref">NetworKit::METISGraphReader</span></a>, <a class="reference internal" href="classNetworKit_1_1MTXGraphReader.html#classNetworKit_1_1MTXGraphReader"><span class="std std-ref">NetworKit::MTXGraphReader</span></a>, <a class="reference internal" href="classNetworKit_1_1NetworkitBinaryReader.html#classNetworKit_1_1NetworkitBinaryReader"><span class="std std-ref">NetworKit::NetworkitBinaryReader</span></a>, <a class="reference internal" href="classNetworKit_1_1RBGraphReader.html#classNetworKit_1_1RBGraphReader"><span class="std std-ref">NetworKit::RBGraphReader</span></a>, <a class="reference internal" href="classNetworKit_1_1SNAPGraphReader.html#classNetworKit_1_1SNAPGraphReader"><span class="std std-ref">NetworKit::SNAPGraphReader</span></a>, <a class="reference internal" href="classNetworKit_1_1ThrillGraphBinaryReader.html#classNetworKit_1_1ThrillGraphBinaryReader"><span class="std std-ref">NetworKit::ThrillGraphBinaryReader</span></a></p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
-<dl class="cpp enum">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit11GraphReader21MultipleEdgesHandlingE">
-<span class="target" id="classNetworKit_1_1GraphReader_1a236504631efe5410f7f11c7a8b1e2dde"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MultipleEdgesHandling</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit11GraphReader21MultipleEdgesHandlingE" title="Link to this definition">¶</a><br /></dt>
-<dd><p><em>Values:</em></p>
-<dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit11GraphReader21MultipleEdgesHandling13DISCARD_EDGESE">
-<span class="target" id="classNetworKit_1_1GraphReader_1a236504631efe5410f7f11c7a8b1e2ddea2748616eaa1b20ba2f1972fc4d45bad6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DISCARD_EDGES</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit11GraphReader21MultipleEdgesHandling13DISCARD_EDGESE" title="Link to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit11GraphReader21MultipleEdgesHandling14SUM_WEIGHTS_UPE">
-<span class="target" id="classNetworKit_1_1GraphReader_1a236504631efe5410f7f11c7a8b1e2ddea5796055bdcc295632a9bbe4f005a8157"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SUM_WEIGHTS_UP</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit11GraphReader21MultipleEdgesHandling14SUM_WEIGHTS_UPE" title="Link to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp enumerator">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit11GraphReader21MultipleEdgesHandling19KEEP_MINIMUM_WEIGHTE">
-<span class="target" id="classNetworKit_1_1GraphReader_1a236504631efe5410f7f11c7a8b1e2ddea530cf0348c2512d7e904b1f6e4960963"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KEEP_MINIMUM_WEIGHT</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit11GraphReader21MultipleEdgesHandling19KEEP_MINIMUM_WEIGHTE" title="Link to this definition">¶</a><br /></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-</div>
+<p>Subclassed by <a class="reference internal" href="classNetworKit_1_1DibapGraphReader.html#classNetworKit_1_1DibapGraphReader"><span class="std std-ref">NetworKit::DibapGraphReader</span></a>, <a class="reference internal" href="classNetworKit_1_1EdgeListReader.html#classNetworKit_1_1EdgeListReader"><span class="std std-ref">NetworKit::EdgeListReader</span></a>, <a class="reference internal" href="classNetworKit_1_1GMLGraphReader.html#classNetworKit_1_1GMLGraphReader"><span class="std std-ref">NetworKit::GMLGraphReader</span></a>, <a class="reference internal" href="classNetworKit_1_1GenericMETISGraphReader.html#classNetworKit_1_1GenericMETISGraphReader"><span class="std std-ref">NetworKit::GenericMETISGraphReader&lt; GraphT &gt;</span></a>, <a class="reference internal" href="classNetworKit_1_1GraphToolBinaryReader.html#classNetworKit_1_1GraphToolBinaryReader"><span class="std std-ref">NetworKit::GraphToolBinaryReader</span></a>, <a class="reference internal" href="classNetworKit_1_1KONECTGraphReader.html#classNetworKit_1_1KONECTGraphReader"><span class="std std-ref">NetworKit::KONECTGraphReader</span></a>, <a class="reference internal" href="classNetworKit_1_1MTXGraphReader.html#classNetworKit_1_1MTXGraphReader"><span class="std std-ref">NetworKit::MTXGraphReader</span></a>, <a class="reference internal" href="classNetworKit_1_1NetworkitBinaryReader.html#classNetworKit_1_1NetworkitBinaryReader"><span class="std std-ref">NetworKit::NetworkitBinaryReader</span></a>, <a class="reference internal" href="classNetworKit_1_1RBGraphReader.html#classNetworKit_1_1RBGraphReader"><span class="std std-ref">NetworKit::RBGraphReader</span></a>, <a class="reference internal" href="classNetworKit_1_1SNAPGraphReader.html#classNetworKit_1_1SNAPGraphReader"><span class="std std-ref">NetworKit::SNAPGraphReader</span></a>, <a class="reference internal" href="classNetworKit_1_1ThrillGraphBinaryReader.html#classNetworKit_1_1ThrillGraphBinaryReader"><span class="std std-ref">NetworKit::ThrillGraphBinaryReader</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit11GraphReaderD0Ev">
-<span class="target" id="classNetworKit_1_1GraphReader_1a19e89523f7c40ebc1dfb3a727fb8bf94"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~GraphReader</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N9NetworKit11GraphReaderD0Ev" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit15GraphReaderBaseD0Ev">
+<span class="target" id="classNetworKit_1_1GraphReaderBase_1ad9c2be3a499857047d59988826c89719"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~GraphReaderBase</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N9NetworKit15GraphReaderBaseD0Ev" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit11GraphReader4readENSt11string_viewE">
-<span class="target" id="classNetworKit_1_1GraphReader_1ac481a227eaa6d419b4492b5f95be9917"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N9NetworKit11GraphReader4readENSt11string_viewE" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit15GraphReaderBase4readENSt11string_viewE">
+<span class="target" id="classNetworKit_1_1GraphReaderBase_1a8f3e42d3975616a6b13bde6ca3cc3080"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN9NetworKit15GraphReaderBaseE" title="NetworKit::GraphReaderBase::GraphT"><span class="n"><span class="pre">GraphT</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N9NetworKit15GraphReaderBase4readENSt11string_viewE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Given the path of an input file, read the graph contained.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>

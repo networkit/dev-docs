@@ -146,14 +146,20 @@
 
 <span class="k">namespace</span><span class="w"> </span><span class="nn">NetworKit</span><span class="w"> </span><span class="p">{</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">METISGraphReader</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">GraphReader</span><span class="w"> </span><span class="p">{</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">GraphT</span><span class="o">&gt;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">GenericMETISGraphReader</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">GraphReaderBase</span><span class="o">&lt;</span><span class="n">GraphT</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="n">METISGraphReader</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
+<span class="w">    </span><span class="n">GenericMETISGraphReader</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span>
 
-<span class="w">    </span><span class="n">Graph</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
+<span class="w">    </span><span class="n">GraphT</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 <span class="p">};</span>
 
+<span class="k">using</span><span class="w"> </span><span class="n">METISGraphReader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GenericMETISGraphReader</span><span class="o">&lt;</span><span class="n">Graph</span><span class="o">&gt;</span><span class="p">;</span>
+
 <span class="p">}</span><span class="w"> </span><span class="cm">/* namespace NetworKit */</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/io/METISGraphReaderImpl.hpp&gt;</span>
+
 <span class="cp">#endif </span><span class="c1">// NETWORKIT_IO_METIS_GRAPH_READER_HPP_</span>
 </pre></div>
 </div>
