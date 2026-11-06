@@ -6,15 +6,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta property="article:modified_time" content="2020-10-21T10:17:44+02:00" />
     <title>networkit.matching</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=c83e6b79" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
-    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/documentation_options.js?v=c0639414"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -101,13 +100,13 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="stable"
-	        data-docs-version-label="Stable (11.2.1)"
-	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-version-label="Stable (11.3)"
+	        data-docs-stable-label="Stable (11.3)"
 	        data-docs-nightly-label="Nightly"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
-	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="stable" selected>Stable (11.3)</option>
 	  <option value="nightly">Nightly</option>
 	</select>
 </div>
@@ -449,7 +448,7 @@ each pair and if the matching partner of v is u then the matching partner of u i
 each pair and if the matching partner of v is u then the matching partner of u is v.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – Graph to be checked.</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – Graph to be checked.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>True if this is a proper matching.</p>
@@ -497,7 +496,7 @@ each pair and if the matching partner of v is u then the matching partner of u i
 <dd><p>Get the number of edges in this matching.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Total number of edges in the matching.</p>
@@ -515,13 +514,13 @@ each pair and if the matching partner of v is u then the matching partner of u i
 and unmatched nodes belong to a singleton subset.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The corresponding graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The corresponding graph.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>The resulting partition.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Partition" title="networkit.Partition">networkit.Partition</a></p>
+<dd class="field-odd"><p>networkit.Partition</p>
 </dd>
 </dl>
 </dd></dl>
@@ -546,7 +545,7 @@ and unmatched nodes belong to a singleton subset.</p>
 <dd><p>Get total weight of edges in this matching.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The corresponding graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The corresponding graph.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Total weight of edges in this matching.</p>
@@ -580,7 +579,7 @@ to sort the adjacency lists by non-increasing edge weight.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph, must be undirected.</p></li>
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph, must be undirected.</p></li>
 <li><p><strong>sortSuitor</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True uses the SortSuitor version, otherwise it uses Suitor. Default: True</p></li>
 <li><p><strong>checkSortedEdges</strong> (<em>bool</em><em>, </em><em>optional</em>) – If True and sortSuitor is True it checks whether the adjacency lists
 of the input graph are sorted by non-increasing edge weight. If they are not it raises
@@ -608,8 +607,7 @@ a RuntimeError. Default: False</p></li>
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
-      Last updated on Oct 21, 2020.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.2.0.<br/>
     </p>
     <span style="padding-left: 10px">
       <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>

@@ -10,11 +10,11 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=c83e6b79" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
     <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
-    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/documentation_options.js?v=c0639414"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -103,13 +103,13 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="stable"
-	        data-docs-version-label="Stable (11.2.1)"
-	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-version-label="Stable (11.3)"
+	        data-docs-stable-label="Stable (11.3)"
 	        data-docs-nightly-label="Nightly"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
-	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="stable" selected>Stable (11.3)</option>
 	  <option value="nightly">Nightly</option>
 	</select>
 </div>
@@ -261,7 +261,7 @@ be updated).</p>
 <span class="n">sourceNode</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">dynDijk</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">DynDijkstra</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">sourceNode</span><span class="p">)</span>
 <span class="n">dynDijk</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;path lengths from source node 0 for initial graph: &quot;</span><span class="p">,</span> <span class="n">dynDijk</span><span class="o">.</span><span class="n">getDistances</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"path lengths from source node 0 for initial graph: "</span><span class="p">,</span> <span class="n">dynDijk</span><span class="o">.</span><span class="n">getDistances</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -280,11 +280,11 @@ path lengths from source node 0 for initial graph:  [0.0, 0.5, 2.0, 1.7976931348
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update the result of the dynamic algorithm</span>
 <span class="n">G</span><span class="o">.</span><span class="n">addEdge</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
 <span class="n">dynDijk</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">graphEventEdgeAdd</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;path lengths from source node 0 after edge addition: &quot;</span><span class="p">,</span> <span class="n">dynDijk</span><span class="o">.</span><span class="n">getDistances</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"path lengths from source node 0 after edge addition: "</span><span class="p">,</span> <span class="n">dynDijk</span><span class="o">.</span><span class="n">getDistances</span><span class="p">())</span>
 
 <span class="n">G</span><span class="o">.</span><span class="n">removeEdge</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="n">dynDijk</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">graphEventEdgeAdd</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;path lengths from source node 0 after edge removal: &quot;</span><span class="p">,</span> <span class="n">dynDijk</span><span class="o">.</span><span class="n">getDistances</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"path lengths from source node 0 after edge removal: "</span><span class="p">,</span> <span class="n">dynDijk</span><span class="o">.</span><span class="n">getDistances</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -310,7 +310,7 @@ negative value.</p>
 <span class="n">G</span> <span class="o">=</span> <span class="n">initializeGraph</span><span class="p">()</span>
 <span class="n">dynAPSP</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">DynAPSP</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
 <span class="n">dynAPSP</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;path lengths from all nodes for initial graph: &quot;</span><span class="p">,</span> <span class="n">dynAPSP</span><span class="o">.</span><span class="n">getDistances</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"path lengths from all nodes for initial graph: "</span><span class="p">,</span> <span class="n">dynAPSP</span><span class="o">.</span><span class="n">getDistances</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -338,7 +338,7 @@ path lengths from all nodes for initial graph:  [[0.0, 0.5, 2.0, 1.7976931348623
 <span class="p">]</span>
 <span class="n">dynAPSP</span><span class="o">.</span><span class="n">updateBatch</span><span class="p">(</span><span class="n">batch</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span>
-    <span class="s2">&quot;path lengths from all nodes after batch of edge additions: &quot;</span><span class="p">,</span>
+    <span class="s2">"path lengths from all nodes after batch of edge additions: "</span><span class="p">,</span>
     <span class="n">dynAPSP</span><span class="o">.</span><span class="n">getDistances</span><span class="p">(),</span>
 <span class="p">)</span>
 
@@ -350,7 +350,7 @@ path lengths from all nodes for initial graph:  [[0.0, 0.5, 2.0, 1.7976931348623
     <span class="n">nk</span><span class="o">.</span><span class="n">dynamics</span><span class="o">.</span><span class="n">GraphEvent</span><span class="p">(</span><span class="n">nk</span><span class="o">.</span><span class="n">dynamics</span><span class="o">.</span><span class="n">GraphEventType</span><span class="o">.</span><span class="n">EDGE_WEIGHT_INCREMENT</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span>
-    <span class="s2">&quot;path lengths from all nodes after edge weight decrement: &quot;</span><span class="p">,</span> <span class="n">dynAPSP</span><span class="o">.</span><span class="n">getDistances</span><span class="p">()</span>
+    <span class="s2">"path lengths from all nodes after edge weight decrement: "</span><span class="p">,</span> <span class="n">dynAPSP</span><span class="o">.</span><span class="n">getDistances</span><span class="p">()</span>
 <span class="p">)</span>
 </pre></div>
 </div>
@@ -376,7 +376,7 @@ path lengths from all nodes after edge weight decrement:  [[0.0, 0.5, 1.5, 2.0, 
 <span class="n">G</span> <span class="o">=</span> <span class="n">initializeGraph</span><span class="p">()</span>
 <span class="n">dynBet</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">DynBetweenness</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
 <span class="n">dynBet</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;betweenness scores of initial graph: &quot;</span><span class="p">,</span> <span class="n">dynBet</span><span class="o">.</span><span class="n">scores</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"betweenness scores of initial graph: "</span><span class="p">,</span> <span class="n">dynBet</span><span class="o">.</span><span class="n">scores</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -399,7 +399,7 @@ betweenness scores of initial graph:  [0.0, 2.0, 0.0, 0.0, 0.0]
 <span class="n">dynBet</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
     <span class="n">nk</span><span class="o">.</span><span class="n">dynamics</span><span class="o">.</span><span class="n">GraphEvent</span><span class="p">(</span><span class="n">nk</span><span class="o">.</span><span class="n">dynamics</span><span class="o">.</span><span class="n">GraphEventType</span><span class="o">.</span><span class="n">EDGE_WEIGHT_INCREMENT</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">)</span>
 <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;betweenness scores of updated graph: &quot;</span><span class="p">,</span> <span class="n">dynBet</span><span class="o">.</span><span class="n">scores</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"betweenness scores of updated graph: "</span><span class="p">,</span> <span class="n">dynBet</span><span class="o">.</span><span class="n">scores</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -423,7 +423,7 @@ betweenness scores of updated graph:  [0.0, 2.0, 2.0, 0.0, 0.0]
 <span class="n">G</span> <span class="o">=</span> <span class="n">initializeGraph</span><span class="p">()</span>
 <span class="n">dynHC</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">centrality</span><span class="o">.</span><span class="n">DynTopHarmonicCloseness</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">dynHC</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;betweenness scores of initial graph: &quot;</span><span class="p">,</span> <span class="n">dynHC</span><span class="o">.</span><span class="n">topkScoresList</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"betweenness scores of initial graph: "</span><span class="p">,</span> <span class="n">dynHC</span><span class="o">.</span><span class="n">topkScoresList</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -444,7 +444,7 @@ betweenness scores of initial graph:  [2.0, 1.5, 1.5]
 <span class="n">dynHC</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
     <span class="n">nk</span><span class="o">.</span><span class="n">dynamics</span><span class="o">.</span><span class="n">GraphEvent</span><span class="p">(</span><span class="n">nk</span><span class="o">.</span><span class="n">dynamics</span><span class="o">.</span><span class="n">GraphEventType</span><span class="o">.</span><span class="n">EDGE_ADDITION</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
 <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;betweenness scores of updated graph: &quot;</span><span class="p">,</span> <span class="n">dynHC</span><span class="o">.</span><span class="n">topkScoresList</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"betweenness scores of updated graph: "</span><span class="p">,</span> <span class="n">dynHC</span><span class="o">.</span><span class="n">topkScoresList</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -468,7 +468,7 @@ betweenness scores of updated graph:  [2.5, 2.5, 1.8333333333333333]
 <span class="n">G</span> <span class="o">=</span> <span class="n">initializeGraph</span><span class="p">()</span>
 <span class="n">dynCC</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">components</span><span class="o">.</span><span class="n">DynConnectedComponents</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
 <span class="n">dynCC</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;connected components of initial graph: &quot;</span><span class="p">,</span> <span class="n">dynCC</span><span class="o">.</span><span class="n">getComponents</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"connected components of initial graph: "</span><span class="p">,</span> <span class="n">dynCC</span><span class="o">.</span><span class="n">getComponents</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -489,7 +489,7 @@ connected components of initial graph:  [[0, 1, 2], [3], [4]]
 <span class="n">dynCC</span><span class="o">.</span><span class="n">update</span><span class="p">(</span>
     <span class="n">nk</span><span class="o">.</span><span class="n">dynamics</span><span class="o">.</span><span class="n">GraphEvent</span><span class="p">(</span><span class="n">nk</span><span class="o">.</span><span class="n">dynamics</span><span class="o">.</span><span class="n">GraphEventType</span><span class="o">.</span><span class="n">EDGE_ADDITION</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
 <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;connected components of updated graph: &quot;</span><span class="p">,</span> <span class="n">dynCC</span><span class="o">.</span><span class="n">getComponents</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"connected components of updated graph: "</span><span class="p">,</span> <span class="n">dynCC</span><span class="o">.</span><span class="n">getComponents</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -529,7 +529,7 @@ connected components of updated graph:  [[0, 1, 2, 3], [4]]
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.2.0.<br/>
     </p>
     <span style="padding-left: 10px">
       <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>

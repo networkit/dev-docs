@@ -10,10 +10,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=c83e6b79" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
-    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/documentation_options.js?v=c0639414"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -94,7 +94,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.3)"
+	        data-docs-stable-label="Stable (11.3)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.3)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
@@ -120,7 +137,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -140,34 +156,34 @@
 <section id="class-documentation">
 <h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
 <dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv4I0EN9NetworKit13NodeRangeBaseE">
-<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GraphType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classNetworKit_1_1NodeRangeBase"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NodeRangeBase</span></span></span><a class="headerlink" href="#_CPPv4I0EN9NetworKit13NodeRangeBaseE" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4I0_9GraphNode_15GraphEdgeWeightEN9NetworKit13NodeRangeBaseE">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GraphType</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">GraphNode</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NodeT</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">GraphEdgeWeight</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EdgeWeightT</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classNetworKit_1_1NodeRangeBase"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NodeRangeBase</span></span></span><a class="headerlink" href="#_CPPv4I0_9GraphNode_15GraphEdgeWeightEN9NetworKit13NodeRangeBaseE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Wrapper class to iterate over a range of the nodes of a graph. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13NodeRangeBase13NodeRangeBaseERK9GraphType">
-<span class="target" id="classNetworKit_1_1NodeRangeBase_1abcdd09c9277c004ff49f8870e0d1280b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NodeRangeBase</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN9NetworKit13NodeRangeBaseE" title="NetworKit::NodeRangeBase::GraphType"><span class="n"><span class="pre">GraphType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit13NodeRangeBase13NodeRangeBaseERK9GraphType" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1NodeRangeBase_1ace76c5151f5bec202140ad55df1e1d45"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NodeRangeBase</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_9GraphNode_15GraphEdgeWeightEN9NetworKit13NodeRangeBaseE" title="NetworKit::NodeRangeBase::GraphType"><span class="n"><span class="pre">GraphType</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit13NodeRangeBase13NodeRangeBaseERK9GraphType" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13NodeRangeBase13NodeRangeBaseEv">
-<span class="target" id="classNetworKit_1_1NodeRangeBase_1a11d01a6dc7785679f1f9d173ec3ae1be"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NodeRangeBase</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit13NodeRangeBase13NodeRangeBaseEv" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1NodeRangeBase_1a7ef21dd86fc649d7aee014898fc2a160"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NodeRangeBase</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit13NodeRangeBase13NodeRangeBaseEv" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit13NodeRangeBaseD0Ev">
-<span class="target" id="classNetworKit_1_1NodeRangeBase_1a48f163c65bbb464f0416704fcb0a5792"></span><span class="sig-name descname"><span class="n"><span class="pre">~NodeRangeBase</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N9NetworKit13NodeRangeBaseD0Ev" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1NodeRangeBase_1abec7de8830f5fbf8330469d4e661bdd7"></span><span class="sig-name descname"><span class="n"><span class="pre">~NodeRangeBase</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N9NetworKit13NodeRangeBaseD0Ev" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit13NodeRangeBase5beginEv">
-<span class="target" id="classNetworKit_1_1NodeRangeBase_1ab80bdd82f882de33998672cf3b0c3b1b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1NodeIteratorBase.html#_CPPv4I0EN9NetworKit16NodeIteratorBaseE" title="NetworKit::NodeIteratorBase"><span class="n"><span class="pre">NodeIteratorBase</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN9NetworKit13NodeRangeBaseE" title="NetworKit::NodeRangeBase::GraphType"><span class="n"><span class="pre">GraphType</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">begin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit13NodeRangeBase5beginEv" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1NodeRangeBase_1aa7102059e0d97204b07eb1c4fc76510e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1NodeIteratorBase.html#_CPPv4I0_9GraphNode_15GraphEdgeWeightEN9NetworKit16NodeIteratorBaseE" title="NetworKit::NodeIteratorBase"><span class="n"><span class="pre">NodeIteratorBase</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_9GraphNode_15GraphEdgeWeightEN9NetworKit13NodeRangeBaseE" title="NetworKit::NodeRangeBase::GraphType"><span class="n"><span class="pre">GraphType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_9GraphNode_15GraphEdgeWeightEN9NetworKit13NodeRangeBaseE" title="NetworKit::NodeRangeBase::NodeT"><span class="n"><span class="pre">NodeT</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_9GraphNode_15GraphEdgeWeightEN9NetworKit13NodeRangeBaseE" title="NetworKit::NodeRangeBase::EdgeWeightT"><span class="n"><span class="pre">EdgeWeightT</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">begin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit13NodeRangeBase5beginEv" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit13NodeRangeBase3endEv">
-<span class="target" id="classNetworKit_1_1NodeRangeBase_1a23410908e72a2faaf35e9651d2c01e4c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1NodeIteratorBase.html#_CPPv4I0EN9NetworKit16NodeIteratorBaseE" title="NetworKit::NodeIteratorBase"><span class="n"><span class="pre">NodeIteratorBase</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN9NetworKit13NodeRangeBaseE" title="NetworKit::NodeRangeBase::GraphType"><span class="n"><span class="pre">GraphType</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">end</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit13NodeRangeBase3endEv" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1NodeRangeBase_1ae05bf276ff4a628c9ecbedc4b5450175"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1NodeIteratorBase.html#_CPPv4I0_9GraphNode_15GraphEdgeWeightEN9NetworKit16NodeIteratorBaseE" title="NetworKit::NodeIteratorBase"><span class="n"><span class="pre">NodeIteratorBase</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0_9GraphNode_15GraphEdgeWeightEN9NetworKit13NodeRangeBaseE" title="NetworKit::NodeRangeBase::GraphType"><span class="n"><span class="pre">GraphType</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_9GraphNode_15GraphEdgeWeightEN9NetworKit13NodeRangeBaseE" title="NetworKit::NodeRangeBase::NodeT"><span class="n"><span class="pre">NodeT</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0_9GraphNode_15GraphEdgeWeightEN9NetworKit13NodeRangeBaseE" title="NetworKit::NodeRangeBase::EdgeWeightT"><span class="n"><span class="pre">EdgeWeightT</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">end</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">noexcept</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit13NodeRangeBase3endEv" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -192,7 +208,7 @@
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.2.0.<br/>
     </p>
     <span style="padding-left: 10px">
       <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>

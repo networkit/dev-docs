@@ -10,10 +10,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=c83e6b79" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
-    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/documentation_options.js?v=c0639414"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -98,13 +98,13 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="stable"
-	        data-docs-version-label="Stable (11.2.1)"
-	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-version-label="Stable (11.3)"
+	        data-docs-stable-label="Stable (11.3)"
 	        data-docs-nightly-label="Nightly"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
-	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="stable" selected>Stable (11.3)</option>
 	  <option value="nightly">Nightly</option>
 	</select>
 </div>
@@ -157,18 +157,18 @@
 <span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Field</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Real</span><span class="p">,</span><span class="w"> </span><span class="n">Double</span><span class="p">,</span><span class="w"> </span><span class="n">Complex</span><span class="p">,</span><span class="w"> </span><span class="n">Integer</span><span class="p">,</span><span class="w"> </span><span class="n">Pattern</span><span class="w"> </span><span class="p">};</span>
 <span class="w">    </span><span class="k">enum</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Symmetry</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">General</span><span class="p">,</span><span class="w"> </span><span class="n">Symmetric</span><span class="p">,</span><span class="w"> </span><span class="n">SkewSymmetric</span><span class="p">,</span><span class="w"> </span><span class="n">Hermitian</span><span class="w"> </span><span class="p">};</span>
 
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">objectMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="s">&quot;matrix&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">::</span><span class="n">Matrix</span><span class="p">},</span>
-<span class="w">                                                         </span><span class="p">{</span><span class="s">&quot;vector&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">::</span><span class="n">Vector</span><span class="p">}};</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">Format</span><span class="o">&gt;</span><span class="w"> </span><span class="n">formatMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="s">&quot;coordinate&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Format</span><span class="o">::</span><span class="n">Coordinate</span><span class="p">},</span>
-<span class="w">                                                         </span><span class="p">{</span><span class="s">&quot;array&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Format</span><span class="o">::</span><span class="n">Array</span><span class="p">}};</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">Field</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fieldMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="s">&quot;real&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Field</span><span class="o">::</span><span class="n">Real</span><span class="p">},</span>
-<span class="w">                                                       </span><span class="p">{</span><span class="s">&quot;double&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Field</span><span class="o">::</span><span class="n">Double</span><span class="p">},</span>
-<span class="w">                                                       </span><span class="p">{</span><span class="s">&quot;integer&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Field</span><span class="o">::</span><span class="n">Integer</span><span class="p">},</span>
-<span class="w">                                                       </span><span class="p">{</span><span class="s">&quot;pattern&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Field</span><span class="o">::</span><span class="n">Pattern</span><span class="p">}};</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">objectMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="s">"matrix"</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">::</span><span class="n">Matrix</span><span class="p">},</span>
+<span class="w">                                                         </span><span class="p">{</span><span class="s">"vector"</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="o">::</span><span class="n">Vector</span><span class="p">}};</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">Format</span><span class="o">&gt;</span><span class="w"> </span><span class="n">formatMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="s">"coordinate"</span><span class="p">,</span><span class="w"> </span><span class="n">Format</span><span class="o">::</span><span class="n">Coordinate</span><span class="p">},</span>
+<span class="w">                                                         </span><span class="p">{</span><span class="s">"array"</span><span class="p">,</span><span class="w"> </span><span class="n">Format</span><span class="o">::</span><span class="n">Array</span><span class="p">}};</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">Field</span><span class="o">&gt;</span><span class="w"> </span><span class="n">fieldMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="s">"real"</span><span class="p">,</span><span class="w"> </span><span class="n">Field</span><span class="o">::</span><span class="n">Real</span><span class="p">},</span>
+<span class="w">                                                       </span><span class="p">{</span><span class="s">"double"</span><span class="p">,</span><span class="w"> </span><span class="n">Field</span><span class="o">::</span><span class="n">Double</span><span class="p">},</span>
+<span class="w">                                                       </span><span class="p">{</span><span class="s">"integer"</span><span class="p">,</span><span class="w"> </span><span class="n">Field</span><span class="o">::</span><span class="n">Integer</span><span class="p">},</span>
+<span class="w">                                                       </span><span class="p">{</span><span class="s">"pattern"</span><span class="p">,</span><span class="w"> </span><span class="n">Field</span><span class="o">::</span><span class="n">Pattern</span><span class="p">}};</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">Symmetry</span><span class="o">&gt;</span><span class="w"> </span><span class="n">symmetryMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="p">{</span><span class="s">&quot;general&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Symmetry</span><span class="o">::</span><span class="n">General</span><span class="p">},</span>
-<span class="w">        </span><span class="p">{</span><span class="s">&quot;symmetric&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Symmetry</span><span class="o">::</span><span class="n">Symmetric</span><span class="p">},</span>
-<span class="w">        </span><span class="p">{</span><span class="s">&quot;skew-symmetric&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Symmetry</span><span class="o">::</span><span class="n">SkewSymmetric</span><span class="p">}};</span>
+<span class="w">        </span><span class="p">{</span><span class="s">"general"</span><span class="p">,</span><span class="w"> </span><span class="n">Symmetry</span><span class="o">::</span><span class="n">General</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="s">"symmetric"</span><span class="p">,</span><span class="w"> </span><span class="n">Symmetry</span><span class="o">::</span><span class="n">Symmetric</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="s">"skew-symmetric"</span><span class="p">,</span><span class="w"> </span><span class="n">Symmetry</span><span class="o">::</span><span class="n">SkewSymmetric</span><span class="p">}};</span>
 
 <span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">MTXHeader</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">Object</span><span class="w"> </span><span class="n">object</span><span class="p">;</span>
@@ -199,7 +199,7 @@
 
 <span class="w">    </span><span class="n">MatrixSize</span><span class="w"> </span><span class="nf">getMatrixSize</span><span class="p">();</span>
 
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">NetworKit</span><span class="o">::</span><span class="n">WeightedEdge</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getNext</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">weighted</span><span class="p">);</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">WeightedEdge</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getNext</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">weighted</span><span class="p">);</span>
 <span class="p">};</span>
 <span class="p">}</span><span class="w"> </span><span class="cm">/* namespace NetworKit */</span>
 <span class="cp">#endif </span><span class="c1">// NETWORKIT_IO_MTX_PARSER_HPP_</span>
@@ -223,7 +223,7 @@
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.2.0.<br/>
     </p>
     <span style="padding-left: 10px">
       <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>

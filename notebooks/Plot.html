@@ -10,11 +10,11 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=c83e6b79" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
     <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
-    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/documentation_options.js?v=c0639414"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -103,13 +103,13 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="stable"
-	        data-docs-version-label="Stable (11.2.1)"
-	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-version-label="Stable (11.3)"
+	        data-docs-stable-label="Stable (11.3)"
 	        data-docs-nightly-label="Nightly"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
-	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="stable" selected>Stable (11.3)</option>
 	  <option value="nightly">Nightly</option>
 	</select>
 </div>
@@ -323,13 +323,13 @@ True
 <span class="n">G_attr</span><span class="o">.</span><span class="n">addEdge</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">G_attr</span><span class="o">.</span><span class="n">addEdge</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 <span class="c1">#attaching the attributes to the graph</span>
-<span class="n">attrFloat</span> <span class="o">=</span> <span class="n">G_attr</span><span class="o">.</span><span class="n">attachNodeAttribute</span><span class="p">(</span><span class="s2">&quot;myFloat&quot;</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
-<span class="n">attrStr</span> <span class="o">=</span> <span class="n">G_attr</span><span class="o">.</span><span class="n">attachNodeAttribute</span><span class="p">(</span><span class="s2">&quot;myStr&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+<span class="n">attrFloat</span> <span class="o">=</span> <span class="n">G_attr</span><span class="o">.</span><span class="n">attachNodeAttribute</span><span class="p">(</span><span class="s2">"myFloat"</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+<span class="n">attrStr</span> <span class="o">=</span> <span class="n">G_attr</span><span class="o">.</span><span class="n">attachNodeAttribute</span><span class="p">(</span><span class="s2">"myStr"</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
 <span class="c1">#setting attribute values</span>
 <span class="n">attrFloat</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>
 <span class="n">attrFloat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.5</span>
-<span class="n">attrStr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;tutorial&quot;</span>
-<span class="n">attrStr</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;again&quot;</span>
+<span class="n">attrStr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"tutorial"</span>
+<span class="n">attrStr</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"again"</span>
 </pre></div>
 </div>
 </div>
@@ -375,7 +375,7 @@ True
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># read a graph</span>
-<span class="n">G_jazz</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/jazz.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<span class="n">G_jazz</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/jazz.graph"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -454,7 +454,7 @@ True
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#larger example</span>
-<span class="n">G_big</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/power.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<span class="n">G_big</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/power.graph"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -493,7 +493,7 @@ True
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.2.0.<br/>
     </p>
     <span style="padding-left: 10px">
       <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>

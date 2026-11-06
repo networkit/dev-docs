@@ -10,10 +10,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=c83e6b79" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
-    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/documentation_options.js?v=c0639414"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -98,13 +98,13 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="stable"
-	        data-docs-version-label="Stable (11.2.1)"
-	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-version-label="Stable (11.3)"
+	        data-docs-stable-label="Stable (11.3)"
 	        data-docs-nightly-label="Nightly"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
-	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="stable" selected>Stable (11.3)</option>
 	  <option value="nightly">Nightly</option>
 	</select>
 </div>
@@ -154,8 +154,12 @@
 <h2>Includes<a class="headerlink" href="#includes" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">array</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cstddef</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkit/Globals.hpp</span></code> (<a class="reference internal" href="file_include_networkit_Globals.hpp.html#file-include-networkit-globals-hpp"><span class="std std-ref">File Globals.hpp</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkit/graph/Graph.hpp</span></code> (<a class="reference internal" href="file_include_networkit_graph_Graph.hpp.html#file-include-networkit-graph-graph-hpp"><span class="std std-ref">File Graph.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkit/graph/TraversalImpl.hpp</span></code> (<a class="reference internal" href="file_include_networkit_graph_TraversalImpl.hpp.html#file-include-networkit-graph-traversalimpl-hpp"><span class="std std-ref">File TraversalImpl.hpp</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">queue</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stdexcept</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vector</span></code> (<a class="reference internal" href="file_include_networkit_centrality_EigenvectorCentrality.hpp.html#file-include-networkit-centrality-eigenvectorcentrality-hpp"><span class="std std-ref">File EigenvectorCentrality.hpp</span></a>)</p></li>
 </ul>
 </section>
@@ -170,16 +174,16 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="namespace_NetworKit.html#namespace-networkit"><span class="std std-ref">Namespace NetworKit</span></a></p></li>
 <li><p><a class="reference internal" href="namespace_NetworKit__Traversal.html#namespace-networkit-traversal"><span class="std std-ref">Namespace NetworKit::Traversal</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_NetworKit__Traversal__Impl.html#namespace-networkit-traversal-impl"><span class="std std-ref">Namespace NetworKit::Traversal::Impl</span></a></p></li>
 </ul>
 </section>
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="function_graph_2_b_f_s_8hpp_1a2303a714987d2d5fa3e2308a3ba0b62f.html#exhale-function-graph-2-b-f-s-8hpp-1a2303a714987d2d5fa3e2308a3ba0b62f"><span class="std std-ref">Template Function NetworKit::Traversal::BFSEdgesFrom</span></a></p></li>
-<li><p><a class="reference internal" href="function_graph_2_b_f_s_8hpp_1ae625e616ddc7bfdb74c404034b65ebdb.html#exhale-function-graph-2-b-f-s-8hpp-1ae625e616ddc7bfdb74c404034b65ebdb"><span class="std std-ref">Template Function NetworKit::Traversal::BFSfrom(const Graph&amp;, node, L)</span></a></p></li>
-<li><p><a class="reference internal" href="function_graph_2_b_f_s_8hpp_1a2d158c0c51b90a55cd70d6d7084680c6.html#exhale-function-graph-2-b-f-s-8hpp-1a2d158c0c51b90a55cd70d6d7084680c6"><span class="std std-ref">Template Function NetworKit::Traversal::BFSfrom(const Graph&amp;, InputIt, InputIt, L)</span></a></p></li>
-<li><p><a class="reference internal" href="function_graph_2_b_f_s_8hpp_1ac81f9cef209fe81cfdd73f66a17e69a8.html#exhale-function-graph-2-b-f-s-8hpp-1ac81f9cef209fe81cfdd73f66a17e69a8"><span class="std std-ref">Template Function NetworKit::Traversal::callBFSHandle(F&amp;, node, count)</span></a></p></li>
-<li><p><a class="reference internal" href="function_graph_2_b_f_s_8hpp_1a6480381105e60a9fa4d9a69df86db118.html#exhale-function-graph-2-b-f-s-8hpp-1a6480381105e60a9fa4d9a69df86db118"><span class="std std-ref">Template Function NetworKit::Traversal::callBFSHandle(F&amp;, node, count)</span></a></p></li>
+<li><p><a class="reference internal" href="function_graph_2BFS_8hpp_1a79080dcb4e7358940e64846de27a412b.html#exhale-function-graph-2bfs-8hpp-1a79080dcb4e7358940e64846de27a412b"><span class="std std-ref">Template Function NetworKit::Traversal::BFSEdgesFrom</span></a></p></li>
+<li><p><a class="reference internal" href="function_graph_2BFS_8hpp_1a511b0f2f0a050ed2145effb9038874a1.html#exhale-function-graph-2bfs-8hpp-1a511b0f2f0a050ed2145effb9038874a1"><span class="std std-ref">Template Function NetworKit::Traversal::BFSfrom(const GraphT&amp;, typename GraphT::NodeT, L)</span></a></p></li>
+<li><p><a class="reference internal" href="function_graph_2BFS_8hpp_1a1ba370048106ca951e8cc19c080a19a6.html#exhale-function-graph-2bfs-8hpp-1a1ba370048106ca951e8cc19c080a19a6"><span class="std std-ref">Template Function NetworKit::Traversal::BFSfrom(const GraphT&amp;, InputIt, InputIt, L)</span></a></p></li>
+<li><p><a class="reference internal" href="function_graph_2BFS_8hpp_1a7148808ebbf752c3c879814f65723e7c.html#exhale-function-graph-2bfs-8hpp-1a7148808ebbf752c3c879814f65723e7c"><span class="std std-ref">Template Function NetworKit::Traversal::Impl::callBFSHandle</span></a></p></li>
 </ul>
 </section>
 </section>
@@ -200,7 +204,7 @@
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.2.0.<br/>
     </p>
     <span style="padding-left: 10px">
       <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>

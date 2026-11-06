@@ -10,11 +10,11 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=c83e6b79" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
     <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css?v=2aa19091" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
-    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/documentation_options.js?v=c0639414"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -103,13 +103,13 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="stable"
-	        data-docs-version-label="Stable (11.2.1)"
-	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-version-label="Stable (11.3)"
+	        data-docs-stable-label="Stable (11.3)"
 	        data-docs-nightly-label="Nightly"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
-	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="stable" selected>Stable (11.3)</option>
 	  <option value="nightly">Nightly</option>
 	</select>
 </div>
@@ -227,7 +227,7 @@ while <code class="docutils literal notranslate"><span class="pre">edgeRatio</sp
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">&quot;../input/jazz.graph&quot;</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nk</span><span class="o">.</span><span class="n">readGraph</span><span class="p">(</span><span class="s2">"../input/jazz.graph"</span><span class="p">,</span> <span class="n">nk</span><span class="o">.</span><span class="n">Format</span><span class="o">.</span><span class="n">METIS</span><span class="p">)</span>
 <span class="n">G</span><span class="o">.</span><span class="n">indexEdges</span><span class="p">()</span>
 <span class="n">G</span><span class="o">.</span><span class="n">numberOfNodes</span><span class="p">(),</span> <span class="n">G</span><span class="o">.</span><span class="n">numberOfEdges</span><span class="p">()</span>
 </pre></div>
@@ -270,7 +270,7 @@ while <code class="docutils literal notranslate"><span class="pre">edgeRatio</sp
 <span class="c1"># Get edge scores</span>
 <span class="n">attributes</span> <span class="o">=</span> <span class="n">ffs</span><span class="o">.</span><span class="n">scores</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">attribute</span> <span class="ow">in</span> <span class="n">attributes</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">attribute</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{:.3f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">attribute</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -279,11 +279,11 @@ while <code class="docutils literal notranslate"><span class="pre">edgeRatio</sp
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-0.143
-0.405
-0.024
-0.143
-0.262
+0.045
+0.227
+0.091
+0.068
+0.159
 </pre></div></div>
 </div>
 </section>
@@ -309,7 +309,7 @@ while <code class="docutils literal notranslate"><span class="pre">edgeRatio</sp
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(2742, 514)
+(2742, 517)
 </pre></div></div>
 </div>
 </section>
@@ -339,7 +339,7 @@ while <code class="docutils literal notranslate"><span class="pre">edgeRatio</sp
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(2742, 2250)
+(2742, 2343)
 </pre></div></div>
 </div>
 </section>
@@ -363,7 +363,7 @@ while <code class="docutils literal notranslate"><span class="pre">edgeRatio</sp
 <span class="c1"># Get edge scores</span>
 <span class="n">ldsScores</span> <span class="o">=</span> <span class="n">lds</span><span class="o">.</span><span class="n">scores</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">ldsScores</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{:.3f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -436,7 +436,7 @@ while <code class="docutils literal notranslate"><span class="pre">edgeRatio</sp
 <span class="c1"># Get edge scores</span>
 <span class="n">scores</span> <span class="o">=</span> <span class="n">lss</span><span class="o">.</span><span class="n">scores</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{:.3f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -498,7 +498,7 @@ while <code class="docutils literal notranslate"><span class="pre">edgeRatio</sp
 <span class="c1"># Get edge scores</span>
 <span class="n">randomEdgeScores</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">scores</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">randomEdgeScores</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{:.3f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -507,11 +507,11 @@ while <code class="docutils literal notranslate"><span class="pre">edgeRatio</sp
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-0.679
-0.741
-0.109
-0.596
-0.329
+0.369
+0.305
+0.611
+0.451
+0.403
 </pre></div></div>
 </div>
 </section>
@@ -536,7 +536,7 @@ while <code class="docutils literal notranslate"><span class="pre">edgeRatio</sp
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(2742, 537)
+(2742, 542)
 </pre></div></div>
 </div>
 </section>
@@ -560,7 +560,7 @@ while <code class="docutils literal notranslate"><span class="pre">edgeRatio</sp
 <span class="c1"># Get edge scores</span>
 <span class="n">randomNodeScores</span> <span class="o">=</span> <span class="n">rn</span><span class="o">.</span><span class="n">scores</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">randomNodeScores</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{:.3f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -569,11 +569,11 @@ while <code class="docutils literal notranslate"><span class="pre">edgeRatio</sp
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-0.308
-0.375
-0.801
-0.078
-0.013
+0.049
+0.021
+0.198
+0.430
+0.763
 </pre></div></div>
 </div>
 </section>
@@ -622,7 +622,7 @@ while <code class="docutils literal notranslate"><span class="pre">edgeRatio</sp
 <span class="c1"># Get edge scores</span>
 <span class="n">scanScores</span> <span class="o">=</span> <span class="n">scan</span><span class="o">.</span><span class="n">scores</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">scanScores</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{:.3f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -684,7 +684,7 @@ while <code class="docutils literal notranslate"><span class="pre">edgeRatio</sp
 <span class="c1"># Get edge scores</span>
 <span class="n">sosScores</span> <span class="o">=</span> <span class="n">sos</span><span class="o">.</span><span class="n">scores</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">sosScores</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="si">{:.3f}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -745,7 +745,7 @@ while <code class="docutils literal notranslate"><span class="pre">edgeRatio</sp
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.2.0.<br/>
     </p>
     <span style="padding-left: 10px">
       <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>

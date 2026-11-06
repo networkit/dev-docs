@@ -10,10 +10,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=c83e6b79" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
-    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/documentation_options.js?v=c0639414"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -98,13 +98,13 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="stable"
-	        data-docs-version-label="Stable (11.2.1)"
-	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-version-label="Stable (11.3)"
+	        data-docs-stable-label="Stable (11.3)"
 	        data-docs-nightly-label="Nightly"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
-	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="stable" selected>Stable (11.3)</option>
 	  <option value="nightly">Nightly</option>
 	</select>
 </div>
@@ -140,6 +140,7 @@
 <li><p><a class="reference internal" href="#included-by" id="id3">Included By</a></p></li>
 <li><p><a class="reference internal" href="#namespaces" id="id4">Namespaces</a></p></li>
 <li><p><a class="reference internal" href="#classes" id="id5">Classes</a></p></li>
+<li><p><a class="reference internal" href="#typedefs" id="id6">Typedefs</a></p></li>
 </ul>
 </nav>
 <section id="definition-include-networkit-distance-sssp-hpp">
@@ -153,9 +154,11 @@
 <section id="includes">
 <h2>Includes<a class="headerlink" href="#includes" title="Link to this heading">¶</a></h2>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">limits</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkit/auxiliary/Multiprecision.hpp</span></code> (<a class="reference internal" href="file_include_networkit_auxiliary_Multiprecision.hpp.html#file-include-networkit-auxiliary-multiprecision-hpp"><span class="std std-ref">File Multiprecision.hpp</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">networkit/base/Algorithm.hpp</span></code> (<a class="reference internal" href="file_include_networkit_base_Algorithm.hpp.html#file-include-networkit-base-algorithm-hpp"><span class="std std-ref">File Algorithm.hpp</span></a>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkit/graph/Graph.hpp</span></code> (<a class="reference internal" href="file_include_networkit_graph_Graph.hpp.html#file-include-networkit-graph-graph-hpp"><span class="std std-ref">File Graph.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkit/distance/SSSPImpl.hpp</span></code> (<a class="reference internal" href="file_include_networkit_distance_SSSPImpl.hpp.html#file-include-networkit-distance-ssspimpl-hpp"><span class="std std-ref">File SSSPImpl.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkit/graph/AdjListGraph.hpp</span></code> (<a class="reference internal" href="file_include_networkit_graph_AdjListGraph.hpp.html#file-include-networkit-graph-adjlistgraph-hpp"><span class="std std-ref">File AdjListGraph.hpp</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">set</span></code> (<a class="reference internal" href="file_include_networkit_independentset_IndependentSetFinder.hpp.html#file-include-networkit-independentset-independentsetfinder-hpp"><span class="std std-ref">File IndependentSetFinder.hpp</span></a>)</p></li>
 </ul>
 </section>
@@ -167,6 +170,7 @@
 <li><p><a class="reference internal" href="file_include_networkit_distance_Dijkstra.hpp.html#file-include-networkit-distance-dijkstra-hpp"><span class="std std-ref">File Dijkstra.hpp</span></a></p></li>
 <li><p><a class="reference internal" href="file_include_networkit_distance_DynSSSP.hpp.html#file-include-networkit-distance-dynsssp-hpp"><span class="std std-ref">File DynSSSP.hpp</span></a></p></li>
 <li><p><a class="reference internal" href="file_include_networkit_distance_ReverseBFS.hpp.html#file-include-networkit-distance-reversebfs-hpp"><span class="std std-ref">File ReverseBFS.hpp</span></a></p></li>
+<li><p><a class="reference internal" href="file_include_networkit_distance_SSSPImpl.hpp.html#file-include-networkit-distance-ssspimpl-hpp"><span class="std std-ref">File SSSPImpl.hpp</span></a></p></li>
 </ul>
 </section>
 <section id="namespaces">
@@ -178,7 +182,13 @@
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="class_networ_kit_1_1_s_s_s_p.html#exhale-class-class-networ-kit-1-1-s-s-s-p"><span class="std std-ref">Class SSSP</span></a></p></li>
+<li><p><a class="reference internal" href="classNetworKit_1_1SingleSourceShortestPaths.html#exhale-class-classnetworkit-1-1singlesourceshortestpaths"><span class="std std-ref">Template Class SingleSourceShortestPaths</span></a></p></li>
+</ul>
+</section>
+<section id="typedefs">
+<h2>Typedefs<a class="headerlink" href="#typedefs" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="typedef_namespaceNetworKit_1a2defa0aaeef0e61e1fe73d85c2ab9101.html#exhale-typedef-namespacenetworkit-1a2defa0aaeef0e61e1fe73d85c2ab9101"><span class="std std-ref">Typedef NetworKit::SSSP</span></a></p></li>
 </ul>
 </section>
 </section>
@@ -199,7 +209,7 @@
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.2.0.<br/>
     </p>
     <span style="padding-left: 10px">
       <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>

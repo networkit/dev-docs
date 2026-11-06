@@ -10,10 +10,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=c83e6b79" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
-    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/documentation_options.js?v=c0639414"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -94,7 +94,24 @@
 <div class="container">
   <div class="row">
       <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="sidebar">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+<div id="docs-version-switcher" class="docs-version-sidebar">
+	<label for="docs-version-select" class="docs-version-label">Version</label>
+	<select id="docs-version-select"
+	        class="docs-version-select form-control"
+	        data-docs-channel="stable"
+	        data-docs-version-label="Stable (11.3)"
+	        data-docs-stable-label="Stable (11.3)"
+	        data-docs-nightly-label="Nightly"
+	        data-docs-stable-url="/dev-docs/"
+	        data-docs-nightly-url="/dev-docs/nightly/"
+	        data-docs-versions-url="/dev-docs/versions.json">
+	  <option value="stable" selected>Stable (11.3)</option>
+	  <option value="nightly">Nightly</option>
+	</select>
+</div>
+
+<ul class="sidebar">
 	<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../python_api/modules.html">Python Documentation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ Documentation</a><ul class="current">
@@ -120,7 +137,6 @@
 </ul>
 
 </ul>
-  
 <form action="../search.html" method="get">
  <div class="form-group">
   <input type="text" name="q" class="form-control" placeholder="Search" />
@@ -151,10 +167,9 @@
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit20EdgeSwitchingInPlaceE">
 <span class="target" id="classNetworKit_1_1EdgeSwitchingInPlace"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EdgeSwitchingInPlace</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1Algorithm.html#_CPPv4N9NetworKit9AlgorithmE" title="NetworKit::Algorithm"><span class="n"><span class="pre">Algorithm</span></span></a><a class="headerlink" href="#_CPPv4N9NetworKit20EdgeSwitchingInPlaceE" title="Link to this definition">¶</a><br /></dt>
-<dd><p><a class="reference internal" href="classNetworKit_1_1EdgeSwitching.html#classNetworKit_1_1EdgeSwitching"><span class="std std-ref">EdgeSwitching</span></a> and <a class="reference internal" href="#classNetworKit_1_1EdgeSwitchingInPlace"><span class="std std-ref">EdgeSwitchingInPlace</span></a> implement the same algorithm &amp;#8212; while the former copies the input graph provided and is more versatile, the in-place implementation only keeps a reference to the input graph.</p>
-<p>The <a class="reference internal" href="structNetworKit_1_1Edge.html#structNetworKit_1_1Edge"><span class="std std-ref">Edge</span></a><p>Switching Markov Chain [“The markov chain simulation method for generating connected</p>
-<p>power law random graphs”, Mihail and Zegura] perturbates simple directed or undirected graphs while preserving their degrees. In each step, two edges are selected uniformly at random, and their endpoints exchanged. Swaps that introduce multi-edges or self-loops are rejected WITHOUT replacement</p>
-&amp;#8212;<p>this is necessary to allow uniform sampling [see “Switching edges to randomize</p>
+<dd><p><a class="reference internal" href="classNetworKit_1_1EdgeSwitching.html#classNetworKit_1_1EdgeSwitching"><span class="std std-ref">EdgeSwitching</span></a> and <a class="reference internal" href="#classNetworKit_1_1EdgeSwitchingInPlace"><span class="std std-ref">EdgeSwitchingInPlace</span></a> implement the same algorithm – while the former copies the input graph provided and is more versatile, the in-place implementation only keeps a reference to the input graph.</p>
+<p><p>The Edge Switching Markov Chain [“The markov chain simulation method for generating connected</p>
+<p>power law random graphs”, Mihail and Zegura] perturbates simple directed or undirected graphs while preserving their degrees. In each step, two edges are selected uniformly at random, and their endpoints exchanged. Swaps that introduce multi-edges or self-loops are rejected WITHOUT replacement – this is necessary to allow uniform sampling [see “Switching edges to randomize</p>
 <p>networks: what goes wrong and how to fix it”, Carstens and Horadam]. The number of successful swaps can be queried using</p>
 <a class="reference internal" href="#classNetworKit_1_1EdgeSwitchingInPlace_1aaba575c700525a6171c1928f97b14b82"><span class="std std-ref">getNumberOfAffectedEdges()</span></a>/2.</p>
 <p>
@@ -167,7 +182,7 @@ It’s recommended to implement the preprocessing step in the calling code or to
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit20EdgeSwitchingInPlace20EdgeSwitchingInPlaceER5Graphd">
-<span class="target" id="classNetworKit_1_1EdgeSwitchingInPlace_1a92d94467e1de10d1ddcfd23ee9328911"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EdgeSwitchingInPlace</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">numberOfSwitchesPerEdge</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10.0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit20EdgeSwitchingInPlace20EdgeSwitchingInPlaceER5Graphd" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1EdgeSwitchingInPlace_1a92d94467e1de10d1ddcfd23ee9328911"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EdgeSwitchingInPlace</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">numberOfSwitchesPerEdge</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10.0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit20EdgeSwitchingInPlace20EdgeSwitchingInPlaceER5Graphd" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Constructs an EdgeSwitch algorithm that will change the input graph IN-PLACE. </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -192,7 +207,7 @@ It’s recommended to implement the preprocessing step in the calling code or to
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit20EdgeSwitchingInPlace8getGraphEv">
-<span class="target" id="classNetworKit_1_1EdgeSwitchingInPlace_1a1eaf96c086babc230d0150631c3a4f6a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getGraph</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit20EdgeSwitchingInPlace8getGraphEv" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1EdgeSwitchingInPlace_1a9f4ede2f42471091249c3e3e95b8a333"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getGraph</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit20EdgeSwitchingInPlace8getGraphEv" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Return a reference to the perturbed graph. </p>
 </dd></dl>
 
@@ -223,7 +238,7 @@ It’s recommended to implement the preprocessing step in the calling code or to
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N9NetworKit20EdgeSwitchingInPlace5graphE">
-<span class="target" id="classNetworKit_1_1EdgeSwitchingInPlace_1a26ccb820fb7c73fcba26536aa590adf0"></span><a class="reference internal" href="classNetworKit_1_1Graph.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">graph</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit20EdgeSwitchingInPlace5graphE" title="Link to this definition">¶</a><br /></dt>
+<span class="target" id="classNetworKit_1_1EdgeSwitchingInPlace_1a26ccb820fb7c73fcba26536aa590adf0"></span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">graph</span></span></span><a class="headerlink" href="#_CPPv4N9NetworKit20EdgeSwitchingInPlace5graphE" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -264,7 +279,7 @@ It’s recommended to implement the preprocessing step in the calling code or to
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.2.0.<br/>
     </p>
     <span style="padding-left: 10px">
       <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>

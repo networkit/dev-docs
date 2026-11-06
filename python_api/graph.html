@@ -6,15 +6,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta property="article:modified_time" content="2022-03-17T10:27:30+01:00" />
     <title>networkit.graph</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=c83e6b79" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
-    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/documentation_options.js?v=c0639414"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -101,13 +100,13 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="stable"
-	        data-docs-version-label="Stable (11.2.1)"
-	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-version-label="Stable (11.3)"
+	        data-docs-stable-label="Stable (11.3)"
 	        data-docs-nightly-label="Nightly"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
-	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="stable" selected>Stable (11.3)</option>
 	  <option value="nightly">Nightly</option>
 	</select>
 </div>
@@ -184,12 +183,12 @@
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.graph.</span></span><span class="sig-name descname"><span class="pre">EdgeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typedEdgeAttribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.EdgeAttribute" title="Link to this definition">¶</a></dt>
 <dd><p>Generic class for edge attributes returned by networkit.graph.attachEdgeAttribute().
 Example of attaching an int attribute to a graph g:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>att = g.attachEdgeAttribute(&quot;name&quot;, int)`
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>att = g.attachEdgeAttribute("name", int)`
 </pre></div>
 </div>
 <p>Set/get attributes of a single edgeId ‘eid’ with the [] operator:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">att</span><span class="p">[</span><span class="n">eid</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">att_val</span> <span class="o">=</span> <span class="n">att</span><span class="p">[</span><span class="n">eid</span><span class="p">]</span> <span class="c1"># &#39;att_val&#39; is 0</span>
+<span class="n">att_val</span> <span class="o">=</span> <span class="n">att</span><span class="p">[</span><span class="n">eid</span><span class="p">]</span> <span class="c1"># 'att_val' is 0</span>
 </pre></div>
 </div>
 <p>Iterate over all the values of an attribute:</p>
@@ -309,7 +308,7 @@ the id of the last node added.</p>
 <dt class="sig sig-object py" id="networkit.graph.Graph.attachEdgeAttribute">
 <span class="sig-name descname"><span class="pre">attachEdgeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofType</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.attachEdgeAttribute" title="Link to this definition">¶</a></dt>
 <dd><p>Attaches an edge attribute to the graph and returns it.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">attachEdgeAttribute</span><span class="p">(</span><span class="s2">&quot;attributeIdentifier&quot;</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">attachEdgeAttribute</span><span class="p">(</span><span class="s2">"attributeIdentifier"</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>All values are initially undefined for existing edges values can be set/get by</p>
@@ -341,7 +340,7 @@ its attributes undefined</p>
 <dt class="sig sig-object py" id="networkit.graph.Graph.attachNodeAttribute">
 <span class="sig-name descname"><span class="pre">attachNodeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofType</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.attachNodeAttribute" title="Link to this definition">¶</a></dt>
 <dd><p>Attaches a node attribute to the graph and returns it.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">attachNodeAttribute</span><span class="p">(</span><span class="s2">&quot;attributeIdentifier&quot;</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">attachNodeAttribute</span><span class="p">(</span><span class="s2">"attributeIdentifier"</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>All values are initially undefined for existing nodes values can be set/get
@@ -585,7 +584,7 @@ Parameter list refering to (node id, node id).</p>
 <dt class="sig sig-object py" id="networkit.graph.Graph.getEdgeAttribute">
 <span class="sig-name descname"><span class="pre">getEdgeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofType</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.getEdgeAttribute" title="Link to this definition">¶</a></dt>
 <dd><p>Gets an edge attribute that is already attached to the graph and returns it.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">getEdgeAttribute</span><span class="p">(</span><span class="s2">&quot;attributeIdentifier&quot;</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">getEdgeAttribute</span><span class="p">(</span><span class="s2">"attributeIdentifier"</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
 </pre></div>
 </div>
 <p class="rubric">Notes</p>
@@ -610,7 +609,7 @@ Parameter list refering to (node id, node id).</p>
 <dt class="sig sig-object py" id="networkit.graph.Graph.getNodeAttribute">
 <span class="sig-name descname"><span class="pre">getNodeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ofType</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.Graph.getNodeAttribute" title="Link to this definition">¶</a></dt>
 <dd><p>Gets a node attribute that is already attached to the graph and returns it.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">getNodeAttribute</span><span class="p">(</span><span class="s2">&quot;attributeIdentifier&quot;</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">getNodeAttribute</span><span class="p">(</span><span class="s2">"attributeIdentifier"</span><span class="p">,</span> <span class="n">ofType</span><span class="p">)</span>
 </pre></div>
 </div>
 <p class="rubric">Notes</p>
@@ -1079,7 +1078,7 @@ as ijk or coo format). See here for more details: <a class="reference external" 
 inserted twice twice: once as (i,j) and once as (j,i).</p>
 <p>Parameter <code class="code docutils literal notranslate"><span class="pre">inputData</span></code> can be one of the following:</p>
 <ul class="simple">
-<li><p>scipy.sparse.coo_matrix</p></li>
+<li><p>scipy.sparse.coo_matrix, where the <cite>scipy.sparse.coo_matrix.data</cite> become the weights</p></li>
 <li><p>(data, (i,j)) where data, i and j are of type np.ndarray</p></li>
 <li><p>(i,j) where i and j are of type np.ndarray</p></li>
 </ul>
@@ -1105,13 +1104,34 @@ of the graph. For better performance, it is advised to correctly set the number 
 </dl>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="networkit.graph.GraphFromCsr">
+<span class="sig-prename descclassname"><span class="pre">networkit.graph.</span></span><span class="sig-name descname"><span class="pre">GraphFromCsr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">csr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weighted</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.GraphFromCsr" title="Link to this definition">¶</a></dt>
+<dd><p>Create a Graph from a SciPy CSR matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>csr</strong> (<em>scipy.sparse.csr_matrix</em>) – The SciPy CSR matrix representing the adjacency matrix.</p></li>
+<li><p><strong>directed</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to treat the matrix as directed. Default: True</p></li>
+<li><p><strong>weighted</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to treat the matrix as weighted. Default: False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A new NetworKit Graph built from the CSR matrix.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#networkit.graph.Graph" title="networkit.graph.Graph">Graph</a></p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="networkit.graph.KruskalMSF">
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.graph.</span></span><span class="sig-name descname"><span class="pre">KruskalMSF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.KruskalMSF" title="Link to this definition">¶</a></dt>
 <dd><p>Generates a minimum spanning forest for a given graph based on Kruskal’s algorithm.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
 </dd>
 </dl>
 <dl class="py method">
@@ -1141,12 +1161,12 @@ of the graph. For better performance, it is advised to correctly set the number 
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.graph.</span></span><span class="sig-name descname"><span class="pre">NodeAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typedNodeAttribute</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.NodeAttribute" title="Link to this definition">¶</a></dt>
 <dd><p>Generic class for node attributes returned by networkit.graph.attachNodeAttribute().
 Example of attaching an int attribute to a graph g:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>att = g.attachNodeAttribute(&quot;name&quot;, int)`
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>att = g.attachNodeAttribute("name", int)`
 </pre></div>
 </div>
 <p>Set/get attributes of a single node ‘u’ with the [] operator:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">att</span><span class="p">[</span><span class="n">u</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">att_val</span> <span class="o">=</span> <span class="n">att</span><span class="p">[</span><span class="n">u</span><span class="p">]</span> <span class="c1"># &#39;att_val&#39; is 0</span>
+<span class="n">att_val</span> <span class="o">=</span> <span class="n">att</span><span class="p">[</span><span class="n">u</span><span class="p">]</span> <span class="c1"># 'att_val' is 0</span>
 </pre></div>
 </div>
 <p>Iterate over all the values of an attribute:</p>
@@ -1164,7 +1184,7 @@ Example of attaching an int attribute to a graph g:</p>
 <dd><p>Generates a minimum spanning forest for a given graph based on Prim’s algorithm.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
 </dd>
 </dl>
 <dl class="py method">
@@ -1196,7 +1216,7 @@ Example of attaching an int attribute to a graph g:</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
 <li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>int</em><em>) or </em><em>list</em><em>(</em><em>float</em><em>)</em>) – If given, this edge attribute is used instead of the edge weights.</p></li>
 </ul>
 </dd>
@@ -1231,7 +1251,7 @@ This attribute is only calculated and can thus only be request if the supplied g
 <dd class="field-even"><p>The calculated maximum-weight spanning forest.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
+<dd class="field-odd"><p>networkit.Graph</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1264,7 +1284,7 @@ This attribute is only calculated and can thus only be request if the supplied g
 <dd><p>Generates a spanning forest for a given graph</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
 </dd>
 </dl>
 <dl class="py method">
@@ -1276,7 +1296,7 @@ This attribute is only calculated and can thus only be request if the supplied g
 <dd class="field-odd"><p>The computed spanning forest.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
+<dd class="field-even"><p>networkit.Graph</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1296,7 +1316,7 @@ This attribute is only calculated and can thus only be request if the supplied g
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
 <li><p><strong>attribute</strong> (<em>list</em><em>(</em><em>int</em><em>) or </em><em>list</em><em>(</em><em>float</em><em>)</em>) – If given, this edge attribute is used instead of the edge weights.</p></li>
 </ul>
 </dd>
@@ -1331,7 +1351,7 @@ This attribute is only calculated and can thus only be request if the supplied g
 <dd class="field-even"><p>The calculated union of all maximum-weight spanning forests.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
+<dd class="field-odd"><p>networkit.Graph</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1376,8 +1396,7 @@ This attribute is only calculated and can thus only be request if the supplied g
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
-      Last updated on Mar 17, 2022.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.2.0.<br/>
     </p>
     <span style="padding-left: 10px">
       <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>

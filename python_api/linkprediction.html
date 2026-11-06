@@ -6,15 +6,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta property="article:modified_time" content="2020-10-21T10:17:44+02:00" />
     <title>networkit.linkprediction</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=c83e6b79" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
-    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/documentation_options.js?v=c0639414"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -101,13 +100,13 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="stable"
-	        data-docs-version-label="Stable (11.2.1)"
-	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-version-label="Stable (11.3)"
+	        data-docs-stable-label="Stable (11.3)"
 	        data-docs-nightly-label="Nightly"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
-	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="stable" selected>Stable (11.3)</option>
 	  <option value="nightly">Nightly</option>
 	</select>
 </div>
@@ -188,7 +187,7 @@
 common neighbors of u and v.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -200,7 +199,7 @@ common neighbors of u and v.</p>
 <p>AdjustedRandIndex proposed by Hoffman et al. with natural threshold of 0.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -213,7 +212,7 @@ common neighbors of u and v.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to work on. Can be set to None and default is None.</p></li>
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to work on. Can be set to None and default is None.</p></li>
 <li><p><strong>numberSystems</strong> (<em>int</em>) – Number of vectors/systems used for algebraic iteration.</p></li>
 <li><p><strong>numberIterations</strong> (<em>int</em>) – Number of iterations in each system.</p></li>
 <li><p><strong>omega</strong> (<em>float</em><em>, </em><em>optional</em>) – Overrelaxation parameter. Default: 0.5</p></li>
@@ -241,7 +240,7 @@ of overrelaxation with overrelaxation parameter omega.</p>
 <p>The CommonNeighborsIndex calculates the number of common neighbors of a node-pair in a given graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -255,7 +254,7 @@ of overrelaxation with overrelaxation parameter omega.</p>
 by the link predictor and a testGraph to compare against.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>testGraph</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – Graph containing the links to use for evaluation. Can be set to None and default is None.</p>
+<dd class="field-odd"><p><strong>testGraph</strong> (<em>networkit.Graph</em>) – Graph containing the links to use for evaluation. Can be set to None and default is None.</p>
 </dd>
 </dl>
 <dl class="py method">
@@ -309,7 +308,7 @@ behaviour described above will intervene.</p>
 getAreaUnderCurve() will still behave as expected by returning the AUC of the most recent curve.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>newTestGraph</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – New graph to use as ground truth.</p>
+<dd class="field-odd"><p><strong>newTestGraph</strong> (<em>networkit.Graph</em>) – New graph to use as ground truth.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -325,7 +324,7 @@ getAreaUnderCurve() will still behave as expected by returning the AUC of the mo
 in the neighboorhood-union.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -341,7 +340,7 @@ where l is smaller than a given limit.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a><em>, </em><em>optional</em>) – The graph to operate on. Default: None</p></li>
+<li><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to operate on. Default: None</p></li>
 <li><p><strong>maxPathLength</strong> (<em>int</em><em>, </em><em>optional</em>) – Maximal length of the paths to consider. Default: 5</p></li>
 <li><p><strong>dampingValue</strong> (<em>float</em><em>, </em><em>optional</em>) – Used to exponentially damp every addend of the sum. Should be in (0, 1]. Default: 0.005</p></li>
 </ul>
@@ -356,7 +355,7 @@ where l is smaller than a given limit.</p>
 <p>Abstract base class for link predictors.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a><em>, </em><em>optional</em>) – The graph to work on. Default: None.</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None.</p>
 </dd>
 </dl>
 <dl class="py method">
@@ -427,7 +426,7 @@ as the second element. The list is sorted ascendingly by node-pair.</p>
 <dd><p>Sets the graph to work on.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>newGraph</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to work on.</p>
+<dd class="field-odd"><p><strong>newGraph</strong> (<em>networkit.Graph</em>) – The graph to work on.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -514,7 +513,7 @@ For example in case of distance 2 only node-pairs that would close
 a triangle in the given graph get returned.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to find missing links in.</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to find missing links in.</p>
 </dd>
 </dl>
 <dl class="py method">
@@ -568,7 +567,7 @@ between the given node u and another node in the graph.</p>
 <p>Assigns a distance value to pairs of nodes according to the overlap of their neighborhoods.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -585,7 +584,7 @@ between the given node u and another node in the graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – Graph to obtain common neighbors from.</p></li>
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – Graph to obtain common neighbors from.</p></li>
 <li><p><strong>u</strong> (<em>int</em>) – First node.</p></li>
 <li><p><strong>v</strong> (<em>int</em>) – Second node.</p></li>
 </ul>
@@ -606,7 +605,7 @@ between the given node u and another node in the graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – Graph to obtain neighbors-union from.</p></li>
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – Graph to obtain neighbors-union from.</p></li>
 <li><p><strong>u</strong> (<em>int</em>) – The first node.</p></li>
 <li><p><strong>v</strong> (<em>int</em>) – The second node.</p></li>
 </ul>
@@ -631,7 +630,7 @@ between the given node u and another node in the graph.</p>
 the number of connections between neighbors of the given nodes u and v.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -685,7 +684,7 @@ ascendingly on the first node and on a tie ascendingly by the second node.</p>
 regarding the given nodes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -698,7 +697,7 @@ regarding the given nodes.</p>
 <p>Based on the generated points the area under the curve can be calculated with the trapzoidal rule.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>testGraph</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a><em>, </em><em>optional</em>) – Graph containing the links to use for evaluation. Default: None</p>
+<dd class="field-odd"><p><strong>testGraph</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – Graph containing the links to use for evaluation. Default: None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -716,7 +715,7 @@ regarding the given nodes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to construct the training graph from.</p></li>
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to construct the training graph from.</p></li>
 <li><p><strong>numLinks</strong> (<em>int</em>) – Number of links the returned graph should consist of.</p></li>
 </ul>
 </dd>
@@ -724,7 +723,7 @@ regarding the given nodes.</p>
 <dd class="field-even"><p>A graph that contains the given number of links from G.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
+<dd class="field-odd"><p>networkit.Graph</p>
 </dd>
 </dl>
 </dd></dl>
@@ -737,7 +736,7 @@ regarding the given nodes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The graph to construct the training graph from.</p></li>
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The graph to construct the training graph from.</p></li>
 <li><p><strong>percentage</strong> (<em>float</em>) – Percentage of links regarding the number of links in the given graph that should
 be in the returned graph.</p></li>
 </ul>
@@ -746,7 +745,7 @@ be in the returned graph.</p></li>
 <dd class="field-even"><p>A graph that contains the given percentage of links from G.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph">networkit.Graph</a></p>
+<dd class="field-odd"><p>networkit.Graph</p>
 </dd>
 </dl>
 </dd></dl>
@@ -762,7 +761,7 @@ be in the returned graph.</p></li>
 the degree of all common neighbors of u and v.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -774,7 +773,7 @@ the degree of all common neighbors of u and v.</p>
 <p>Index to determine whether two nodes are in the same community.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -788,7 +787,7 @@ the degree of all common neighbors of u and v.</p>
 the number of nodes in the neighborhood-union of u and v.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -800,7 +799,7 @@ the number of nodes in the neighborhood-union of u and v.</p>
 <p>Index that simply returns the degree of the first given node.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -812,7 +811,7 @@ the number of nodes in the neighborhood-union of u and v.</p>
 <p>Index that simply returns the degree of the second given node.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em><em>, </em><em>optional</em>) – The graph to work on. Default: None</p>
 </dd>
 </dl>
 </dd></dl>
@@ -846,7 +845,7 @@ the number of nodes in the neighborhood-union of u and v.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nodePairs</strong> (<em>list</em><em>(</em><em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em><em>)</em>) – Node-pairs to get the labels for.</p></li>
-<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – Graph which provides ground truth for the labels.</p></li>
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – Graph which provides ground truth for the labels.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -868,7 +867,7 @@ the number of nodes in the neighborhood-union of u and v.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>trainingSet</strong> (<em>list</em><em>(</em><em>tuple</em><em>(</em><em>int</em><em>, </em><em>int</em><em>)</em><em>)</em>) – Vector of node-pairs to generate features for.</p></li>
-<li><p><strong>trainingGraph</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – Training graph containing all edges from the training set.</p></li>
+<li><p><strong>trainingGraph</strong> (<em>networkit.Graph</em>) – Training graph containing all edges from the training set.</p></li>
 <li><p><strong>classifier</strong> (<em>sklearn classifier</em>) – Scikit-learn classifier to train. See here: <a class="reference external" href="https://scikit-learn.org/stable/auto_examples/classification/plot_classifier_comparison.html">https://scikit-learn.org/stable/auto_examples/classification/plot_classifier_comparison.html</a></p></li>
 <li><p><strong>*linkPredictors</strong> (<em>tuple</em><em>(</em><em>)</em>) – Predictors used for the generation of feature-vectors.</p></li>
 </ul>
@@ -894,8 +893,7 @@ the number of nodes in the neighborhood-union of u and v.</p>
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
-      Last updated on Oct 21, 2020.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.2.0.<br/>
     </p>
     <span style="padding-left: 10px">
       <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>

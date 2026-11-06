@@ -6,15 +6,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta property="article:modified_time" content="2024-03-30T09:06:59+01:00" />
     <title>networkit.plot</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=c83e6b79" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-treeview/bootstrap-treeview.min.css?v=8176a87d" />
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
-    <script src="../_static/documentation_options.js?v=89fba709"></script>
+    <script src="../_static/documentation_options.js?v=c0639414"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -101,13 +100,13 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="stable"
-	        data-docs-version-label="Stable (11.2.1)"
-	        data-docs-stable-label="Stable (11.2.1)"
+	        data-docs-version-label="Stable (11.3)"
+	        data-docs-stable-label="Stable (11.3)"
 	        data-docs-nightly-label="Nightly"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
-	  <option value="stable" selected>Stable (11.2.1)</option>
+	  <option value="stable" selected>Stable (11.3)</option>
 	  <option value="nightly">Nightly</option>
 	</select>
 </div>
@@ -185,7 +184,7 @@
 <dd><p>Plots the local clustering coefficient for all degrees that exist in the given graph.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p>
+<dd class="field-odd"><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -197,7 +196,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
 <li><p><strong>relativeSizes</strong> (<em>bool</em><em>, </em><em>optional</em>) – If relativeSizes is set to True, the component sizes in the pie chart will
 correlate with their number of nodes. Default: True</p></li>
 </ul>
@@ -212,7 +211,7 @@ correlate with their number of nodes. Default: True</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
 <li><p><strong>*args</strong> (<em>list</em><em>(</em><em>)</em>) – Additional <a href="#id1"><span class="problematic" id="id2">*</span></a>args parameter passed to matplotlib.pyplot.bar.</p></li>
 <li><p><strong>**kwargs</strong> (<em>dict</em><em>(</em><em>)</em>) – Additional <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs parameter passed to matplotlib.pyplot.bar</p></li>
 </ul>
@@ -227,7 +226,7 @@ correlate with their number of nodes. Default: True</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
 <li><p><strong>*args</strong> (<em>list</em><em>(</em><em>)</em>) – Additional <a href="#id5"><span class="problematic" id="id6">*</span></a>args parameter passed to matplotlib.pyplot.bar.</p></li>
 <li><p><strong>**kwargs</strong> (<em>dict</em><em>(</em><em>)</em>) – Additional <a href="#id7"><span class="problematic" id="id8">**</span></a>kwargs parameter passed to matplotlib.pyplot.bar</p></li>
 </ul>
@@ -242,7 +241,7 @@ correlate with their number of nodes. Default: True</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>G</strong> (<a class="reference internal" href="networkit.html#networkit.Graph" title="networkit.Graph"><em>networkit.Graph</em></a>) – The input graph.</p></li>
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – The input graph.</p></li>
 <li><p><strong>*args</strong> (<em>list</em><em>(</em><em>)</em>) – Additional <a href="#id9"><span class="problematic" id="id10">*</span></a>args parameter passed to matplotlib.pyplot.bar.</p></li>
 <li><p><strong>**kwargs</strong> (<em>dict</em><em>(</em><em>)</em>) – Additional <a href="#id11"><span class="problematic" id="id12">**</span></a>kwargs parameter passed to matplotlib.pyplot.bar</p></li>
 </ul>
@@ -282,8 +281,7 @@ correlate with their number of nodes. Default: True</p></li>
     </p>
     <p style="float:left; max-width: 70%;">
         &copy; Copyright 2018 Humboldt-Universität zu Berlin - Department of Computer Science - Modeling and Analysis of Complex Systems and contributors.<br/>
-      Last updated on Mar 30, 2024.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.1.0.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 9.2.0.<br/>
     </p>
     <span style="padding-left: 10px">
       <a href="https://networkit.github.io/contact.html">Contact, Imprint and Privacy</a>
