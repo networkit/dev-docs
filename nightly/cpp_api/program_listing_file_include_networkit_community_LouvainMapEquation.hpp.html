@@ -144,6 +144,8 @@
 <span class="cp">#ifndef NETWORKIT_COMMUNITY_LOUVAIN_MAP_EQUATION_HPP_</span>
 <span class="cp">#define NETWORKIT_COMMUNITY_LOUVAIN_MAP_EQUATION_HPP_</span>
 
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;type_traits&gt;</span>
+
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/auxiliary/SparseVector.hpp&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/auxiliary/SpinLock.hpp&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/community/CommunityDetectionAlgorithm.hpp&gt;</span>
@@ -182,7 +184,7 @@
 <span class="w">              </span><span class="n">cutUpdateToOriginCluster</span><span class="p">(</span><span class="n">cuptoc</span><span class="p">),</span><span class="w"> </span><span class="n">cutUpdateToTargetCluster</span><span class="p">(</span><span class="n">cupttc</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
 <span class="w">    </span><span class="p">};</span>
 
-<span class="w">    </span><span class="k">static_assert</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">is_trivially_destructible</span><span class="o">&lt;</span><span class="n">Move</span><span class="o">&gt;::</span><span class="n">value</span><span class="p">,</span>
+<span class="w">    </span><span class="k">static_assert</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">is_trivially_destructible_v</span><span class="o">&lt;</span><span class="n">Move</span><span class="o">&gt;</span><span class="p">,</span>
 <span class="w">                  </span><span class="s">"LouvainMapEquation::Move struct is not trivially destructible"</span><span class="p">);</span>
 
 <span class="w">    </span><span class="n">ParallelizationType</span><span class="w"> </span><span class="n">parallelizationType</span><span class="p">;</span>
