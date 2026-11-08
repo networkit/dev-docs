@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-11-07)"
+	        data-docs-version-label="Nightly (2026-11-08)"
 	        data-docs-stable-label="Stable (11.3)"
-	        data-docs-nightly-label="Nightly (2026-11-07)"
+	        data-docs-nightly-label="Nightly (2026-11-08)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.3)</option>
-	  <option value="nightly" selected>Nightly (2026-11-07)</option>
+	  <option value="nightly" selected>Nightly (2026-11-08)</option>
 	</select>
 </div>
 
@@ -165,15 +165,13 @@
 <span class="w">        </span><span class="k">typedef</span><span class="w"> </span><span class="n">AlignedAllocator</span><span class="o">&lt;</span><span class="n">U</span><span class="p">,</span><span class="w"> </span><span class="n">Alignment</span><span class="o">&gt;</span><span class="w"> </span><span class="n">other</span><span class="p">;</span>
 <span class="w">    </span><span class="p">};</span>
 
-<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">!=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">AlignedAllocator</span><span class="w"> </span><span class="o">&amp;</span><span class="n">other</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="o">*</span><span class="k">this</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">other</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">construct</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">construct</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">&amp;</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">pv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">void</span><span class="w"> </span><span class="o">*&gt;</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
 
 <span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="p">(</span><span class="n">pv</span><span class="p">)</span><span class="w"> </span><span class="n">T</span><span class="p">(</span><span class="n">t</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">destroy</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;~</span><span class="n">T</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">destroy</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">p</span><span class="o">-&gt;~</span><span class="n">T</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
 
 <span class="w">    </span><span class="c1">// Returns true if and only if storage allocated from *this</span>
 <span class="w">    </span><span class="c1">// can be deallocated from other, and vice versa.</span>

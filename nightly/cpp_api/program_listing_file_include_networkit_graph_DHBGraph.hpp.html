@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-11-07)"
+	        data-docs-version-label="Nightly (2026-11-08)"
 	        data-docs-stable-label="Stable (11.3)"
-	        data-docs-nightly-label="Nightly (2026-11-07)"
+	        data-docs-nightly-label="Nightly (2026-11-08)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.3)</option>
-	  <option value="nightly" selected>Nightly (2026-11-07)</option>
+	  <option value="nightly" selected>Nightly (2026-11-08)</option>
 	</select>
 </div>
 
@@ -500,8 +500,6 @@
 
 <span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="n">NeighborIterator</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">it</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 
-<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">NeighborIterator</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">it</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">it</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
-
 <span class="w">        </span><span class="n">node</span><span class="w"> </span><span class="k">operator</span><span class="o">*</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">vertex</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
 <span class="w">    </span><span class="p">};</span>
 
@@ -557,8 +555,6 @@
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="n">NeighborWeightIterator</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">it</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-
-<span class="w">        </span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">!=</span><span class="p">(</span><span class="n">NeighborWeightIterator</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rhs</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">it</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">rhs</span><span class="p">.</span><span class="n">it</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
 
 <span class="w">        </span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">node</span><span class="p">,</span><span class="w"> </span><span class="n">edgeweight</span><span class="o">&gt;</span><span class="w"> </span><span class="k">operator</span><span class="o">*</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="n">it</span><span class="o">-&gt;</span><span class="n">vertex</span><span class="p">(),</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">().</span><span class="n">weight</span><span class="p">);</span>
