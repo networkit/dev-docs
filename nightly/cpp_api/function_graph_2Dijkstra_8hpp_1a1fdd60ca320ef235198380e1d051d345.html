@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Template Function NetworKit::Traversal::DijkstraFrom(const Graph&amp;, InputIt, InputIt, Handle)</title>
+    <title>Template Function NetworKit::Traversal::DijkstraFrom(const GraphT&amp;, InputIt, InputIt, Handle)</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -26,7 +26,7 @@
     <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Template Function NetworKit::Traversal::DijkstraFrom(const Graph&amp;, node, Lambda)" href="function_graph_2Dijkstra_8hpp_1a4df1047b1f4dc7ae050a0bbd4fb4ce1d.html" />
+    <link rel="next" title="Template Function NetworKit::Traversal::DijkstraFrom(const GraphT&amp;, typename GraphT::NodeT, Lambda)" href="function_graph_2Dijkstra_8hpp_1aa66851ff950bae428a17ddbb2d4ced74.html" />
     <link rel="prev" title="Template Function NetworKit::Traversal::DFSfrom" href="function_DFS_8hpp_1a0ae60efe4e7a2649a6d83aa421d0d735.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-11-11)"
+	        data-docs-version-label="Nightly (2026-11-14)"
 	        data-docs-stable-label="Stable (11.3)"
-	        data-docs-nightly-label="Nightly (2026-11-11)"
+	        data-docs-nightly-label="Nightly (2026-11-14)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.3)</option>
-	  <option value="nightly" selected>Nightly (2026-11-11)</option>
+	  <option value="nightly" selected>Nightly (2026-11-14)</option>
 	</select>
 </div>
 
@@ -148,25 +148,28 @@
       </div>
     <div class="col-md-9 content">
       
-  <section id="template-function-networkit-traversal-dijkstrafrom-const-graph-inputit-inputit-handle">
-<span id="exhale-function-graph-2dijkstra-8hpp-1aaf02c8879539b21da55110a76cfc8de3"></span><h1>Template Function NetworKit::Traversal::DijkstraFrom(const Graph&amp;, InputIt, InputIt, Handle)<a class="headerlink" href="#template-function-networkit-traversal-dijkstrafrom-const-graph-inputit-inputit-handle" title="Link to this heading">¶</a></h1>
+  <section id="template-function-networkit-traversal-dijkstrafrom-const-grapht-inputit-inputit-handle">
+<span id="exhale-function-graph-2dijkstra-8hpp-1a1fdd60ca320ef235198380e1d051d345"></span><h1>Template Function NetworKit::Traversal::DijkstraFrom(const GraphT&amp;, InputIt, InputIt, Handle)<a class="headerlink" href="#template-function-networkit-traversal-dijkstrafrom-const-grapht-inputit-inputit-handle" title="Link to this heading">¶</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_include_networkit_graph_Dijkstra.hpp.html#file-include-networkit-graph-dijkstra-hpp"><span class="std std-ref">File Dijkstra.hpp</span></a></p></li>
 </ul>
 <section id="function-documentation">
 <h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Link to this heading">¶</a></h2>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4I00EN9NetworKit9Traversal12DijkstraFromEvRK5Graph7InputIt7InputIt6Handle">
-<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">InputIt</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Handle</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="graph_2Dijkstra_8hpp_1aaf02c8879539b21da55110a76cfc8de3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Traversal</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">DijkstraFrom</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <a class="reference internal" href="#_CPPv4I00EN9NetworKit9Traversal12DijkstraFromEvRK5Graph7InputIt7InputIt6Handle" title="NetworKit::Traversal::DijkstraFrom::InputIt"><span class="n"><span class="pre">InputIt</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">first</span></span>, <a class="reference internal" href="#_CPPv4I00EN9NetworKit9Traversal12DijkstraFromEvRK5Graph7InputIt7InputIt6Handle" title="NetworKit::Traversal::DijkstraFrom::InputIt"><span class="n"><span class="pre">InputIt</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">last</span></span>, <a class="reference internal" href="#_CPPv4I00EN9NetworKit9Traversal12DijkstraFromEvRK5Graph7InputIt7InputIt6Handle" title="NetworKit::Traversal::DijkstraFrom::Handle"><span class="n"><span class="pre">Handle</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I00EN9NetworKit9Traversal12DijkstraFromEvRK5Graph7InputIt7InputIt6Handle" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Iterate over nodes with <a class="reference internal" href="classNetworKit_1_1Dijkstra.html#classNetworKit_1_1Dijkstra"><span class="std std-ref">Dijkstra</span></a> starting from the nodes within the given range.</p>
+<dt class="sig sig-object cpp" id="_CPPv4I000EN9NetworKit9Traversal12DijkstraFromEvRK6GraphT7InputIt7InputIt6Handle">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">InputIt</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Handle</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GraphT</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="graph_2Dijkstra_8hpp_1a1fdd60ca320ef235198380e1d051d345"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Traversal</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">DijkstraFrom</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I000EN9NetworKit9Traversal12DijkstraFromEvRK6GraphT7InputIt7InputIt6Handle" title="NetworKit::Traversal::DijkstraFrom::GraphT"><span class="n"><span class="pre">GraphT</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">G</span></span>, <a class="reference internal" href="#_CPPv4I000EN9NetworKit9Traversal12DijkstraFromEvRK6GraphT7InputIt7InputIt6Handle" title="NetworKit::Traversal::DijkstraFrom::InputIt"><span class="n"><span class="pre">InputIt</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">first</span></span>, <a class="reference internal" href="#_CPPv4I000EN9NetworKit9Traversal12DijkstraFromEvRK6GraphT7InputIt7InputIt6Handle" title="NetworKit::Traversal::DijkstraFrom::InputIt"><span class="n"><span class="pre">InputIt</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">last</span></span>, <a class="reference internal" href="#_CPPv4I000EN9NetworKit9Traversal12DijkstraFromEvRK6GraphT7InputIt7InputIt6Handle" title="NetworKit::Traversal::DijkstraFrom::Handle"><span class="n"><span class="pre">Handle</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">handle</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I000EN9NetworKit9Traversal12DijkstraFromEvRK6GraphT7InputIt7InputIt6Handle" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Iterate over nodes with <a class="reference internal" href="classNetworKit_1_1Dijkstra.html#classNetworKit_1_1Dijkstra"><span class="std std-ref">Dijkstra</span></a> starting from the nodes within the given range. Duplicate source nodes are ignored.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>G</strong> – The input graph. </p></li>
-<li><p><strong>first</strong> – The first element of the range. </p></li>
+<li><p><strong>first</strong> – The beginning of the range of source nodes. </p></li>
 <li><p><strong>last</strong> – The end of the range. </p></li>
-<li><p><strong>handle</strong> – Takes a node and its distance from the nodes in the range as input parameters. </p></li>
+<li><p><strong>handle</strong> – Takes a node and optionally its distance from the nodes in the range. </p></li>
 </ul>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – If a source node is not in the graph. </p>
 </dd>
 </dl>
 </dd></dl>

@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-11-11)"
+	        data-docs-version-label="Nightly (2026-11-14)"
 	        data-docs-stable-label="Stable (11.3)"
-	        data-docs-nightly-label="Nightly (2026-11-11)"
+	        data-docs-nightly-label="Nightly (2026-11-14)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.3)</option>
-	  <option value="nightly" selected>Nightly (2026-11-11)</option>
+	  <option value="nightly" selected>Nightly (2026-11-14)</option>
 	</select>
 </div>
 
@@ -153,8 +153,12 @@
 <section id="includes">
 <h2>Includes<a class="headerlink" href="#includes" title="Link to this heading">¶</a></h2>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code> (<a class="reference internal" href="file_include_networkit_algebraic_algorithms_AlgebraicBellmanFord.hpp.html#file-include-networkit-algebraic-algorithms-algebraicbellmanford-hpp"><span class="std std-ref">File AlgebraicBellmanFord.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">array</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">limits</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">networkit/graph/Graph.hpp</span></code> (<a class="reference internal" href="file_include_networkit_graph_Graph.hpp.html#file-include-networkit-graph-graph-hpp"><span class="std std-ref">File Graph.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkit/Globals.hpp</span></code> (<a class="reference internal" href="file_include_networkit_Globals.hpp.html#file-include-networkit-globals-hpp"><span class="std std-ref">File Globals.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkit/graph/TraversalImpl.hpp</span></code> (<a class="reference internal" href="file_include_networkit_graph_TraversalImpl.hpp.html#file-include-networkit-graph-traversalimpl-hpp"><span class="std std-ref">File TraversalImpl.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stdexcept</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tlx/container/d_ary_addressable_int_heap.hpp</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">vector</span></code> (<a class="reference internal" href="file_include_networkit_centrality_EigenvectorCentrality.hpp.html#file-include-networkit-centrality-eigenvectorcentrality-hpp"><span class="std std-ref">File EigenvectorCentrality.hpp</span></a>)</p></li>
 </ul>
@@ -170,14 +174,15 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="namespace_NetworKit.html#namespace-networkit"><span class="std std-ref">Namespace NetworKit</span></a></p></li>
 <li><p><a class="reference internal" href="namespace_NetworKit__Traversal.html#namespace-networkit-traversal"><span class="std std-ref">Namespace NetworKit::Traversal</span></a></p></li>
+<li><p><a class="reference internal" href="namespace_NetworKit__Traversal__Impl.html#namespace-networkit-traversal-impl"><span class="std std-ref">Namespace NetworKit::Traversal::Impl</span></a></p></li>
 </ul>
 </section>
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="function_graph_2Dijkstra_8hpp_1a62e78800512973e091f91c645ec24816.html#exhale-function-graph-2dijkstra-8hpp-1a62e78800512973e091f91c645ec24816"><span class="std std-ref">Template Function NetworKit::Traversal::callDijkstraHandle</span></a></p></li>
-<li><p><a class="reference internal" href="function_graph_2Dijkstra_8hpp_1aaf02c8879539b21da55110a76cfc8de3.html#exhale-function-graph-2dijkstra-8hpp-1aaf02c8879539b21da55110a76cfc8de3"><span class="std std-ref">Template Function NetworKit::Traversal::DijkstraFrom(const Graph&amp;, InputIt, InputIt, Handle)</span></a></p></li>
-<li><p><a class="reference internal" href="function_graph_2Dijkstra_8hpp_1a4df1047b1f4dc7ae050a0bbd4fb4ce1d.html#exhale-function-graph-2dijkstra-8hpp-1a4df1047b1f4dc7ae050a0bbd4fb4ce1d"><span class="std std-ref">Template Function NetworKit::Traversal::DijkstraFrom(const Graph&amp;, node, Lambda)</span></a></p></li>
+<li><p><a class="reference internal" href="function_graph_2Dijkstra_8hpp_1a1fdd60ca320ef235198380e1d051d345.html#exhale-function-graph-2dijkstra-8hpp-1a1fdd60ca320ef235198380e1d051d345"><span class="std std-ref">Template Function NetworKit::Traversal::DijkstraFrom(const GraphT&amp;, InputIt, InputIt, Handle)</span></a></p></li>
+<li><p><a class="reference internal" href="function_graph_2Dijkstra_8hpp_1aa66851ff950bae428a17ddbb2d4ced74.html#exhale-function-graph-2dijkstra-8hpp-1aa66851ff950bae428a17ddbb2d4ced74"><span class="std std-ref">Template Function NetworKit::Traversal::DijkstraFrom(const GraphT&amp;, typename GraphT::NodeT, Lambda)</span></a></p></li>
+<li><p><a class="reference internal" href="function_graph_2Dijkstra_8hpp_1a60e8c97558d1cbabf5772216b739b885.html#exhale-function-graph-2dijkstra-8hpp-1a60e8c97558d1cbabf5772216b739b885"><span class="std std-ref">Template Function NetworKit::Traversal::Impl::callDijkstraHandle</span></a></p></li>
 </ul>
 </section>
 </section>
