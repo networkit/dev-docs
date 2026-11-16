@@ -97,14 +97,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-11-14)"
+	        data-docs-version-label="Nightly (2026-11-16)"
 	        data-docs-stable-label="Stable (11.3)"
-	        data-docs-nightly-label="Nightly (2026-11-14)"
+	        data-docs-nightly-label="Nightly (2026-11-16)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.3)</option>
-	  <option value="nightly" selected>Nightly (2026-11-14)</option>
+	  <option value="nightly" selected>Nightly (2026-11-16)</option>
 	</select>
 </div>
 
@@ -1562,10 +1562,10 @@
 </li>
       <li><a href="python_api/community.html#networkit.community.LocalCommunityEvaluation.getMaximumValue">getMaximumValue() (networkit.community.LocalCommunityEvaluation method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="python_api/engineering.html#networkit.engineering.getMaxNumberOfThreads">getMaxNumberOfThreads() (in module networkit.engineering)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="python_api/profiling.html#networkit.profiling.profiling.Config.getMeasure">getMeasure() (networkit.profiling.profiling.Config method)</a>
 </li>
       <li><a href="python_api/profiling.html#networkit.profiling.profiling.Config.getMeasureCorrelation">getMeasureCorrelation() (networkit.profiling.profiling.Config method)</a>
@@ -1745,7 +1745,11 @@
       <ul>
         <li><a href="python_api/graph.html#networkit.graph.PrimMSF.getTotalWeight">(networkit.graph.PrimMSF method)</a>
 </li>
+        <li><a href="python_api/graph.html#networkit.graph.SteinerTree.getTotalWeight">(networkit.graph.SteinerTree method)</a>
+</li>
       </ul></li>
+      <li><a href="python_api/graph.html#networkit.graph.SteinerTree.getTree">getTree() (networkit.graph.SteinerTree method)</a>
+</li>
       <li><a href="python_api/graph.html#networkit.graph.UnionMaximumSpanningForest.getUMSF">getUMSF() (networkit.graph.UnionMaximumSpanningForest method)</a>
 </li>
       <li><a href="python_api/community.html#networkit.community.LocalCommunityEvaluation.getUnweightedAverage">getUnweightedAverage() (networkit.community.LocalCommunityEvaluation method)</a>
@@ -1888,6 +1892,8 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="python_api/graph.html#networkit.graph.SteinerTree.hasTree">hasTree() (networkit.graph.SteinerTree method)</a>
+</li>
       <li><a href="python_api/generators.html#networkit.generators.HavelHakimiGenerator">HavelHakimiGenerator (class in networkit.generators)</a>
 </li>
       <li><a href="python_api/plot.html#networkit.plot.hopPlot">hopPlot() (in module networkit.plot)</a>
@@ -6029,8 +6035,6 @@
 </li>
       <li><a href="cpp_api/classNetworKit_1_1GraphEventProxy.html#_CPPv4N9NetworKit15GraphEventProxy10removeEdgeE4node4node">NetworKit::GraphEventProxy::removeEdge (C++ function)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="cpp_api/classNetworKit_1_1GraphEventProxy.html#_CPPv4N9NetworKit15GraphEventProxy10removeNodeE4node">NetworKit::GraphEventProxy::removeNode (C++ function)</a>
 </li>
       <li><a href="cpp_api/classNetworKit_1_1GraphEventProxy.html#_CPPv4N9NetworKit15GraphEventProxy11restoreNodeE4node">NetworKit::GraphEventProxy::restoreNode (C++ function)</a>
@@ -6049,6 +6053,8 @@
 </li>
       <li><a href="cpp_api/classNetworKit_1_1GraphLayoutAlgorithm.html#_CPPv4N9NetworKit20GraphLayoutAlgorithm1GE">NetworKit::GraphLayoutAlgorithm::G (C++ member)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="cpp_api/classNetworKit_1_1GraphLayoutAlgorithm.html#_CPPv4NK9NetworKit20GraphLayoutAlgorithm14getCoordinatesEv">NetworKit::GraphLayoutAlgorithm::getCoordinates (C++ function)</a>
 </li>
       <li><a href="cpp_api/classNetworKit_1_1GraphLayoutAlgorithm.html#_CPPv4N9NetworKit20GraphLayoutAlgorithm20GraphLayoutAlgorithmERK5Graph5count">NetworKit::GraphLayoutAlgorithm::GraphLayoutAlgorithm (C++ function)</a>
@@ -9083,6 +9089,42 @@
 </li>
       <li><a href="cpp_api/classNetworKit_1_1Status.html#_CPPv4N9NetworKit6Status3topE">NetworKit::Status::top (C++ member)</a>
 </li>
+      <li><a href="cpp_api/classNetworKit_1_1SteinerTree.html#_CPPv4I00EN9NetworKit11SteinerTreeE">NetworKit::SteinerTree (C++ class)</a>
+</li>
+      <li><a href="cpp_api/structNetworKit_1_1SteinerTree_1_1ClosestTerminals.html#_CPPv4N9NetworKit11SteinerTree16ClosestTerminalsE">NetworKit::SteinerTree::ClosestTerminals (C++ struct)</a>
+</li>
+      <li><a href="cpp_api/structNetworKit_1_1SteinerTree_1_1ClosestTerminals.html#_CPPv4N9NetworKit11SteinerTree16ClosestTerminals8distanceE">NetworKit::SteinerTree::ClosestTerminals::distance (C++ member)</a>
+</li>
+      <li><a href="cpp_api/structNetworKit_1_1SteinerTree_1_1ClosestTerminals.html#_CPPv4N9NetworKit11SteinerTree16ClosestTerminals6parentE">NetworKit::SteinerTree::ClosestTerminals::parent (C++ member)</a>
+</li>
+      <li><a href="cpp_api/structNetworKit_1_1SteinerTree_1_1ClosestTerminals.html#_CPPv4N9NetworKit11SteinerTree16ClosestTerminals8terminalE">NetworKit::SteinerTree::ClosestTerminals::terminal (C++ member)</a>
+</li>
+      <li><a href="cpp_api/structNetworKit_1_1SteinerTree_1_1Edge.html#_CPPv4N9NetworKit11SteinerTree4EdgeE">NetworKit::SteinerTree::Edge (C++ struct)</a>
+</li>
+      <li><a href="cpp_api/structNetworKit_1_1SteinerTree_1_1Edge.html#_CPPv4NK9NetworKit11SteinerTree4EdgessERK4Edge">NetworKit::SteinerTree::Edge::operator&lt;=&gt; (C++ function)</a>
+</li>
+      <li><a href="cpp_api/structNetworKit_1_1SteinerTree_1_1Edge.html#_CPPv4N9NetworKit11SteinerTree4Edge1uE">NetworKit::SteinerTree::Edge::u (C++ member)</a>
+</li>
+      <li><a href="cpp_api/structNetworKit_1_1SteinerTree_1_1Edge.html#_CPPv4N9NetworKit11SteinerTree4Edge1vE">NetworKit::SteinerTree::Edge::v (C++ member)</a>
+</li>
+      <li><a href="cpp_api/structNetworKit_1_1SteinerTree_1_1Edge.html#_CPPv4N9NetworKit11SteinerTree4Edge6weightE">NetworKit::SteinerTree::Edge::weight (C++ member)</a>
+</li>
+      <li><a href="cpp_api/classNetworKit_1_1SteinerTree.html#_CPPv4N9NetworKit11SteinerTree11EdgeWeightTE">NetworKit::SteinerTree::EdgeWeightT (C++ type)</a>
+</li>
+      <li><a href="cpp_api/classNetworKit_1_1SteinerTree.html#_CPPv4NK9NetworKit11SteinerTree14getTotalWeightEv">NetworKit::SteinerTree::getTotalWeight (C++ function)</a>
+</li>
+      <li><a href="cpp_api/classNetworKit_1_1SteinerTree.html#_CPPv4NK9NetworKit11SteinerTree7getTreeEv">NetworKit::SteinerTree::getTree (C++ function)</a>
+</li>
+      <li><a href="cpp_api/classNetworKit_1_1SteinerTree.html#_CPPv4NK9NetworKit11SteinerTree7hasTreeEv">NetworKit::SteinerTree::hasTree (C++ function)</a>
+</li>
+      <li><a href="cpp_api/classNetworKit_1_1SteinerTree.html#_CPPv4N9NetworKit11SteinerTree5NodeTE">NetworKit::SteinerTree::NodeT (C++ type)</a>
+</li>
+      <li><a href="cpp_api/classNetworKit_1_1SteinerTree.html#_CPPv4N9NetworKit11SteinerTree3runEv">NetworKit::SteinerTree::run (C++ function)</a>
+</li>
+      <li><a href="cpp_api/classNetworKit_1_1SteinerTree.html#_CPPv4N9NetworKit11SteinerTree11SteinerTreeERK6GraphTNSt4spanIK5NodeTEE">NetworKit::SteinerTree::SteinerTree (C++ function)</a>
+</li>
+      <li><a href="cpp_api/classNetworKit_1_1SteinerTree.html#_CPPv4N9NetworKit11SteinerTree10WeightSumTE">NetworKit::SteinerTree::WeightSumT (C++ type)</a>
+</li>
       <li><a href="cpp_api/classNetworKit_1_1StochasticBlockmodel.html#_CPPv4N9NetworKit20StochasticBlockmodelE">NetworKit::StochasticBlockmodel (C++ class)</a>
 </li>
       <li><a href="cpp_api/classNetworKit_1_1StochasticBlockmodel.html#_CPPv4N9NetworKit20StochasticBlockmodel8generateEv">NetworKit::StochasticBlockmodel::generate (C++ function)</a>
@@ -10031,14 +10073,14 @@
 </li>
       <li><a href="python_api/generators.html#networkit.generators.LFRGenerator.setPartition">setPartition() (networkit.generators.LFRGenerator method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="python_api/generators.html#networkit.generators.BTERReplicator.setPaths">setPaths() (networkit.generators.BTERReplicator class method)</a>
 
       <ul>
         <li><a href="python_api/generators.html#networkit.generators.RmatGenerator.setPaths">(networkit.generators.RmatGenerator class method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="python_api/generators.html#networkit.generators.LFRGenerator.setPathToReferenceImplementationDir">setPathToReferenceImplementationDir() (networkit.generators.LFRGenerator class method)</a>
 </li>
       <li><a href="python_api/engineering.html#networkit.engineering.setPrintLocation">setPrintLocation() (in module networkit.engineering)</a>
@@ -10160,6 +10202,8 @@
       <li><a href="cpp_api/structstd_1_1hash_3_01NetworKit_1_1EdgeT_3_01NodeT_01_4_01_4.html#_CPPv4NKSt4hashIN9NetworKit5EdgeTI5NodeTEEEclERKN9NetworKit5EdgeTI5NodeTEE">std::hash&lt;NetworKit::EdgeT&lt;NodeT&gt;&gt;::operator() (C++ function)</a>
 </li>
       <li><a href="python_api/helpers.html#networkit.helpers.stdstring">stdstring() (in module networkit.helpers)</a>
+</li>
+      <li><a href="python_api/graph.html#networkit.graph.SteinerTree">SteinerTree (class in networkit.graph)</a>
 </li>
       <li><a href="python_api/components.html#networkit.components.StronglyConnectedComponents">StronglyConnectedComponents (class in networkit.components)</a>
 </li>

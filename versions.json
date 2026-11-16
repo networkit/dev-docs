@@ -2,9 +2,9 @@
   "base_path": "/dev-docs",
   "channels": {
     "nightly": {
-      "date": "2026-11-14",
-      "label": "Nightly (2026-11-14)",
-      "updated_at": "2026-11-14T13:58:29+00:00",
+      "date": "2026-11-16",
+      "label": "Nightly (2026-11-16)",
+      "updated_at": "2026-11-16T16:39:24+00:00",
       "url": "/dev-docs/nightly/"
     },
     "stable": {
@@ -14,5 +14,5 @@
     }
   },
   "default_channel": "stable",
-  "generated_at": "2026-11-14T13:58:29+00:00"
+  "generated_at": "2026-11-16T16:39:24+00:00"
 }

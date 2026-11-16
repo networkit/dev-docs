@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-11-14)"
+	        data-docs-version-label="Nightly (2026-11-16)"
 	        data-docs-stable-label="Stable (11.3)"
-	        data-docs-nightly-label="Nightly (2026-11-14)"
+	        data-docs-nightly-label="Nightly (2026-11-16)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.3)</option>
-	  <option value="nightly" selected>Nightly (2026-11-14)</option>
+	  <option value="nightly" selected>Nightly (2026-11-16)</option>
 	</select>
 </div>
 
@@ -1305,6 +1305,73 @@ This attribute is only calculated and can thus only be request if the supplied g
 <dt class="sig sig-object py" id="networkit.graph.SpanningForest.run">
 <span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.SpanningForest.run" title="Link to this definition">¶</a></dt>
 <dd><p>Executes the algorithm.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="networkit.graph.SteinerTree">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">networkit.graph.</span></span><span class="sig-name descname"><span class="pre">SteinerTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">terminals</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.SteinerTree" title="Link to this definition">¶</a></dt>
+<dd><p>Computes a light tree that connects a given set of terminal nodes, possibly through other
+nodes. Finding the lightest one is NP-hard. This is the approximation algorithm from “A faster
+approximation algorithm for the Steiner problem in graphs” by K. Mehlhorn (1988): the weight of
+the result is at most 2(1 - 1/l) times the optimal one, where l is the number of leaves of an
+optimal tree, which is at most the number of terminals. The resulting tree is then replaced by a
+minimum spanning tree of the subgraph induced by its nodes, and leaves that are not terminals are
+removed. This keeps the guarantee and often makes the tree lighter. It runs in O(m log n) time.</p>
+<p>Unweighted graphs are treated as having unit weights.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>G</strong> (<em>networkit.Graph</em>) – An undirected graph with non-negative edge weights.</p></li>
+<li><p><strong>terminals</strong> (<em>list</em><em>(</em><em>int</em><em>)</em>) – The nodes to connect. Duplicates are ignored.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.SteinerTree.getTotalWeight">
+<span class="sig-name descname"><span class="pre">getTotalWeight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.SteinerTree.getTotalWeight" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the total weight of the tree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The total weight of the edges of the tree.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.SteinerTree.getTree">
+<span class="sig-name descname"><span class="pre">getTree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.SteinerTree.getTree" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the tree, a weighted graph with the same node ids as the input graph. Nodes deleted
+from the input graph are deleted from the tree too, and nodes outside the tree have no edges.
+Its edges have unit weight if the input graph is unweighted. It has no edges if the terminals
+are not connected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The tree connecting the terminals.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>networkit.Graph</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networkit.graph.SteinerTree.hasTree">
+<span class="sig-name descname"><span class="pre">hasTree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networkit.graph.SteinerTree.hasTree" title="Link to this definition">¶</a></dt>
+<dd><p>Returns whether all terminals are in the same connected component, which is always the case
+for fewer than two terminals.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if a tree connecting all terminals exists.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
