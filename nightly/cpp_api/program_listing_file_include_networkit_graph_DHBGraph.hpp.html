@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-11-16)"
+	        data-docs-version-label="Nightly (2026-11-22)"
 	        data-docs-stable-label="Stable (11.3)"
-	        data-docs-nightly-label="Nightly (2026-11-16)"
+	        data-docs-nightly-label="Nightly (2026-11-22)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.3)</option>
-	  <option value="nightly" selected>Nightly (2026-11-16)</option>
+	  <option value="nightly" selected>Nightly (2026-11-22)</option>
 	</select>
 </div>
 
@@ -136,9 +136,7 @@
 <span class="cp">#define NETWORKIT_GRAPH_DHB_GRAPH_HPP_</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/Globals.hpp&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/auxiliary/ArrayTools.hpp&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/auxiliary/FunctionTraits.hpp&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/auxiliary/Log.hpp&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/auxiliary/Random.hpp&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/graph/Attributes.hpp&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/graph/EdgeIterators.hpp&gt;</span>
@@ -147,22 +145,8 @@
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;omp.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;dhb/dynamic_hashed_blocks.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;tlx/define/deprecated.hpp&gt;</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;fstream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;functional&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;numeric&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;queue&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sstream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stack&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdexcept&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;thread&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;typeindex&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unordered_map&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unordered_set&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;utility&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
 
