@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-11-22)"
+	        data-docs-version-label="Nightly (2026-11-23)"
 	        data-docs-stable-label="Stable (11.3)"
-	        data-docs-nightly-label="Nightly (2026-11-22)"
+	        data-docs-nightly-label="Nightly (2026-11-23)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.3)</option>
-	  <option value="nightly" selected>Nightly (2026-11-22)</option>
+	  <option value="nightly" selected>Nightly (2026-11-23)</option>
 	</select>
 </div>
 
@@ -144,6 +144,7 @@
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdint&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;limits&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;numbers&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;utility&gt;</span>
 
 <span class="k">namespace</span><span class="w"> </span><span class="nn">NetworKit</span><span class="w"> </span><span class="p">{</span>
@@ -167,8 +168,7 @@
 <span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="n">none</span><span class="w"> </span><span class="o">=</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">index</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">();</span>
 
-<span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span>
-<span class="w">    </span><span class="mf">3.141592653589793238462643383279502884197169399375105820974944592307816406286</span><span class="p">;</span>
+<span class="p">[[</span><span class="na">deprecated</span><span class="p">(</span><span class="s">"Use std::numbers::pi instead."</span><span class="p">)]]</span><span class="w"> </span><span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numbers</span><span class="o">::</span><span class="n">pi</span><span class="p">;</span>
 
 <span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">NodeT</span><span class="o">&gt;</span>
 <span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="n">NodeT</span><span class="w"> </span><span class="n">NullNodeId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">numeric_limits</span><span class="o">&lt;</span><span class="n">NodeT</span><span class="o">&gt;::</span><span class="n">max</span><span class="p">();</span>
