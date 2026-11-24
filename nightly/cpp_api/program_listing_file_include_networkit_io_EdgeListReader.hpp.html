@@ -98,14 +98,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-11-23)"
+	        data-docs-version-label="Nightly (2026-11-24)"
 	        data-docs-stable-label="Stable (11.3)"
-	        data-docs-nightly-label="Nightly (2026-11-23)"
+	        data-docs-nightly-label="Nightly (2026-11-24)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.3)</option>
-	  <option value="nightly" selected>Nightly (2026-11-23)</option>
+	  <option value="nightly" selected>Nightly (2026-11-24)</option>
 	</select>
 </div>
 
@@ -149,28 +149,50 @@
 
 <span class="k">namespace</span><span class="w"> </span><span class="nn">NetworKit</span><span class="w"> </span><span class="p">{</span>
 
-<span class="k">class</span><span class="w"> </span><span class="nc">EdgeListReader</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">GraphReader</span><span class="w"> </span><span class="p">{</span>
+<span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">GraphT</span><span class="o">&gt;</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">GenericEdgeListReader</span><span class="w"> </span><span class="k">final</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">GraphReaderBase</span><span class="o">&lt;</span><span class="n">GraphT</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">using</span><span class="w"> </span><span class="n">NodeT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">typename</span><span class="w"> </span><span class="nc">GraphT</span><span class="o">::</span><span class="n">NodeT</span><span class="p">;</span>
 
 <span class="k">public</span><span class="o">:</span>
-<span class="w">    </span><span class="n">EdgeListReader</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span><span class="w"> </span><span class="c1">// nullary constructor for Python shell</span>
+<span class="w">    </span><span class="n">GenericEdgeListReader</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">default</span><span class="p">;</span><span class="w"> </span><span class="c1">// nullary constructor for Python shell</span>
 
-<span class="w">    </span><span class="n">EdgeListReader</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">separator</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="n">firstNode</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">commentPrefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"#"</span><span class="p">,</span>
-<span class="w">                   </span><span class="kt">bool</span><span class="w"> </span><span class="n">continuous</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">directed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
+<span class="w">    </span><span class="n">GenericEdgeListReader</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">separator</span><span class="p">,</span><span class="w"> </span><span class="n">NodeT</span><span class="w"> </span><span class="n">firstNode</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">commentPrefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"#"</span><span class="p">,</span>
+<span class="w">                          </span><span class="kt">bool</span><span class="w"> </span><span class="n">continuous</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">directed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">);</span>
 
-<span class="w">    </span><span class="n">Graph</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
+<span class="w">    </span><span class="n">GraphT</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string_view</span><span class="w"> </span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span>
 
-<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">getNodeMap</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">NodeT</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">getNodeMap</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
 
 <span class="k">private</span><span class="o">:</span>
+<span class="w">    </span><span class="c1">// Whether it points to a line ending or to the end of the file.</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">atLineEnd</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">it</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">end</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Returns the position of the next line ending at or after it, or end.</span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">skipToLineEnd</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">it</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">end</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Whether c separates the entries of a line, i.e., is a blank or the separator.</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">isBlank</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// Returns the position of the first character at or after it that is no blank.</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">skipBlankAndSeparator</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">it</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">end</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// Returns the end of the word at it, i.e., the next blank or line ending.</span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">skipWord</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">it</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">end</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// Whether the line at it is a comment. Only call it with it != end.</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">isComment</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">it</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// Sweeps over [begin, end): the graph is weighted iff at least one edge line has a third entry.</span>
+<span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="nf">isWeighted</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">begin</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">end</span><span class="p">)</span><span class="w"> </span><span class="k">const</span><span class="p">;</span>
+
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">separator</span><span class="p">;</span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">commentPrefix</span><span class="p">;</span>
-<span class="w">    </span><span class="n">node</span><span class="w"> </span><span class="n">firstNode</span><span class="p">;</span>
+<span class="w">    </span><span class="n">NodeT</span><span class="w"> </span><span class="n">firstNode</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">continuous</span><span class="p">;</span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mapNodeIds</span><span class="p">;</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">NodeT</span><span class="o">&gt;</span><span class="w"> </span><span class="n">mapNodeIds</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">directed</span><span class="p">;</span>
 <span class="p">};</span>
 
+<span class="k">using</span><span class="w"> </span><span class="n">EdgeListReader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GenericEdgeListReader</span><span class="o">&lt;</span><span class="n">Graph</span><span class="o">&gt;</span><span class="p">;</span>
+
 <span class="p">}</span><span class="w"> </span><span class="cm">/* namespace NetworKit */</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;networkit/io/EdgeListReaderImpl.hpp&gt;</span>
+
 <span class="cp">#endif </span><span class="c1">// NETWORKIT_IO_EDGE_LIST_READER_HPP_</span>
 </pre></div>
 </div>

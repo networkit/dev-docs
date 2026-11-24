@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Class EdgeListReader</title>
+    <title>Template Class GenericEdgeListReader</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=fa2d15c4" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -26,8 +26,8 @@
     <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class EdgeListWriter" href="classNetworKit_1_1EdgeListWriter.html" />
-    <link rel="prev" title="Class EdgeListPartitionReader" href="classNetworKit_1_1EdgeListPartitionReader.html" />
+    <link rel="next" title="Template Class GenericEdgeListWriter" href="classNetworKit_1_1GenericEdgeListWriter.html" />
+    <link rel="prev" title="Template Class GenericCover" href="classNetworKit_1_1GenericCover.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -100,14 +100,14 @@
 	<select id="docs-version-select"
 	        class="docs-version-select form-control"
 	        data-docs-channel="nightly"
-	        data-docs-version-label="Nightly (2026-11-23)"
+	        data-docs-version-label="Nightly (2026-11-24)"
 	        data-docs-stable-label="Stable (11.3)"
-	        data-docs-nightly-label="Nightly (2026-11-23)"
+	        data-docs-nightly-label="Nightly (2026-11-24)"
 	        data-docs-stable-url="/dev-docs/"
 	        data-docs-nightly-url="/dev-docs/nightly/"
 	        data-docs-versions-url="/dev-docs/versions.json">
 	  <option value="stable">Stable (11.3)</option>
-	  <option value="nightly" selected>Nightly (2026-11-23)</option>
+	  <option value="nightly" selected>Nightly (2026-11-24)</option>
 	</select>
 </div>
 
@@ -148,8 +148,8 @@
       </div>
     <div class="col-md-9 content">
       
-  <section id="class-edgelistreader">
-<span id="exhale-class-classnetworkit-1-1edgelistreader"></span><h1>Class EdgeListReader<a class="headerlink" href="#class-edgelistreader" title="Link to this heading">¶</a></h1>
+  <section id="template-class-genericedgelistreader">
+<span id="exhale-class-classnetworkit-1-1genericedgelistreader"></span><h1>Template Class GenericEdgeListReader<a class="headerlink" href="#template-class-genericedgelistreader" title="Link to this heading">¶</a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_include_networkit_io_EdgeListReader.hpp.html#file-include-networkit-io-edgelistreader-hpp"><span class="std std-ref">File EdgeListReader.hpp</span></a></p></li>
 </ul>
@@ -158,42 +158,44 @@
 <section id="base-type">
 <h3>Base Type<a class="headerlink" href="#base-type" title="Link to this heading">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::GraphReaderBase&lt;</span> <span class="pre">Graph</span> <span class="pre">&gt;</span></code> (<a class="reference internal" href="classNetworKit_1_1GraphReaderBase.html#exhale-class-classnetworkit-1-1graphreaderbase"><span class="std std-ref">Template Class GraphReaderBase</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">NetworKit::GraphReaderBase&lt;</span> <span class="pre">GraphT</span> <span class="pre">&gt;</span></code> (<a class="reference internal" href="classNetworKit_1_1GraphReaderBase.html#exhale-class-classnetworkit-1-1graphreaderbase"><span class="std std-ref">Template Class GraphReaderBase</span></a>)</p></li>
 </ul>
 </section>
 </section>
 <section id="class-documentation">
 <h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Link to this heading">¶</a></h2>
 <dl class="cpp class">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14EdgeListReaderE">
-<span class="target" id="classNetworKit_1_1EdgeListReader"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EdgeListReader</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1GraphReaderBase.html#_CPPv4I0EN9NetworKit15GraphReaderBaseE" title="NetworKit::GraphReaderBase"><span class="n"><span class="pre">GraphReaderBase</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N9NetworKit14EdgeListReaderE" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4I0EN9NetworKit21GenericEdgeListReaderE">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GraphT</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classNetworKit_1_1GenericEdgeListReader"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GenericEdgeListReader</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">NetworKit</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classNetworKit_1_1GraphReaderBase.html#_CPPv4I0EN9NetworKit15GraphReaderBaseE" title="NetworKit::GraphReaderBase"><span class="n"><span class="pre">GraphReaderBase</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN9NetworKit21GenericEdgeListReaderE" title="NetworKit::GenericEdgeListReader::GraphT"><span class="n"><span class="pre">GraphT</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4I0EN9NetworKit21GenericEdgeListReaderE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>A reader for various edge list formats, in which each line contains an edge as two node ids. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14EdgeListReader14EdgeListReaderEv">
-<span class="target" id="classNetworKit_1_1EdgeListReader_1a64debddb1018431d74efcda2195ac480"></span><span class="sig-name descname"><span class="n"><span class="pre">EdgeListReader</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N9NetworKit14EdgeListReader14EdgeListReaderEv" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit21GenericEdgeListReader21GenericEdgeListReaderEv">
+<span class="target" id="classNetworKit_1_1GenericEdgeListReader_1a692dedb3c6c933d1b9fd97b453a0c7e2"></span><span class="sig-name descname"><span class="n"><span class="pre">GenericEdgeListReader</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N9NetworKit21GenericEdgeListReader21GenericEdgeListReaderEv" title="Link to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14EdgeListReader14EdgeListReaderEc4nodeNSt11string_viewEbb">
-<span class="target" id="classNetworKit_1_1EdgeListReader_1ad4f029e5ce5f14974ffd269e6a2b95a0"></span><span class="sig-name descname"><span class="n"><span class="pre">EdgeListReader</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">separator</span></span>, <a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">firstNode</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">commentPrefix</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;#&quot;</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">continuous</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">directed</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit14EdgeListReader14EdgeListReaderEc4nodeNSt11string_viewEbb" title="Link to this definition">¶</a><br /></dt>
-<dd><dl class="field-list simple">
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit21GenericEdgeListReader21GenericEdgeListReaderEc5NodeTNSt11string_viewEbb">
+<span class="target" id="classNetworKit_1_1GenericEdgeListReader_1a27a159aa5057b1e982d016d4691620a5"></span><span class="sig-name descname"><span class="n"><span class="pre">GenericEdgeListReader</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">separator</span></span>, <span class="n"><span class="pre">NodeT</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">firstNode</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">commentPrefix</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;#&quot;</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">continuous</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">directed</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N9NetworKit21GenericEdgeListReader21GenericEdgeListReaderEc5NodeTNSt11string_viewEbb" title="Link to this definition">¶</a><br /></dt>
+<dd><p>
+Spaces, tabs, vertical tabs, form feeds, and the separator all separate the entries of a line. The graph is weighted iff at least one edge line has a third entry, the edge weight; edges without a weight then get the default weight 1. Reading fails if a node id or the number of nodes does not fit into GraphT::NodeT, or if GraphT::EdgeWeightT is integral and a weight is not an integer representable by it. </p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>separator</strong> – <strong>[in]</strong> character used to separate nodes in an edge line </p></li>
-<li><p><strong>firstNode</strong> – <strong>[in]</strong> index of the first node in the file </p></li>
+<li><p><strong>firstNode</strong> – <strong>[in]</strong> index of the first node in the file, must not be negative </p></li>
 <li><p><strong>commentPrefix</strong> – <strong>[in]</strong> prefix of comment lines </p></li>
 <li><p><strong>continuous</strong> – <strong>[in]</strong> boolean to specify if node ids are continuous </p></li>
-<li><p><strong>directed</strong> – <strong>[in]</strong> read graph as directed </p></li>
+<li><p><strong>directed</strong> – <strong>[in]</strong> read graph as directed</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit14EdgeListReader4readENSt11string_viewE">
-<span class="target" id="classNetworKit_1_1EdgeListReader_1ae79d0501c7f5357ce7d0204e085bb910"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1ab458c2a0d4e58e554756d6b210cba99c.html#_CPPv4N9NetworKit5GraphE" title="NetworKit::Graph"><span class="n"><span class="pre">Graph</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9NetworKit14EdgeListReader4readENSt11string_viewE" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N9NetworKit21GenericEdgeListReader4readENSt11string_viewE">
+<span class="target" id="classNetworKit_1_1GenericEdgeListReader_1a56b4528da8d23f47e61b9f4ef5a716f5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN9NetworKit21GenericEdgeListReaderE" title="NetworKit::GenericEdgeListReader::GraphT"><span class="n"><span class="pre">GraphT</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N9NetworKit21GenericEdgeListReader4readENSt11string_viewE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Given the path of an input file, read the graph contained.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -203,8 +205,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit14EdgeListReader10getNodeMapEv">
-<span class="target" id="classNetworKit_1_1EdgeListReader_1ac2b173e1c89e5e87c0e4879882a79716"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="typedef_namespaceNetworKit_1a2e1aa535e7aaeec9130eb3fc0ab32697.html#_CPPv4N9NetworKit4nodeE" title="NetworKit::node"><span class="n"><span class="pre">node</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getNodeMap</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit14EdgeListReader10getNodeMapEv" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK9NetworKit21GenericEdgeListReader10getNodeMapEv">
+<span class="target" id="classNetworKit_1_1GenericEdgeListReader_1a15ec576a2880af32ca72bff880b25fd4"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">NodeT</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getNodeMap</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK9NetworKit21GenericEdgeListReader10getNodeMapEv" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Return the node map, in case node ids are not continuous </p>
 </dd></dl>
 
