@@ -1011,9 +1011,12 @@ This is the base class for Partitions.</p>
 It assigns a quality value in [-0.5, 1.0] to a partition of a graph which is higher for more modular networks and
 partitions which better capture the modular structure. See also <a class="reference external" href="http://en.wikipedia.org/wiki/Modularity_(networks">http://en.wikipedia.org/wiki/Modularity_(networks</a>) .</p>
 <p class="rubric">Notes</p>
-<p>Modularity is defined as:</p>
+<p>For undirected graphs, modularity is defined as:</p>
 <div class="math notranslate nohighlight">
 \[mod(\zeta) := \frac{\sum_{C \in \zeta} \sum_{ e \in E(C) } \omega(e)}{\sum_{e \in E} \omega(e)} - \frac{ \sum_{C \in \zeta}( \sum_{v \in C} \omega(v) )^2 }{4( \sum_{e \in E} \omega(e) )^2 }\]</div>
+<p>For directed graphs (Leicht and Newman, 2008), the second term is
+<span class="math notranslate nohighlight">\(\sum_{C \in \zeta} \frac{vol^{out}(C) \cdot vol^{in}(C)}{(\sum_{e \in E} \omega(e))^2}\)</span>,
+where <span class="math notranslate nohighlight">\(vol^{out}(C)\)</span> and <span class="math notranslate nohighlight">\(vol^{in}(C)\)</span> are the out- and in-volumes of <span class="math notranslate nohighlight">\(C\)</span>.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="networkit.community.Modularity.getQuality">
 <span class="sig-name descname"><span class="pre">getQuality</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zeta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networkit.community.Modularity.getQuality" title="Link to this definition">¶</a></dt>
